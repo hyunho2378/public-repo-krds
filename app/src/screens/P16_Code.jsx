@@ -1,6 +1,7 @@
 // P-16 저장소 첫 화면과 코드 둘러보기(D-04 개정: 공공 깃랩 + GitHub 배치, KRDS 부품).
 // 왼쪽 프로젝트 메뉴(ProjectFrame), 파일 트리 패널, 본문(도구 줄, 마지막 변경, 파일 표, README), 오른쪽 정보와 판단 정보.
 import { useEffect, useRef, useState } from 'react';
+import { atLeast, useAuth } from '../components/Identity/useAuth';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { t } from '../copy/ko';
 import { gitlab, request } from '../api/client';
@@ -63,9 +64,10 @@ async function loadRepo(id) {
   // 불러오지 못하면 null로 둔다. 0개로 보여 주면 사실과 다르다(실제로는 main 1개).
   const branches = await gitlab.branches(id).catch(() => ({ data: null }));
   const tags = await gitlab.tags(id).catch(() => ({ data: null }));
+  const releases = await gitlab.releases(id).catch(() => ({ data: null }));
   const root = await gitlab.tree(id, '').catch(() => ({ data: [] }));
   const languages = await request(`/api/gitlab/projects/${enc(id)}/languages`).catch(() => ({ data: {} }));
-  return { branches: branches.data, tags: tags.data, root: root.data, languages: languages.data };
+  return { branches: branches.data, tags: tags.data, releases: releases.data, root: root.data, languages: languages.data };
 }
 
 /** R-03 Blame: 줄마다 마지막으로 고친 사람과 날짜. 눌렀을 때만 불러온다(무거운 요청). */
@@ -103,6 +105,7 @@ export default function Code() {
   const ref = search.get('ref') || frame.data?.project.default_branch || 'main';
   const refQuery = search.get('ref') ? `?ref=${enc(search.get('ref'))}` : '';
   const blameApi = useBlame(params.id, path, ref);
+  const { signedIn, role } = useAuth();
   // y: 지금 보는 지점을 커밋 번호로 고정한 영구 링크로 바꾼다(GitLab, GitHub와 같은 단축키).
   const shaRef = useRef(null);
   useEffect(() => {
@@ -135,7 +138,7 @@ export default function Code() {
   }, [params.id, path, ref]);
 
   if (!frame.data) return <ProjectFrame screenId="P-16" data={frame} />;
-  const { project, readme, branches, tags, root, languages } = frame.data;
+  const { project, readme, branches, tags, releases, root, languages } = frame.data;
   const rawUrl = path ? `${project.web_url}/-/raw/${ref}/${path.split('/').map(enc).join('/')}` : null;
   const zipUrl = `${project.web_url}/-/archive/${ref}/${project.path}-${ref}.zip`;
   const b = body.data;
@@ -143,7 +146,7 @@ export default function Code() {
   const state = b ? (b.kind === 'tree' ? (!b.items.length ? 'Empty' : b.items.length === 1 ? 'Min' : 'Ideal') : 'Ideal') : body.state;
   const isHome = !path;
 
-  const about = <About id={frame.id} project={project} readme={readme} languages={languages} stats={{ commits: b?.count ?? 0, more: b?.more, branches: branches?.length ?? null, tags: tags?.length ?? null }} />;
+  const about = <About id={frame.id} project={project} readme={readme} languages={languages} stats={{ commits: b?.count ?? 0, more: b?.more, branches: branches?.length ?? null, tags: tags?.length ?? null, releases: releases?.length ?? null }} />;
   const aside = isHome ? (
     <>
       <div className="rb-only-wide">{about}</div>
@@ -170,7 +173,7 @@ export default function Code() {
             </div>
             <div className="rb-toolbar-right">
               {b?.kind === 'tree' ? <FileFind value={filter} onChange={setFilter} /> : null}
-              {b?.kind === 'tree' ? <AddFileMenu id={frame.id} branch={ref} /> : null}
+              {b?.kind === 'tree' && signedIn && atLeast(role, 'developer') ? <AddFileMenu id={frame.id} branch={ref} /> : null}
               <CodeMenu id={frame.id} zipUrl={zipUrl} cloneUrl={project.http_url_to_repo} />
             </div>
           </div>

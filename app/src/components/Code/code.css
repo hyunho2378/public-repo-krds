@@ -198,3 +198,9 @@
 .rb-code-blame { width: 22ch; max-width: 22ch; padding-right: var(--krds-padding-4); color: var(--krds-color-text-subtle); font-family: var(--krds-font-family-body); font-size: var(--krds-font-size-detail-small); white-space: nowrap; border-right: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
 .rb-code-blame span { display: block; overflow: hidden; text-overflow: ellipsis; }
 .rb-code-preview { padding: var(--krds-padding-6); }
+
+/* README 인라인 서식 */
+.rb-md-code { padding: var(--krds-padding-1) var(--krds-padding-2); border-radius: var(--krds-radius-small2); background: var(--krds-color-surface-gray-subtler); font-family: 'D2Coding', ui-monospace, monospace; }
+.rb-md-img { color: var(--krds-color-text-subtle); }
+.rb-md-quote { margin: 0; padding-left: var(--krds-padding-5); border-left: var(--krds-border-width-static-medium) solid var(--krds-color-border-gray-light); color: var(--krds-color-text-subtle); }
+.rb-md-item { padding-left: var(--krds-padding-5); }

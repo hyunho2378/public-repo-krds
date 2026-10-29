@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { product } from '../api/client';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { Readme, sectionLines } from '../components/Help/Readme';
+import { RunSteps } from '../components/Help/RunSteps';
 import { Button, LinkButton } from '../components/Action/Button';
 import { Steps } from '../components/Navigation/StepIndicator';
 import { EmptyState } from '../components/Feedback/Status';
@@ -24,6 +25,7 @@ export default function Usage() {
   if (!data.data) return <ProjectFrame screenId="P-07" data={data} />;
   const { project, readme } = data.data;
   const guide = sectionLines(readme, /사용 방법|사용법|실행|설치|시작/);
+  const cloneUrl = project.http_url_to_repo;
 
   async function check(e) {
     e.preventDefault();
@@ -67,6 +69,7 @@ export default function Usage() {
         </div>
       )}
       <h2 className="krds-text-heading-medium">{t.P07_15}</h2>
+      <RunSteps readme={readme} cloneUrl={cloneUrl} />
       {guide ? (
         <Readme source={guide} />
       ) : (

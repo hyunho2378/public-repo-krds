@@ -5,7 +5,7 @@
 .rb-repo-title { display: flex; flex-direction: column; gap: var(--krds-gap-2); min-width: 0; flex: 1 1 0; }
 .rb-repo-name { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin: 0; }
 .rb-repo-name .rb-repo-org { color: var(--krds-color-text-subtle); font-weight: inherit; }
-.rb-repo-desc { color: var(--krds-color-text-subtle); word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.rb-repo-desc { color: var(--krds-color-text-subtle); word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .rb-repo-meta { color: var(--krds-color-text-subtle); }
 .rb-repo-actions { display: flex; flex: none; flex-wrap: wrap; gap: var(--krds-gap-2); align-items: center; }
 .rb-repo-actions .krds-btn { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }

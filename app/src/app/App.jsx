@@ -22,9 +22,14 @@ function FocusOnNavigate({ onNavigate }) {
   return null;
 }
 
+/** 로그인처럼 혼자 서는 화면은 왼쪽 메뉴를 두지 않는다(Figma G-08). */
+const NO_SIDEBAR = ['/login'];
+
 function Shell() {
   const [navOpen, setNavOpen] = useState(false);
   const project = useProjectNav();
+  const { pathname } = useLocation();
+  const bare = NO_SIDEBAR.includes(pathname);
   const closeNav = useCallback(() => setNavOpen(false), []);
   return (
     <>
@@ -32,8 +37,8 @@ function Shell() {
       <Masthead />
       <GlobalBar navOpen={navOpen} onToggleNav={() => setNavOpen((v) => !v)} />
       <NoticeBanner message={import.meta.env.VITE_NOTICE} />
-      <div className="rb-shell">
-        <Sidebar project={project} open={navOpen} onClose={closeNav} />
+      <div className={'rb-shell' + (bare ? ' is-bare' : '')}>
+        {bare ? null : <Sidebar project={project} open={navOpen} onClose={closeNav} />}
         <main id="main" tabIndex={-1} className="rb-main">
           <Routes>
             {routes.map(({ id, path, Screen }) => (

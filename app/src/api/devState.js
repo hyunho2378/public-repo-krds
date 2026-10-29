@@ -18,6 +18,13 @@ export function devAuth() {
   return ['Guest', 'Signed-in'].includes(a) ? a : null;
 }
 
+/** D-10 권한 상태. auth=Signed-in일 때만 뜻이 있다. viewer < developer < owner */
+export function devRole() {
+  if (!import.meta.env.DEV) return null;
+  const r = new URLSearchParams(window.location.search).get('role');
+  return ['viewer', 'developer', 'owner'].includes(r) ? r : null;
+}
+
 export function devMode() {
   if (!import.meta.env.DEV) return null;
   const m = new URLSearchParams(window.location.search).get('mode');

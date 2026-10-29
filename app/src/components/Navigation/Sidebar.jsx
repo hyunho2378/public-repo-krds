@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { Icon } from '../Code/Icon';
+import { useAuth } from '../Identity/useAuth';
 
 /** 전역 탐색 메뉴. [묶음 이름, [항목 이름, 주소, 아이콘, 끝경로 여부, 보조 설명]] */
 export function globalGroups() {
@@ -33,46 +34,55 @@ export function globalGroups() {
 }
 
 /** 프로젝트 안 메뉴. 공공 깃랩 사이드바 묶음 이름을 그대로 쓴다. */
-export function projectGroups(id) {
+export function projectGroups(id, { signedIn, role } = {}) {
   const p = `/projects/${id}`;
-  return [
+  const manage = [
+    [t.P22_activity, `${p}/activity`, 'time'],
+    [t.P22_members, `${p}/members`, 'myinfo'],
+    [t.P22_labels, `${p}/labels`, 'bookmarks'],
+  ];
+  const groups = [
     [t.Side_pinned, [
       [t.Tab_code, p, 'document', true],
       [t.ProjectTabs_1, `${p}/about`, 'faq'],
-      [t.ProjectTabs_2, `${p}/use`, 'help'],
+      [t.ProjectTabs_2, `${p}/use`, 'help', false, t.Side_hintUse],
     ]],
-    [t.Side_manage, [
-      [t.P22_activity, `${p}/activity`, 'time'],
-      [t.P22_members, `${p}/members`, 'myinfo'],
-      [t.P22_labels, `${p}/labels`, 'bookmarks'],
-    ]],
+    [t.Side_manage, manage],
     [t.Side_plan, [
-      [t.Side_issues, `${p}/issues`, 'attach'],
+      [t.ProjectTabs_5, `${p}/feedback`, 'edit', false, t.Side_hintFeedback],
+      [t.Side_issues, `${p}/issues`, 'attach', false, t.Side_hintIssue],
       [t.P22_boards, `${p}/boards`, 'multi'],
       [t.P22_milestones, `${p}/milestones`, 'check_circle'],
       [t.P22_wiki, `${p}/wiki`, 'document'],
-      [t.ProjectTabs_5, `${p}/feedback`, 'edit'],
     ]],
     [t.Side_code, [
       [t.RepoSub_files, `${p}/code`, 'new_folder'],
-      [t.ProjectTabs_4, `${p}/changes`, 'time'],
-      [t.Compare_title, `${p}/compare`, 'multi'],
+      [t.ProjectTabs_4, `${p}/changes`, 'time', false, t.Side_hintCommit],
       [t.RepoSub_branches, `${p}/branches`, 'multi', false, t.Side_hintBranch],
       [t.RepoSub_mr, `${p}/merge-requests`, 'component', false, t.Side_hintMr],
+      [t.Compare_title, `${p}/compare`, 'reset'],
       [t.P22_snippets, `${p}/snippets`, 'file'],
     ]],
     [t.Side_deploy, [
       [t.RepoSub_releases, `${p}/releases`, 'upload', false, t.Side_hintRelease],
       [t.P22_packages, `${p}/packages`, 'component'],
-      [t.Law_title, `${p}/law-alerts`, 'bell'],
-      [t.Handover_title, `${p}/handover`, 'document'],
-      [t.P22_pipelines, `${p}/pipelines`, 'reset'],
+      [t.P22_pipelines, `${p}/pipelines`, 'reset', false, t.Side_hintPipeline],
     ]],
     [t.Side_analyze, [
       [t.RepoSub_people, `${p}/contributors`, 'myinfo'],
       [t.Graph_title, `${p}/graph`, 'multi'],
+      [t.Law_title, `${p}/law-alerts`, 'bell'],
+      [t.Handover_title, `${p}/handover`, 'document'],
     ]],
   ];
+  // 프로젝트 관리는 권한이 있을 때만 보인다(D-10 role).
+  if (signedIn && (role === 'developer' || role === 'owner')) {
+    groups.push([t.Side_projectManage, [
+      [t.PSet_title, `${p}/settings`, 'setting'],
+      [t.Header_menuPublish, '/publish', 'document-check', false, t.Side_hintPublish],
+    ]]);
+  }
+  return groups;
 }
 
 function Group({ group, items }) {
@@ -110,7 +120,8 @@ function Group({ group, items }) {
 }
 
 export function Sidebar({ project, open, onClose }) {
-  const groups = project ? projectGroups(project.id) : globalGroups();
+  const { signedIn, role } = useAuth();
+  const groups = project ? projectGroups(project.id, { signedIn, role }) : globalGroups();
   const panel = useRef(null);
   // 좁은 화면에서 서랍으로 열렸을 때만 초점을 가두고 Esc로 닫는다.
   useEffect(() => {
@@ -140,10 +151,12 @@ export function Sidebar({ project, open, onClose }) {
           <Group key={group || `g${i}`} group={group} items={items} />
         ))}
         <div className="rb-side-foot">
-          <NavLink to={project ? `/projects/${project.id}/settings` : '/settings'} className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`}>
-            <Icon name="setting" />
-            <span className="rb-side-text"><span>{project ? t.PSet_title : t.Settings_title}</span></span>
-          </NavLink>
+          {project ? null : (
+            <NavLink to="/settings" className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`}>
+              <Icon name="setting" />
+              <span className="rb-side-text"><span>{t.Settings_title}</span></span>
+            </NavLink>
+          )}
           <NavLink to="/help" className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`}>
             <Icon name="help" />
             <span className="rb-side-text"><span>{t.Header_menuHelp}</span></span>

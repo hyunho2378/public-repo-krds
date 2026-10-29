@@ -247,6 +247,7 @@ export function About({ id, project, readme, languages, stats, summary }) {
         <li><Icon name="time" /><Link className="krds-link" to={`/projects/${id}/changes`}>{t.fn.nCommits(stats.commits, stats.more)}</Link></li>
         {stats.branches != null ? <li><Icon name="share" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nBranches(stats.branches)}</Link></li> : null}
         {stats.tags != null ? <li><Icon name="scrap" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nTags(stats.tags)}</Link></li> : null}
+        {stats.releases != null ? <li><Icon name="upload" /><Link className="krds-link" to={`/projects/${id}/releases`}>{t.fn.nReleases(stats.releases)}</Link></li> : null}
         <li><Icon name="time" /><span>{t.About_created} {day(project.created_at)}</span></li>
       </ul>
       {langs.length ? (

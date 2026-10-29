@@ -6,6 +6,7 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { Icon } from '../Code/Icon';
 import { ScreenModeOptions, useScreenMode } from './ScreenMode';
+import { useAuth } from './useAuth';
 
 export const SERVICE_NAME = t.Header_service;
 
@@ -67,36 +68,12 @@ function GlobalSearch() {
   );
 }
 
-function ModeMenu() {
-  const [open, setOpen] = useState(false);
-  const [mode, setMode] = useScreenMode();
-  const wrap = useDismiss(open, () => setOpen(false));
-  return (
-    <div className="krds-drop-wrap rb-gbar-drop" ref={wrap}>
-      <button
-        type="button"
-        className={'rb-gbar-btn' + (open ? ' active' : '')}
-        aria-expanded={open}
-        aria-controls="gbar-mode"
-        onClick={() => setOpen(!open)}
-      >
-        <Icon name="setting" />
-        <span className="rb-gbar-btn-text">{t.Header_mode}</span>
-      </button>
-      <div id="gbar-mode" className="drop-menu rb-gbar-menu" style={{ display: open ? 'block' : 'none' }}>
-        <div className="drop-in">
-          <ScreenModeOptions name="mode-global" mode={mode} setMode={setMode} />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export function GlobalBar({ onToggleNav, navOpen }) {
   const location = useLocation();
+  const { signedIn } = useAuth();
   const loginTo = `/login?returnTo=${encodeURIComponent(location.pathname + location.search)}`;
   return (
-    <header className="rb-gbar" data-krds="header">
+    <header className="rb-gbar" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
       <div className="rb-gbar-in">
         <button
           type="button"
@@ -112,22 +89,66 @@ export function GlobalBar({ onToggleNav, navOpen }) {
           <span className="rb-gbar-mark" aria-hidden="true">{SERVICE_NAME.slice(0, 1)}</span>
           <span className="rb-gbar-brand-text">{SERVICE_NAME}</span>
         </Link>
-        <NavLink end className="rb-gbar-btn rb-gbar-explore" to="/">{t.GlobalBar_explore}</NavLink>
+        <NavLink end className="rb-gbar-btn rb-gbar-explore" to="/">
+          <Icon name="view_all" />
+          <span>{t.GlobalBar_explore}</span>
+        </NavLink>
         <GlobalSearch />
         <Link className="rb-gbar-btn rb-gbar-searchlink" to="/search">
           <Icon name="search" />
           <span className="sr-only">{t.GlobalBar_searchLabel}</span>
         </Link>
         <div className="rb-gbar-right">
-          <ModeMenu />
-          <Link className="rb-gbar-btn rb-gbar-icononly" to="/notifications">
-            <Icon name="bell" />
-            <span className="sr-only">{t.TabBar_alerts}</span>
-          </Link>
-          <Link className="krds-btn small secondary" to="/help">{t.GlobalBar_signup}</Link>
-          <Link className="krds-btn small primary" to={loginTo}>{t.Header_login}</Link>
+          {signedIn ? (
+            <>
+              <Link className="rb-gbar-btn" to="/notifications">
+                <Icon name="bell" />
+                <span className="rb-gbar-btn-text">{t.TabBar_alerts}</span>
+              </Link>
+              <Link className="rb-gbar-btn" to="/projects/new">
+                <Icon name="plus" />
+                <span className="rb-gbar-btn-text">{t.GlobalBar_create}</span>
+              </Link>
+              <AccountMenu />
+            </>
+          ) : (
+            <>
+              <Link className="rb-gbar-btn" to="/login">
+                <Icon name="my" />
+                <span className="rb-gbar-btn-text">{t.GlobalBar_signup}</span>
+              </Link>
+              <Link className="rb-gbar-btn" to={loginTo}>
+                <Icon name="login" />
+                <span className="rb-gbar-btn-text">{t.Header_login}</span>
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </header>
+  );
+}
+
+/** 로그인 뒤 내 계정 메뉴. 화면 설정도 이 안에 둔다(Figma R-01 Signed-in). */
+function AccountMenu() {
+  const [open, setOpen] = useState(false);
+  const [mode, setMode] = useScreenMode();
+  const wrap = useDismiss(open, () => setOpen(false));
+  return (
+    <div className="krds-drop-wrap rb-gbar-drop" ref={wrap}>
+      <button type="button" className={'rb-gbar-btn' + (open ? ' active' : '')} aria-expanded={open} aria-controls="gbar-account" onClick={() => setOpen(!open)}>
+        <Icon name="my" />
+        <span className="rb-gbar-btn-text">{t.GlobalBar_account}</span>
+      </button>
+      <div id="gbar-account" className="drop-menu rb-gbar-menu" style={{ display: open ? 'block' : 'none' }}>
+        <div className="drop-in">
+          <ul className="drop-list">
+            <li><Link className="item-link" to="/my" onClick={() => setOpen(false)}>{t.Header_my}</Link></li>
+            <li><Link className="item-link" to="/settings" onClick={() => setOpen(false)}>{t.Settings_title}</Link></li>
+          </ul>
+          <ScreenModeOptions name="mode-account" mode={mode} setMode={setMode} />
+        </div>
+      </div>
+    </div>
   );
 }

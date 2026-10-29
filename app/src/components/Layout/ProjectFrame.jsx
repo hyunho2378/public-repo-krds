@@ -20,7 +20,8 @@ import { Drop } from '../Code/Drop';
 import { Link } from 'react-router-dom';
 
 export function organizationOf(project) {
-  return orgLabel(project?.namespace?.name);
+  // D-09 GitLab과 같게 공개된 이름을 그대로 쓴다. 기관만 쓰면 만든 사람이 지워진다.
+  return project?.namespace?.name || orgLabel(project?.namespace?.name);
 }
 
 export function useProject(extra = async () => ({})) {
@@ -54,6 +55,7 @@ function RepoHeader({ project, id }) {
       <div className="rb-repo-head">
         <div className="rb-repo-title">
           <h1 className="krds-text-heading-large rb-repo-name">
+            <span className="rb-avatar" aria-hidden="true">{project.name.slice(0, 1)}</span>
             <span className="rb-repo-org">{organizationOf(project)} /</span>
             <span>{project.name}</span>
             <span className="krds-badge small bg-light-gray">{t.RepoHead_public}</span>
@@ -108,7 +110,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, data, children, state, a
       <div className="rb-repo-layout">
         <div className="rb-repo-main">
           <div className="rb-repo-top">
-            <Breadcrumb items={[[t.Header_2, '/search'], [project.name, tab ? `/projects/${data.id}` : null], ...(tab ? [[tabLabel]] : [])]} />
+            <Breadcrumb items={[[t.Header_2, '/search'], [organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project))}`], [project.name, tab ? `/projects/${data.id}` : null], ...(tab ? [[tabLabel]] : [])]} />
             <RepoHeader project={project} id={data.id} />
             <ProjectTabs id={data.id} active={tab} />
           </div>

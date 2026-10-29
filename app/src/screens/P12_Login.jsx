@@ -1,9 +1,16 @@
-// P-12 로그인. 공공 저장소(GitLab) 계정으로 위임 로그인, 끝나면 returnTo로 복귀.
-import { phrase } from '../components/Help/Phrase';
-import { t } from '../copy/ko';
+// G-08 로그인. Figma G-08 구성 그대로(점검 공지, 아이디 또는 이메일, 비밀번호, 로그인 상태 유지,
+// 비밀번호 찾기, 로그인, 패스키로 로그인, 등록 안내).
+// 중요: 이 시제품은 아이디와 비밀번호를 받지 않는다. 적은 값은 어디에도 보내지 않고,
+// 로그인은 공공 저장소(GitLab) 계정 위임으로만 처리한다(D-12).
+import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import { t } from '../copy/ko';
+import { phrase } from '../components/Help/Phrase';
 import { auth, STATIC_MODE } from '../api/client';
 import { Page } from '../components/Layout/Page';
+import { FormField } from '../components/Input/FormField';
+
+const GITLAB = 'https://gitlab.aigov.go.kr';
 
 function safe(path) {
   return path && path.startsWith('/') && !path.startsWith('//') ? path : '/';
@@ -12,34 +19,82 @@ function safe(path) {
 export default function Login() {
   const [params] = useSearchParams();
   const returnTo = safe(params.get('returnTo'));
+  const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
+  const [keep, setKeep] = useState(false);
+  const [showStatic, setShowStatic] = useState(false);
+
+  // 적은 값은 보내지 않는다. 공공 저장소 로그인 화면으로 넘긴다.
+  const submit = (e) => {
+    e.preventDefault();
+    setPw('');
+    if (STATIC_MODE) {
+      setShowStatic(true);
+      return;
+    }
+    window.location.href = auth.loginUrl(returnTo);
+  };
+
   return (
-    <Page id="P-12" title={t.P10_2}>
-      <div className="rb-narrow rb-stack">
-        <h1 className="krds-text-heading-xlarge">{phrase(t.P10_2)}</h1>
-        <p>{phrase(t.P12_1)}</p>
-        {STATIC_MODE ? (
-          <div className="krds-alert rb-status" role="status" data-state="Static">
-            <p className="krds-text-body-medium-bold">{phrase(t.P12_static)}</p>
+    <Page id="G-08" title={t.P10_2} state="Ideal">
+      <div className="rb-login">
+        {t.P12_notice ? (
+          <p className="krds-alert rb-login-notice" role="status">{t.P12_notice}</p>
+        ) : null}
+        <h1 className="krds-text-heading-medium">{t.P10_2}</h1>
+        <form className="rb-login-form" onSubmit={submit}>
+          <FormField
+            id="login-id"
+            label={t.P12_idLabel}
+            required
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+            autoComplete="off"
+            placeholder={t.P12_idLabel}
+          />
+          <FormField
+            id="login-pw"
+            label={t.P12_pwLabel}
+            required
+            type="password"
+            value={pw}
+            onChange={(e) => setPw(e.target.value)}
+            autoComplete="off"
+            placeholder={t.P12_pwLabel}
+          />
+          <div className="rb-login-row">
+            <div className="krds-form-check">
+              <input id="login-keep" type="checkbox" checked={keep} onChange={(e) => setKeep(e.target.checked)} />
+              <label htmlFor="login-keep">{t.P12_keep}</label>
+            </div>
+            <a className="krds-link" href={`${GITLAB}/users/password/new`} target="_blank" rel="noreferrer">
+              {t.P12_5}<span className="sr-only"> {t.Footer_3}</span>
+            </a>
           </div>
-        ) : (
-          <ul className="rb-login-methods">
-            <li className="rb-login-method">
-              <div className="rb-stack-tight">
-                <h2 className="krds-text-heading-small">{phrase(t.P12_methodTitle)}</h2>
-                <p className="krds-text-body-medium rb-subtle">{phrase(t.P12_methodDesc)}</p>
+          <p className="krds-text-body-small rb-subtle">{phrase(t.P12_noStore)}</p>
+          <button type="submit" className="krds-btn medium primary rb-login-submit">{t.P12_loginButton}</button>
+        </form>
+        <a className="krds-btn medium secondary rb-login-submit" href={`${GITLAB}/users/sign_in`} target="_blank" rel="noreferrer">
+          {t.P12_passkeyButton2}<span className="sr-only"> {t.Footer_3}</span>
+        </a>
+        <p className="krds-text-body-small rb-login-signup">
+          {t.P12_signupAsk}{' '}
+          <a className="krds-link" href={`${GITLAB}/users/sign_up`} target="_blank" rel="noreferrer">
+            {t.P12_signupNow}<span className="sr-only"> {t.Footer_3}</span>
+          </a>
+        </p>
+        {showStatic ? (
+          <div className="rb-modal-dim" role="presentation">
+            <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="login-static">
+              <h2 id="login-static" className="krds-text-heading-small">{t.Write_cannotTitle}</h2>
+              <p className="krds-text-body-medium">{phrase(t.P12_static)}</p>
+              <div className="rb-modal-actions">
+                <button type="button" className="krds-btn medium tertiary" onClick={() => setShowStatic(false)}>{t.Commit_cancel}</button>
+                <Link className="krds-btn medium primary" to={returnTo}>{t.P12_6}</Link>
               </div>
-              <a className="krds-btn medium primary" href={auth.loginUrl(returnTo)}>{t.P12_loginButton}</a>
-            </li>
-          </ul>
-  
-        )}
-        <p className="krds-text-body-small rb-subtle">{phrase(t.P12_3)}</p>
-        <h2 className="krds-text-heading-small">{phrase(t.P12_signupTitle)}</h2>
-        <ul className="rb-links">
-          <li><a className="krds-link" href="https://gitlab.aigov.go.kr/users/sign_up" target="_blank" rel="noreferrer">{t.P12_4}<span className="sr-only"> {t.Footer_3}</span></a></li>
-          <li><a className="krds-link" href="https://gitlab.aigov.go.kr/users/password/new" target="_blank" rel="noreferrer">{t.P12_5}<span className="sr-only"> {t.Footer_3}</span></a></li>
-          <li><Link className="krds-link" to={returnTo}>{t.P12_6}</Link></li>
-        </ul>
+            </div>
+          </div>
+        ) : null}
       </div>
     </Page>
   );

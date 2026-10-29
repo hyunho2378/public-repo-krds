@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { t } from '../copy/ko';
+import { atLeast, useAuth } from '../components/Identity/useAuth';
 import { gitlab, request } from '../api/client';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
@@ -51,7 +52,18 @@ export function MergeRequests() {
 export function MergeRequest() {
   const { iid } = useParams();
   const frame = useProject();
+  const [view, setView] = useState('talk');
+  const [notice, setNotice] = useState(false);
+  const { signedIn, role } = useAuth();
   const body = useData(async () => (await gitlab.mergeRequest(frame.id, iid)).data, [frame.id, iid]);
+  const commits = useData(async () => {
+    try {
+      const r = await request(`/api/gitlab/projects/${encodeURIComponent(frame.id)}/merge_requests/${encodeURIComponent(iid)}/commits`);
+      return r.data || [];
+    } catch {
+      return [];
+    }
+  }, [frame.id, iid]);
   const changes = useData(async () => {
     try {
       const r = await request(`/api/gitlab/projects/${encodeURIComponent(frame.id)}/merge_requests/${encodeURIComponent(iid)}/changes`);
@@ -77,8 +89,50 @@ export function MergeRequest() {
               <span className="rb-break-any">{t.P20_to} {m.target_branch}</span>
             </p>
           </div>
-          {m.description ? <div className="rb-detail-body"><Readme source={m.description} /></div> : null}
-          {changes.data?.length ? <DiffView files={changes.data} /> : null}
+          <div className="rb-code-views" role="tablist" aria-label={t.P20_tabsLabel}>
+            {[['talk', t.P20_tabTalk], ['commits', t.fn.tabCommits(commits.data?.length ?? 0)], ['files', t.fn.tabFiles(changes.data?.length ?? 0)]].map(([key, label]) => (
+              <button key={key} type="button" role="tab" aria-selected={view === key} className={'rb-code-view' + (view === key ? ' active' : '')} onClick={() => setView(key)}>{label}</button>
+            ))}
+          </div>
+          {view === 'talk' ? (
+            m.description ? <div className="rb-detail-body"><Readme source={m.description} /></div> : <EmptyState title={t.P20_noDesc} />
+          ) : view === 'commits' ? (
+            commits.data?.length ? (
+              <ul className="rb-plain-list">
+                {commits.data.map((c) => (
+                  <li className="rb-plain-row" key={c.id}>
+                    <span className="rb-plain-main rb-ellipsis">{c.title}</span>
+                    <span className="rb-plain-sub rb-subtle">{c.author_name}</span>
+                    <span className="rb-plain-meta rb-subtle">{day(c.created_at)}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : <EmptyState title={t.P20_noCommits} />
+          ) : (
+            changes.data?.length ? <DiffView files={changes.data} /> : <EmptyState title={t.P17_noDiff} />
+          )}
+          {signedIn && atLeast(role, 'developer') && m.state === 'opened' ? (
+            <div className="rb-write-actions">
+              <button type="button" className="krds-btn medium tertiary" onClick={() => setNotice(true)}>{t.P20_close}</button>
+              <button type="button" className="krds-btn medium primary" onClick={() => setNotice(true)}>{t.P20_merge}</button>
+            </div>
+          ) : null}
+          {signedIn && atLeast(role, 'developer') && m.state === 'closed' ? (
+            <div className="rb-write-actions">
+              <button type="button" className="krds-btn medium tertiary" onClick={() => setNotice(true)}>{t.P20_reopen}</button>
+            </div>
+          ) : null}
+          {notice ? (
+            <div className="rb-modal-dim" role="presentation">
+              <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="mr-notice">
+                <h2 id="mr-notice" className="krds-text-heading-small">{t.Write_cannotTitle}</h2>
+                <p className="krds-text-body-medium">{t.Write_cannotStatic}</p>
+                <div className="rb-modal-actions">
+                  <button type="button" className="krds-btn medium primary" onClick={() => setNotice(false)}>{t.Commit_cancel}</button>
+                </div>
+              </div>
+            </div>
+          ) : null}
         </div>
       )}
     </ProjectFrame>

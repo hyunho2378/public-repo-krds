@@ -2,8 +2,11 @@
 // 공공 깃랩 점검 시간에도 화면을 확인할 수 있다. 실제 공개 저장소에서 받아 둔 응답이며 꾸민 자료가 아니다.
 // 개발 모드에서만 켜진다. 배포본에서는 항상 꺼져 있다.
 const FILES = import.meta.glob('../../../sample/kordoc/api/*.json', { eager: true, import: 'default' });
+// README와 파일 원문은 글이라 글자 그대로 읽는다.
+const TEXTS = import.meta.glob('../../../sample/kordoc/api/*.{md,ts}', { eager: true, query: '?raw', import: 'default' });
 
 const pick = (name) => FILES[`../../../sample/kordoc/api/${name}.json`];
+const pickText = (file) => TEXTS[`../../../sample/kordoc/api/${file}`];
 
 export function fixtureName() {
   if (!import.meta.env.DEV) return null;
@@ -29,10 +32,17 @@ export function fixtureFor(path) {
     [/^projects\/[^/]+\/merge_requests\/\d+$/, 'mr_56'],
     [/^projects\/[^/]+\/merge_requests\/\d+\/changes$/, 'mr_56_changes'],
     [/^projects\/[^/]+\/languages$/, 'languages'],
+    [/^projects\/[^/]+\/repository\/files\/[^/]+\/raw$/, 'readme_raw.md'],
   ];
   for (const [re, name] of map) {
     if (re.test(p)) {
-      const data = pick(name);
+      let data = name.includes('.') ? pickText(name) : pick(name);
+      // 트리 자료는 하위 폴더까지 들어 있다. 요청한 경로의 바로 아래 것만 돌려준다(공공 깃랩과 같다).
+      if (name === 'tree_1' && Array.isArray(data)) {
+        const want = new URLSearchParams(path.split('?')[1] || '').get('path') || '';
+        const prefix = want ? `${want}/` : '';
+        data = data.filter((x) => x.path.startsWith(prefix) && !x.path.slice(prefix.length).includes('/'));
+      }
       if (data) return { mock: false, source: 'sample/kordoc', fixture: 'kordoc', state: 'Ideal', data };
     }
   }

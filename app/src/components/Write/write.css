@@ -28,3 +28,17 @@
 .rb-step-no { display: grid; place-items: center; inline-size: var(--krds-size-height-4); block-size: var(--krds-size-height-4); border-radius: var(--krds-radius-max); background: var(--krds-color-element-primary); color: var(--krds-color-text-inverse-static); }
 .rb-step-body { padding: var(--krds-padding-5) 0 var(--krds-padding-6); display: flex; flex-direction: column; gap: var(--krds-gap-3); }
 .rb-check-list { margin: 0; padding-left: var(--krds-padding-6); display: flex; flex-direction: column; gap: var(--krds-gap-2); }
+/* G-08 로그인 */
+.rb-login { display: flex; flex-direction: column; gap: var(--krds-gap-5); width: 100%; max-width: 46ch; margin-inline: auto; }
+.rb-login-notice { padding: var(--krds-padding-4); border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-warning-subtler); color: var(--krds-color-text-basic); }
+.rb-login-form { display: flex; flex-direction: column; gap: var(--krds-gap-4); }
+.rb-login-row { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-3); flex-wrap: wrap; }
+.rb-login-submit { width: 100%; }
+.rb-login-signup { text-align: center; }
+/* R-30 따라 하기 */
+.rb-run { display: flex; flex-direction: column; gap: var(--krds-gap-4); }
+.rb-run-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--krds-gap-4); flex-wrap: wrap; }
+.rb-run-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--krds-gap-5); }
+.rb-run-cmd { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-3); padding: var(--krds-padding-4); border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-gray-subtler); }
+.rb-run-cmd code { font-family: 'D2Coding', ui-monospace, monospace; overflow-wrap: anywhere; }
+.rb-run-copy { flex: none; border: 0; background: none; color: var(--krds-color-text-subtle); cursor: pointer; }
