@@ -1,0 +1,29 @@
+{
+ "gh_tabs": [
+  "Code",
+  "Issues",
+  "Pull requests",
+  "Agents",
+  "Actions",
+  "Projects",
+  "Security and quality",
+  "Insights",
+  "Settings"
+ ],
+ "gh_add": "Create new file / Upload files",
+ "gh_code": "",
+ "gh_branch": "",
+ "gh_outline": "",
+ "gh_merge": "menuitemradio \"Create a merge commit\" [ref=e117] [checked] [focused]: \"Create a merge commit All commits from this branch will be added to the base branch via a merge commit.\" | menuitemradio \"Squash and merge\" [ref=e118]: \"Squash and merge The 1 commit from this branch will be added to the base branch.\" | menuitemradio \"Rebase and merge\" [ref=e119]: \"Rebase and merge The 1 commit from this branch will be rebased and added to the base branch.\"",
+ "gh_labels": "accessibility, bug, documentation, duplicate, enhancement, good first issue, help wanted, invalid, question, wontfix",
+ "gh_more": "menuitem \"Download command⌘ shift⇧ sS\" | menuitem \"Jump to line lL\" | menuitem \"Copy path command⌘ shift⇧ right angle bracket>\" | menuitem \"Copy permalink command⌘ shift⇧ left angle bracket<\" | menuitem \"Ask about this file\" | menuitemcheckbox \"Show code folding buttons\" | menuitemcheckbox \"Wrap lines\" | menuitemcheckbox \"Center content\" | menuitemcheckbox \"Open symbols on click\" | menuitem \"Delete file\"",
+ "gh_blob_btns": [
+  "main branch",
+  "commits by hyunho2378",
+  "Commit 399586a",
+  "Code",
+  "Blame"
+ ],
+ "gh_shortcuts": "Keyboard shortcuts\nClose\nCopilot Chat\nOpen Copilot Chat (assistive mode)\nshift\n⇧\nd\nD\nOpen Copilot Chat (immersive mode)\nshift\n⇧\nc\nC\nRepositories\nGo to code\ng\nG\nthen\n \nc\nC\nGo to issues\ng\nG\nthen\n \ni\nI\nGo to pull requests\ng\nG\nthen\n \np\nP\nGo to agents\ng\nG\nthen\n \ne\nE\nGo to actions\ng\nG\nthen\n \na\nA\nGo to projects\ng\nG\nthen\n \nb\nB\nGo to security\ng\nG\nthen\n \ns\nS\nCode view\nToggle focused pane\ncommand\n⌘\nf6\nF6\n or \ncommand\n⌘\nshift\n⇧\nf6\nF6\nOpen in github.dev\nperiod\n.\n or \ncommand\n⌘\nshift\n⇧\nquestion mark\n?\nOpen in github.dev (new window)\nshift\n⇧\nright angle bracket\n>\nOpen in codespace\ncomma\n,\n or \ncommand\n⌘\noption\n⌥\ncomma\n,\nToggle file tree\ncommand\n⌘\nb\nB\nOpen ref selector\nw\nW\nGo to file\nt\nT\n or \nshift\n⇧\nt\nT\nGo to line\nl\nL\n or \nshift\n⇧\nl\nL\n or \ncommand\n⌘\noption\n⌥\ng\nG\nView blame\nb\nB\n or \nshift\n⇧\nb\nB\n or \ncommand\n⌘\nforward slash\n/\nthen\n \ncommand\n⌘\nb\nB\nFind symbol\nr\nR\n or \nshift\n⇧\nr\nR\nView raw\ncommand\n⌘\nforward slash\n/\nthen\n \ncommand\n⌘\nr\nR\nCopy raw content\ncommand\n⌘\nshift\n⇧\nc\nC\nDownload raw file\ncommand\n⌘\nshift\n⇧\ns\nS\nEdit file\ne\nE\n or \nshift\n⇧\ne\nE\nToggle symbols panel\ncommand\n⌘\ni\nI\nGet permalink\ny\nY\n or \nshift\n⇧\ny\nY\nView code\ncommand\n⌘\nforward slash\n/\nthen\n \ncommand\n⌘\nc\nC\nCopy file path\ncommand\n⌘\nshift\n⇧\nright angle bracket\n>\nCopy permalink\ncommand\n⌘\nshift\n⇧\nleft angle bracket\n<\nOpen cursor navigation help\noption\n⌥\nf1\nF1\n or \ncommand\n⌘\noption\n⌥\nh\nH\nPage down\npage down\nPgDn\n or \nspace\n␣\nPage up\npage up\nPgUp\n or \nshift\n⇧\nspace\n␣\nInspect symbol\ncommand\n⌘\nenter\n⏎\nHighlight line\nshift\n⇧\nj\nJ\nOpen line menu\noption\n⌥\nshift\n⇧\nc\nC\nSite-wide shortcuts\nGo to dashboard\ng\nG\nthen\n \nd\nD\nOpen search bar\nforward slash\n/\n or \ns\nS\nGo to notifications\ng\nG\nthen\n \nn\nN\nShow keyboard shortcuts dialog\nshift\n⇧\nquestion mark\n?\nOpen repository switcher\noption\n⌥\nshift\n⇧\nr\nR\nShow hovercard\noption\n⌥\nup arrow\n↑\nView all keyboard shortcuts",
+ "gh_editopt": "menuitem \"In place eE\" | menuitem \"github.dev period.\" | menuitem \"GitHub Desktop\""
+}

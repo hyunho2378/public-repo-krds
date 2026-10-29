@@ -24,15 +24,20 @@ function staticPages() {
   };
 }
 
+// 서버 주소는 환경변수로 바꿀 수 있다(검사용으로 다른 포트를 쓸 때).
+const apiTarget = process.env.API_TARGET || 'http://127.0.0.1:5732';
+const proxy = () => ({ '/api': { target: apiTarget }, '/auth': { target: apiTarget } });
+
 export default defineConfig({
   base: process.env.VITE_BASE || '/',
   plugins: [react(), staticPages()],
   resolve: { alias: { '@server': serverSrc } },
+  preview: { proxy: proxy() },
   server: {
     port: 5731,
     strictPort: true,
     host: '127.0.0.1',
     fs: { allow: ['..'] },
-    proxy: { '/api': { target: 'http://127.0.0.1:5732' }, '/auth': { target: 'http://127.0.0.1:5732' } },
+    proxy: proxy(),
   },
 });

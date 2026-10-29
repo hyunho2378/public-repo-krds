@@ -31,7 +31,7 @@ function catalog() {
 const repo = repository({ upstream: UPSTREAM, fetchImpl: (...a) => fetch(...a) });
 
 // 서버 app.js와 같은 허용 경로
-const allowed = /^projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|commits(?:\/[0-9a-f]{7,40}(?:\/diff)?)?|files\/[^/]+(?:\/raw)?|branches|tags|contributors)|languages|releases|issues(?:\/\d+(?:\/notes)?)?|merge_requests(?:\/\d+(?:\/(?:changes|notes))?)?))?)?$/;
+const allowed = /^projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|compare|commits(?:\/[0-9a-f]{7,40}(?:\/diff)?)?|files\/[^/]+(?:\/raw)?|branches|tags|contributors)|languages|releases|events|wikis|pipelines|packages|labels|milestones|members(?:\/all)?|boards|snippets|issues(?:\/\d+(?:\/notes)?)?|merge_requests(?:\/\d+(?:\/(?:changes|notes))?)?))?)?$/;
 
 async function gitlabGet(rest) {
   const [sub, query = ''] = rest.split('?');

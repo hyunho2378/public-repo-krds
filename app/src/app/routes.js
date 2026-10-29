@@ -14,7 +14,9 @@ import Login from '../screens/P12_Login';
 import ErrorScreen from '../screens/P13_Error';
 import Help from '../screens/P14_Help';
 import Requests from '../screens/P15_Requests';
+import { createElement } from 'react';
 import Code from '../screens/P16_Code';
+import RepoSections, { SECTION_KEYS } from '../screens/P22_RepoSections';
 import Commit from '../screens/P17_Commit';
 import { Branches, Releases } from '../screens/P18_Refs';
 import { Issues, Issue } from '../screens/P19_Issues';
@@ -48,4 +50,9 @@ export const routes = [
   { id: 'P-20', path: '/projects/:id/merge-requests', Screen: MergeRequests },
   { id: 'P-20', path: '/projects/:id/merge-requests/:iid', Screen: MergeRequest },
   { id: 'P-21', path: '/projects/:id/contributors', Screen: Contributors },
+  ...SECTION_KEYS.map((key) => ({
+    id: `P-22-${key}`,
+    path: `/projects/:id/${key}`,
+    Screen: () => createElement(RepoSections, { section: key }),
+  })),
 ];

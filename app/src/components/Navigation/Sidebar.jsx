@@ -33,8 +33,16 @@ export function projectGroups(id) {
       [t.ProjectTabs_1, `${p}/about`, 'faq'],
       [t.ProjectTabs_2, `${p}/use`, 'help'],
     ]],
+    [t.Side_manage, [
+      [t.P22_activity, `${p}/activity`, 'time'],
+      [t.P22_members, `${p}/members`, 'myinfo'],
+      [t.P22_labels, `${p}/labels`, 'bookmarks'],
+    ]],
     [t.Side_plan, [
       [t.Side_issues, `${p}/issues`, 'attach'],
+      [t.P22_boards, `${p}/boards`, 'multi'],
+      [t.P22_milestones, `${p}/milestones`, 'flag'],
+      [t.P22_wiki, `${p}/wiki`, 'document'],
       [t.ProjectTabs_5, `${p}/feedback`, 'edit'],
     ]],
     [t.Side_code, [
@@ -42,7 +50,12 @@ export function projectGroups(id) {
       [t.ProjectTabs_4, `${p}/changes`, 'time'],
       [t.RepoSub_branches, `${p}/branches`, 'multi', false, t.Side_hintBranch],
       [t.RepoSub_mr, `${p}/merge-requests`, 'component', false, t.Side_hintMr],
+      [t.P22_snippets, `${p}/snippets`, 'file'],
+    ]],
+    [t.Side_deploy, [
       [t.RepoSub_releases, `${p}/releases`, 'flag', false, t.Side_hintRelease],
+      [t.P22_packages, `${p}/packages`, 'component'],
+      [t.P22_pipelines, `${p}/pipelines`, 'reset'],
     ]],
     [t.Side_analyze, [
       [t.RepoSub_people, `${p}/contributors`, 'myinfo'],

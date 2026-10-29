@@ -1,3 +1,7 @@
+/* D-05 코드 글꼴: D2Coding(네이버, OFL). 한글 고정폭이라 한글 주석도 칸이 맞는다. public/fonts, OFL.txt 함께 둔다. */
+@font-face { font-family: 'D2Coding'; src: url('/fonts/D2Coding.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'D2Coding'; src: url('/fonts/D2CodingBold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+
 /* D-05 코드 표시. 값은 KRDS 변수와 D-05 생성 변수만. */
 .rb-code { display: flex; flex-direction: column; gap: var(--krds-padding-4); }
 .rb-code-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--krds-gap-3); }
@@ -5,7 +9,7 @@
 .rb-code-note { color: var(--krds-color-text-subtle); }
 .rb-code-scroll { overflow-x: auto; background: var(--krds-color-surface-gray-subtler); border-radius: var(--krds-radius-medium2); }
 .rb-code-scroll:focus-visible { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); }
-.rb-code-table { border-collapse: collapse; min-width: 100%; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: var(--krds-pc-font-size-body-small); line-height: var(--krds-line-height-base); }
+.rb-code-table { border-collapse: collapse; min-width: 100%; font-family: 'D2Coding', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: var(--krds-pc-font-size-body-small); line-height: var(--krds-line-height-base); }
 .rb-code-no { width: 1%; white-space: nowrap; user-select: none; text-align: right; vertical-align: top; padding: 0 var(--krds-padding-3); color: var(--krds-color-text-subtle); }
 .rb-code-no a { color: inherit; text-decoration: none; }
 .rb-code-no a:hover, .rb-code-no a:focus-visible { text-decoration: underline; }
@@ -176,3 +180,10 @@
   .rb-only-narrow { display: block; }
   .rb-only-wide { display: none; }
 }
+
+/* P-22 공공 깃랩 메뉴 목록(활동, 위키, 파이프라인 등). 구분선 행, 카드 면 없음 */
+.rb-plain-list { list-style: none; margin: 0; padding: 0; }
+.rb-plain-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--krds-gap-3); padding: var(--krds-padding-4) 0; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-plain-main { font-weight: var(--krds-font-weight-bold); }
+.rb-plain-sub { flex: 1 1 auto; min-width: 0; color: var(--krds-color-text-subtle); }
+.rb-plain-meta { margin-left: auto; white-space: nowrap; }
