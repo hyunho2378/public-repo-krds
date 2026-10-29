@@ -60,8 +60,9 @@ async function loadTree(id, path, ref) {
 }
 
 async function loadRepo(id) {
-  const branches = await gitlab.branches(id).catch(() => ({ data: [] }));
-  const tags = await gitlab.tags(id).catch(() => ({ data: [] }));
+  // 불러오지 못하면 null로 둔다. 0개로 보여 주면 사실과 다르다(실제로는 main 1개).
+  const branches = await gitlab.branches(id).catch(() => ({ data: null }));
+  const tags = await gitlab.tags(id).catch(() => ({ data: null }));
   const root = await gitlab.tree(id, '').catch(() => ({ data: [] }));
   const languages = await request(`/api/gitlab/projects/${enc(id)}/languages`).catch(() => ({ data: {} }));
   return { branches: branches.data, tags: tags.data, root: root.data, languages: languages.data };
@@ -101,7 +102,7 @@ export default function Code() {
   const state = b ? (b.kind === 'tree' ? (!b.items.length ? 'Empty' : b.items.length === 1 ? 'Min' : 'Ideal') : 'Ideal') : body.state;
   const isHome = !path;
 
-  const about = <About id={frame.id} project={project} readme={readme} languages={languages} stats={{ commits: b?.count ?? 0, more: b?.more, branches: branches.length, tags: tags.length }} />;
+  const about = <About id={frame.id} project={project} readme={readme} languages={languages} stats={{ commits: b?.count ?? 0, more: b?.more, branches: branches?.length ?? null, tags: tags?.length ?? null }} />;
   const aside = isHome ? (
     <>
       <div className="rb-only-wide">{about}</div>
@@ -121,8 +122,8 @@ export default function Code() {
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />
               {isHome ? (
                 <p className="rb-toolbar-counts krds-text-body-small">
-                  <Link className="krds-link" to={`/projects/${frame.id}/branches`}><Icon name="share" />{t.fn.nBranches(branches.length)}</Link>
-                  <Link className="krds-link" to={`/projects/${frame.id}/branches`}><Icon name="scrap" />{t.fn.nTags(tags.length)}</Link>
+                  {branches ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}><Icon name="share" />{t.fn.nBranches(branches.length)}</Link> : null}
+                  {tags ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}><Icon name="scrap" />{t.fn.nTags(tags.length)}</Link> : null}
                 </p>
               ) : <PathCrumbs id={frame.id} path={path} refQuery={refQuery} />}
             </div>

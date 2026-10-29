@@ -26,7 +26,8 @@ function useCopy() {
   return [note, copy];
 }
 
-export function BranchSelect({ id, current, branches, path }) {
+export function BranchSelect({ id, current, branches = [], path }) {
+  branches = branches || [];
   const navigate = useNavigate();
   return (
     <Drop label={t.Home_branchSelect} align="left" btnClass="krds-btn medium tertiary rb-branch-btn" button={<><Icon name="share" /><span className="rb-ellipsis">{current}</span></>}>
@@ -229,8 +230,8 @@ export function About({ id, project, readme, languages, stats, summary }) {
       <ul className="rb-about-links krds-text-body-small">
         {readme ? <li><Icon name="document" /><a className="krds-link" href="#readme">{t.About_readme}</a></li> : null}
         <li><Icon name="time" /><Link className="krds-link" to={`/projects/${id}/changes`}>{t.fn.nCommits(stats.commits, stats.more)}</Link></li>
-        <li><Icon name="share" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nBranches(stats.branches)}</Link></li>
-        <li><Icon name="scrap" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nTags(stats.tags)}</Link></li>
+        {stats.branches != null ? <li><Icon name="share" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nBranches(stats.branches)}</Link></li> : null}
+        {stats.tags != null ? <li><Icon name="scrap" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nTags(stats.tags)}</Link></li> : null}
         <li><Icon name="time" /><span>{t.About_created} {day(project.created_at)}</span></li>
       </ul>
       {langs.length ? (

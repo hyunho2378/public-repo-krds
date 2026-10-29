@@ -41,7 +41,7 @@ export function projectGroups(id) {
     [t.Side_plan, [
       [t.Side_issues, `${p}/issues`, 'attach'],
       [t.P22_boards, `${p}/boards`, 'multi'],
-      [t.P22_milestones, `${p}/milestones`, 'flag'],
+      [t.P22_milestones, `${p}/milestones`, 'check_circle'],
       [t.P22_wiki, `${p}/wiki`, 'document'],
       [t.ProjectTabs_5, `${p}/feedback`, 'edit'],
     ]],
@@ -53,7 +53,7 @@ export function projectGroups(id) {
       [t.P22_snippets, `${p}/snippets`, 'file'],
     ]],
     [t.Side_deploy, [
-      [t.RepoSub_releases, `${p}/releases`, 'flag', false, t.Side_hintRelease],
+      [t.RepoSub_releases, `${p}/releases`, 'upload', false, t.Side_hintRelease],
       [t.P22_packages, `${p}/packages`, 'component'],
       [t.P22_pipelines, `${p}/pipelines`, 'reset'],
     ]],

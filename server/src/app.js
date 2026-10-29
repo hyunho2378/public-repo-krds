@@ -1,7 +1,15 @@
 import express from 'express';import{products}from './products.js';
 export function createApp({upstream=process.env.GITLAB_BASE_URL||'https://gitlab.aigov.go.kr',fetchImpl=fetch,dbPath,environment,devAuth}={}){
  const app=express();app.disable('x-powered-by');app.use(express.json({limit:'128kb'}));
- const cache=new Map();let windowStart=Date.now(),calls=0,active=0;
+ const cache=new Map();let windowStart=Date.now(),calls=0,active=0;const queue=[];
+ const release=()=>{active--;const next=queue.shift();if(next)next();};
+ const waitTurn=()=>new Promise(resolve=>{
+  if(active<2){active++;return resolve(true);}
+  if(queue.length>40)return resolve(false);
+  const timer=setTimeout(()=>{const i=queue.indexOf(start);if(i>=0)queue.splice(i,1);resolve(false);},15000);
+  function start(){clearTimeout(timer);active++;resolve(true);}
+  queue.push(start);
+ });
  app.get('/api/health',(_,res)=>res.json({status:'ok',mock:false,notice:'규칙 분석·스냅샷 검색·로컬 저장 API. 외부 연동 상태는 각 응답을 확인하세요.'}));
  app.get('/api/gitlab/*',async(req,res)=>{
   const sub=req.path.replace(/^\/api\/gitlab\//,'');
@@ -11,8 +19,10 @@ export function createApp({upstream=process.env.GITLAB_BASE_URL||'https://gitlab
   if(sub==='projects')u.searchParams.set('visibility','public');
   const key=u.href,cached=cache.get(key);if(cached&&Date.now()-cached.at<60000)return res.json({...cached.body,cached:true});
   if(Date.now()-windowStart>=60000){windowStart=Date.now();calls=0;}
-  if(calls>=30||active>=2)return res.status(429).set('Retry-After','60').json({error:{code:'RATE_LIMIT',message:'잠시 후 다시 시도해 주세요.'}});
-  calls++;active++;
+  // 공개 저장소에 예의를 지켜 동시 2개까지만 보낸다. 넘치면 거절하지 않고 차례를 기다린다(화면 하나가 6~8개를 부른다).
+  if(calls>=120)return res.status(429).set('Retry-After','60').json({error:{code:'RATE_LIMIT',message:'잠시 후 다시 시도해 주세요.'}});
+  const waited=await waitTurn();if(!waited)return res.status(429).set('Retry-After','10').json({error:{code:'RATE_LIMIT',message:'잠시 후 다시 시도해 주세요.'}});
+  calls++;
   try{
    // Public-only transport deliberately does not send GITLAB_TOKEN. Never cache private data.
    const r=await fetchImpl(u,{headers:{Accept:'application/json'},signal:AbortSignal.timeout(10000)});
@@ -21,7 +31,7 @@ export function createApp({upstream=process.env.GITLAB_BASE_URL||'https://gitlab
    if(data?.visibility&&data.visibility!=='public')return res.status(403).json({error:{code:'NOT_PUBLIC',message:'공개 자료만 볼 수 있습니다.'}});
    const body={mock:false,source:'GitLab public REST v4',state:Array.isArray(data)&&!data.length?'Empty':'Ideal',data,pagination:{nextPage:r.headers.get('x-next-page')||null,total:r.headers.get('x-total')?Number(r.headers.get('x-total')):null}};
    if(cache.size>=100)cache.delete(cache.keys().next().value);cache.set(key,{at:Date.now(),body});res.json(body);
-  }catch(e){res.status(502).json({error:{code:'UPSTREAM_UNAVAILABLE',message:'저장소 연결을 확인한 뒤 다시 시도해 주세요.'}});}finally{active--;}
+  }catch(e){res.status(502).json({error:{code:'UPSTREAM_UNAVAILABLE',message:'저장소 연결을 확인한 뒤 다시 시도해 주세요.'}});}finally{release();}
  });
  // 폴더 안 항목별 마지막 변경(GitHub 파일 표의 마지막 커밋 열). 공개 API를 항목마다 순서대로 한 번씩 부르고 10분 캐시한다.
  const logCache=new Map();let logBusy=0;
