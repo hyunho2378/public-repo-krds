@@ -1,0 +1,30 @@
+{
+  "name": "krds-gitlab-rebuild",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "sync:krds": "node scripts/sync-krds.mjs",
+    "dev": "vite --port 5731 --host 127.0.0.1",
+    "build": "vite build",
+    "audit:code": "node scripts/audit-code.mjs",
+    "check:responsive": "node scripts/check-responsive.mjs",
+    "build:pages": "VITE_STATIC=1 VITE_BASE=/public-repo-krds/ vite build"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.8",
+    "tailwindcss": "^3.4.13",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20"
+  },
+  "overrides": {
+    "esbuild": "npm:esbuild-wasm@0.21.5",
+    "rollup": "npm:@rollup/wasm-node@4.24.0"
+  }
+}

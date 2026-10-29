@@ -1,0 +1,151 @@
+// 정적 모드(GitHub Pages). 서버 없이 같은 응답 모양을 만든다.
+// 검색과 분석은 서버와 같은 코드(server/src/catalog-core.js, analysis.js, repository.js)를 브라우저에서 실행한다.
+// 저장(의견, 써 봤어요, 요청)과 로그인은 서버가 없으므로 하지 않고 사실대로 알린다.
+import { createCatalog } from '@server/catalog-core.js';
+import { classify, referenceDates, execution, publication, card, taxonomy } from '@server/analysis.js';
+import { repository } from '@server/repository.js';
+
+const UPSTREAM = 'https://gitlab.aigov.go.kr';
+const DATA = import.meta.env.BASE_URL + 'data/';
+export const STATIC_NOTICE = '시험판에서는 로그인과 저장을 할 수 없습니다. 조회 기능만 쓸 수 있습니다.';
+
+export class StaticError extends Error {
+  constructor(message, status, code) {
+    super(message);
+    this.status = status;
+    this.code = code;
+  }
+}
+
+let catalogPromise;
+function catalog() {
+  if (!catalogPromise) {
+    catalogPromise = Promise.all([
+      fetch(DATA + 'projects.csv').then((r) => r.text()),
+      fetch(DATA + 'gitlab-public-snapshot.json').then((r) => r.json()),
+    ]).then(([csvText, snapshot]) => createCatalog({ csvText, snapshot }));
+  }
+  return catalogPromise;
+}
+
+const repo = repository({ upstream: UPSTREAM, fetchImpl: (...a) => fetch(...a) });
+
+// 서버 app.js와 같은 허용 경로
+const allowed = /^projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|commits(?:\/[0-9a-f]{7,40}(?:\/diff)?)?|files\/[^/]+(?:\/raw)?|branches|tags|contributors)|releases|issues(?:\/\d+(?:\/notes)?)?|merge_requests(?:\/\d+(?:\/(?:changes|notes))?)?))?)?$/;
+
+async function gitlabGet(rest) {
+  const [sub, query = ''] = rest.split('?');
+  if (!allowed.test(sub)) throw new StaticError('허용되지 않은 경로입니다.', 400, 'NOT_ALLOWED');
+  const r = await fetch(`${UPSTREAM}/api/v4/${sub}${query ? '?' + query : ''}`, { headers: { Accept: 'application/json' } });
+  if (!r.ok) throw new StaticError(r.status === 404 ? '자료를 찾을 수 없습니다.' : '공개 저장소 조회에 실패했습니다.', r.status);
+  const raw = sub.endsWith('/raw');
+  const data = raw ? await r.text() : await r.json();
+  if (data?.visibility && data.visibility !== 'public') throw new StaticError('공개 자료만 볼 수 있습니다.', 403, 'NOT_PUBLIC');
+  return {
+    mock: false,
+    source: 'GitLab public REST v4',
+    state: Array.isArray(data) && !data.length ? 'Empty' : 'Ideal',
+    data,
+    pagination: {
+      nextPage: r.headers.get('x-next-page') || null,
+      total: r.headers.get('x-total') ? Number(r.headers.get('x-total')) : null,
+    },
+  };
+}
+
+const wrap = (feature, data) => ({ mock: false, feature, state: Array.isArray(data.items) && data.items.length === 0 ? 'Empty' : 'Ideal', data });
+const readOnly = () => {
+  throw new StaticError(STATIC_NOTICE, 503, 'STATIC_MODE');
+};
+const template = '# 도구 이름\n\n## 하는 일\n\n## 대상 업무\n\n## 사용 방법\n\n## 실행 환경\n\n## 기준 날짜\n\n## 이용 조건\n\n## 문의\n';
+
+// [방법, 경로 패턴, 기능, 처리] 서버 products.js와 같은 순서와 응답
+const routes = [
+  ['POST', /^\/search$/, 'F-01', async ({ body }) => (await catalog()).search(body.query || '', body.filters || {}, body.limit, body.page)],
+  ['GET', /^\/catalog$/, 'F-03', async ({ query }) => (await catalog()).search(query.query || '', query, query.limit, query.page)],
+  ['POST', /^\/classify$/, 'F-02', async ({ body }) => {
+    const p = (await catalog()).projects.find((x) => x.id === Number(body.projectId));
+    return classify((p?.name || '') + ' ' + (p?.description || '') + ' ' + (body.readme || ''));
+  }],
+  ['POST', /^\/duplicates$/, 'F-04', async ({ body }) => ({ ...(await catalog()).search((body.name || '') + ' ' + (body.description || ''), {}, 5), notice: '문자·업무말 유사도 후보입니다. 중복 확정이 아닙니다.' })],
+  ['GET', /^\/projects\/(\d+)\/connections$/, 'F-05', async ({ m }) => {
+    const c = await catalog();
+    const p = c.projects.find((x) => x.id === Number(m[1]));
+    return { items: p ? c.search(p.name, {}, 6).items.filter((x) => x.id !== p.id) : [], notice: '공개 프로젝트의 유사 후보입니다. 사람에게 알림을 전송하지 않았습니다.' };
+  }],
+  ['GET', /^\/projects\/(\d+)\/card$/, 'F-11', async ({ m }) => {
+    const d = await repo.detail(m[1]);
+    const org = (await catalog()).projects.find((p) => p.id === Number(m[1]))?.organization;
+    return { ...card({ ...d.project, organization: org }, d.readme, d.files), source: d.source };
+  }],
+  ['GET', /^\/projects\/(\d+)\/reference-dates$/, 'F-12', async ({ m }) => referenceDates((await repo.detail(m[1])).readme)],
+  ['POST', /^\/projects\/(\d+)\/environment-check$/, 'F-14', async ({ m, body }) => {
+    const d = await repo.detail(m[1]);
+    return execution(d.files, d.readme, body);
+  }],
+  ['POST', /^\/publication-checks$/, 'F-21', async ({ body }) => {
+    const d = await repo.detail(body.projectId, body.ref || 'HEAD');
+    return publication(d.files, d.readme, d.complete).publicResult;
+  }],
+  ['GET', /^\/projects\/(\d+)\/security-alerts$/, 'F-22', readOnly],
+  ['GET', /^\/templates\/readme$/, 'F-24', async () => ({ markdown: template, status: 'service-draft', notice: '공공 저장소용 서비스 제안 양식입니다. 행안부 공식 승인 양식이 아닙니다.' })],
+  ['POST', /^\/projects\/(\d+)\/readme-proposals$/, 'F-23', async ({ m }) => {
+    const d = await repo.detail(m[1]);
+    const c = card(d.project, d.readme, d.files);
+    return { status: 'draft', method: '자동 추출', markdown: template.replace('## 하는 일\n', '## 하는 일\n' + (c.summary || '제작자 작성 필요') + '\n'), notice: '초안만 생성했습니다. GitLab 이슈로 발송하지 않았습니다.' };
+  }],
+  ['POST', /^\/projects\/(\d+)\/feedback$/, 'F-31', readOnly],
+  ['GET', /^\/projects\/(\d+)\/reuses$/, 'F-32', async () => ({ items: [], total: 0, staticMode: true, notice: STATIC_NOTICE })],
+  ['POST', /^\/projects\/(\d+)\/reuses$/, 'F-32', readOnly],
+  ['GET', /^\/organizations$/, 'F-33', async () => {
+    const groups = new Map();
+    for (const p of (await catalog()).projects) {
+      const name = p.organization || '기관 확인 필요';
+      groups.set(name, (groups.get(name) || 0) + 1);
+    }
+    return { items: [...groups].map(([name, projectCount]) => ({ name, projectCount })), notice: '공개 스냅샷 기관명 추정 집계입니다. 기관 인증 통계가 아닙니다.' };
+  }],
+  ['GET', /^\/requests$/, 'F-35', async () => ({ items: [], total: 0, staticMode: true, notice: STATIC_NOTICE })],
+  ['POST', /^\/requests$/, 'F-35', readOnly],
+  ['POST', /^\/requests\/[^/]+\/votes$/, 'F-35', readOnly],
+  ['GET', /^\/projects\/(\d+)\/law-alerts$/, 'F-13', async () => ({ status: 'not-connected', items: [], checkedAt: null, notice: '법제처 현행법령 연동 키와 변경 추적 설정이 필요합니다.' })],
+  ['GET', /^\/projects\/(\d+)\/related-resources$/, 'F-34', async () => ({ status: 'not-connected', items: [], notice: '공공데이터 연결 검증 전입니다. 관련 자료를 임의로 추천하지 않습니다.' })],
+  ['GET', /^\/projects\/(\d+)\/version-guide$/, 'F-36', async ({ m }) => {
+    const d = await repo.detail(m[1]);
+    const items = await repo.get(`projects/${d.project.id}/repository/commits?per_page=10`);
+    return { items: items.map((c) => ({ id: c.id, title: c.title, committedAt: c.committed_date, url: c.web_url })), method: '원문 변경 기록', notice: '오류 원인 자동 진단과 자연어 변환은 미연결입니다.' };
+  }],
+  ['POST', /^\/projects\/(\d+)\/handover$/, 'F-37', async ({ m }) => {
+    const d = await repo.detail(m[1]);
+    const c = card(d.project, d.readme, d.files);
+    return { markdown: '# ' + c.title + ' 인수인계 초안\n\n## 하는 일\n' + (c.summary || '작성 필요') + '\n\n## 실행 환경\n제작자 확인 필요\n\n## 원문 설명\n' + d.readme, status: 'draft', method: '원문 조립', needsReview: true };
+  }],
+  ['GET', /^\/development-guide$/, 'F-38', async () => ({ status: 'service-draft', steps: [{ id: 1, title: '비슷한 도구부터 찾기' }, { id: 2, title: '사용할 자료와 개인정보 확인' }, { id: 3, title: '작은 기능부터 만들고 시험' }, { id: 4, title: '공개 준비 점검과 제작자 확인' }, { id: 5, title: '설명과 인수인계 기록' }], notice: '서비스 제안 점검표이며 기관의 공식 승인 절차를 대체하지 않습니다.' })],
+  ['GET', /^\/coverage-map$/, 'F-39', async () => {
+    const { projects } = await catalog();
+    return { fields: taxonomy.map(([name]) => ({ name, count: projects.filter((p) => p.classification.fields.some((f) => f.name === name)).length })), source: '공개 목록 스냅샷 규칙 분류', needsReview: true, notice: '분류 중복 가능. 실제 수요나 미개발 분야를 확정하지 않습니다.' };
+  }],
+];
+
+/** client.request와 같은 인자를 받아 서버와 같은 응답 모양을 돌려준다. */
+export async function staticRequest(path, options = {}) {
+  const method = (options.method || 'GET').toUpperCase();
+  if (path === '/auth/session') return { authenticated: false, staticMode: true, notice: STATIC_NOTICE };
+  if (path.startsWith('/api/gitlab/')) return gitlabGet(path.slice('/api/gitlab/'.length));
+  if (path.startsWith('/api/v1/')) {
+    const [p, qs = ''] = path.slice('/api/v1'.length).split('?');
+    const query = Object.fromEntries(new URLSearchParams(qs));
+    const body = options.body ? JSON.parse(options.body) : {};
+    for (const [mth, re, feature, fn] of routes) {
+      const m = p.match(re);
+      if (m && mth === method) {
+        try {
+          return wrap(feature, await fn({ m, body, query }));
+        } catch (e) {
+          throw e instanceof StaticError ? e : new StaticError(e.message || '자료를 불러오지 못했습니다.', e.status || 500);
+        }
+      }
+    }
+  }
+  throw new StaticError('찾을 수 없는 요청입니다.', 404);
+}

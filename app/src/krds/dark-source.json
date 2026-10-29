@@ -1,0 +1,1172 @@
+{
+  "color/surface/gray-subtler": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "면 한 단계 밝게: gray 95 → 90",
+    "high_contrast": "#131416"
+  },
+  "color/surface/gray-subtle": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "면 한 단계 밝게: gray 90 → 80",
+    "high_contrast": "#1E2124"
+  },
+  "color/surface/disabled": {
+    "hex": "#464C53",
+    "from": "color/high-contrast/gray/70",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#464C53"
+  },
+  "color/surface/primary-subtler": {
+    "hex": "#03163A",
+    "from": "color/high-contrast/primary/90",
+    "rule": "면 한 단계 밝게: primary 95 → 90",
+    "high_contrast": "#020F27"
+  },
+  "color/surface/secondary-subtler": {
+    "hex": "#0E3139",
+    "from": "color/high-contrast/secondary/90",
+    "rule": "면 한 단계 밝게: secondary 95 → 90",
+    "high_contrast": "#091F25"
+  },
+  "color/surface/danger-subtler": {
+    "hex": "#390D05",
+    "from": "color/high-contrast/danger/90",
+    "rule": "면 한 단계 밝게: danger 95 → 90",
+    "high_contrast": "#260903"
+  },
+  "color/surface/warning-subtler": {
+    "hex": "#2E1F00",
+    "from": "color/high-contrast/warning/90",
+    "rule": "면 한 단계 밝게: warning 95 → 90",
+    "high_contrast": "#241800"
+  },
+  "color/surface/success-subtler": {
+    "hex": "#122B18",
+    "from": "color/high-contrast/success/90",
+    "rule": "면 한 단계 밝게: success 95 → 90",
+    "high_contrast": "#0E2012"
+  },
+  "color/surface/information-subtler": {
+    "hex": "#03253F",
+    "from": "color/high-contrast/information/90",
+    "rule": "면 한 단계 밝게: information 95 → 90",
+    "high_contrast": "#021A2C"
+  },
+  "color/border/gray-light": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#33363D"
+  },
+  "color/border/gray": {
+    "hex": "#8A949E",
+    "from": "color/high-contrast/gray/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#464C53"
+  },
+  "color/border/secondary-light": {
+    "hex": "#113B45",
+    "from": "color/high-contrast/secondary/80",
+    "rule": "면 한 단계 밝게: secondary 90 → 80",
+    "high_contrast": "#0E3139"
+  },
+  "color/border/danger-light": {
+    "hex": "#5C180A",
+    "from": "color/high-contrast/danger/80",
+    "rule": "면 한 단계 밝게: danger 90 → 80",
+    "high_contrast": "#390D05"
+  },
+  "color/border/danger": {
+    "hex": "#F05F42",
+    "from": "color/high-contrast/danger/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#DE3412"
+  },
+  "color/border/warning-light": {
+    "hex": "#422C00",
+    "from": "color/high-contrast/warning/80",
+    "rule": "면 한 단계 밝게: warning 90 → 80",
+    "high_contrast": "#2E1F00"
+  },
+  "color/border/warning": {
+    "hex": "#C78500",
+    "from": "color/high-contrast/warning/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#9E6A00"
+  },
+  "color/border/success-light": {
+    "hex": "#1F4727",
+    "from": "color/high-contrast/success/80",
+    "rule": "면 한 단계 밝게: success 90 → 80",
+    "high_contrast": "#122B18"
+  },
+  "color/border/success": {
+    "hex": "#3FA654",
+    "from": "color/high-contrast/success/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#228738"
+  },
+  "color/border/information-light": {
+    "hex": "#053961",
+    "from": "color/high-contrast/information/80",
+    "rule": "면 한 단계 밝게: information 90 → 80",
+    "high_contrast": "#03253F"
+  },
+  "color/border/information": {
+    "hex": "#2098F3",
+    "from": "color/high-contrast/information/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#0B78CB"
+  },
+  "color/border/gray-dark": {
+    "hex": "#8A949E",
+    "from": "color/high-contrast/gray/40",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#8A949E"
+  },
+  "color/divider/gray-light": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#33363D"
+  },
+  "color/divider/gray": {
+    "hex": "#464C53",
+    "from": "color/high-contrast/gray/70",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#464C53"
+  },
+  "color/divider/gray-dark": {
+    "hex": "#6D7882",
+    "from": "color/high-contrast/gray/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#6D7882"
+  },
+  "color/divider/primary": {
+    "hex": "#256EF4",
+    "from": "color/high-contrast/primary/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#256EF4"
+  },
+  "color/divider/secondary-light": {
+    "hex": "#113B45",
+    "from": "color/high-contrast/secondary/80",
+    "rule": "면 한 단계 밝게: secondary 90 → 80",
+    "high_contrast": "#0E3139"
+  },
+  "color/divider/secondary": {
+    "hex": "#1F687A",
+    "from": "color/high-contrast/secondary/60",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#1F687A"
+  },
+  "color/text/bolder": {
+    "hex": "#E6E8EA",
+    "from": "color/high-contrast/gray/10",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#E6E8EA"
+  },
+  "color/text/subtle": {
+    "hex": "#CDD1D5",
+    "from": "color/high-contrast/gray/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#CDD1D5"
+  },
+  "color/text/disabled": {
+    "hex": "#58616A",
+    "from": "color/high-contrast/gray/60",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#58616A"
+  },
+  "color/text/disabled-on": {
+    "hex": "#6D7882",
+    "from": "color/high-contrast/gray/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#6D7882"
+  },
+  "color/text/primary": {
+    "hex": "#B1CEFB",
+    "from": "color/high-contrast/primary/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#B1CEFB"
+  },
+  "color/text/secondary": {
+    "hex": "#ABD8E3",
+    "from": "color/high-contrast/secondary/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#ABD8E3"
+  },
+  "color/text/danger": {
+    "hex": "#F7AFA1",
+    "from": "color/high-contrast/danger/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#F7AFA1"
+  },
+  "color/text/warning": {
+    "hex": "#FFC95C",
+    "from": "color/high-contrast/warning/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFC95C"
+  },
+  "color/text/success": {
+    "hex": "#A9DAB4",
+    "from": "color/high-contrast/success/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#A9DAB4"
+  },
+  "color/text/information": {
+    "hex": "#9ED2FA",
+    "from": "color/high-contrast/information/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#9ED2FA"
+  },
+  "color/text/basic": {
+    "hex": "#F4F5F6",
+    "from": "color/high-contrast/gray/5",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#F4F5F6"
+  },
+  "color/text/point": {
+    "hex": "#EBADB2",
+    "from": "color/high-contrast/point/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#EBADB2"
+  },
+  "color/surface/point-subtler": {
+    "hex": "#310C0F",
+    "from": "color/high-contrast/point/90",
+    "rule": "면 한 단계 밝게: point 95 → 90",
+    "high_contrast": "#21080A"
+  },
+  "color/icon/gray": {
+    "hex": "#F4F5F6",
+    "from": "color/high-contrast/gray/5",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#F4F5F6"
+  },
+  "color/icon/gray-fill": {
+    "hex": "#8A949E",
+    "from": "color/high-contrast/gray/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#464C53"
+  },
+  "color/icon/inverse": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#1E2124"
+  },
+  "color/icon/primary": {
+    "hex": "#B1CEFB",
+    "from": "color/high-contrast/primary/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#B1CEFB"
+  },
+  "color/icon/secondary": {
+    "hex": "#ABD8E3",
+    "from": "color/high-contrast/secondary/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#ABD8E3"
+  },
+  "color/icon/point": {
+    "hex": "#EBADB2",
+    "from": "color/high-contrast/point/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#EBADB2"
+  },
+  "color/icon/danger": {
+    "hex": "#F7AFA1",
+    "from": "color/high-contrast/danger/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#F7AFA1"
+  },
+  "color/icon/warning": {
+    "hex": "#FFC95C",
+    "from": "color/high-contrast/warning/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFC95C"
+  },
+  "color/icon/success": {
+    "hex": "#A9DAB4",
+    "from": "color/high-contrast/success/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#A9DAB4"
+  },
+  "color/icon/information": {
+    "hex": "#9ED2FA",
+    "from": "color/high-contrast/information/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#9ED2FA"
+  },
+  "color/link/default": {
+    "hex": "#86AFF9",
+    "from": "color/high-contrast/primary/30",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#86AFF9"
+  },
+  "color/link/hover": {
+    "hex": "#B1CEFB",
+    "from": "color/high-contrast/primary/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#B1CEFB"
+  },
+  "color/link/pressed": {
+    "hex": "#D8E5FD",
+    "from": "color/high-contrast/primary/10",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#D8E5FD"
+  },
+  "color/link/visited": {
+    "hex": "#C49FF9",
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#C49FF9"
+  },
+  "color/border/primary": {
+    "hex": "#4C87F6",
+    "from": "color/high-contrast/primary/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#256EF4"
+  },
+  "color/divider/error": {
+    "hex": "#DE3412",
+    "from": "color/high-contrast/danger/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#DE3412"
+  },
+  "color/border/disabled": {
+    "hex": "#464C53",
+    "from": "color/high-contrast/gray/70",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#464C53"
+  },
+  "color/icon/gray-light": {
+    "hex": "#CDD1D5",
+    "from": "color/high-contrast/gray/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#CDD1D5"
+  },
+  "color/text/bolder-inverse": {
+    "hex": "#131416",
+    "from": "color/high-contrast/gray/95",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#131416"
+  },
+  "color/border/gray-darker": {
+    "hex": "#E6E8EA",
+    "from": "color/high-contrast/gray/10",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#E6E8EA"
+  },
+  "color/icon/disabled": {
+    "hex": "#58616A",
+    "from": "color/high-contrast/gray/60",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#58616A"
+  },
+  "color/button/primary-fill": {
+    "hex": "#256EF4",
+    "from": "color/high-contrast/primary/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#256EF4"
+  },
+  "color/button/primary-fill-hover": {
+    "hex": "#0B50D0",
+    "from": "color/high-contrast/primary/60",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#0B50D0"
+  },
+  "color/button/primary-fill-pressed": {
+    "hex": "#083891",
+    "from": "color/high-contrast/primary/70",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#083891"
+  },
+  "color/button/secondary-fill": {
+    "hex": "#03163A",
+    "from": "color/high-contrast/primary/90",
+    "rule": "면 한 단계 밝게: primary 95 → 90",
+    "high_contrast": "#020F27"
+  },
+  "color/button/secondary-fill-hover": {
+    "hex": "#052561",
+    "from": "color/high-contrast/primary/80",
+    "rule": "면 한 단계 밝게: primary 90 → 80",
+    "high_contrast": "#03163A"
+  },
+  "color/button/secondary-fill-pressed": {
+    "hex": "#083891",
+    "from": "color/high-contrast/primary/70",
+    "rule": "상태 구분: color/button/secondary-fill-hover와 같은 값이 되어 한 단계 밝게",
+    "high_contrast": "#052561"
+  },
+  "color/button/secondary-border": {
+    "hex": "#256EF4",
+    "from": "color/high-contrast/primary/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#256EF4"
+  },
+  "color/button/tertiary-fill": {
+    "hex": "#00000000",
+    "from": "color/high-contrast/alpha/black0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000000"
+  },
+  "color/button/tertiary-fill-hover": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "면 한 단계 밝게: gray 95 → 90",
+    "high_contrast": "#131416"
+  },
+  "color/button/tertiary-fill-pressed": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#33363D"
+  },
+  "color/button/tertiary-border": {
+    "hex": "#8A949E",
+    "from": "color/high-contrast/gray/40",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#8A949E"
+  },
+  "color/button/disabled-fill": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#33363D"
+  },
+  "color/icon/disabled-on": {
+    "hex": "#6D7882",
+    "from": "color/high-contrast/gray/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#6D7882"
+  },
+  "color/border/secondary": {
+    "hex": "#3D9FB8",
+    "from": "color/high-contrast/secondary/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#1F687A"
+  },
+  "color/button/text-fill-hover": {
+    "hex": "#0E3139",
+    "from": "color/high-contrast/secondary/90",
+    "rule": "면 한 단계 밝게: secondary 95 → 90",
+    "high_contrast": "#091F25"
+  },
+  "color/button/text-fill-pressed": {
+    "hex": "#113B45",
+    "from": "color/high-contrast/secondary/80",
+    "rule": "면 한 단계 밝게: secondary 90 → 80",
+    "high_contrast": "#0E3139"
+  },
+  "color/border/inverse": {
+    "hex": "#000000",
+    "from": "color/high-contrast/gray/100",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#000000"
+  },
+  "border-width/variable-regular": {
+    "hex": 1,
+    "from": null,
+    "rule": "시각 보조 제외: 선명한 화면 모드 전용 윤곽선, 밝은 화면 값 사용",
+    "high_contrast": 2
+  },
+  "border-width/variable-medium": {
+    "hex": 2,
+    "from": null,
+    "rule": "시각 보조 제외: 선명한 화면 모드 전용 윤곽선, 밝은 화면 값 사용",
+    "high_contrast": 3
+  },
+  "color/background/white": {
+    "hex": "#131416",
+    "from": "color/high-contrast/gray/95",
+    "rule": "면 한 단계 밝게: gray 100 → 95",
+    "high_contrast": "#000000"
+  },
+  "color/background/inverse": {
+    "hex": "#E6E8EA",
+    "from": "color/high-contrast/gray/10",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#E6E8EA"
+  },
+  "color/background/gray-subtler": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "면 한 단계 밝게: gray 95 → 90",
+    "high_contrast": "#131416"
+  },
+  "color/background/gray-subtle": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "면 한 단계 밝게: gray 90 → 80",
+    "high_contrast": "#1E2124"
+  },
+  "color/surface/white": {
+    "hex": "#131416",
+    "from": "color/high-contrast/gray/95",
+    "rule": "면 한 단계 밝게: gray 100 → 95",
+    "high_contrast": "#000000"
+  },
+  "color/element/disabled-light": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#33363D"
+  },
+  "color/element/disabled-dark": {
+    "hex": "#58616A",
+    "from": "color/high-contrast/gray/60",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#58616A"
+  },
+  "color/element/gray-lighter": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "면 한 단계 밝게: gray 95 → 90",
+    "high_contrast": "#131416"
+  },
+  "color/element/gray-light": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "면 한 단계 밝게: gray 90 → 80",
+    "high_contrast": "#1E2124"
+  },
+  "color/element/gray": {
+    "hex": "#6D7882",
+    "from": "color/high-contrast/gray/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#6D7882"
+  },
+  "color/element/primary-lighter": {
+    "hex": "#03163A",
+    "from": "color/high-contrast/primary/90",
+    "rule": "면 한 단계 밝게: primary 95 → 90",
+    "high_contrast": "#020F27"
+  },
+  "color/element/primary-light": {
+    "hex": "#052561",
+    "from": "color/high-contrast/primary/80",
+    "rule": "면 한 단계 밝게: primary 90 → 80",
+    "high_contrast": "#03163A"
+  },
+  "color/element/primary": {
+    "hex": "#256EF4",
+    "from": "color/high-contrast/primary/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#256EF4"
+  },
+  "color/element/secondary-lighter": {
+    "hex": "#0E3139",
+    "from": "color/high-contrast/secondary/90",
+    "rule": "면 한 단계 밝게: secondary 95 → 90",
+    "high_contrast": "#091F25"
+  },
+  "color/element/secondary-light": {
+    "hex": "#113B45",
+    "from": "color/high-contrast/secondary/80",
+    "rule": "면 한 단계 밝게: secondary 90 → 80",
+    "high_contrast": "#0E3139"
+  },
+  "color/element/secondary": {
+    "hex": "#1F687A",
+    "from": "color/high-contrast/secondary/60",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#1F687A"
+  },
+  "color/element/point-lighter": {
+    "hex": "#310C0F",
+    "from": "color/high-contrast/point/90",
+    "rule": "면 한 단계 밝게: point 95 → 90",
+    "high_contrast": "#21080A"
+  },
+  "color/element/point-light": {
+    "hex": "#521419",
+    "from": "color/high-contrast/point/80",
+    "rule": "면 한 단계 밝게: point 90 → 80",
+    "high_contrast": "#310C0F"
+  },
+  "color/element/point": {
+    "hex": "#D63D4A",
+    "from": "color/high-contrast/point/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#D63D4A"
+  },
+  "color/element/danger-lighter": {
+    "hex": "#390D05",
+    "from": "color/high-contrast/danger/90",
+    "rule": "면 한 단계 밝게: danger 95 → 90",
+    "high_contrast": "#260903"
+  },
+  "color/element/danger": {
+    "hex": "#DE3412",
+    "from": "color/high-contrast/danger/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#DE3412"
+  },
+  "color/element/warning-lighter": {
+    "hex": "#2E1F00",
+    "from": "color/high-contrast/warning/90",
+    "rule": "면 한 단계 밝게: warning 95 → 90",
+    "high_contrast": "#241800"
+  },
+  "color/element/warning": {
+    "hex": "#FFB114",
+    "from": "color/high-contrast/warning/30",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFB114"
+  },
+  "color/element/success-lighter": {
+    "hex": "#122B18",
+    "from": "color/high-contrast/success/90",
+    "rule": "면 한 단계 밝게: success 95 → 90",
+    "high_contrast": "#0E2012"
+  },
+  "color/element/success": {
+    "hex": "#228738",
+    "from": "color/high-contrast/success/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#228738"
+  },
+  "color/element/information-lighter": {
+    "hex": "#03253F",
+    "from": "color/high-contrast/information/90",
+    "rule": "면 한 단계 밝게: information 95 → 90",
+    "high_contrast": "#021A2C"
+  },
+  "color/element/information": {
+    "hex": "#0B78CB",
+    "from": "color/high-contrast/information/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#0B78CB"
+  },
+  "color/element/inverse": {
+    "hex": "#131416",
+    "from": "color/high-contrast/gray/95",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#131416"
+  },
+  "color/element/gray-dark": {
+    "hex": "#8A949E",
+    "from": "color/high-contrast/gray/40",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#8A949E"
+  },
+  "color/text/basic-inverse": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#1E2124"
+  },
+  "color/text/subtle-inverse": {
+    "hex": "#464C53",
+    "from": "color/high-contrast/gray/70",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#464C53"
+  },
+  "color/divider/primary-light": {
+    "hex": "#052561",
+    "from": "color/high-contrast/primary/80",
+    "rule": "면 한 단계 밝게: primary 90 → 80",
+    "high_contrast": "#03163A"
+  },
+  "color/button/text-fill": {
+    "hex": "#00000000",
+    "from": "color/high-contrast/alpha/black0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000000"
+  },
+  "color/surface/inverse": {
+    "hex": "#E6E8EA",
+    "from": "color/high-contrast/gray/10",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#E6E8EA"
+  },
+  "color/border/transparency": {
+    "hex": "#00000000",
+    "from": "color/light/alpha/black0",
+    "rule": "시각 보조 제외: 선명한 화면 모드 전용 윤곽선, 밝은 화면 값 사용",
+    "high_contrast": "#FFFFFF40"
+  },
+  "color/button/text-border": {
+    "hex": "#00000000",
+    "from": "color/light/alpha/black0",
+    "rule": "시각 보조 제외: 선명한 화면 모드 전용 윤곽선, 밝은 화면 값 사용",
+    "high_contrast": "#FFFFFF80"
+  },
+  "color/button/disabled-border": {
+    "hex": "#464C53",
+    "from": "color/high-contrast/gray/70",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#464C53"
+  },
+  "color/action/white": {
+    "hex": "#000000",
+    "from": "color/light/gray/100",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#000000"
+  },
+  "color/action/primary": {
+    "hex": "#00000000",
+    "from": "color/high-contrast/alpha/black0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000000"
+  },
+  "color/action/primary-hover": {
+    "hex": "#03163A",
+    "from": "color/high-contrast/primary/90",
+    "rule": "면 한 단계 밝게: primary 95 → 90",
+    "high_contrast": "#020F27"
+  },
+  "color/action/primary-pressed": {
+    "hex": "#052561",
+    "from": "color/high-contrast/primary/80",
+    "rule": "면 한 단계 밝게: primary 90 → 80",
+    "high_contrast": "#03163A"
+  },
+  "color/action/secondary": {
+    "hex": "#00000000",
+    "from": "color/light/alpha/black0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000000"
+  },
+  "color/action/secondary-hover": {
+    "hex": "#0E3139",
+    "from": "color/high-contrast/secondary/90",
+    "rule": "면 한 단계 밝게: secondary 95 → 90",
+    "high_contrast": "#091F25"
+  },
+  "color/action/secondary-pressed": {
+    "hex": "#113B45",
+    "from": "color/high-contrast/secondary/80",
+    "rule": "면 한 단계 밝게: secondary 90 → 80",
+    "high_contrast": "#0E3139"
+  },
+  "color/action/secondary-selected": {
+    "hex": "#0E3139",
+    "from": "color/high-contrast/secondary/90",
+    "rule": "면 한 단계 밝게: secondary 95 → 90",
+    "high_contrast": "#091F25"
+  },
+  "color/action/secondary-on": {
+    "hex": "#00000000",
+    "from": "color/high-contrast/alpha/black0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000000"
+  },
+  "color/action/secondary-on-hover": {
+    "hex": "#131416",
+    "from": "color/high-contrast/gray/95",
+    "rule": "면 한 단계 밝게: gray 100 → 95",
+    "high_contrast": "#000000"
+  },
+  "color/action/secondary-on-pressed": {
+    "hex": "#113B45",
+    "from": "color/high-contrast/secondary/80",
+    "rule": "면 한 단계 밝게: secondary 90 → 80",
+    "high_contrast": "#0E3139"
+  },
+  "color/action/secondary-on-selected": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "면 한 단계 밝게: gray 95 → 90",
+    "high_contrast": "#131416"
+  },
+  "color/action/secondary-active": {
+    "hex": "#1F687A",
+    "from": "color/high-contrast/secondary/60",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#1F687A"
+  },
+  "color/input/border": {
+    "hex": "#8A949E",
+    "from": "color/high-contrast/gray/40",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#8A949E"
+  },
+  "color/input/border-disabled": {
+    "hex": "#464C53",
+    "from": "color/high-contrast/gray/70",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#464C53"
+  },
+  "color/input/border-active": {
+    "hex": "#4C87F6",
+    "from": "color/high-contrast/primary/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#256EF4"
+  },
+  "color/input/border-error": {
+    "hex": "#F05F42",
+    "from": "color/high-contrast/danger/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#DE3412"
+  },
+  "color/input/surface": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "면 한 단계 밝게: gray 90 → 80",
+    "high_contrast": "#1E2124"
+  },
+  "color/input/surface-disabled": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "면 한 단계 밝게: gray 95 → 90",
+    "high_contrast": "#131416"
+  },
+  "color/text/inverse-static": {
+    "hex": "#FFFFFF",
+    "from": "color/high-contrast/gray/0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFFFFF"
+  },
+  "color/surface/white-static": {
+    "hex": "#FFFFFF",
+    "from": "color/high-contrast/gray/0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFFFFF"
+  },
+  "color/surface/inverse-static": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#1E2124"
+  },
+  "color/background/dim": {
+    "hex": "#000000BF",
+    "from": "color/high-contrast/alpha/black75",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#000000BF"
+  },
+  "color/divider/inverse": {
+    "hex": "#000000",
+    "from": "color/high-contrast/gray/100",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#000000"
+  },
+  "color/text/static": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#1E2124"
+  },
+  "color/action/primary-active": {
+    "hex": "#256EF4",
+    "from": "color/high-contrast/primary/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#256EF4"
+  },
+  "color/icon/inverse-static": {
+    "hex": "#FFFFFF",
+    "from": "color/high-contrast/gray/0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFFFFF"
+  },
+  "border-width/static-regular": {
+    "hex": 1,
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로(색 아님)",
+    "high_contrast": 1
+  },
+  "color/surface/white-subtle": {
+    "hex": "#1E2124",
+    "from": "color/high-contrast/gray/90",
+    "rule": "면 한 단계 밝게: gray 95 → 90",
+    "high_contrast": "#131416"
+  },
+  "color/surface/white-subtler": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "면 한 단계 밝게: gray 90 → 80",
+    "high_contrast": "#1E2124"
+  },
+  "color/action/disabled": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#33363D"
+  },
+  "color/action/primary-selected": {
+    "hex": "#03163A",
+    "from": "color/high-contrast/primary/90",
+    "rule": "면 한 단계 밝게: primary 95 → 90",
+    "high_contrast": "#020F27"
+  },
+  "color/graphic/blue-subtler": {
+    "hex": "#E5ECF9",
+    "from": "color/high-contrast/graphic/10",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#E5ECF9"
+  },
+  "color/graphic/blue-subtle": {
+    "hex": "#98ACC5",
+    "from": "color/high-contrast/graphic/30",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#98ACC5"
+  },
+  "color/graphic/blue": {
+    "hex": "#61758F",
+    "from": "color/high-contrast/graphic/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#61758F"
+  },
+  "color/graphic/blue-dark": {
+    "hex": "#39506C",
+    "from": "color/high-contrast/graphic/70",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#39506C"
+  },
+  "color/graphic/blue-darker": {
+    "hex": "#223A58",
+    "from": "color/high-contrast/graphic/90",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#223A58"
+  },
+  "color/graphic/red-subtler": {
+    "hex": "#FBEFF0",
+    "from": "color/high-contrast/point/5",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FBEFF0"
+  },
+  "color/graphic/red-subtle": {
+    "hex": "#F5D6D9",
+    "from": "color/high-contrast/point/10",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#F5D6D9"
+  },
+  "color/graphic/red": {
+    "hex": "#EBADB2",
+    "from": "color/high-contrast/point/20",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#EBADB2"
+  },
+  "color/graphic/red-dark": {
+    "hex": "#D65C66",
+    "from": "color/high-contrast/point/40",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#D65C66"
+  },
+  "color/graphic/red-darker": {
+    "hex": "#7A1F26",
+    "from": "color/high-contrast/point/70",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#7A1F26"
+  },
+  "color/element/inverse-static": {
+    "hex": "#FFFFFF",
+    "from": "color/high-contrast/gray/0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFFFFF"
+  },
+  "color/graphic/brand": {
+    "hex": "#256EF4",
+    "from": "color/high-contrast/primary/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#256EF4"
+  },
+  "color/divider/gray-darker": {
+    "hex": "#E6E8EA",
+    "from": "color/high-contrast/gray/10",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#E6E8EA"
+  },
+  "color/alpha/base100": {
+    "hex": "#000000",
+    "from": "color/high-contrast/alpha/black100",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#000000"
+  },
+  "color/alpha/base50": {
+    "hex": "#00000080",
+    "from": "color/high-contrast/alpha/black50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000080"
+  },
+  "color/alpha/base25": {
+    "hex": "#00000040",
+    "from": "color/high-contrast/alpha/black25",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000040"
+  },
+  "color/alpha/base0": {
+    "hex": "#00000000",
+    "from": "color/light/alpha/black0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000000"
+  },
+  "color/alpha/inverse100": {
+    "hex": "#FFFFFF",
+    "from": "color/high-contrast/alpha/white100",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFFFFF"
+  },
+  "color/alpha/inverse50": {
+    "hex": "#FFFFFF80",
+    "from": "color/high-contrast/alpha/white50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFFFFF80"
+  },
+  "color/alpha/inverse25": {
+    "hex": "#FFFFFF40",
+    "from": "color/high-contrast/alpha/white25",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFFFFF40"
+  },
+  "color/alpha/inverse0": {
+    "hex": "#FFFFFF00",
+    "from": "color/high-contrast/alpha/white0",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFFFFF00"
+  },
+  "border-width/static-medium": {
+    "hex": 2,
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로(색 아님)",
+    "high_contrast": 2
+  },
+  "color/border/primary-light": {
+    "hex": "#052561",
+    "from": "color/high-contrast/primary/80",
+    "rule": "면 한 단계 밝게: primary 90 → 80",
+    "high_contrast": "#03163A"
+  },
+  "color/border/point": {
+    "hex": "#D65C66",
+    "from": "color/high-contrast/point/40",
+    "rule": "대비 보정: 3.0:1 미달로 한 단계 밝게",
+    "high_contrast": "#D63D4A"
+  },
+  "color/border/point-light": {
+    "hex": "#521419",
+    "from": "color/high-contrast/point/80",
+    "rule": "면 한 단계 밝게: point 90 → 80",
+    "high_contrast": "#310C0F"
+  },
+  "color/alpha/base75": {
+    "hex": "#000000BF",
+    "from": "color/high-contrast/alpha/black75",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#000000BF"
+  },
+  "color/alpha/inverse75": {
+    "hex": "#FFFFFFBF",
+    "from": "color/high-contrast/alpha/white75",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFFFFFBF"
+  },
+  "color/alpha/inverse10": {
+    "hex": "#00000040",
+    "from": "color/high-contrast/alpha/black25",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000040"
+  },
+  "color/alpha/base10": {
+    "hex": "#0000001A",
+    "from": "color/high-contrast/alpha/black10",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#0000001A"
+  },
+  "color/icon/primary-static": {
+    "hex": "#256EF4",
+    "from": "color/high-contrast/primary/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#256EF4"
+  },
+  "color/icon/secondary-static": {
+    "hex": "#113B45",
+    "from": "color/high-contrast/secondary/80",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#113B45"
+  },
+  "color/icon/point-static": {
+    "hex": "#D63D4A",
+    "from": "color/high-contrast/point/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#D63D4A"
+  },
+  "color/icon/danger-static": {
+    "hex": "#DE3412",
+    "from": "color/high-contrast/danger/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#DE3412"
+  },
+  "color/icon/warning-static": {
+    "hex": "#9E6A00",
+    "from": "color/high-contrast/warning/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#9E6A00"
+  },
+  "color/icon/success-static": {
+    "hex": "#228738",
+    "from": "color/high-contrast/success/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#228738"
+  },
+  "color/icon/information-static": {
+    "hex": "#0B78CB",
+    "from": "color/high-contrast/information/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#0B78CB"
+  },
+  "color/alpha/shadow1": {
+    "hex": "#0000001F",
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#0000001F"
+  },
+  "color/alpha/shadow2": {
+    "hex": "#00000033",
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000033"
+  },
+  "color/alpha/shadow3": {
+    "hex": "#00000066",
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#00000066"
+  },
+  "shadow/y-3": {
+    "hex": 8,
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로(색 아님)",
+    "high_contrast": 8
+  },
+  "shadow/blur-3": {
+    "hex": 16,
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로(색 아님)",
+    "high_contrast": 16
+  },
+  "shadow/blur-4": {
+    "hex": 24,
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로(색 아님)",
+    "high_contrast": 24
+  },
+  "shadow/y-4": {
+    "hex": 16,
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로(색 아님)",
+    "high_contrast": 16
+  },
+  "color/icon/gray-static": {
+    "hex": "#33363D",
+    "from": "color/high-contrast/gray/80",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#33363D"
+  },
+  "color/divider/point": {
+    "hex": "#D63D4A",
+    "from": "color/high-contrast/point/50",
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#D63D4A"
+  },
+  "color/element/logo-text": {
+    "hex": "#FFFFFF",
+    "from": null,
+    "rule": "KRDS 선명한 화면 모드 값 그대로",
+    "high_contrast": "#FFFFFF"
+  }
+}

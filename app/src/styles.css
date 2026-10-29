@@ -1,0 +1,48 @@
+/* 공통 바탕. 값은 KRDS 변수만. 미디어 쿼리는 KRDS 공식 구간(767, 1023, 1279)만. */
+@tailwind utilities;
+
+html { color-scheme: light; }
+html[data-krds-mode="dark"], html[data-krds-mode="high-contrast"] { color-scheme: dark; }
+body {
+  background: var(--krds-color-background-white);
+  color: var(--krds-color-text-basic);
+}
+#root { display: flex; flex-direction: column; min-height: 100dvh; }
+
+/* 한국어 줄바꿈(design_rules K1~K5): 어절 단위, 제목은 균형, 본문은 끝줄 보정. 긴 파일명과 주소만 아무 곳에서나 끊는다 */
+body { word-break: keep-all; overflow-wrap: normal; }
+h1, h2, h3, h4, .krds-text-heading-xlarge, .krds-text-heading-large, .krds-text-heading-medium, .krds-text-heading-small { text-wrap: balance; }
+p, li, dd, td, label { text-wrap: pretty; }
+.rb-break-any, code, pre, td a, .rb-path { overflow-wrap: anywhere; word-break: normal; }
+.rb-phrase { display: inline-block; }
+
+/* 건너뛰기 링크와 초점 */
+.rb-skip { position: absolute; transform: translateY(-200%); padding: var(--krds-padding-6); background: var(--krds-color-background-white); color: var(--krds-color-text-basic); z-index: 200; }
+.rb-skip:focus { transform: translateY(0); }
+:focus-visible { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); outline-offset: var(--krds-gap-1); }
+/* 화면 이동 때 본문에 초점을 옮기지만 윤곽선은 그리지 않는다(본문 좌우 파란 띠 원인) */
+#main:focus, #main:focus-visible { outline: none; box-shadow: none; }
+
+/* 공식 배너: 시제품이므로 태극기 그림은 쓰지 않는다 */
+.rb-masthead .nuri-txt::before { display: none; }
+
+/* 공식 머리글: 로고 자리에 서비스명 글자 */
+#krds-header .header-container .logo.rb-logo { width: auto; height: auto; }
+#krds-header .header-container .logo.rb-logo a {
+  display: inline-flex; align-items: center; width: auto; height: auto; min-height: var(--krds-size-height-7);
+  background-image: none; color: var(--krds-color-text-basic); text-decoration: none;
+  font-size: var(--krds-pc-font-size-heading-small); font-weight: var(--krds-font-weight-bold);
+}
+.rb-mode-options { display: flex; flex-direction: column; gap: var(--krds-gap-4); border: 0; margin: 0; padding: 0; min-width: max-content; }
+.rb-gnb-mode { flex-direction: column; align-items: flex-start; }
+
+.rb-notice { padding-block: var(--krds-padding-6); background: var(--krds-color-surface-information-subtler); }
+.rb-footer { background: var(--krds-color-surface-gray-subtler); padding-block: var(--krds-padding-10); }
+.rb-footer-links { display: flex; gap: var(--krds-gap-5); list-style: none; padding: 0; margin: 0; flex-wrap: wrap; }
+.rb-main { flex: 1; width: 100%; padding-block: var(--krds-padding-8) var(--krds-padding-10); }
+
+@media (max-width: 767px) {
+  #krds-header .header-container .logo.rb-logo a { font-size: var(--krds-mobile-font-size-heading-small); min-height: var(--krds-size-height-5); }
+  .rb-main { padding-block: var(--krds-padding-6) var(--krds-padding-9); }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

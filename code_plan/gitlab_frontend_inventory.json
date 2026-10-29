@@ -1,0 +1,469 @@
+{
+  "source": "/Users/juhyunho/gitlab-src",
+  "ui": "/Users/juhyunho/.aside/u/0/sessions/2026-10-30_Zl1xTy63JrkfElRe/tmp/gitlab-ui-analysis/pinned/package",
+  "gitlab_styles": {
+    "files": 232,
+    "lines": 35806,
+    "hex": {
+      "occurrences": 949,
+      "files": 20
+    },
+    "rem": {
+      "occurrences": 153,
+      "files": 48
+    },
+    "rgb_hsl": {
+      "occurrences": 114,
+      "files": 22
+    },
+    "px_to_rem": {
+      "occurrences": 15,
+      "files": 8
+    },
+    "css_var": {
+      "occurrences": 585,
+      "files": 77
+    }
+  },
+  "ui_scss": {
+    "files": 18,
+    "lines": 1346,
+    "hex": {
+      "occurrences": 89,
+      "files": 2
+    },
+    "rem": {
+      "occurrences": 5,
+      "files": 3
+    },
+    "rgb_hsl": {
+      "occurrences": 2,
+      "files": 1
+    },
+    "px_to_rem": {
+      "occurrences": 56,
+      "files": 2
+    },
+    "css_var": {
+      "occurrences": 52,
+      "files": 4
+    }
+  },
+  "ui_all_src": {
+    "files": 207,
+    "lines": 23878,
+    "hex": {
+      "occurrences": 1123,
+      "files": 7
+    },
+    "rem": {
+      "occurrences": 413,
+      "files": 20
+    },
+    "rgb_hsl": {
+      "occurrences": 243,
+      "files": 14
+    },
+    "px_to_rem": {
+      "occurrences": 64,
+      "files": 4
+    },
+    "css_var": {
+      "occurrences": 3601,
+      "files": 59
+    }
+  },
+  "ui_tokens": {
+    "files": 2,
+    "lines": 2566,
+    "hex": {
+      "occurrences": 506,
+      "files": 2
+    },
+    "rem": {
+      "occurrences": 130,
+      "files": 2
+    },
+    "rgb_hsl": {
+      "occurrences": 86,
+      "files": 2
+    },
+    "px_to_rem": {
+      "occurrences": 0,
+      "files": 0
+    },
+    "css_var": {
+      "occurrences": 1750,
+      "files": 2
+    }
+  },
+  "ui_compiled": {
+    "files": 2,
+    "lines": 7,
+    "hex": {
+      "occurrences": 1340,
+      "files": 2
+    },
+    "rem": {
+      "occurrences": 1713,
+      "files": 2
+    },
+    "rgb_hsl": {
+      "occurrences": 214,
+      "files": 1
+    },
+    "px_to_rem": {
+      "occurrences": 0,
+      "files": 0
+    },
+    "css_var": {
+      "occurrences": 3874,
+      "files": 2
+    }
+  },
+  "rows": [
+    [
+      "P-01",
+      "탐색 시작",
+      [
+        {
+          "file": "app/views/explore/projects/index.html.haml",
+          "lines": 4
+        },
+        {
+          "file": "app/views/explore/projects/_head.html.haml",
+          "lines": 11
+        },
+        {
+          "file": "app/assets/javascripts/pages/explore/projects/index.js",
+          "lines": 3
+        },
+        {
+          "file": "app/assets/javascripts/explore/projects/index.js",
+          "lines": 54
+        },
+        {
+          "file": "app/assets/javascripts/explore/projects/components/app.vue",
+          "lines": 79
+        }
+      ]
+    ],
+    [
+      "P-02",
+      "검색 결과",
+      [
+        {
+          "file": "app/views/search/show.html.haml",
+          "lines": 37
+        },
+        {
+          "file": "app/assets/javascripts/search/index.js",
+          "lines": 98
+        },
+        {
+          "file": "app/assets/javascripts/search/results/components/app.vue",
+          "lines": 122
+        },
+        {
+          "file": "app/assets/javascripts/groups_projects/components/tabs_with_list.vue",
+          "lines": 699
+        }
+      ]
+    ],
+    [
+      "P-03",
+      "분야 탐색",
+      [
+        {
+          "file": "app/views/explore/projects/topics.html.haml",
+          "lines": 13
+        },
+        {
+          "file": "app/views/explore/projects/topic.html.haml",
+          "lines": 36
+        },
+        {
+          "file": "app/views/shared/topics/_list.html.haml",
+          "lines": 15
+        }
+      ]
+    ],
+    [
+      "P-04",
+      "프로젝트 홈",
+      [
+        {
+          "file": "app/views/projects/show.html.haml",
+          "lines": 33
+        },
+        {
+          "file": "app/views/projects/_home_panel.html.haml",
+          "lines": 14
+        },
+        {
+          "file": "app/assets/javascripts/pages/projects/show/index.js",
+          "lines": 145
+        },
+        {
+          "file": "app/assets/javascripts/repository/components/header_area.vue",
+          "lines": 435
+        }
+      ]
+    ],
+    [
+      "P-05",
+      "파일·README",
+      [
+        {
+          "file": "app/views/projects/tree/show.html.haml",
+          "lines": 24
+        },
+        {
+          "file": "app/views/projects/_files.html.haml",
+          "lines": 18
+        },
+        {
+          "file": "app/views/projects/blob/show.html.haml",
+          "lines": 27
+        },
+        {
+          "file": "app/views/projects/blob/viewers/_readme.html.haml",
+          "lines": 4
+        },
+        {
+          "file": "app/assets/javascripts/repository/components/app.vue",
+          "lines": 9
+        },
+        {
+          "file": "app/assets/javascripts/repository/components/tree_content.vue",
+          "lines": 222
+        },
+        {
+          "file": "app/assets/javascripts/blob/components/blob_content.vue",
+          "lines": 152
+        }
+      ]
+    ],
+    [
+      "P-06",
+      "변경 이력·버전",
+      [
+        {
+          "file": "app/views/projects/commits/show.html.haml",
+          "lines": 16
+        },
+        {
+          "file": "app/views/projects/commit/show.html.haml",
+          "lines": 31
+        },
+        {
+          "file": "app/views/projects/releases/index.html.haml",
+          "lines": 9
+        },
+        {
+          "file": "app/assets/javascripts/projects/commits/components/commit_list_app.vue",
+          "lines": 447
+        },
+        {
+          "file": "app/assets/javascripts/releases/components/app_index.vue",
+          "lines": 383
+        }
+      ]
+    ],
+    [
+      "P-07",
+      "가져오기·실행",
+      [
+        {
+          "file": "app/assets/javascripts/repository/components/code_dropdown/compact_code_dropdown.vue",
+          "lines": 422
+        },
+        {
+          "file": "app/assets/javascripts/repository/components/code_dropdown/code_dropdown_clone_item.vue",
+          "lines": 104
+        },
+        {
+          "file": "app/assets/javascripts/repository/components/code_dropdown/code_dropdown_download_items.vue",
+          "lines": 34
+        }
+      ]
+    ],
+    [
+      "P-08",
+      "의견·개선 요청",
+      [
+        {
+          "file": "app/views/projects/work_items/index.html.haml",
+          "lines": 21
+        },
+        {
+          "file": "app/views/projects/work_items/show.html.haml",
+          "lines": 13
+        },
+        {
+          "file": "app/views/projects/issues/show.html.haml",
+          "lines": 16
+        },
+        {
+          "file": "app/assets/javascripts/work_items/components/app.vue",
+          "lines": 33
+        },
+        {
+          "file": "app/assets/javascripts/work_items/list/list_view.vue",
+          "lines": 644
+        },
+        {
+          "file": "app/assets/javascripts/work_items/components/create_work_item.vue",
+          "lines": 1600
+        },
+        {
+          "file": "app/assets/javascripts/pages/projects/issues/show/index.js",
+          "lines": 19
+        }
+      ]
+    ],
+    [
+      "P-09",
+      "새 프로젝트·공개 점검",
+      [
+        {
+          "file": "app/views/projects/new.html.haml",
+          "lines": 42
+        },
+        {
+          "file": "app/views/projects/_new_project_fields.html.haml",
+          "lines": 121
+        },
+        {
+          "file": "app/assets/javascripts/pages/projects/new/index.js",
+          "lines": 13
+        },
+        {
+          "file": "app/assets/javascripts/projects/new/index.js",
+          "lines": 96
+        }
+      ]
+    ],
+    [
+      "P-10",
+      "내 프로젝트",
+      [
+        {
+          "file": "app/views/dashboard/projects/index.html.haml",
+          "lines": 16
+        },
+        {
+          "file": "app/assets/javascripts/projects/your_work/index.js",
+          "lines": 51
+        },
+        {
+          "file": "app/assets/javascripts/projects/your_work/components/app.vue",
+          "lines": 119
+        }
+      ]
+    ],
+    [
+      "P-11",
+      "기관 탐색",
+      [
+        {
+          "file": "app/views/explore/groups/index.html.haml",
+          "lines": 18
+        },
+        {
+          "file": "app/assets/javascripts/explore/groups/components/app.vue",
+          "lines": 61
+        },
+        {
+          "file": "app/views/groups/show.html.haml",
+          "lines": 18
+        },
+        {
+          "file": "app/assets/javascripts/groups/show/components/app.vue",
+          "lines": 73
+        }
+      ]
+    ],
+    [
+      "P-12",
+      "로그인·가입",
+      [
+        {
+          "file": "app/views/devise/sessions/new.html.haml",
+          "lines": 39
+        },
+        {
+          "file": "app/views/devise/sessions/_new_base.html.haml",
+          "lines": 16
+        },
+        {
+          "file": "app/views/devise/registrations/new.html.haml",
+          "lines": 35
+        },
+        {
+          "file": "app/views/devise/registrations/_signup_box_form.html.haml",
+          "lines": 86
+        },
+        {
+          "file": "app/views/devise/passwords/new.html.haml",
+          "lines": 17
+        },
+        {
+          "file": "app/views/devise/passwords/edit.html.haml",
+          "lines": 20
+        }
+      ]
+    ],
+    [
+      "P-13",
+      "오류",
+      [
+        {
+          "file": "app/views/errors/not_found.html.haml",
+          "lines": 15
+        },
+        {
+          "file": "app/views/errors/access_denied.html.haml",
+          "lines": 16
+        },
+        {
+          "file": "app/views/errors/service_unavailable.html.haml",
+          "lines": 14
+        },
+        {
+          "file": "app/assets/stylesheets/errors.scss",
+          "lines": 95
+        }
+      ]
+    ],
+    [
+      "P-14",
+      "도움말·공지",
+      [
+        {
+          "file": "app/views/help/index.html.haml",
+          "lines": 41
+        },
+        {
+          "file": "app/views/help/show.html.haml",
+          "lines": 5
+        }
+      ]
+    ],
+    [
+      "P-15",
+      "개발 수요 보드(직접 대응 없음)",
+      [
+        {
+          "file": "app/assets/javascripts/work_items/list/list_view.vue",
+          "lines": 644
+        }
+      ]
+    ]
+  ],
+  "selection": {
+    "files": 61,
+    "lines": 7073
+  },
+  "missing": []
+}

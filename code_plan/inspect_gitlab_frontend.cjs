@@ -1,0 +1,26 @@
+const fs=require('fs'),path=require('path');
+const root=process.env.HOME+'/gitlab-src';
+const ui='/Users/juhyunho/.aside/u/0/sessions/2026-10-30_Zl1xTy63JrkfElRe/tmp/gitlab-ui-analysis/pinned/package';
+function walk(d){return fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)])}
+function scan(d){const files=walk(d).filter(f=>/\.(scss|css)$/.test(f));const regs={hex:/#[0-9a-fA-F]{3,8}\b/g,rem:/\b(?:\d*\.)?\d+rem\b/g,rgb_hsl:/\b(?:rgba?|hsla?)\s*\(/g,px_to_rem:/px-to-rem\s*\(/g,css_var:/var\(--gl-[\w-]+/g};let result={files:files.length,lines:files.reduce((n,f)=>n+fs.readFileSync(f,'utf8').split('\n').length-1,0)};for(const [n,r] of Object.entries(regs)){let hits=0,count=0;for(const f of files){const s=fs.readFileSync(f,'utf8');const m=[...s.matchAll(r)].length;hits+=m;if(m)count++;}result[n]={occurrences:hits,files:count}}return result}
+const rows=[
+['P-01','탐색 시작',['app/views/explore/projects/index.html.haml','app/views/explore/projects/_head.html.haml','app/assets/javascripts/pages/explore/projects/index.js','app/assets/javascripts/explore/projects/index.js','app/assets/javascripts/explore/projects/components/app.vue']],
+['P-02','검색 결과',['app/views/search/show.html.haml','app/assets/javascripts/search/index.js','app/assets/javascripts/search/results/components/app.vue','app/assets/javascripts/groups_projects/components/tabs_with_list.vue']],
+['P-03','분야 탐색',['app/views/explore/projects/topics.html.haml','app/views/explore/projects/topic.html.haml','app/views/shared/topics/_list.html.haml']],
+['P-04','프로젝트 홈',['app/views/projects/show.html.haml','app/views/projects/_home_panel.html.haml','app/assets/javascripts/pages/projects/show/index.js','app/assets/javascripts/repository/components/header_area.vue']],
+['P-05','파일·README',['app/views/projects/tree/show.html.haml','app/views/projects/_files.html.haml','app/views/projects/blob/show.html.haml','app/views/projects/blob/viewers/_readme.html.haml','app/assets/javascripts/repository/components/app.vue','app/assets/javascripts/repository/components/tree_content.vue','app/assets/javascripts/blob/components/blob_content.vue']],
+['P-06','변경 이력·버전',['app/views/projects/commits/show.html.haml','app/views/projects/commit/show.html.haml','app/views/projects/releases/index.html.haml','app/assets/javascripts/projects/commits/components/commit_list_app.vue','app/assets/javascripts/releases/components/app_index.vue']],
+['P-07','가져오기·실행',['app/assets/javascripts/repository/components/code_dropdown/compact_code_dropdown.vue','app/assets/javascripts/repository/components/code_dropdown/code_dropdown_clone_item.vue','app/assets/javascripts/repository/components/code_dropdown/code_dropdown_download_items.vue']],
+['P-08','의견·개선 요청',['app/views/projects/work_items/index.html.haml','app/views/projects/work_items/show.html.haml','app/views/projects/issues/show.html.haml','app/assets/javascripts/work_items/components/app.vue','app/assets/javascripts/work_items/list/list_view.vue','app/assets/javascripts/work_items/components/create_work_item.vue','app/assets/javascripts/pages/projects/issues/show/index.js']],
+['P-09','새 프로젝트·공개 점검',['app/views/projects/new.html.haml','app/views/projects/_new_project_fields.html.haml','app/assets/javascripts/pages/projects/new/index.js','app/assets/javascripts/projects/new/index.js']],
+['P-10','내 프로젝트',['app/views/dashboard/projects/index.html.haml','app/assets/javascripts/projects/your_work/index.js','app/assets/javascripts/projects/your_work/components/app.vue']],
+['P-11','기관 탐색',['app/views/explore/groups/index.html.haml','app/assets/javascripts/explore/groups/components/app.vue','app/views/groups/show.html.haml','app/assets/javascripts/groups/show/components/app.vue']],
+['P-12','로그인·가입',['app/views/devise/sessions/new.html.haml','app/views/devise/sessions/_new_base.html.haml','app/views/devise/registrations/new.html.haml','app/views/devise/registrations/_signup_box_form.html.haml','app/views/devise/passwords/new.html.haml','app/views/devise/passwords/edit.html.haml']],
+['P-13','오류',['app/views/errors/not_found.html.haml','app/views/errors/access_denied.html.haml','app/views/errors/service_unavailable.html.haml','app/assets/stylesheets/errors.scss']],
+['P-14','도움말·공지',['app/views/help/index.html.haml','app/views/help/show.html.haml']],
+['P-15','개발 수요 보드(직접 대응 없음)',['app/assets/javascripts/work_items/list/list_view.vue']]
+];
+let files=[];for(const r of rows){r[2]=r[2].map(f=>{if(!fs.existsSync(path.join(root,f)))return {missing:f};const lines=fs.readFileSync(path.join(root,f),'utf8').split('\n').length-1;files.push({file:f,lines});return {file:f,lines}})}
+const uniq=[...new Map(files.map(f=>[f.file,f])).values()];
+const out={source:root,ui,gitlab_styles:scan(root+'/app/assets/stylesheets'),ui_scss:scan(ui+'/src/scss'),ui_all_src:scan(ui+'/src'),ui_tokens:scan(ui+'/src/tokens/build/css'),ui_compiled:scan(ui+'/dist'),rows,selection:{files:uniq.length,lines:uniq.reduce((n,f)=>n+f.lines,0)},missing:rows.flatMap(r=>r[2].filter(f=>f.missing))};
+fs.writeFileSync(__dirname+'/gitlab_frontend_inventory.json',JSON.stringify(out,null,2));console.log(JSON.stringify({stats:out.gitlab_styles,ui:out.ui_scss,selection:out.selection,missing:out.missing},null,2));

@@ -1,0 +1,3247 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "공공 저장소 리빌딩 API",
+    "version": "0.2.0",
+    "description": "공개 목록 스냅샷 BM25 검색, 규칙 기반 분석, 요청별 GitLab 공개 조회 및 캐시, SQLite 저장. draft/needsReview/not-connected 상태를 실제 분석·승인으로 오인하지 않는다. 개발 로그인 기록은 is_dev로 별도 분리하며 mock:true로 표시한다."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:5732"
+    }
+  ],
+  "paths": {
+    "/api/v1/search": {
+      "post": {
+        "summary": "업무 문장 검색",
+        "x-feature-id": "F-01",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "example": "string"
+                  },
+                  "filters": {
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "query",
+                  "filters"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/classify": {
+      "post": {
+        "summary": "분야 자동 분류",
+        "x-feature-id": "F-02",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "projectId": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "readme": {
+                    "type": "string",
+                    "example": "string"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "projectId",
+                  "readme"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/catalog": {
+      "get": {
+        "summary": "분야와 조건 필터",
+        "x-feature-id": "F-03",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/duplicates": {
+      "post": {
+        "summary": "중복 프로젝트 안내",
+        "x-feature-id": "F-04",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "string"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "string"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "description"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/projects/{id}/connections": {
+      "get": {
+        "summary": "만든 사람 연결",
+        "x-feature-id": "F-05",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/mcp": {
+      "post": {
+        "summary": "MCP 검색 어댑터",
+        "x-feature-id": "F-06",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "jsonrpc": {
+                    "type": "string",
+                    "example": "2.0"
+                  },
+                  "id": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "method": {
+                    "type": "string",
+                    "example": "tools/list"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "jsonrpc",
+                  "id",
+                  "method"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "jsonrpc",
+                    "id"
+                  ],
+                  "properties": {
+                    "jsonrpc": {
+                      "type": "string",
+                      "enum": [
+                        "2.0"
+                      ]
+                    },
+                    "id": {},
+                    "result": {
+                      "type": "object"
+                    },
+                    "error": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/projects/{id}/card": {
+      "get": {
+        "summary": "소개 카드",
+        "x-feature-id": "F-11",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/projects/{id}/reference-dates": {
+      "get": {
+        "summary": "기준 날짜",
+        "x-feature-id": "F-12",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/projects/{id}/law-alerts": {
+      "get": {
+        "summary": "법령 변경 알림",
+        "x-feature-id": "F-13",
+        "x-status": "not-connected",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/projects/{id}/environment-check": {
+      "post": {
+        "summary": "실행 환경 판정",
+        "x-feature-id": "F-14",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "network": {
+                    "type": "string",
+                    "example": "internet"
+                  },
+                  "os": {
+                    "type": "string",
+                    "example": "windows"
+                  },
+                  "canInstall": {
+                    "type": "boolean",
+                    "example": false
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "network",
+                  "os",
+                  "canInstall"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/publication-checks": {
+      "post": {
+        "summary": "공개 준비 점검",
+        "x-feature-id": "F-21",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "projectId": {
+                    "type": "integer",
+                    "example": 1
+                  },
+                  "ref": {
+                    "type": "string",
+                    "example": "HEAD"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "projectId",
+                  "ref"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/projects/{id}/security-alerts": {
+      "get": {
+        "summary": "제작자 전용 보안 알림",
+        "x-feature-id": "F-22",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "authenticated-project-owner",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "로그인 필요"
+          },
+          "403": {
+            "description": "실제 GitLab 프로젝트 관리자 권한 필요; 개발 계정 불가"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다.",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ]
+      }
+    },
+    "/api/v1/projects/{id}/readme-proposals": {
+      "post": {
+        "summary": "README 개선 제안",
+        "x-feature-id": "F-23",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "content": {
+                    "type": "string",
+                    "example": "string"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "content"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/templates/readme": {
+      "get": {
+        "summary": "표준 README 양식",
+        "x-feature-id": "F-24",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/projects/{id}/feedback": {
+      "post": {
+        "summary": "의견 양식",
+        "x-feature-id": "F-31",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "/auth/session에서 받은 세션 CSRF 값"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "example": "bug"
+                  },
+                  "title": {
+                    "type": "string",
+                    "example": "string"
+                  },
+                  "body": {
+                    "type": "string",
+                    "example": "string"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "title",
+                  "body"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "로그인 필요"
+          },
+          "403": {
+            "description": "CSRF 또는 권한 부족"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다.",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ]
+      }
+    },
+    "/api/v1/projects/{id}/reuses": {
+      "get": {
+        "summary": "재사용 기록 조회",
+        "x-feature-id": "F-32",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      },
+      "post": {
+        "summary": "써 봤어요",
+        "x-feature-id": "F-32",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "/auth/session에서 받은 세션 CSRF 값"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "organizationId": {
+                    "type": "string",
+                    "example": "string"
+                  },
+                  "usedAt": {
+                    "type": "string",
+                    "example": "2026-10-30"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "organizationId",
+                  "usedAt"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "로그인 필요"
+          },
+          "403": {
+            "description": "CSRF 또는 권한 부족"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다.",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ]
+      }
+    },
+    "/api/v1/organizations": {
+      "get": {
+        "summary": "기관 현황",
+        "x-feature-id": "F-33",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/projects/{id}/related-resources": {
+      "get": {
+        "summary": "공공데이터와 기존 도구",
+        "x-feature-id": "F-34",
+        "x-status": "not-connected",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/requests": {
+      "get": {
+        "summary": "업무 요청 보드 조회",
+        "x-feature-id": "F-35",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      },
+      "post": {
+        "summary": "업무 요청 등록",
+        "x-feature-id": "F-35",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "/auth/session에서 받은 세션 CSRF 값"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "task": {
+                    "type": "string",
+                    "example": "string"
+                  },
+                  "currentProcess": {
+                    "type": "string",
+                    "example": "string"
+                  },
+                  "expectedOutcome": {
+                    "type": "string",
+                    "example": "string"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "task",
+                  "currentProcess",
+                  "expectedOutcome"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "로그인 필요"
+          },
+          "403": {
+            "description": "CSRF 또는 권한 부족"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다.",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ]
+      }
+    },
+    "/api/v1/requests/{id}/votes": {
+      "post": {
+        "summary": "요청 공감",
+        "x-feature-id": "F-35",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "/auth/session에서 받은 세션 CSRF 값"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false,
+                "required": []
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "로그인 필요"
+          },
+          "403": {
+            "description": "CSRF 또는 권한 부족"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다.",
+        "security": [
+          {
+            "sessionCookie": []
+          }
+        ]
+      }
+    },
+    "/api/v1/projects/{id}/version-guide": {
+      "get": {
+        "summary": "버전과 오류 안내",
+        "x-feature-id": "F-36",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/projects/{id}/handover": {
+      "post": {
+        "summary": "인수인계 문서 생성",
+        "x-feature-id": "F-37",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ref": {
+                    "type": "string",
+                    "example": "HEAD"
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "ref"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/development-guide": {
+      "get": {
+        "summary": "단계별 개발 안내",
+        "x-feature-id": "F-38",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/v1/coverage-map": {
+      "get": {
+        "summary": "중복과 미개발 분야 지도",
+        "x-feature-id": "F-39",
+        "x-status": "implemented-with-limitations",
+        "x-owner": "product-api",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "처리 결과. 자동 추출/규칙 판정/미연결 여부는 data 상태를 확인한다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "feature",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean",
+                      "description": "개발 로그인 시험 기록만 true"
+                    },
+                    "development": {
+                      "type": "boolean"
+                    },
+                    "feature": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Empty",
+                        "Min",
+                        "Max",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "notice": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Required input missing"
+          },
+          "401": {
+            "description": "Production authentication required"
+          },
+          "403": {
+            "description": "Production project owner permission required"
+          },
+          "429": {
+            "description": "조회 한도, 이후 재시도"
+          },
+          "503": {
+            "description": "필수 외부 연동 미설정"
+          }
+        },
+        "description": " 실제 상태와 제한은 응답 data.notice, data.status, needsReview를 확인한다."
+      }
+    },
+    "/api/gitlab/projects": {
+      "get": {
+        "summary": "공개 프로젝트 목록",
+        "x-upstream": "GitLab /api/v4/projects",
+        "description": "공개 자료 GET만 허용한다. UI는 동일 출처 프록시를 사용한다. 토큰을 브라우저에 보내지 않는다. 페이지 크기 최대 20, 요청 30/분, 캐시 60초.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "search",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "ref",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GitLab public response in envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean"
+                    },
+                    "notice": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Min",
+                        "Max",
+                        "Empty",
+                        "Loading",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Retry-After respected"
+          },
+          "502": {
+            "description": "GitLab unavailable"
+          }
+        }
+      }
+    },
+    "/api/gitlab/projects/{id}": {
+      "get": {
+        "summary": "프로젝트 상세",
+        "x-upstream": "GitLab /api/v4/projects/{id}",
+        "description": "공개 자료 GET만 허용한다. UI는 동일 출처 프록시를 사용한다. 토큰을 브라우저에 보내지 않는다. 페이지 크기 최대 20, 요청 30/분, 캐시 60초.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "search",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "ref",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GitLab public response in envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean"
+                    },
+                    "notice": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Min",
+                        "Max",
+                        "Empty",
+                        "Loading",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Retry-After respected"
+          },
+          "502": {
+            "description": "GitLab unavailable"
+          }
+        }
+      }
+    },
+    "/api/gitlab/projects/{id}/repository/tree": {
+      "get": {
+        "summary": "파일 목록",
+        "x-upstream": "GitLab /api/v4/projects/{id}/repository/tree",
+        "description": "공개 자료 GET만 허용한다. UI는 동일 출처 프록시를 사용한다. 토큰을 브라우저에 보내지 않는다. 페이지 크기 최대 20, 요청 30/분, 캐시 60초.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "search",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "ref",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GitLab public response in envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean"
+                    },
+                    "notice": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Min",
+                        "Max",
+                        "Empty",
+                        "Loading",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Retry-After respected"
+          },
+          "502": {
+            "description": "GitLab unavailable"
+          }
+        }
+      }
+    },
+    "/api/gitlab/projects/{id}/repository/files/{file_path}/raw": {
+      "get": {
+        "summary": "README와 파일 내용",
+        "x-upstream": "GitLab /api/v4/projects/{id}/repository/files/{file_path}/raw",
+        "description": "공개 자료 GET만 허용한다. UI는 동일 출처 프록시를 사용한다. 토큰을 브라우저에 보내지 않는다. 페이지 크기 최대 20, 요청 30/분, 캐시 60초.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "file_path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "search",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "ref",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GitLab public response in envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean"
+                    },
+                    "notice": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Min",
+                        "Max",
+                        "Empty",
+                        "Loading",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Retry-After respected"
+          },
+          "502": {
+            "description": "GitLab unavailable"
+          }
+        }
+      }
+    },
+    "/api/gitlab/projects/{id}/repository/commits": {
+      "get": {
+        "summary": "변경 기록",
+        "x-upstream": "GitLab /api/v4/projects/{id}/repository/commits",
+        "description": "공개 자료 GET만 허용한다. UI는 동일 출처 프록시를 사용한다. 토큰을 브라우저에 보내지 않는다. 페이지 크기 최대 20, 요청 30/분, 캐시 60초.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "search",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "ref",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GitLab public response in envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean"
+                    },
+                    "notice": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Min",
+                        "Max",
+                        "Empty",
+                        "Loading",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Retry-After respected"
+          },
+          "502": {
+            "description": "GitLab unavailable"
+          }
+        }
+      }
+    },
+    "/api/gitlab/projects/{id}/releases": {
+      "get": {
+        "summary": "릴리스",
+        "x-upstream": "GitLab /api/v4/projects/{id}/releases",
+        "description": "공개 자료 GET만 허용한다. UI는 동일 출처 프록시를 사용한다. 토큰을 브라우저에 보내지 않는다. 페이지 크기 최대 20, 요청 30/분, 캐시 60초.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "search",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "ref",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GitLab public response in envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean"
+                    },
+                    "notice": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Min",
+                        "Max",
+                        "Empty",
+                        "Loading",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Retry-After respected"
+          },
+          "502": {
+            "description": "GitLab unavailable"
+          }
+        }
+      }
+    },
+    "/api/gitlab/projects/{id}/issues": {
+      "get": {
+        "summary": "의견 목록",
+        "x-upstream": "GitLab /api/v4/projects/{id}/issues",
+        "description": "공개 자료 GET만 허용한다. UI는 동일 출처 프록시를 사용한다. 토큰을 브라우저에 보내지 않는다. 페이지 크기 최대 20, 요청 30/분, 캐시 60초.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "search",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "per_page",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "ref",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "GitLab public response in envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "mock",
+                    "state",
+                    "data"
+                  ],
+                  "properties": {
+                    "mock": {
+                      "type": "boolean"
+                    },
+                    "notice": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string",
+                      "enum": [
+                        "Ideal",
+                        "Min",
+                        "Max",
+                        "Empty",
+                        "Loading",
+                        "Error"
+                      ]
+                    },
+                    "data": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Retry-After respected"
+          },
+          "502": {
+            "description": "GitLab unavailable"
+          }
+        }
+      }
+    },
+    "/auth/gitlab": {
+      "get": {
+        "summary": "GitLab OAuth 시작",
+        "description": "미구현(501). 서버 Authorization Code + PKCE/state + HttpOnly 세션, redirect allowlist가 필요하다. OAuth 토큰을 브라우저 저장소에 넣지 않는다.",
+        "responses": {
+          "501": {
+            "description": "Not configured"
+          }
+        }
+      }
+    },
+    "/auth/gitlab/callback": {
+      "get": {
+        "summary": "GitLab OAuth 콜백",
+        "responses": {
+          "501": {
+            "description": "Not configured"
+          }
+        }
+      }
+    },
+    "/auth/session": {
+      "get": {
+        "summary": "현재 로그인과 CSRF 토큰 조회",
+        "responses": {
+          "200": {
+            "description": "세션 또는 처리 결과"
+          }
+        }
+      }
+    },
+    "/auth/dev-login": {
+      "post": {
+        "summary": "인증 세션",
+        "responses": {
+          "200": {
+            "description": "세션 또는 처리 결과"
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "summary": "인증 세션",
+        "responses": {
+          "200": {
+            "description": "세션 또는 처리 결과"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "sessionCookie": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "repo_session"
+      }
+    }
+  },
+  "x-implementation-notes": {
+    "snapshot": "server/data/gitlab-public-snapshot.json. 공개 목록 8요청 1회 수집. README 일괄 수집 없음",
+    "classification": "실측 topics 136개 대응표 topic-mapping.json. 기존 39종 동일집합 확인 안 됨",
+    "security": "실제 GitLab 관리자 권한 확인 뒤에만 파일명 상세. 공개 준비 점검은 file names 비공개",
+    "limitations": [
+      "보안 전체 파일 본문 스캔 아님",
+      "법령/공공데이터 AI 추론 미연결",
+      "의견은 로컬 DB 저장, GitLab 이슈/메일 미발송",
+      "OAuth 코드 구현됨, 실제 앱 자격증명 없어 end-to-end 미검증",
+      "MCP JSON-RPC tools/list/call 지원. 완전한 Streamable HTTP/SSE 전송 호환 미검증"
+    ]
+  }
+}

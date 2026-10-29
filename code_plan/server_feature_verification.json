@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-29T21:06:48.416Z",
+  "serverTests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "appBuild": "pass",
+  "codeAudit": 0,
+  "sourceSnapshot": {
+    "publicProjects": 719,
+    "requests": 8,
+    "readmesBulkFetched": 0
+  },
+  "catalog": {
+    "entries": 726,
+    "olderTeamObservations": 7
+  },
+  "topicMapping": {
+    "actualTopics": 136,
+    "original39SetVerified": false
+  },
+  "limitations": [
+    "OAuth real app not configured/tested",
+    "Private alerts filename/README patterns only, maximum100 files",
+    "Feedback saved locally, no GitLab issue or notification sent",
+    "AI embedding law external adapters not-connected",
+    "MCP JSON-RPC subset, transport conformance untested"
+  ],
+  "serversLeftRunning": 0
+}
