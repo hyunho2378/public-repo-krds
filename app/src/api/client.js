@@ -34,6 +34,7 @@ export const gitlab = {
   tree: (id, path = '', ref = '') =>
     request(`/api/gitlab/projects/${enc(id)}/repository/tree?per_page=100${path ? `&path=${enc(path)}` : ''}${ref ? `&ref=${enc(ref)}` : ''}`),
   fileMeta: (id, path, ref = 'HEAD') => request(`/api/gitlab/projects/${enc(id)}/repository/files/${enc(path)}?ref=${enc(ref)}`),
+  blame: (id, path, ref = 'HEAD') => request(`/api/gitlab/projects/${enc(id)}/repository/files/${enc(path)}/blame?ref=${enc(ref)}`),
   fileRaw: (id, path, ref = 'HEAD') => request(`/api/gitlab/projects/${enc(id)}/repository/files/${enc(path)}/raw?ref=${enc(ref)}`),
   commits: (id, { ref = '', path = '', page = 1 } = {}) =>
     request(`/api/gitlab/projects/${enc(id)}/repository/commits?per_page=20&page=${page}${ref ? `&ref_name=${enc(ref)}` : ''}${path ? `&path=${enc(path)}` : ''}`),

@@ -471,6 +471,13 @@ export const t = {
     "imported": "가져왔습니다",
     "updated": "고쳤습니다",
   },
+  P16_viewLabel: "파일 보기 방식",
+  P16_viewCode: "코드",
+  P16_viewPreview: "미리보기",
+  P16_viewBlame: "Blame",
+  P16_wrap: "줄바꿈",
+  P16_blameLoading: "줄별 변경 정보를 불러오는 중입니다.",
+  P16_blameError: "줄별 변경 정보를 불러오지 못했습니다.",
   P22_activity: "활동",
   P22_activityHint: "이 프로젝트에서 일어난 일을 시간 순서로 보여 줍니다.",
   P22_activityNone: "아직 기록된 활동이 없습니다.",
@@ -535,6 +542,9 @@ export const t = {
   // 숫자가 들어가는 문구
   fn: {
     items: (n) => `${n}개`,
+    bytes: (n) => `${n}바이트`,
+    kib: (n) => `${n}KB`,
+    mib: (n) => `${n}MB`,
     ago: (iso) => {
       if (!iso) return '';
       const sec = Math.max(0, (Date.now() - new Date(iso).getTime()) / 1000);

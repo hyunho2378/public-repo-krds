@@ -187,3 +187,14 @@
 .rb-plain-main { font-weight: var(--krds-font-weight-bold); }
 .rb-plain-sub { flex: 1 1 auto; min-width: 0; color: var(--krds-color-text-subtle); }
 .rb-plain-meta { margin-left: auto; white-space: nowrap; }
+
+/* R-03 파일 보기: 보기 전환, 줄바꿈, Blame 칸 */
+.rb-code-meta { display: flex; align-items: baseline; gap: var(--krds-gap-4); }
+.rb-code-views { display: flex; gap: var(--krds-gap-1); padding: var(--krds-padding-1); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); }
+.rb-code-view { padding: var(--krds-padding-2) var(--krds-padding-4); border: 0; background: none; color: var(--krds-color-text-subtle); border-radius: var(--krds-radius-small2); cursor: pointer; }
+.rb-code-view:hover { background: var(--krds-color-action-secondary-hover); }
+.rb-code-view.active { background: var(--krds-color-action-secondary-selected); color: var(--krds-color-text-basic); font-weight: var(--krds-font-weight-bold); }
+.rb-code-scroll.is-wrap .rb-code-line code { white-space: pre-wrap; overflow-wrap: anywhere; }
+.rb-code-blame { width: 22ch; max-width: 22ch; padding-right: var(--krds-padding-4); color: var(--krds-color-text-subtle); font-family: var(--krds-font-family-body); font-size: var(--krds-font-size-detail-small); white-space: nowrap; border-right: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-code-blame span { display: block; overflow: hidden; text-overflow: ellipsis; }
+.rb-code-preview { padding: var(--krds-padding-6); }

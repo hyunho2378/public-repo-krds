@@ -1,6 +1,6 @@
 // P-16 저장소 첫 화면과 코드 둘러보기(D-04 개정: 공공 깃랩 + GitHub 배치, KRDS 부품).
 // 왼쪽 프로젝트 메뉴(ProjectFrame), 파일 트리 패널, 본문(도구 줄, 마지막 변경, 파일 표, README), 오른쪽 정보와 판단 정보.
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { t } from '../copy/ko';
 import { gitlab, request } from '../api/client';
@@ -68,6 +68,31 @@ async function loadRepo(id) {
   return { branches: branches.data, tags: tags.data, root: root.data, languages: languages.data };
 }
 
+/** R-03 Blame: 줄마다 마지막으로 고친 사람과 날짜. 눌렀을 때만 불러온다(무거운 요청). */
+function useBlame(id, path, ref) {
+  const [blame, setBlame] = useState(null);
+  const [blameState, setBlameState] = useState(null);
+  useEffect(() => { setBlame(null); setBlameState(null); }, [id, path, ref]);
+  const onBlame = async () => {
+    setBlameState('Loading');
+    try {
+      const res = await gitlab.blame(id, path, ref || 'HEAD');
+      const map = new Map();
+      let n = 1;
+      for (const chunk of res.data || []) {
+        for (let i = 0; i < (chunk.lines || []).length; i++) {
+          map.set(n++, { author: chunk.commit?.author_name || '', date: chunk.commit?.authored_date });
+        }
+      }
+      setBlame(map);
+      setBlameState('Ideal');
+    } catch {
+      setBlameState('Error');
+    }
+  };
+  return { blame, blameState, onBlame };
+}
+
 export default function Code() {
   const params = useParams();
   const [search] = useSearchParams();
@@ -77,6 +102,21 @@ export default function Code() {
   const [filter, setFilter] = useState('');
   const ref = search.get('ref') || frame.data?.project.default_branch || 'main';
   const refQuery = search.get('ref') ? `?ref=${enc(search.get('ref'))}` : '';
+  const blameApi = useBlame(params.id, path, ref);
+  // y: 지금 보는 지점을 커밋 번호로 고정한 영구 링크로 바꾼다(GitLab, GitHub와 같은 단축키).
+  const shaRef = useRef(null);
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key !== 'y' || e.metaKey || e.ctrlKey || e.altKey || !shaRef.current) return;
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
+      e.preventDefault();
+      navigate({ search: `?ref=${enc(shaRef.current)}` }, { replace: true });
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [navigate]);
+
   const body = useData(async () => {
     const { id } = params;
     if (path) {
@@ -99,6 +139,7 @@ export default function Code() {
   const rawUrl = path ? `${project.web_url}/-/raw/${ref}/${path.split('/').map(enc).join('/')}` : null;
   const zipUrl = `${project.web_url}/-/archive/${ref}/${project.path}-${ref}.zip`;
   const b = body.data;
+  shaRef.current = b?.last?.id || null;
   const state = b ? (b.kind === 'tree' ? (!b.items.length ? 'Empty' : b.items.length === 1 ? 'Min' : 'Ideal') : 'Ideal') : body.state;
   const isHome = !path;
 
@@ -137,7 +178,7 @@ export default function Code() {
           ) : b.kind === 'file' ? (
             <>
               <CommitBar id={frame.id} commit={b.last} count={1} path={path} />
-              <CodeView path={path} text={b.text} rawUrl={rawUrl} size={b.meta?.size} historyTo onHistory={() => navigate(`/projects/${frame.id}/changes?path=${enc(path)}`)} />
+              <CodeView path={path} text={b.text} rawUrl={rawUrl} size={b.meta?.size} historyTo onHistory={() => navigate(`/projects/${frame.id}/changes?path=${enc(path)}`)} {...blameApi} />
             </>
           ) : b.items.length ? (
             <>
