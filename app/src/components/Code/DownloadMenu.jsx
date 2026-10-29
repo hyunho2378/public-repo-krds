@@ -25,10 +25,9 @@ export function DownloadMenu({ zipUrl, cloneUrl }) {
   };
   return (
     <div ref={wrap} className={`krds-drop-wrap rb-drop${open ? ' rb-drop-open' : ''}`}>
-      <button type="button" className="krds-btn medium primary drop-btn" aria-expanded={open} aria-haspopup="true" onClick={() => setOpen(!open)}>
-        <Icon name="download" />
-        {t.P16_menu}
-        <Icon name="expand_more" />
+      <button type="button" className="krds-btn medium primary drop-btn rb-drop-btn" aria-expanded={open} aria-haspopup="true" onClick={() => setOpen(!open)}>
+        <span className="rb-drop-full"><Icon name="download" />{t.P16_menu}<Icon name="expand_more" /></span>
+        <span className="rb-drop-compact"><Icon name="btn-more" /><span className="sr-only">{t.P16_menu}</span></span>
       </button>
       <div className="drop-menu">
         <div className="drop-in">

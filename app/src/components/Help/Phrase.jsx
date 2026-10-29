@@ -7,10 +7,14 @@ export function plain(text) {
 export function phrase(text) {
   if (typeof text !== 'string' || !text.includes('|')) return text;
   const parts = text.split('|').map((s) => s.trim()).filter(Boolean);
-  return parts.map((part, i) => (
-    <span className="rb-phrase" key={i}>
-      {part}
-      {i < parts.length - 1 ? ' ' : ''}
-    </span>
-  ));
+  const out = [];
+  parts.forEach((part, i) => {
+    if (i) out.push(' ');
+    out.push(
+      <span className="rb-phrase" key={i}>
+        {part}
+      </span>,
+    );
+  });
+  return out;
 }

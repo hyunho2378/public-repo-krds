@@ -32,7 +32,8 @@
 .rb-path .breadcrumb { flex-wrap: wrap; }
 .rb-path .txt { overflow-wrap: anywhere; }
 .rb-drop { position: relative; }
-.rb-drop .drop-btn { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
+.rb-drop .drop-btn, .rb-drop-full, .rb-drop-compact { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
+.rb-drop-compact { display: none; }
 .rb-drop-open .drop-menu { display: block; left: auto; right: 0; transform: none; }
 .rb-drop .drop-list .item-link { width: 100%; text-align: left; background: none; border: 0; cursor: pointer; }
 .rb-tree-block { display: flex; flex-direction: column; min-width: 0; }
@@ -58,6 +59,11 @@
   .rb-tree, .rb-tree tbody, .rb-tree tr, .rb-tree td { display: block; width: 100%; }
   .rb-tree-mobile { display: flex; gap: var(--krds-gap-3); justify-content: space-between; padding-left: calc(var(--krds-size-height-3) + var(--krds-gap-3)); }
   .rb-commit-bar { flex-direction: column; align-items: flex-start; }
-  .rb-repo-bar { align-items: flex-start; }
+  .rb-repo-bar { flex-wrap: nowrap; align-items: center; }
+  .rb-drop-full { display: none; }
+  .rb-drop-compact { display: inline-flex; }
+  .rb-drop .rb-drop-btn { padding-inline: var(--krds-padding-3); background: none; color: var(--krds-color-text-basic); border-color: var(--krds-color-border-gray); }
+  .rb-commit-main { flex-direction: column; align-items: flex-start; gap: var(--krds-gap-1); width: 100%; }
+  .rb-commit-main .rb-ellipsis { width: 100%; }
   .rb-readme-box { padding: var(--krds-padding-5); }
 }

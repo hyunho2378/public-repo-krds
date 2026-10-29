@@ -12,7 +12,8 @@ body {
 /* 한국어 줄바꿈(design_rules K1~K5): 어절 단위, 제목은 균형, 본문은 끝줄 보정. 긴 파일명과 주소만 아무 곳에서나 끊는다 */
 body { word-break: keep-all; overflow-wrap: normal; }
 h1, h2, h3, h4, .krds-text-heading-xlarge, .krds-text-heading-large, .krds-text-heading-medium, .krds-text-heading-small { text-wrap: balance; }
-p, li, dd, td, label { text-wrap: pretty; }
+p, li, dd, dt, label { text-wrap: balance; }
+.rb-readme p, .rb-long p { text-wrap: pretty; }
 .rb-break-any, code, pre, td a, .rb-path { overflow-wrap: anywhere; word-break: normal; }
 .rb-phrase { display: inline-block; }
 
@@ -24,7 +25,7 @@ p, li, dd, td, label { text-wrap: pretty; }
 #main:focus, #main:focus-visible { outline: none; box-shadow: none; }
 
 /* 공식 배너: 시제품이므로 태극기 그림은 쓰지 않는다 */
-.rb-masthead .nuri-txt::before { display: none; }
+#krds-masthead.rb-masthead .toggle-head .nuri-txt::before { display: none; }
 
 /* 공식 머리글: 로고 자리에 서비스명 글자 */
 #krds-header .header-container .logo.rb-logo { width: auto; height: auto; }
@@ -46,3 +47,4 @@ p, li, dd, td, label { text-wrap: pretty; }
   .rb-main { padding-block: var(--krds-padding-6) var(--krds-padding-9); }
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+#krds-masthead .nuri-txt, #krds-header, .krds-main-menu-mobile { word-break: keep-all; }

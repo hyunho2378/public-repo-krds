@@ -90,6 +90,7 @@
 }
 @media (max-width: 767px) {
   .rb-search-row { flex-direction: column; }
+  .rb-search-row input { flex: none; }
   .rb-actions > * { flex: 1 1 auto; justify-content: center; }
   .rb-terms { grid-template-columns: 1fr; }
 }

@@ -1,8 +1,10 @@
 // Figma: KRDS masthead + header. 공식 마크업(krds-ui-kit code/html/code/header.html, masthead.html).
 // 서비스명과 기관 로고가 정해지기 전이라 로고 자리에는 서비스명 글자를 둔다. 정부 상징은 쓰지 않는다(공식 누리집이 아님).
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { t } from '../../copy/ko';
+import { phrase } from '../Help/Phrase';
 import { ScreenModeOptions, useScreenMode } from './ScreenMode';
 
 export const SERVICE_NAME = t.Header_service;
@@ -55,16 +57,17 @@ function MobileNav({ open, onClose, mode, setMode }) {
     if (!open) return undefined;
     const opener = document.activeElement;
     document.body.classList.add('is-gnb-mobile');
-    panel.current.querySelector('a,button')?.focus();
+    const timer = setTimeout(() => panel.current?.querySelector('a,button')?.focus(), 150);
     const onKey = (e) => e.key === 'Escape' && onClose();
     document.addEventListener('keydown', onKey);
     return () => {
+      clearTimeout(timer);
       document.body.classList.remove('is-gnb-mobile');
       document.removeEventListener('keydown', onKey);
       opener?.focus?.();
     };
   }, [open, onClose]);
-  return (
+  return createPortal(
     <div id="mobile-nav" className={'krds-main-menu-mobile' + (open ? ' is-open is-backdrop' : '')} aria-hidden={!open}>
       <div className="gnb-wrap" ref={panel} role="dialog" aria-modal="true" aria-label={t.Header_allMenu}>
         <div className="gnb-header">
@@ -73,8 +76,10 @@ function MobileNav({ open, onClose, mode, setMode }) {
               <i className="svg-icon ico-log" aria-hidden="true" /> {t.Header_login}
             </Link>
           </div>
-          <div className="gnb-service-menu">
-            <Link className="link" to="/my" onClick={onClose}>{t.Header_my}</Link>
+          <div className="gnb-login">
+            <Link className="krds-btn large text" to="/my" onClick={onClose}>
+              {t.Header_my}
+            </Link>
           </div>
         </div>
         <div className="gnb-body">
@@ -100,7 +105,8 @@ function MobileNav({ open, onClose, mode, setMode }) {
           <i className="svg-icon ico-popup-close" aria-hidden="true" />
         </button>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 
@@ -117,7 +123,7 @@ export function Header() {
         <div className="toggle-wrap">
           <div className="toggle-head">
             <div className="inner">
-              <span className="nuri-txt">{t.Header_masthead}</span>
+              <span className="nuri-txt">{phrase(t.Header_masthead)}</span>
             </div>
           </div>
         </div>

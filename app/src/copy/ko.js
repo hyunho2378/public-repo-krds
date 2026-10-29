@@ -3,7 +3,7 @@
 export const t = {
   // Header(공식 머리글)
   Header_service: "서비스명(미정)",
-  Header_masthead: "이 누리집은 공공 저장소 개선 시제품입니다. 공식 전자정부 누리집이 아닙니다.",
+  Header_masthead: "이 누리집은 공공 저장소 개선 시제품입니다. | 공식 전자정부 누리집이 아닙니다.",
   Header_menuFind: "도구 찾기",
   Header_menuRequests: "요청 보드",
   Header_menuPublish: "도구 올리기",
@@ -79,7 +79,7 @@ export const t = {
   P01_5: "시설과 안전",
   P01_6: "데이터와 정보화",
   P01_7: "업무 지원",
-  P01_8: "내 업무에 쓸 도구를 | 찾아보세요.",
+  P01_8: "내 업무에 쓸 | 도구를 찾아보세요.",
   P01_9: "직접 만들기 전에 | 다른 기관의 도구부터 확인하세요. | 로그인 없이 둘러볼 수 있습니다.",
   P01_10: "업무 분야로 둘러보기",
   P01_11: "분야 전체 보기",
@@ -352,8 +352,10 @@ export const t = {
   P16_cloneCopied: "가져오기 주소를 복사했습니다.",
   P16_partial: "항목이 많아 앞 30개만 마지막 변경을 표시합니다.",
   P16_noLog: "기록 없음",
+  orgUnknown: "기관 정보 없음",
   // 숫자가 들어가는 문구
   fn: {
+    updated: (date) => `${date} 갱신`,
     commitCount: (n, more) => `변경 ${n}${more ? '회 이상' : '회'}`,
     starCount: (n) => `관심 ${n}`,
     lines: (n) => `${n}줄`,

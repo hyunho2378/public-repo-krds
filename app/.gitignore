@@ -1,4 +1,4 @@
 node_modules/
 dist/
 .env
-public/krds/
+# public/krds/ 는 배포(GitHub Pages)에 필요해 저장소에 포함한다. KRDS 공식 자원(공공누리 제1유형), npm run sync:krds로 다시 만든다

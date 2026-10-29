@@ -112,7 +112,7 @@ function Tree({ id, path, items, log }) {
 async function loadTree(id, path) {
   // 정적 배포에서도 되도록 공개 API를 순서대로 부른다(동시 요청 제한).
   const items = (await gitlab.tree(id, path)).data;
-  const head = await gitlab.commits(id, { path });
+  const head = await gitlab.commits(id, { path }).catch(() => ({ data: [], pagination: {} }));
   const log = {};
   for (const it of items.slice(0, LOG_LIMIT)) {
     try {
@@ -136,7 +136,7 @@ export default function Code() {
         const meta = (await gitlab.fileMeta(id, path)).data;
         if (meta?.file_name) {
           const text = (await gitlab.fileRaw(id, path)).data;
-          const last = (await gitlab.commits(id, { path })).data[0] || null;
+          const last = (await gitlab.commits(id, { path }).catch(() => ({ data: [] }))).data[0] || null;
           return { kind: 'file', text, meta, last };
         }
       } catch {
@@ -159,7 +159,7 @@ export default function Code() {
       <div className="rb-code-area">
         <div className="rb-repo-bar">
           <div className="rb-repo-bar-left">
-            <span className="krds-badge medium light-gray rb-branch" title={t.P16_branch}>
+            <span className="krds-badge medium bg-light-gray rb-branch" title={t.P16_branch}>
               <span className="sr-only">{t.P16_branch} </span>
               {ref}
             </span>
