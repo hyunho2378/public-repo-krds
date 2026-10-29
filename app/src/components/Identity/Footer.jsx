@@ -1,24 +1,35 @@
-// Figma: KRDS footer. 배경은 화면 전체 폭, 내용은 콘텐츠 폭.
+// Figma: KRDS footer. 공식 마크업(code/html/code/footer.html): #krds-footer > .inner > .f-logo, .f-cnt(.f-info, .f-link), .f-btm(.f-menu, .f-copy)
+// 로고 자리는 서비스명 글자(정부 상징 미사용, D-04). 주소, 전화 칸은 운영 기관이 정해지면 채운다.
+import { Link } from 'react-router-dom';
 import { phrase } from '../Help/Phrase';
 import { t } from '../../copy/ko';
-import { Link } from 'react-router-dom';
 import { SERVICE_NAME } from './Header';
 
 export function Footer() {
   return (
-    <footer id="krds-footer" data-krds="footer" className="rb-footer">
-      <div className="inner rb-stack">
-        <p className="krds-text-heading-small">{SERVICE_NAME}</p>
-        <p className="krds-text-body-small rb-subtle">{phrase(t.Footer_1)}</p>
-        <ul className="rb-footer-links">
-          <li><Link to="/help">{t.Footer_2}</Link></li>
-          <li>
-            <a href="https://www.krds.go.kr/" target="_blank" rel="noreferrer">
-              {t.Footer_5}<span className="sr-only"> {t.Footer_3}</span>
-            </a>
-          </li>
-        </ul>
-        <p className="krds-text-body-xsmall rb-subtle">{phrase(t.Footer_4)}</p>
+    <footer id="krds-footer" data-krds="footer">
+      <div className="inner">
+        <div className="f-logo rb-f-logo">{SERVICE_NAME}</div>
+        <div className="f-cnt">
+          <div className="f-info">
+            <p className="info-addr">{phrase(t.Footer_1)}</p>
+          </div>
+          <div className="f-link">
+            <div className="link-go">
+              <Link className="krds-btn medium text" to="/help">
+                {t.Footer_2} <i className="svg-icon ico-angle right" aria-hidden="true" />
+              </Link>
+              <a className="krds-btn medium text" href="https://www.krds.go.kr/" target="_blank" rel="noreferrer" title={t.Footer_3}>
+                {t.Footer_5} <i className="svg-icon ico-go" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="f-btm">
+          <div className="f-btm-text">
+            <p className="f-copy">{phrase(t.Footer_4)}</p>
+          </div>
+        </div>
       </div>
     </footer>
   );

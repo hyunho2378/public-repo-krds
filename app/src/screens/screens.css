@@ -44,12 +44,12 @@
 .rb-link-button { background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
 
 /* 목록 */
-.rb-list { display: flex; flex-direction: column; gap: var(--krds-gap-3); list-style: none; padding: 0; margin: 0; }
-.rb-list .structured-item { border: 0; padding: 0; }
+.rb-list { gap: var(--krds-gap-3); }
 .rb-list-link { display: flex; flex-direction: column; gap: var(--krds-gap-2); padding: var(--krds-padding-7) var(--krds-padding-6); color: var(--krds-color-text-basic); text-decoration: none; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
 .rb-list-link:hover .rb-list-title { text-decoration: underline; }
 .rb-row { flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-.rb-clamp { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.rb-list .c-txt.rb-clamp, .rb-clamp { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.rb-list .c-date { display: flex; flex-wrap: wrap; gap: var(--krds-gap-1) var(--krds-gap-5); }
 
 /* 탭, 단계 */
 .rb-tabs .tab ul { overflow-x: auto; scrollbar-width: thin; }
@@ -67,9 +67,8 @@
 .rb-form .form-group { display: flex; flex-direction: column; gap: var(--krds-gap-2); }
 .rb-textarea { min-height: calc(var(--krds-size-height-8) * 3); width: 100%; resize: vertical; }
 .rb-choices { display: flex; flex-wrap: wrap; gap: var(--krds-gap-7); }
-.rb-checklist { display: flex; flex-direction: column; gap: var(--krds-gap-3); list-style: none; padding: 0; margin: 0; }
-.rb-checklist .is-fail .krds-badge { background: var(--krds-color-surface-warning-subtler); color: var(--krds-color-text-warning); }
-.rb-checklist .is-pass .krds-badge { background: var(--krds-color-surface-success-subtler); color: var(--krds-color-text-success); }
+.rb-checklist { display: flex; flex-direction: column; list-style: none; padding: 0; margin: 0; }
+.rb-checklist li { display: flex; gap: var(--krds-gap-3); align-items: center; padding-block: var(--krds-padding-5); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
 .rb-terms { display: grid; grid-template-columns: max-content 1fr; gap: var(--krds-gap-3) var(--krds-gap-7); margin: 0; }
 .rb-terms div { display: contents; }
 .rb-terms dd { margin: 0; }
@@ -116,3 +115,18 @@
 .rb-login-method { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); padding: var(--krds-padding-8); background: var(--krds-color-surface-gray-subtler); border-radius: var(--krds-radius-medium1); flex-wrap: wrap; }
 .rb-stack-tight { display: flex; flex-direction: column; gap: var(--krds-gap-2); }
 @media (max-width: 767px) { .rb-login-method .krds-btn { width: 100%; justify-content: center; } }
+#root .krds-structured-list .structured-item .c-txt.rb-clamp { display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; white-space: normal; }
+
+/* 목록: 면 채움, 둥근 상자 대신 구분선 행(사용자 금지: 둥근 회색 상자 반복, 같은 크기 카드 나열) */
+#root .krds-structured-list.rb-list { gap: 0; border-top: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray); }
+#root .krds-structured-list.rb-list .structured-item,
+#root .krds-structured-list.rb-list .structured-item .in { background: none; border: 0; border-radius: 0; box-shadow: none; }
+#root .krds-structured-list.rb-list .structured-item { border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
+#root .krds-structured-list.rb-list .structured-item .in { padding: var(--krds-padding-8) 0; }
+#root .krds-structured-list.rb-list .c-tit .span { color: var(--krds-color-link-default); text-decoration: underline; text-underline-offset: var(--krds-gap-1); }
+#root .krds-structured-list.rb-list .c-text:hover .c-tit .span { color: var(--krds-color-link-hover, var(--krds-color-link-default)); }
+
+/* 검색 조건: 회색 면 상자 대신 제목과 구분선(정부24 검색 결과 필터) */
+.rb-side.rb-filter-pc { background: none; padding: 0; border-radius: 0; border-top: var(--krds-border-width-static-medium) solid var(--krds-color-divider-gray-dark); }
+.rb-filter-pc fieldset { padding-block: var(--krds-padding-6); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
+.rb-filter-pc > h2 { padding-top: var(--krds-padding-6); }

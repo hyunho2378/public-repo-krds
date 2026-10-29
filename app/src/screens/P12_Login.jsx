@@ -2,7 +2,7 @@
 import { phrase } from '../components/Help/Phrase';
 import { t } from '../copy/ko';
 import { Link, useSearchParams } from 'react-router-dom';
-import { auth } from '../api/client';
+import { auth, STATIC_MODE } from '../api/client';
 import { Page } from '../components/Layout/Page';
 
 function safe(path) {
@@ -17,15 +17,22 @@ export default function Login() {
       <div className="rb-narrow rb-stack">
         <h1 className="krds-text-heading-xlarge">{phrase(t.P10_2)}</h1>
         <p>{phrase(t.P12_1)}</p>
-        <ul className="rb-login-methods">
-          <li className="rb-login-method">
-            <div className="rb-stack-tight">
-              <h2 className="krds-text-heading-small">{phrase(t.P12_methodTitle)}</h2>
-              <p className="krds-text-body-medium rb-subtle">{phrase(t.P12_methodDesc)}</p>
-            </div>
-            <a className="krds-btn medium primary" href={auth.loginUrl(returnTo)}>{t.P12_loginButton}</a>
-          </li>
-        </ul>
+        {STATIC_MODE ? (
+          <div className="krds-alert rb-status" role="status" data-state="Static">
+            <p className="krds-text-body-medium-bold">{phrase(t.P12_static)}</p>
+          </div>
+        ) : (
+          <ul className="rb-login-methods">
+            <li className="rb-login-method">
+              <div className="rb-stack-tight">
+                <h2 className="krds-text-heading-small">{phrase(t.P12_methodTitle)}</h2>
+                <p className="krds-text-body-medium rb-subtle">{phrase(t.P12_methodDesc)}</p>
+              </div>
+              <a className="krds-btn medium primary" href={auth.loginUrl(returnTo)}>{t.P12_loginButton}</a>
+            </li>
+          </ul>
+  
+        )}
         <p className="krds-text-body-small rb-subtle">{phrase(t.P12_3)}</p>
         <h2 className="krds-text-heading-small">{phrase(t.P12_signupTitle)}</h2>
         <ul className="rb-links">

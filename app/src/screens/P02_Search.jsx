@@ -35,15 +35,17 @@ function Filters({ params, toggle, clear, facets }) {
           </div>
         ))}
       </fieldset>
-      <fieldset className="rb-stack">
-        <FieldsetTitle className="krds-text-body-medium-bold">{t.P02_2}</FieldsetTitle>
-        {ENVIRONMENTS.map(([v, label]) => (
-          <div className="krds-form-check" key={v}>
-            <input id={`env-${v}`} type="checkbox" checked={params.get('environment') === v} onChange={() => toggle('environment', v)} />
-            <label htmlFor={`env-${v}`}>{facets ? t.fn.facet(label, facets.execution[v] || 0) : label}</label>
-          </div>
-        ))}
-      </fieldset>
+      {(!facets || ENVIRONMENTS.some(([v]) => facets.execution[v] > 0)) && (
+        <fieldset className="rb-stack">
+          <FieldsetTitle className="krds-text-body-medium-bold">{t.P02_2}</FieldsetTitle>
+          {ENVIRONMENTS.map(([v, label]) => (
+            <div className="krds-form-check" key={v}>
+              <input id={`env-${v}`} type="checkbox" checked={params.get('environment') === v} onChange={() => toggle('environment', v)} />
+              <label htmlFor={`env-${v}`}>{facets ? t.fn.facet(label, facets.execution[v] || 0) : label}</label>
+            </div>
+          ))}
+        </fieldset>
+      )}
       <Button Type="text" Size="small" onClick={clear}>{t.P02_3}</Button>
     </div>
   );

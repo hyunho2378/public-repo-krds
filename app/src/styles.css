@@ -38,8 +38,7 @@ p, li, dd, dt, label { text-wrap: balance; }
 .rb-gnb-mode { flex-direction: column; align-items: flex-start; }
 
 .rb-notice { padding-block: var(--krds-padding-6); background: var(--krds-color-surface-information-subtler); }
-.rb-footer { background: var(--krds-color-surface-gray-subtler); padding-block: var(--krds-padding-10); }
-.rb-footer-links { display: flex; gap: var(--krds-gap-5); list-style: none; padding: 0; margin: 0; flex-wrap: wrap; }
+#krds-footer .f-logo.rb-f-logo { width: auto; height: auto; background-image: none; font-size: var(--krds-pc-font-size-heading-small); font-weight: var(--krds-font-weight-bold); }
 .rb-main { flex: 1; width: 100%; padding-block: var(--krds-padding-8) var(--krds-padding-10); }
 
 @media (max-width: 767px) {
@@ -48,3 +47,51 @@ p, li, dd, dt, label { text-wrap: balance; }
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 #krds-masthead .nuri-txt, #krds-header, .krds-main-menu-mobile { word-break: keep-all; }
+/* 바닥글 .inner는 KRDS 원본에서 좌우 여백이 0이라 머리글, 본문과 시작선이 어긋난다. 같은 .inner 여백을 준다 */
+#krds-footer > .inner { padding-inline: var(--krds-contents-padding-x); }
+
+/* KRDS 탭바(D-03). 1023 이하 하단 고정. 아이콘은 KRDS 공식 svg를 mask로 써서 글자색을 따른다 */
+.rb-tabbar { display: none; }
+@media (max-width: 1023px) {
+  .rb-tabbar {
+    display: block; position: fixed; inset-inline: 0; bottom: 0; z-index: 90;
+    background: var(--krds-color-surface-white);
+    border-top: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .rb-tabbar ul { display: grid; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 0; padding: 0; }
+  .rb-tab {
+    position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--krds-gap-1);
+    min-height: var(--krds-size-height-9); color: var(--krds-color-text-subtle); text-decoration: none;
+    font-size: var(--krds-mobile-font-size-label-small);
+  }
+  .rb-tab.is-active { color: var(--krds-color-text-primary); font-weight: var(--krds-font-weight-bold); }
+  .rb-tab.is-active::before { content: ""; position: absolute; top: 0; inset-inline: var(--krds-gap-5); height: var(--krds-border-width-static-medium); background: var(--krds-color-border-primary); }
+  .rb-tab-icon { width: var(--krds-icon--size-medium); height: var(--krds-icon--size-medium); background-color: currentColor; mask: center / contain no-repeat; -webkit-mask: center / contain no-repeat; }
+  .rb-tab-home { mask-image: url(/krds/resources/img/component/icon/ico_bread_home.svg); -webkit-mask-image: url(/krds/resources/img/component/icon/ico_bread_home.svg); }
+  .rb-tab-find { mask-image: url(/krds/resources/img/component/icon/ico_sch.svg); -webkit-mask-image: url(/krds/resources/img/component/icon/ico_sch.svg); }
+  .rb-tab-alerts { mask-image: url(/krds/resources/img/component/icon/ico_information.svg); -webkit-mask-image: url(/krds/resources/img/component/icon/ico_information.svg); }
+  .rb-tab-alerts.is-fill, .rb-tab.is-active .rb-tab-alerts { mask-image: url(/krds/resources/img/component/icon/ico_information_fill.svg); -webkit-mask-image: url(/krds/resources/img/component/icon/ico_information_fill.svg); }
+  .rb-tab-my { mask-image: url(/krds/resources/img/component/icon/ico_my.svg); -webkit-mask-image: url(/krds/resources/img/component/icon/ico_my.svg); }
+  /* 탭바 높이만큼 본문 아래 여백 */
+  #root { padding-bottom: calc(var(--krds-size-height-9) + env(safe-area-inset-bottom)); }
+  /* 탭바에 로그인, 내 프로젝트가 있으므로 머리글에서는 전체메뉴만 둔다 */
+  #krds-header .header-container .btn-navi.login { display: none; }
+}
+@media (display-mode: standalone) {
+  /* 홈 화면에 추가해 앱으로 열면 시제품 배너 아래 공간을 줄인다(배너 문구는 유지) */
+  #krds-masthead .toggle-head .inner { padding-block: var(--krds-padding-2); }
+}
+
+/* D-07 청록 면 사용 안 함: KRDS 부품의 secondary(청록) 면은 회색 면으로 바꾼다. 값은 KRDS 변수 안에서만 고른다.
+   대상: 공식 배너, 메인 메뉴 펼침, 모바일 메뉴 왼쪽 단, 달력, 전체 화면 팝업, 표 머리(모두 surface-secondary-subtler를 씀) */
+html[data-krds-mode] {
+  --krds-light-color-surface-secondary-subtler: var(--krds-light-color-surface-gray-subtler);
+}
+/* 어두운 화면은 마우스 올림, 누름, 선택 면도 청록(secondary 90, 80)이라 회색 단계로(80, 70). 글자 대비는 D-01 기준 재확인 */
+html[data-krds-mode="dark"] {
+  --krds-light-color-action-secondary-hover: var(--krds-color-high-contrast-gray-80);
+  --krds-light-color-action-secondary-selected: var(--krds-color-high-contrast-gray-80);
+  --krds-light-color-action-secondary-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-light-color-action-secondary-on-pressed: var(--krds-color-high-contrast-gray-70);
+}

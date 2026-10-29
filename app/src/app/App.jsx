@@ -5,6 +5,7 @@ import { Footer } from '../components/Identity/Footer';
 import { NoticeBanner } from '../components/Feedback/NoticeBanner';
 import ErrorScreen from '../screens/P13_Error';
 import { routes } from './routes';
+import { TabBar } from '../components/Navigation/TabBar';
 
 /** 화면이 바뀌면 맨 위로, 본문에 초점(화면 낭독기가 새 화면을 읽도록). 검색 조건만 바뀐 경우는 그대로. */
 function FocusOnNavigate() {
@@ -31,6 +32,7 @@ export function App() {
         </Routes>
       </main>
       <Footer />
+      <TabBar />
     </BrowserRouter>
   );
 }
