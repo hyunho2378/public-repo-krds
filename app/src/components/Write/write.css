@@ -1,0 +1,21 @@
+/* R-27~R-29 쓰기 흐름. 값은 KRDS 변수만. */
+.rb-write { display: flex; flex-direction: column; gap: var(--krds-gap-6); }
+.rb-write-head { display: flex; flex-direction: column; gap: var(--krds-gap-2); }
+.rb-write-actions { display: flex; justify-content: flex-end; gap: var(--krds-gap-3); }
+.rb-editor { display: flex; flex-direction: column; gap: var(--krds-gap-3); }
+.rb-editor-tabs { display: flex; gap: var(--krds-gap-1); }
+.rb-editor-area { min-height: 40ch; font-family: 'D2Coding', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; line-height: var(--krds-line-height-base); }
+.rb-upload { display: flex; flex-direction: column; gap: var(--krds-gap-4); }
+.rb-upload-drop { display: flex; flex-direction: column; align-items: center; gap: var(--krds-gap-2); padding: var(--krds-padding-9); border: var(--krds-border-width-static-regular) dashed var(--krds-color-border-gray); border-radius: var(--krds-radius-medium3); cursor: pointer; }
+.rb-upload-drop:hover { background: var(--krds-color-action-secondary-hover); }
+.rb-modal-dim { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: var(--krds-padding-5); background: var(--krds-color-background-dim); }
+.rb-modal { display: flex; flex-direction: column; gap: var(--krds-gap-5); width: 100%; max-width: 72ch; max-height: 90dvh; overflow-y: auto; padding: var(--krds-padding-8); border-radius: var(--krds-radius-large1); background: var(--krds-color-surface-white); }
+.rb-modal-actions { display: flex; justify-content: flex-end; gap: var(--krds-gap-3); }
+.rb-commit-target { display: flex; flex-direction: column; gap: var(--krds-gap-3); border: 0; padding: 0; margin: 0; }
+.rb-radio { display: flex; align-items: flex-start; gap: var(--krds-gap-3); }
+.rb-radio > span { display: flex; flex-direction: column; }
+.rb-md-field { display: flex; flex-direction: column; gap: var(--krds-gap-3); }
+.rb-md-tools { display: flex; flex-wrap: wrap; gap: var(--krds-gap-1); }
+.rb-compare-pick { display: flex; flex-direction: column; gap: var(--krds-gap-4); padding: var(--krds-padding-6); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium3); }
+.rb-compare-field { display: flex; flex-direction: column; align-items: flex-start; gap: var(--krds-gap-2); }
+.rb-branch-pick { display: flex; flex-wrap: wrap; gap: var(--krds-gap-2); list-style: none; margin: 0; padding: 0; }

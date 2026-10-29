@@ -9,7 +9,7 @@ import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { CodeView } from '../components/Code/CodeView';
 import { Icon } from '../components/Code/Icon';
-import { About, BranchSelect, CodeMenu, CommitBar, FileFind, FileTable, ReadmeBox, RepoMenuList, enc } from '../components/Code/RepoParts';
+import { About, AddFileMenu, BranchSelect, CodeMenu, CommitBar, FileFind, FileTable, ReadmeBox, RepoMenuList, enc } from '../components/Code/RepoParts';
 import { FileTreePanel } from '../components/Code/FileTreePanel';
 import { DecisionPanel } from '../components/Layout/DecisionPanel';
 import '../components/Code/code.css';
@@ -170,6 +170,7 @@ export default function Code() {
             </div>
             <div className="rb-toolbar-right">
               {b?.kind === 'tree' ? <FileFind value={filter} onChange={setFilter} /> : null}
+              {b?.kind === 'tree' ? <AddFileMenu id={frame.id} branch={ref} /> : null}
               <CodeMenu id={frame.id} zipUrl={zipUrl} cloneUrl={project.http_url_to_repo} />
             </div>
           </div>

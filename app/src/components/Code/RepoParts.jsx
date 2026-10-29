@@ -46,6 +46,21 @@ export function BranchSelect({ id, current, branches = [], path }) {
   );
 }
 
+/** R-27, R-28 들어가는 곳. GitHub의 "Add file" 메뉴 자리와 같다. */
+export function AddFileMenu({ id, branch }) {
+  const q = branch ? `?ref=${enc(branch)}` : '';
+  return (
+    <Drop label={t.Home_addFile} button={<><Icon name="plus" /><span className="rb-drop-full">{t.Home_addFile}</span></>}>
+      {(close) => (
+        <ul className="drop-list">
+          <li><Link className="item-link" to={`/projects/${id}/new${q}`} onClick={close}><Icon name="document" /> {t.Write_title_new}</Link></li>
+          <li><Link className="item-link" to={`/projects/${id}/upload${q}`} onClick={close}><Icon name="upload" /> {t.Write_title_upload}</Link></li>
+        </ul>
+      )}
+    </Drop>
+  );
+}
+
 export function CodeMenu({ id, zipUrl, cloneUrl }) {
   const [note, copy] = useCopy();
   return (

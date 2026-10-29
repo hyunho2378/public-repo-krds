@@ -17,6 +17,8 @@ import Requests from '../screens/P15_Requests';
 import { createElement } from 'react';
 import Code from '../screens/P16_Code';
 import RepoSections, { SECTION_KEYS } from '../screens/P22_RepoSections';
+import Write from '../screens/P23_Write';
+import NewIssue from '../screens/P24_NewIssue';
 import Commit from '../screens/P17_Commit';
 import { Branches, Releases } from '../screens/P18_Refs';
 import { Issues, Issue } from '../screens/P19_Issues';
@@ -55,4 +57,10 @@ export const routes = [
     path: `/projects/:id/${key}`,
     Screen: () => createElement(RepoSections, { section: key }),
   })),
+  { id: 'R-27', path: '/projects/:id/new', Screen: () => createElement(Write, { mode: 'new' }) },
+  { id: 'R-27', path: '/projects/:id/edit/*', Screen: () => createElement(Write, { mode: 'edit' }) },
+  { id: 'R-28', path: '/projects/:id/upload', Screen: () => createElement(Write, { mode: 'upload' }) },
+  { id: 'R-29', path: '/projects/:id/branches/new', Screen: () => createElement(Write, { mode: 'branch' }) },
+  { id: 'R-12', path: '/projects/:id/issues/new', Screen: () => createElement(NewIssue, { kind: 'issue' }) },
+  { id: 'R-17', path: '/projects/:id/merge-requests/new', Screen: () => createElement(NewIssue, { kind: 'merge' }) },
 ];
