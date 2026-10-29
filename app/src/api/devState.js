@@ -7,6 +7,23 @@ export function devState() {
   return ['Min', 'Max', 'Empty', 'Loading', 'Error'].includes(s) ? s : null;
 }
 
+/**
+ * D-10 Figma 컴포넌트 속성과 1대1로 맞춘 개발용 변수.
+ * ?state=Ideal|Min|Max|Empty|Loading|Error, ?auth=Guest|Signed-in, ?mode=light|dark|high-contrast
+ * Figma 변형과 같은 조합으로 화면을 띄워 대조한다. 배포본에서는 동작하지 않는다.
+ */
+export function devAuth() {
+  if (!import.meta.env.DEV) return null;
+  const a = new URLSearchParams(window.location.search).get('auth');
+  return ['Guest', 'Signed-in'].includes(a) ? a : null;
+}
+
+export function devMode() {
+  if (!import.meta.env.DEV) return null;
+  const m = new URLSearchParams(window.location.search).get('mode');
+  return ['light', 'dark', 'high-contrast'].includes(m) ? m : null;
+}
+
 const LONG = ' 업무 처리 기준과 서식을 함께 확인할 수 있도록 설명을 길게 적은 경우의 표시 시험 문장입니다.';
 
 /** 목록 항목 하나를 Min(필수 칸만) 또는 Max(칸마다 길게)로 바꾼다 */
