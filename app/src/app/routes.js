@@ -19,6 +19,8 @@ import Code from '../screens/P16_Code';
 import RepoSections, { SECTION_KEYS } from '../screens/P22_RepoSections';
 import Write from '../screens/P23_Write';
 import NewIssue from '../screens/P24_NewIssue';
+import Compare from '../screens/P25_Compare';
+import { Insights, Checklist, LawAlerts, Handover, Mcp } from '../screens/P26_Insights';
 import Commit from '../screens/P17_Commit';
 import { Branches, Releases } from '../screens/P18_Refs';
 import { Issues, Issue } from '../screens/P19_Issues';
@@ -63,4 +65,10 @@ export const routes = [
   { id: 'R-29', path: '/projects/:id/branches/new', Screen: () => createElement(Write, { mode: 'branch' }) },
   { id: 'R-12', path: '/projects/:id/issues/new', Screen: () => createElement(NewIssue, { kind: 'issue' }) },
   { id: 'R-17', path: '/projects/:id/merge-requests/new', Screen: () => createElement(NewIssue, { kind: 'merge' }) },
+  { id: 'R-07', path: '/projects/:id/compare', Screen: Compare },
+  { id: 'A-04', path: '/insights', Screen: Insights },
+  { id: 'A-08', path: '/checklist', Screen: Checklist },
+  { id: 'A-06', path: '/mcp', Screen: Mcp },
+  { id: 'A-05', path: '/projects/:id/law-alerts', Screen: LawAlerts },
+  { id: 'A-07', path: '/projects/:id/handover', Screen: Handover },
 ];

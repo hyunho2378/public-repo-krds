@@ -20,6 +20,11 @@ export function globalGroups() {
     ]],
     [t.Side_make, [
       [t.Header_menuPublish, '/publish', 'plus'],
+      [t.Checklist_title, '/checklist', 'check_circle'],
+      [t.Mcp_title, '/mcp', 'component'],
+    ]],
+    [t.Side_operate, [
+      [t.Insights_title, '/insights', 'multi'],
     ]],
   ];
 }
@@ -48,6 +53,7 @@ export function projectGroups(id) {
     [t.Side_code, [
       [t.RepoSub_files, `${p}/code`, 'new_folder'],
       [t.ProjectTabs_4, `${p}/changes`, 'time'],
+      [t.Compare_title, `${p}/compare`, 'multi'],
       [t.RepoSub_branches, `${p}/branches`, 'multi', false, t.Side_hintBranch],
       [t.RepoSub_mr, `${p}/merge-requests`, 'component', false, t.Side_hintMr],
       [t.P22_snippets, `${p}/snippets`, 'file'],
@@ -55,6 +61,8 @@ export function projectGroups(id) {
     [t.Side_deploy, [
       [t.RepoSub_releases, `${p}/releases`, 'upload', false, t.Side_hintRelease],
       [t.P22_packages, `${p}/packages`, 'component'],
+      [t.Law_title, `${p}/law-alerts`, 'bell'],
+      [t.Handover_title, `${p}/handover`, 'document'],
       [t.P22_pipelines, `${p}/pipelines`, 'reset'],
     ]],
     [t.Side_analyze, [

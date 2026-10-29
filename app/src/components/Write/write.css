@@ -19,3 +19,12 @@
 .rb-compare-pick { display: flex; flex-direction: column; gap: var(--krds-gap-4); padding: var(--krds-padding-6); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium3); }
 .rb-compare-field { display: flex; flex-direction: column; align-items: flex-start; gap: var(--krds-gap-2); }
 .rb-branch-pick { display: flex; flex-wrap: wrap; gap: var(--krds-gap-2); list-style: none; margin: 0; padding: 0; }
+.rb-bars { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--krds-gap-3); }
+.rb-bars li { display: grid; grid-template-columns: minmax(0, 18ch) minmax(0, 1fr) auto; align-items: center; gap: var(--krds-gap-4); }
+.rb-bar { display: block; block-size: var(--krds-size-height-2); background: var(--krds-color-surface-gray-subtle); border-radius: var(--krds-radius-max); overflow: hidden; }
+.rb-bar-fill { display: block; block-size: 100%; background: var(--krds-color-element-primary); }
+.rb-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.rb-step-head { display: flex; align-items: center; gap: var(--krds-gap-3); width: 100%; padding: var(--krds-padding-5) 0; background: none; border: 0; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); color: var(--krds-color-text-basic); cursor: pointer; text-align: left; }
+.rb-step-no { display: grid; place-items: center; inline-size: var(--krds-size-height-4); block-size: var(--krds-size-height-4); border-radius: var(--krds-radius-max); background: var(--krds-color-element-primary); color: var(--krds-color-text-inverse-static); }
+.rb-step-body { padding: var(--krds-padding-5) 0 var(--krds-padding-6); display: flex; flex-direction: column; gap: var(--krds-gap-3); }
+.rb-check-list { margin: 0; padding-left: var(--krds-padding-6); display: flex; flex-direction: column; gap: var(--krds-gap-2); }
