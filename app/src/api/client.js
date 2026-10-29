@@ -12,6 +12,12 @@ export class ApiError extends Error {
 export const STATIC_MODE = import.meta.env.VITE_STATIC === '1';
 
 export async function request(path, { signal, ...options } = {}) {
+  // 개발 모드에서 ?fixture=kordoc 이면 받아 둔 실제 응답을 쓴다(Figma 대조와 점검 시간 대비).
+  if (import.meta.env.DEV) {
+    const { fixtureFor } = await import('./fixture.js');
+    const hit = fixtureFor(path);
+    if (hit) return hit;
+  }
   if (STATIC_MODE) {
     const { staticRequest } = await import('./static.js');
     try {

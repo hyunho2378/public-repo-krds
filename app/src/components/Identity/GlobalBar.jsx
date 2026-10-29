@@ -114,6 +114,10 @@ export function GlobalBar({ onToggleNav, navOpen }) {
         </Link>
         <NavLink end className="rb-gbar-btn rb-gbar-explore" to="/">{t.GlobalBar_explore}</NavLink>
         <GlobalSearch />
+        <Link className="rb-gbar-btn rb-gbar-searchlink" to="/search">
+          <Icon name="search" />
+          <span className="sr-only">{t.GlobalBar_searchLabel}</span>
+        </Link>
         <div className="rb-gbar-right">
           <ModeMenu />
           <Link className="rb-gbar-btn rb-gbar-icononly" to="/notifications">
