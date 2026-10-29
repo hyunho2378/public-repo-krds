@@ -14,6 +14,10 @@ import { Page } from './Page';
 import { Breadcrumb } from '../Navigation/Breadcrumb';
 import { ProjectTabs } from '../Navigation/ProjectTabs';
 import { Status } from '../Feedback/Status';
+import { useEffect } from 'react';
+import { setProjectNav } from '../../app/projectNav';
+import { Drop } from '../Code/Drop';
+import { Link } from 'react-router-dom';
 
 export function organizationOf(project) {
   return orgLabel(project?.namespace?.name);
@@ -68,6 +72,14 @@ function RepoHeader({ project, id }) {
           <button type="button" className="krds-btn medium secondary" aria-expanded={reuseOpen} onClick={() => setReuse(!reuseOpen)}>
             {t.RepoHead_reuse}
           </button>
+          <Drop label={t.Home_more} btnClass="krds-btn medium tertiary rb-icon-only" button={<><Icon name="ellipsis_horizontal" /><span className="sr-only">{t.Home_more}</span></>}>
+            {(close) => (
+              <ul className="drop-list">
+                <li><a className="item-link" href={project.web_url} target="_blank" rel="noreferrer" onClick={close}>{t.Home_openOrigin}<span className="sr-only"> {t.Footer_3}</span></a></li>
+                <li><Link className="item-link" to={`/projects/${id}/feedback?type=bug`} onClick={close}>{t.Home_reportIssue}</Link></li>
+              </ul>
+            )}
+          </Drop>
         </div>
       </div>
       {reuseOpen && <ReuseAction id={id} onClose={() => setReuse(false)} />}
@@ -76,7 +88,13 @@ function RepoHeader({ project, id }) {
   );
 }
 
-export function ProjectFrame({ screenId, tab, tabLabel, data, children, state }) {
+export function ProjectFrame({ screenId, tab, tabLabel, data, children, state, aside }) {
+  // 전역 왼쪽 메뉴를 이 프로젝트 메뉴로 바꾼다(공공 깃랩과 같은 구조). 화면을 떠나면 탐색 메뉴로 돌아간다.
+  const project0 = data.data?.project;
+  useEffect(() => {
+    if (project0) setProjectNav({ id: data.id, name: project0.name });
+    return () => setProjectNav(null);
+  }, [data.id, project0?.name]);
   if (!data.data) {
     return (
       <Page id={screenId} title={t.ProjectFrame_2} state={data.state}>
@@ -87,12 +105,21 @@ export function ProjectFrame({ screenId, tab, tabLabel, data, children, state })
   const { project } = data.data;
   return (
     <Page id={screenId} title={`${project.name} ${tabLabel || ''}`} state={state}>
-      <div className="rb-repo-top">
-        <Breadcrumb items={[[t.Header_2, '/search'], [project.name, tab ? `/projects/${data.id}` : null], ...(tab ? [[tabLabel]] : [])]} />
-        <RepoHeader project={project} id={data.id} />
-        <ProjectTabs id={data.id} active={tab} />
+      <div className="rb-repo-layout">
+        <div className="rb-repo-main">
+          <div className="rb-repo-top">
+            <Breadcrumb items={[[t.Header_2, '/search'], [project.name, tab ? `/projects/${data.id}` : null], ...(tab ? [[tabLabel]] : [])]} />
+            <RepoHeader project={project} id={data.id} />
+            <ProjectTabs id={data.id} active={tab} />
+          </div>
+          {aside ? (
+            <div className="rb-repo-cols">
+              <div className="rb-repo-content">{children}</div>
+              <div className="rb-repo-aside">{aside}</div>
+            </div>
+          ) : children}
+        </div>
       </div>
-      {children}
     </Page>
   );
 }

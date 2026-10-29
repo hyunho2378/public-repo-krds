@@ -3,9 +3,9 @@ import { t } from '../../copy/ko';
 import { Link } from 'react-router-dom';
 
 const TABS = [
-  ['', t.ProjectTabs_1],
+  ['', t.Tab_code],
+  ['/about', t.ProjectTabs_1],
   ['/use', t.ProjectTabs_2],
-  ['/code', t.ProjectTabs_3],
   ['/changes', t.ProjectTabs_4],
   ['/feedback', t.ProjectTabs_5],
 ];

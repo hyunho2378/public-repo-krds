@@ -39,7 +39,7 @@ export default function Project() {
   ];
 
   return (
-    <ProjectFrame screenId="P-04" tab="" data={data} state={readme ? 'Ideal' : 'Min'}>
+    <ProjectFrame screenId="P-04" tab="/about" tabLabel={t.ProjectTabs_1} data={data} state={readme ? 'Ideal' : 'Min'}>
       <div className="rb-two-col rb-two-col-end">
         <article className="rb-stack rb-grow">
           <h2 className="krds-text-heading-medium">{t.P04_18}</h2>

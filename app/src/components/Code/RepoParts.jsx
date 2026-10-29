@@ -1,0 +1,274 @@
+// Figma: Repo/Toolbar, Repo/CommitBar, Repo/FileTable, Repo/Readme, Repo/About. GitHub와 GitLab 저장소 첫 화면 배치(D-04 개정).
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { t } from '../../copy/ko';
+import { Icon } from './Icon';
+import { Drop } from './Drop';
+import { Readme } from '../Help/Readme';
+import { orgLabel } from '../Layout/orgLabel';
+import { cleanDescription } from '../Layout/StructuredList';
+
+const day = (iso) => (iso ? new Date(iso).toLocaleDateString('ko-KR') : '');
+export const enc = encodeURIComponent;
+
+export function Ago({ iso }) {
+  if (!iso) return null;
+  return <time dateTime={iso} title={day(iso)}>{t.fn.ago(iso)}</time>;
+}
+
+function useCopy() {
+  const [note, setNote] = useState('');
+  const copy = async (text) => {
+    await navigator.clipboard.writeText(text);
+    setNote(t.Home_copied);
+    setTimeout(() => setNote(''), 2000);
+  };
+  return [note, copy];
+}
+
+export function BranchSelect({ id, current, branches, path }) {
+  const navigate = useNavigate();
+  return (
+    <Drop label={t.Home_branchSelect} align="left" btnClass="krds-btn medium tertiary rb-branch-btn" button={<><Icon name="share" /><span className="rb-ellipsis">{current}</span></>}>
+      {(close) => (
+        <ul className="drop-list" aria-label={t.Home_branchSelect}>
+          {(branches || [{ name: current }]).map((b) => (
+            <li key={b.name}>
+              <button type="button" className={`item-link${b.name === current ? ' active' : ''}`} aria-current={b.name === current ? 'true' : undefined} onClick={() => { close(); navigate(`/projects/${id}${path ? '/code/' + path : ''}?ref=${enc(b.name)}`); }}>
+                <span className="rb-break-any">{b.name}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </Drop>
+  );
+}
+
+export function CodeMenu({ id, zipUrl, cloneUrl }) {
+  const [note, copy] = useCopy();
+  return (
+    <>
+      <Drop label={t.Home_code} btnClass="krds-btn medium primary" button={<><span className="rb-drop-full">{t.Home_code}</span><span className="rb-drop-compact"><Icon name="download" /><span className="sr-only">{t.Home_code}</span></span></>}>
+        {(close) => (
+          <ul className="drop-list">
+            <li><a className="item-link" href={zipUrl}><Icon name="download" /> {t.Home_zip}</a></li>
+            {cloneUrl ? <li><button type="button" className="item-link" onClick={() => { copy(cloneUrl); close(); }}><Icon name="copy" /> {t.Home_https}</button></li> : null}
+            <li><Link className="item-link" to={`/projects/${id}/use`} onClick={close}><Icon name="document" /> {t.Home_runGuide}</Link></li>
+          </ul>
+        )}
+      </Drop>
+      <span className="sr-only" role="status" aria-live="polite">{note}</span>
+    </>
+  );
+}
+
+export function FileFind({ value, onChange }) {
+  const input = useRef(null);
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key !== 't' || e.metaKey || e.ctrlKey || e.altKey) return;
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
+      e.preventDefault();
+      input.current?.focus();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, []);
+  return (
+    <div className="krds-input-wrap rb-find">
+      <label className="sr-only" htmlFor="file-find">{t.Home_findLabel}</label>
+      <Icon name="search" />
+      <input ref={input} id="file-find" className="krds-input small" type="search" placeholder={t.Home_find} value={value} onChange={(e) => onChange(e.target.value)} autoComplete="off" />
+      <kbd className="rb-kbd" aria-hidden="true">{t.Home_findHint}</kbd>
+    </div>
+  );
+}
+
+export function CommitBar({ id, commit, count, more, path }) {
+  const [note, copy] = useCopy();
+  if (!commit) return null;
+  const org = orgLabel(commit.author_name);
+  return (
+    <div className="rb-commit-bar">
+      <p className="rb-commit-main">
+        <span className="rb-avatar" aria-hidden="true">{org.slice(0, 1)}</span>
+        <span className="krds-text-body-small-bold rb-commit-author">{org}</span>
+        <Link className="krds-link krds-text-body-small rb-ellipsis" to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>
+      </p>
+      <p className="rb-commit-meta krds-text-body-small rb-subtle">
+        <code>{commit.short_id}</code>
+        <button type="button" className="krds-btn xsmall text rb-icon-btn" onClick={() => copy(commit.id)}>
+          <Icon name="copy" /><span className="sr-only">{t.Home_copySha}</span>
+        </button>
+        <Ago iso={commit.committed_date} />
+        <Link className="krds-btn small tertiary rb-commit-count" to={`/projects/${id}/changes${path ? `?path=${enc(path)}` : ''}`}>
+          <Icon name="time" />
+          {t.Home_history}&nbsp;<span className="rb-subtle">{t.fn.nCommits(count, more)}</span>
+        </Link>
+        <span className="sr-only" role="status" aria-live="polite">{note}</span>
+      </p>
+    </div>
+  );
+}
+
+export function FileTable({ id, path, items, log, filter, refQuery }) {
+  const sorted = useMemo(
+    () => [...items].filter((f) => !filter || f.name.toLowerCase().includes(filter.toLowerCase())).sort((a, b) => (a.type === b.type ? a.name.localeCompare(b.name) : a.type === 'tree' ? -1 : 1)),
+    [items, filter],
+  );
+  const up = path.includes('/') ? path.slice(0, path.lastIndexOf('/')) : '';
+  return (
+    <div className="krds-table-wrap rb-tree-wrap">
+      <table className="tbl data rb-tree">
+        <caption className="sr-only">{t.fn.treeCount(sorted.length)}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{t.P16_name}</th>
+            <th scope="col" className="rb-col-msg">{t.P16_msg}</th>
+            <th scope="col" className="rb-col-date">{t.P16_date}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {path ? (
+            <tr>
+              <td colSpan={3}>
+                <Link className="rb-tree-name" to={`/projects/${id}${up ? '/code/' + up : ''}${refQuery}`}><Icon name="new_folder" /><span>{t.P16_up}</span></Link>
+              </td>
+            </tr>
+          ) : null}
+          {sorted.length ? sorted.map((f) => {
+            const c = log?.[f.path];
+            return (
+              <tr key={f.path}>
+                <td>
+                  <Link className="rb-tree-name" to={`/projects/${id}/code/${f.path}${refQuery}`}>
+                    <Icon name={f.type === 'tree' ? 'new_folder' : 'document'} label={f.type === 'tree' ? t.P16_folder : t.P16_file} />
+                    <span className="rb-ellipsis rb-break-any">{f.name}</span>
+                  </Link>
+                  <span className="rb-tree-mobile krds-text-body-small rb-subtle">
+                    <span className="rb-ellipsis">{c ? c.title : t.P16_noLog}</span>
+                    <span>{c ? <Ago iso={c.committed_date} /> : ''}</span>
+                  </span>
+                </td>
+                <td className="rb-col-msg">
+                  {c ? <Link className="krds-link rb-ellipsis rb-muted-link" to={`/projects/${id}/changes/${c.id}`}>{c.title}</Link> : <span className="rb-subtle">{t.P16_noLog}</span>}
+                </td>
+                <td className="rb-col-date rb-subtle">{c ? <Ago iso={c.committed_date} /> : ''}</td>
+              </tr>
+            );
+          }) : (
+            <tr><td colSpan={3} className="rb-subtle">{t.Home_noMatch}</td></tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function headings(md) {
+  return (md || '').split('\n').map((l) => /^(#{1,3})\s+(.+)/.exec(l)).filter(Boolean).map((m) => ({ level: m[1].length, text: m[2].replace(/[*`]/g, '').trim() }));
+}
+
+export function ReadmeBox({ source }) {
+  const [toc, setToc] = useState(false);
+  const box = useRef(null);
+  const list = headings(source);
+  const go = (text) => {
+    const h = [...(box.current?.querySelectorAll('h1,h2,h3,h4') || [])].find((x) => x.textContent.trim() === text);
+    h?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    h?.setAttribute('tabindex', '-1');
+    h?.focus({ preventScroll: true });
+  };
+  return (
+    <section className="rb-readme-box" aria-label={t.Readme_label} ref={box}>
+      <header className="rb-readme-head">
+        <p className="krds-text-body-medium-bold"><Icon name="document" /> {t.Readme_label}</p>
+        {list.length > 1 ? (
+          <button type="button" className="krds-btn small tertiary" aria-expanded={toc} onClick={() => setToc(!toc)}>{t.Readme_toc}</button>
+        ) : null}
+      </header>
+      {toc ? (
+        <nav className="rb-readme-toc" aria-label={t.Readme_toc}>
+          <ul>
+            {list.map((h, i) => (
+              <li key={i} style={{ paddingLeft: `calc(var(--krds-padding-4) * ${h.level - 1})` }}>
+                <button type="button" className="krds-link rb-link-button" onClick={() => go(h.text)}>{h.text}</button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ) : null}
+      <div className="rb-readme-body"><Readme source={source} /></div>
+    </section>
+  );
+}
+
+const LANG_COLORS = ['primary', 'secondary', 'point', 'success', 'warning', 'information'];
+
+export function About({ id, project, readme, languages, stats, summary }) {
+  const topics = project.topics || project.tag_list || [];
+  const [allTopics, setAllTopics] = useState(false);
+  const shown = allTopics ? topics : topics.slice(0, 5);
+  const desc = cleanDescription(project.description);
+  const langs = Object.entries(languages || {}).sort((a, b) => b[1] - a[1]);
+  return (
+    <section className="rb-about-block" aria-labelledby="about-title">
+      <h2 id="about-title" className="krds-text-heading-small">{t.About_title}</h2>
+      <div className="rb-about-does">
+        <p className="krds-text-body-small-bold">{t.About_does}</p>
+        <p className="krds-text-body-medium rb-clamp-2">{summary || desc || t.About_noDesc}</p>
+      </div>
+      {topics.length ? (
+        <div className="rb-labels" aria-label={t.About_topics}>
+          {shown.map((tp) => <Link key={tp} className="krds-badge small bg-light-primary" to={`/search?topic=${enc(tp)}`}>{tp}</Link>)}
+          {topics.length > 5 && !allTopics ? <button type="button" className="krds-btn xsmall text" onClick={() => setAllTopics(true)}>{t.fn.moreTopics(topics.length - 5)}</button> : null}
+        </div>
+      ) : null}
+      <ul className="rb-about-links krds-text-body-small">
+        {readme ? <li><Icon name="document" /><a className="krds-link" href="#readme">{t.About_readme}</a></li> : null}
+        <li><Icon name="time" /><Link className="krds-link" to={`/projects/${id}/changes`}>{t.fn.nCommits(stats.commits, stats.more)}</Link></li>
+        <li><Icon name="share" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nBranches(stats.branches)}</Link></li>
+        <li><Icon name="scrap" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nTags(stats.tags)}</Link></li>
+        <li><Icon name="time" /><span>{t.About_created} {day(project.created_at)}</span></li>
+      </ul>
+      {langs.length ? (
+        <div className="rb-langs">
+          <p className="krds-text-body-small-bold">{t.About_languages}</p>
+          <div className="rb-lang-bar" role="img" aria-label={langs.map(([n, v]) => `${n} ${v}%`).join(', ')}>
+            {langs.map(([n, v], i) => <span key={n} className={`rb-lang rb-lang-${LANG_COLORS[i % LANG_COLORS.length]}`} style={{ flexGrow: v }} />)}
+          </div>
+          <ul className="rb-lang-list krds-text-body-small">
+            {langs.map(([n, v], i) => (
+              <li key={n}><span className={`rb-lang-dot rb-lang-${LANG_COLORS[i % LANG_COLORS.length]}`} aria-hidden="true" />{n} <span className="rb-subtle">{v}%</span></li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
+export function RepoMenuList({ id }) {
+  const items = [
+    ['document-check', t.ProjectTabs_1, `/projects/${id}/about`],
+    ['guide_check', t.ProjectTabs_2, `/projects/${id}/use`],
+    ['time', t.ProjectTabs_4, `/projects/${id}/changes`],
+    ['inquiry', t.ProjectTabs_5, `/projects/${id}/feedback`],
+    ['round_check', t.Side_issues, `/projects/${id}/issues`],
+    ['edit', t.RepoSub_mr, `/projects/${id}/merge-requests`],
+    ['share', t.RepoSub_branches, `/projects/${id}/branches`],
+    ['upload', t.RepoSub_releases, `/projects/${id}/releases`],
+    ['myinfo', t.RepoSub_people, `/projects/${id}/contributors`],
+  ];
+  return (
+    <nav className="rb-menu-list" aria-label={t.About_menu}>
+      <ul>
+        {items.map(([icon, label, to]) => (
+          <li key={to}><Link to={to}><Icon name={icon} /><span>{label}</span><Icon name="arrow-right" /></Link></li>
+        ))}
+      </ul>
+    </nav>
+  );
+}

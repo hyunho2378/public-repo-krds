@@ -15,12 +15,18 @@ import ErrorScreen from '../screens/P13_Error';
 import Help from '../screens/P14_Help';
 import Requests from '../screens/P15_Requests';
 import Code from '../screens/P16_Code';
+import Commit from '../screens/P17_Commit';
+import { Branches, Releases } from '../screens/P18_Refs';
+import { Issues, Issue } from '../screens/P19_Issues';
+import { MergeRequests, MergeRequest } from '../screens/P20_MergeRequests';
+import Contributors from '../screens/P21_Contributors';
 
 export const routes = [
   { id: 'P-01', path: '/', Screen: Home },
   { id: 'P-02', path: '/search', Screen: Search },
   { id: 'P-03', path: '/fields', Screen: Fields },
-  { id: 'P-04', path: '/projects/:id', Screen: Project },
+  { id: 'P-16', path: '/projects/:id', Screen: Code },
+  { id: 'P-04', path: '/projects/:id/about', Screen: Project },
   { id: 'P-05', path: '/projects/:id/files', Screen: Files },
   { id: 'P-06', path: '/projects/:id/changes', Screen: Changes },
   { id: 'P-07', path: '/projects/:id/use', Screen: Usage },
@@ -34,4 +40,12 @@ export const routes = [
   { id: 'P-15', path: '/requests', Screen: Requests },
   { id: 'P-16', path: '/projects/:id/code', Screen: Code },
   { id: 'P-16', path: '/projects/:id/code/*', Screen: Code },
+  { id: 'P-17', path: '/projects/:id/changes/:sha', Screen: Commit },
+  { id: 'P-18', path: '/projects/:id/branches', Screen: Branches },
+  { id: 'P-18', path: '/projects/:id/releases', Screen: Releases },
+  { id: 'P-19', path: '/projects/:id/issues', Screen: Issues },
+  { id: 'P-19', path: '/projects/:id/issues/:iid', Screen: Issue },
+  { id: 'P-20', path: '/projects/:id/merge-requests', Screen: MergeRequests },
+  { id: 'P-20', path: '/projects/:id/merge-requests/:iid', Screen: MergeRequest },
+  { id: 'P-21', path: '/projects/:id/contributors', Screen: Contributors },
 ];
