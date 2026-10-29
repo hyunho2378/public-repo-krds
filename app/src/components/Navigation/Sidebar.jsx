@@ -21,7 +21,8 @@ export function globalGroups() {
       [t.Collab_title, '/collaborate', 'multi'],
     ]],
     [t.Side_make, [
-      [t.Header_menuPublish, '/publish', 'plus'],
+      [t.NewProject_title, '/projects/new', 'plus'],
+      [t.Header_menuPublish, '/publish', 'document-check'],
       [t.Checklist_title, '/checklist', 'check_circle'],
       [t.Mcp_title, '/mcp', 'component'],
     ]],

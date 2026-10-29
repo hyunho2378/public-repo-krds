@@ -20,6 +20,7 @@ import RepoSections, { SECTION_KEYS } from '../screens/P22_RepoSections';
 import Write from '../screens/P23_Write';
 import NewIssue from '../screens/P24_NewIssue';
 import Compare from '../screens/P25_Compare';
+import NewProject from '../screens/P28_NewProject';
 import { Insights, Checklist, LawAlerts, Handover, Mcp } from '../screens/P26_Insights';
 import { Notifications, Settings, ProjectSettings, RepoGraph, Collaborate } from '../screens/P27_Account';
 import Commit from '../screens/P17_Commit';
@@ -77,4 +78,5 @@ export const routes = [
   { id: 'A-03', path: '/collaborate', Screen: Collaborate },
   { id: 'R-26', path: '/projects/:id/settings', Screen: ProjectSettings },
   { id: 'R-11', path: '/projects/:id/graph', Screen: RepoGraph },
+  { id: 'G-04', path: '/projects/new', Screen: NewProject },
 ];
