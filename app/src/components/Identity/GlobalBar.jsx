@@ -116,6 +116,10 @@ export function GlobalBar({ onToggleNav, navOpen }) {
         <GlobalSearch />
         <div className="rb-gbar-right">
           <ModeMenu />
+          <Link className="rb-gbar-btn rb-gbar-icononly" to="/notifications">
+            <Icon name="bell" />
+            <span className="sr-only">{t.TabBar_alerts}</span>
+          </Link>
           <Link className="krds-btn small secondary" to="/help">{t.GlobalBar_signup}</Link>
           <Link className="krds-btn small primary" to={loginTo}>{t.Header_login}</Link>
         </div>

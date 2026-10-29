@@ -21,6 +21,7 @@ import Write from '../screens/P23_Write';
 import NewIssue from '../screens/P24_NewIssue';
 import Compare from '../screens/P25_Compare';
 import { Insights, Checklist, LawAlerts, Handover, Mcp } from '../screens/P26_Insights';
+import { Notifications, Settings, ProjectSettings, RepoGraph, Collaborate } from '../screens/P27_Account';
 import Commit from '../screens/P17_Commit';
 import { Branches, Releases } from '../screens/P18_Refs';
 import { Issues, Issue } from '../screens/P19_Issues';
@@ -71,4 +72,9 @@ export const routes = [
   { id: 'A-06', path: '/mcp', Screen: Mcp },
   { id: 'A-05', path: '/projects/:id/law-alerts', Screen: LawAlerts },
   { id: 'A-07', path: '/projects/:id/handover', Screen: Handover },
+  { id: 'G-06', path: '/notifications', Screen: Notifications },
+  { id: 'G-11', path: '/settings', Screen: Settings },
+  { id: 'A-03', path: '/collaborate', Screen: Collaborate },
+  { id: 'R-26', path: '/projects/:id/settings', Screen: ProjectSettings },
+  { id: 'R-11', path: '/projects/:id/graph', Screen: RepoGraph },
 ];

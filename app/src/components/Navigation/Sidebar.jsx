@@ -16,7 +16,9 @@ export function globalGroups() {
     ]],
     [t.Side_myWork, [
       [t.Header_my, '/my', 'my'],
+      [t.TabBar_alerts, '/notifications', 'bell'],
       [t.Side_requests, '/requests', 'edit'],
+      [t.Collab_title, '/collaborate', 'multi'],
     ]],
     [t.Side_make, [
       [t.Header_menuPublish, '/publish', 'plus'],
@@ -67,6 +69,7 @@ export function projectGroups(id) {
     ]],
     [t.Side_analyze, [
       [t.RepoSub_people, `${p}/contributors`, 'myinfo'],
+      [t.Graph_title, `${p}/graph`, 'multi'],
     ]],
   ];
 }
@@ -136,6 +139,10 @@ export function Sidebar({ project, open, onClose }) {
           <Group key={group || `g${i}`} group={group} items={items} />
         ))}
         <div className="rb-side-foot">
+          <NavLink to={project ? `/projects/${project.id}/settings` : '/settings'} className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`}>
+            <Icon name="setting" />
+            <span className="rb-side-text"><span>{project ? t.PSet_title : t.Settings_title}</span></span>
+          </NavLink>
           <NavLink to="/help" className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`}>
             <Icon name="help" />
             <span className="rb-side-text"><span>{t.Header_menuHelp}</span></span>
