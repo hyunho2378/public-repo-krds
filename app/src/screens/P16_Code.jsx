@@ -185,8 +185,8 @@ export default function Code() {
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />
               {isHome ? (
                 <p className="rb-toolbar-counts krds-text-body-small">
-                  {totals.branches != null ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}><Icon name="share" />{t.fn.nBranches(totals.branches)}</Link> : null}
-                  {totals.tags != null ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}><Icon name="scrap" />{t.fn.nTags(totals.tags)}</Link> : null}
+                  {totals.branches != null ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}>{t.fn.nBranches(totals.branches)}</Link> : null}
+                  {totals.tags != null ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}>{t.fn.nTags(totals.tags)}</Link> : null}
                 </p>
               ) : <PathCrumbs id={frame.id} path={path} refQuery={refQuery} />}
             </div>
@@ -200,13 +200,13 @@ export default function Code() {
             <Status {...body} />
           ) : b.kind === 'file' ? (
             <>
-              <CommitBar id={frame.id} commit={b.last} count={1} path={path} />
+              <CommitBar id={frame.id} commit={b.last} count={1} path={path} owner={project.namespace} />
               <CodeView path={path} text={b.text} rawUrl={rawUrl} size={b.meta?.size} historyTo onHistory={() => navigate(`/projects/${frame.id}/changes?path=${enc(path)}`)} {...blameApi} />
             </>
           ) : b.items.length ? (
             <>
               <div className="rb-tree-block">
-                <CommitBar id={frame.id} commit={b.last} count={b.count} more={b.more} path={path} />
+                <CommitBar id={frame.id} commit={b.last} count={b.count} more={b.more} path={path} owner={project.namespace} />
                 <FileTable id={frame.id} path={path} items={b.items} log={b.log} filter={filter} refQuery={refQuery} />
               </div>
               {b.partial ? <p className="krds-text-body-small rb-subtle">{t.P16_partial}</p> : null}

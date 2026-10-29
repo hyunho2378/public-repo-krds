@@ -67,7 +67,6 @@ function RepoHeader({ project, id }) {
         </div>
         <div className="rb-repo-actions" role="group" aria-label={t.RepoHead_actions}>
           <button type="button" className="krds-btn small tertiary" onClick={star}>
-            <Icon name="bookmarks" />
             {t.RepoHead_star}
             <span className="rb-subtle">{project.star_count ?? 0}</span>
           </button>
@@ -107,20 +106,16 @@ export function ProjectFrame({ screenId, tab, tabLabel, data, children, state, a
   const { project } = data.data;
   return (
     <Page id={screenId} title={`${project.name} ${tabLabel || ''}`} state={state}>
-      <div className="rb-repo-layout">
+      <div className={'rb-repo-layout' + (aside ? ' has-aside' : '')}>
         <div className="rb-repo-main">
           <div className="rb-repo-top">
             <Breadcrumb items={[[t.Header_2, '/search'], [organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project))}`], [project.name, tab ? `/projects/${data.id}` : null], ...(tab ? [[tabLabel]] : [])]} />
             <RepoHeader project={project} id={data.id} />
             <ProjectTabs id={data.id} active={tab} />
           </div>
-          {aside ? (
-            <div className="rb-repo-cols">
-              <div className="rb-repo-content">{children}</div>
-              <div className="rb-repo-aside">{aside}</div>
-            </div>
-          ) : children}
+          {children}
         </div>
+        {aside ? <div className="rb-repo-aside">{aside}</div> : null}
       </div>
     </Page>
   );

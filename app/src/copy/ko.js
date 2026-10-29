@@ -718,6 +718,8 @@ export const t = {
   // 숫자가 들어가는 문구
   fn: {
     items: (n) => `${n}개`,
+    wroteAt: (who) => `${who}가`,
+    wroteSuffix: '에 작성',
     readmeLine: (n) => `README ${n}행`,
     stepNo: (n) => `${n}.`,
     tabCommits: (n) => `커밋 ${n}`,

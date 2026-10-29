@@ -3,7 +3,7 @@
 .rb-repo-top { display: flex; flex-direction: column; gap: var(--krds-gap-3); }
 .rb-repo-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: var(--krds-gap-4); }
 .rb-repo-title { display: flex; flex-direction: column; gap: var(--krds-gap-1); min-width: 0; flex: 1 1 0; }
-.rb-repo-name { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin: 0; }
+.rb-repo-name { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin: 0; font-size: var(--krds-font-size-heading-medium); }
 .rb-repo-name .rb-repo-org { color: var(--krds-color-text-subtle); font-weight: inherit; }
 .rb-repo-desc { color: var(--krds-color-text-subtle); word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .rb-repo-meta { color: var(--krds-color-text-subtle); }
@@ -20,13 +20,14 @@
 .rb-repo-top .rb-tabs::-webkit-scrollbar-thumb { background: var(--krds-color-border-gray); border-radius: var(--krds-radius-max); }
 .rb-repo-top .rb-tabs .tab ul { overflow: visible; }
 /* GitLab 배치: 왼쪽 프로젝트 메뉴 + 본문. 1280 이상에서 메뉴 표시, 그 아래는 탭 줄 */
-.rb-repo-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--krds-gap-7); }
+.rb-repo-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--krds-gap-7); align-items: start; }
 .rb-repo-main { display: flex; flex-direction: column; gap: var(--krds-gap-7); min-width: 0; }
 .rb-repo-cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--krds-gap-7); }
 .rb-repo-content { display: flex; flex-direction: column; gap: var(--krds-gap-5); min-width: 0; }
 .rb-repo-aside { display: flex; flex-direction: column; gap: var(--krds-gap-7); min-width: 0; }
 @media (min-width: 1024px) {
-  .rb-repo-cols { grid-template-columns: minmax(0, 1fr) minmax(0, 18em); }
+  /* Figma: 오른쪽 정보 영역이 맨 위(브레드크럼 줄)부터 시작한다 */
+  .rb-repo-layout.has-aside { grid-template-columns: minmax(0, 1fr) minmax(0, 18em); }
 }
 @media (min-width: 1280px) {
   .rb-repo-top .rb-tabs { display: none; }
@@ -38,6 +39,6 @@
 .rb-side-link { display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-3) var(--krds-padding-4); border-radius: var(--krds-radius-medium2); color: var(--krds-color-text-basic); text-decoration: none; }
 .rb-side-link:hover { background: var(--krds-color-action-secondary-hover); }
 .rb-side-link.active { background: var(--krds-color-action-secondary-selected); color: var(--krds-color-text-primary); font-weight: var(--krds-font-weight-bold); }
-.rb-avatar { display: inline-flex; flex: none; align-items: center; justify-content: center; width: var(--krds-size-height-5); height: var(--krds-size-height-5); border-radius: var(--krds-radius-max); background: var(--krds-color-surface-primary-subtler); color: var(--krds-color-text-primary); font-weight: var(--krds-font-weight-bold); }
+.rb-avatar { display: inline-flex; flex: none; align-items: center; justify-content: center; width: var(--krds-size-height-4); height: var(--krds-size-height-4); border-radius: var(--krds-radius-small2); background: var(--krds-color-surface-primary-subtler); color: var(--krds-color-text-primary); font-weight: var(--krds-font-weight-bold); }
 .rb-icon-only { padding-inline: var(--krds-padding-3); }
 .rb-icon-only .ico-toggle { display: none; }

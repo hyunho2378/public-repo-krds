@@ -86,11 +86,11 @@
 .rb-shell { display: flex; flex: 1; width: 100%; align-items: stretch; }
 .rb-side {
   flex: none;
-  width: 30ch;
+  width: 26ch;
   display: flex;
   flex-direction: column;
-  gap: var(--krds-gap-2);
-  padding: var(--krds-padding-5) var(--krds-padding-4);
+  gap: var(--krds-gap-1);
+  padding: var(--krds-padding-4) var(--krds-padding-3);
   border-right: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light);
   background: var(--krds-color-surface-gray-subtler);
   overflow-y: auto;
@@ -100,17 +100,19 @@
   max-height: 100dvh;
 }
 .rb-side-dim { display: none; }
-.rb-side-project { display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-3) var(--krds-padding-4); min-width: 0; }
+.rb-side-project { display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-3); min-width: 0; }
 .rb-side-group { display: flex; flex-direction: column; }
 .rb-side-group-btn {
   display: flex; align-items: center; justify-content: space-between; width: 100%;
-  padding: var(--krds-padding-3) var(--krds-padding-4);
+  padding: var(--krds-padding-3) var(--krds-padding-3) var(--krds-padding-2);
+  font-size: var(--krds-font-size-detail-small);
   background: none; border: 0; color: var(--krds-color-text-subtle); cursor: pointer; text-align: left;
 }
 .rb-side-group-btn[aria-expanded="false"] .ico-toggle { transform: rotate(-90deg); }
 .rb-side-link {
   display: flex; align-items: center; gap: var(--krds-gap-3);
-  padding: var(--krds-padding-3) var(--krds-padding-4);
+  padding: var(--krds-padding-2) var(--krds-padding-3);
+  font-size: var(--krds-font-size-body-small);
   border-radius: var(--krds-radius-medium2);
   color: var(--krds-color-text-basic); text-decoration: none;
 }

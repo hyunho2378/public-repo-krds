@@ -30,7 +30,7 @@ export function BranchSelect({ id, current, branches = [], path }) {
   branches = branches || [];
   const navigate = useNavigate();
   return (
-    <Drop label={t.Home_branchSelect} align="left" btnClass="krds-btn medium tertiary rb-branch-btn" button={<><Icon name="share" /><span className="rb-ellipsis">{current}</span></>}>
+    <Drop label={t.Home_branchSelect} align="left" btnClass="rb-branch-btn" button={<span className="rb-ellipsis">{current}</span>}>
       {(close) => (
         <ul className="drop-list" aria-label={t.Home_branchSelect}>
           {(branches || [{ name: current }]).map((b) => (
@@ -102,26 +102,25 @@ export function FileFind({ value, onChange }) {
   );
 }
 
-export function CommitBar({ id, commit, count, more, path }) {
+export function CommitBar({ id, commit, count, more, path, owner }) {
   const [note, copy] = useCopy();
   if (!commit) return null;
-  const org = orgLabel(commit.author_name);
+  // 커밋 자료는 계정 이름(chrisryugj)만 준다. 그 계정이 이 프로젝트 소유자면 공개 이름을 쓴다.
+  const org = owner && owner.path === commit.author_name ? owner.name : orgLabel(commit.author_name);
   return (
     <div className="rb-commit-bar">
-      <p className="rb-commit-main">
-        <span className="rb-avatar" aria-hidden="true">{org.slice(0, 1)}</span>
-        <span className="krds-text-body-small-bold rb-commit-author">{org}</span>
-        <Link className="krds-link krds-text-body-small rb-ellipsis" to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>
-      </p>
+      <span className="rb-avatar rb-commit-avatar" aria-hidden="true">{org.slice(0, 1)}</span>
+      <span className="rb-commit-texts">
+        <Link className="krds-link krds-text-body-small-bold rb-ellipsis" to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>
+        <span className="krds-text-body-small rb-subtle">{t.fn.wroteAt(org)} <Ago iso={commit.committed_date} />{t.fn.wroteSuffix}</span>
+      </span>
       <p className="rb-commit-meta krds-text-body-small rb-subtle">
         <code>{commit.short_id}</code>
         <button type="button" className="krds-btn xsmall text rb-icon-btn" onClick={() => copy(commit.id)}>
           <Icon name="copy" /><span className="sr-only">{t.Home_copySha}</span>
         </button>
-        <Ago iso={commit.committed_date} />
         <Link className="krds-btn small tertiary rb-commit-count" to={`/projects/${id}/changes${path ? `?path=${enc(path)}` : ''}`}>
-          <Icon name="time" />
-          {t.Home_history}&nbsp;<span className="rb-subtle">{t.fn.nCommits(count, more)}</span>
+          {t.Home_history}
         </Link>
         <span className="sr-only" role="status" aria-live="polite">{note}</span>
       </p>
@@ -131,7 +130,7 @@ export function CommitBar({ id, commit, count, more, path }) {
 
 export function FileTable({ id, path, items, log, filter, refQuery }) {
   const sorted = useMemo(
-    () => [...items].filter((f) => !filter || f.name.toLowerCase().includes(filter.toLowerCase())).sort((a, b) => (a.type === b.type ? a.name.localeCompare(b.name) : a.type === 'tree' ? -1 : 1)),
+    () => items.filter((f) => !filter || f.name.toLowerCase().includes(filter.toLowerCase())),
     [items, filter],
   );
   const up = path.includes('/') ? path.slice(0, path.lastIndexOf('/')) : '';

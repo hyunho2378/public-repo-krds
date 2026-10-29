@@ -112,7 +112,7 @@
 .rb-toolbar-left { flex: 1 1 auto; }
 .rb-toolbar-counts { display: flex; gap: var(--krds-gap-4); }
 .rb-toolbar-counts a { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
-.rb-branch-btn { max-width: 16em; display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
+.rb-branch-btn-old { max-width: 16em; display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
 .rb-drop-left.rb-drop-open .drop-menu { left: 0; right: auto; }
 .rb-drop .drop-list .item-link { display: flex; align-items: center; gap: var(--krds-gap-2); }
 .rb-find { position: relative; display: flex; align-items: center; gap: var(--krds-gap-2); min-width: 0; }
@@ -205,3 +205,15 @@
 .rb-md-img { color: var(--krds-color-text-subtle); }
 .rb-md-quote { margin: 0; padding-left: var(--krds-padding-5); border-left: var(--krds-border-width-static-medium) solid var(--krds-color-border-gray-light); color: var(--krds-color-text-subtle); }
 .rb-md-item { padding-left: var(--krds-padding-5); }
+
+/* Figma: 브랜치 선택은 넓은 선택칸 모양 */
+.rb-branch-btn { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-3); min-width: 18ch; padding: var(--krds-padding-2) var(--krds-padding-4); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-white); color: var(--krds-color-text-basic); cursor: pointer; }
+.rb-branch-btn:hover { background: var(--krds-color-action-secondary-hover); }
+/* 브랜치와 태그 수는 링크 색으로 */
+.rb-toolbar-counts a { color: var(--krds-color-text-primary); }
+
+/* Figma: 커밋 막대는 아바타 + 두 줄 글 + 오른쪽 해시와 이력 */
+.rb-commit-bar { display: flex; align-items: center; gap: var(--krds-gap-3); }
+.rb-commit-texts { display: flex; flex-direction: column; min-width: 0; flex: 1 1 auto; }
+.rb-commit-avatar { align-self: center; }
+.rb-commit-meta { display: flex; align-items: center; gap: var(--krds-gap-3); margin: 0; flex: none; }

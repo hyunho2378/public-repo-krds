@@ -86,7 +86,6 @@ export function GlobalBar({ onToggleNav, navOpen }) {
           <span className="sr-only">{t.GlobalBar_navToggle}</span>
         </button>
         <Link className="rb-gbar-brand" to="/">
-          <span className="rb-gbar-mark" aria-hidden="true">{SERVICE_NAME.slice(0, 1)}</span>
           <span className="rb-gbar-brand-text">{SERVICE_NAME}</span>
         </Link>
         <NavLink end className="rb-gbar-btn rb-gbar-explore" to="/">
