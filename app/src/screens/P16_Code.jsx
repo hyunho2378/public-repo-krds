@@ -57,17 +57,36 @@ async function loadTree(id, path, ref) {
       log[it.path] = null;
     }
   }
-  return { kind: 'tree', items, log, last: head.data[0] || null, count: head.data.length, more: !!head.pagination?.nextPage, partial: items.length > LOG_LIMIT };
+  // 전체 커밋 수는 응답의 total을 쓴다. 없으면 받은 만큼만 세고 "이상"을 붙인다(없는 수를 만들지 않는다).
+  const total = head.pagination?.total ?? null;
+  return {
+    kind: 'tree',
+    items,
+    log,
+    last: head.data[0] || null,
+    count: total ?? head.data.length,
+    more: total == null && !!head.pagination?.nextPage,
+    partial: items.length > LOG_LIMIT,
+  };
 }
 
 async function loadRepo(id) {
   // 불러오지 못하면 null로 둔다. 0개로 보여 주면 사실과 다르다(실제로는 main 1개).
+  // 목록은 한 쪽(100개)만 받는다. 전체 수는 응답의 total(X-Total 헤더)을 쓴다. 없으면 받은 만큼만 보여 준다.
   const branches = await gitlab.branches(id).catch(() => ({ data: null }));
   const tags = await gitlab.tags(id).catch(() => ({ data: null }));
   const releases = await gitlab.releases(id).catch(() => ({ data: null }));
   const root = await gitlab.tree(id, '').catch(() => ({ data: [] }));
   const languages = await request(`/api/gitlab/projects/${enc(id)}/languages`).catch(() => ({ data: {} }));
-  return { branches: branches.data, tags: tags.data, releases: releases.data, root: root.data, languages: languages.data };
+  const count = (r) => (r?.pagination?.total ?? (Array.isArray(r?.data) ? r.data.length : null));
+  return {
+    branches: branches.data,
+    tags: tags.data,
+    releases: releases.data,
+    totals: { branches: count(branches), tags: count(tags), releases: count(releases) },
+    root: root.data,
+    languages: languages.data,
+  };
 }
 
 /** R-03 Blame: 줄마다 마지막으로 고친 사람과 날짜. 눌렀을 때만 불러온다(무거운 요청). */
@@ -138,7 +157,7 @@ export default function Code() {
   }, [params.id, path, ref]);
 
   if (!frame.data) return <ProjectFrame screenId="P-16" data={frame} />;
-  const { project, readme, branches, tags, releases, root, languages } = frame.data;
+  const { project, readme, branches, tags, releases, totals, root, languages } = frame.data;
   const rawUrl = path ? `${project.web_url}/-/raw/${ref}/${path.split('/').map(enc).join('/')}` : null;
   const zipUrl = `${project.web_url}/-/archive/${ref}/${project.path}-${ref}.zip`;
   const b = body.data;
@@ -146,7 +165,7 @@ export default function Code() {
   const state = b ? (b.kind === 'tree' ? (!b.items.length ? 'Empty' : b.items.length === 1 ? 'Min' : 'Ideal') : 'Ideal') : body.state;
   const isHome = !path;
 
-  const about = <About id={frame.id} project={project} readme={readme} languages={languages} stats={{ commits: b?.count ?? 0, more: b?.more, branches: branches?.length ?? null, tags: tags?.length ?? null, releases: releases?.length ?? null }} />;
+  const about = <About id={frame.id} project={project} readme={readme} languages={languages} stats={{ commits: b?.count ?? 0, more: b?.more, branches: totals.branches, tags: totals.tags, releases: totals.releases }} />;
   const aside = isHome ? (
     <>
       <div className="rb-only-wide">{about}</div>
@@ -166,8 +185,8 @@ export default function Code() {
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />
               {isHome ? (
                 <p className="rb-toolbar-counts krds-text-body-small">
-                  {branches ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}><Icon name="share" />{t.fn.nBranches(branches.length)}</Link> : null}
-                  {tags ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}><Icon name="scrap" />{t.fn.nTags(tags.length)}</Link> : null}
+                  {totals.branches != null ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}><Icon name="share" />{t.fn.nBranches(totals.branches)}</Link> : null}
+                  {totals.tags != null ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}><Icon name="scrap" />{t.fn.nTags(totals.tags)}</Link> : null}
                 </p>
               ) : <PathCrumbs id={frame.id} path={path} refQuery={refQuery} />}
             </div>

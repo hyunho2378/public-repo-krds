@@ -122,7 +122,7 @@
 .rb-side ul { list-style: none; margin: 0; padding: 0; }
 
 /* 본문 */
-.rb-main { flex: 1 1 auto; min-width: 0; padding: var(--krds-padding-7) var(--krds-padding-7) var(--krds-padding-10); }
+.rb-main { flex: 1 1 auto; min-width: 0; padding: var(--krds-padding-3) var(--krds-padding-7) var(--krds-padding-10); }
 
 @media (max-width: 1023px) {
   .rb-gbar-navtoggle { display: inline-flex; }

@@ -145,7 +145,8 @@
 .rb-readme-toc ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--krds-gap-2); }
 .rb-readme-body { padding: var(--krds-padding-7); }
 .rb-about-block { display: flex; flex-direction: column; gap: var(--krds-gap-4); }
-.rb-about-does { display: flex; flex-direction: column; gap: var(--krds-gap-1); padding: var(--krds-padding-4); padding-inline: 0; border-left: var(--krds-border-width-static-medium) solid var(--krds-color-border-gray-light); padding-left: var(--krds-padding-4); }
+.rb-about-does { display: flex; flex-direction: column; gap: var(--krds-gap-2); padding: var(--krds-padding-4); border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-primary-subtler); }
+.rb-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .rb-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .rb-about-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--krds-gap-3); }
 .rb-about-links li { display: flex; align-items: center; gap: var(--krds-gap-2); color: var(--krds-color-text-subtle); }

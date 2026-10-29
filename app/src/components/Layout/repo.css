@@ -1,8 +1,8 @@
 /* D-04 저장소 공통 틀. KRDS 변수만. */
 .rb-icon { display: inline-block; flex: none; width: var(--krds-size-height-3); height: var(--krds-size-height-3); background: currentColor; -webkit-mask: no-repeat center / contain; mask: no-repeat center / contain; vertical-align: middle; }
-.rb-repo-top { display: flex; flex-direction: column; gap: var(--krds-gap-5); }
+.rb-repo-top { display: flex; flex-direction: column; gap: var(--krds-gap-3); }
 .rb-repo-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: var(--krds-gap-4); }
-.rb-repo-title { display: flex; flex-direction: column; gap: var(--krds-gap-2); min-width: 0; flex: 1 1 0; }
+.rb-repo-title { display: flex; flex-direction: column; gap: var(--krds-gap-1); min-width: 0; flex: 1 1 0; }
 .rb-repo-name { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin: 0; }
 .rb-repo-name .rb-repo-org { color: var(--krds-color-text-subtle); font-weight: inherit; }
 .rb-repo-desc { color: var(--krds-color-text-subtle); word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }

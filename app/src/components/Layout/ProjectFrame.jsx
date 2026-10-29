@@ -66,15 +66,15 @@ function RepoHeader({ project, id }) {
           ) : null}
         </div>
         <div className="rb-repo-actions" role="group" aria-label={t.RepoHead_actions}>
-          <button type="button" className="krds-btn medium tertiary" onClick={star}>
+          <button type="button" className="krds-btn small tertiary" onClick={star}>
             <Icon name="bookmarks" />
             {t.RepoHead_star}
             <span className="rb-subtle">{project.star_count ?? 0}</span>
           </button>
-          <button type="button" className="krds-btn medium secondary" aria-expanded={reuseOpen} onClick={() => setReuse(!reuseOpen)}>
+          <button type="button" className="krds-btn small secondary" aria-expanded={reuseOpen} onClick={() => setReuse(!reuseOpen)}>
             {t.RepoHead_reuse}
           </button>
-          <Drop label={t.Home_more} btnClass="krds-btn medium tertiary rb-icon-only" button={<><Icon name="ellipsis_horizontal" /><span className="sr-only">{t.Home_more}</span></>}>
+          <Drop label={t.Home_more} btnClass="krds-btn small text" button={<><Icon name="ellipsis_horizontal" /><span>{t.Home_more}</span></>}>
             {(close) => (
               <ul className="drop-list">
                 <li><a className="item-link" href={project.web_url} target="_blank" rel="noreferrer" onClick={close}>{t.Home_openOrigin}<span className="sr-only"> {t.Footer_3}</span></a></li>

@@ -1,0 +1,12 @@
+{
+  "observed_at": "2026-10-30T07:55+09:00",
+  "source": "공공 깃랩 API 응답 헤더 X-Total(태그, 릴리스, 이슈, 머지 리퀘스트, 브랜치). 커밋 수는 API 헤더가 없어 공공 깃랩 프로젝트 화면 표시값(UX/handson 기록)",
+  "commits": 1482,
+  "tags": 166,
+  "releases": 39,
+  "issues": 24,
+  "merge_requests": 31,
+  "branches": 1,
+  "contributors": 26,
+  "note": "목록 파일(commits.json, tags.json)은 첫 100개만 담음. 화면의 총계는 이 파일 값을 쓴다. 태그는 수집 시각에 따라 165(화면 기록) → 166(07:55 헤더)으로 늘었다"
+}

@@ -6,6 +6,9 @@ const FILES = import.meta.glob('../../../sample/kordoc/api/*.json', { eager: tru
 const TEXTS = import.meta.glob('../../../sample/kordoc/api/*.{md,ts}', { eager: true, query: '?raw', import: 'default' });
 
 const pick = (name) => FILES[`../../../sample/kordoc/api/${name}.json`];
+const TOTALS = pick('totals');
+// 목록 파일은 첫 100개만 담겨 있다. 화면에 보이는 총계는 totals.json 값을 쓴다.
+const TOTAL_KEY = { commits: 'commits', tags: 'tags', branches: 'branches', releases: 'releases', issues: 'issues', merge_requests: 'merge_requests', contributors: 'contributors' };
 const pickText = (file) => TEXTS[`../../../sample/kordoc/api/${file}`];
 
 export function fixtureName() {
@@ -43,7 +46,11 @@ export function fixtureFor(path) {
         const prefix = want ? `${want}/` : '';
         data = data.filter((x) => x.path.startsWith(prefix) && !x.path.slice(prefix.length).includes('/'));
       }
-      if (data) return { mock: false, source: 'sample/kordoc', fixture: 'kordoc', state: 'Ideal', data };
+      if (data) {
+        const key = Object.keys(TOTAL_KEY).find((k) => p.endsWith(k));
+        const total = key ? TOTALS?.[TOTAL_KEY[key]] ?? null : null;
+        return { mock: false, source: 'sample/kordoc', fixture: 'kordoc', state: 'Ideal', data, pagination: { nextPage: null, total } };
+      }
     }
   }
   return null;

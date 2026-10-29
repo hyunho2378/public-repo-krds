@@ -234,7 +234,7 @@ export function About({ id, project, readme, languages, stats, summary }) {
       <h2 id="about-title" className="krds-text-heading-small">{t.About_title}</h2>
       <div className="rb-about-does">
         <p className="krds-text-body-small-bold">{t.About_does}</p>
-        <p className="krds-text-body-medium rb-clamp-2">{summary || desc || t.About_noDesc}</p>
+        <p className="krds-text-body-medium rb-clamp-3">{summary || desc || t.About_noDesc}</p>
       </div>
       {topics.length ? (
         <div className="rb-labels" aria-label={t.About_topics}>
@@ -243,26 +243,12 @@ export function About({ id, project, readme, languages, stats, summary }) {
         </div>
       ) : null}
       <ul className="rb-about-links krds-text-body-small">
-        {readme ? <li><Icon name="document" /><a className="krds-link" href="#readme">{t.About_readme}</a></li> : null}
         <li><Icon name="time" /><Link className="krds-link" to={`/projects/${id}/changes`}>{t.fn.nCommits(stats.commits, stats.more)}</Link></li>
         {stats.branches != null ? <li><Icon name="share" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nBranches(stats.branches)}</Link></li> : null}
         {stats.tags != null ? <li><Icon name="scrap" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nTags(stats.tags)}</Link></li> : null}
         {stats.releases != null ? <li><Icon name="upload" /><Link className="krds-link" to={`/projects/${id}/releases`}>{t.fn.nReleases(stats.releases)}</Link></li> : null}
-        <li><Icon name="time" /><span>{t.About_created} {day(project.created_at)}</span></li>
       </ul>
-      {langs.length ? (
-        <div className="rb-langs">
-          <p className="krds-text-body-small-bold">{t.About_languages}</p>
-          <div className="rb-lang-bar" role="img" aria-label={langs.map(([n, v]) => `${n} ${v}%`).join(', ')}>
-            {langs.map(([n, v], i) => <span key={n} className={`rb-lang rb-lang-${LANG_COLORS[i % LANG_COLORS.length]}`} style={{ flexGrow: v }} />)}
-          </div>
-          <ul className="rb-lang-list krds-text-body-small">
-            {langs.map(([n, v], i) => (
-              <li key={n}><span className={`rb-lang-dot rb-lang-${LANG_COLORS[i % LANG_COLORS.length]}`} aria-hidden="true" />{n} <span className="rb-subtle">{v}%</span></li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
+
     </section>
   );
 }
