@@ -19,7 +19,6 @@
 .tok-tag { color: var(--repo-syntax-tag); }
 .rb-repo-bar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); justify-content: space-between; }
 .rb-repo-bar-left { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); }
-.rb-tree td:first-child { width: 50%; }
 @media (max-width: 767px) {
   .rb-tree .rb-tree-msg { display: none; }
   .rb-code-table { font-size: var(--krds-mobile-font-size-body-small); }
@@ -42,7 +41,7 @@
 .rb-commit-meta { display: flex; align-items: center; gap: var(--krds-gap-4); }
 .rb-commit-count { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
 .rb-ellipsis { display: inline-block; min-width: 0; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom; }
-.rb-tree { table-layout: fixed; width: 100%; }
+.krds-table-wrap .rb-tree.tbl { table-layout: fixed; width: 100%; min-width: 0; }
 .rb-tree th:first-child { width: 36%; }
 .rb-tree .rb-col-date { width: 9em; text-align: right; }
 .rb-tree td { overflow: hidden; }
@@ -56,7 +55,7 @@
 }
 @media (max-width: 767px) {
   .rb-tree thead, .rb-tree .rb-col-date { display: none; }
-  .rb-tree, .rb-tree tbody, .rb-tree tr, .rb-tree td { display: block; width: 100%; }
+  .krds-table-wrap .rb-tree.tbl, .rb-tree tbody, .rb-tree tr, .rb-tree td { display: block; width: 100%; min-width: 0; }
   .rb-tree-mobile { display: flex; gap: var(--krds-gap-3); justify-content: space-between; padding-left: calc(var(--krds-size-height-3) + var(--krds-gap-3)); }
   .rb-commit-bar { flex-direction: column; align-items: flex-start; }
   .rb-repo-bar { flex-wrap: nowrap; align-items: center; }

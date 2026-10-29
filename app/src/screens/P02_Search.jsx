@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { product } from '../api/client';
 import { useData } from '../api/useData';
+import { hasData } from '../api/devState';
 import { Page } from '../components/Layout/Page';
 import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import { Pagination } from '../components/Navigation/Pagination';
@@ -94,7 +95,7 @@ export default function Search() {
         <section className="rb-stack rb-grow" aria-label={t.P02_5}>
           <div className="rb-result-bar">
             <p role="status" className="krds-text-heading-small">
-              {result.state === 'Ideal' ? t.fn.resultCount(result.data.data.total) : result.state === 'Empty' ? t.P02_9 : ''}
+              {hasData(result.state) ? t.fn.resultCount(result.data.data.total) : result.state === 'Empty' ? t.P02_9 : ''}
             </p>
             <Button Type="tertiary" Size="small" className="krds-btn small tertiary rb-filter-mobile" aria-expanded={sheet} onClick={() => setSheet(true)}>
               {t.fn.filterButton(active.length)}
@@ -114,7 +115,7 @@ export default function Search() {
               {t.P02_emptyHint}
             </EmptyState>
           )}
-          {result.state === 'Ideal' && (
+          {hasData(result.state) && (
             <>
               <ProjectList items={result.data.data.items} />
               <Pagination
@@ -130,7 +131,7 @@ export default function Search() {
               />
             </>
           )}
-          {result.state === 'Ideal' && result.data.data.sourceDate && (
+          {hasData(result.state) && result.data.data.sourceDate && (
             <p className="krds-text-body-small rb-subtle">{t.fn.sourceDate(result.data.data.sourceDate)}</p>
           )}
         </section>

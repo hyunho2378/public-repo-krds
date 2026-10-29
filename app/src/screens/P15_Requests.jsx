@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { auth, product } from '../api/client';
 import { useData } from '../api/useData';
+import { hasData } from '../api/devState';
 import { Page } from '../components/Layout/Page';
 import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import { Status, EmptyState } from '../components/Feedback/Status';
@@ -78,7 +79,7 @@ export default function Requests() {
           <div className="rb-actions"><Button onClick={startWrite}>{t.P02_12}</Button></div>
           <Status {...list} />
           {list.state === 'Empty' && <EmptyState title={t.P15_14}>{t.P15_13}</EmptyState>}
-          {list.state === 'Ideal' && (
+          {hasData(list.state) && (
             <ul className="krds-structured-list rb-list">
               {list.data.data.items.map((r) => (
                 <li className="structured-item rb-list-link" key={r.id}>

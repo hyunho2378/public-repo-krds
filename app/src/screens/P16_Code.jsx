@@ -9,6 +9,7 @@ import { EmptyState, Status } from '../components/Feedback/Status';
 import { CodeView } from '../components/Code/CodeView';
 import { Icon } from '../components/Code/Icon';
 import { DownloadMenu } from '../components/Code/DownloadMenu';
+import { orgLabel } from '../components/Layout/orgLabel';
 import '../components/Code/code.css';
 
 const enc = encodeURIComponent;
@@ -42,7 +43,7 @@ function LastCommit({ id, commit, count, more, path }) {
   return (
     <div className="rb-commit-bar">
       <p className="rb-commit-main">
-        <span className="krds-text-body-small-bold">{commit.author_name}</span>
+        <span className="krds-text-body-small-bold">{orgLabel(commit.author_name)}</span>
         <Link className="krds-link rb-ellipsis" to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>
       </p>
       <p className="rb-commit-meta krds-text-body-small rb-subtle">
@@ -89,7 +90,7 @@ function Tree({ id, path, items, log }) {
                 <td>
                   <Link className="rb-tree-name" to={`/projects/${id}/code/${f.path}`}>
                     <Icon name={f.type === 'tree' ? 'new_folder' : 'document'} label={f.type === 'tree' ? t.P16_folder : t.P16_file} />
-                    <span className="rb-ellipsis">{f.name}</span>
+                    <span className="rb-ellipsis rb-break-any">{f.name}</span>
                   </Link>
                   <span className="rb-tree-mobile krds-text-body-small rb-subtle">
                     <span className="rb-ellipsis">{c ? c.title : t.P16_noLog}</span>

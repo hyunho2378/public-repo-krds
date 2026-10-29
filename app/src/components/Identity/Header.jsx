@@ -143,8 +143,8 @@ export function Header() {
                   <Link to="/">{SERVICE_NAME}</Link>
                 </h2>
                 <div className="header-actions">
-                  <Link className="btn-navi login" to={loginTo}>{t.Header_login}</Link>
-                  <Link className="btn-navi my" to="/my">{t.Header_my}</Link>
+                  <Link className="btn-navi navi-row login" to={loginTo}>{t.Header_login}</Link>
+                  <Link className="btn-navi navi-row my" to="/my">{t.Header_my}</Link>
                   <button type="button" className="btn-navi all" aria-controls="mobile-nav" aria-expanded={open} onClick={() => setOpen(true)}>
                     {t.Header_allMenu}
                   </button>
@@ -157,7 +157,7 @@ export function Header() {
               <ul className="gnb-menu">
                 {MAIN_MENU.map(([to, label]) => (
                   <li key={to}>
-                    <NavLink className={({ isActive }) => 'gnb-main-trigger is-link' + (isActive ? ' active' : '')} end={to === '/'} to={to}>
+                    <NavLink className={({ isActive }) => 'gnb-main-trigger' + (isActive ? ' active' : '')} end={to === '/'} to={to} aria-current={undefined}>
                       {label}
                     </NavLink>
                   </li>

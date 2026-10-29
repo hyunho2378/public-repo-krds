@@ -7,6 +7,7 @@ import { cleanDescription } from './StructuredList';
 import { LoginRequiredModal } from '../Feedback/LoginRequiredModal';
 import { Icon } from '../Code/Icon';
 import { ReuseAction } from '../../screens/parts/ReuseAction';
+import { orgLabel } from './orgLabel';
 import './repo.css';
 import { useData } from '../../api/useData';
 import { Page } from './Page';
@@ -15,8 +16,7 @@ import { ProjectTabs } from '../Navigation/ProjectTabs';
 import { Status } from '../Feedback/Status';
 
 export function organizationOf(project) {
-  // 기관 이름 뒤 담당자 실명은 목록과 머리에서 보이지 않게 한다(U9).
-  return project?.namespace?.name?.replace(/\s+[가-힣]{2,4}$/, '') || t.ProjectFrame_1;
+  return orgLabel(project?.namespace?.name);
 }
 
 export function useProject(extra = async () => ({})) {

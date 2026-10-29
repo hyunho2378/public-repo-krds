@@ -2,6 +2,7 @@
 // 대상: 제목, 문단, 목록, 레이블. 글 상자의 줄을 글자 단위 Range로 재서
 //  - lastWord: 두 줄 이상인데 마지막 줄이 한 어절
 //  - ratio: 두세 줄짜리에서 가장 짧은 줄 / 가장 긴 줄 < 0.5 (마지막 줄 포함)
+//  - phraseSpace: 절 덩어리 사이 공백 누락
 //  - midWord: 줄 끝이 공백이 아닌데 다음 줄 첫 글자와 같은 어절(어절 중간 끊김). 파일명, 주소(.rb-break-any 등)는 제외
 export function inspectLines() {
   const SKIP = '.rb-break-any, code, pre, .rb-code, .sr-only, legend, [aria-hidden="true"], .rb-path, td a';
@@ -50,6 +51,11 @@ export function inspectLines() {
       const between = text.slice(endChar.at + 1, startChar.at);
       if (!/\s/.test(between) && /[가-힣A-Za-z0-9]/.test(endChar.c) && /[가-힣A-Za-z0-9]/.test(startChar.c)) issues.push(['midWord', name, endChar.c + '|' + startChar.c]);
     }
+  }
+  // phraseSpace: 덩어리(.rb-phrase) 사이 공백이 사라졌는지(copy/ko.js 원문에서 '|'만 뺀 문장과 같아야 한다)
+  for (const ph of document.querySelectorAll('#root .rb-phrase + .rb-phrase')) {
+    const gap = ph.previousSibling;
+    if (!gap || gap.nodeType !== 3 || gap.data !== ' ') issues.push(['phraseSpace', ph.parentElement.textContent.trim().slice(0, 24), ph.textContent.slice(0, 8)]);
   }
   return issues;
 }

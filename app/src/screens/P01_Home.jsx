@@ -4,6 +4,7 @@ import { t } from '../copy/ko';
 import { Link } from 'react-router-dom';
 import { product } from '../api/client';
 import { useData } from '../api/useData';
+import { hasData } from '../api/devState';
 import { Page } from '../components/Layout/Page';
 import { TaskSearch } from '../components/Input/TaskSearch';
 import { ProjectList } from '../components/Layout/StructuredList';
@@ -34,7 +35,7 @@ export default function Home() {
         <h2 id="recent-title" className="krds-text-heading-medium">{phrase(t.P01_13)}</h2>
         <Status {...list} />
         {list.state === 'Empty' && <EmptyState title={t.P01_14} />}
-        {list.state === 'Ideal' && <ProjectList items={list.data.data.items} />}
+        {hasData(list.state) && <ProjectList items={list.data.data.items} />}
         <Link className="krds-link" to="/search">{t.P01_15}</Link>
       </section>
     </Page>

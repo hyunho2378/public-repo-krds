@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { product } from '../api/client';
 import { useData } from '../api/useData';
+import { hasData } from '../api/devState';
 import { Page } from '../components/Layout/Page';
 import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import { Status, EmptyState } from '../components/Feedback/Status';
@@ -12,7 +13,7 @@ import { Status, EmptyState } from '../components/Feedback/Status';
 export default function Organizations() {
   const [filter, setFilter] = useState('');
   const orgs = useData(() => product.get('/organizations'), []);
-  const items = orgs.state === 'Ideal' ? orgs.data.data.items.filter((o) => o.name.includes(filter.trim())).sort((a, b) => b.projectCount - a.projectCount) : [];
+  const items = hasData(orgs.state) ? orgs.data.data.items.filter((o) => o.name.includes(filter.trim())).sort((a, b) => b.projectCount - a.projectCount) : [];
   return (
     <Page id="P-11" title={t.P11_1} state={orgs.state}>
       <Breadcrumb items={[[t.Header_2, '/'], [t.P11_1]]} />
@@ -22,7 +23,7 @@ export default function Organizations() {
         <input className="krds-input medium" id="org-filter" type="search" placeholder={t.P11_3} value={filter} onChange={(e) => setFilter(e.target.value)} />
       </div>
       <Status {...orgs} />
-      {orgs.state === 'Ideal' && (items.length ? (
+      {hasData(orgs.state) && (items.length ? (
         <ul className="krds-structured-list rb-list">
           {items.map((o) => (
             <li className="structured-item" key={o.name}>

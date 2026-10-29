@@ -4,6 +4,7 @@ import { t } from '../copy/ko';
 import { Link } from 'react-router-dom';
 import { product } from '../api/client';
 import { useData } from '../api/useData';
+import { hasData } from '../api/devState';
 import { Page } from '../components/Layout/Page';
 import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import { Status } from '../components/Feedback/Status';
@@ -16,7 +17,7 @@ export default function Fields() {
       <h1 className="krds-text-heading-xlarge">{phrase(t.P03_1)}</h1>
       <p className="rb-subtle">{phrase(t.P03_2)}</p>
       <Status {...map} />
-      {map.state === 'Ideal' && (
+      {hasData(map.state) && (
         <>
           <ul className="krds-structured-list rb-list">
             {map.data.data.fields.map((f) => (
