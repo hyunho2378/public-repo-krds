@@ -4,6 +4,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { t } from '../copy/ko';
+import { g } from '../copy/gl';
+import './gl/gl.css';
 import { gitlab, STATIC_MODE as isStatic } from '../api/client';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
@@ -66,7 +68,7 @@ function Result({ kind, onClose }) {
     <div className="rb-modal-dim" role="presentation">
       <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="issue-result">
         <h2 id="issue-result" className="krds-text-body-small-bold">{t.Write_cannotTitle}</h2>
-        <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
+        <p className="krds-text-body-small">{isStatic ? g.noSave : t.Write_cannotLogin}</p>
         <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeKind(kind)}</p>
         <div className="rb-modal-actions">
           <button type="button" className="krds-btn small tertiary" onClick={onClose}>{t.Commit_cancel}</button>
@@ -112,7 +114,7 @@ export default function NewIssue({ kind = 'issue' }) {
   return (
     <ProjectFrame screenId={kind === 'merge' ? 'R-16' : 'R-11'} tab="" tabLabel={screenTitle} data={frame} state="Ideal">
       <div className="rb-write">
-        <h2 className="krds-text-body-small-bold">{screenTitle}</h2>
+        <h1 className="gl-title">{screenTitle}</h1>
 
         {kind === 'merge' ? (
           <section className="rb-compare-pick" aria-label={t.Issue_comparePick}>
@@ -156,18 +158,29 @@ export default function NewIssue({ kind = 'issue' }) {
           </section>
         ) : null}
 
+        <div className={kind === 'issue' ? 'gl-newitem' : 'gl-newitem-flat'}>
+        <div className="gl-newitem-main">
         <FormField id="issue-title" label={t.Issue_titleLabel} required value={title} onChange={(e) => setTitle(e.target.value)} hint={t.Issue_titleHint} />
         <MarkdownField id="issue-body" label={t.Issue_bodyLabel} value={body} onChange={setBody} hint={t.Issue_bodyHint} />
 
         <div className="rb-write-actions">
           <Link className="krds-btn small tertiary" to={`/projects/${id}/${kind === 'merge' ? 'merge-requests' : 'issues'}`}>{t.Commit_cancel}</Link>
           <button type="button" className="krds-btn small primary" disabled={!title.trim()} onClick={() => setDone(true)}>
-            {kind === 'merge' ? t.Issue_submitMerge : t.Issue_submitIssue}
+            {kind === 'merge' ? t.Issue_submitMerge : g.createItem}
           </button>
         </div>
         {kind === 'issue' && frame.data.project.created_at ? (
           <p className="krds-text-body-xsmall rb-subtle">{t.fn.issueSince(day(frame.data.project.created_at))}</p>
         ) : null}
+        </div>
+        {kind === 'issue' ? (
+          <aside className="gl-newitem-side" aria-label={g.sidePanel}>
+            {[[g.assignee], [g.labels], [g.milestone]].map(([n]) => (
+              <div key={n} className="gl-sidefield"><p className="gl-side-title">{n}</p><p className="gl-sidenone">{g.noneSet}</p></div>
+            ))}
+          </aside>
+        ) : null}
+        </div>
       </div>
       {done ? <Result kind={screenTitle} onClose={() => setDone(false)} /> : null}
     </ProjectFrame>

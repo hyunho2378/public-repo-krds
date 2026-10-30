@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { t } from '../copy/ko';
+import { g } from '../copy/gl';
 import { gitlab, STATIC_MODE as isStatic } from '../api/client';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { FormField } from '../components/Input/FormField';
@@ -19,7 +20,7 @@ function Result({ kind, onClose }) {
     <div className="rb-modal-dim" role="presentation">
       <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="write-result">
         <h2 id="write-result" className="krds-text-body-small-bold">{t.Write_cannotTitle}</h2>
-        <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
+        <p className="krds-text-body-small">{isStatic ? g.noSave : t.Write_cannotLogin}</p>
         <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeKind(t[`Write_kind_${kind}`])}</p>
         <div className="rb-modal-actions">
           <button type="button" className="krds-btn small tertiary" onClick={onClose}>{t.Commit_cancel}</button>

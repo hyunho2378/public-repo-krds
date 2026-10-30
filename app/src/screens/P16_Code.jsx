@@ -236,12 +236,7 @@ export default function Code() {
         <div className="rb-code-area">
           <div className="rb-toolbar" data-figma="toolbar">
             <div className="rb-toolbar-left">
-              {path && treeWide ? (
-                <button type="button" className="krds-btn small tertiary" title={`${u.Tree_toggle} (B)`} aria-expanded={treeOpen} aria-keyshortcuts="B" onClick={() => setTreeOpen(!treeOpen)}>
-                  <Icon name="view_all" />
-                  <span>{u.Tree_toggle}</span>
-                </button>
-              ) : null}
+              {path && treeWide && !treeOpen ? <GlIconButton icon="panel_open" label={g.treeShow} size="medium" title={`${g.treeShow} (B)`} aria-keyshortcuts="B" onClick={() => setTreeOpen(true)} /> : null}
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />
               {isHome ? (
                 <span className="rb-toolbar-path krds-text-body-small-bold">{project.path}</span>

@@ -9,11 +9,13 @@ import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { Icon } from '../components/Code/Icon';
 import { IconButton } from '../components/Action/IconButton';
+import { newWindow } from '../components/Layout/newWindow';
 import { Menu } from '../components/Navigation/Menu';
 import { Avatar } from '../components/Layout/Avatar';
 import { orgLabel } from '../components/Layout/orgLabel';
 import { enc, groupByDay } from './parts/repoCommon';
 import { CopyButton, FilterField } from './gl/parts';
+import { readPref, writePref } from '../app/prefs';
 import './gl/gl.css';
 import '../components/Code/code.css';
 
@@ -52,6 +54,8 @@ export default function Changes() {
   const [next, setNext] = useState(null);
   const [q, setQ] = useState('');
   const [openIds, setOpenIds] = useState({});
+  const [recent, setRecent] = useState(() => { try { return JSON.parse(readPref('rb-commit-recent') || '[]'); } catch { return []; } });
+  const remember = (v) => { const s = v.trim(); if (s.length < 1) return; const n = [s, ...recent.filter((x) => x !== s)].slice(0, 5); setRecent(n); writePref('rb-commit-recent', JSON.stringify(n)); };
   const list = useData(async () => {
     const r = await gitlab.commits(frame.id, { path, ref });
     setExtra([]);
@@ -99,13 +103,21 @@ export default function Changes() {
         </div>
         <div className="gl-head">
           <h1 className="gl-title">{g.histTitle}</h1>
+          <div className="gl-head-actions"><Menu label={g.moreOpts} align="right" toggle={false} btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="ellipsis_vertical" />}>{(close) => (<ul className="drop-list"><li><a className="item-link" href={`${project.web_url}/-/commits/${encodeURIComponent(cur)}?format=atom`} {...newWindow(g.rss)} onClick={close}>{g.rss}</a></li></ul>)}</Menu></div>
         </div>
         {path ? (
           <p className="gl-ref-meta"><code className="rb-break-any">{path}</code><Link className="krds-link" to={`/projects/${frame.id}/changes`}>{t.P06_clearFilter}</Link></p>
         ) : null}
         <div className="gl-bar is-alone">
-          <IconButton icon="time" label={g.histRecent} size="small" />
-          <FilterField value={q} onChange={setQ} placeholder={g.histFilter} />
+          <Menu label={g.histRecent} align="left" btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="time" label={g.histRecent} />}>
+            {(close) => (
+              <ul className="drop-list" aria-label={g.histRecent}>
+                <li><p className="rb-menu-title">{g.histRecent}</p></li>
+                {recent.length ? recent.map((r) => <li key={r}><button type="button" className="item-link" onClick={() => { close(); setQ(r); }}>{r}</button></li>) : <li><p className="rb-menu-title">{g.noRecent}</p></li>}
+              </ul>
+            )}
+          </Menu>
+          <div className="gl-grow" onKeyDown={(e) => { if (e.key === 'Enter') remember(q); }}><FilterField value={q} onChange={setQ} placeholder={g.histFilter} /></div>
         </div>
         {!list.data ? (
           <Status {...list} />

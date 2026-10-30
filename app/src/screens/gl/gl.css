@@ -189,3 +189,12 @@
 .gl-expand { display: inline-flex; align-items: center; justify-content: center; width: var(--rb-side-item-h); height: var(--krds-number-10); border: 0; background: none; color: var(--krds-color-text-subtle); cursor: pointer; }
 .gl-expand:hover { color: var(--krds-color-text-basic); }
 .gl-box-titlebar { display: flex; align-items: center; justify-content: space-between; }
+
+/* 새 작업 항목: 왼쪽 양식 + 오른쪽 속성 열 */
+.gl-newitem { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: var(--rb-gutter); align-items: start; }
+.gl-newitem-flat { display: block; }
+.gl-newitem-main { display: flex; flex-direction: column; gap: var(--krds-gap-5); min-width: 0; }
+.gl-newitem-side { display: flex; flex-direction: column; gap: var(--krds-gap-5); min-width: 0; }
+.gl-sidefield { display: flex; flex-direction: column; gap: var(--krds-gap-2); padding-bottom: var(--krds-padding-4); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.gl-sidenone { margin: 0; font-size: var(--rb-step-15); color: var(--krds-color-text-subtle); }
+@media (max-width: 1023px) { .gl-newitem { grid-template-columns: minmax(0, 1fr); } }
