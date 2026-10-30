@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createCardStore,ngramSet,scoreCard} from '../src/cards/index.js';
+const mk=(id,name,one,task,fields)=>({id,name,ai:{oneLine:{value:one},targetTask:{value:task},fields:{value:fields}}});
+const cards=[mk(1,'출장비 정산 도우미','출장 여비를 자동으로 계산해 준다','공무원 출장 여비 정산',['회계·예산·출장']),mk(2,'회의록 요약기','회의 녹음을 글로 정리한다','회의록 작성',['문서·보고서']),mk(3,'엑셀 병합 도구','여러 엑셀 파일을 하나로 합친다','엑셀 취합',['엑셀·사무 자동화']),{id:4,name:'빈 카드',ai:{}}];
+const store=createCardStore({cards,similar:[{id:'g1',title:'엑셀 도구',reason:'이름 비슷',projects:[{id:3},{id:4}]}]});
+test('n-gram 은 2글자 조각을 만든다',()=>{assert.deepEqual([...ngramSet('출장비')],['출장','장비'])});
+test('문장 검색은 관련 카드를 먼저 준다',()=>{const r=store.search('출장 여비 정산');assert.equal(r[0].card.id,1);assert.ok(r[0].score>0)});
+test('분야 필터',()=>{assert.equal(store.list({field:'문서·보고서'}).total,1);assert.equal(store.search('요약',{field:'엑셀·사무 자동화'}).length,0)});
+test('값이 비어도 오류가 나지 않는다',()=>{assert.equal(scoreCard(ngramSet('아무말'),cards[3]),0);assert.equal(store.get(4).name,'빈 카드')});
+test('유사 묶음 조회는 자기 자신을 뺀다',()=>{const s=store.similarTo(3);assert.equal(s.length,1);assert.deepEqual(s[0].projects.map(p=>p.id),[4])});
+test('분야 목록 빈도',()=>{assert.equal(store.fields().length,3)});

@@ -53,3 +53,6 @@
 
 ### 21. D-21 시작: 공공 깃랩 대조표, 확장 아이콘
 - UX/13 대조표 초안(전역 틀, 탐색 목록, 프로젝트 홈, 아이콘 점검). 확장 아이콘 app/public/icons/ext(Pajamas MIT 모양을 KRDS 24 격자 선 1.6으로, 12개), KRDS globe/ellipsis_vertical/panel/sys mark 복사, share/time/edit/upload/component/scrap 돌려쓰기 정리
+
+### 22. 카드 데이터 1단계
+- 수집 스크립트(scripts/cards/fetch.mjs, 1초 간격, 캐시, data/raw 커밋 제외), 카드 스키마, 규칙 추출(rules.mjs), 읽기 모듈(server/src/cards), 단위 시험, UX/15 정답 카드 양식

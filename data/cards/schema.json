@@ -1,0 +1,23 @@
+{
+ "$schema":"http://json-schema.org/draft-07/schema#",
+ "title":"AI 프로젝트 소개 카드",
+ "description":"모든 칸은 {value,evidence,source}. 원문에 없으면 value=null(화면 '미기재'). evidence는 README 줄 번호 범위 {lines:[시작,끝]} 또는 파일 경로 {paths:[...]}. source는 rule(규칙 추출) 또는 ai(AI 정리).",
+ "cell":{"type":"object","required":["value","evidence","source"],"properties":{"value":{},"evidence":{"oneOf":[{"type":"null"},{"type":"string"},{"type":"object","properties":{"lines":{"type":["array","null"],"items":{"type":"integer"},"minItems":2,"maxItems":2},"paths":{"type":"array","items":{"type":"string"}},"api":{"type":"string"}}}]},"source":{"enum":["rule","ai"]}}},
+ "fields":{
+  "id":"GitLab 프로젝트 번호","name":"프로젝트 이름","path":"path_with_namespace","webUrl":"공개 주소","topics":"기존 주제(topics)",
+  "ai.oneLine":{"label":"하는 일","desc":"쉬운 말 한 줄, 60자 안팎","source":"ai"},
+  "ai.targetTask":{"label":"대상 업무","source":"ai"},
+  "ai.fields":{"label":"업무 분야","desc":"통합 분야 체계(taxonomy.json) 이름 1~2개","source":"ai"},
+  "executionForm":{"label":"실행 형태","enum":["open","download","install","check"],"labels":{"open":"바로 열림","download":"내려받아 실행(exe)","install":"설치 필요(파이썬 등)","check":"확인 필요"},"source":"rule"},
+  "ai.runSummary":{"label":"실행 방법 요약","desc":"쉬운 말 value, 원래 명령은 rawCommands(README 인용)","source":"ai"},
+  "techStack":{"label":"기술 구성","source":"rule"},
+  "license":{"label":"이용 조건","desc":"라이선스 이름, 없으면 null(미기재)","source":"rule"},
+  "ai.limitations":{"label":"한계","source":"ai"},
+  "referenceDates":{"label":"기준 날짜","desc":"예규 번호, 고시일 등 README 줄 인용(quote)과 날짜","source":"rule"},
+  "organization":{"label":"만든 곳","source":"rule"},
+  "updatedAt":{"label":"갱신일","source":"rule"},
+  "readmeStatus":{"label":"README 상태","enum":["none","template","present"],"labels":{"none":"없음","template":"기본 템플릿","present":"있음"},"source":"rule"},
+  "generatedAt":"카드 생성 시각(ISO)","sourceDate":"조회 날짜"
+ },
+ "privacy":"보안 파일(.env 등) 경로와 값은 카드에 싣지 않는다. data/cards/_private_alerts.json(커밋 제외)에 경로 존재만 기록."
+}

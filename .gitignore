@@ -11,3 +11,7 @@ code_plan/legacy_minified/
 *.log
 .vercel/
 code_plan/figma_source_*/source.json
+
+# 카드 수집 원문 캐시, 보안 파일 경고
+data/raw/
+data/cards/_private_alerts.json

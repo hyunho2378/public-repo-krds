@@ -1,0 +1,7 @@
+{
+  "source": "https://gitlab.aigov.go.kr/api/v4/projects?visibility=public",
+  "fetchedAt": "2026-10-30T12:35:52.257Z",
+  "fetchedDate": "2026-10-30",
+  "projectCount": 728,
+  "note": "조회 날짜 기준 공개 프로젝트 전수. 원문은 data/raw/에 캐시(커밋 제외)"
+}
