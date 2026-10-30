@@ -49,7 +49,12 @@
 .rb-ellipsis { display: inline-block; min-width: 0; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom; }
 .krds-table-wrap .rb-tree.tbl { table-layout: fixed; width: 100%; min-width: 0; }
 .rb-tree th:first-child { width: 45%; }
-.rb-tree .rb-col-date { width: 7em; text-align: right; }
+/* D-14 끝절: 파일 행 40(GitHub 40), 글자 15 보통. 머리 줄은 13 굵게 */
+.krds-table-wrap .rb-tree.tbl.data th, .krds-table-wrap .rb-tree.tbl.data tbody td, .krds-table-wrap .rb-tree.tbl.data thead th { box-sizing: border-box; height: var(--rb-row-h); padding-block: 0; vertical-align: middle; white-space: nowrap; font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-regular); }
+.krds-table-wrap .rb-tree.tbl.data thead th { font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); font-weight: var(--rb-fw-title); color: var(--krds-color-text-subtle); }
+.krds-table-wrap .rb-tree.tbl.data tbody td.rb-col-date { font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
+.rb-tree td a, .rb-tree td span { line-height: inherit; }
+.rb-tree .rb-col-date { width: 9em; text-align: right; }
 .rb-tree td { overflow: hidden; }
 .rb-tree-name { display: flex; align-items: center; gap: var(--krds-gap-3); min-width: 0; color: var(--krds-color-text-basic); text-decoration: none; }
 .rb-tree-name:hover span, .rb-tree-name:focus-visible span { text-decoration: underline; }

@@ -1,6 +1,6 @@
 // P-16 저장소 첫 화면과 코드 둘러보기(D-04 개정: 공공 깃랩 + GitHub 배치, KRDS 부품).
 // 왼쪽 프로젝트 메뉴(ProjectFrame), 파일 트리 패널, 본문(도구 줄, 마지막 변경, 파일 표, README), 오른쪽 정보와 판단 정보.
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { atLeast, useAuth } from '../components/Identity/useAuth';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { t } from '../copy/ko';
@@ -12,7 +12,6 @@ import { CodeView } from '../components/Code/CodeView';
 import { Icon } from '../components/Code/Icon';
 import { About, AddFileMenu, BranchSelect, CodeMenu, CommitBar, FileFind, FileTable, ReadmeBox, RepoMenuList, enc } from '../components/Code/RepoParts';
 import { FileTreePanel } from '../components/Code/FileTreePanel';
-import { DecisionPanel } from '../components/Layout/DecisionPanel';
 import '../components/Code/code.css';
 
 const LOG_LIMIT = 30;
@@ -46,17 +45,10 @@ function PathCrumbs({ id, path, refQuery }) {
 }
 
 async function loadTree(id, path, ref) {
-  // 정적 배포에서도 되도록 공개 API를 순서대로 부른다(동시 요청 제한).
+  // 파일 목록은 폴더 응답과 이 폴더의 최근 커밋 하나만 기다린다. 행마다 최근 커밋은 useRowLog가 나중에 채운다(목록이 멈춰 보이지 않게).
   const items = (await gitlab.tree(id, path, ref)).data;
   const head = await gitlab.commits(id, { path, ref }).catch(() => ({ data: [], pagination: {} }));
   const log = {};
-  for (const it of items.slice(0, LOG_LIMIT)) {
-    try {
-      log[it.path] = (await gitlab.commits(id, { path: it.path, ref })).data[0] || null;
-    } catch {
-      log[it.path] = null;
-    }
-  }
   // 전체 커밋 수는 응답의 total을 쓴다. 없으면 받은 만큼만 세고 "이상"을 붙인다(없는 수를 만들지 않는다).
   const total = head.pagination?.total ?? null;
   return {
@@ -87,6 +79,33 @@ async function loadRepo(id) {
     root: root.data,
     languages: languages.data,
   };
+}
+
+/** 행마다 마지막 변경(최근 커밋)을 3개씩 동시에 불러와 채운다. 앞 30개만 부른다. 불러오는 동안 pending에 든 행은 막대로 보인다. */
+function useRowLog(id, ref, items) {
+  const [log, setLog] = useState({});
+  useEffect(() => {
+    setLog({});
+    if (!items) return undefined;
+    let live = true;
+    const queue = items.slice(0, LOG_LIMIT).map((it) => it.path);
+    const worker = async () => {
+      while (live && queue.length) {
+        const p = queue.shift();
+        let found = null;
+        try {
+          found = (await gitlab.commits(id, { path: p, ref })).data[0] || null;
+        } catch {
+          found = null;
+        }
+        if (live) setLog((prev) => ({ ...prev, [p]: found }));
+      }
+    };
+    Promise.all([worker(), worker(), worker()]);
+    return () => { live = false; };
+  }, [id, ref, items]);
+  const pending = useMemo(() => new Set((items || []).slice(0, LOG_LIMIT).map((it) => it.path).filter((p) => !(p in log))), [items, log]);
+  return { log, pending };
 }
 
 /** R-03 Blame: 줄마다 마지막으로 고친 사람과 날짜. 눌렀을 때만 불러온다(무거운 요청). */
@@ -124,6 +143,7 @@ export default function Code() {
   const ref = search.get('ref') || frame.data?.project.default_branch || 'main';
   const refQuery = search.get('ref') ? `?ref=${enc(search.get('ref'))}` : '';
   const blameApi = useBlame(params.id, path, ref);
+  const commitInfo = useData(() => gitlab.commitCount(params.id, search.get('ref') || ''), [params.id, search.get('ref')]);
   const { signedIn, role } = useAuth();
   // y: 지금 보는 지점을 커밋 번호로 고정한 영구 링크로 바꾼다(GitLab, GitHub와 같은 단축키).
   const shaRef = useRef(null);
@@ -156,6 +176,8 @@ export default function Code() {
     return loadTree(id, path, ref);
   }, [params.id, path, ref]);
 
+  const rowLog = useRowLog(params.id, ref, body.data?.kind === 'tree' ? body.data.items : null);
+
   if (!frame.data) return <ProjectFrame screenId={path ? "R-02" : "R-01"} data={frame} />;
   const { project, readme, branches, tags, releases, totals, root, languages } = frame.data;
   const rawUrl = path ? `${project.web_url}/-/raw/${ref}/${path.split('/').map(enc).join('/')}` : null;
@@ -165,13 +187,9 @@ export default function Code() {
   const state = b ? (b.kind === 'tree' ? (!b.items.length ? 'Empty' : b.items.length === 1 ? 'Min' : 'Ideal') : 'Ideal') : body.state;
   const isHome = !path;
 
-  const about = <About id={frame.id} project={project} readme={readme} languages={languages} stats={{ commits: b?.count ?? 0, more: b?.more, branches: totals.branches, tags: totals.tags, releases: totals.releases }} />;
-  const aside = isHome ? (
-    <>
-      <div className="rb-only-wide">{about}</div>
-      <DecisionPanel id={frame.id} readme={readme} />
-    </>
-  ) : null;
+  const about = <About id={frame.id} project={project} readme={readme} languages={languages} stats={{ commits: commitInfo.state === 'Loading' ? undefined : commitInfo.data?.count ?? null, sample: commitInfo.data?.sample, branches: totals.branches, tags: totals.tags, releases: totals.releases }} />;
+  // 판단 정보(사용 전 확인)는 저장소 틀이 정보 영역에 함께 그린다
+  const aside = isHome ? <div className="rb-only-wide">{about}</div> : null;
 
   return (
     <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} aside={aside}>
@@ -207,7 +225,7 @@ export default function Code() {
             <>
               <div className="rb-tree-block">
                 <CommitBar id={frame.id} commit={b.last} count={b.count} more={b.more} path={path} owner={project.namespace} />
-                <FileTable id={frame.id} path={path} items={b.items} log={b.log} filter={filter} refQuery={refQuery} />
+                <FileTable id={frame.id} path={path} items={b.items} log={rowLog.log} pending={rowLog.pending} filter={filter} refQuery={refQuery} />
               </div>
               {b.partial ? <p className="krds-text-body-small rb-subtle">{t.P16_partial}</p> : null}
               {isHome && readme ? <div id="readme"><ReadmeBox source={readme} /></div> : null}

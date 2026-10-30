@@ -43,13 +43,18 @@ export function DecisionList({ rows }) {
   );
 }
 
-/** 자료를 스스로 불러오는 판단 정보 묶음. */
-export function DecisionPanel({ id, readme, headingId = 'decision-title' }) {
-  const d = useData(() => loadDecision(id), [id]);
+/** 불러온 자료(d.data)로 그리는 판단 정보 묶음. 저장소 틀이 한 번 불러와 머리 줄 요약과 같이 쓴다. */
+export function DecisionBlock({ id, readme, d, headingId = 'decision-title' }) {
   return (
     <section data-figma="decision-panel" className="rb-about-block" aria-labelledby={headingId}>
       <h2 id={headingId} className="krds-text-body-small-bold">{t.P04_25}</h2>
       {d.data ? <DecisionList rows={decisionRows(id, readme, d.data)} /> : <p className="krds-text-body-small rb-subtle" role="status">{d.state === 'Error' ? d.error : t.P10_1}</p>}
     </section>
   );
+}
+
+/** 자료를 스스로 불러오는 판단 정보 묶음. */
+export function DecisionPanel({ id, readme, headingId = 'decision-title' }) {
+  const d = useData(() => loadDecision(id), [id]);
+  return <DecisionBlock id={id} readme={readme} d={d} headingId={headingId} />;
 }

@@ -88,24 +88,11 @@
 .rb-gbar-drop { position: relative; }
 .rb-gbar-menu { position: absolute; right: 0; top: 100%; z-index: 70; min-width: var(--krds-size-width-menu, 24ch); }
 
-/* 본문 틀: 왼쪽 메뉴 + 본문 */
+/* 본문 틀: 왼쪽 메뉴 + 본문 (D-17 5장). 펼침 240, 접힘 56, 간격 40, 바깥 24 */
 .rb-shell { display: grid; grid-template-columns: var(--rb-sidebar-w) minmax(0, 1fr); column-gap: var(--rb-col-gap); flex: 1; width: 100%; align-items: start; padding: var(--rb-page-pad); }
 .rb-shell.is-bare { grid-template-columns: minmax(0, 1fr); }
-.rb-shell.has-project { grid-template-columns: var(--rb-sidebar-w-project) minmax(0, 1fr); }
-/* D-17: 접히면 폭이 56으로 줄어들고 본문이 더 넓어진다(어느 폭에서도 본문이 가장 넓다) */
 .rb-shell.is-collapsed, .rb-shell.is-collapsed.has-project { grid-template-columns: var(--rb-sidebar-w-collapsed) minmax(0, 1fr); }
-.rb-side-collapse {
-  display: flex; align-items: center; gap: var(--krds-gap-2);
-  width: 100%; padding: var(--krds-padding-3);
-  border: 0; background: none; cursor: pointer;
-  color: var(--krds-color-text-subtle);
-  font-size: var(--krds-pc-font-size-body-small);
-}
-.rb-side-collapse:hover { background: var(--krds-color-action-secondary-hover); }
-.rb-side.is-collapsed .rb-side-collapse .rb-icon { transform: none; }
-.rb-side:not(.is-collapsed) .rb-side-collapse .rb-icon { transform: scaleX(-1); }
-.rb-side.is-collapsed .rb-side-link { justify-content: center; }
-.rb-side.is-collapsed .rb-side-group-btn { display: none; }
+.rb-side-wrap { min-width: 0; align-self: start; position: sticky; top: calc(var(--rb-header-h) + var(--rb-page-pad)); }
 .rb-side {
   width: 100%;
   display: flex;
@@ -114,61 +101,86 @@
   padding: 0;
   background: var(--krds-color-surface-gray-subtler);
   border-radius: var(--krds-radius-medium3);
+  overflow-x: hidden;
   overflow-y: auto;
-  position: sticky;
-  top: var(--rb-page-pad);
-  align-self: start;
-  max-height: calc(100dvh - var(--rb-header-h) - var(--rb-masthead-h) - var(--rb-page-pad) * 2);
+  max-height: calc(100dvh - var(--rb-header-h) - var(--rb-page-pad) * 2);
 }
 .rb-side-dim { display: none; }
-.rb-side-project { display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-3); min-width: 0; }
+.rb-side ul { list-style: none; margin: 0; padding: 0; }
+.rb-side-project { display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-3); min-width: 0; margin: 0; }
+.rb-side-groups { display: flex; flex-direction: column; gap: var(--krds-gap-1); }
 .rb-side-group { display: flex; flex-direction: column; }
+.rb-side.is-collapsed .rb-side-group + .rb-side-group { border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); padding-top: var(--krds-gap-1); }
 .rb-side-group-btn {
   display: flex; align-items: center; justify-content: space-between; width: 100%;
-  padding: var(--krds-padding-3) var(--krds-padding-3) var(--krds-padding-2);
-  font-size: var(--krds-font-size-detail-small);
+  min-height: var(--rb-side-item-h);
+  padding: 0 var(--krds-padding-3);
   background: none; border: 0; color: var(--krds-color-text-subtle); cursor: pointer; text-align: left;
 }
 .rb-side-group-btn[aria-expanded="false"] .ico-toggle { transform: rotate(-90deg); }
-.rb-side-link {
+/* D-14 끝절: 항목 높이 32, 글자 15 보통. 현재 항목만 굵게 */
+.rb-side-link, .rb-side-collapse {
   display: flex; align-items: center; gap: var(--krds-gap-3);
-  padding: var(--krds-padding-2) var(--krds-padding-3);
-  font-size: var(--krds-font-size-body-small);
+  box-sizing: border-box; width: 100%; min-height: var(--rb-side-item-h);
+  padding: 0 var(--krds-padding-3);
+  font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-regular);
   border-radius: var(--krds-radius-medium2);
   color: var(--krds-color-text-basic); text-decoration: none;
 }
-.rb-side-link:hover { background: var(--krds-color-action-secondary-hover); }
-.rb-side-link.active { background: var(--krds-color-action-secondary-selected); color: var(--krds-color-text-primary); font-weight: var(--krds-font-weight-bold); }
-.rb-side-text { display: flex; flex-direction: column; min-width: 0; }
-.rb-side-hint { color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-detail-small); font-weight: var(--krds-font-weight-regular); }
-.rb-side-foot { margin-top: auto; padding-top: var(--krds-padding-4); border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
-.rb-side ul { list-style: none; margin: 0; padding: 0; }
+.rb-side-collapse { border: 0; background: none; cursor: pointer; color: var(--krds-color-text-subtle); text-align: left; }
+.rb-side-link:hover, .rb-side-collapse:hover { background: var(--krds-color-action-secondary-hover); }
+.rb-side-link.active { background: var(--krds-color-action-secondary-selected); color: var(--krds-color-text-primary); font-weight: var(--rb-fw-current); }
+.rb-side-text { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rb-side:not(.is-collapsed) .rb-side-collapse .rb-icon { transform: scaleX(-1); }
+.rb-side.is-collapsed { scrollbar-width: none; }
+.rb-side.is-collapsed::-webkit-scrollbar { display: none; }
+.rb-side.is-collapsed .rb-side-link, .rb-side.is-collapsed .rb-side-collapse { justify-content: center; padding-inline: 0; }
+.rb-side-hint { color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); font-weight: var(--krds-font-weight-regular); }
+.rb-side-foot { margin-top: auto; padding-top: var(--krds-padding-3); border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+/* 툴팁: 마우스와 키보드 초점 모두. 가운데 정렬, 글자 13 */
+.rb-tip {
+  position: fixed; z-index: 100; transform: translateY(-50%);
+  margin-left: var(--krds-gap-3); padding: var(--krds-padding-2) var(--krds-padding-3);
+  display: flex; flex-direction: column; align-items: flex-start; gap: var(--krds-gap-1);
+  max-width: calc(var(--rb-sidebar-w) + var(--krds-number-12)); pointer-events: none;
+  background: var(--krds-color-surface-white); color: var(--krds-color-text-basic);
+  border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-medium2);
+  font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13);
+}
+.rb-tip-label { font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); white-space: nowrap; }
+.rb-tip-hint { color: var(--krds-color-text-subtle); }
 
 /* 본문 */
 .rb-main { min-width: 0; padding: 0; }
 
 @media (max-width: 1023px) {
-  .rb-shell, .rb-shell.has-project { grid-template-columns: minmax(0, 1fr); }
   .rb-gbar-in { display: flex; gap: var(--krds-gap-3); }
   .rb-gbar-left, .rb-gbar-right { width: auto; }
   .rb-gbar-right { margin-left: auto; }
-  .rb-gbar-navtoggle { display: inline-flex; }
   .rb-gbar-explore, .rb-gbar-btn-text, .rb-gbar-brand-text { display: none; }
+  .rb-main { min-width: 0; padding: 0; }
+}
+
+@media (max-width: 767px) {
+  /* D-17 5장: 768 미만은 왼쪽 메뉴를 숨기고 머리글의 메뉴 버튼으로 연다 */
+  .rb-shell, .rb-shell.has-project, .rb-shell.is-collapsed { grid-template-columns: minmax(0, 1fr); }
+  .rb-side-wrap { position: static; }
+  .rb-gbar-navtoggle { display: inline-flex; }
   .rb-side {
     position: fixed;
     inset-block: 0;
     inset-inline-start: 0;
     z-index: 90;
+    width: var(--rb-sidebar-w);
+    max-width: 100%;
     max-height: none;
+    border-radius: 0;
     transform: translateX(-100%);
     transition: transform var(--krds-duration-medium, 0.2s) ease;
   }
   .rb-side.is-open { transform: translateX(0); }
+  .rb-side-collapse { display: none; }
   .rb-side-dim { display: block; position: fixed; inset: 0; z-index: 80; background: var(--krds-color-background-dim); }
-  .rb-main { min-width: 0; padding: 0; }
-}
-
-@media (max-width: 767px) {
   .rb-gbar-in { padding: var(--krds-padding-3) var(--krds-padding-4); }
   /* 좁은 화면에서는 검색칸 대신 검색 아이콘을 둔다(GitHub 모바일과 같다) */
   .rb-gbar-search { display: none; }
@@ -181,13 +193,10 @@
 .rb-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--krds-gap-3); min-width: 0; }
 .rb-row > * { min-width: 0; overflow-wrap: anywhere; }
 .krds-structured-list .structured-item { min-width: 0; }
-.rb-side-groups { display: flex; flex-direction: column; gap: var(--krds-gap-1); }
 /* Figma 상자 기준: 브레드크럼은 내용 폭만 차지한다 */
 .krds-breadcrumb-wrap { width: fit-content; max-width: 100%; }
 /* KRDS 기본 위 여백은 화면 틀에서 이미 주므로 뺀다(Figma 상자 기준) */
 .krds-breadcrumb-wrap { padding-top: 0; margin: 0; }
-/* 사이드바 바깥 상자와 안쪽 메뉴는 같은 크기다(Figma 상자 기준) */
-.rb-side-wrap { min-width: 0; }
 
 /* 프로젝트 경로(만든 사람 / 프로젝트 / 화면): 공공 깃랩처럼 슬래시로 나눈다. Figma 경로 상자와 같은 폭을 맞추려고 구분자 아이콘 대신 글자를 쓴다 */
 .krds-breadcrumb-wrap.is-path .breadcrumb li:not(:last-child)::after {

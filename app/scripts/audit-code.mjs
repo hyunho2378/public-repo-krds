@@ -30,8 +30,8 @@ async function walk(dir) {
     const noComments = raw.replace(/\{?\/\*[\s\S]*?\*\/\}?/g, (m) => ' '.repeat(m.length));
     const source = noComments.replace(KRDS_MEDIA, '@media(KRDS_BREAKPOINT)');
     // UX-007 1장: 화면 모드 선택은 저장해 기억해야 하므로 ScreenMode.jsx만 localStorage 허용
-    // D-17 5장: 사이드바 접히고 펼친 선택도 기억해야 하므로 App.jsx도 허용
-    const isScreenMode = file.endsWith('ScreenMode.jsx') || file.endsWith('app/App.jsx');
+    // D-17 5장: 사이드바와 정보 영역 열림 선택도 기억해야 하므로 app/prefs.js도 허용(저장은 이 파일 한 곳)
+    const isScreenMode = file.endsWith('ScreenMode.jsx') || file.endsWith('app/prefs.js');
     for (const [label, re] of RULES) {
       if (label === '브라우저 저장소' && isScreenMode) continue;
       for (const m of source.matchAll(re)) issues.push(`${file}: ${label} ${m[0]}`);

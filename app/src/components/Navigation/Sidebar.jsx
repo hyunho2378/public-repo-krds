@@ -87,16 +87,57 @@ export function projectGroups(id, { signedIn, role } = {}) {
   return groups;
 }
 
-function Group({ group, items, collapsed }) {
+/** 접힌 메뉴와 쉬운 풀이용 툴팁. 마우스와 키보드 초점 모두에서 열고, Esc로 닫는다(WCAG 1.4.13). 스크롤 상자에 잘리지 않게 고정 위치로 그린다. */
+function useTip() {
+  const [tip, setTip] = useState(null);
+  const show = (el, label, hint, id) => {
+    const r = el.getBoundingClientRect();
+    setTip({ label, hint, id, top: r.top + r.height / 2, left: r.right });
+  };
+  const hide = () => setTip(null);
+  useEffect(() => {
+    if (!tip) return undefined;
+    const onKey = (e) => e.key === 'Escape' && setTip(null);
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [tip]);
+  return { tip, show, hide };
+}
+
+function SideLink({ item, collapsed, tipApi }) {
+  const [label, to, icon, end, hint] = item;
+  const id = 'rb-tip-' + to.replace(/[^a-z0-9]/gi, '-') + '-' + label.length;
+  // 접힘: 이름과 풀이, 펼침: 풀이가 있을 때만
+  const wants = collapsed || hint;
+  const open = (e) => wants && tipApi.show(e.currentTarget, collapsed ? label : null, hint, id);
+  return (
+    <NavLink
+      end={!!end}
+      to={to}
+      className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`}
+      aria-describedby={tipApi.tip?.id === id && !collapsed ? id : undefined}
+      aria-label={collapsed ? label : undefined}
+      onMouseEnter={open}
+      onFocus={open}
+      onMouseLeave={tipApi.hide}
+      onBlur={tipApi.hide}
+    >
+      <Icon name={icon} />
+      {collapsed ? null : <span className="rb-side-text">{label}</span>}
+    </NavLink>
+  );
+}
+
+function Group({ group, items, collapsed, tipApi }) {
   const [open, setOpen] = useState(true);
-  // D-17 1장: 접힘(아이콘만) 상태에서는 묶음을 펼친 것처럼 전부 보여 주고, 묶음 제목 글자는 접는다(공간이 없다)
+  // D-17 5장: 접힘(아이콘만)에서는 묶음 제목 글자를 접고 항목을 모두 보인다
   const showList = collapsed || open;
   return (
     <div className="rb-side-group">
       {group && !collapsed ? (
         <button
           type="button"
-          className="rb-side-group-btn krds-text-body-small-bold"
+          className="rb-side-group-btn krds-text-body-xsmall-bold"
           aria-expanded={open}
           onClick={() => setOpen(!open)}
         >
@@ -106,17 +147,9 @@ function Group({ group, items, collapsed }) {
       ) : null}
       {showList ? (
         <ul>
-          {items.map(([label, to, icon, end, hint]) => (
-            <li key={to + label}>
-              <NavLink end={!!end} to={to} className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`} title={collapsed ? label : undefined}>
-                <Icon name={icon} />
-                {collapsed ? <span className="sr-only">{label}</span> : (
-                  <span className="rb-side-text">
-                    <span>{label}</span>
-                    {hint ? <span className="rb-side-hint">{hint}</span> : null}
-                  </span>
-                )}
-              </NavLink>
+          {items.map((item) => (
+            <li key={item[1] + item[0]}>
+              <SideLink item={item} collapsed={collapsed} tipApi={tipApi} />
             </li>
           ))}
         </ul>
@@ -129,6 +162,8 @@ export function Sidebar({ project, open, onClose, collapsed, onToggleCollapsed }
   const { signedIn, role } = useAuth();
   const groups = project ? projectGroups(project.id, { signedIn, role }) : globalGroups();
   const panel = useRef(null);
+  const tipApi = useTip();
+  const { tip } = tipApi;
   // 좁은 화면에서 서랍으로 열렸을 때만 초점을 가두고 Esc로 닫는다.
   useEffect(() => {
     if (!open) return undefined;
@@ -136,45 +171,61 @@ export function Sidebar({ project, open, onClose, collapsed, onToggleCollapsed }
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, [open, onClose]);
+  const foot = [
+    ...(project ? [] : [[t.Settings_title, '/settings', 'setting']]),
+    [t.Header_menuHelp, '/help', 'help'],
+  ];
   return (
     <>
       {open ? <div className="rb-side-dim" onClick={onClose} /> : null}
       <div className="rb-side-wrap" data-figma="sidebar">
-      <nav
-        id="rb-sidebar"
-        ref={panel}
-        className={'rb-side' + (open ? ' is-open' : '') + (collapsed ? ' is-collapsed' : '')}
-        aria-label={project ? t.Side_labelProject : t.Side_label}
-      >
-        {/* D-17 1장: 접기 버튼은 메뉴 맨 위(GitLab처럼) */}
-        <button type="button" className="rb-side-collapse" onClick={onToggleCollapsed} aria-expanded={!collapsed} title={collapsed ? t.Side_expand : t.Side_collapse}>
-          <Icon name="arrow-right" />
-          {collapsed ? null : <span>{t.Side_collapse}</span>}
-        </button>
-        {project && !collapsed ? (
-          <p className="rb-side-project krds-text-body-small-bold">
-            <Avatar src={project.avatarUrl} name={project.name} />
-            <span className="rb-ellipsis">{project.name}</span>
-          </p>
+        <nav
+          id="rb-sidebar"
+          ref={panel}
+          className={'rb-side' + (open ? ' is-open' : '') + (collapsed ? ' is-collapsed' : '')}
+          aria-label={project ? t.Side_labelProject : t.Side_label}
+        >
+          {/* D-17 5장: 접기 버튼은 메뉴 맨 위(GitLab처럼). 이름은 툴팁으로 */}
+          <button
+            type="button"
+            className="rb-side-collapse"
+            onClick={() => { tipApi.hide(); onToggleCollapsed(); }}
+            aria-expanded={!collapsed}
+            aria-controls="rb-sidebar"
+            aria-label={collapsed ? t.Side_expand : t.Side_collapse}
+            onMouseEnter={(e) => collapsed && tipApi.show(e.currentTarget, t.Side_expand, null, 'rb-tip-collapse')}
+            onFocus={(e) => collapsed && tipApi.show(e.currentTarget, t.Side_expand, null, 'rb-tip-collapse')}
+            onMouseLeave={tipApi.hide}
+            onBlur={tipApi.hide}
+          >
+            <Icon name="arrow-right" />
+            {collapsed ? null : <span className="rb-side-text">{t.Side_collapse}</span>}
+          </button>
+          {project && !collapsed ? (
+            <p className="rb-side-project krds-text-body-small-bold">
+              <Avatar src={project.avatarUrl} name={project.name} />
+              <span className="rb-ellipsis">{project.name}</span>
+            </p>
+          ) : null}
+          <div className="rb-side-groups" data-figma="sidebar-nav">
+            {groups.map(([group, items], i) => (
+              <Group key={group || `g${i}`} group={group} items={items} collapsed={collapsed} tipApi={tipApi} />
+            ))}
+          </div>
+          <div className="rb-side-foot">
+            <ul>
+              {foot.map((item) => (
+                <li key={item[1]}><SideLink item={item} collapsed={collapsed} tipApi={tipApi} /></li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+        {tip ? (
+          <div role="tooltip" id={tip.id} className="rb-tip" style={{ top: tip.top, left: tip.left }}>
+            {tip.label ? <span className="rb-tip-label">{tip.label}</span> : null}
+            {tip.hint ? <span className="rb-tip-hint">{tip.hint}</span> : null}
+          </div>
         ) : null}
-        <div className="rb-side-groups" data-figma="sidebar-nav">
-          {groups.map(([group, items], i) => (
-            <Group key={group || `g${i}`} group={group} items={items} collapsed={collapsed} />
-          ))}
-        </div>
-        <div className="rb-side-foot">
-          {project ? null : (
-            <NavLink to="/settings" className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`}>
-              <Icon name="setting" />
-              <span className="rb-side-text"><span>{t.Settings_title}</span></span>
-            </NavLink>
-          )}
-          <NavLink to="/help" className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`}>
-            <Icon name="help" />
-            <span className="rb-side-text"><span>{t.Header_menuHelp}</span></span>
-          </NavLink>
-        </div>
-      </nav>
       </div>
     </>
   );

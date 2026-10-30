@@ -9,6 +9,8 @@ import ErrorScreen from '../screens/P13_Error';
 import { routes } from './routes';
 import { TabBar } from '../components/Navigation/TabBar';
 import { useProjectNav } from './projectNav';
+import { screenKind } from './screenKind';
+import { breakpoint, useBoolPref, useMinWidth } from './prefs';
 import '../components/Layout/shell.css';
 
 /** 화면이 바뀌면 맨 위로, 본문에 초점(화면 낭독기가 새 화면을 읽도록). 좁은 화면 서랍도 닫는다. */
@@ -24,9 +26,7 @@ function FocusOnNavigate({ onNavigate }) {
 
 /** 로그인처럼 혼자 서는 화면은 왼쪽 메뉴를 두지 않는다(Figma G-08). */
 const NO_SIDEBAR = ['/login', '/login/failed', '/login/otp', '/register', '/password'];
-// D-17 1장: 상세 화면(파일 보기, 커밋 상세, 비교, 이슈/변경제안 상세, 쓰기 화면)은 모든 폭에서 접힘이 기본
-const DETAIL_PATH = /\/code\/.+|\/changes\/[^/]+$|\/compare|\/issues\/\d+|\/merge-requests\/\d+|\/new$|\/upload$|\/branches\/new$/;
-const SIDEBAR_KEY = 'rb-sidebar-collapsed';
+const SIDEBAR_KEY = 'rb-sidebar-collapsed-';
 
 function Shell() {
   const [navOpen, setNavOpen] = useState(false);
@@ -34,21 +34,14 @@ function Shell() {
   const { pathname } = useLocation();
   const bare = NO_SIDEBAR.includes(pathname);
   const closeNav = useCallback(() => setNavOpen(false), []);
-  // D-17 5장: 이용자가 고른 값이 있으면 그것만, 없으면 화면 종류와 폭으로 기본값 계산(처음 마운트할 때만)
-  const [collapsed, setCollapsed] = useState(() => {
-    try {
-      const saved = localStorage.getItem(SIDEBAR_KEY);
-      if (saved !== null) return saved === '1';
-    } catch { /* 무시 */ }
-    return DETAIL_PATH.test(pathname) || (typeof window !== 'undefined' && window.innerWidth < 1920);
-  });
-  const toggleCollapsed = useCallback(() => {
-    setCollapsed((v) => {
-      const next = !v;
-      try { localStorage.setItem(SIDEBAR_KEY, next ? '1' : '0'); } catch { /* 무시 */ }
-      return next;
-    });
-  }, []);
+  // D-17 5장: 이용자가 고른 값이 있으면 그것, 없으면 화면 종류와 폭으로 기본값(1920 미만 접힘, 상세 화면은 모든 폭에서 접힘)
+  // 홈과 목록, 상세는 따로 기억한다(상세에서 펼친 선택이 목록의 기본값을 바꾸지 않게)
+  const kind = screenKind(pathname);
+  const wide = useMinWidth(breakpoint('--rb-bp-side-open'));
+  const mobile = !useMinWidth(breakpoint('--rb-bp-mobile'));
+  const [pref, setPref] = useBoolPref(SIDEBAR_KEY + (kind === 'detail' ? 'detail' : 'list'), kind === 'detail' ? true : !wide);
+  const collapsed = !mobile && pref;
+  const toggleCollapsed = useCallback(() => setPref(!pref), [pref, setPref]);
   return (
     <>
       <FocusOnNavigate onNavigate={closeNav} />
