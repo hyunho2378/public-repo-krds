@@ -34,7 +34,7 @@
 }
 @media (max-width: 1023px) {
   :root {
-    --rb-page-pad: var(--krds-padding-6);
+    --rb-page-pad: var(--krds-padding-5);
     --rb-col-gap: var(--krds-gap-7);
   }
 }

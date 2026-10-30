@@ -44,6 +44,9 @@ export function fixtureFor(path) {
       if (name === 'tree_1' && Array.isArray(data)) {
         const want = new URLSearchParams(path.split('?')[1] || '').get('path') || '';
         const prefix = want ? `${want}/` : '';
+        // 맨 위 폴더와 src는 실제 응답(바로 아래 항목 전부)을 받아 둔 것을 쓴다
+        const direct = want === '' ? pick('tree_root') : want === 'src' ? pick('tree_src') : null;
+        if (direct) return { mock: false, source: 'sample/kordoc', fixture: 'kordoc', state: 'Ideal', data: direct, pagination: { nextPage: null, total: null } };
         data = data.filter((x) => x.path.startsWith(prefix) && !x.path.slice(prefix.length).includes('/'));
       }
       if (data) {

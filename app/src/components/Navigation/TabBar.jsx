@@ -13,7 +13,7 @@ export const TAB_ITEMS = [
 
 export function TabBar() {
   return (
-    <nav className="rb-tabbar" aria-label={t.TabBar_label}>
+    <nav className="rb-tabbar" data-figma="tabbar" aria-label={t.TabBar_label}>
       <ul>
         {TAB_ITEMS.map((item) => (
           <li key={item.to}>
