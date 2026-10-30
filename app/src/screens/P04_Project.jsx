@@ -29,18 +29,9 @@ export default function Project() {
   const passed = check.checks.filter((c) => c.pass).length;
   const summary = cleanDescription(card.summary) || cleanDescription(project.description);
 
-  const decision = [
-    [t.P04_1, findLine(readme, /실행 환경|별도 설치|브라우저/) || t.P04_2, [t.P04_3, `/projects/${id}/use`]],
-    [t.P04_4, findLine(readme, /기준 확인일|시행일|고시/) || dates.references?.flatMap((r) => r.dates).join(', ') || t.P04_5, [t.P04_6, `/projects/${id}/use`]],
-    [t.P04_7, reuses.total ? t.fn.reuseCount(reuses.total) : t.P04_8, [t.P04_9, null]],
-    [t.P04_10, t.fn.checkSummary(check.checks.length, passed), [t.P04_11, `/projects/${id}/code`]],
-    [t.P04_12, card.license && card.license !== 'unknown' ? card.license : t.P04_13, [t.P04_14, `/projects/${id}/feedback?type=inquiry`]],
-    [t.P04_15, t.P04_16, [t.P04_17, `/projects/${id}/feedback?type=feature`]],
-  ];
-
   return (
     <ProjectFrame screenId="A-02" tab="/about" tabLabel={t.ProjectTabs_1} data={data} state={readme ? 'Ideal' : 'Min'}>
-      <div className="rb-two-col rb-two-col-end">
+      <div className="rb-one-col">
         <article className="rb-stack rb-grow">
           <h2 className="krds-text-body-small-bold">{t.P04_18}</h2>
           <p className="krds-text-body-small">{summary || t.StructuredList_5}</p>
@@ -67,20 +58,6 @@ export default function Project() {
             {t.P04_openOrigin}<span className="sr-only"> {t.Footer_3}</span>
           </a>
         </article>
-        <aside className="rb-aside-col rb-decision" aria-labelledby="decision-title">
-          <h2 id="decision-title" className="krds-text-body-small-bold">{t.P04_25}</h2>
-          <dl className="rb-stack">
-            {decision.map(([title, value, [action, to]]) => (
-              <div className="rb-decision-item" key={title}>
-                <dt className="krds-text-body-small-bold">{title}</dt>
-                <dd className="krds-text-body-xsmall rb-subtle">{value}</dd>
-                <dd>
-                  <Link className="krds-link" to={to || '?reuse=1'}>{action}</Link>
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </aside>
       </div>
     </ProjectFrame>
   );

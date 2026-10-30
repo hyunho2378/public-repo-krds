@@ -152,3 +152,8 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
   --krds-form-check--pc-font-size-medium: var(--krds-font-size-body-small);
   --krds-form-check--mobile-font-size-medium: var(--krds-font-size-body-small);
 }
+
+/* D-16 1장: 숫자와 날짜 열은 머리와 값 모두 오른쪽 정렬(글자는 왼쪽인데 열만 오른쪽 끝에 붙는 어긋남을 막는다) */
+.krds-table-wrap .tbl.data th.rb-num, .krds-table-wrap .tbl.data td.rb-num,
+.krds-table-wrap .rb-tree.tbl.data thead th.rb-col-date, .krds-table-wrap .rb-tree.tbl.data tbody td.rb-col-date { text-align: end; }
+.rb-one-col { display: flex; flex-direction: column; gap: var(--krds-gap-5); min-width: 0; }

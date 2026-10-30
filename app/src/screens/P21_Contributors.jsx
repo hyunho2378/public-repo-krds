@@ -25,10 +25,10 @@ export default function Contributors() {
           <div className="krds-table-wrap rb-table-scroll">
             <table className="tbl data">
               <caption className="sr-only">{t.P21_title}</caption>
-              <thead><tr><th scope="col">{t.P21_name}</th><th scope="col">{t.P21_commits}</th></tr></thead>
+              <thead><tr><th scope="col">{t.P21_name}</th><th scope="col" className="rb-num">{t.P21_commits}</th></tr></thead>
               <tbody>
                 {list.map((c) => (
-                  <tr key={c.name}><td>{orgLabel(c.name)}</td><td>{t.fn.times(c.commits)}</td></tr>
+                  <tr key={c.name}><td>{orgLabel(c.name)}</td><td className="rb-num">{t.fn.times(c.commits)}</td></tr>
                 ))}
               </tbody>
             </table>

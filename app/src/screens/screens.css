@@ -45,7 +45,7 @@
 
 /* 목록 */
 .rb-list { gap: var(--krds-gap-3); }
-.rb-list-link { display: flex; flex-direction: column; gap: var(--krds-gap-2); padding: var(--krds-padding-7) var(--krds-padding-6); color: var(--krds-color-text-basic); text-decoration: none; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
+.rb-list-link { display: flex; flex-direction: column; gap: var(--krds-gap-2); padding: var(--krds-padding-4) var(--krds-padding-5); color: var(--krds-color-text-basic); text-decoration: none; }
 .rb-list-link:hover .rb-list-title { text-decoration: underline; }
 .rb-row { flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; }
 .rb-list .c-txt.rb-clamp, .rb-clamp { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
