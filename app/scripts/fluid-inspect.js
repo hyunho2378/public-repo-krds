@@ -24,7 +24,7 @@
   for (const e of els) {
     const r = e.getBoundingClientRect();
     const cs = getComputedStyle(e);
-    if (r.right > vw + 1 && cs.position !== 'fixed' && !e.closest('.rb-menu, .rb-rtabs-in, .rb-code-scroll, pre, .rb-tabs')) { out.push(['A', `${name(e)} 오른쪽 ${Math.round(r.right - vw)} 넘침`]); break; }
+    if (r.right > vw + 1 && cs.position !== 'fixed' && !e.closest('.rb-menu, .rb-rtabs-in, .rb-code-scroll, pre, .rb-tabs, .krds-table-wrap, .rb-table-scroll, .rb-md-scroll')) { out.push(['A', `${name(e)} 오른쪽 ${Math.round(r.right - vw)} 넘침`]); break; }
   }
   // C, D, F: 글자 요소
   for (const e of els) {

@@ -37,7 +37,7 @@
 .rb-login:has(> .rb-login-notice) > :not(.rb-login-notice) { grid-column: 2; }
 .rb-login:has(> .rb-login-notice) > .rb-login-notice { grid-column: 1; grid-row: 1 / span 6; align-self: stretch; box-sizing: border-box; padding-inline-end: var(--rb-col-gap); border-inline-end: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
 .rb-login-notice { margin: 0; color: var(--krds-color-text-basic); }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .rb-login:has(> .rb-login-notice) { display: flex; flex-direction: column; max-width: var(--rb-login-form-w); }
   .rb-login:has(> .rb-login-notice) > .rb-login-notice { padding-inline-end: 0; border-inline-end: 0; }
 }
@@ -58,4 +58,4 @@
 .rb-login-mark { align-self: center; box-sizing: border-box; display: grid; place-items: center; width: var(--rb-login-mark-w); aspect-ratio: 1; padding: var(--krds-number-10); background: var(--krds-color-light-gray-0); border-radius: var(--krds-radius-medium2); margin-bottom: var(--krds-gap-5); }
 .rb-login-mark img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
 .rb-login-notice { text-align: start; align-items: stretch; justify-content: flex-start; }
-@media (max-width: 767px) { .rb-login-mark { align-self: flex-start; } }
+@media (max-width: 1023px) { .rb-login:has(> .rb-login-notice) > * { width: 100%; box-sizing: border-box; } .rb-login-mark { align-self: flex-start; width: var(--rb-login-mark-w); } .rb-login:has(> .rb-login-notice) { min-height: 0; } }

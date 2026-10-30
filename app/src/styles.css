@@ -286,3 +286,8 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 #root ol.rb-ordered { list-style: decimal inside; padding-inline-start: 0; margin: 0; }
 #root .krds-accordion .accordion-item > summary, #root .krds-accordion summary { padding: var(--krds-number-7) var(--krds-number-8); min-height: var(--krds-number-14); }
 #root .krds-accordion summary:focus-visible { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); outline-offset: var(--krds-number-2); }
+
+/* 표는 자기 상자 안에서 가로로 스크롤한다(쪽 전체가 넓어지지 않게). 배지는 한 줄 */
+.krds-table-wrap, .rb-table-scroll { max-width: 100%; overflow-x: auto; }
+.rb-md .krds-table-wrap { min-width: 0; }
+.rb-pill { white-space: nowrap; flex: none; }

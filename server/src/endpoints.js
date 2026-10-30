@@ -212,7 +212,7 @@ export const endpoints=[
     "F-32",
     "POST",
     "/projects/{id}/reuses",
-    "써 봤어요",
+    "사용 기록",
     {
       "organizationId": "string",
       "usedAt": "2026-10-30"

@@ -22,7 +22,7 @@
   add('바닥글 문장', document.querySelector('#krds-footer .f-copy'), true);
   const side = document.querySelector('.rb-side');
   // 좁은 폭에서는 왼쪽 메뉴가 화면 밖 서랍이라 비교에서 뺀다
-  if (shown(side) && side.getBoundingClientRect().right > 0) add('왼쪽 메뉴', side);
+  if (shown(side) && getComputedStyle(side).position !== 'fixed' && side.getBoundingClientRect().right > 0) add('왼쪽 메뉴', side);
   else if (shown(side)) { /* 서랍 */ }
   else {
     const main = document.querySelector('#main');

@@ -16,7 +16,9 @@ const BOUNDARY = [319, 320, 359, 360, 479, 480, 767, 768, 1023, 1024, 1279, 1280
 const LIGHT_WIDTHS = [320, 360, 479, 480, 767, 768, 1023, 1024, 1279, 1280, 1440, 1920, 2560, 3000, 3840];
 const widths = process.env.LIGHT ? LIGHT_WIDTHS : [...new Set([...Array.from({ length: Math.floor((2560 - 320) / STEP) + 1 }, (_, i) => 320 + i * STEP), ...BOUNDARY])].sort((a, b) => a - b);
 const heights = (process.env.HEIGHTS || '600,900').split(',').map(Number);
-const paths = process.env.PATHS ? process.env.PATHS.split(',') : ALL;
+let paths = process.env.PATHS ? process.env.PATHS.split(',') : ALL;
+// 여러 프로세스로 나눠 돌릴 때: SHARD=i/n (i는 0부터)
+if (process.env.SHARD) { const [i, n] = process.env.SHARD.split('/').map(Number); paths = paths.filter((_, k) => k % n === i); }
 const fluid = await fs.readFile(path.join(HERE, 'fluid-inspect.js'), 'utf8');
 const edge = await fs.readFile(path.join(HERE, 'edge-inspect.js'), 'utf8');
 const SHOTS = path.resolve(HERE, '..', '..', 'UX', 'fluid_check');
@@ -49,6 +51,13 @@ for (const p of paths) {
   }
 }
 await browser.close();
+
+// OUT_JSON이 있으면 결과만 JSON으로 저장한다(fluid-report.mjs가 합쳐 UX/10에 표로 쓴다)
+if (process.env.OUT_JSON) {
+  await fs.writeFile(process.env.OUT_JSON, JSON.stringify({ widths, heights, paths, rows: [...found.values()], sigs: [...sigs] }));
+  console.log(`저장 ${process.env.OUT_JSON}: ${found.size}종`);
+  process.exit(0);
+}
 
 const range = (ws) => { const out = []; let s = ws[0], l = ws[0]; for (const w of ws.slice(1)) { if (w - l <= STEP + 1) l = w; else { out.push(s === l ? `${s}` : `${s}~${l}`); s = l = w; } } out.push(s === l ? `${s}` : `${s}~${l}`); return out.join(', '); };
 const rows = [...found.values()].sort((a, b) => a.p.localeCompare(b.p) || a.kind.localeCompare(b.kind));
