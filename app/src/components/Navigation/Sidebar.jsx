@@ -20,7 +20,6 @@ const item = (label, to, extra = {}) => ({ label, to, ...extra });
 export function globalMenu({ signedIn } = {}) {
   const extra = [
     item(t.Side_fields, '/fields', { icon: 'bookmarks' }),
-    item(t.Side_orgs, '/organizations', { icon: 'myinfo' }),
     item(t.Side_requests, '/requests', { icon: 'inquiry' }),
   ];
   if (signedIn) {

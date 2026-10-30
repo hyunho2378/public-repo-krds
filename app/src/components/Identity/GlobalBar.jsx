@@ -110,6 +110,7 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true, sideHidden = fa
               {/* 공공 깃랩 순서: 등록, 로그인 */}
               <Link className="krds-btn small tertiary rb-gbar-cta" to="/register">{u.Hdr_signup}</Link>
               <Link className="krds-btn small primary rb-gbar-cta" to={loginTo}>{t.Header_login}</Link>
+              <IconButton to={loginTo} icon="my" label={t.Header_login} size="medium" className="rb-gbar-user" title={t.Header_login} />
             </>
           )}
         </div>

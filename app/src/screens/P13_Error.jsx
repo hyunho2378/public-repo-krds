@@ -3,7 +3,6 @@ import { t } from '../copy/ko';
 import { useSearchParams } from 'react-router-dom';
 import { phrase } from '../components/Help/Phrase';
 import { Page } from '../components/Layout/Page';
-import { TaskSearch } from '../components/Input/TaskSearch';
 import { LinkButton } from '../components/Action/Button';
 
 const KINDS = {
@@ -21,7 +20,6 @@ export default function ErrorScreen({ kind: fixed }) {
       <div className="rb-narrow rb-stack">
         <h1 className="krds-text-heading-small" data-figma="section-title">{title}</h1>
         <p className="krds-text-body-small">{phrase(text)}</p>
-        {kind === 'not-found' && <TaskSearch />}
         <div className="rb-actions">
           <LinkButton to="/">{t.P13_7}</LinkButton>
           {kind === 'forbidden' && <LinkButton Type="tertiary" to={`/login?returnTo=${encodeURIComponent(params.get('from') || '/')}`}>{t.P10_2}</LinkButton>}

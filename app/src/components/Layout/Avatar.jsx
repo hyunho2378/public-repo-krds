@@ -12,7 +12,7 @@ export function avatarUrl(raw) {
 export function Avatar({ src, name, className = '' }) {
   const [failed, setFailed] = useState(false);
   const url = avatarUrl(src);
-  const letter = (name || '').trim().slice(0, 1);
+  const letter = (name || '').trim().slice(0, 1).toUpperCase();
   if (url && !failed) {
     return (
       <img

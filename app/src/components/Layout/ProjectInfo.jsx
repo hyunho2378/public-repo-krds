@@ -61,7 +61,9 @@ export function ProjectInfo({ id, project, readme, totals, stats, languages, roo
   ].filter(Boolean);
   const rows = d.data ? decisionRows(id, readme, d.data).slice(0, 4) : [];
   const cs = useData(loadCards, []);
-  const card = cs.data ? cs.data.get(id) : null;
+  const card0 = cs.data ? cs.data.get(id) : null;
+  // 네 칸이 모두 비면 카드 대신 사용 전 확인(빈 칸만 늘어놓지 않는다)
+  const card = card0 && [card0.oneLine, card0.form, card0.license, card0.refs].some((f) => cardValue(f) != null || f?.label) ? card0 : null;
   const field = card ? [].concat(cardValue(card.fields) ?? [])[0] : null;
   return (
     <aside className="rb-repo-info" aria-labelledby="rb-info-title" data-figma="project-info">

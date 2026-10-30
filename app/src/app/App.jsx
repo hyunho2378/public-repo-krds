@@ -94,7 +94,7 @@ function Shell() {
       {/* D-22: 사이드바는 접어도 그대로 두고(다시 그리지 않음) transform으로 밀어 넣는다. 본문 판은 margin-left가 같은 시간 곡선으로 따라온다 */}
       <div className={'rb-shell' + (sideDesk ? ' has-side' : '') + (sideDesk && hidden ? ' is-side-hidden' : '') + (bare ? ' is-bare' : '')} data-figma="body">
         {bare ? null : (
-          <Sidebar project={project} open={navOpen} onClose={closeNav} onHide={() => setHidden(true)} hidden={sideDesk && hidden} />
+          <Sidebar project={project} open={navOpen} onClose={closeNav} onHide={mobile ? closeNav : () => setHidden(true)} hidden={sideDesk && hidden} />
         )}
         <div className="rb-panel">
           <div className="rb-panel-in">
