@@ -1,0 +1,202 @@
+{
+ "id": 654,
+ "name": "KTL 레드마인MCP",
+ "path": "gdbaek/mcp-redmine_project-management",
+ "webUrl": "https://gitlab.aigov.go.kr/gdbaek/mcp-redmine_project-management",
+ "topics": [],
+ "executionForm": {
+  "value": "check",
+  "evidence": null,
+  "source": "rule",
+  "label": "확인 필요",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": "MIT",
+  "evidence": {
+   "lines": [
+    44,
+    44
+   ]
+  },
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    623
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-18T10:11:28.342+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "한국산업기술시험원",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "Claude Code 공식 문서에서도 로컬 프로세스로 실행되는 서버는 STDIO 방식으로 등록하며, 모든 옵션을 서버 이름 앞에 두도록 안내합니다. 자세한 내용은 [Claude Code MCP 문서](https://code.claude.com/docs/en/mcp)를 참고하십시오.",
+    "line": 326,
+    "name": null,
+    "url": "https://code.claude.com/docs/en/mcp"
+   },
+   {
+    "quote": "GitLab 프로젝트의 **코드 → 복제(Clone)**에서 HTTPS 또는 SSH 주소를 확인합니다. 이 주소는 사용자 설치 절차의 `<GITLAB_REPOSITORY_URL>`에도 사용합니다.",
+    "line": 557,
+    "name": "GitLab",
+    "url": null
+   },
+   {
+    "quote": "예시 URL을 실제 GitLab 복제 주소로 바꾸어 실행합니다. 마지막 명령에서 `redmine.env`와 `redmine-mcp-server/` 두 경로가 모두 출력되어야 합니다. 출력되지 않는 항목이 있으면 커밋을 중단하고 `.gitignore`를 먼저 수정합니다.",
+    "line": 590,
+    "name": null,
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    326,
+    590
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "PowerShell"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "AI가 Redmine 일감을 조회하고 댓글·상태 변경까지 하도록 연결하는 안내와 도구",
+   "evidence": {
+    "lines": [
+     23,
+     31
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "Redmine 일감 조회·작성·진행 요약",
+   "evidence": {
+    "lines": [
+     25,
+     31
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "개발·보안·인프라",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     23,
+     31
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "PowerShell에서 안내된 명령을 복사해 실행하고, 개인 API 키와 주소를 환경설정 파일에 넣어 AI 도구에 연결한다",
+   "evidence": {
+    "lines": [
+     5,
+     13
+    ]
+   },
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:48:35.529Z",
+ "rulesAt": "2026-10-30T13:35:12.950Z",
+ "sourceDate": "2026-10-30"
+}

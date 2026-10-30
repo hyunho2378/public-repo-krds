@@ -1,0 +1,186 @@
+{
+ "id": 528,
+ "name": "마크다운 변환기 ： 외부 호출 없이 로컬에서만 작동하는 문서 변환기",
+ "path": "jaekyeong/markdown-converter",
+ "webUrl": "https://gitlab.aigov.go.kr/jaekyeong/markdown-converter",
+ "topics": [],
+ "executionForm": {
+  "value": "download",
+  "evidence": [
+   "1_setup.bat"
+  ],
+  "source": "rule",
+  "label": "내려받아 실행(exe)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": "MIT",
+  "evidence": {
+   "lines": [
+    77,
+    77
+   ]
+  },
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    78
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-28T16:39:59.638+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "한국지능정보사회진흥원",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "JavaScript",
+   "Batchfile"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "HWP·PDF·DOCX·XLSX 파일을 끌어다 놓으면 인터넷 없이 내 PC에서 마크다운 문서로 바꿔 주는 도구",
+   "evidence": {
+    "lines": [
+     7,
+     8
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "한글 등 문서를 AI·검색용 마크다운으로 변환",
+   "evidence": {
+    "lines": [
+     16,
+     17
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "문서·보고서",
+    "엑셀·사무 자동화"
+   ],
+   "evidence": {
+    "lines": [
+     7,
+     17
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "처음 한 번 1_setup.bat을 실행해 설치하고, 이후 파일을 2_convert.bat 위로 끌어다 놓는다",
+   "evidence": {
+    "lines": [
+     21,
+     28
+    ]
+   },
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": "zip을 풀지 않고 바로 실행하면 변환이 실패한다",
+   "evidence": {
+    "lines": [
+     30,
+     31
+    ]
+   },
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": false
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:48:35.482Z",
+ "rulesAt": "2026-10-30T13:35:12.889Z",
+ "sourceDate": "2026-10-30"
+}

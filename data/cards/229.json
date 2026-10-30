@@ -96,29 +96,56 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "클립보드에 복사한 영어 문장을 PC 안의 AI로 한국어로 번역해 고양이 말풍선에 보여 주는 앱",
+   "evidence": {
+    "lines": [
+     5,
+     5
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "영어 문장 한국어 번역",
+   "evidence": {
+    "lines": [
+     14,
+     15
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     5,
+     5
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "앱을 실행하고 영어 문장을 복사하면 한국어 번역이 말풍선에 자동으로 뜬다",
+   "evidence": {
+    "lines": [
+     21,
+     23
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "첫 번역 때 모델 파일(약 632MB)을 한 번 내려받아야 한다",
+   "evidence": {
+    "lines": [
+     53,
+     55
+    ]
+   },
    "source": "ai"
   }
  },
@@ -157,6 +184,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.688Z",
- "rulesAt": "2026-10-30T12:42:16.074Z",
+ "rulesAt": "2026-10-30T13:35:12.767Z",
  "sourceDate": "2026-10-30"
 }

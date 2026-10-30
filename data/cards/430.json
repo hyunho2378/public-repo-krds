@@ -1,0 +1,213 @@
+{
+ "id": 430,
+ "name": "교원 호봉 획정·재획정기",
+ "path": "dovakin/teacher-hobong-local",
+ "webUrl": "https://gitlab.aigov.go.kr/dovakin/teacher-hobong-local",
+ "topics": [],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "requirements.txt"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    87
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": [
+   {
+    "quote": "> 이 프로그램은 담당자의 검토를 돕는 도구입니다. 최종 호봉 결정은 원본 증빙과 시행일 현재의 법령·예규를 담당자가 다시 확인해야 합니다.",
+    "lines": [
+     11,
+     11
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "현재 내장 규칙의 기준일은 2026-07-12입니다. 주요 근거와 구현 범위는 [LEGAL_BASIS.md](LEGAL_BASIS.md)에서 확인할 수 있습니다.",
+    "lines": [
+     86,
+     86
+    ],
+    "dates": [
+     "2026-07-12"
+    ],
+    "identifiers": []
+   }
+  ],
+  "evidence": {
+   "lines": [
+    11,
+    86
+   ]
+  },
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-09T23:10:22.916+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "경기도교육청 현암고등학교",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "HTML",
+   "Python",
+   "JavaScript",
+   "Rust",
+   "PowerShell",
+   "Python(requirements.txt)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "requirements.txt"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "경력증명서 등을 PC 안에서 OCR로 읽어 교원 호봉 획정·재획정 후보를 만들고 Excel·PDF로 출력하는 프로그램",
+   "evidence": {
+    "lines": [
+     3,
+     6
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "교원 호봉 획정·재획정",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "인사·교육",
+    "문서·보고서"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     20
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "Windows 10/11 PC에서 파이썬 3.11 환경으로 실행하는 데스크톱 프로그램이다",
+   "evidence": {
+    "lines": [
+     38,
+     42
+    ]
+   },
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": "담당자의 검토를 돕는 도구이며 최종 호봉은 원본 증빙과 법령으로 확인해야 한다",
+   "evidence": {
+    "lines": [
+     11,
+     11
+    ]
+   },
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:48:35.455Z",
+ "rulesAt": "2026-10-30T13:35:12.853Z",
+ "sourceDate": "2026-10-30"
+}

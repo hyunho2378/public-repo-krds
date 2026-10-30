@@ -1,0 +1,171 @@
+{
+ "id": 976,
+ "name": "출장증명자료 발급기",
+ "path": "k8soon/trip-certificate",
+ "webUrl": "https://gitlab.aigov.go.kr/k8soon/trip-certificate",
+ "topics": [],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "pyproject.toml"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    220
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-09-10T09:34:56.969+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "순형 권",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "개발자가 저장소를 복제할 때는 Git LFS가 설치돼 있으면 설치 파일도 함께 내려받습니다. 소스만 필요하면 `GIT_LFS_SKIP_SMUDGE=1` 환경변수를 사용해 대용량 파일 다운로드를 생략할 수 있습니다.",
+    "line": 201,
+    "name": "개발자가",
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    201,
+    201
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "Python",
+   "PowerShell",
+   "NSIS",
+   "Python(requirements.txt)",
+   "Python(pyproject.toml)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "requirements.txt",
+    "pyproject.toml"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.113Z",
+ "rulesAt": "2026-10-30T13:35:13.113Z",
+ "sourceDate": "2026-10-30"
+}

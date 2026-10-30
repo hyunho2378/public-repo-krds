@@ -93,23 +93,46 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "공문 화면에서 클릭 한 번으로 문서 종류·기한·조치사항을 요약해 주는 엣지 확장",
+   "evidence": {
+    "lines": [
+     3,
+     6
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "전자문서(공문) 접수 내용 파악과 결재 전 검토",
+   "evidence": {
+    "lines": [
+     3,
+     6
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     6
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "엣지 확장으로 설치하고 공문 화면에서 버튼을 눌러 쓴다. 내 PC의 AI(Ollama)나 Gemini를 연결한다",
+   "evidence": {
+    "lines": [
+     8,
+     8
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -154,6 +177,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:39:02.161Z",
- "rulesAt": "2026-10-30T12:42:16.059Z",
+ "rulesAt": "2026-10-30T13:35:12.740Z",
  "sourceDate": "2026-10-30"
 }

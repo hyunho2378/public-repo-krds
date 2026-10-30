@@ -89,8 +89,13 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "클립보드에 복사하거나 드래그한 글을 바로 번역해 주는 번역 프로그램",
+   "evidence": {
+    "lines": [
+     3,
+     8
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
@@ -104,8 +109,13 @@
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "requirements.txt로 패키지를 설치한 뒤 파이썬 파일을 실행한다",
+   "evidence": {
+    "lines": [
+     10,
+     15
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -150,6 +160,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.686Z",
- "rulesAt": "2026-10-30T12:42:16.072Z",
+ "rulesAt": "2026-10-30T13:35:12.764Z",
  "sourceDate": "2026-10-30"
 }

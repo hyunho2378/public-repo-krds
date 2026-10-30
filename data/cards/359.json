@@ -1,0 +1,188 @@
+{
+ "id": 359,
+ "name": "온나라 전부서 문서 통합검색 사이드바",
+ "path": "pilddong/onnara-all-dept-search-sidebar",
+ "webUrl": "https://gitlab.aigov.go.kr/pilddong/onnara-all-dept-search-sidebar",
+ "topics": [
+  "public-service",
+  "rag",
+  "rpa",
+  "search engine",
+  "search enging",
+  "utility"
+ ],
+ "executionForm": {
+  "value": "check",
+  "evidence": [
+   "sidepanel.html"
+  ],
+  "source": "rule",
+  "label": "확인 필요",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    71
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-19T09:17:09.560+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "병무청",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "JavaScript",
+   "HTML"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "온나라 문서 화면에서 여러 부서의 문서를 긴 기간에 걸쳐 한 번에 검색해 결과표와 CSV로 보여 주는 브라우저 확장",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "온나라 전 부서 문서 통합 검색",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "문서·보고서",
+    "엑셀·사무 자동화"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "ZIP을 풀고 Edge·Chrome 확장 관리 화면에서 개발자 모드를 켠 뒤 압축해제된 확장 프로그램으로 불러온다",
+   "evidence": {
+    "lines": [
+     37,
+     40
+    ]
+   },
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": "현재 사용자의 온나라 로그인 권한 범위에서만 조회한다",
+   "evidence": {
+    "lines": [
+     59,
+     59
+    ]
+   },
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": false
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:48:35.431Z",
+ "rulesAt": "2026-10-30T13:35:12.817Z",
+ "sourceDate": "2026-10-30"
+}

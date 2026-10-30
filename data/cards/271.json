@@ -129,25 +129,47 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "폐쇄망에서 소프트웨어 구성목록(SBOM)을 올려 취약점과 정책 위반을 분석·비교하는 관리 포털",
+   "evidence": {
+    "lines": [
+     3,
+     6
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "소프트웨어 취약점(CVE) 점검과 SBOM 회차 관리",
+   "evidence": {
+    "lines": [
+     3,
+     6
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "개발·보안·인프라"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     6
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "서버에서 도커(Docker Compose)로 설정 생성, 이미지 빌드, 기동 명령을 차례로 실행한 뒤 8088 포트 주소로 접속한다",
+   "evidence": {
+    "lines": [
+     46,
+     54
+    ]
+   },
    "source": "ai",
-   "rawCommands": null
+   "rawCommands": "make env / docker compose build ... / docker compose up -d"
   },
   "limitations": {
    "value": null,
@@ -190,6 +212,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:41:30.746Z",
- "rulesAt": "2026-10-30T12:42:16.086Z",
+ "rulesAt": "2026-10-30T13:35:12.791Z",
  "sourceDate": "2026-10-30"
 }

@@ -96,8 +96,13 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "파티원이 예측 5개씩 암호화해 제출하고 투표로 맞았는지 가려 점수를 매기는 예측 게임",
+   "evidence": {
+    "lines": [
+     3,
+     11
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
@@ -106,13 +111,25 @@
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "기타"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     11
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "npm으로 설치해 시작한 뒤 브라우저에서 localhost 주소로 접속한다",
+   "evidence": {
+    "lines": [
+     15,
+     20
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -157,6 +174,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.683Z",
- "rulesAt": "2026-10-30T12:42:16.069Z",
+ "rulesAt": "2026-10-30T13:35:12.757Z",
  "sourceDate": "2026-10-30"
 }

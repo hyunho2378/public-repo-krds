@@ -105,23 +105,46 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "주소를 말하면 건축물대장·건축인허가 정보를 한 장 카드로 정리해 주는 AI 연결 서버",
+   "evidence": {
+    "lines": [
+     3,
+     11
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "필지·건축물 이력 확인과 민원 대응",
+   "evidence": {
+    "lines": [
+     52,
+     52
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "데이터·통계·분석",
+    "시설·안전·재난"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     24
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "AI 프로그램에 안내된 접속 주소(URL) 한 줄만 등록하면 따로 설정 없이 쓴다",
+   "evidence": {
+    "lines": [
+     13,
+     13
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -166,6 +189,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:38:40.923Z",
- "rulesAt": "2026-10-30T12:42:16.049Z",
+ "rulesAt": "2026-10-30T13:35:12.721Z",
  "sourceDate": "2026-10-30"
 }

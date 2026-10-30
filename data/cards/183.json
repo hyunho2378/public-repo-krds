@@ -116,23 +116,45 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "신규 공무원이 막히는 일을 근거 조례와 소관부서와 함께 정리한 지식카드 226장 웹 안내서",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "신규자 실무 질의 답 찾기",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "인사·교육"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "파일 하나로 동작하며 빌드·설치·데이터베이스가 필요 없다",
+   "evidence": {
+    "lines": [
+     6,
+     6
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -177,6 +199,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:39:02.160Z",
- "rulesAt": "2026-10-30T12:42:16.059Z",
+ "rulesAt": "2026-10-30T13:35:12.739Z",
  "sourceDate": "2026-10-30"
 }

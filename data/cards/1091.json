@@ -1,0 +1,214 @@
+{
+ "id": 1091,
+ "name": "school-zone 충주 초등학교 통학구역 및 중학구 간편 검색",
+ "path": "illumsi7/school-zone",
+ "webUrl": "https://gitlab.aigov.go.kr/illumsi7/school-zone",
+ "topics": [
+  "web-service"
+ ],
+ "executionForm": {
+  "value": "check",
+  "evidence": [
+   "index.html"
+  ],
+  "source": "rule",
+  "label": "확인 필요",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    283
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": [
+   {
+    "quote": "> - 이 서비스는 충주교육지원청 학구 변경 고시 내용을 그대로 반영합니다. 조회 결과가 고시 원문과 다를 경우 고시가 우선하며, 충주교육지원청으로 문의해 주세요.",
+    "lines": [
+     11,
+     11
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "> - 도로명주소로는 검색되지 않습니다. 학구 고시가 법정동·리, 통·반, 번지 단위로 되어 있기 때문입니다. 지번 주소를 알면 관할 행정복지센터에서 통·반 정보를 확인한 뒤 검색할 수 있습니다.",
+    "lines": [
+     12,
+     12
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "매년 학구 변경 고시 이후 신학년도 CSV를 추가합니다. 별도 서식 파일은 없으며, **직전 학년도 CSV(`2026.csv`)가 작성 서식**입니다.",
+    "lines": [
+     125,
+     125
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "| 관련 고시 | [충주교육지원청 학구 변경 고시](https://www.cbchje.go.kr:447/cbchje/sub.php?menukey=1248) |",
+    "lines": [
+     275,
+     275
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "- 통학구역 원자료: 충주교육지원청 학구 변경 고시",
+    "lines": [
+     282,
+     282
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "- 보조 자료: 행정안전부 주민등록 자료 및 충주시 이통반 조례 변경 고시",
+    "lines": [
+     283,
+     283
+    ],
+    "dates": [],
+    "identifiers": []
+   }
+  ],
+  "evidence": {
+   "lines": [
+    11,
+    283
+   ]
+  },
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-09-22T17:42:08.806+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "충청북도충주교육지원청",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "HTML"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": false
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.173Z",
+ "rulesAt": "2026-10-30T13:35:13.173Z",
+ "sourceDate": "2026-10-30"
+}

@@ -130,29 +130,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "소방 교육자료를 근거로 답하고 훈련계획과 교안을 만드는 구조대원용 AI 업무지원 시범 플랫폼",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "구조 교육훈련 질의응답과 훈련계획·교안 작성",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "인사·교육",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "Node.js와 Supabase 개발 DB를 준비해 설정 파일을 복사한 뒤 개발 서버를 실행하고 브라우저에서 연다",
+   "evidence": {
+    "lines": [
+     662,
+     678
+    ]
+   },
    "source": "ai",
-   "rawCommands": null
+   "rawCommands": "npm run dev"
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "현재는 중간보고와 사용성 검증을 위한 PoC 단계이며 내부망 서버 이전이 목표다",
+   "evidence": {
+    "lines": [
+     7,
+     8
+    ]
+   },
    "source": "ai"
   }
  },
@@ -191,6 +219,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.692Z",
- "rulesAt": "2026-10-30T12:42:16.080Z",
+ "rulesAt": "2026-10-30T13:35:12.778Z",
  "sourceDate": "2026-10-30"
 }

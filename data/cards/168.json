@@ -105,23 +105,45 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "전화 중 떠오른 일을 바로 적어 두면 마감 시각에 따라 알아서 칸을 정해 주는 개인 업무 보드",
+   "evidence": {
+    "lines": [
+     19,
+     24
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "개인 할 일 메모와 마감 관리",
+   "evidence": {
+    "lines": [
+     19,
+     24
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "엑셀·사무 자동화"
+   ],
+   "evidence": {
+    "lines": [
+     19,
+     24
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "exe 파일 하나로 실행하는 윈도우 프로그램이다. 단축키 Ctrl+Alt+Space로 메모 창을 띄운다",
+   "evidence": {
+    "lines": [
+     23,
+     30
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -166,6 +188,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:38:40.928Z",
- "rulesAt": "2026-10-30T12:42:16.053Z",
+ "rulesAt": "2026-10-30T13:35:12.730Z",
  "sourceDate": "2026-10-30"
 }

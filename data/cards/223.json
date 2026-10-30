@@ -98,8 +98,13 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "마스코트 이미지를 AI로 픽셀 아트 프레임으로 만들고 배경을 지워 화면 위를 걷는 데스크톱 펫으로 만드는 앱",
+   "evidence": {
+    "lines": [
+     6,
+     8
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
@@ -108,13 +113,25 @@
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "영상·이미지·음성"
+   ],
+   "evidence": {
+    "lines": [
+     6,
+     8
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "GitHub 릴리스에서 Windows·macOS용 설치 파일을 받아 실행하며, 소스로는 npm으로 실행한다",
+   "evidence": {
+    "lines": [
+     66,
+     72
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -159,6 +176,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.685Z",
- "rulesAt": "2026-10-30T12:42:16.071Z",
+ "rulesAt": "2026-10-30T13:35:12.761Z",
  "sourceDate": "2026-10-30"
 }

@@ -1,16 +1,16 @@
 {
  "note": "원래 이름 → 통합 이름 대응표. 이름 목록과 빈도는 조회 날짜 기준 공개 프로젝트에서 직접 계산. 통합 패턴은 사람이 검토해 고친다",
- "computedAt": "2026-10-30T12:38:41.001Z",
- "projects": 52,
- "projectsWithAnyFieldMark": 16,
- "projectsWithTopics": 14,
- "projectsWithReadmeFieldLine": 2,
- "distinctNames": 16,
+ "computedAt": "2026-10-30T13:35:13.434Z",
+ "projects": 608,
+ "projectsWithAnyFieldMark": 165,
+ "projectsWithTopics": 160,
+ "projectsWithReadmeFieldLine": 5,
+ "distinctNames": 139,
  "names": [
   {
    "name": "utility",
-   "count": 6,
-   "topics": 6,
+   "count": 70,
+   "topics": 70,
    "readme": 0,
    "examples": [
     34,
@@ -18,6 +18,396 @@
     68,
     69,
     168
+   ]
+  },
+  {
+   "name": "ai",
+   "count": 54,
+   "topics": 54,
+   "readme": 0,
+   "examples": [
+    197,
+    198,
+    268,
+    307,
+    337
+   ]
+  },
+  {
+   "name": "public-service",
+   "count": 42,
+   "topics": 42,
+   "readme": 0,
+   "examples": [
+    19,
+    46,
+    234,
+    268,
+    337
+   ]
+  },
+  {
+   "name": "korean",
+   "count": 28,
+   "topics": 28,
+   "readme": 0,
+   "examples": [
+    336,
+    352,
+    545,
+    720,
+    859
+   ]
+  },
+  {
+   "name": "local-first",
+   "count": 28,
+   "topics": 28,
+   "readme": 0,
+   "examples": [
+    352,
+    534,
+    535,
+    557,
+    558
+   ]
+  },
+  {
+   "name": "web-service",
+   "count": 25,
+   "topics": 25,
+   "readme": 0,
+   "examples": [
+    44,
+    268,
+    336,
+    441,
+    535
+   ]
+  },
+  {
+   "name": "windows",
+   "count": 16,
+   "topics": 16,
+   "readme": 0,
+   "examples": [
+    352,
+    582,
+    584,
+    667,
+    703
+   ]
+  },
+  {
+   "name": "automation",
+   "count": 15,
+   "topics": 15,
+   "readme": 0,
+   "examples": [
+    785,
+    988,
+    989,
+    993,
+    994
+   ]
+  },
+  {
+   "name": "python",
+   "count": 13,
+   "topics": 13,
+   "readme": 0,
+   "examples": [
+    903,
+    988,
+    989,
+    993,
+    994
+   ]
+  },
+  {
+   "name": "rag",
+   "count": 13,
+   "topics": 13,
+   "readme": 0,
+   "examples": [
+    268,
+    337,
+    359,
+    534,
+    535
+   ]
+  },
+  {
+   "name": "edu",
+   "count": 12,
+   "topics": 12,
+   "readme": 0,
+   "examples": [
+    775,
+    800,
+    812,
+    831,
+    854
+   ]
+  },
+  {
+   "name": "exe",
+   "count": 12,
+   "topics": 12,
+   "readme": 0,
+   "examples": [
+    557,
+    558,
+    703,
+    800,
+    868
+   ]
+  },
+  {
+   "name": "opendata",
+   "count": 12,
+   "topics": 12,
+   "readme": 0,
+   "examples": [
+    988,
+    989,
+    993,
+    994,
+    1016
+   ]
+  },
+  {
+   "name": "desktop",
+   "count": 11,
+   "topics": 11,
+   "readme": 0,
+   "examples": [
+    561,
+    703,
+    800,
+    868,
+    1079
+   ]
+  },
+  {
+   "name": "excel",
+   "count": 10,
+   "topics": 10,
+   "readme": 0,
+   "examples": [
+    988,
+    989,
+    993,
+    994,
+    1011
+   ]
+  },
+  {
+   "name": "document",
+   "count": 9,
+   "topics": 9,
+   "readme": 0,
+   "examples": [
+    903,
+    1000,
+    1011,
+    1015,
+    1021
+   ]
+  },
+  {
+   "name": "gis",
+   "count": 9,
+   "topics": 9,
+   "readme": 0,
+   "examples": [
+    988,
+    989,
+    993,
+    994,
+    1024
+   ]
+  },
+  {
+   "name": "incheon",
+   "count": 8,
+   "topics": 8,
+   "readme": 0,
+   "examples": [
+    988,
+    989,
+    993,
+    994,
+    1011
+   ]
+  },
+  {
+   "name": "kml",
+   "count": 8,
+   "topics": 8,
+   "readme": 0,
+   "examples": [
+    988,
+    989,
+    993,
+    994,
+    1024
+   ]
+  },
+  {
+   "name": "local-llm",
+   "count": 8,
+   "topics": 8,
+   "readme": 0,
+   "examples": [
+    561,
+    734,
+    859,
+    893,
+    898
+   ]
+  },
+  {
+   "name": "fisheries",
+   "count": 7,
+   "topics": 7,
+   "readme": 0,
+   "examples": [
+    988,
+    989,
+    993,
+    994,
+    1024
+   ]
+  },
+  {
+   "name": "mcp",
+   "count": 7,
+   "topics": 7,
+   "readme": 0,
+   "examples": [
+    149,
+    400,
+    501,
+    758,
+    820
+   ]
+  },
+  {
+   "name": "hwpx",
+   "count": 6,
+   "topics": 6,
+   "readme": 0,
+   "examples": [
+    26,
+    561,
+    643,
+    820,
+    903
+   ]
+  },
+  {
+   "name": "map",
+   "count": 6,
+   "topics": 6,
+   "readme": 0,
+   "examples": [
+    970,
+    1029,
+    1053,
+    1224,
+    1354
+   ]
+  },
+  {
+   "name": "offline",
+   "count": 6,
+   "topics": 6,
+   "readme": 0,
+   "examples": [
+    561,
+    647,
+    800,
+    1230,
+    1286
+   ]
+  },
+  {
+   "name": "pdf",
+   "count": 6,
+   "topics": 6,
+   "readme": 0,
+   "examples": [
+    1011,
+    1023,
+    1027,
+    1079,
+    1203
+   ]
+  },
+  {
+   "name": "calendar",
+   "count": 5,
+   "topics": 5,
+   "readme": 0,
+   "examples": [
+    336,
+    647,
+    775,
+    890,
+    1372
+   ]
+  },
+  {
+   "name": "general-administration",
+   "count": 5,
+   "topics": 5,
+   "readme": 0,
+   "examples": [
+    615,
+    831,
+    854,
+    1274,
+    1371
+   ]
+  },
+  {
+   "name": "geospatial",
+   "count": 5,
+   "topics": 5,
+   "readme": 0,
+   "examples": [
+    988,
+    989,
+    993,
+    994,
+    1026
+   ]
+  },
+  {
+   "name": "govtech",
+   "count": 5,
+   "topics": 5,
+   "readme": 0,
+   "examples": [
+    19,
+    52,
+    69,
+    1218,
+    1348
+   ]
+  },
+  {
+   "name": "security",
+   "count": 5,
+   "topics": 5,
+   "readme": 0,
+   "examples": [
+    171,
+    271,
+    734,
+    813,
+    1085
    ]
   },
   {
@@ -33,24 +423,294 @@
    ]
   },
   {
-   "name": "govtech",
+   "name": "no-ai-api",
+   "count": 4,
+   "topics": 4,
+   "readme": 0,
+   "examples": [
+    19,
+    545,
+    898,
+    1248
+   ]
+  },
+  {
+   "name": "ocean",
+   "count": 4,
+   "topics": 4,
+   "readme": 0,
+   "examples": [
+    988,
+    1024,
+    1026,
+    1224
+   ]
+  },
+  {
+   "name": "social policy",
+   "count": 4,
+   "topics": 4,
+   "readme": 0,
+   "examples": [
+    483,
+    1042,
+    1043,
+    1318
+   ]
+  },
+  {
+   "name": "industrial-safety",
    "count": 3,
    "topics": 3,
    "readme": 0,
    "examples": [
-    19,
-    52,
-    69
+    1002,
+    1003,
+    1027
    ]
   },
   {
-   "name": "public-service",
+   "name": "koda",
+   "count": 3,
+   "topics": 3,
+   "readme": 0,
+   "examples": [
+    171,
+    271,
+    734
+   ]
+  },
+  {
+   "name": "mobile-app",
+   "count": 3,
+   "topics": 3,
+   "readme": 0,
+   "examples": [
+    1224,
+    1354,
+    1430
+   ]
+  },
+  {
+   "name": "on-premis",
+   "count": 3,
+   "topics": 3,
+   "readme": 0,
+   "examples": [
+    725,
+    868,
+    1085
+   ]
+  },
+  {
+   "name": "onnara",
+   "count": 3,
+   "topics": 3,
+   "readme": 0,
+   "examples": [
+    50,
+    702,
+    921
+   ]
+  },
+  {
+   "name": "search enging",
+   "count": 3,
+   "topics": 3,
+   "readme": 0,
+   "examples": [
+    336,
+    359,
+    583
+   ]
+  },
+  {
+   "name": "2026_challenge_session_1",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    1045,
+    1388
+   ]
+  },
+  {
+   "name": "aquaculture",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    1024,
+    1026
+   ]
+  },
+  {
+   "name": "code-generator",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    988,
+    1085
+   ]
+  },
+  {
+   "name": "coordinates",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    1033,
+    1034
+   ]
+  },
+  {
+   "name": "game",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    1220,
+    1261
+   ]
+  },
+  {
+   "name": "hallucination",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    336,
+    337
+   ]
+  },
+  {
+   "name": "inchoen",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    1026,
+    1033
+   ]
+  },
+  {
+   "name": "kml-generator",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    988,
+    994
+   ]
+  },
+  {
+   "name": "korea",
    "count": 2,
    "topics": 2,
    "readme": 0,
    "examples": [
     19,
-    46
+    1204
+   ]
+  },
+  {
+   "name": "llama.cpp",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    859,
+    1085
+   ]
+  },
+  {
+   "name": "ocr",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    1248,
+    1286
+   ]
+  },
+  {
+   "name": "open-api",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    1204,
+    1354
+   ]
+  },
+  {
+   "name": "polygon",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    989,
+    1034
+   ]
+  },
+  {
+   "name": "public-sector",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    352,
+    1110
+   ]
+  },
+  {
+   "name": "search engine",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    197,
+    359
+   ]
+  },
+  {
+   "name": "STT",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    785,
+    1161
+   ]
+  },
+  {
+   "name": "template",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    988,
+    1371
+   ]
+  },
+  {
+   "name": "TTS",
+   "count": 2,
+   "topics": 2,
+   "readme": 0,
+   "examples": [
+    785,
+    1161
+   ]
+  },
+  {
+   "name": "살펴보는 방향",
+   "count": 1,
+   "topics": 0,
+   "readme": 1,
+   "examples": [
+    225
    ]
   },
   {
@@ -63,12 +723,156 @@
    ]
   },
   {
+   "name": "전용 자료 위치 | 수집 안내",
+   "count": 1,
+   "topics": 0,
+   "readme": 1,
+   "examples": [
+    1141
+   ]
+  },
+  {
+   "name": "카테고리 | 기본 결정",
+   "count": 1,
+   "topics": 0,
+   "readme": 1,
+   "examples": [
+    683
+   ]
+  },
+  {
    "name": "항목",
    "count": 1,
    "topics": 0,
    "readme": 1,
    "examples": [
     155
+   ]
+  },
+  {
+   "name": "agriculture",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    725
+   ]
+  },
+  {
+   "name": "ai-skill",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1110
+   ]
+  },
+  {
+   "name": "archive",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1348
+   ]
+  },
+  {
+   "name": "artificial-reef",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1026
+   ]
+  },
+  {
+   "name": "backup",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    352
+   ]
+  },
+  {
+   "name": "blender",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    803
+   ]
+  },
+  {
+   "name": "budget",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    960
+   ]
+  },
+  {
+   "name": "chatgpt",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1110
+   ]
+  },
+  {
+   "name": "civil-engineering",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1236
+   ]
+  },
+  {
+   "name": "claude",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1110
+   ]
+  },
+  {
+   "name": "coco17",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    803
+   ]
+  },
+  {
+   "name": "codex",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1110
+   ]
+  },
+  {
+   "name": "computer-vision",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    803
+   ]
+  },
+  {
+   "name": "construction-estimate",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1236
    ]
   },
   {
@@ -81,66 +885,408 @@
    ]
   },
   {
-   "name": "hwpx",
+   "name": "defense",
    "count": 1,
    "topics": 1,
    "readme": 0,
    "examples": [
-    26
+    1348
    ]
   },
   {
-   "name": "koda",
+   "name": "design",
    "count": 1,
    "topics": 1,
    "readme": 0,
    "examples": [
-    171
+    1110
    ]
   },
   {
-   "name": "korea",
+   "name": "design-automation",
    "count": 1,
    "topics": 1,
    "readme": 0,
    "examples": [
-    19
+    1236
    ]
   },
   {
-   "name": "mcp",
+   "name": "dotnet",
    "count": 1,
    "topics": 1,
    "readme": 0,
    "examples": [
-    149
+    352
    ]
   },
   {
-   "name": "no-ai-api",
+   "name": "dxf",
    "count": 1,
    "topics": 1,
    "readme": 0,
    "examples": [
-    19
+    1236
    ]
   },
   {
-   "name": "onnara",
+   "name": "embedding",
    "count": 1,
    "topics": 1,
    "readme": 0,
    "examples": [
-    50
+    1286
    ]
   },
   {
-   "name": "security",
+   "name": "fisheries-license",
    "count": 1,
    "topics": 1,
    "readme": 0,
    "examples": [
-    171
+    1024
+   ]
+  },
+  {
+   "name": "fishing-harbor",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    993
+   ]
+  },
+  {
+   "name": "flutter",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1224
+   ]
+  },
+  {
+   "name": "gemini",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1110
+   ]
+  },
+  {
+   "name": "geojson",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1024
+   ]
+  },
+  {
+   "name": "goespatial",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1024
+   ]
+  },
+  {
+   "name": "government-support",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1204
+   ]
+  },
+  {
+   "name": "handover",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1286
+   ]
+  },
+  {
+   "name": "harbor",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    993
+   ]
+  },
+  {
+   "name": "html",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1007
+   ]
+  },
+  {
+   "name": "infographic",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1110
+   ]
+  },
+  {
+   "name": "island",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    994
+   ]
+  },
+  {
+   "name": "json",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1021
+   ]
+  },
+  {
+   "name": "license",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1024
+   ]
+  },
+  {
+   "name": "local-government",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1236
+   ]
+  },
+  {
+   "name": "marine",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1224
+   ]
+  },
+  {
+   "name": "marine-reseources",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1026
+   ]
+  },
+  {
+   "name": "military-manpower",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1348
+   ]
+  },
+  {
+   "name": "mobile",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1224
+   ]
+  },
+  {
+   "name": "national-assembly",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1348
+   ]
+  },
+  {
+   "name": "nextjs",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    336
+   ]
+  },
+  {
+   "name": "open-data",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    803
+   ]
+  },
+  {
+   "name": "openpyxl",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    988
+   ]
+  },
+  {
+   "name": "orchestrator",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    596
+   ]
+  },
+  {
+   "name": "parliamentary-audit",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1348
+   ]
+  },
+  {
+   "name": "pesticide",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    726
+   ]
+  },
+  {
+   "name": "pose-classification",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    803
+   ]
+  },
+  {
+   "name": "poster",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1110
+   ]
+  },
+  {
+   "name": "postit",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    647
+   ]
+  },
+  {
+   "name": "public-administration",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1348
+   ]
+  },
+  {
+   "name": "public-data",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1204
+   ]
+  },
+  {
+   "name": "public-finance",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1218
+   ]
+  },
+  {
+   "name": "quantity-takeoff",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1236
+   ]
+  },
+  {
+   "name": "reef",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1026
+   ]
+  },
+  {
+   "name": "risk-assessment",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1003
+   ]
+  },
+  {
+   "name": "road-pavement",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1236
+   ]
+  },
+  {
+   "name": "rpa",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    359
+   ]
+  },
+  {
+   "name": "scaffolding",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    988
+   ]
+  },
+  {
+   "name": "small-business",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1003
    ]
   },
   {
@@ -153,40 +1299,282 @@
    ]
   },
   {
-   "name": "web-service",
+   "name": "static-site",
    "count": 1,
    "topics": 1,
    "readme": 0,
    "examples": [
-    44
+    1204
+   ]
+  },
+  {
+   "name": "statistics",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1021
+   ]
+  },
+  {
+   "name": "synthetic-data",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    803
+   ]
+  },
+  {
+   "name": "table",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1011
+   ]
+  },
+  {
+   "name": "table-extraction",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1011
+   ]
+  },
+  {
+   "name": "tide",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1224
+   ]
+  },
+  {
+   "name": "tm",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1033
+   ]
+  },
+  {
+   "name": "trade",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    726
+   ]
+  },
+  {
+   "name": "tray-app",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    352
+   ]
+  },
+  {
+   "name": "utiliity",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1033
+   ]
+  },
+  {
+   "name": "vworld",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1053
+   ]
+  },
+  {
+   "name": "weather",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    1224
+   ]
+  },
+  {
+   "name": "wpf",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    352
+   ]
+  },
+  {
+   "name": "xlsx",
+   "count": 1,
+   "topics": 1,
+   "readme": 0,
+   "examples": [
+    988
    ]
   }
  ],
  "mapping": {
   "utility": "기타",
-  "k-ai-champion": "기타",
-  "govtech": "기타",
+  "ai": "기타",
   "public-service": "기타",
-  "예시 키워드": "기타",
-  "항목": "기타",
-  "contact-finder": "기타",
-  "hwpx": "문서·보고서",
-  "koda": "기타",
-  "korea": "기타",
+  "korean": "기타",
+  "local-first": "기타",
+  "web-service": "기타",
+  "windows": "기타",
+  "automation": "엑셀·사무 자동화",
+  "python": "기타",
+  "rag": "생성형 AI·챗봇·검색",
+  "edu": "기타",
+  "exe": "기타",
+  "opendata": "기타",
+  "desktop": "기타",
+  "excel": "엑셀·사무 자동화",
+  "document": "기타",
+  "gis": "기타",
+  "incheon": "기타",
+  "kml": "데이터·통계·분석",
+  "local-llm": "생성형 AI·챗봇·검색",
+  "fisheries": "기타",
   "mcp": "생성형 AI·챗봇·검색",
-  "no-ai-api": "개발·보안·인프라",
-  "onnara": "기타",
+  "hwpx": "문서·보고서",
+  "map": "기타",
+  "offline": "기타",
+  "pdf": "문서·보고서",
+  "calendar": "기타",
+  "general-administration": "기타",
+  "geospatial": "기타",
+  "govtech": "기타",
   "security": "기타",
+  "k-ai-champion": "기타",
+  "no-ai-api": "개발·보안·인프라",
+  "ocean": "기타",
+  "social policy": "개발·보안·인프라",
+  "industrial-safety": "기타",
+  "koda": "기타",
+  "mobile-app": "데이터·통계·분석",
+  "on-premis": "기타",
+  "onnara": "기타",
+  "search enging": "기타",
+  "2026_challenge_session_1": "기타",
+  "aquaculture": "기타",
+  "code-generator": "기타",
+  "coordinates": "기타",
+  "game": "기타",
+  "hallucination": "개발·보안·인프라",
+  "inchoen": "기타",
+  "kml-generator": "데이터·통계·분석",
+  "korea": "기타",
+  "llama.cpp": "기타",
+  "ocr": "문서·보고서",
+  "open-api": "개발·보안·인프라",
+  "polygon": "기타",
+  "public-sector": "기타",
+  "search engine": "기타",
+  "STT": "영상·이미지·음성",
+  "template": "기타",
+  "TTS": "영상·이미지·음성",
+  "살펴보는 방향": "기타",
+  "예시 키워드": "기타",
+  "전용 자료 위치 | 수집 안내": "민원·복지·상담",
+  "카테고리 | 기본 결정": "기타",
+  "항목": "기타",
+  "agriculture": "기타",
+  "ai-skill": "기타",
+  "archive": "기타",
+  "artificial-reef": "개발·보안·인프라",
+  "backup": "기타",
+  "blender": "기타",
+  "budget": "기타",
+  "chatgpt": "생성형 AI·챗봇·검색",
+  "civil-engineering": "개발·보안·인프라",
+  "claude": "기타",
+  "coco17": "기타",
+  "codex": "기타",
+  "computer-vision": "영상·이미지·음성",
+  "construction-estimate": "기타",
+  "contact-finder": "기타",
+  "defense": "기타",
+  "design": "기타",
+  "design-automation": "엑셀·사무 자동화",
+  "dotnet": "기타",
+  "dxf": "기타",
+  "embedding": "기타",
+  "fisheries-license": "기타",
+  "fishing-harbor": "기타",
+  "flutter": "기타",
+  "gemini": "기타",
+  "geojson": "기타",
+  "goespatial": "기타",
+  "government-support": "기타",
+  "handover": "기타",
+  "harbor": "기타",
+  "html": "데이터·통계·분석",
+  "infographic": "기타",
+  "island": "기타",
+  "json": "기타",
+  "license": "기타",
+  "local-government": "기타",
+  "marine": "기타",
+  "marine-reseources": "기타",
+  "military-manpower": "기타",
+  "mobile": "데이터·통계·분석",
+  "national-assembly": "기타",
+  "nextjs": "기타",
+  "open-data": "기타",
+  "openpyxl": "기타",
+  "orchestrator": "기타",
+  "parliamentary-audit": "기타",
+  "pesticide": "개발·보안·인프라",
+  "pose-classification": "기타",
+  "poster": "기타",
+  "postit": "기타",
+  "public-administration": "기타",
+  "public-data": "기타",
+  "public-finance": "기타",
+  "quantity-takeoff": "기타",
+  "reef": "기타",
+  "risk-assessment": "기타",
+  "road-pavement": "기타",
+  "rpa": "엑셀·사무 자동화",
+  "scaffolding": "기타",
+  "small-business": "기타",
   "sqlite": "기타",
-  "web-service": "기타"
+  "static-site": "기타",
+  "statistics": "기타",
+  "synthetic-data": "기타",
+  "table": "기타",
+  "table-extraction": "기타",
+  "tide": "기타",
+  "tm": "기타",
+  "trade": "기타",
+  "tray-app": "기타",
+  "utiliity": "기타",
+  "vworld": "기타",
+  "weather": "기타",
+  "wpf": "기타",
+  "xlsx": "엑셀·사무 자동화"
  },
  "groups": [
   {
    "name": "문서·보고서",
    "pattern": "문서|한글|hwp|pdf|요약|회의록|보고|공문|기안|서식|번역|문서화|ocr",
-   "evidenceCount": 1,
+   "evidenceCount": 14,
    "members": [
-    "hwpx"
+    "hwpx",
+    "pdf",
+    "ocr"
    ]
   },
   {
@@ -198,8 +1586,10 @@
   {
    "name": "민원·복지·상담",
    "pattern": "민원|복지|주민|상담|지원금|고객|콜센터|서비스 안내|안내",
-   "evidenceCount": 0,
-   "members": []
+   "evidenceCount": 1,
+   "members": [
+    "전용 자료 위치 | 수집 안내"
+   ]
   },
   {
    "name": "인사·교육",
@@ -216,8 +1606,14 @@
   {
    "name": "데이터·통계·분석",
    "pattern": "데이터|통계|시각화|분석|대시보드|dashboard|bi|예측|모델|머신러닝|딥러닝|ml",
-   "evidenceCount": 0,
-   "members": []
+   "evidenceCount": 15,
+   "members": [
+    "kml",
+    "mobile-app",
+    "kml-generator",
+    "html",
+    "mobile"
+   ]
   },
   {
    "name": "법령·규제·감사",
@@ -228,49 +1624,166 @@
   {
    "name": "엑셀·사무 자동화",
    "pattern": "엑셀|excel|xlsx|csv|자동화|rpa|매크로|일괄|사무|스크립트|업무 자동|automation",
-   "evidenceCount": 0,
-   "members": []
+   "evidenceCount": 28,
+   "members": [
+    "automation",
+    "excel",
+    "design-automation",
+    "rpa",
+    "xlsx"
+   ]
   },
   {
    "name": "생성형 AI·챗봇·검색",
    "pattern": "챗봇|chatbot|llm|rag|gpt|생성형|검색|질의|에이전트|agent|mcp|프롬프트|질문|ai 비서|어시스턴트|임베딩|벡터",
-   "evidenceCount": 1,
+   "evidenceCount": 29,
    "members": [
-    "mcp"
+    "rag",
+    "local-llm",
+    "mcp",
+    "chatgpt"
    ]
   },
   {
    "name": "영상·이미지·음성",
    "pattern": "영상|이미지|음성|stt|tts|비전|사진|영상처리|cctv|이미지|음성인식|vision",
-   "evidenceCount": 0,
-   "members": []
+   "evidenceCount": 5,
+   "members": [
+    "STT",
+    "TTS",
+    "computer-vision"
+   ]
   },
   {
    "name": "개발·보안·인프라",
    "pattern": "개발|보안|인프라|api|서버|배포|devops|ci|cd|도커|docker|라이브러리|프레임워크|sdk|테스트|오픈소스|템플릿|연동|웹",
-   "evidenceCount": 1,
+   "evidenceCount": 15,
    "members": [
-    "no-ai-api"
+    "no-ai-api",
+    "social policy",
+    "hallucination",
+    "open-api",
+    "artificial-reef",
+    "civil-engineering",
+    "pesticide"
    ]
   },
   {
    "name": "기타",
    "pattern": null,
-   "evidenceCount": 24,
+   "evidenceCount": 509,
    "members": [
     "utility",
-    "k-ai-champion",
-    "govtech",
+    "ai",
     "public-service",
-    "예시 키워드",
-    "항목",
-    "contact-finder",
-    "koda",
-    "korea",
-    "onnara",
+    "korean",
+    "local-first",
+    "web-service",
+    "windows",
+    "python",
+    "edu",
+    "exe",
+    "opendata",
+    "desktop",
+    "document",
+    "gis",
+    "incheon",
+    "fisheries",
+    "map",
+    "offline",
+    "calendar",
+    "general-administration",
+    "geospatial",
+    "govtech",
     "security",
+    "k-ai-champion",
+    "ocean",
+    "industrial-safety",
+    "koda",
+    "on-premis",
+    "onnara",
+    "search enging",
+    "2026_challenge_session_1",
+    "aquaculture",
+    "code-generator",
+    "coordinates",
+    "game",
+    "inchoen",
+    "korea",
+    "llama.cpp",
+    "polygon",
+    "public-sector",
+    "search engine",
+    "template",
+    "살펴보는 방향",
+    "예시 키워드",
+    "카테고리 | 기본 결정",
+    "항목",
+    "agriculture",
+    "ai-skill",
+    "archive",
+    "backup",
+    "blender",
+    "budget",
+    "claude",
+    "coco17",
+    "codex",
+    "construction-estimate",
+    "contact-finder",
+    "defense",
+    "design",
+    "dotnet",
+    "dxf",
+    "embedding",
+    "fisheries-license",
+    "fishing-harbor",
+    "flutter",
+    "gemini",
+    "geojson",
+    "goespatial",
+    "government-support",
+    "handover",
+    "harbor",
+    "infographic",
+    "island",
+    "json",
+    "license",
+    "local-government",
+    "marine",
+    "marine-reseources",
+    "military-manpower",
+    "national-assembly",
+    "nextjs",
+    "open-data",
+    "openpyxl",
+    "orchestrator",
+    "parliamentary-audit",
+    "pose-classification",
+    "poster",
+    "postit",
+    "public-administration",
+    "public-data",
+    "public-finance",
+    "quantity-takeoff",
+    "reef",
+    "risk-assessment",
+    "road-pavement",
+    "scaffolding",
+    "small-business",
     "sqlite",
-    "web-service"
+    "static-site",
+    "statistics",
+    "synthetic-data",
+    "table",
+    "table-extraction",
+    "tide",
+    "tm",
+    "trade",
+    "tray-app",
+    "utiliity",
+    "vworld",
+    "weather",
+    "wpf"
    ]
   }
  ]

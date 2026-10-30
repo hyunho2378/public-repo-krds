@@ -93,8 +93,13 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "개발 연습용으로 만든 작은 개인 프로젝트(할 일 목록 등)를 모아 둔 저장소",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
@@ -114,8 +119,13 @@
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "교육과 개인 학습 목적의 저장소라고 밝히고 있다",
+   "evidence": {
+    "lines": [
+     25,
+     27
+    ]
+   },
    "source": "ai"
   }
  },
@@ -154,6 +164,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.688Z",
- "rulesAt": "2026-10-30T12:42:16.075Z",
+ "rulesAt": "2026-10-30T13:35:12.768Z",
  "sourceDate": "2026-10-30"
 }

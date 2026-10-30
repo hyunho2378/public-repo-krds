@@ -125,29 +125,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "기존 문서와 변경 문서를 비교해 달라진 문장·수치·날짜를 원문 위치와 함께 정리하는 신구대비표 초안 도구",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "규정·지침·계획서 개정 전후 비교",
+   "evidence": {
+    "lines": [
+     15,
+     21
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서",
+    "법령·규제·감사"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     21
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "Windows 실행파일을 내려받아 두 번 클릭하면 브라우저에 화면이 열린다. 설치나 파이썬은 필요 없다",
+   "evidence": {
+    "lines": [
+     27,
+     32
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "결과는 초안이라 담당자가 확인해야 하며 복잡한 표·다단·수식과 HWPX 조판은 원본과 다르게 나올 수 있다",
+   "evidence": {
+    "lines": [
+     104,
+     109
+    ]
+   },
    "source": "ai"
   }
  },
@@ -186,6 +214,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.684Z",
- "rulesAt": "2026-10-30T12:42:16.070Z",
+ "rulesAt": "2026-10-30T13:35:12.759Z",
  "sourceDate": "2026-10-30"
 }

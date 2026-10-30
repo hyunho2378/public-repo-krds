@@ -96,29 +96,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "내 카카오톡·문자·메일·메모를 모아 개인용 지식 저장소(마크다운)로 만드는 도구",
+   "evidence": {
+    "lines": [
+     5,
+     7
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "개인 기록 수집과 정리",
+   "evidence": {
+    "lines": [
+     5,
+     7
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "개발·보안·인프라",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     5,
+     13
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "파이썬으로 초기화, 웹 설정, 점검, 수집 실행 명령을 차례로 실행한다",
+   "evidence": {
+    "lines": [
+     20,
+     26
+    ]
+   },
    "source": "ai",
-   "rawCommands": null
+   "rawCommands": "python3 kit.py init / web / doctor / run"
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "맥(macOS) 전제이며 원문이 평문으로 저장되므로 개인용으로만 써야 한다",
+   "evidence": {
+    "lines": [
+     15,
+     16
+    ]
+   },
    "source": "ai"
   }
  },
@@ -157,6 +185,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:39:02.158Z",
- "rulesAt": "2026-10-30T12:42:16.057Z",
+ "rulesAt": "2026-10-30T13:35:12.736Z",
  "sourceDate": "2026-10-30"
 }

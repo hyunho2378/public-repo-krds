@@ -93,18 +93,35 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "3교대 근무자가 공용 PC 한 대에서 장비 업무의 해야 할 일과 인수인계를 관리하는 대시보드",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "소방 장비서무 교대 인수인계",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "시설·안전·재난"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
@@ -114,8 +131,13 @@
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "등록 전 초안은 앱 실행 중에만 유지되며 강제 종료나 전원 차단 때 복구되지 않는다",
+   "evidence": {
+    "lines": [
+     33,
+     33
+    ]
+   },
    "source": "ai"
   }
  },
@@ -154,6 +176,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:42:16.094Z",
- "rulesAt": "2026-10-30T12:42:16.094Z",
+ "rulesAt": "2026-10-30T13:35:12.807Z",
  "sourceDate": "2026-10-30"
 }

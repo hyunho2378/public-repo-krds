@@ -1,0 +1,182 @@
+{
+ "id": 1161,
+ "name": "병역판정검사 실시간 현황판",
+ "path": "pilddong/exam-dashboard-oracle",
+ "webUrl": "https://gitlab.aigov.go.kr/pilddong/exam-dashboard-oracle",
+ "topics": [
+  "STT",
+  "TTS",
+  "ai",
+  "automation",
+  "web-service"
+ ],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "requirements.txt"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    130
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-09-30T23:22:15.254+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "병무청",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "결과코드나 기록 존재만으로 2차 검사 종료·신체검사 이동 허가를 자동 판단하지 않습니다. 날짜만 있는 내보내기로 분 단위 대기시간을 만들지 않습니다. 자세한 실행·입력 형식은 [심리검사 팔로잉과 파일 조회 안내](심리팔로잉안내.md)를 참고하세요.",
+    "line": 26,
+    "name": "결과",
+    "url": null
+   },
+   {
+    "quote": "Oracle Client가 필요한 환경에서는 `run.cmd --client-dir \"C:\\Oracle\\instantclient_19_32\"`로 지정합니다. 오프라인 ZIP의 `start.cmd`는 동봉 Python·Oracle Client를 사용하므로 인터넷 설치가 필요 없습니다. [폐쇄망 실행 안내](먼저읽기.md)를 참고하세요.",
+    "line": 114,
+    "name": null,
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    26,
+    114
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "Python",
+   "JavaScript",
+   "HTML",
+   "Batchfile",
+   "Python(requirements.txt)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "requirements.txt"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": false
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.207Z",
+ "rulesAt": "2026-10-30T13:35:13.207Z",
+ "sourceDate": "2026-10-30"
+}

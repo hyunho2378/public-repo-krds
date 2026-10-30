@@ -1,0 +1,200 @@
+{
+ "id": 1053,
+ "name": "바로 맵 - 공공지도 생성 서비스 ++웹앱 제공++",
+ "path": "choshg/map",
+ "webUrl": "https://gitlab.aigov.go.kr/choshg/map",
+ "topics": [
+  "map",
+  "public-service",
+  "utility",
+  "vworld",
+  "web-service"
+ ],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "package.json"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": "MIT",
+  "evidence": {
+   "lines": [
+    14,
+    14
+   ]
+  },
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    150
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-09-15T22:43:17.609+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "초실행관",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "Firebase 설정은 [Firebase 웹 앱 등록 안내](https://firebase.google.com/docs/web/setup)와 [Cloud Firestore 안내](https://firebase.google.com/docs/firestore)를 참고하십시오.",
+    "line": 83,
+    "name": null,
+    "url": "https://firebase.google.com/docs/web/setup"
+   },
+   {
+    "quote": "Hosting 배포의 공식 안내는 [Firebase Hosting 문서](https://firebase.google.com/docs/hosting)를 참고하십시오.",
+    "line": 101,
+    "name": null,
+    "url": "https://firebase.google.com/docs/hosting"
+   },
+   {
+    "quote": "Worker 배포의 공식 안내는 [Cloudflare Workers 문서](https://developers.cloudflare.com/workers/)를 참고하십시오.",
+    "line": 112,
+    "name": null,
+    "url": "https://developers.cloudflare.com/workers/"
+   },
+   {
+    "quote": "주소 변환 설정은 [VWorld OpenAPI 개발자센터](https://www.vworld.kr/dev/v4api.do)를 참고하십시오.",
+    "line": 139,
+    "name": null,
+    "url": "https://www.vworld.kr/dev/v4api.do"
+   }
+  ],
+  "evidence": {
+   "lines": [
+    83,
+    139
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "TSX",
+   "TypeScript",
+   "CSS",
+   "JavaScript",
+   "HTML",
+   "Node.js(package.json)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "package.json"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.157Z",
+ "rulesAt": "2026-10-30T13:35:13.157Z",
+ "sourceDate": "2026-10-30"
+}

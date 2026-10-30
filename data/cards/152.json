@@ -101,25 +101,48 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "금융감독원 전자공시(OpenDART) 정보를 AI 도구에서 말로 물어 조회하는 연결 서버",
+   "evidence": {
+    "lines": [
+     3,
+     9
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "기업 공시·재무 정보 조회와 분석",
+   "evidence": {
+    "lines": [
+     3,
+     9
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "데이터·통계·분석",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     9
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "Node.js를 깔고 명령 한 줄을 실행하면 안내에 따라 AI 프로그램에 자동 연결된다. 공시 인증키는 무료로 따로 발급받는다",
+   "evidence": {
+    "lines": [
+     17,
+     28
+    ]
+   },
    "source": "ai",
-   "rawCommands": null
+   "rawCommands": "npx -y korean-dart-mcp setup"
   },
   "limitations": {
    "value": null,
@@ -162,6 +185,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:38:40.920Z",
- "rulesAt": "2026-10-30T12:42:16.048Z",
+ "rulesAt": "2026-10-30T13:35:12.719Z",
  "sourceDate": "2026-10-30"
 }

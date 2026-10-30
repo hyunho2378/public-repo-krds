@@ -1,0 +1,205 @@
+{
+ "id": 989,
+ "name": "수산자원관리수면 KML 변환 도구",
+ "path": "incheon-fisheries-gis/resource-management-area-kml",
+ "webUrl": "https://gitlab.aigov.go.kr/incheon-fisheries-gis/resource-management-area-kml",
+ "topics": [
+  "automation",
+  "excel",
+  "fisheries",
+  "geospatial",
+  "gis",
+  "incheon",
+  "kml",
+  "opendata",
+  "polygon",
+  "python"
+ ],
+ "executionForm": {
+  "value": "check",
+  "evidence": [
+   "체험하기.html"
+  ],
+  "source": "rule",
+  "label": "확인 필요",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": {
+   "paths": [
+    "LICENSE"
+   ]
+  },
+  "source": "rule",
+  "note": "LICENSE 파일은 있으나 이름은 README에 없음"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    139
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": [
+   {
+    "quote": "수산자원관리수면은 시도지사가 지정해 고시하는 구역입니다. 고시문에는 좌표가 표로 실리지만 지도로 보려면 사람이 일일이 도형을 그려야 합니다. 이 도구는 엑셀 두 시트만 채우면 구역 도형을 만들어 줍니다. 연도별로 색이 달라 언제 지정된 구역인지 지도에서 바로 구분됩니다.",
+    "lines": [
+     5,
+     5
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "A[\"지정 고시문<br/>구역 좌표표\"] --> B[\"엑셀 두 시트<br/>구역 정보 · 꼭짓점\"]",
+    "lines": [
+     11,
+     11
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "이 도구가 만든 KML은 인천시가 쓰는 모바일 앱에 들어갑니다. 지정 연도별로 구역 색이 나뉘고, 구역을 누르면 고시문의 내용이 그대로 나옵니다.",
+    "lines": [
+     20,
+     20
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "도구와 서식만 담았습니다. 실제 지정 현황 엑셀과 고시문, 변환 결과물, 실행 파일은 제외했습니다. 지정 고시는 각 시도가 공보로 공개하므로 필요하면 그쪽에서 받으시면 됩니다.",
+    "lines": [
+     126,
+     126
+    ],
+    "dates": [],
+    "identifiers": []
+   }
+  ],
+  "evidence": {
+   "lines": [
+    5,
+    126
+   ]
+  },
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-09-14T08:45:15.137+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "인천 해양수산 정보 서비스",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": false
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.118Z",
+ "rulesAt": "2026-10-30T13:35:13.118Z",
+ "sourceDate": "2026-10-30"
+}

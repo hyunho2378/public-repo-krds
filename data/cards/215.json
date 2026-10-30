@@ -102,29 +102,56 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "HWP·HWPX·DOCX·TXT 문서의 맞춤법·띄어쓰기·공공언어를 내 Windows PC 안에서 검사하는 도구",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "공문서 맞춤법과 표기 검수",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "최신 Windows 실행파일을 내려받아 열고 문서를 불러오면 된다. 설치나 서버 설정은 없다",
+   "evidence": {
+    "lines": [
+     23,
+     36
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "DOCX 원본 형식 재생성과 HWP·HWPX 원본 직접 수정은 아직 안 되고, 규칙 기반 제안이라 정답을 보장하지 않는다",
+   "evidence": {
+    "lines": [
+     51,
+     57
+    ]
+   },
    "source": "ai"
   }
  },
@@ -163,6 +190,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.680Z",
- "rulesAt": "2026-10-30T12:42:16.066Z",
+ "rulesAt": "2026-10-30T13:35:12.752Z",
  "sourceDate": "2026-10-30"
 }

@@ -1,0 +1,183 @@
+{
+ "id": 424,
+ "name": "Hassle-Reduction-series-1-diskclean",
+ "path": "tyui22/Hassle-Reduction-series-1-diskclean",
+ "webUrl": "https://gitlab.aigov.go.kr/tyui22/Hassle-Reduction-series-1-diskclean",
+ "topics": [],
+ "executionForm": {
+  "value": "check",
+  "evidence": null,
+  "source": "rule",
+  "label": "확인 필요",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": {
+   "paths": [
+    "licenses"
+   ]
+  },
+  "source": "rule",
+  "note": "LICENSE 파일은 있으나 이름은 README에 없음"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    250
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-09T00:03:59.576+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "과학기술정보통신부",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "C#",
+   "PowerShell"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "큰 폴더와 큰 파일을 용량순으로 보여 주는 Windows용 앱, 파일 삭제·이동 기능은 없다",
+   "evidence": {
+    "lines": [
+     5,
+     7
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "PC 용량을 많이 차지하는 파일 찾기",
+   "evidence": {
+    "lines": [
+     5,
+     5
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "기타"
+   ],
+   "evidence": {
+    "lines": [
+     5,
+     7
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "ZIP을 받아 압축을 푼 뒤 exe를 더블클릭하고, 드라이브를 골라 빠른 스캔을 누른다",
+   "evidence": {
+    "lines": [
+     30,
+     35
+    ]
+   },
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": "코드 서명이 없어 Windows 경고가 뜰 수 있어 출처 확인이 필요하다",
+   "evidence": {
+    "lines": [
+     39,
+     39
+    ]
+   },
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:48:35.452Z",
+ "rulesAt": "2026-10-30T13:35:12.848Z",
+ "sourceDate": "2026-10-30"
+}

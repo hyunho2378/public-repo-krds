@@ -1,0 +1,188 @@
+{
+ "id": 886,
+ "name": "STAY UP 소방드론 현장 상황판",
+ "path": "tenmoo/stayup-dash",
+ "webUrl": "https://gitlab.aigov.go.kr/tenmoo/stayup-dash",
+ "topics": [],
+ "executionForm": {
+  "value": "check",
+  "evidence": [
+   "stayup-dash.html"
+  ],
+  "source": "rule",
+  "label": "확인 필요",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": "Apache License 2.0",
+  "evidence": {
+   "lines": [
+    928,
+    928
+   ]
+  },
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    938
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-10-27T12:59:44.589+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "완주소방서",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": "[전체 맞춤과 핀](./assets/readme/map-pins-preview.png), [약 244% 확대·이동](./assets/readme/map-zoom-pan-preview.png) 사진은 같은 원본 지도에서 보기 상태만 달라진 예시입니다. 지도 © OpenStreetMap 기여자 · [저작권 및 ODbL 안내](https://www.openstr",
+  "evidence": {
+   "lines": [
+    239,
+    239
+   ]
+  },
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "- AI-page와는 `stayup-ai-candidates.json` 파일로 연결합니다. 같은 PC에서는 양쪽의 **자동 저장/자동 읽기 폴더 연결**로 작업별 후보 파일을 약 2초 간격으로 갱신할 수 있습니다. 같은 PC나 다른 PC에서 **탐지 사진 불러오기** 또는 후보 JSON 한 개를 끌어다 놓아 추가/갱신합니다. 기존 **백업 파일 열기**는 상황 전체 복원용입니다. 반복 파일·과거/충돌 갱신을 구분하고 기존 상황",
+    "line": 87,
+    "name": null,
+    "url": null
+   },
+   {
+    "quote": "2. `수색구역 → 지도·격자 설정 → 온라인 지도 연결 설정`을 펼칩니다. 네이버는 Maps Application에서 **Web Dynamic Map**과 실행할 웹 주소를 등록하고 Client ID를 준비합니다. 구글은 결제 계정이 연결된 프로젝트에서 **Maps JavaScript API**를 켜고 API 키에 웹사이트와 API 제한을 설정합니다. [네이버 Application 안내](https://guide.ncloud",
+    "line": 222,
+    "name": "연결된",
+    "url": "https://guide.ncloud-docs.com/docs/maps-app"
+   },
+   {
+    "quote": "회귀검사는 [tests/regression.html](./tests/regression.html)의 기본 동작·모바일 핀 검사와 [review-fixes.js](./tests/review-fixes.js), [ui-ux-fixes.js](./tests/ui-ux-fixes.js), [map-workspace.js](./tests/map-workspace.js), [online-maps.js](./tests/online-maps",
+    "line": 715,
+    "name": "브라우저",
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    87,
+    715
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "HTML",
+   "JavaScript",
+   "Shell"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.076Z",
+ "rulesAt": "2026-10-30T13:35:13.076Z",
+ "sourceDate": "2026-10-30"
+}

@@ -139,29 +139,56 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "전임자 업무 폴더의 파일명·날짜만 읽어 업무 가지별로 나누고 인수인계 초안을 만드는 도구",
+   "evidence": {
+    "lines": [
+     19,
+     28
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "담당자 교체 시 업무 폴더 인수인계 준비",
+   "evidence": {
+    "lines": [
+     19,
+     28
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서"
+   ],
+   "evidence": {
+    "lines": [
+     19,
+     28
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "소스를 내려받아 npm으로 설치·실행한 뒤 브라우저에서 localhost 주소를 연다. 전용 Windows 실행파일은 없다",
+   "evidence": {
+    "lines": [
+     56,
+     68
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "검증용 초안 단계이며 자동 결과는 업무 상태의 확정본이 아니라 원문과 결재 기록 확인이 필요하다",
+   "evidence": {
+    "lines": [
+     3,
+     6
+    ]
+   },
    "source": "ai"
   }
  },
@@ -200,6 +227,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.680Z",
- "rulesAt": "2026-10-30T12:42:16.067Z",
+ "rulesAt": "2026-10-30T13:35:12.753Z",
  "sourceDate": "2026-10-30"
 }

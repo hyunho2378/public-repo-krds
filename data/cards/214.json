@@ -97,23 +97,46 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "화면에서 마우스로 끌어 지정한 영역의 숫자를 읽어 더하기·곱하기·사용자 수식으로 계산해 주는 Windows 계산기",
+   "evidence": {
+    "lines": [
+     5,
+     5
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "화면 속 숫자의 합계 등 계산",
+   "evidence": {
+    "lines": [
+     5,
+     5
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "엑셀·사무 자동화",
+    "영상·이미지·음성"
+   ],
+   "evidence": {
+    "lines": [
+     5,
+     19
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "파이썬 가상환경을 만들고 필요한 패키지를 설치한 뒤 run.py를 실행하며, 별도 명령으로 Windows 실행파일도 만든다",
+   "evidence": {
+    "lines": [
+     14,
+     31
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -158,6 +181,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.679Z",
- "rulesAt": "2026-10-30T12:42:16.066Z",
+ "rulesAt": "2026-10-30T13:35:12.751Z",
  "sourceDate": "2026-10-30"
 }

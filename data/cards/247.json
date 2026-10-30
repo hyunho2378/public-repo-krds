@@ -97,29 +97,56 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "HWPX·DOCX·PPTX 안의 이미지, 영상, 첨부파일, 글꼴 등을 찾아 분류하고 저장하는 도구",
+   "evidence": {
+    "lines": [
+     5,
+     8
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "문서 안에 든 이미지와 첨부파일 꺼내기",
+   "evidence": {
+    "lines": [
+     5,
+     6
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서"
+   ],
+   "evidence": {
+    "lines": [
+     5,
+     6
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "릴리스에서 실행용 ZIP을 받아 압축을 푼 뒤 시리즈5_실행.cmd를 더블클릭하고 문서를 선택하거나 끌어 놓는다",
+   "evidence": {
+    "lines": [
+     43,
+     57
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "HWP·DOC·PPT·XLS 같은 구형 문서, PDF, 암호화 문서, 100MB 초과 문서는 지원하지 않는다",
+   "evidence": {
+    "lines": [
+     81,
+     86
+    ]
+   },
    "source": "ai"
   }
  },
@@ -158,6 +185,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.694Z",
- "rulesAt": "2026-10-30T12:42:16.081Z",
+ "rulesAt": "2026-10-30T13:35:12.781Z",
  "sourceDate": "2026-10-30"
 }

@@ -1,0 +1,234 @@
+{
+ "id": 780,
+ "name": "galpi-korean-law-mcp",
+ "path": "datahj/galpi-korean-law-mcp",
+ "webUrl": "https://gitlab.aigov.go.kr/datahj/galpi-korean-law-mcp",
+ "topics": [],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "Dockerfile"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": {
+   "paths": [
+    "LICENSE"
+   ]
+  },
+  "source": "rule",
+  "note": "LICENSE 파일은 있으나 이름은 README에 없음"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    229
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": [
+   {
+    "quote": "첫 MVP는 7개 관점을 얕게 펼치지 않고 **감사 대비 점검 엔진**을 깊게 구현한다. 입력 문서에서 인용 법령과 조문을 추출하고, 공식 원문 API로 실재성·내용 일치성·기준일 현행성을 검증한 뒤, 검증된 근거만 감사 지적 가능 항목, 근거 조문 확인표, 보완 조치, 추가 조회 필요 항목으로 분리한다.",
+    "lines": [
+     11,
+     11
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "갈피와 평가일 현재 공개된 한국 법령 MCP 2종을 동일한 조건에서 비교했다. Codex CLI의 `gpt-5.5`, reasoning high, 기준일 2026-07-20을 고정하고, 35문항을 제품별 3회씩 독립 실행했다. 전체 표본은 315개 답변이며 문항마다 새 세션을 사용했다.",
+    "lines": [
+     19,
+     19
+    ],
+    "dates": [
+     "2026-07-20"
+    ],
+    "identifiers": []
+   },
+   {
+    "quote": "| `korean_law_get_at_date` | 기준일에 유효한 연혁본·조문 조회 |",
+    "lines": [
+     140,
+     140
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "| `korean_law_compare_provision_versions` | 두 기준일 조문 원문과 생성 비교 결과 반환 |",
+    "lines": [
+     142,
+     142
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "| `korean_law_get_transitional_provisions` | 부칙의 시행일·적용례·경과조치 추출 |",
+    "lines": [
+     143,
+     143
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "`benchmark`는 로컬 OC로 실시간 회귀 문항을 실행한다. 가지조문, 항 단위, 판례 정확검색, 약칭, 대형 법령 절단, 기준일 연혁을 표와 점수로 출력한다.",
+    "lines": [
+     210,
+     210
+    ],
+    "dates": [],
+    "identifiers": []
+   }
+  ],
+  "evidence": {
+   "lines": [
+    11,
+    210
+   ]
+  },
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-24T10:42:08.757+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "의성군청",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": {
+   "aiWorkDocs": 2
+  },
+  "evidence": {
+   "paths": [
+    "AGENTS.md",
+    "CLAUDE.md"
+   ]
+  },
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "JavaScript",
+   "TypeScript",
+   "HTML",
+   "Dockerfile",
+   "Node.js(package.json)",
+   "Docker"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "package.json",
+    "Dockerfile"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.022Z",
+ "rulesAt": "2026-10-30T13:35:13.022Z",
+ "sourceDate": "2026-10-30"
+}

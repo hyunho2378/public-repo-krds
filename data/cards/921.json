@@ -1,0 +1,182 @@
+{
+ "id": 921,
+ "name": "온나라 플러스",
+ "path": "memory365/onnara-plus",
+ "webUrl": "https://gitlab.aigov.go.kr/memory365/onnara-plus",
+ "topics": [
+  "onnara",
+  "public-service",
+  "utility"
+ ],
+ "executionForm": {
+  "value": "check",
+  "evidence": [
+   "popup.html"
+  ],
+  "source": "rule",
+  "label": "확인 필요",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    292
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-10-09T00:05:01.772+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "서귀포시",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "> **포크 및 통합 프로젝트**",
+    "line": 6,
+    "name": "통합",
+    "url": null
+   },
+   {
+    "quote": "> onnara plus+는 아래 두 원본 프로젝트를 포크·통합한 뒤, 온나라 UI 크기 조절과 기관별 적용 설정을 추가한 프로젝트입니다.",
+    "line": 8,
+    "name": "원본",
+    "url": null
+   },
+   {
+    "quote": "이 프로젝트는 다음 원본 프로젝트를 기반으로 합니다.",
+    "line": 226,
+    "name": "원본",
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    6,
+    226
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "JavaScript",
+   "HTML",
+   "CSS"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": true
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.090Z",
+ "rulesAt": "2026-10-30T13:35:13.090Z",
+ "sourceDate": "2026-10-30"
+}

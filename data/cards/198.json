@@ -99,23 +99,46 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "만든 웹앱을 코딩 에이전트에게 \"데모 영상 만들어줘\"라고 말하면 자막과 커서가 들어간 시연 영상으로 만들어 주는 도구",
+   "evidence": {
+    "lines": [
+     7,
+     8
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "업무 보고·내부 발표용 앱 시연 영상 제작",
+   "evidence": {
+    "lines": [
+     33,
+     36
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "영상·이미지·음성",
+    "개발·보안·인프라"
+   ],
+   "evidence": {
+    "lines": [
+     7,
+     8
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "앱을 켜 두고 코딩 에이전트에게 우리말로 요청하면 영상 파일이 만들어진다",
+   "evidence": {
+    "lines": [
+     44,
+     49
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -160,6 +183,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.677Z",
- "rulesAt": "2026-10-30T12:42:16.062Z",
+ "rulesAt": "2026-10-30T13:35:12.745Z",
  "sourceDate": "2026-10-30"
 }

@@ -1,0 +1,215 @@
+{
+ "id": 489,
+ "name": "재난문자 지도",
+ "path": "AILab_Manager/disaster_v2_clean",
+ "webUrl": "https://gitlab.aigov.go.kr/AILab_Manager/disaster_v2_clean",
+ "topics": [],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "Dockerfile"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    178
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": [
+   {
+    "quote": "- `crtDt`: 조회 기준일",
+    "lines": [
+     82,
+     82
+    ],
+    "dates": [],
+    "identifiers": []
+   }
+  ],
+  "evidence": {
+   "lines": [
+    82,
+    82
+   ]
+  },
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-26T21:52:26.120+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "행정안전부",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "이 파일은 `vuski/admdongkor`의 시도·시군구 중심점 TSV를 바탕으로 생성했고, 총 327개 고정좌표를 담고 있습니다.",
+    "line": 96,
+    "name": null,
+    "url": null
+   },
+   {
+    "quote": "- 재난 유형은 코드 내부의 사전 목록을 기반으로 자동 분류합니다.",
+    "line": 156,
+    "name": "유형은",
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    96,
+    156
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "JavaScript",
+   "CSS",
+   "HTML",
+   "Shell",
+   "Dockerfile",
+   "Docker"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "Dockerfile"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "최근 재난문자를 지도와 목록으로 함께 보여 주는 대시보드",
+   "evidence": {
+    "lines": [
+     7,
+     8
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "지역별 재난안전문자 확인",
+   "evidence": {
+    "lines": [
+     7,
+     8
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "시설·안전·재난",
+    "데이터·통계·분석"
+   ],
+   "evidence": {
+    "lines": [
+     7,
+     8
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "안내된 웹 주소로 열 수 있다. 내 컴퓨터에서는 파이썬 서버를 실행한 뒤 브라우저로 접속한다",
+   "evidence": {
+    "lines": [
+     5,
+     34
+    ]
+   },
+   "source": "ai",
+   "rawCommands": "python server.py"
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:48:35.472Z",
+ "rulesAt": "2026-10-30T13:35:12.878Z",
+ "sourceDate": "2026-10-30"
+}

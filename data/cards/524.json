@@ -1,0 +1,198 @@
+{
+ "id": 524,
+ "name": "온AI Work",
+ "path": "kdhkdh0506/govwork",
+ "webUrl": "https://gitlab.aigov.go.kr/kdhkdh0506/govwork",
+ "topics": [],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "package.json"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": "MIT",
+  "evidence": {
+   "lines": [
+    17,
+    17
+   ]
+  },
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    241
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-13T10:04:05.351+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "인천광역시",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": {
+   "aiWorkDocs": 1
+  },
+  "evidence": {
+   "paths": [
+    "AGENTS.md"
+   ]
+  },
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "Python",
+   "TypeScript",
+   "TSX",
+   "JavaScript",
+   "CSS",
+   "Node.js(package.json)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "package.json"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "왼쪽 채팅으로 보고서를 만들고 오른쪽에서 한글(HWPX) 문서를 바로 확인·편집하는 작업공간",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "공공 한글 문서(보고서) 작성",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "문서·보고서",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "안내된 웹 주소(work.govpress.cloud)에서 바로 사용해 볼 수 있다",
+   "evidence": {
+    "lines": [
+     7,
+     7
+    ]
+   },
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": "AI 결과는 검토가 필요한 초안이고, 공개 실증 서비스에는 개인정보·비공개 자료를 넣지 말며 최종 HWPX는 한컴오피스에서 확인해야 한다",
+   "evidence": {
+    "lines": [
+     22,
+     24
+    ]
+   },
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:48:35.480Z",
+ "rulesAt": "2026-10-30T13:35:12.886Z",
+ "sourceDate": "2026-10-30"
+}

@@ -93,29 +93,56 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "Windows에서 화면 영상과 마우스·키보드 동작을 기록하고 저장한 입력을 반복 재실행하는 업무 매크로",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "반복 입력 업무 자동화",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "엑셀·사무 자동화"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "설치 EXE를 실행하거나 포터블 압축을 풀어 exe를 연다. Node.js 등 별도 설치는 필요 없다",
+   "evidence": {
+    "lines": [
+     16,
+     17
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "영상 분석이나 AI 학습 기능이 아니고 저장된 입력 재실행뿐이며, 창 위치와 화면 배율을 맞춰 1회 시험해야 한다",
+   "evidence": {
+    "lines": [
+     42,
+     43
+    ]
+   },
    "source": "ai"
   }
  },
@@ -154,6 +181,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.681Z",
- "rulesAt": "2026-10-30T12:42:16.068Z",
+ "rulesAt": "2026-10-30T13:35:12.754Z",
  "sourceDate": "2026-10-30"
 }

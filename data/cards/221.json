@@ -147,29 +147,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "만들고 싶은 서비스를 말하면 공공데이터포털 목록에서 관련 데이터 이름·제공기관·공식 링크를 찾아 주는 MCP 서버",
+   "evidence": {
+    "lines": [
+     7,
+     10
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "공공데이터 활용 서비스 기획 시 데이터 후보 탐색",
+   "evidence": {
+    "lines": [
+     7,
+     8
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "데이터·통계·분석",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     7,
+     10
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "Claude에서 공개 원격 서버 주소를 사용자 지정 커넥터로 추가하거나 로컬 서버를 직접 실행해 연결한다",
+   "evidence": {
+    "lines": [
+     66,
+     75
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "실제 데이터 값과 실시간 정보는 주지 않고 목록 정보만 알려 주며 이용조건은 공식 페이지에서 확인해야 한다",
+   "evidence": {
+    "lines": [
+     12,
+     14
+    ]
+   },
    "source": "ai"
   }
  },
@@ -208,6 +236,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.683Z",
- "rulesAt": "2026-10-30T12:42:16.070Z",
+ "rulesAt": "2026-10-30T13:35:12.758Z",
  "sourceDate": "2026-10-30"
 }

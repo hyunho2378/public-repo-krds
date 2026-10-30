@@ -98,29 +98,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "영문 PDF를 한국어 초안으로 옮기고 번역 후보를 사람이 직접 확인하는 PC 안 번역 작업장",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "영문 PDF 문서 번역",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "릴리스에서 설치 파일(exe)을 받아 실행하고, 필요하면 로컬 AI 설치를 한 번 한 뒤 PDF를 선택한다",
+   "evidence": {
+    "lines": [
+     30,
+     34
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "PDF 번역 초안과 검토 상태를 만드는 MVP이며 완성 PDF 내보내기, OCR, DOCX·HWP 입력, 인증 번역은 아직 지원하지 않는다",
+   "evidence": {
+    "lines": [
+     26,
+     26
+    ]
+   },
    "source": "ai"
   }
  },
@@ -159,6 +187,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:41:30.743Z",
- "rulesAt": "2026-10-30T12:42:16.083Z",
+ "rulesAt": "2026-10-30T13:35:12.784Z",
  "sourceDate": "2026-10-30"
 }

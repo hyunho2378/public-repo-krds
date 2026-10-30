@@ -97,29 +97,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "AI 채팅, 문서 기반 챗봇, 보고서·보도자료 등 공문서 자동 작성을 한 곳에서 하는 AI 업무 웹 플랫폼",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "공문서 작성과 문서 근거 질의응답",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "Node.js를 설치하고 환경 설정 파일을 만든 뒤 개발 서버를 실행해 브라우저로 접속하고 회원가입해 쓴다",
+   "evidence": {
+    "lines": [
+     87,
+     102
+    ]
+   },
    "source": "ai",
-   "rawCommands": null
+   "rawCommands": "npm install, npm run dev"
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "공개된 코드는 베타 버전 기준이라 정식 운영 버전과 기능·구성이 다를 수 있다",
+   "evidence": {
+    "lines": [
+     6,
+     8
+    ]
+   },
    "source": "ai"
   }
  },
@@ -158,6 +186,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:41:30.745Z",
- "rulesAt": "2026-10-30T12:42:16.086Z",
+ "rulesAt": "2026-10-30T13:35:12.790Z",
  "sourceDate": "2026-10-30"
 }

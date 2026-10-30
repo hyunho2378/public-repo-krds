@@ -104,29 +104,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "특허청 KIPRIS의 특허·상표·디자인을 AI 도구에서 검색하는 연결 서버",
+   "evidence": {
+    "lines": [
+     6,
+     6
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "특허·상표·디자인 검색과 서지정보 조회",
+   "evidence": {
+    "lines": [
+     6,
+     6
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "데이터·통계·분석",
+    "법령·규제·감사"
+   ],
+   "evidence": {
+    "lines": [
+     6,
+     6
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "안내된 접속 주소를 AI 프로그램에 등록하면 설치 없이 쓴다. 직접 설치할 때는 내려받아 빌드하고 특허청 인증키를 넣는다",
+   "evidence": {
+    "lines": [
+     22,
+     50
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "공용 서버는 무키 사용자 전체가 나눠 쓰는 한도(분당 30회, 24시간 30회)라 상시 사용에는 부족하다",
+   "evidence": {
+    "lines": [
+     33,
+     33
+    ]
+   },
    "source": "ai"
   }
  },
@@ -165,6 +193,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:38:40.925Z",
- "rulesAt": "2026-10-30T12:42:16.051Z",
+ "rulesAt": "2026-10-30T13:35:12.724Z",
  "sourceDate": "2026-10-30"
 }

@@ -123,29 +123,56 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "사진·영상·캡처보드 화면에서 사람과 차량을 찾아 표시하고 GPS 사진은 지도에 보여 주는 프로그램",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "현장 사진·영상 속 사람·차량 탐지와 위치 확인",
+   "evidence": {
+    "lines": [
+     5,
+     5
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "영상·이미지·음성"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "파이썬 환경을 만들어 필요한 패키지를 설치한 뒤 AI-detection.py를 실행한다",
+   "evidence": {
+    "lines": [
+     73,
+     110
+    ]
+   },
    "source": "ai",
-   "rawCommands": null
+   "rawCommands": "python AI-detection.py"
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "V26.1027 Windows 배포본은 재빌드와 검증 뒤 공개 예정이다",
+   "evidence": {
+    "lines": [
+     13,
+     14
+    ]
+   },
    "source": "ai"
   }
  },
@@ -184,6 +211,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.693Z",
- "rulesAt": "2026-10-30T12:42:16.081Z",
+ "rulesAt": "2026-10-30T13:35:12.780Z",
  "sourceDate": "2026-10-30"
 }

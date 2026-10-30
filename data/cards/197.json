@@ -151,18 +151,36 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "질문 하나를 공식 자료 근거가 달린 보고서로 만들어 주는 리서치 보조 도구",
+   "evidence": {
+    "lines": [
+     7,
+     8
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "공공분야 사례·지침 조사와 보고서 작성",
+   "evidence": {
+    "lines": [
+     49,
+     57
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     7,
+     8
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
@@ -212,6 +230,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.676Z",
- "rulesAt": "2026-10-30T12:42:16.061Z",
+ "rulesAt": "2026-10-30T13:35:12.744Z",
  "sourceDate": "2026-10-30"
 }

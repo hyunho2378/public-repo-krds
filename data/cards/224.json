@@ -98,29 +98,56 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "PDF를 눈으로 보며 끌어서 순서를 바꾸고 불필요한 페이지를 지워 하나로 저장하는 오프라인 편집 도구",
+   "evidence": {
+    "lines": [
+     5,
+     7
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "PDF 합치기·쪽 순서 정리",
+   "evidence": {
+    "lines": [
+     5,
+     5
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서"
+   ],
+   "evidence": {
+    "lines": [
+     5,
+     7
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "ZIP을 내려받아 압축을 완전히 푼 뒤 offline 폴더의 index.html을 연다. 설치와 로그인은 필요 없다",
+   "evidence": {
+    "lines": [
+     7,
+     7
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "암호 PDF와 DRM 문서는 안 되고 파일당 100MB, 전체 200MB, 50개, 1,000쪽까지다",
+   "evidence": {
+    "lines": [
+     134,
+     143
+    ]
+   },
    "source": "ai"
   }
  },
@@ -159,6 +186,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.685Z",
- "rulesAt": "2026-10-30T12:42:16.071Z",
+ "rulesAt": "2026-10-30T13:35:12.762Z",
  "sourceDate": "2026-10-30"
 }

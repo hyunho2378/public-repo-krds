@@ -103,29 +103,56 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "소스 코드·설정·의존성의 보안 상태를 내 컴퓨터에서 점검하는 스캐너",
+   "evidence": {
+    "lines": [
+     7,
+     9
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "소스 코드 보안·품질 점검",
+   "evidence": {
+    "lines": [
+     7,
+     9
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "개발·보안·인프라"
+   ],
+   "evidence": {
+    "lines": [
+     7,
+     9
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "파이썬 3.10 이상에서 내려받아 명령을 실행하면 점검 화면이 열린다",
+   "evidence": {
+    "lines": [
+     26,
+     36
+    ]
+   },
    "source": "ai",
-   "rawCommands": null
+   "rawCommands": "python3 -m security_scanner app"
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "웹·ZAP 점검은 명시적으로 권한을 받은 대상에만 써야 한다",
+   "evidence": {
+    "lines": [
+     7,
+     9
+    ]
+   },
    "source": "ai"
   }
  },
@@ -164,6 +191,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:38:40.929Z",
- "rulesAt": "2026-10-30T12:42:16.054Z",
+ "rulesAt": "2026-10-30T13:35:12.731Z",
  "sourceDate": "2026-10-30"
 }

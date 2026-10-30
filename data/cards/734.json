@@ -1,0 +1,184 @@
+{
+ "id": 734,
+ "name": "KODA-MCP",
+ "path": "y2kthr/KODA-MCP",
+ "webUrl": "https://gitlab.aigov.go.kr/y2kthr/KODA-MCP",
+ "topics": [
+  "koda",
+  "local-llm",
+  "security"
+ ],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "pyproject.toml"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": {
+   "paths": [
+    "LICENSE"
+   ]
+  },
+  "source": "rule",
+  "note": "LICENSE 파일은 있으나 이름은 README에 없음"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    215
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-09-10T10:11:28.785+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "한국사회보장정보원",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "검사는 항상 요청마다 새로 만들어지는 별도 프로세스에서 수행되어 서버 본체를 보호합니다. 그 프로세스는 상주 템플릿에서 fork되며, 템플릿은 인증 설정을 읽기 전에 확보되므로 토큰이 워커로 넘어가지 않습니다. 인증 실패, 입력 한도 초과, 동시 요청, 시간 초과는 모두 작업을 차단하지 않는 `not_evaluated` 상태로 끝납니다.",
+    "line": 11,
+    "name": null,
+    "url": null
+   },
+   {
+    "quote": "**3. 매체로 이송.** 승인된 매체로 `tar.gz` 하나만 옮깁니다. 저장소를 복제할 필요가 없습니다.",
+    "line": 103,
+    "name": null,
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    11,
+    103
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "Python",
+   "Shell",
+   "Dockerfile",
+   "Python(pyproject.toml)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "pyproject.toml"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": false
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:12.997Z",
+ "rulesAt": "2026-10-30T13:35:12.997Z",
+ "sourceDate": "2026-10-30"
+}

@@ -1,0 +1,184 @@
+{
+ "id": 785,
+ "name": "회의내용 실시간 AI 자막 생성 시스템",
+ "path": "pilddong/STT-AI-Gen",
+ "webUrl": "https://gitlab.aigov.go.kr/pilddong/STT-AI-Gen",
+ "topics": [
+  "STT",
+  "TTS",
+  "ai",
+  "automation",
+  "public-service",
+  "web-service"
+ ],
+ "executionForm": {
+  "value": "download",
+  "evidence": [
+   "diagnose_client.bat"
+  ],
+  "source": "rule",
+  "label": "내려받아 실행(exe)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    301
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-10-16T15:49:25.678+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "병무청",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "Windows HOST PC의 브라우저 마이크를 겹치는 음성 조각으로 녹음하고, NAVER CLOVA Studio GOV STT에서 한 번만 변환해 내부망 Viewer에게 SSE로 배포하는 로컬 우선 PoC입니다. NAVER API 키는 HOST에서 관리하며 STT 호출은 범정부 AI 공통기반으로 전달합니다. 자막 열람은 승인된 내부망에서 `admin_token`으로 인증하며, HOST에서 보관·암호화·자동 삭제 정책을 설정합",
+    "line": 5,
+    "name": null,
+    "url": null
+   },
+   {
+    "quote": "서버는 기존 `start_server.bat`으로 운영합니다. SSE 배포만 별도 앱으로 보는 기능이며 STT의 녹음 주기와 처리 지연은 그대로입니다. [클라이언트 실행 및 설정 안내](desktop-client/README.md)를 참고하십시오.",
+    "line": 87,
+    "name": null,
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    5,
+    87
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "Python",
+   "C#",
+   "PowerShell",
+   "JavaScript",
+   "CSS",
+   "Python(pyproject.toml)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "pyproject.toml"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.026Z",
+ "rulesAt": "2026-10-30T13:35:13.026Z",
+ "sourceDate": "2026-10-30"
+}

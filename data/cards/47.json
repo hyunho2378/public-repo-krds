@@ -153,29 +153,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "국립국어원 온라인가나다 상담에서 어문 규범 근거를 한 번에 찾아 주고 검토용 답변 초안을 만드는 도구",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "어문 규범 상담의 근거 조회와 답변 초안 작성",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     10
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "파이썬 가상환경을 만들고 pip로 설치한 뒤 시험 명령으로 확인하며, 로그인 없이 쓰는 공개 체험판도 있다",
+   "evidence": {
+    "lines": [
+     1040,
+     1048
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "완성된 서비스가 아닌 시제품이고 출력은 검토용 초안이라 최종 판단은 사람이 한다",
+   "evidence": {
+    "lines": [
+     9,
+     15
+    ]
+   },
    "source": "ai"
   }
  },
@@ -214,6 +242,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:38:40.890Z",
- "rulesAt": "2026-10-30T12:42:16.032Z",
+ "rulesAt": "2026-10-30T13:35:12.689Z",
  "sourceDate": "2026-10-30"
 }

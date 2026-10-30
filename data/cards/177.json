@@ -86,29 +86,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "신규 공무원이 예산·계약·지출 질문의 답을 찾는 지식카드 130장 웹앱",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "신규자 실무 질의(예산·계약·지출) 답 찾기",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "인사·교육",
+    "회계·예산·출장"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "index.html 파일 하나를 더블클릭하면 카드 검색 등이 동작한다. 게시판 기능은 별도 배포가 필요하다",
+   "evidence": {
+    "lines": [
+     20,
+     28
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "파일만 열면 「모두의 지식」 게시판은 꺼진 오프라인 사본으로 동작한다",
+   "evidence": {
+    "lines": [
+     20,
+     21
+    ]
+   },
    "source": "ai"
   }
  },
@@ -147,6 +175,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:38:40.929Z",
- "rulesAt": "2026-10-30T12:42:16.054Z",
+ "rulesAt": "2026-10-30T13:35:12.732Z",
  "sourceDate": "2026-10-30"
 }

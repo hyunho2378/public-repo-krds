@@ -1,0 +1,176 @@
+{
+ "id": 540,
+ "name": "스크린 레코더",
+ "path": "Ubermensch/desktop_recorder",
+ "webUrl": "https://gitlab.aigov.go.kr/Ubermensch/desktop_recorder",
+ "topics": [
+  "utility"
+ ],
+ "executionForm": {
+  "value": "check",
+  "evidence": [
+   "media_editor.html"
+  ],
+  "source": "rule",
+  "label": "확인 필요",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    85
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-13T14:29:58.879+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "김명진",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "HTML"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "서버 업로드 없이 브라우저에서 영상·음성 자르기, 합치기, 화면 녹화, 형식 변환을 하는 멀티미디어 편집기",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "영상·음성 편집과 화면 녹화",
+   "evidence": {
+    "lines": [
+     13,
+     13
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "영상·이미지·음성"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     13
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "별도 설치 없이 media_editor.html 파일을 브라우저로 연다",
+   "evidence": {
+    "lines": [
+     11,
+     11
+    ]
+   },
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": false
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:48:35.488Z",
+ "rulesAt": "2026-10-30T13:35:12.898Z",
+ "sourceDate": "2026-10-30"
+}

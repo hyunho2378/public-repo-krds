@@ -1,0 +1,188 @@
+{
+ "id": 919,
+ "name": "GPT-chat connect_업데이트 중단",
+ "path": "memory365/gpt-chat-connect",
+ "webUrl": "https://gitlab.aigov.go.kr/memory365/gpt-chat-connect",
+ "topics": [
+  "ai",
+  "exe",
+  "mcp",
+  "utility"
+ ],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "package.json"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    841
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-10-22T14:16:18.201+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "서귀포시",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "| Windows | Public release v1.2.8 (this GitLab fork) | `GPT-chat-connect-Setup.exe` on the [GitLab Releases page](https://gitlab.aigov.go.kr/memory365/gpt-chat-connect/-/releases) |",
+    "line": 467,
+    "name": null,
+    "url": "https://gitlab.aigov.go.kr/memory365/gpt-chat-connect/-/releases"
+   },
+   {
+    "quote": "| macOS | Build from source only | Not republished in this fork; see the [upstream ezBuilder/chatgpt2codex](https://github.com/ezBuilder/chatgpt2codex) release for a signed `.pkg` |",
+    "line": 468,
+    "name": null,
+    "url": "https://github.com/ezBuilder/chatgpt2codex"
+   }
+  ],
+  "evidence": {
+   "lines": [
+    467,
+    468
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": {
+   "aiWorkDocs": 1
+  },
+  "evidence": {
+   "paths": [
+    "DESIGN.md"
+   ]
+  },
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "TypeScript",
+   "C#",
+   "PowerShell",
+   "Swift",
+   "JavaScript",
+   "Node.js(package.json)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "package.json"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.089Z",
+ "rulesAt": "2026-10-30T13:35:13.089Z",
+ "sourceDate": "2026-10-30"
+}

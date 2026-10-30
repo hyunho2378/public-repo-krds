@@ -90,29 +90,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "AI 답변이 근거 문서에 뒷받침되는지 재는 한국어 행정·법령 평가 자료와 채점 도구",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "행정·법령 AI 답변의 근거 일치 여부 평가",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "생성형 AI·챗봇·검색",
+    "법령·규제·감사"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     10
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "AI Hub 이용 승인을 받아 원본 데이터를 내려받은 뒤 스크립트 한 번으로 평가 자료를 다시 만든다",
+   "evidence": {
+    "lines": [
+     52,
+     57
+    ]
+   },
    "source": "ai",
-   "rawCommands": null
+   "rawCommands": "bash benchmark/rebuild.sh"
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "저장소에 데이터가 없어 AI Hub 이용 승인 후 원본을 직접 받아야 한다",
+   "evidence": {
+    "lines": [
+     52,
+     53
+    ]
+   },
    "source": "ai"
   }
  },
@@ -151,6 +179,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.690Z",
- "rulesAt": "2026-10-30T12:42:16.077Z",
+ "rulesAt": "2026-10-30T13:35:12.775Z",
  "sourceDate": "2026-10-30"
 }

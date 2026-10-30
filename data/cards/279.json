@@ -104,29 +104,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "왼쪽 채팅으로 보고서를 만들고 오른쪽에서 한글(HWPX) 문서를 바로 확인·편집하는 작업공간",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "공공 한글 문서(보고서) 작성",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "안내된 웹 주소(work.govpress.cloud)에서 바로 사용해 볼 수 있다",
+   "evidence": {
+    "lines": [
+     7,
+     7
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "AI 결과는 검토가 필요한 초안이고, 공개 실증 서비스에는 개인정보·비공개 자료를 넣지 말며 최종 HWPX는 한컴오피스에서 확인해야 한다",
+   "evidence": {
+    "lines": [
+     21,
+     23
+    ]
+   },
    "source": "ai"
   }
  },
@@ -165,6 +193,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:41:30.748Z",
- "rulesAt": "2026-10-30T12:42:16.088Z",
+ "rulesAt": "2026-10-30T13:35:12.795Z",
  "sourceDate": "2026-10-30"
 }

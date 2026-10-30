@@ -96,29 +96,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "PC에 연결된 계측기를 찾아 측정 계획을 만들고 반복 실행해 결과를 기록하는 Windows 프로그램",
+   "evidence": {
+    "lines": [
+     29,
+     29
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "반복되는 계측기 설정과 측정 결과 기록",
+   "evidence": {
+    "lines": [
+     50,
+     51
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "기타",
+    "엑셀·사무 자동화"
+   ],
+   "evidence": {
+    "lines": [
+     42,
+     51
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "릴리스 페이지에서 설치 파일(exe)을 받아 더블클릭해 설치하고, 실행 후 '데모 장비 4대로 둘러보기'부터 눌러 본다",
+   "evidence": {
+    "lines": [
+     10,
+     13
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "현재 공개판은 개발 프리뷰이고, 실제 계측기를 다시 연결해 검증한 것은 아니라서 데모와 Dry Run으로 먼저 확인해야 한다",
+   "evidence": {
+    "lines": [
+     24,
+     27
+    ]
+   },
    "source": "ai"
   }
  },
@@ -157,6 +185,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:40:54.687Z",
- "rulesAt": "2026-10-30T12:42:16.074Z",
+ "rulesAt": "2026-10-30T13:35:12.766Z",
  "sourceDate": "2026-10-30"
 }

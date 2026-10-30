@@ -1,0 +1,181 @@
+{
+ "id": 573,
+ "name": "hellolighthouse",
+ "path": "scout202/hellolighthouse",
+ "webUrl": "https://gitlab.aigov.go.kr/scout202/hellolighthouse",
+ "topics": [],
+ "executionForm": {
+  "value": "open",
+  "evidence": [
+   "index.html"
+  ],
+  "source": "rule",
+  "label": "바로 열림",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    86
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-14T11:30:48.382+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "포항지방행양수산청 채종국",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": "https://emdeo.github.io/hellolighthouse/",
+  "evidence": {
+   "lines": [
+    5,
+    5
+   ]
+  },
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "JavaScript",
+   "HTML",
+   "CSS"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "전국 등대의 기상·여객선·관광 공공데이터를 한 곳에 모아 지도와 안전 지수로 보여 주는 해양관광 웹서비스",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "등대 여행 계획 시 기상·이동·관광 정보 확인",
+   "evidence": {
+    "lines": [
+     11,
+     13
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "데이터·통계·분석"
+   ],
+   "evidence": {
+    "lines": [
+     15,
+     16
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "서비스 바로가기 주소에서 웹으로 쓴다",
+   "evidence": {
+    "lines": [
+     5,
+     5
+    ]
+   },
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": false
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": false
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:48:35.497Z",
+ "rulesAt": "2026-10-30T13:35:12.909Z",
+ "sourceDate": "2026-10-30"
+}

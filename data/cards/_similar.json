@@ -1,13 +1,13 @@
 {
  "note": "F-04 중복 묶음 초안. 사람 확인 전",
- "computedAt": "2026-10-30T12:38:41.048Z",
- "groupCount": 3,
+ "computedAt": "2026-10-30T13:35:13.819Z",
+ "groupCount": 36,
  "groups": [
   {
    "id": "g001",
-   "title": "Test",
-   "size": 6,
-   "organizations": 6,
+   "title": "1",
+   "size": 109,
+   "organizations": 91,
    "projects": [
     {
      "id": 30,
@@ -38,35 +38,710 @@
      "id": 178,
      "name": "test",
      "organization": "IBK기업은행 이상훈"
+    },
+    {
+     "id": 196,
+     "name": "autoFeedingDog",
+     "organization": "찰리와 개밥공장 김찰리"
+    },
+    {
+     "id": 200,
+     "name": "테스트",
+     "organization": "준규 박"
+    },
+    {
+     "id": 203,
+     "name": "안양시의회 정책지원팀 지식창고",
+     "organization": "ay-council"
+    },
+    {
+     "id": 204,
+     "name": "결재알리미",
+     "organization": "진도군처"
+    },
+    {
+     "id": 234,
+     "name": "올바른 의료정보 안전상식 전달기",
+     "organization": "소방청"
+    },
+    {
+     "id": 235,
+     "name": "test",
+     "organization": "Sam"
+    },
+    {
+     "id": 238,
+     "name": "차차 성능테스트",
+     "organization": "행정안전부"
+    },
+    {
+     "id": 248,
+     "name": "화재예방",
+     "organization": "인천남동소방서"
+    },
+    {
+     "id": 262,
+     "name": "대규모",
+     "organization": "부산광역시 강서구"
+    },
+    {
+     "id": 264,
+     "name": "Netzzi",
+     "organization": "최종호"
+    },
+    {
+     "id": 266,
+     "name": "실험용",
+     "organization": "가축위생방역지원본부"
+    },
+    {
+     "id": 267,
+     "name": "5303",
+     "organization": "가축위생방역지원본부"
+    },
+    {
+     "id": 274,
+     "name": "소규모 공사 내역서 작성 대시보드",
+     "organization": "정읍시"
+    },
+    {
+     "id": 277,
+     "name": "농수산물 안전성검사 시료 수거관리",
+     "organization": "울산광역시청"
+    },
+    {
+     "id": 282,
+     "name": "지구단위계획 안내 챗봇",
+     "organization": "인천광역시"
+    },
+    {
+     "id": 283,
+     "name": "위반건축물관리대장",
+     "organization": "양평군"
+    },
+    {
+     "id": 284,
+     "name": "구리시 테스트",
+     "organization": "구리시"
+    },
+    {
+     "id": 290,
+     "name": "work_handwriting",
+     "organization": "구리시"
+    },
+    {
+     "id": 293,
+     "name": "연습 프로젝트",
+     "organization": "경주시"
+    },
+    {
+     "id": 300,
+     "name": "test",
+     "organization": "부산광역시 중구"
+    },
+    {
+     "id": 304,
+     "name": "Green App",
+     "organization": "경상북도"
+    },
+    {
+     "id": 314,
+     "name": "Workflow Project",
+     "organization": "한국식품마이스터고등학교"
+    },
+    {
+     "id": 316,
+     "name": "1",
+     "organization": "서초구청"
+    },
+    {
+     "id": 323,
+     "name": "정연호",
+     "organization": "yeonho"
+    },
+    {
+     "id": 342,
+     "name": "MJ works",
+     "organization": "고용노동부"
+    },
+    {
+     "id": 351,
+     "name": "복지사각 지대 분석 대시보드",
+     "organization": "대전연구원"
+    },
+    {
+     "id": 354,
+     "name": "테스트",
+     "organization": "경주시"
+    },
+    {
+     "id": 358,
+     "name": "마을방송 유지보수 관리를 위한 프로그램",
+     "organization": "세종특별자치시"
+    },
+    {
+     "id": 361,
+     "name": "연습 프로젝트",
+     "organization": "경주시청"
+    },
+    {
+     "id": 372,
+     "name": "공공마스킹",
+     "organization": "임주무관"
+    },
+    {
+     "id": 373,
+     "name": "Forestgps",
+     "organization": "산림청"
+    },
+    {
+     "id": 380,
+     "name": "항로표지 업무지원",
+     "organization": "포항지방행양수산청 채종국"
+    },
+    {
+     "id": 413,
+     "name": "가성비갑 음식점",
+     "organization": "울산광역시 중구"
+    },
+    {
+     "id": 414,
+     "name": "가성비갑",
+     "organization": "울산광역시 중구"
+    },
+    {
+     "id": 417,
+     "name": "compressnc",
+     "organization": "기상청"
+    },
+    {
+     "id": 440,
+     "name": "my-kanban-board",
+     "organization": "서울특별시교육청"
+    },
+    {
+     "id": 456,
+     "name": "gimpotest",
+     "organization": "경기도 김포시"
+    },
+    {
+     "id": 458,
+     "name": "cocolablab",
+     "organization": "경문고등학교"
+    },
+    {
+     "id": 464,
+     "name": "연수구시설안전관리공단 부설주차 관리 AI",
+     "organization": "연수구시설안전관리공단"
+    },
+    {
+     "id": 469,
+     "name": "gnei-2026-drill",
+     "organization": "경상남도교육청 교육정보원"
+    },
+    {
+     "id": 473,
+     "name": "simple_edu",
+     "organization": "전남광주통합특별시교육청"
+    },
+    {
+     "id": 479,
+     "name": "졸업사정 결과 확인",
+     "organization": "국립순천대학교"
+    },
+    {
+     "id": 486,
+     "name": "연습",
+     "organization": "남양주시"
+    },
+    {
+     "id": 501,
+     "name": "표준품셈",
+     "organization": "전남광주통합특별시교육청"
+    },
+    {
+     "id": 509,
+     "name": "오픈 fess ES서치엔진을 이용한 AI파일 검색시스템",
+     "organization": "국가독성과학연구소 오성호"
+    },
+    {
+     "id": 511,
+     "name": "test",
+     "organization": "KICT 강태욱"
+    },
+    {
+     "id": 539,
+     "name": "test2",
+     "organization": "밀양시청"
+    },
+    {
+     "id": 542,
+     "name": "goehs",
+     "organization": "경기도화성오산교육지원청"
+    },
+    {
+     "id": 560,
+     "name": "충남서부보훈지청엑셀정리기 ",
+     "organization": "충남서부보훈지청"
+    },
+    {
+     "id": 577,
+     "name": "1",
+     "organization": "밀양시청"
+    },
+    {
+     "id": 586,
+     "name": "테스트",
+     "organization": "문화체육관광부"
+    },
+    {
+     "id": 607,
+     "name": "DnS_Auto",
+     "organization": "법무부"
+    },
+    {
+     "id": 653,
+     "name": "practice",
+     "organization": "산양중학교"
+    },
+    {
+     "id": 655,
+     "name": "COMMITRON",
+     "organization": "경찰청"
+    },
+    {
+     "id": 656,
+     "name": "수난인명구조장비함 통합점검 관리",
+     "organization": "제주소방안전본부"
+    },
+    {
+     "id": 662,
+     "name": "유연근무 출퇴근 지정 오류 검증",
+     "organization": "국가데이터처 동남지방데이터청"
+    },
+    {
+     "id": 674,
+     "name": "my",
+     "organization": "남산중학교 평가정보부"
+    },
+    {
+     "id": 679,
+     "name": "가스안전공사 AI 프로젝트",
+     "organization": "한국가스안전공사"
+    },
+    {
+     "id": 685,
+     "name": "first_test",
+     "organization": "창원중앙중학교"
+    },
+    {
+     "id": 695,
+     "name": "AI API를 활용한 전관방송 TTS 프로그램",
+     "organization": "옥천군 행정과"
+    },
+    {
+     "id": 731,
+     "name": "기업 AX추진 현황 분석",
+     "organization": "구미시청"
+    },
+    {
+     "id": 741,
+     "name": "보고서 검증 자동화",
+     "organization": "국가유산진흥원"
+    },
+    {
+     "id": 742,
+     "name": "test",
+     "organization": "경기도 의정부시 기획소통국 정책혁신과"
+    },
+    {
+     "id": 750,
+     "name": "기록관리업무_자동화_지원",
+     "organization": "행정안전부 국가기록원 디지털혁신과"
+    },
+    {
+     "id": 752,
+     "name": "농수산물 안전성검사 시료 수거관리",
+     "organization": "경기도"
+    },
+    {
+     "id": 789,
+     "name": "test9999",
+     "organization": "동주 김"
+    },
+    {
+     "id": 793,
+     "name": "Drug Safety",
+     "organization": "식품의약품안전처 식품의약품안전평가원 김정국"
+    },
+    {
+     "id": 795,
+     "name": "hp_001",
+     "organization": "함평군 총무과"
+    },
+    {
+     "id": 816,
+     "name": "contract-king app",
+     "organization": "산림교육원"
+    },
+    {
+     "id": 817,
+     "name": "auto",
+     "organization": "서산시"
+    },
+    {
+     "id": 823,
+     "name": "공공요금 알리미 ",
+     "organization": "충남서부보훈지청"
+    },
+    {
+     "id": 836,
+     "name": "회의록",
+     "organization": "김포시의회 이지슬"
+    },
+    {
+     "id": 875,
+     "name": "소방학교 현장활동 간접경험",
+     "organization": "전남광주통합특별시 소방학교 교수부"
+    },
+    {
+     "id": 894,
+     "name": "e",
+     "organization": "안양시청"
+    },
+    {
+     "id": 906,
+     "name": "지식이모이는곳 LibroSapce",
+     "organization": "행정안전부"
+    },
+    {
+     "id": 927,
+     "name": "worksheet_maker.pub",
+     "organization": "감천초등학교"
+    },
+    {
+     "id": 938,
+     "name": "AI-Sapiens",
+     "organization": "과학기술정보통신부"
+    },
+    {
+     "id": 951,
+     "name": "숫자금액을 한글로",
+     "organization": "서울 구로구청"
+    },
+    {
+     "id": 952,
+     "name": "Tryboard",
+     "organization": "경상남도 도립미술관"
+    },
+    {
+     "id": 961,
+     "name": "초입배치",
+     "organization": "동작관악교육지원청"
+    },
+    {
+     "id": 972,
+     "name": "AI 프로토타입",
+     "organization": "시흥도시공사"
+    },
+    {
+     "id": 973,
+     "name": "GitLab 이용",
+     "organization": "성주군"
+    },
+    {
+     "id": 977,
+     "name": "test",
+     "organization": "구미시청"
+    },
+    {
+     "id": 1013,
+     "name": "예산 산출내역계산기",
+     "organization": "서울 구로구청"
+    },
+    {
+     "id": 1036,
+     "name": "workflow",
+     "organization": "전남광주통합특별시교육청"
+    },
+    {
+     "id": 1045,
+     "name": "9gagi",
+     "organization": "국립국악원"
+    },
+    {
+     "id": 1046,
+     "name": "학생관찰 대시보드",
+     "organization": "USNEDU"
+    },
+    {
+     "id": 1051,
+     "name": "git_test",
+     "organization": "한국인터넷진흥원"
+    },
+    {
+     "id": 1062,
+     "name": "도로안전",
+     "organization": "울산광역시청"
+    },
+    {
+     "id": 1084,
+     "name": "employ_archive",
+     "organization": "고용노동부"
+    },
+    {
+     "id": 1089,
+     "name": "Jichul-deletion_scheduled-1089",
+     "organization": "한국사회복지협의회 정보화팀 Kang"
+    },
+    {
+     "id": 1097,
+     "name": "cj_test",
+     "organization": "충주시 정보통신과"
+    },
+    {
+     "id": 1103,
+     "name": "국회 법률안 발의서 생성 스킬",
+     "organization": "국회사무처/교육과학기술문화법제과"
+    },
+    {
+     "id": 1104,
+     "name": "repowiz",
+     "organization": "고용노동부"
+    },
+    {
+     "id": 1118,
+     "name": "test1",
+     "organization": "경상남도 양산시"
+    },
+    {
+     "id": 1127,
+     "name": "gunpo-investment-project",
+     "organization": "군포시"
+    },
+    {
+     "id": 1135,
+     "name": "병합기",
+     "organization": "경기도청"
+    },
+    {
+     "id": 1136,
+     "name": "건설공사 적정 공사기간 산정",
+     "organization": "전남광주통합특별시교육청"
+    },
+    {
+     "id": 1173,
+     "name": "cdsa_test",
+     "organization": "CDSA 신성진"
+    },
+    {
+     "id": 1177,
+     "name": "Gitlab_CI",
+     "organization": "경상남도교육청 교육정보원"
+    },
+    {
+     "id": 1408,
+     "name": "rei-ci-test",
+     "organization": "rei-lab"
+    },
+    {
+     "id": 1440,
+     "name": "TEST",
+     "organization": "국립농업과학원"
+    },
+    {
+     "id": 1443,
+     "name": "test11111",
+     "organization": "국립농업과학원"
     }
    ],
-   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.30, 기관 6곳)",
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.03, 기관 91곳)",
    "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
    "needsReview": true
   },
   {
    "id": "g002",
-   "title": "gongedu",
-   "size": 2,
-   "organizations": 1,
+   "title": "2-deletion_scheduled-1262",
+   "size": 9,
+   "organizations": 4,
    "projects": [
     {
-     "id": 44,
-     "name": "gongedu",
-     "organization": "전북특별자치도 군산시"
+     "id": 929,
+     "name": "koat 업무 도우미-deletion_scheduled-929",
+     "organization": "한국농업기술진흥원"
     },
     {
-     "id": 92,
-     "name": "gov-guide-kit",
-     "organization": "전북특별자치도 군산시"
+     "id": 1202,
+     "name": "raw123-deletion_scheduled-1202",
+     "organization": "대구소방안전본부"
+    },
+    {
+     "id": 1225,
+     "name": "test-upload-deletion_scheduled-1225",
+     "organization": "국민권익위원회"
+    },
+    {
+     "id": 1259,
+     "name": "Sunsetrun-deletion_scheduled-1259",
+     "organization": "전남광주통합특별시 서구청"
+    },
+    {
+     "id": 1260,
+     "name": "jung-deletion_scheduled-1260",
+     "organization": "전남광주통합특별시 서구청"
+    },
+    {
+     "id": 1262,
+     "name": "2-deletion_scheduled-1262",
+     "organization": "전남광주통합특별시 서구청"
+    },
+    {
+     "id": 1263,
+     "name": "12-deletion_scheduled-1263",
+     "organization": "전남광주통합특별시 서구청"
+    },
+    {
+     "id": 1264,
+     "name": "arin-english-deletion_scheduled-1264",
+     "organization": "전남광주통합특별시 서구청"
+    },
+    {
+     "id": 1265,
+     "name": "seogu1-mcp-deletion_scheduled-1265",
+     "organization": "전남광주통합특별시 서구청"
     }
    ],
-   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.08, 기관 1곳, 공통 낱말 조각: go)",
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.55, 기관 4곳, 공통 낱말 조각: de el le et ti io)",
    "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
    "needsReview": true
   },
   {
    "id": "g003",
+   "title": "gonggong-ax-local-2",
+   "size": 3,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 215,
+     "name": "gonggong-ax-local-2",
+     "organization": "과학기술정보통신부"
+    },
+    {
+     "id": 216,
+     "name": "gonggong-ax-local-3",
+     "organization": "과학기술정보통신부"
+    },
+    {
+     "id": 352,
+     "name": "gonggong-ax-local-7 세이프 카피",
+     "organization": "과학기술정보통신부"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.70, 기관 1곳, 공통 낱말 조각: go on ng gg ax lo)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g004",
+   "title": "온AI Work",
+   "size": 3,
+   "organizations": 3,
+   "projects": [
+    {
+     "id": 279,
+     "name": "온AI Work",
+     "organization": "강원특별자치도"
+    },
+    {
+     "id": 524,
+     "name": "온AI Work",
+     "organization": "인천광역시"
+    },
+    {
+     "id": 757,
+     "name": "온AI Work",
+     "organization": "행정안전부"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 3곳, 공통 낱말 조각: 온a ai wo or rk)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g005",
+   "title": "내편집 - 내 PC에서 PDF 편집",
+   "size": 3,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 1003,
+     "name": "내편동행 - 소규모 사업장의 안전관리자",
+     "organization": "안전관리자 이호진"
+    },
+    {
+     "id": 1015,
+     "name": "내편공문 - 공문 검수와 기관 서식을 한곳에서",
+     "organization": "안전관리자 이호진"
+    },
+    {
+     "id": 1023,
+     "name": "내편집 - 내 PC에서 PDF 편집",
+     "organization": "안전관리자 이호진"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.07, 기관 1곳, 공통 낱말 조각: 내편)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g006",
+   "title": "이미지 A4커터",
+   "size": 3,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 1230,
+     "name": "이미지 A4커터",
+     "organization": "경찰청 경기남부경찰청"
+    },
+    {
+     "id": 1248,
+     "name": "PDF AI번역기",
+     "organization": "경찰청 경기남부경찰청"
+    },
+    {
+     "id": 1319,
+     "name": "로보카피 GUI_한글",
+     "organization": "경찰청 경기남부경찰청"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.00, 기관 1곳)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g007",
+   "title": "모두의 민원콜",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 19,
+     "name": "모두의 민원콜",
+     "organization": "행정안전부"
+    },
+    {
+     "id": 457,
+     "name": "모두의 민원콜",
+     "organization": "국회사무처"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 2곳, 공통 낱말 조각: 모두 두의 민원 원콜)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g008",
    "title": "개인정보 비식별화 프로그램",
    "size": 2,
    "organizations": 2,
@@ -83,6 +758,594 @@
     }
    ],
    "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.75, 기관 2곳, 공통 낱말 조각: 개인 인정 정보 비식 식별 별화)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g009",
+   "title": "살아있는 업무지침 - 벼리",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 57,
+     "name": "살아있는 업무지침 - 벼리",
+     "organization": "보건복지부"
+    },
+    {
+     "id": 753,
+     "name": "살아있는 보훈업무지침 용은",
+     "organization": "충남서부보훈지청"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.60, 기관 2곳, 공통 낱말 조각: 살아 아있 있는 업무 무지 지침)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g010",
+   "title": "korean-law-mcp",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 149,
+     "name": "korean-law-mcp",
+     "organization": "서울특별시 광진구"
+    },
+    {
+     "id": 780,
+     "name": "galpi-korean-law-mcp",
+     "organization": "의성군청"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.69, 기관 2곳, 공통 낱말 조각: ko or re ea an la)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g011",
+   "title": "KODA",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 171,
+     "name": "KODA",
+     "organization": "한국사회보장정보원"
+    },
+    {
+     "id": 734,
+     "name": "KODA-MCP",
+     "organization": "한국사회보장정보원"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.60, 기관 1곳, 공통 낱말 조각: ko od da)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g012",
+   "title": "weather",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 181,
+     "name": "gimcheon-weather",
+     "organization": "한국도로공사"
+    },
+    {
+     "id": 1151,
+     "name": "weather",
+     "organization": "동두천소방서"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.50, 기관 2곳, 공통 낱말 조각: he we ea at th er)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g013",
+   "title": "edoc-summarizer",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 188,
+     "name": "edoc-summarizer",
+     "organization": "서울특별시 광진구"
+    },
+    {
+     "id": 1428,
+     "name": "edoc-summarizer",
+     "organization": "한국항공우주연구원"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 2곳, 공통 낱말 조각: ed do oc su um mm)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g014",
+   "title": "asobikr",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 211,
+     "name": "asobikr",
+     "organization": "과학기술정보통신부"
+    },
+    {
+     "id": 220,
+     "name": "iknowur",
+     "organization": "과학기술정보통신부"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.09, 기관 1곳, 공통 낱말 조각: ik)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g015",
+   "title": "pj_translatorcat",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 226,
+     "name": "pj_translatorcat",
+     "organization": "과학기술정보통신부"
+    },
+    {
+     "id": 229,
+     "name": "translatorcat_2026",
+     "organization": "과학기술정보통신부"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.73, 기관 1곳, 공통 낱말 조각: tr ra an ns sl la)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g016",
+   "title": "projects",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 230,
+     "name": "projects",
+     "organization": "근선 이"
+    },
+    {
+     "id": 959,
+     "name": "projects",
+     "organization": "행정안전부"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 2곳, 공통 낱말 조각: pr ro oj je ec ct)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g017",
+   "title": "온나라 문서 검색 서포터",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 409,
+     "name": "온나라 문서 검색 서포터",
+     "organization": "광양시"
+    },
+    {
+     "id": 1378,
+     "name": "온나라 문서 검색 서포터",
+     "organization": "경기도 건강증진과"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 2곳, 공통 낱말 조각: 온나 나라 문서 검색 서포 포터)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g018",
+   "title": "사무용 도구함",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 532,
+     "name": "사무용 도구함",
+     "organization": "김명진"
+    },
+    {
+     "id": 1385,
+     "name": "취합 정리 도구",
+     "organization": "창원소방본부"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.17, 기관 2곳, 공통 낱말 조각: 도구)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g019",
+   "title": "군포 민원신청서 작성 도우미old",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 663,
+     "name": "군포 민원신청서 작성 도우미old",
+     "organization": "군포시 민원봉사과"
+    },
+    {
+     "id": 1130,
+     "name": "gunpo-minwon-helper1",
+     "organization": "군포시 민원봉사과"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.00, 기관 1곳)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g020",
+   "title": "Legal Reviewer 지능형 AI 법령검토 공공서식 보고서 생성 워크벤치",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 670,
+     "name": "Legal Reviewer 지능형 AI 법령검토 공공서식 보고서 생성 워크벤치",
+     "organization": "김명진"
+    },
+    {
+     "id": 701,
+     "name": "Legal Reviewer 지능형 AI 법령검토 공공서식 보고서 생성 워크벤치",
+     "organization": "군포시청"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 2곳, 공통 낱말 조각: le eg ga al re ev)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g021",
+   "title": "scheduler",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 672,
+     "name": "Exam_Scheduler",
+     "organization": "대성일고등학교"
+    },
+    {
+     "id": 1038,
+     "name": "scheduler",
+     "organization": "서울특별시교육청"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.73, 기관 2곳, 공통 낱말 조각: sc ch he ed du ul)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g022",
+   "title": "Releasepick_카드뉴스 자동제작 시스템",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 723,
+     "name": "Releasepick_카드뉴스 자동제작 시스템",
+     "organization": "재정경제부"
+    },
+    {
+     "id": 1099,
+     "name": "Releasepick_카드뉴스 자동제작 시스템",
+     "organization": "한국국제교류재단"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 2곳, 공통 낱말 조각: re el le ea as se)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g023",
+   "title": "lunch",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 768,
+     "name": "lunch",
+     "organization": "특수교육"
+    },
+    {
+     "id": 811,
+     "name": "classroom space",
+     "organization": "특수교육"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.00, 기관 1곳)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g024",
+   "title": "kari-contracts",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 771,
+     "name": "defense-contract-analysis-dashboard",
+     "organization": "우주항공청"
+    },
+    {
+     "id": 772,
+     "name": "kari-contracts",
+     "organization": "우주항공청"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.26, 기관 1곳, 공통 낱말 조각: co on nt tr ra ac)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g025",
+   "title": "chooljang",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 828,
+     "name": "chooljang",
+     "organization": "서울시교육청"
+    },
+    {
+     "id": 1133,
+     "name": "civil-petition-ai-advisor",
+     "organization": "부산광역시 정보화정책과"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.00, 기관 2곳)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g026",
+   "title": "MemoMindAI",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 859,
+     "name": "MemoMindAI",
+     "organization": "경남 양산시"
+    },
+    {
+     "id": 880,
+     "name": "MemoMindAI",
+     "organization": "서울시교육청"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 2곳, 공통 낱말 조각: me em mo om mi in)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g027",
+   "title": "스마트 토지정보",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 869,
+     "name": "스마트 토지정보",
+     "organization": "함양군"
+    },
+    {
+     "id": 870,
+     "name": "스마트 토지관리",
+     "organization": "함양군"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.43, 기관 1곳, 공통 낱말 조각: 스마 마트 토지)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g028",
+   "title": "온나라 플러스",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 921,
+     "name": "온나라 플러스",
+     "organization": "서귀포시"
+    },
+    {
+     "id": 1210,
+     "name": "온나라 플러스",
+     "organization": "충청남도 천안시"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 2곳, 공통 낱말 조각: 온나 나라 플러 러스)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g029",
+   "title": "KML-엑셀 변환 도구",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 1033,
+     "name": "KML-엑셀 변환 도구",
+     "organization": "이선식"
+    },
+    {
+     "id": 1034,
+     "name": "엑셀 좌표-KML 변환 도구",
+     "organization": "이선식"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.83, 기관 1곳, 공통 낱말 조각: km ml 엑셀 변환 도구)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g030",
+   "title": "ai",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 1093,
+     "name": "ai",
+     "organization": "의정부시"
+    },
+    {
+     "id": 1179,
+     "name": "ai",
+     "organization": "한국인터넷진흥원 국민소통팀"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 2곳, 공통 낱말 조각: ai)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g031",
+   "title": "workspace",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 1165,
+     "name": "workspace",
+     "organization": "서울특별시교육청"
+    },
+    {
+     "id": 1180,
+     "name": "workspace",
+     "organization": "개인 황태규"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 1.00, 기관 2곳, 공통 낱말 조각: wo or rk ks sp pa)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g032",
+   "title": "asdaa",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 1377,
+     "name": "asdasdsa",
+     "organization": "대전중구"
+    },
+    {
+     "id": 1383,
+     "name": "asdaa",
+     "organization": "한국동서발전 동반성장실"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.50, 기관 2곳, 공통 낱말 조각: as sd da)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g033",
+   "title": "dotplot_analysis",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 1444,
+     "name": "dotplot_analysis",
+     "organization": "국립농업과학원"
+    },
+    {
+     "id": 1448,
+     "name": "dotplotAnalysis_v2-0",
+     "organization": "국립농업과학원"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.80, 기관 1곳, 공통 낱말 조각: do ot tp pl lo an)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g034",
+   "title": "primertools_v1-2",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 1445,
+     "name": "primertools_v1-2",
+     "organization": "국립농업과학원"
+    },
+    {
+     "id": 1478,
+     "name": "primertools_v1-0",
+     "organization": "국립농업과학원"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.85, 기관 1곳, 공통 낱말 조각: pr ri im me er rt)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g035",
+   "title": "braker3_v3-0-8_250731",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 1471,
+     "name": "braker3_v3-0-8_250731",
+     "organization": "국립농업과학원"
+    },
+    {
+     "id": 1481,
+     "name": "braker3_v3-0-8_241029",
+     "organization": "국립농업과학원"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.47, 기관 1곳, 공통 낱말 조각: br ra ak ke er r3)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g036",
+   "title": "gatk4_v4-5-0-0-240312",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 1477,
+     "name": "gatk4_v4-5-0-0-240312",
+     "organization": "국립농업과학원"
+    },
+    {
+     "id": 1480,
+     "name": "gatk4_v4-6-1-0_241121",
+     "organization": "국립농업과학원"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.47, 기관 1곳, 공통 낱말 조각: ga at tk k4 v4 0)",
    "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
    "needsReview": true
   }

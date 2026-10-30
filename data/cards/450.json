@@ -1,0 +1,179 @@
+{
+ "id": 450,
+ "name": "PdfToMdConverter",
+ "path": "wsk1214/pdftomdconverter",
+ "webUrl": "https://gitlab.aigov.go.kr/wsk1214/pdftomdconverter",
+ "topics": [
+  "utility"
+ ],
+ "executionForm": {
+  "value": "check",
+  "evidence": null,
+  "source": "rule",
+  "label": "확인 필요",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    31
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-12T02:47:10.607+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "법제처",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "C#"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "PDF 문서를 마크다운으로 바꿔 주는 C# 윈도우 프로그램",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "PDF 문서 변환",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "문서·보고서"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "릴리스 페이지에서 실행 파일을 받아 쓰거나 Visual Studio로 빌드한다",
+   "evidence": {
+    "lines": [
+     26,
+     31
+    ]
+   },
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": "윈도우용이며 .NET 4.8 이상이 필요하다",
+   "evidence": {
+    "lines": [
+     15,
+     17
+    ]
+   },
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:48:35.460Z",
+ "rulesAt": "2026-10-30T13:35:12.861Z",
+ "sourceDate": "2026-10-30"
+}

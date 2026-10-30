@@ -91,23 +91,45 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "여러 PDF를 원하는 순서로 하나로 합치고 페이지 번호를 새로 매기는 윈도우 프로그램",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "PDF 파일 합본과 쪽 번호 정리",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "문서·보고서"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "exe 파일을 복사해 더블클릭하면 실행된다. 설치와 인터넷이 필요 없다",
+   "evidence": {
+    "lines": [
+     16,
+     19
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -152,6 +174,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:42:16.092Z",
- "rulesAt": "2026-10-30T12:42:16.092Z",
+ "rulesAt": "2026-10-30T13:35:12.803Z",
  "sourceDate": "2026-10-30"
 }

@@ -110,29 +110,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "직원이 올린 필수교육 수료증을 AI가 1차 검수하고 부서별 이수 현황을 모아 보여 주는 웹 시스템",
+   "evidence": {
+    "lines": [
+     11,
+     12
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "공무원 필수교육 수료증 취합과 이수 현황 관리",
+   "evidence": {
+    "lines": [
+     29,
+     31
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "인사·교육",
+    "문서·보고서"
+   ],
+   "evidence": {
+    "lines": [
+     11,
+     12
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "Docker를 설치한 뒤 저장소를 내려받아 Windows는 setup.bat을 두 번 눌러, Linux·macOS는 setup.sh로 설치한다",
+   "evidence": {
+    "lines": [
+     217,
+     229
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "현재 기관 시범 운영 예정 단계이며, 운영 중 나오는 문제를 반영해 계속 고칠 예정이다",
+   "evidence": {
+    "lines": [
+     39,
+     39
+    ]
+   },
    "source": "ai"
   }
  },
@@ -171,6 +199,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:36:44.936Z",
- "rulesAt": "2026-10-30T12:42:16.029Z",
+ "rulesAt": "2026-10-30T13:35:12.684Z",
  "sourceDate": "2026-10-30"
 }

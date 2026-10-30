@@ -118,23 +118,46 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "통계청(KOSIS) 통계를 자치구 이름과 질문만으로 찾아 주는 AI 연결 서버",
+   "evidence": {
+    "lines": [
+     11,
+     11
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "보고서·신년사·의회 답변용 지역 통계 조회",
+   "evidence": {
+    "lines": [
+     33,
+     50
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "데이터·통계·분석",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     11,
+     50
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "설치 없이 Claude.ai 같은 AI 채팅에 웹 커넥터로 등록해 쓸 수 있다",
+   "evidence": {
+    "lines": [
+     11,
+     17
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -179,6 +202,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:38:40.921Z",
- "rulesAt": "2026-10-30T12:42:16.048Z",
+ "rulesAt": "2026-10-30T13:35:12.720Z",
  "sourceDate": "2026-10-30"
 }

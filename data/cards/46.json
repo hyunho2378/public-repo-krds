@@ -104,29 +104,57 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "민원 내용이 공익신고 등 7가지 신고 유형에 해당하는지 근거 법령과 소관 부서를 함께 알려 주는 도구",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "민원 접수 시 신고 해당 여부와 유형 판단",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "민원·복지·상담",
+    "법령·규제·감사"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     23
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "Node.js 18 이상에서 설치와 빌드 명령 뒤 서버를 켜거나, web/index.html 파일을 브라우저로 직접 열어 쓴다",
+   "evidence": {
+    "lines": [
+     88,
+     98
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
   "limitations": {
-   "value": null,
-   "evidence": null,
+   "value": "AI는 근거와 유사사례를 돕는 보조 역할이고 단정하지 않으며 최종 판정은 담당자가 한다",
+   "evidence": {
+    "lines": [
+     28,
+     29
+    ]
+   },
    "source": "ai"
   }
  },
@@ -165,6 +193,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:38:40.887Z",
- "rulesAt": "2026-10-30T12:42:16.029Z",
+ "rulesAt": "2026-10-30T13:35:12.686Z",
  "sourceDate": "2026-10-30"
 }

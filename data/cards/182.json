@@ -95,18 +95,36 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "공공데이터포털 목록을 AI로 검색하고 요구사항에 맞는 데이터셋을 추천하는 프로그램",
+   "evidence": {
+    "lines": [
+     3,
+     5
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "공공데이터 검색과 활용 데이터셋 선정",
+   "evidence": {
+    "lines": [
+     11,
+     23
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "데이터·통계·분석",
+    "생성형 AI·챗봇·검색"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     23
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
@@ -156,6 +174,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:39:02.160Z",
- "rulesAt": "2026-10-30T12:42:16.058Z",
+ "rulesAt": "2026-10-30T13:35:12.738Z",
  "sourceDate": "2026-10-30"
 }

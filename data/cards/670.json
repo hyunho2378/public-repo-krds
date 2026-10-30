@@ -1,0 +1,298 @@
+{
+ "id": 670,
+ "name": "Legal Reviewer 지능형 AI 법령검토 공공서식 보고서 생성 워크벤치",
+ "path": "Ubermensch/legal_review",
+ "webUrl": "https://gitlab.aigov.go.kr/Ubermensch/legal_review",
+ "topics": [
+  "ai",
+  "local-first",
+  "utility"
+ ],
+ "executionForm": {
+  "value": "download",
+  "evidence": [
+   "run.bat"
+  ],
+  "source": "rule",
+  "label": "내려받아 실행(exe)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    396
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": [
+   {
+    "quote": "- **적법성/규제 준수 (`compliance`)**: 신규 사업 기획, 행정 절차, 인허가 요건 및 상위 법령(시행령·시행규칙) 위반 여부 전면 검토",
+    "lines": [
+     28,
+     28
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "- 기준 법령, 문서가 인용한 타 법령, 법–시행령–시행규칙 연쇄 체계를 **모두 같은 시점 버전으로 동기화**합니다.",
+    "lines": [
+     38,
+     38
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "- 기준일 이후 시행된 조문은 근거에서 제외하며, 인용 실존성 검증 기준일도 해당 시점으로 전환됩니다.",
+    "lines": [
+     40,
+     40
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "- 검토 화면과 HWPX/PDF/DOCX 보고서에 시점 검토 명시 및 **부칙·경과조치 별도 확인 필요성**을 표시합니다. 형식이 잘못된 기준일은 자동으로 오늘 날짜로 대체하지 않고 요청을 거절합니다.",
+    "lines": [
+     41,
+     41
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "- **연쇄 법령 체계 및 자치법규(조례)**: 모법(법률) ➔ 시행령 ➔ 시행규칙 3단계 연쇄 구조와 행정규칙, 지자체 조례 및 별표/서식 카드.",
+    "lines": [
+     116,
+     116
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "- **3. 소관 법령 최근 개정 연혁 및 시행 타임라인**: 최근 공포일자, 공포번호, 시행일자, 소관 부처 개정 히스토리.",
+    "lines": [
+     121,
+     121
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "- 3단계 체계적 연쇄 검색 (`cascadingRetriever.js`) — 모법·시행령·시행규칙 추적.",
+    "lines": [
+     145,
+     145
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "| `articleAt` | 특정 시행일자 기준 과거/미래 조문 조회 |",
+    "lines": [
+     280,
+     280
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "| `adminRules` | 소관 부처 훈령, 예규, 고시 검색 |",
+    "lines": [
+     286,
+     286
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "| `delegatedLaws` | 모법 위임 하위 시행령/시행규칙/고시 추적 |",
+    "lines": [
+     288,
+     288
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "| `timeTravel` | 시행일 기준 버전 선택 및 본문 조회 (`MST`, `efYd` 활용) |",
+    "lines": [
+     291,
+     291
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "│   │   ├── cascadingRetriever.js # 모법-시행령-시행규칙 3단계 연쇄 검색",
+    "lines": [
+     352,
+     352
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "기본 바인딩은 `127.0.0.1`입니다. 외부 서비스로 공개하려면 별도의 사용자 인증·권한 통제가 필요합니다. 출처·조문 존재 확인은 법리 타당성 검증과 다르며, 관련도 점수는 휴리스틱입니다. 시행령·시행규칙 연결 결과는 부분 탐색입니다.",
+    "lines": [
+     393,
+     393
+    ],
+    "dates": [],
+    "identifiers": []
+   }
+  ],
+  "evidence": {
+   "lines": [
+    28,
+    393
+   ]
+  },
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-09-25T18:13:21.124+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "김명진",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "**현재 상태 (2026-09-25):** 기본 검토는 단일 호출(`monolithic`) 경로이지만, 입력 문서 및 컨텍스트가 모델 예산을 초과하면 토큰 안전을 위해 단계형 분할 검토(`staged` S0~S7)를 먼저 시도합니다. 판례·해석례는 검색 목록 선별 후 필요한 공식 본문만 2단계로 정밀 조회합니다. 단계형 검토(`REVIEW_PIPELINE=staged`)는 쟁점 생략 방지 및 인용 실존성 검증 강화가 적용되어 ",
+    "line": 5,
+    "name": null,
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    5,
+    5
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "JavaScript",
+   "CSS",
+   "HTML",
+   "Batchfile",
+   "Shell",
+   "Node.js(package.json)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "package.json"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:12.967Z",
+ "rulesAt": "2026-10-30T13:35:12.967Z",
+ "sourceDate": "2026-10-30"
+}

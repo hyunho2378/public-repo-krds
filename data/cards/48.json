@@ -87,23 +87,46 @@
  },
  "ai": {
   "oneLine": {
-   "value": null,
-   "evidence": null,
+   "value": "자치행정 협력사업 신청서를 인구수 기준으로 승인과 반려로 자동 분류하고 신청 현황을 웹 페이지로 보여 주는 도구",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "targetTask": {
-   "value": null,
-   "evidence": null,
+   "value": "협력사업 신청서 승인·반려 분류",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
    "source": "ai"
   },
   "fields": {
-   "value": null,
-   "evidence": null,
+   "value": [
+    "엑셀·사무 자동화",
+    "데이터·통계·분석"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     11
+    ]
+   },
    "source": "ai"
   },
   "runSummary": {
-   "value": null,
-   "evidence": null,
+   "value": "파이썬 분류 프로그램을 실행하면 승인과 반려 폴더로 나뉘고 결과 보고서 파일이 만들어진다",
+   "evidence": {
+    "lines": [
+     15,
+     19
+    ]
+   },
    "source": "ai",
    "rawCommands": null
   },
@@ -148,6 +171,6 @@
   }
  ],
  "generatedAt": "2026-10-30T12:38:40.891Z",
- "rulesAt": "2026-10-30T12:42:16.032Z",
+ "rulesAt": "2026-10-30T13:35:12.690Z",
  "sourceDate": "2026-10-30"
 }

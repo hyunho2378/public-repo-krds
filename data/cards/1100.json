@@ -1,0 +1,273 @@
+{
+ "id": 1100,
+ "name": "local-handover-ai",
+ "path": "adms25/local-handover-ai",
+ "webUrl": "https://gitlab.aigov.go.kr/adms25/local-handover-ai",
+ "topics": [
+  "ai",
+  "public-service",
+  "windows"
+ ],
+ "executionForm": {
+  "value": "download",
+  "evidence": [
+   "check_environment.bat"
+  ],
+  "source": "rule",
+  "label": "내려받아 실행(exe)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": "Apache 2.0",
+  "evidence": {
+   "lines": [
+    126,
+    126
+   ]
+  },
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    837
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": [
+   {
+    "quote": "초안 생성 화면의 기본 탭은 **공공문서 미리보기**입니다. A4 폭의 흰 문서에 사업명·담당부서·인계자·인수자·기준일을 표시하고, 항목별 번호와 제목, 굵은 글씨, 목록, 표를 서식으로 보여줍니다. 원문의 근거와 `[추후 확인]`, 생성 미완료 안내는 그대로 표시합니다. 기관의 지정 공문 양식을 대체하는 기능은 아닙니다.",
+    "lines": [
+     5,
+     5
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "1. 대상 사업명·인수인계 기준일·폴더 경로 입력",
+    "lines": [
+     326,
+     326
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "| [1. 대상 설정](#screen-project) | 사업정보·기준일·문서 폴더 입력 |",
+    "lines": [
+     458,
+     458
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "1. `1. 대상 설정·폴더 조사`에서 사업명과 인수인계 기준일을 입력합니다. 담당부서·인계자·인수자도 필요한 만큼 입력합니다.",
+    "lines": [
+     471,
+     471
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "*확인할 내용: 사업명·기준일·폴더 경로가 맞는지 확인합니다. 본문 추출은 다음 단계에서 실행합니다.*",
+    "lines": [
+     477,
+     477
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "파일정보는 전체 폴더를 조사하지만 본문은 선택된 문서 중 설정한 한도까지만 추출합니다. 최근 3년 문서와 계약·협약·계획·지침·규정 등 핵심문서에 우선순위를 주되, 오래된 일반문서도 기준일과 파일크기 조건을 통과하면 분석 한도 안에서 자동 선택합니다.",
+    "lines": [
+     577,
+     577
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "| `REFERENCE` | 법령·고시·가이드라인·매뉴얼 | 추진근거와 주요문서 중심으로만 사용 |",
+    "lines": [
+     594,
+     594
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "`참고자료`, `법령`, `가이드라인`, `타기관`, `외부자료` 등의 폴더와 `시행령`, `고시`, `안내서`, `해설서`, `FAQ` 등의 파일명을 참고자료 신호로 사용합니다. `제1조(목적)`, `제2조(정의)`, `부칙`, `별표`, `적용 범위`와 같은 법령·가이드 구조도 함께 확인합니다.",
+    "lines": [
+     599,
+     599
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "모델은 속도가 확인된 `gemma4:e2b-it-qat`를 기본값으로 유지합니다. 비교 후보는 이 PC에 이미 설치된 [`qwen3.5:4b`](https://ollama.com/library/qwen3.5:4b)입니다. 사이드바의 `Ollama 모델명`에서 변경할 수 있습니다. Ollama는 실행 프로그램이며 Gemma·Qwen이 실제 모델입니다. 모델 크기만으로 이 사업의 요약·질문 품질을 보장할 수 없으므로 같은 문서와 기준일로 비교하세요.",
+    "lines": [
+     650,
+     650
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "업그레이드 기능 테스트(`tests/test_v2_*.py`)는 문서 간 종결 추적, 금액 정규화, 원문 대조 검증, 보안·감사로그, 스텁 Ollama 서버, 앱 전체 흐름을 확인합니다. 기존 테스트는 폴더 제외규칙, 기준일 이후 문서 처리, TXT/HWPX 추출, FTS5 검색·색인 재사용·캐시 무효화, 문서 역할 분류, 참고자료 항목 제한, 업무 주체 판별, 질문 최대 5개, HWPX 두 종류 생성·한글/표 보존·실패 시 부분 파일 정리를 확인합니다.",
+    "lines": [
+     787,
+     787
+    ],
+    "dates": [],
+    "identifiers": []
+   }
+  ],
+  "evidence": {
+   "lines": [
+    5,
+    787
+   ]
+  },
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-10-28T16:38:41.263+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "정리해듀오",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "개발 인계는 [HANDOFF.md](HANDOFF.md)를 참고하세요. 현재 구조·설정·검증 결과·남은 과제와 다음 작업 순서를 정리했습니다.",
+    "line": 15,
+    "name": null,
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    15,
+    15
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "Python",
+   "Batchfile",
+   "Python(requirements.txt)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "requirements.txt"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T13:35:13.180Z",
+ "rulesAt": "2026-10-30T13:35:13.180Z",
+ "sourceDate": "2026-10-30"
+}
