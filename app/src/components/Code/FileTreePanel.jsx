@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { t } from '../../copy/ko';
+import { u } from '../../copy/ui';
 import { gitlab } from '../../api/client';
 import { Icon } from './Icon';
 
@@ -11,10 +12,10 @@ function Node({ id, item, current, refQuery, depth, filter }) {
   const [open, setOpen] = useState(isDir && onPath);
   const [kids, setKids] = useState(null);
   useEffect(() => {
-    if (open && isDir && !kids) gitlab.tree(id, item.path).then((r) => setKids(r.data)).catch(() => setKids([]));
+    if (open && isDir && !kids) gitlab.tree(id, item.path).then((r) => setKids(r.data)).catch((e) => setKids(e?.code === 'SNAPSHOT_MISSING' ? 'snapmissing' : []));
   }, [open, isDir, kids, id, item.path]);
   if (filter && !isDir && !item.name.toLowerCase().includes(filter)) return null;
-  const sorted = (kids || []).slice().sort((a, b) => (a.type === b.type ? a.name.localeCompare(b.name) : a.type === 'tree' ? -1 : 1));
+  const sorted = (Array.isArray(kids) ? kids : []).slice().sort((a, b) => (a.type === b.type ? a.name.localeCompare(b.name) : a.type === 'tree' ? -1 : 1));
   return (
     <li role="treeitem" aria-expanded={isDir ? open : undefined} aria-selected={current === item.path}>
       <div className={`rb-ft-row${current === item.path ? ' is-current' : ''}`} style={{ paddingLeft: `calc(var(--krds-padding-4) * ${depth})` }}>
@@ -29,7 +30,7 @@ function Node({ id, item, current, refQuery, depth, filter }) {
         </Link>
       </div>
       {isDir && open ? (
-        kids ? (
+        kids === 'snapmissing' ? <p className="krds-text-body-xsmall rb-subtle rb-ft-loading">{u.Snap_missing}</p> : kids ? (
           <ul role="group">{sorted.map((k) => <Node key={k.path} id={id} item={k} current={current} refQuery={refQuery} depth={depth + 1} filter={filter} />)}</ul>
         ) : <p className="krds-text-body-xsmall rb-subtle rb-ft-loading" role="status">{t.Tree_loading}</p>
       ) : null}

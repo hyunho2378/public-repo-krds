@@ -189,11 +189,14 @@ export default function Code() {
 
   const body = useData(async () => {
     const { id } = params;
+    // 공공 깃랩 점검 중 저장된 자료(스냅샷)에 없는 경로는 '존재하지 않음'이 아니라 '저장된 자료에 없습니다'(SNAPSHOT_MISSING)
+    const snapMissing = (e) => e?.code === 'SNAPSHOT_MISSING';
     if (path) {
       try {
         const meta = (await gitlab.fileMeta(id, path, ref)).data;
         if (meta?.file_name) {
-          const text = (await gitlab.fileRaw(id, path, ref)).data;
+          let text;
+          try { text = (await gitlab.fileRaw(id, path, ref)).data; } catch (e) { if (snapMissing(e)) return { kind: 'snapmissing', path }; throw e; }
           const last = (await gitlab.commits(id, { path, ref }).catch(() => ({ data: [] }))).data[0] || null;
           return { kind: 'file', text, meta, last };
         }
@@ -207,6 +210,7 @@ export default function Code() {
       return r;
     } catch (e) {
       if (!path) throw e;
+      if (snapMissing(e)) return { kind: 'snapmissing', path };
       return { ...(await loadTree(id, '', ref)), missing: path };
     }
   }, [params.id, path, ref]);
@@ -257,6 +261,11 @@ export default function Code() {
               <PackageNote path={path} />
               <GlFile path={path} base={{ id: frame.id, rawBase: `${project.web_url}/-/raw/${ref}/${path.includes('/') ? path.slice(0, path.lastIndexOf('/') + 1).split('/').map(enc).join('/') : ''}` }} text={b.text} rawUrl={rawUrl} size={b.meta?.size} {...blameApi} />
             </>
+          ) : b.kind === 'snapmissing' ? (
+            <div className="rb-snapmiss" data-state="Empty">
+              <p className="krds-text-body-small rb-subtle">{u.Snap_missing}</p>
+              {path.includes('/') || path ? <Link className="krds-link krds-text-body-small" to={`/projects/${frame.id}${path.includes('/') ? `/code/${path.slice(0, path.lastIndexOf('/'))}` : ''}${refQuery}`}>{t.P16_up}</Link> : null}
+            </div>
           ) : b.items.length ? (
             <>
               {b.missing ? <p role="alert" className="gl-notice"><Icon name="sys_danger_mark" /><span>{g.notFound(b.missing, ref)}</span></p> : null}

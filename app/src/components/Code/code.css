@@ -228,3 +228,18 @@
 /* D-21 6장: 최근 커밋 막대는 한 줄(제목 말줄임, 오른쪽 파이프라인/해시/이력 고정) */
 .rb-commit-bar .rb-commit-texts { flex: 1 1 auto; min-width: 0; }
 .rb-commit-bar .rb-commit-meta { flex: none; }
+
+/* 파일 트리 겹침 방지(2026. 10. 31. 사용자 오류 보고): 트리 열 폭 고정, 머리·검색칸·목록은 세로로 쌓고 넘치지 않는다. 항목 이름은 한 줄 말줄임 */
+.rb-code-wrap.has-tree > * { min-width: 0; }
+.gl-treewrap { width: 100%; min-width: 0; }
+.gl-treehead { min-width: 0; }
+.gl-treehead .gl-treetitle { flex: 1; min-width: 0; }
+.rb-filetree { width: 100%; min-width: 0; box-sizing: border-box; overflow-x: hidden; }
+.rb-filetree .rb-find { position: relative; width: 100%; min-width: 0; box-sizing: border-box; }
+.rb-filetree .rb-find input { width: 100%; min-width: 0; box-sizing: border-box; }
+.rb-ft-row { min-width: 0; }
+.rb-ft-link { flex: 1 1 auto; min-width: 0; overflow: hidden; }
+.rb-ft-link > .rb-ellipsis { flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; overflow-wrap: normal; word-break: normal; }
+.rb-ft-link .rb-icon { flex: none; }
+.rb-snapmiss { display: flex; flex-direction: column; align-items: flex-start; gap: var(--krds-gap-2); padding: var(--krds-padding-5) 0; }
+.rb-code-wrap.has-tree .rb-filetree { top: calc(var(--rb-header-h) + var(--rb-masthead-h) + var(--rb-top-extra) + var(--krds-gap-5)); max-height: calc(100dvh - var(--rb-header-h) - var(--rb-masthead-h) - var(--rb-top-extra) - var(--krds-gap-9)); }
