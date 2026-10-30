@@ -42,6 +42,7 @@ export default function Login() {
       <div className="rb-login">
         {t.P12_notice ? (
           <section className="rb-login-notice" aria-labelledby="login-notice-title">
+            <div className="rb-login-mark"><img src={`${import.meta.env.BASE_URL}brand/mois-login-logo.jpg`} alt={u.Login_moisAlt} /></div>
             <h2 id="login-notice-title" className="krds-text-body-small-bold">{u.Login_noticeTitle}</h2>
             <p role="status">
               <span className="rb-status-text is-warning"><i className="rb-status-dot" aria-hidden="true" />{t.P12_notice}</span>

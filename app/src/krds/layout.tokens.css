@@ -68,6 +68,11 @@
   --rb-step-19: 1.9rem;
   --rb-lh-13: 2rem;
   --rb-lh-15: 2.2rem;
+  /* D-19 4장: 문서 읽기 영역(README, 사용 방법, 릴리스 노트, 작업 항목 본문) 안에서만 쓰는 제목 크기 24/19/17(행간 32/28/26) */
+  --rb-step-24: 2.4rem;
+  --rb-lh-24: 3.2rem;
+  --rb-lh-19: 2.8rem;
+  --rb-lh-17: 2.6rem;
   --rb-lh-17: 2.6rem;
   --rb-lh-19: 2.8rem;
   --rb-lh-24: 3.2rem;
@@ -78,6 +83,9 @@
   --krds-line-height-base: round(nearest, calc(1em * var(--krds-line-height-ratio)), 2px);
   /* G-08 로그인 2열: 왼쪽 공지 360(96x3+72), 오른쪽 폼 400(96x4+16). 768 이하는 1열 */
   --rb-login-notice-w: calc(var(--krds-number-21) * 3 + var(--krds-number-19));
+  /* 로그인: 2열 묶음 최소 높이 = 화면 - 머리글 - 바닥글(내용 약 145) - 위아래 여백. 행정안전부 로고 판 160 */
+  --rb-login-min-h: calc(100dvh - var(--rb-header-h) - var(--krds-number-18) * 3 - var(--krds-number-9) * 2);
+  --rb-login-mark-w: calc(var(--krds-number-12) * 5);
   --rb-login-form-w: calc(var(--krds-number-21) * 4 + var(--krds-number-8));
   /* D-18: 가운데 컨테이너 1280, 저장소 홈/목록 읽기 폭 960, 도킹 패널 360, 탭 줄 48 */
   --rb-container-w: calc(var(--krds-number-12) * 40);

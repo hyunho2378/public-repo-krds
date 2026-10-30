@@ -119,7 +119,7 @@ const routes = [
   ['POST', /^\/projects\/(\d+)\/readme-proposals$/, 'F-23', async ({ m }) => {
     const d = await repo.detail(m[1]);
     const c = card(d.project, d.readme, d.files);
-    return { status: 'draft', method: '자동 추출', markdown: template.replace('## 하는 일\n', '## 하는 일\n' + (c.summary || '제작자 작성 필요') + '\n'), notice: '초안만 생성했습니다. GitLab 이슈로 발송하지 않았습니다.' };
+    return { status: 'draft', method: '자동 추출', markdown: template.replace('## 하는 일\n', '## 하는 일\n' + (c.summary || '제작자 작성 필요') + '\n'), notice: '초안만 생성했습니다. GitLab 작업 항목로 발송하지 않았습니다.' };
   }],
   ['POST', /^\/projects\/(\d+)\/feedback$/, 'F-31', readOnly],
   ['GET', /^\/projects\/(\d+)\/reuses$/, 'F-32', async () => ({ items: [], total: 0, staticMode: true, notice: STATIC_NOTICE })],
@@ -140,7 +140,7 @@ const routes = [
   ['GET', /^\/projects\/(\d+)\/version-guide$/, 'F-36', async ({ m }) => {
     const d = await repo.detail(m[1]);
     const items = await repo.get(`projects/${d.project.id}/repository/commits?per_page=10`);
-    return { items: items.map((c) => ({ id: c.id, title: c.title, committedAt: c.committed_date, url: c.web_url })), method: '원문 변경 기록', notice: '오류 원인 진단/자연어 변환 미연결' };
+    return { items: items.map((c) => ({ id: c.id, title: c.title, committedAt: c.committed_date, url: c.web_url })), method: '원문 커밋', notice: '오류 원인 진단/자연어 변환 미연결' };
   }],
   ['POST', /^\/projects\/(\d+)\/handover$/, 'F-37', async ({ m }) => {
     const d = await repo.detail(m[1]);

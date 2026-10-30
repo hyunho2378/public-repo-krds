@@ -262,3 +262,27 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 /* README 안 인라인 코드는 긴 경로도 줄바꿈해 화면 밖으로 나가지 않는다 */
 .rb-md code, .rb-md-code { overflow-wrap: anywhere; }
 .rb-commit-bar, .rb-commit-bar > * { min-width: 0; max-width: 100%; }
+
+/* D-19 2장 머리글 간격: 로고와 이름 8, 이름과 탐색 24, 이름과 저장소 경로 24, 경로 구분자 양쪽 8. 탐색 현재 표시는 채움 없이 굵게 + 아래 선 */
+.rb-gbar-left { gap: var(--krds-gap-7); }
+.rb-gbar-brand { gap: var(--krds-gap-3); }
+.rb-gbar-path { gap: var(--krds-gap-3); }
+.rb-gbar-explore.active, .rb-gbar-explore.active:hover { background: none; font-weight: var(--rb-fw-current); box-shadow: inset 0 calc(var(--krds-number-2) * -1) 0 var(--krds-color-border-primary); border-radius: 0; }
+
+/* D-19 3장: 목록 항목(제목, 설명, 메타)은 영역 제목과 구분선과 같은 왼쪽 선에서 시작한다(아바타를 없앤 뒤 남은 안쪽 여백 32 제거) */
+#root .krds-structured-list.rb-list:not(.rb-cards) .structured-item { padding-inline: 0; }
+
+/* 아코디언(도움말 등): 제목 앞 글자 모양 표지(▼)는 쓰지 않고 KRDS 꺾쇠만 둔다. 제목과 본문은 같은 왼쪽 여백 16, 본문 위아래 16, 제목과 본문 사이 선 하나.
+   초점 테두리는 outline-offset으로 바깥에만 그려 본문과 겹치지 않게 한다 */
+.krds-accordion summary { display: flex; align-items: center; list-style: none; justify-content: space-between; gap: var(--krds-gap-5); padding: var(--krds-number-7) var(--krds-number-8); cursor: pointer; }
+.krds-accordion details[open] > summary .ico-toggle { transform: rotate(180deg); }
+.krds-accordion summary::-webkit-details-marker { display: none; }
+.krds-accordion summary::marker { content: ""; }
+.krds-accordion summary:hover { background: var(--krds-color-action-secondary-hover); }
+.krds-accordion summary:focus-visible { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); outline-offset: var(--krds-number-2); border-radius: var(--krds-radius-medium2); }
+.krds-accordion .accordion-body { padding: var(--krds-number-8); border-top: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
+#root .krds-accordion .accordion-item .accordion-body, #root .krds-accordion .accordion-body { padding: var(--krds-number-8); }
+/* 번호 목록은 번호를 영역 제목과 같은 왼쪽 선에 둔다(번호 없이 안쪽 여백만 남던 문제) */
+#root ol.rb-ordered { list-style: decimal inside; padding-inline-start: 0; margin: 0; }
+#root .krds-accordion .accordion-item > summary, #root .krds-accordion summary { padding: var(--krds-number-7) var(--krds-number-8); min-height: var(--krds-number-14); }
+#root .krds-accordion summary:focus-visible { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); outline-offset: var(--krds-number-2); }

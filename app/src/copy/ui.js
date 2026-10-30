@@ -62,4 +62,12 @@ export const u = {
   MR_to: "대상",
   Diff_prev: "이전",
   Brand_home: "공공 깃랩 홈",
+  Fork_label: "포크",
+  Tip_issues: "할 일, 문의, 오류 보고",
+  Tip_mr: "코드 반영 요청",
+  Tip_commit: "코드를 바꾼 한 건의 기록",
+  Tip_branch: "원본에서 갈라져 따로 작업하는 줄기",
+  Tip_star: "챙겨 볼 저장소 표시",
+  Tip_usage: "이 도구를 써 본 기관의 기록",
+  Login_moisAlt: "행정안전부",
 };

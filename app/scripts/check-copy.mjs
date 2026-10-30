@@ -4,7 +4,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const TARGETS = ['src/copy/ko.js', 'src/api/static.js', '../server/src'];
+const TARGETS = ['src/copy/ko.js', 'src/copy/ui.js', 'src/api/static.js', '../server/src'];
 const PATTERNS = [
   ['와 ', /와 /g],
   ['과 ', /과 /g],
@@ -13,6 +13,13 @@ const PATTERNS = [
   ['합니다', /합니다/g],
   ['하세요', /하세요/g],
   ['않습니다', /않습니다/g],
+  // D-19 1장(UX-007 13장): 공공 깃랩 말이 아닌 이름 금지. 이슈 보드는 공공 깃랩 원문이라 허용
+  ['금지 용어 관심 표시', /관심 표시/g],
+  ['금지 용어 써 봤어요', /써 봤어요/g],
+  ['금지 용어 변경 제안', /변경 제안/g],
+  ['금지 용어 작업 갈래', /작업 갈래/g],
+  ['금지 용어 변경 기록', /변경 기록/g],
+  ['금지 용어 이슈', /이슈(?! 보드)/g],
 ];
 // 조사 "와/과"가 아닌 낱말(결과, 통과 같은 명사, 도와 같은 동사 활용)은 건수에서 뺀다
 const NOT_PARTICLE = /(?:결과|성과|효과|경과|부과|교과|인과|학과|통과|과|도와|고와|나와|와)\s/;

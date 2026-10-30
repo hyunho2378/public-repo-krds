@@ -31,7 +31,7 @@
 /* G-08 로그인 */
 .rb-login { display: flex; flex-direction: column; gap: var(--krds-gap-5); width: 100%; max-width: var(--rb-login-form-w); margin-inline: auto; }
 /* 공지가 있는 로그인은 Figma G-08처럼 2열(왼쪽 공지 360, 오른쪽 폼 400). 점검 안내는 면 없이 노랑 점+글자 */
-.rb-login:has(> .rb-login-notice) { display: grid; grid-template-columns: var(--rb-login-notice-w) var(--rb-login-form-w); column-gap: var(--rb-col-gap); row-gap: var(--krds-gap-5); max-width: none; justify-content: center; align-items: start; align-content: center; min-height: 60dvh; }
+.rb-login:has(> .rb-login-notice) { display: grid; grid-template-columns: var(--rb-login-notice-w) var(--rb-login-form-w); column-gap: var(--rb-col-gap); row-gap: var(--krds-gap-5); max-width: none; justify-content: center; align-items: start; align-content: center; min-height: var(--rb-login-min-h); }
 .rb-login-notice { display: flex; flex-direction: column; gap: var(--krds-gap-3); }
 .rb-login-notice h2 { margin: 0; }
 .rb-login:has(> .rb-login-notice) > :not(.rb-login-notice) { grid-column: 2; }
@@ -53,3 +53,9 @@
 .rb-run-cmd code { font-family: 'D2Coding', ui-monospace, monospace; overflow-wrap: anywhere; }
 .rb-run-copy { flex: none; border: 0; background: none; color: var(--krds-color-text-subtle); cursor: pointer; }
 .rb-login-card { display: flex; flex-direction: column; gap: var(--krds-gap-4); width: 100%; }
+
+/* 로그인 왼쪽 열: 행정안전부 로고를 흰 정사각 판(안쪽 24, 모서리 8)에 올려 가운데, 그 아래 공지는 왼쪽 정렬. 열은 폼 열과 같은 높이로 늘고 세로선 한 줄 유지 */
+.rb-login-mark { align-self: center; box-sizing: border-box; display: grid; place-items: center; width: var(--rb-login-mark-w); aspect-ratio: 1; padding: var(--krds-number-10); background: var(--krds-color-light-gray-0); border-radius: var(--krds-radius-medium2); margin-bottom: var(--krds-gap-5); }
+.rb-login-mark img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.rb-login-notice { text-align: start; align-items: stretch; justify-content: flex-start; }
+@media (max-width: 767px) { .rb-login-mark { align-self: flex-start; } }

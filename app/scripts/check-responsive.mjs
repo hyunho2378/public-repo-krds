@@ -1,6 +1,7 @@
 // 반응형 검사: 8개 폭 x 주요 경로에서 가로 넘침과 잘린 글자를 찾는다.
 // 실행: npm run dev(5731)와 server(5732)를 켠 뒤 `node scripts/check-responsive.mjs` (playwright 필요: npm i -D playwright)
 // 기준: 가로 넘침 0, 보이는 글자가 잘림 0. 탭, 표, 코드 블록의 의도된 가로 스크롤은 제외.
+import { setViewport } from './viewport.mjs';
 const { chromium } = await import('playwright');
 const BASE = process.env.BASE || 'http://127.0.0.1:5731';
 export const WIDTHS = [320, 360, 768, 1024, 1440, 1920, 2560, 3840];
@@ -24,9 +25,9 @@ const browser = await chromium.launch();
 const page = await browser.newPage();
 let fails = 0;
 for (const width of WIDTHS) {
-  await page.setViewportSize({ width, height: 900 });
   for (const path of PATHS) {
     await page.goto(BASE + path);
+    await setViewport(page, width, 900);
     await page.waitForFunction(() => !document.querySelector('[data-state="Loading"]'), null, { timeout: 15000 }).catch(() => {});
     const r = await page.evaluate(inspect);
     if (r.over > 0 || r.found.length) {

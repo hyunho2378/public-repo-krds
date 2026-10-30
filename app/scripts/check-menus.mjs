@@ -3,6 +3,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { setViewport } from './viewport.mjs';
 const { chromium } = await import('playwright');
 const BASE = process.env.BASE || 'http://127.0.0.1:5731';
 const SHOTS = process.env.SHOTS || path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'UX', 'menu_check');
@@ -16,9 +17,9 @@ const page = await browser.newPage();
 let opened = 0;
 let fails = 0;
 for (const width of WIDTHS) {
-  await page.setViewportSize({ width, height: 900 });
   for (const p of PATHS) {
     await page.goto(BASE + p);
+    await setViewport(page, width, 900);
     await page.waitForFunction(() => !document.querySelector('[data-state="Loading"]'), null, { timeout: 15000 }).catch(() => {});
     // 왼쪽 메뉴는 접어야 묶음별 메뉴가 열린다
     if (p === '/my' && !(await page.locator('.rb-side [aria-haspopup="menu"]').count()) && (await page.locator('.rb-side-collapse').count())) await page.locator('.rb-side-collapse').first().click().catch(() => {});

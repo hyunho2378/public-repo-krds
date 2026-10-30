@@ -7,6 +7,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PATHS as ALL } from './paths.mjs';
+import { setViewport } from './viewport.mjs';
 const { chromium } = await import('playwright');
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const BASE = process.env.BASE || 'http://127.0.0.1:5731';
@@ -31,8 +32,7 @@ for (const p of paths) {
   for (const h of heights) {
     let prevSig = null;
     for (const w of widths) {
-      await page.setViewportSize({ width: w, height: h });
-      await page.waitForTimeout(60);
+      await setViewport(page, w, h, 60);
       const r = await page.evaluate(fluid);
       const e = await page.evaluate(edge);
       const list = [...r.out, ...e.bad.map((b) => ['E', b])];

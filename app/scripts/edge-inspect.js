@@ -33,6 +33,10 @@
     add('본문 영역', main?.querySelector('.rb-code-area, .rb-repo-main > *, .rb-main > *'));
     add('저장소 제목 줄', document.querySelector('.rb-repo-head'));
   }
+  // D-19 3장: 목록 항목 글자는 목록(구분선) 왼쪽과 같아야 한다
+  const lst = document.querySelector('.krds-structured-list.rb-list:not(.rb-cards)');
+  const tit = lst?.querySelector('.c-tit');
+  if (shown(lst) && shown(tit)) { const base = lst.getBoundingClientRect().left; const l = textLeft(tit); if (Math.abs(l - base) > 2) items.push(['목록 항목 글자(구분선 기준 ' + Math.round(base * 10) / 10 + ')', l - base + E]); }
   const bad = items.filter(([, l]) => Math.abs(l - E) > 2).map(([n, l]) => `${n} ${l} (기준 ${Math.round(E * 10) / 10})`);
   return { E: Math.round(E * 10) / 10, items, bad };
 })()

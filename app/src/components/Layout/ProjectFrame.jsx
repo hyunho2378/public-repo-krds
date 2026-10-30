@@ -65,21 +65,27 @@ function RepoHeader({ project, id }) {
           <span className="rb-pill">{t.RepoHead_public}</span>
         </h1>
         <div className="rb-repo-actions" data-figma="repo-actions" role="group" aria-label={t.RepoHead_actions}>
-          <button type="button" className="krds-btn small tertiary" onClick={star}>
+          <button type="button" className="krds-btn small tertiary" title={u.Tip_star} onClick={star}>
             {t.RepoHead_star}
             <span className="rb-subtle">{project.star_count ?? 0}</span>
           </button>
-          <button type="button" className="krds-btn small tertiary" aria-expanded={reuseOpen} onClick={() => setReuse(!reuseOpen)}>
-            {t.RepoHead_reuse}
-          </button>
-          <Drop label={t.Home_more} btnClass="krds-btn small text" button={<><Icon name="ellipsis_horizontal" /><span>{t.Home_more}</span></>}>
+          {project.forks_count != null ? (
+            <a className="krds-btn small tertiary" href={`${project.web_url}/-/forks`} {...newWindow(u.Fork_label)}>
+              {u.Fork_label}
+              <span className="rb-subtle">{project.forks_count}</span>
+            </a>
+          ) : null}
+          <Drop label={t.Home_more} btnClass="krds-btn small tertiary" toggle={false} button={<Icon name="ellipsis_horizontal" />}>
             {(close) => (
               <ul className="drop-list">
-                <li><a className="item-link" href={project.web_url} {...newWindow(String(t.Home_openOrigin))} onClick={close}>{t.Home_openOrigin}</a></li>
+                <li><a className="item-link" href={project.web_url} {...newWindow(t.Home_openOrigin)} onClick={close}>{t.Home_openOrigin}</a></li>
                 <li><Link className="item-link" to={`/projects/${id}/feedback?type=bug`} onClick={close}>{t.Home_reportIssue}</Link></li>
               </ul>
             )}
           </Drop>
+          <button type="button" className="krds-btn small tertiary" title={u.Tip_usage} aria-expanded={reuseOpen} onClick={() => setReuse(!reuseOpen)}>
+            {t.RepoHead_reuse}
+          </button>
         </div>
       </div>
       {reuseOpen && <ReuseAction id={id} onClose={() => setReuse(false)} />}

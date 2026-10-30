@@ -3,6 +3,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { setViewport } from './viewport.mjs';
 const { chromium } = await import('playwright');
 const BASE = process.env.BASE || 'http://127.0.0.1:5731';
 const WIDTHS = (process.env.WIDTHS || '1440').split(',').map(Number);
@@ -12,9 +13,9 @@ const browser = await chromium.launch();
 const page = await browser.newPage();
 let fails = 0;
 for (const width of WIDTHS) {
-  await page.setViewportSize({ width, height: 900 });
   for (const p of PATHS) {
     await page.goto(BASE + p);
+    await setViewport(page, width, 900);
     await page.waitForFunction(() => !document.querySelector('[data-state="Loading"]'), null, { timeout: 15000 }).catch(() => {});
     const r = await page.evaluate(inspect);
     if (r.bad.length) { fails += 1; console.log('위반', width, p, r.bad.join(' / ')); }

@@ -45,7 +45,7 @@ export default function Help() {
         <div className="krds-accordion">
           {FAQ.map(([q, a]) => (
             <details className="accordion-item" key={q}>
-              <summary className="btn-accordion krds-text-body-small-bold">{q}</summary>
+              <summary className="btn-accordion krds-text-body-small-bold"><span>{q}</span><i className="svg-icon ico-toggle" aria-hidden="true" /></summary>
               <div className="accordion-body"><p>{a}</p></div>
             </details>
           ))}

@@ -42,8 +42,8 @@ export function RepoTabs({ id, nav }) {
   const manage = signedIn && atLeast(role, 'developer');
   const TABS = [
     { to: p, label: t.Tab_code, icon: 'document', match: (s) => s === p || under(s, p, ['/code', '/changes', '/branches', '/tags', '/releases', '/compare', '/snippets']) },
-    { to: p + '/issues', label: t.Side_issues, icon: 'guide_check', count: nav?.issues, match: (s) => under(s, p, ['/issues']) },
-    { to: p + '/merge-requests', label: t.RepoSub_mr, icon: 'edit', match: (s) => under(s, p, ['/merge-requests']) },
+    { to: p + '/issues', label: t.Side_issues, tip: u.Tip_issues, icon: 'guide_check', count: nav?.issues, match: (s) => under(s, p, ['/issues']) },
+    { to: p + '/merge-requests', label: t.RepoSub_mr, tip: u.Tip_mr, icon: 'edit', match: (s) => under(s, p, ['/merge-requests']) },
     { to: p + '/pipelines', label: t.P22_pipelines, icon: 'component', match: (s) => under(s, p, ['/pipelines', '/jobs']) },
     { to: p + '/wiki', label: t.P22_wiki, icon: 'document_fill', match: (s) => under(s, p, ['/wiki']) },
     { to: p + '/graph', label: t.Side_analyze, icon: 'analytics', match: (s) => under(s, p, ['/graph', '/contributors', '/law-alerts', '/handover']) },
@@ -64,7 +64,7 @@ export function RepoTabs({ id, nav }) {
           const on = x.match(pathname);
           return (
             <li key={x.to}>
-              <Link className={'rb-rtab' + (on ? ' active' : '')} aria-current={on ? 'page' : undefined} to={x.to}>
+              <Link className={'rb-rtab' + (on ? ' active' : '')} aria-current={on ? 'page' : undefined} title={x.tip} to={x.to}>
                 <Icon name={x.icon} />
                 <span>{x.label}</span>
                 {x.count ? <span className="rb-rtab-count">{x.count}</span> : null}

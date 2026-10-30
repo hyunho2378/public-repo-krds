@@ -50,3 +50,15 @@ ol.rb-md-list { list-style: decimal; }
 .rb-md-alert.is-warning .rb-md-alert-title { color: var(--rb-status-warning); }
 .rb-md-alert.is-caution { border-inline-start-color: var(--rb-status-danger); }
 .rb-md-alert.is-caution .rb-md-alert-title { color: var(--rb-status-danger); }
+
+/* D-19 4장 문서 글자 위계: h1 24, h2 19, h3 17, h4 15 굵게, 본문 15. 제목 위 여백 32/28/24/20(문단 간격 12를 뺀 값), 아래 12, 구분선 없음 */
+.rb-md-h { font-weight: var(--rb-fw-current); color: var(--krds-color-text-basic); }
+.rb-md-h1 { font-size: var(--rb-step-24); line-height: var(--rb-lh-24); margin-top: var(--krds-number-9); }
+.rb-md-h2 { font-size: var(--rb-step-19); line-height: var(--rb-lh-19); margin-top: var(--krds-number-8); }
+.rb-md-h3 { font-size: var(--rb-step-17); line-height: var(--rb-lh-17); margin-top: var(--krds-number-7); }
+.rb-md-h4 { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); margin-top: var(--krds-number-5); }
+.rb-md > :first-child { margin-top: 0; }
+.rb-md-hr { border: 0; height: 0; }
+.rb-md { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.rb-md-list { gap: var(--krds-gap-2); }
+.rb-md-pre { margin-block: var(--krds-number-4); }

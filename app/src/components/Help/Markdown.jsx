@@ -150,7 +150,7 @@ function Blocks({ nodes, base }) {
         const Tag = `h${Math.min(6, n.level + 1)}`;
         const id = ID_PREFIX + n.id;
         return (
-          <Tag key={i} id={id} className={'rb-md-h ' + (n.level === 1 ? 'krds-text-heading-small' : 'krds-text-body-small-bold')}>
+          <Tag key={i} id={id} className={`rb-md-h rb-md-h${Math.min(n.level, 4)}`}>
             <Inline nodes={n.c} base={base} />
             <a className="rb-md-anchor" href={'#' + id} aria-label={u.Md_anchor} onClick={(e) => { e.preventDefault(); jump(id); }} />
           </Tag>
