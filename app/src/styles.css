@@ -115,3 +115,19 @@ html[data-krds-mode="dark"] {
 .rb-meta .value { color: var(--krds-color-text-subtle); }
 .rb-lang { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
 .rb-lang-dot { display: inline-block; width: var(--krds-number-5); height: var(--krds-number-5); border-radius: 50%; background: var(--krds-color-icon-gray); }
+
+/* D-14 끝절: 목록 항목은 GitHub처럼 촘촘하게. 항목 제목 15 보통, 설명 15, 메타 13. 위아래 여백은 KRDS padding-4.
+   KRDS 부품 변수(제목 글자 크기)를 이 층에서 body/small로 낮춘다 */
+.krds-structured-list, .krds-structured-list.type-full {
+  --krds-structured-list--card-body-title-pc-font-size: var(--krds-font-size-body-small);
+  --krds-structured-list--card-body-title-mobile-font-size: var(--krds-font-size-body-small);
+  --krds-structured-list--full-card-body-gap: var(--krds-gap-3);
+  --krds-structured-list--full-card-body-cont-gap: var(--krds-gap-2);
+  --krds-structured-list--full-card-top-margin: 0;
+}
+.krds-structured-list .card-body .c-text .c-tit { font-weight: var(--krds-font-weight-regular); line-height: var(--rb-lh-15); }
+.krds-structured-list .structured-item { padding-block: var(--krds-padding-4); gap: var(--krds-gap-2) var(--krds-gap-8); }
+.krds-structured-list .structured-item .card-body { gap: var(--krds-gap-1); }
+.krds-structured-list .structured-item .c-txt { font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); }
+.krds-structured-list.type-full .structured-item > .in { padding-block: 0; }
+.krds-structured-list .structured-item .card-body .c-text { gap: var(--krds-gap-1); }
