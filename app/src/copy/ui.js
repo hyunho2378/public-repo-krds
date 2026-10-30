@@ -5,6 +5,7 @@ export const u = {
   Font_large: "크게",
   Login_noticeTitle: "공지",
   Login_noticeLink: "등록 안내",
+  Build_label: "빌드 번호",
   Md_copy: "복사",
   Md_copied: "복사함",
   Md_anchor: "제목 링크",

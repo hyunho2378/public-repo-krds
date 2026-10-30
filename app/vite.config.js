@@ -3,6 +3,29 @@ import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
+import { execSync } from 'node:child_process';
+
+// 빌드 번호 = 커밋 해시 앞 7자(GitHub Actions는 GITHUB_SHA, 로컬은 git). 도움말에 보이고, 배포본의 version.json과 비교해 새 빌드를 알아챈다
+function buildId() {
+  if (process.env.GITHUB_SHA) return process.env.GITHUB_SHA.slice(0, 7);
+  try { return execSync('git rev-parse --short=7 HEAD', { encoding: 'utf8' }).trim(); } catch { return 'dev'; }
+}
+const BUILD_ID = buildId();
+
+function versionFile() {
+  return {
+    name: 'version-file',
+    apply: 'build',
+    // KRDS 글꼴/CSS 링크에 빌드 번호를 붙여 브라우저가 옛 파일을 쓰지 않게 한다
+    transformIndexHtml(html) { return html.replace(/(href="[^"]*krds[^"]*\.css)"/g, `$1?v=${BUILD_ID}"`); },
+    closeBundle() {
+      const out = fileURLToPath(new URL('./dist', import.meta.url));
+      const dir = process.env.VITE_OUT_DIR || out;
+      fs.mkdirSync(dir, { recursive: true });
+      fs.writeFileSync(path.join(dir, 'version.json'), JSON.stringify({ build: BUILD_ID }));
+    },
+  };
+}
 
 const serverSrc = fileURLToPath(new URL('../server/src', import.meta.url));
 
@@ -30,7 +53,8 @@ const proxy = () => ({ '/api': { target: apiTarget }, '/auth': { target: apiTarg
 
 export default defineConfig({
   base: process.env.VITE_BASE || '/',
-  plugins: [react(), staticPages()],
+  plugins: [react(), staticPages(), versionFile()],
+  define: { __BUILD_ID__: JSON.stringify(BUILD_ID) },
   resolve: { alias: { '@server': serverSrc } },
   preview: { proxy: proxy() },
   server: {

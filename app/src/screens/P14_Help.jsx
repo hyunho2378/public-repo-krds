@@ -1,6 +1,7 @@
 // P-14 도움말. 처음 쓰는 공무원 안내, 용어 풀이(U4), 설명서 표준 양식(F-24). KRDS 아코디언.
 import { phrase } from '../components/Help/Phrase';
 import { t } from '../copy/ko';
+import { u } from '../copy/ui';
 import { product } from '../api/client';
 import { useData } from '../api/useData';
 import { Page } from '../components/Layout/Page';
@@ -28,6 +29,7 @@ export default function Help() {
       <section className="rb-stack" aria-labelledby="about-title">
         <h2 id="about-title" className="krds-text-body-small-bold">{phrase(t.P14_about_title)}</h2>
         <p>{phrase(t.P14_about_body)}</p>
+        <p className="krds-text-body-xsmall rb-subtle">{u.Build_label} <code className="rb-md-code">{__BUILD_ID__}</code></p>
       </section>
       <section className="rb-stack" aria-labelledby="start-title">
         <h2 id="start-title" className="krds-text-body-small-bold">{phrase(t.P14_15)}</h2>
