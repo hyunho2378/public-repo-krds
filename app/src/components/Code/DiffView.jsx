@@ -63,7 +63,7 @@ function FileDiff({ file, mode, index }) {
         <span className="rb-diff-name">
           <Icon name="document" />
           <span className="rb-ellipsis rb-break-any">{name}</span>
-          {badge ? <span className="krds-badge small bg-light-gray">{badge}</span> : null}
+          {badge ? <span className="rb-pill">{badge}</span> : null}
         </span>
         <span className="krds-text-body-small rb-subtle">{t.fn.diffStat(stat.add, stat.del)}</span>
       </header>
@@ -118,7 +118,7 @@ export function DiffView({ files }) {
         <p className="krds-text-body-medium-bold">{t.fn.filesChanged(files.length)}</p>
         <div className="krds-form-chip rb-diff-mode" role="radiogroup" aria-label={t.P17_view}>
           {[['unified', t.P17_unified], ['split', t.P17_split]].map(([v, label]) => (
-            <button key={v} type="button" role="radio" aria-checked={mode === v} className={`krds-btn small ${mode === v ? 'secondary' : 'tertiary'} rb-mode-${v}`} onClick={() => setMode(v)}>{label}</button>
+            <button key={v} type="button" role="radio" aria-checked={mode === v} className={`krds-btn small ${mode === v ? 'primary' : 'tertiary'} rb-mode-${v}`} onClick={() => setMode(v)}>{label}</button>
           ))}
         </div>
       </div>

@@ -10,10 +10,8 @@ export function Footer() {
     <footer data-figma="footer" id="krds-footer" data-krds="footer">
       <div className="inner">
         <div className="f-logo rb-f-logo">{SERVICE_NAME}</div>
+        {/* UX-007 2장: 시제품 문구는 바닥글에서 빼고 도움말 "이 서비스에 대해"에만 둔다 */}
         <div className="f-cnt">
-          <div className="f-info">
-            <p className="info-addr">{phrase(t.Footer_1)}</p>
-          </div>
           <div className="f-link">
             <div className="link-go">
               <Link className="krds-btn medium text" to="/help">

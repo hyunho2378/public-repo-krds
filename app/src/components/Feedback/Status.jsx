@@ -20,7 +20,7 @@ export function Status({ state, error, retry, status }) {
         <p>{phrase(notFound ? t.Status_4 : error || t.Status_5)}</p>
         <div className="rb-actions">
           {!notFound && retry && (
-            <Button Type="secondary" onClick={retry}>
+            <Button Type="tertiary" onClick={retry}>
               {t.Status_6}
             </Button>
           )}

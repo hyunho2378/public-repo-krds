@@ -73,13 +73,13 @@ export default function Usage() {
       {guide ? (
         <Readme source={guide} />
       ) : (
-        <EmptyState title={t.P07_17} actions={<LinkButton Type="secondary" to={`/projects/${data.id}/feedback?type=readme`}>{t.P07_16}</LinkButton>}>
+        <EmptyState title={t.P07_17} actions={<LinkButton Type="tertiary" to={`/projects/${data.id}/feedback?type=readme`}>{t.P07_16}</LinkButton>}>
           {t.P07_19}
         </EmptyState>
       )}
       <div className="rb-actions">
         <a className="krds-btn medium primary" href={project.web_url} target="_blank" rel="noreferrer">{t.P07_18}<span className="sr-only"> {t.Footer_3}</span></a>
-        <LinkButton Type="secondary" to={`/projects/${data.id}`}>{t.P07_7}</LinkButton>
+        <LinkButton Type="tertiary" to={`/projects/${data.id}`}>{t.P07_7}</LinkButton>
       </div>
     </ProjectFrame>
   );

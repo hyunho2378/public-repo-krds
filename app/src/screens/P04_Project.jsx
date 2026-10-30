@@ -58,7 +58,7 @@ export default function Project() {
           ) : (
             <EmptyState
               title={t.P04_23}
-              actions={<LinkButton Type="secondary" to={`/projects/${id}/feedback?type=readme`}>{t.P04_24}</LinkButton>}
+              actions={<LinkButton Type="tertiary" to={`/projects/${id}/feedback?type=readme`}>{t.P04_24}</LinkButton>}
             >
               {t.P04_noReadme}
             </EmptyState>

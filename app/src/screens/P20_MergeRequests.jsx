@@ -15,7 +15,6 @@ import { day } from './parts/repoCommon';
 import '../components/Code/code.css';
 
 const LABEL = { opened: t.P20_opened, merged: t.P20_merged, closed: t.P20_closed };
-const TONE = { opened: 'bg-light-success', merged: 'bg-light-primary', closed: 'bg-light-gray' };
 
 export function MergeRequests() {
   const frame = useProject();
@@ -35,7 +34,7 @@ export function MergeRequests() {
               <li className="rb-row" key={m.iid}>
                 <div className="rb-row-main">
                   <p className="rb-row-title">
-                    <span className={`krds-badge small ${TONE[m.state] || 'bg-light-gray'}`}>{LABEL[m.state] || m.state}</span>
+                    <span className="rb-pill">{LABEL[m.state] || m.state}</span>
                     <Link className="krds-link krds-text-body-large rb-ellipsis" to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link>
                   </p>
                   <p className="krds-text-body-small rb-row-meta"><span>{t.fn.issueNo(m.iid)}</span><span>{day(m.created_at)}</span><span className="rb-break-any">{m.source_branch} → {m.target_branch}</span></p>
@@ -83,7 +82,7 @@ export function MergeRequest() {
           <div className="rb-detail-head">
             <h2 className="krds-text-heading-medium">{m.title} <span className="rb-subtle">{t.fn.issueNo(m.iid)}</span></h2>
             <p className="krds-text-body-small rb-row-meta">
-              <span className={`krds-badge small ${TONE[m.state] || 'bg-light-gray'}`}>{LABEL[m.state] || m.state}</span>
+              <span className="rb-pill">{LABEL[m.state] || m.state}</span>
               <span>{day(m.created_at)}</span>
               <span className="rb-break-any">{t.P20_from} {m.source_branch}</span>
               <span className="rb-break-any">{t.P20_to} {m.target_branch}</span>

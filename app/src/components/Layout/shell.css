@@ -5,6 +5,8 @@
   position: sticky;
   top: 0;
   z-index: 60;
+  box-sizing: border-box;
+  height: var(--rb-header-h);
   background: var(--krds-color-surface-gray-subtler);
   border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light);
 }
@@ -15,7 +17,7 @@
   align-items: center;
   column-gap: 0;
   padding-inline: var(--rb-page-pad);
-  height: var(--rb-header-h);
+  height: 100%;
 }
 .rb-gbar-left { display: flex; align-items: center; gap: var(--krds-gap-3); flex: none; }
 .rb-gbar-brand { display: flex; align-items: center; gap: var(--krds-gap-3); color: var(--krds-color-text-basic); text-decoration: none; flex: none; }
@@ -138,7 +140,6 @@
   .rb-gbar-right { margin-left: auto; }
   .rb-gbar-navtoggle { display: inline-flex; }
   .rb-gbar-explore, .rb-gbar-btn-text, .rb-gbar-brand-text { display: none; }
-  .rb-gbar-right .krds-btn.secondary { display: none; }
   .rb-side {
     position: fixed;
     inset-block: 0;
@@ -208,4 +209,6 @@
 @media (max-width: 767px) {
   .rb-gbar-searchlink { margin-left: auto; }
   .rb-gbar-right { margin-left: 0; }
+  /* Figma 상자 기준: 검색 아이콘 버튼 44×40(아이콘 20 + 좌우 padding-5 12, 위아래 padding-4 10) */
+  .rb-gbar-searchlink { padding: var(--krds-padding-4) var(--krds-padding-5); gap: 0; }
 }

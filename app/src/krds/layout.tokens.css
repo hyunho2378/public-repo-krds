@@ -19,7 +19,8 @@
 */
 :root {
   --rb-page-pad: var(--krds-padding-8);
-  --rb-col-gap: var(--krds-gap-8);
+  /* 본문과 정보 영역, 사이드바와 본문 사이 간격 40px 이상(사용자 지적, gap-9=number-14=40) */
+  --rb-col-gap: var(--krds-gap-9);
   --rb-masthead-h: var(--krds-number-12);
   /* KRDS에 없는 값. 위 표의 근거를 따른다 */
   --rb-sidebar-w: calc(var(--krds-number-12) * 8 + var(--krds-number-5));
@@ -30,8 +31,59 @@
   --rb-actions-w: calc(var(--krds-number-21) * 3);
   --rb-gbar-search-w: calc(var(--krds-number-21) * 6 + var(--krds-number-12) * 2);
   --rb-info-w: calc(var(--krds-number-12) * 10);
-  --rb-header-h: calc(var(--krds-number-12) * 2 + var(--krds-number-1));
+  /* D-16 3장: 머리 높이 65는 64로(짝수, 4의 배수) */
+  --rb-header-h: calc(var(--krds-number-12) * 2);
 }
+
+/* D-16 2장(흐름변수 본체): KRDS 기본 글자 크기 변수를 직접 덮어쓴다. 이것이 .krds-text-* 유틸리티만이 아니라 사이드바 링크, 표, 버튼 등 KRDS 부품 전체에 퍼진다(같은 :root 요소에 더 나중에 선언되는 값이 이긴다). 값은 아래 D-16 2장 표와 같다. */
+:root {
+  --krds-pc-font-size-body-xsmall: 1.2rem; --krds-mobile-font-size-body-xsmall: 1.2rem;
+  --krds-pc-font-size-label-xsmall: 1.2rem; --krds-mobile-font-size-label-xsmall: 1.2rem;
+  --krds-pc-font-size-body-small: 1.4rem; --krds-mobile-font-size-body-small: 1.4rem;
+  --krds-pc-font-size-label-small: 1.4rem; --krds-mobile-font-size-label-small: 1.4rem;
+  --krds-pc-font-size-heading-xxsmall: 1.4rem; --krds-mobile-font-size-heading-xxsmall: 1.4rem;
+  --krds-pc-font-size-navigation-depth-small: 1.4rem; --krds-mobile-font-size-navigation-depth-small: 1.4rem;
+  --krds-pc-font-size-navigation-depth-small-bold: 1.4rem; --krds-mobile-font-size-navigation-depth-small-bold: 1.4rem;
+  --krds-pc-font-size-body-medium: 1.6rem; --krds-mobile-font-size-body-medium: 1.6rem;
+  --krds-pc-font-size-label-medium: 1.6rem; --krds-mobile-font-size-label-medium: 1.6rem;
+  --krds-pc-font-size-heading-xsmall: 1.6rem; --krds-mobile-font-size-heading-xsmall: 1.6rem;
+  --krds-pc-font-size-navigation-depth-medium: 1.6rem; --krds-mobile-font-size-navigation-depth-medium: 1.6rem;
+  --krds-pc-font-size-navigation-depth-medium-bold: 1.6rem; --krds-mobile-font-size-navigation-depth-medium-bold: 1.6rem;
+  --krds-pc-font-size-body-large: 2rem; --krds-mobile-font-size-body-large: 2rem;
+  --krds-pc-font-size-label-large: 2rem; --krds-mobile-font-size-label-large: 2rem;
+  --krds-pc-font-size-heading-small: 2rem; --krds-mobile-font-size-heading-small: 2rem;
+  --krds-pc-font-size-navigation-title-small: 2rem; --krds-mobile-font-size-navigation-title-small: 2rem;
+  --krds-mobile-font-size-heading-medium: 2.4rem;
+  --krds-line-height-ratio: 1.43;
+}
+/* 위 흐름변수와 더불어 .krds-text-* 유틸리티는 행간도 정확히 px로 고정(D-16 행간은 퍼센트가 아니라 px). */
+/* D-16 2장: KRDS 글자 크기(13,15,17,19,22)는 홀수라 GitHub와 같은 짝수 체계로 덮어쒨다. 
+   원본 KRDS css는 고치지 않고 이 파일(앱 스타일 층, D-13과 같은 위치)에서 .krds-text-* 클래스를 다시 선언해 덮어쒴다.
+   행간은 퍼센트가 아니라 px로 고정(글자 크기마다 다릅에 공유 line-height-base 하나로는 못 표현해 클래스마다 직접 적음).
+   pc와 mobile 두 값이 거의 같아(D-16 표) 폭에 관계없이 한 값으로 통일한다. */
+.krds-text-heading-xlarge { font-size: 4rem; line-height: 4.8rem; }
+.krds-text-heading-large { font-size: 3.2rem; line-height: 4rem; }
+.krds-text-heading-medium { font-size: 2.4rem; line-height: 3.2rem; }
+.krds-text-heading-small { font-size: 2rem; line-height: 2.8rem; }
+.krds-text-heading-xsmall { font-size: 1.6rem; line-height: 2.4rem; }
+.krds-text-heading-xxsmall { font-size: 1.4rem; line-height: 2rem; }
+.krds-text-body-large, .krds-text-label-large, .krds-text-underline-large { font-size: 2rem; line-height: 2.8rem; }
+.krds-text-body-medium, .krds-text-label-medium, .krds-text-underline-medium { font-size: 1.6rem; line-height: 2.4rem; }
+.krds-text-body-small, .krds-text-label-small, .krds-text-underline-small { font-size: 1.4rem; line-height: 2rem; }
+.krds-text-body-xsmall, .krds-text-label-xsmall, .krds-text-underline-xsmall { font-size: 1.2rem; line-height: 1.6rem; }
+.krds-text-body-large-bold { font-size: 2rem; line-height: 2.8rem; }
+.krds-text-body-medium-bold { font-size: 1.6rem; line-height: 2.4rem; }
+.krds-text-body-small-bold { font-size: 1.4rem; line-height: 2rem; }
+.krds-text-body-xsmall-bold { font-size: 1.2rem; line-height: 1.6rem; }
+.krds-text-navigation-title-medium { font-size: 2.4rem; line-height: 3.2rem; }
+.krds-text-navigation-title-small { font-size: 2rem; line-height: 2.8rem; }
+.krds-text-navigation-depth-medium, .krds-text-navigation-depth-medium-bold { font-size: 1.6rem; line-height: 2.4rem; }
+.krds-text-navigation-depth-small, .krds-text-navigation-depth-small-bold { font-size: 1.4rem; line-height: 2rem; }
+
+/* D-16/밀도 연동: KRDS 표(table) 기본 글자를 작게, 행 높이를 GitHub와 같은 40px(size-height-6, number-14)로.
+   원본이 .krds-table-wrap 자체에 변수를 선언해 상속되므로, 같은 선택자로 덮어써야 한다(:root는 더 먼 조상이라 지지 않음). */
+.krds-table-wrap { --krds-table--data-tbody-pc-font-size: 1.4rem; --krds-table--data-tbody-mobile-font-size: 1.4rem; --krds-table--data-tbody-padding: var(--krds-padding-3); }
+
 @media (max-width: 1023px) {
   :root {
     --rb-page-pad: var(--krds-padding-5);

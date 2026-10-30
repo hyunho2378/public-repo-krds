@@ -10,6 +10,8 @@ const MODES = [
   ['high-contrast', t.ScreenMode_4],
 ];
 
+const STORAGE_KEY = 'rb-screen-mode';
+
 function applyMode(mode) {
   const dark = matchMedia('(prefers-color-scheme: dark)').matches;
   const more = matchMedia('(prefers-contrast: more)').matches;
@@ -18,8 +20,27 @@ function applyMode(mode) {
   root.dataset.krdsMode = mode === 'theme' ? (more ? 'high-contrast' : dark ? 'dark' : 'light') : mode;
 }
 
+// UX-007 1장: 기본은 어두운 화면이다. 저장된 값(localStorage)이 있으면 그가만, 주소 파라미터 mode가 가장 우선
+// 개발 모드(?state=&auth=&role=&mode=) 비교용 주소는 저장하지 않는다
+function initialMode() {
+  const fromUrl = new URLSearchParams(location.search).get('mode');
+  if (fromUrl) return fromUrl;
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) return saved;
+  } catch { /* 개인정보보호모드등은 무시 */ }
+  return 'dark';
+}
+
 export function useScreenMode() {
-  const [mode, setMode] = useState(() => new URLSearchParams(location.search).get('mode') || document.documentElement.dataset.krdsPreference || 'theme');
+  const [mode, setModeState] = useState(initialMode);
+  const fromUrl = typeof location !== 'undefined' && new URLSearchParams(location.search).get('mode');
+  const setMode = (next) => {
+    setModeState(next);
+    if (!fromUrl) {
+      try { localStorage.setItem(STORAGE_KEY, next); } catch { /* 무시 */ }
+    }
+  };
   useEffect(() => {
     applyMode(mode);
     const queries = [matchMedia('(prefers-color-scheme: dark)'), matchMedia('(prefers-contrast: more)')];

@@ -26,13 +26,23 @@ async function walk(dir) {
     // .generated.css는 자동 생성, .tokens.css는 Figma 뼈대 값을 모아 둔 곳(D-13)이라 검사에서 뺀다
     if (!/\.(jsx?|css)$/.test(file) || file.endsWith('.generated.css') || file.endsWith('.tokens.css')) continue;
     const raw = await fs.readFile(file, 'utf8');
-    const source = raw.replace(KRDS_MEDIA, '@media(KRDS_BREAKPOINT)');
-    for (const [label, re] of RULES) for (const m of source.matchAll(re)) issues.push(`${file}: ${label} ${m[0]}`);
+    // 주석(/* ... */, {/* ... */})은 설명일 뿐이라 금지 패턴이 적혀있어도 검사에서 빼준다
+    const noComments = raw.replace(/\{?\/\*[\s\S]*?\*\/\}?/g, (m) => ' '.repeat(m.length));
+    const source = noComments.replace(KRDS_MEDIA, '@media(KRDS_BREAKPOINT)');
+    // UX-007 1장: 화면 모드 선택은 저장해 기억해야 하므로 ScreenMode.jsx만 localStorage 허용
+    const isScreenMode = file.endsWith('ScreenMode.jsx');
+    for (const [label, re] of RULES) {
+      if (label === '브라우저 저장소' && isScreenMode) continue;
+      for (const m of source.matchAll(re)) issues.push(`${file}: ${label} ${m[0]}`);
+    }
+    // D-15: 연한 채움(subtler, lighter, -light)은 회색 계열 외에는 금지. KRDS secondary 버튼도 금지
+    for (const m of source.matchAll(/\bbg-light-(?!gray\b)[a-z]+\b/g)) issues.push(`${file}: D-15 연한 채움 배지 ${m[0]}`);
+    for (const m of source.matchAll(/krds-btn[^"'`]*\bsecondary\b/g)) issues.push(`${file}: D-15 KRDS secondary 버튼 금지 ${m[0]}`);
     if (file.endsWith('.jsx')) {
-      raw.split('\n').forEach((line, i) => {
-        if (/^\s*(\/\/|\/?\*)/.test(line)) return;
+      noComments.split('\n').forEach((line, i) => {
+        if (/^\s*(\/\/|\/?\*)/.test(line) || !line.trim()) return;
         const code = line.replace(/\/\/.*$/, '').replace(/\/(?![/*])[^/\n]*[가-힣][^/\n]*\/[gimsuy]*/g, '');
-        if (/[가-힣]/.test(code)) issues.push(`${file}:${i + 1}: 문구 직접 입력(src/copy/ko.js 사용) ${line.trim().slice(0, 40)}`);
+        if (/[가-힣]/.test(code)) issues.push(`${file}:${i + 1}: 문구 직접 입력(src/copy/ko.js 사용) ${raw.split('\n')[i].trim().slice(0, 40)}`);
       });
     }
   }

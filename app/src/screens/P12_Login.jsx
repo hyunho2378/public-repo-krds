@@ -74,7 +74,7 @@ export default function Login() {
           <p className="krds-text-body-small rb-subtle">{phrase(t.P12_noStore)}</p>
           <button type="submit" className="krds-btn medium primary rb-login-submit">{t.P12_loginButton}</button>
         </form>
-        <a className="krds-btn medium secondary rb-login-submit" href={`${GITLAB}/users/sign_in`} target="_blank" rel="noreferrer">
+        <a className="krds-btn medium tertiary rb-login-submit" href={`${GITLAB}/users/sign_in`} target="_blank" rel="noreferrer">
           {t.P12_passkeyButton2}<span className="sr-only"> {t.Footer_3}</span>
         </a>
         <p className="krds-text-body-small rb-login-signup">

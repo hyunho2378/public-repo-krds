@@ -24,6 +24,11 @@ export default function Help() {
   return (
     <Page id="G-10" title={t.Header_5}>
       <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.Header_5)}</h1>
+      {/* UX-007 2장: 시제품 고지는 이곳과 README에만 둔다 */}
+      <section className="rb-stack" aria-labelledby="about-title">
+        <h2 id="about-title" className="krds-text-heading-medium">{phrase(t.P14_about_title)}</h2>
+        <p>{phrase(t.P14_about_body)}</p>
+      </section>
       <section className="rb-stack" aria-labelledby="start-title">
         <h2 id="start-title" className="krds-text-heading-medium">{phrase(t.P14_15)}</h2>
         <ol className="rb-ordered">

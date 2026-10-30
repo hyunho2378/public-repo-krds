@@ -107,7 +107,7 @@ export default function Search() {
               title={t.fn.emptyQuery(query)}
               actions={
                 <>
-                  {active.length > 0 && <Button Type="secondary" onClick={clear}>{t.P02_11}</Button>}
+                  {active.length > 0 && <Button Type="tertiary" onClick={clear}>{t.P02_11}</Button>}
                   <LinkButton Type="text" to={`/requests?new=1&q=${encodeURIComponent(query)}`}>{t.P02_12}</LinkButton>
                 </>
               }

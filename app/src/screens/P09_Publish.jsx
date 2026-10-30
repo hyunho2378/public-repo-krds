@@ -114,7 +114,7 @@ export default function Publish() {
               <ul className="rb-checklist">
                 {check.checks.map((c) => (
                   <li key={c.id} className={c.pass ? 'is-pass' : 'is-fail'}>
-                    <span className={`krds-badge ${c.pass ? 'bg-light-success' : 'bg-light-warning'}`}>{c.pass ? t.P09_26 : t.P09_27}</span> {CHECK_LABEL[c.id] || c.id}
+                    <span className={`rb-status-text ${c.pass ? 'is-success' : 'is-warning'}`}><i className="rb-status-dot" aria-hidden="true" />{c.pass ? t.P09_26 : t.P09_27}</span> {CHECK_LABEL[c.id] || c.id}
                   </li>
                 ))}
               </ul>
@@ -134,7 +134,7 @@ export default function Publish() {
           <p>{phrase(t.P09_30)}</p>
           <div className="rb-actions">
             <LinkButton to="/help#readme">{t.P09_31}</LinkButton>
-            {projectId && <LinkButton Type="secondary" to={`/projects/${projectId}`}>{t.P09_32}</LinkButton>}
+            {projectId && <LinkButton Type="tertiary" to={`/projects/${projectId}`}>{t.P09_32}</LinkButton>}
             <Button Type="text" onClick={() => setStep(1)}>{t.P09_28}</Button>
           </div>
           <p className="krds-text-body-small rb-subtle">{t.P09_33} <Link to="/my">{t.P09_34}</Link>{t.P09_35}</p>

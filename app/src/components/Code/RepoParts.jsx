@@ -238,7 +238,7 @@ export function About({ id, project, readme, languages, stats, summary }) {
       </div>
       {topics.length ? (
         <div className="rb-labels" aria-label={t.About_topics}>
-          {shown.map((tp) => <Link key={tp} className="krds-badge small bg-light-primary" to={`/search?topic=${enc(tp)}`}>{tp}</Link>)}
+          {shown.map((tp) => <Link key={tp} className="rb-pill" to={`/search?topic=${enc(tp)}`}>{tp}</Link>)}
           {topics.length > 5 && !allTopics ? <button type="button" className="krds-btn xsmall text" onClick={() => setAllTopics(true)}>{t.fn.moreTopics(topics.length - 5)}</button> : null}
         </div>
       ) : null}

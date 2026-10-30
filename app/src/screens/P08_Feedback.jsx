@@ -53,7 +53,7 @@ export default function Feedback() {
         <div className="krds-alert rb-status" role="status" data-state="Done">
           <h2 className="krds-text-heading-medium">{t.P08_8}</h2>
           <p>{done.notice}</p>
-          <Button Type="secondary" onClick={() => { setDone(null); setBody(''); setTitle(''); }}>{t.P08_9}</Button>
+          <Button Type="tertiary" onClick={() => { setDone(null); setBody(''); setTitle(''); }}>{t.P08_9}</Button>
         </div>
       ) : (
         <form className="rb-stack rb-form" onSubmit={submit} noValidate>

@@ -24,7 +24,7 @@ export default function ErrorScreen({ kind: fixed }) {
         {kind === 'not-found' && <TaskSearch />}
         <div className="rb-actions">
           <LinkButton to="/">{t.P13_7}</LinkButton>
-          {kind === 'forbidden' && <LinkButton Type="secondary" to={`/login?returnTo=${encodeURIComponent(params.get('from') || '/')}`}>{t.P10_2}</LinkButton>}
+          {kind === 'forbidden' && <LinkButton Type="tertiary" to={`/login?returnTo=${encodeURIComponent(params.get('from') || '/')}`}>{t.P10_2}</LinkButton>}
           <LinkButton Type="text" to="/help">{t.Header_5}</LinkButton>
         </div>
       </div>

@@ -59,7 +59,7 @@ function RepoHeader({ project, id }) {
             <Avatar src={project.avatar_url || project.namespace?.avatar_url} name={project.name} />
             <span className="rb-repo-org">{organizationOf(project)} /</span>
             <span>{project.name}</span>
-            <span className="krds-badge small bg-light-gray">{t.RepoHead_public}</span>
+            <span className="rb-pill">{t.RepoHead_public}</span>
           </h1>
         </div>
         <div className="rb-repo-actions" data-figma="repo-actions" role="group" aria-label={t.RepoHead_actions}>
@@ -67,7 +67,7 @@ function RepoHeader({ project, id }) {
             {t.RepoHead_star}
             <span className="rb-subtle">{project.star_count ?? 0}</span>
           </button>
-          <button type="button" className="krds-btn small secondary" aria-expanded={reuseOpen} onClick={() => setReuse(!reuseOpen)}>
+          <button type="button" className="krds-btn small tertiary" aria-expanded={reuseOpen} onClick={() => setReuse(!reuseOpen)}>
             {t.RepoHead_reuse}
           </button>
           <Drop label={t.Home_more} btnClass="krds-btn small text" button={<><Icon name="ellipsis_horizontal" /><span>{t.Home_more}</span></>}>
@@ -105,8 +105,13 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
     );
   }
   const { project } = data.data;
+  // UX-007 10장: 제목에 서비스명 접미, 세로선 구분 기호를 쓰지 않는다.
+  // 저장소 홈: "만든사람/프로젝트: 설명 한 줄", 저장소 안 화면: "화면 이름: 만든사람/프로젝트"
+  const ownerProject = `${organizationOf(project)}/${project.name}`;
+  const deepLabel = crumbs?.length ? crumbs[crumbs.length - 1][0] : tabLabel;
+  const docTitle = deepLabel ? `${deepLabel}: ${ownerProject}` : `${ownerProject}: ${cleanDescription(project.description) || ''}`.replace(/: $/, '');
   return (
-    <Page id={screenId} title={`${project.name} ${tabLabel || ''}`} state={state} noFigma>
+    <Page id={screenId} title={docTitle} state={state} noFigma>
       <div className={'rb-repo-layout' + (aside ? ' has-aside' : '')}>
         <div className="rb-repo-main" data-figma="main">
           <div className="rb-repo-top">

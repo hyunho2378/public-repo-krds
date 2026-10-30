@@ -46,11 +46,11 @@ export function Issues() {
               <li className="rb-row" key={i.iid}>
                 <div className="rb-row-main">
                   <p className="rb-row-title">
-                    <span className={`krds-badge small ${i.state === 'opened' ? 'bg-light-success' : 'bg-light-gray'}`}>{i.state === 'opened' ? t.P19_open : t.P19_closed}</span>
+                    <span className="rb-pill">{i.state === 'opened' ? t.P19_open : t.P19_closed}</span>
                     <Link className="krds-link krds-text-body-large rb-ellipsis" to={`/projects/${frame.id}/issues/${i.iid}`}>{i.title}</Link>
                   </p>
                   <p className="krds-text-body-small rb-row-meta"><span>{t.fn.issueNo(i.iid)}</span><span>{day(i.created_at)}</span></p>
-                  {i.labels?.length ? <p className="rb-labels">{i.labels.map((l) => <span key={l} className="krds-badge small bg-light-secondary">{l}</span>)}</p> : null}
+                  {i.labels?.length ? <p className="rb-labels">{i.labels.map((l) => <span key={l} className="rb-pill">{l}</span>)}</p> : null}
                 </div>
                 <div className="rb-row-side krds-text-body-small rb-subtle">{t.fn.commentCount(i.user_notes_count || 0)}</div>
               </li>
@@ -76,11 +76,11 @@ export function Issue() {
           <div className="rb-detail-head">
             <h2 className="krds-text-heading-medium">{i.title} <span className="rb-subtle">{t.fn.issueNo(i.iid)}</span></h2>
             <p className="krds-text-body-small rb-row-meta">
-              <span className={`krds-badge small ${i.state === 'opened' ? 'bg-light-success' : 'bg-light-gray'}`}>{i.state === 'opened' ? t.P19_open : t.P19_closed}</span>
+              <span className="rb-pill">{i.state === 'opened' ? t.P19_open : t.P19_closed}</span>
               <span>{day(i.created_at)}</span>
               <span>{t.fn.commentCount(i.user_notes_count || 0)}</span>
             </p>
-            {i.labels?.length ? <p className="rb-labels">{i.labels.map((l) => <span key={l} className="krds-badge small bg-light-secondary">{l}</span>)}</p> : null}
+            {i.labels?.length ? <p className="rb-labels">{i.labels.map((l) => <span key={l} className="rb-pill">{l}</span>)}</p> : null}
           </div>
           <div className="rb-detail-body">{i.description ? <Readme source={i.description} /> : <p className="rb-subtle">{t.P19_noBody}</p>}</div>
         </div>

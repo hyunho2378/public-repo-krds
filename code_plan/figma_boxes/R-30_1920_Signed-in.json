@@ -4,10 +4,9 @@
  "breakpoint": 1920,
  "auth": "Signed-in",
  "variant": "breakpoint=1920, auth=Signed-in",
- "data": "실제 kordoc 자료",
  "frame": {
   "w": 1920,
-  "h": 1180
+  "h": 1235
  },
  "boxes": {
   "masthead": {
@@ -22,17 +21,11 @@
    "w": 1920,
    "h": 65
   },
-  "global-search": {
-   "x": 277,
-   "y": 40,
-   "w": 1336,
-   "h": 48
-  },
   "footer": {
    "x": 0,
    "y": 1067,
    "w": 1920,
-   "h": 113
+   "h": 168
   },
   "body": {
    "x": 0,
@@ -44,20 +37,25 @@
    "x": 24,
    "y": 121,
    "w": 296,
-   "h": 922,
-   "clipped": true
-  },
-  "sidebar-nav": {
-   "x": 24,
-   "y": 166,
-   "w": 296,
-   "h": 1483
+   "h": 922
   },
   "main": {
    "x": 352,
    "y": 121,
    "w": 1544,
    "h": 851
+  },
+  "global-search": {
+   "x": 640,
+   "y": 40,
+   "w": 640,
+   "h": 48
+  },
+  "sidebar-nav": {
+   "x": 24,
+   "y": 166,
+   "w": 296,
+   "h": 1483
   },
   "breadcrumb": {
    "x": 352,
@@ -69,12 +67,6 @@
    "x": 352,
    "y": 164,
    "w": 1544,
-   "h": 40
-  },
-  "repo-actions": {
-   "x": 1523,
-   "y": 164,
-   "w": 373,
    "h": 40
   },
   "section-title": {

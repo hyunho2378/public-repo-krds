@@ -48,8 +48,8 @@ export function Branches() {
                 <ul className="rb-row-list">
                   {b.branches.map((x) => (
                     <RefRow key={x.name} id={frame.id} name={x.name} commit={x.commit} badges={<>
-                      {x.default ? <span className="krds-badge small bg-light-primary">{t.P18_default}</span> : null}
-                      {x.protected ? <span className="krds-badge small bg-light-gray">{t.P18_protected}</span> : null}
+                      {x.default ? <span className="rb-pill">{t.P18_default}</span> : null}
+                      {x.protected ? <span className="rb-pill">{t.P18_protected}</span> : null}
                     </>} />
                   ))}
                 </ul>
@@ -84,7 +84,7 @@ export function Releases() {
                 <div className="rb-row-main">
                   <p className="rb-row-title">
                     <span className="krds-text-heading-small rb-break-any">{r.name || r.tag_name}</span>
-                    {i === 0 ? <span className="krds-badge small bg-light-success">{t.P18_latest}</span> : null}
+                    {i === 0 ? <span className="rb-pill">{t.P18_latest}</span> : null}
                   </p>
                   <p className="krds-text-body-small rb-row-meta"><span>{r.tag_name}</span><span>{day(r.released_at || r.created_at)}</span></p>
                   {r.description ? <Readme source={r.description} /> : null}
