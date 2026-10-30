@@ -3,3 +3,6 @@
 .rb-skel { display: block; height: 1em; border-radius: var(--krds-radius-medium1); background: var(--krds-color-light-gray-10); animation: rb-skel-pulse 1.4s ease-in-out infinite; }
 .rb-skel-inline { display: inline-block; vertical-align: middle; }
 @keyframes rb-skel-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+/* 자료가 곧 오면(캐시) 막대가 잠깐 번쩍이지 않게, 160ms 넘게 걸릴 때만 보인다 */
+.rb-skel-group { opacity: 0; animation: rb-skel-show 1ms linear 160ms forwards; }
+@keyframes rb-skel-show { to { opacity: 1; } }

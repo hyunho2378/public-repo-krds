@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
 import { Toasts } from '../components/Feedback/Toast';
 import { ShortcutsDialog } from '../components/Feedback/ShortcutsDialog';
@@ -30,18 +30,21 @@ if (typeof window !== 'undefined' && 'ResizeObserver' in window) {
 function FocusOnNavigate({ onNavigate }) {
   const { pathname, key } = useLocation();
   const type = useNavigationType();
-  useEffect(() => {
-    // 화면이 바뀌는 동안 본문 높이를 이전 높이로 잠깐 붙잡아 바닥글과 스크롤이 튀지 않게 한다(새 내용이 그려지면 푼다)
+  // 화면이 바뀌는 순간(그리기 전) 본문 높이를 이전 높이로 붙잡아 바닥글과 스크롤이 튀지 않게 한다. 700ms 뒤 푼다
+  useLayoutEffect(() => {
     const main = document.getElementById('main');
-    if (main && main.dataset.h) main.style.minHeight = `${main.dataset.h}px`;
-    const release = setTimeout(() => { if (main) main.style.minHeight = ''; }, 700);
+    if (!main || !main.dataset.h) return undefined;
+    main.style.minHeight = `${main.dataset.h}px`;
+    const release = setTimeout(() => { main.style.minHeight = ''; }, 700);
+    return () => { clearTimeout(release); main.style.minHeight = ''; };
+  }, [pathname]);
+  useEffect(() => {
     const y = type === 'POP' ? scrollMemo.get(key) : undefined;
     if (y != null) requestAnimationFrame(() => window.scrollTo(0, y));
     else window.scrollTo(0, 0);
     document.getElementById('main')?.focus({ preventScroll: true });
     onNavigate();
     return () => {
-      clearTimeout(release);
       scrollMemo.set(key, window.scrollY);
     };
   }, [pathname, key, type, onNavigate]);
