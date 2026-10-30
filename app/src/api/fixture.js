@@ -35,8 +35,14 @@ export function fixtureFor(path) {
     [/^projects\/[^/]+\/merge_requests\/\d+$/, 'mr_56'],
     [/^projects\/[^/]+\/merge_requests\/\d+\/changes$/, 'mr_56_changes'],
     [/^projects\/[^/]+\/languages$/, 'languages'],
-    [/^projects\/[^/]+\/repository\/files\/[^/]+\/raw$/, 'readme_raw.md'],
   ];
+  // 파일 원문과 정보: 받아 둔 파일만 돌려주고, 그 밖의 파일은 실제 요청으로 넘긴다(다른 파일에 README를 돌려주지 않는다)
+  const fm = p.match(/^projects\/[^/]+\/repository\/files\/([^/]+?)(\/raw)?$/);
+  if (fm) {
+    const FILE = { 'README.md': ['readme_raw.md', 'file_meta_readme'], 'src/shared/numbering.ts': ['file_src_shared_numbering.ts', 'file_meta_numbering'] }[decodeURIComponent(fm[1])];
+    const data = FILE ? (fm[2] ? pickText(FILE[0]) : pick(FILE[1])) : null;
+    if (data) return { mock: false, source: 'sample/kordoc', fixture: 'kordoc', state: 'Ideal', data, pagination: { nextPage: null, total: null } };
+  }
   for (const [re, name] of map) {
     if (re.test(p)) {
       let data = name.includes('.') ? pickText(name) : pick(name);

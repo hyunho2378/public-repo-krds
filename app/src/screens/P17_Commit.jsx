@@ -22,7 +22,7 @@ export default function Commit() {
   const b = body.data;
   const stat = b ? diffStat(b.files) : null;
   return (
-    <ProjectFrame screenId="R-05" tab="/changes" tabLabel={t.P17_title} data={frame} state={b ? (b.files.length ? 'Ideal' : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-05" tab="/changes" tabLabel={t.P17_title} crumbs={[[t.Side_hintCommit, `/projects/${frame.id}/changes`], [sha.slice(0, 8)]]} data={frame} state={b ? (b.files.length ? 'Ideal' : 'Empty') : body.state}>
       {!b ? (
         <Status {...body} />
       ) : (

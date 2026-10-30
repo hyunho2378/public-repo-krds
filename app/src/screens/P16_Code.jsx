@@ -174,7 +174,7 @@ export default function Code() {
   ) : null;
 
   return (
-    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} data={frame} state={state} aside={aside}>
+    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} aside={aside}>
       <div className={`rb-code-wrap${path ? ' has-tree' : ''}`}>
         {path ? <FileTreePanel id={frame.id} items={root} current={path} refQuery={refQuery} /> : null}
         <div className="rb-code-area">

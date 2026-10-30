@@ -69,7 +69,7 @@ export function Issue() {
   if (!frame.data) return <ProjectFrame screenId="R-12" data={frame} />;
   const i = body.data;
   return (
-    <ProjectFrame screenId="R-12" tab="/feedback" tabLabel={t.P19_title} data={frame} state={i ? 'Ideal' : body.state}>
+    <ProjectFrame screenId="R-12" tab="/feedback" tabLabel={t.P19_title} crumbs={[[t.Side_issues, `/projects/${frame.id}/issues`], [`#${iid}`]]} data={frame} state={i ? 'Ideal' : body.state}>
       {!i ? <Status {...body} /> : (
         <div className="rb-code-area">
           <Link className="krds-link" to={`/projects/${frame.id}/issues`}>{t.P19_back}</Link>

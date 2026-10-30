@@ -90,7 +90,7 @@ function RepoHeader({ project, id }) {
   );
 }
 
-export function ProjectFrame({ screenId, tab, tabLabel, data, children, state, aside }) {
+export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, aside }) {
   // 전역 왼쪽 메뉴를 이 프로젝트 메뉴로 바꾼다(공공 깃랩과 같은 구조). 화면을 떠나면 탐색 메뉴로 돌아간다.
   const project0 = data.data?.project;
   useEffect(() => {
@@ -110,7 +110,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, data, children, state, a
       <div className={'rb-repo-layout' + (aside ? ' has-aside' : '')}>
         <div className="rb-repo-main" data-figma="main">
           <div className="rb-repo-top">
-            <Breadcrumb home={false} items={[[organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project))}`], [project.name, tabLabel ? `/projects/${data.id}` : null], ...(tabLabel ? [[tabLabel]] : [])]} />
+            <Breadcrumb home={false} items={[[organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project))}`], [project.name, (crumbs?.length || tabLabel) ? `/projects/${data.id}` : null], ...(crumbs || (tabLabel ? [[tabLabel]] : []))]} />
             <RepoHeader project={project} id={data.id} />
             <ProjectTabs id={data.id} active={tab} />
           </div>

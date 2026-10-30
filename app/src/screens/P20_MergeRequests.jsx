@@ -75,7 +75,7 @@ export function MergeRequest() {
   if (!frame.data) return <ProjectFrame screenId="R-17" data={frame} />;
   const m = body.data;
   return (
-    <ProjectFrame screenId="R-17" tab="" tabLabel={t.P20_title} data={frame} state={m ? 'Ideal' : body.state}>
+    <ProjectFrame screenId="R-17" tab="" tabLabel={t.P20_title} crumbs={[[t.P20_title, `/projects/${frame.id}/merge-requests`], [`!${iid}`]]} data={frame} state={m ? 'Ideal' : body.state}>
       {!m ? <Status {...body} /> : (
         <div className="rb-code-area">
           <RepoSubNav id={frame.id} active="mr" />
