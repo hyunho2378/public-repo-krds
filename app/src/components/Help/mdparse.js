@@ -123,10 +123,16 @@ export function parseInline(src, ctx = {}) {
         const [whole, closing, nameRaw, attrs] = tag;
         const name = nameRaw.toLowerCase();
         if (closing) { i += whole.length; continue; }
+        if (['script', 'style', 'iframe', 'object', 'embed', 'noscript'].includes(name)) {
+          // 실행되거나 바깥 문서를 부르는 태그는 안의 내용까지 통째로 버린다(허용 목록 방식)
+          const end = new RegExp(`</${name}\\s*>`, 'i').exec(s.slice(i + whole.length));
+          i += whole.length + (end ? end.index + end[0].length : 0);
+          continue;
+        }
         if (name === 'br') { flush(); out.push({ t: 'br' }); i += whole.length; continue; }
         if (name === 'img') {
           flush();
-          out.push({ t: 'img', src: attr(attrs, 'src'), alt: attr(attrs, 'alt'), title: attr(attrs, 'title') });
+          out.push({ t: 'img', src: attr(attrs, 'src'), alt: attr(attrs, 'alt'), title: attr(attrs, 'title'), width: attr(attrs, 'width') });
           i += whole.length;
           continue;
         }
@@ -229,6 +235,7 @@ const HR = /^ {0,3}([-*_])(?:\s*\1){2,}\s*$/;
 const LIST = /^( {0,3})([-*+]|\d{1,9}[.)])( +|$)(.*)$/;
 const TABLE_DELIM = /^\s*\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?\s*$/;
 const DETAILS = /^\s*<details\b/i;
+const TABLE_HTML = /^\s*<table\b/i;
 const ALIGN_BLOCK = /^\s*<(p|div)\b[^>]*\balign\s*=\s*["']?(center|right|left)/i;
 
 function splitCells(row) {
@@ -293,6 +300,14 @@ function parseBlocks(lines, ctx) {
       out.push({ t: 'details', summary: parseInline(summary.trim(), ctx), c: parseBlocks(text.split('\n'), ctx) });
       continue;
     }
+    if (TABLE_HTML.test(line)) {
+      let j = i;
+      const chunk = [];
+      for (; j < lines.length; j += 1) { chunk.push(lines[j]); if (/<\/table\s*>/i.test(lines[j])) break; }
+      i = j + 1;
+      out.push(parseHtmlTable(chunk.join('\n'), ctx));
+      continue;
+    }
     m = ALIGN_BLOCK.exec(line);
     if (m) {
       const tag = m[1].toLowerCase();
@@ -308,7 +323,7 @@ function parseBlocks(lines, ctx) {
     if (/^ {0,3}>/.test(line)) {
       const body = [];
       while (i < lines.length && /^ {0,3}>/.test(lines[i])) { body.push(lines[i].replace(/^ {0,3}> ?/, '')); i += 1; }
-      out.push({ t: 'quote', c: parseBlocks(body, ctx) });
+      out.push(asAlert(parseBlocks(body, ctx)));
       continue;
     }
     if (line.includes('|') && i + 1 < lines.length && TABLE_DELIM.test(lines[i + 1]) && lines[i + 1].includes('-')) {
@@ -380,6 +395,33 @@ function parseBlocks(lines, ctx) {
     else out.push({ t: 'p', c: parseInline(para.map((l) => l.replace(/^\s+/, '')).join('\n'), ctx) });
   }
   return out;
+}
+
+/** HTML <table>: 허용 태그(table, thead, tbody, tr, th, td)와 속성(colspan, rowspan, align)만 읽는다. 안쪽 글자는 인라인 해석을 거쳐 나머지 태그는 지워진다. */
+function parseHtmlTable(html, ctx) {
+  const rows = [];
+  for (const rm of html.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr\s*>/gi)) {
+    const cells = [];
+    for (const cm of rm[1].matchAll(/<(th|td)\b([^>]*)>([\s\S]*?)<\/\1\s*>/gi)) {
+      const span = (name) => Math.max(1, Math.min(50, parseInt(attr(cm[2], name), 10) || 1));
+      const align = attr(cm[2], 'align').toLowerCase();
+      cells.push({ head: cm[1].toLowerCase() === 'th', colspan: span('colspan'), rowspan: span('rowspan'), align: ['left', 'center', 'right'].includes(align) ? align : null, c: parseInline(cm[3].trim(), ctx) });
+    }
+    if (cells.length) rows.push(cells);
+  }
+  return { t: 'htable', rows };
+}
+
+const ALERTS = { note: 'NOTE', tip: 'TIP', important: 'IMPORTANT', warning: 'WARNING', caution: 'CAUTION' };
+
+/** > [!NOTE] 같은 알림(GitHub 5종). 첫 줄의 표지를 떼고 종류를 붙인다. 표지가 없으면 그냥 인용. */
+function asAlert(children) {
+  const first = children[0];
+  const lead = first?.t === 'p' && first.c[0]?.t === 'text' ? /^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*/i.exec(first.c[0].v) : null;
+  if (!lead) return { t: 'quote', c: children };
+  const kind = ALERTS[lead[1].toLowerCase()].toLowerCase();
+  const firstP = { ...first, c: [{ ...first.c[0], v: first.c[0].v.slice(lead[0].length) }, ...first.c.slice(1)].filter((n) => !(n.t === 'text' && !n.v)) };
+  return { t: 'alert', kind, c: [...(firstP.c.length ? [firstP] : []), ...children.slice(1)] };
 }
 
 function makeHeading(level, text, ctx) {

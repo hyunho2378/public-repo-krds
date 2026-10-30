@@ -21,16 +21,19 @@ function jump(id) {
 }
 
 function Img({ node, base }) {
-  const { src, alt, title } = node;
+  const [failed, setFailed] = useState(false);
+  const { src, alt, title, width } = node;
   let url = null;
-  if (/^https?:/i.test(src)) {
-    if (base?.rawBase && src.startsWith(new URL(base.rawBase).origin)) url = src;
+  if (/^https:\/\//i.test(src)) {
+    url = src;
   } else if (base?.rawBase && !/^[a-z][a-z0-9+.-]*:/i.test(src) && !src.startsWith('//')) {
     const p = repoPath(src);
     if (p) url = base.rawBase + p.split('/').map(encodeURIComponent).join('/');
   }
-  if (!url) return <span className="rb-md-img">{alt || t.Readme_image}</span>;
-  return <img className="rb-md-photo" src={url} alt={alt} title={title || undefined} loading="lazy" />;
+  // 그림이 없거나 불러오지 못하면 설명 글자 알약(onerror)
+  if (!url || failed) return <span className="rb-md-img">{alt || t.Readme_image}</span>;
+  const w = Number.parseInt(width, 10);
+  return <img className="rb-md-photo" src={url} alt={alt} title={title || undefined} loading="lazy" referrerPolicy="no-referrer" style={w > 0 ? { width: w } : undefined} onError={() => setFailed(true)} />;
 }
 
 function Inline({ nodes, base }) {
@@ -97,6 +100,28 @@ function CodeBlock({ node }) {
   );
 }
 
+function HtmlTable({ node, base }) {
+  const head = node.rows[0]?.every((c) => c.head) ? node.rows[0] : null;
+  const body = head ? node.rows.slice(1) : node.rows;
+  const cell = (c, k) => {
+    const Tag = c.head ? 'th' : 'td';
+    return <Tag key={k} colSpan={c.colspan > 1 ? c.colspan : undefined} rowSpan={c.rowspan > 1 ? c.rowspan : undefined} scope={c.head ? 'col' : undefined} style={c.align ? { textAlign: c.align } : undefined}><Inline nodes={c.c} base={base} /></Tag>;
+  };
+  return (
+    <div className="rb-md-scroll" tabIndex={0}>
+      <div className="krds-table-wrap">
+        <table className="tbl data">
+          {head ? <thead><tr>{head.map(cell)}</tr></thead> : null}
+          <tbody>{body.map((r, i) => <tr key={i}>{r.map(cell)}</tr>)}</tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+const ALERT_ICON = { note: 'help', tip: 'check_circle', important: 'inquiry', warning: 'bell', caution: 'close' };
+const ALERT_TITLE = { note: u.Alert_note, tip: u.Alert_tip, important: u.Alert_important, warning: u.Alert_warning, caution: u.Alert_caution };
+
 function Table({ node, base }) {
   return (
     <div className="rb-md-scroll" tabIndex={0}>
@@ -134,6 +159,13 @@ function Blocks({ nodes, base }) {
       case 'quote': return <blockquote key={i} className="rb-md-quote"><Blocks nodes={n.c} base={base} /></blockquote>;
       case 'code': return <CodeBlock key={i} node={n} />;
       case 'table': return <Table key={i} node={n} base={base} />;
+      case 'htable': return <HtmlTable key={i} node={n} base={base} />;
+      case 'alert': return (
+        <div key={i} className={'rb-md-alert is-' + n.kind} role="note">
+          <p className="rb-md-alert-title krds-text-body-small-bold"><Icon name={ALERT_ICON[n.kind]} />{ALERT_TITLE[n.kind]}</p>
+          <Blocks nodes={n.c} base={base} />
+        </div>
+      );
       case 'details': return (
         <details key={i} className="rb-md-details">
           <summary className="krds-text-body-small-bold"><Inline nodes={n.summary} base={base} /></summary>
