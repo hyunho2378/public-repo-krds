@@ -45,11 +45,12 @@ export function ProjectInfo({ id, project, readme, totals, stats, languages, roo
   const p = `/projects/${id}`;
   const intro = cleanDescription(project.description);
   const topics = project.topics || [];
+  // 공공 깃랩 02: 커밋, 브랜치, 태그는 늘 보인다(모르는 수는 '-'), 릴리스는 있을 때만
   const counts = [
-    ['ext/commit', fmt(stats?.commits) + (stats?.more ? '+' : ''), u.I_commits, `${p}/changes`, !!stats?.commits],
-    ['ext/branch', fmt(totals?.branches), u.I_branches, `${p}/branches`, totals?.branches != null],
-    ['ext/tag', fmt(totals?.tags), u.I_tags, `${p}/tags`, totals?.tags != null],
-    ['ext/rocket-launch', fmt(totals?.releases), u.I_releases, `${p}/releases`, totals?.releases != null],
+    ['ext/commit', stats?.commits ? fmt(stats.commits) + (stats?.more ? '+' : '') : project.commit_count != null ? fmt(project.commit_count) : '-', u.I_commits, `${p}/changes`, true],
+    ['ext/branch', totals?.branches != null ? fmt(totals.branches) : project.branch_count != null ? fmt(project.branch_count) : '-', u.I_branches, `${p}/branches`, true],
+    ['ext/tag', totals?.tags != null ? fmt(totals.tags) : project.tag_count != null ? fmt(project.tag_count) : '-', u.I_tags, `${p}/tags`, true],
+    ['ext/rocket-launch', fmt(totals?.releases), u.I_releases, `${p}/releases`, !!totals?.releases],
   ].filter((c) => c[4]);
   const file = (re) => (root || []).find((f) => f.type === 'blob' && re.test(f.name));
   const lic = file(/^(LICENSE|LICENCE|COPYING)(\.|$)/i);

@@ -10,7 +10,8 @@
     "audit:code": "node scripts/audit-code.mjs && node scripts/check-copy.mjs",
     "check:responsive": "node scripts/check-responsive.mjs",
     "build:pages": "VITE_STATIC=1 VITE_BASE=/public-repo-krds/ vite build",
-    "compare:boxes": "node scripts/compare-boxes.mjs"
+    "compare:boxes": "node scripts/compare-boxes.mjs",
+    "check:palette": "node scripts/check-palette.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

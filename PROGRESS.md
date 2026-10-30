@@ -95,3 +95,4 @@
 - 아이콘 대조(UX/gitlab_compare/icons): project를 사다리꼴+탭으로(Pajamas 좌표), cloud 상자 면 선, 새 rocket-launch(릴리스 개수), scale(라이선스). 나머지 ext는 Pajamas와 같음. README에 folder/project 구분 근거와 KRDS 묶음 아이콘 차이 기록
 - 오류 보고 수정: 저장된 자료에 없는 하위 폴더/파일(SNAPSHOT_MISSING)은 "존재하지 않습니다" 알림 대신 "저장된 자료에 없습니다" 한 줄과 상위 폴더 링크(진짜 없을 때만 알림), 파일 트리 하위도 같음. 트리 겹침: 열 폭 고정, 검색칸 폭 100%, 항목 한 줄 말줄임, 트리 고정 위치를 상단 묶음 아래로
 - 파일 종류 아이콘: @gitlab/svgs 3.171.0 file_icons 187개(app/public/icons/file, MIT), 대응 규칙 src/lib/fileIcon.js(getIconForFile 그대로), FileIcon 부품을 파일 표, 트리, README 머리, 커밋/비교 파일 목록과 머리, 파일 보기 머리에 적용
+- 정보 열 커밋·브랜치·태그 행 항상(모르면 '-'), 릴리스는 있을 때만, 스냅샷 index에 commit_count/branch_count/tag_count 자리, scripts/snapshot/fetch-counts.mjs(502면 시작 안 함, 1.1초 간격, 이어서). 사이드바 현재 항목 공공 깃랩대로(회색 면, 본문색 굵게, 왼쪽 막대, 고정됨·묶음 둘 다 표시), 연한 파랑 글자 제거. 탭 밑줄 청록 → primary 50(KRDS tab 변수와 secondary-active/text-secondary 전역 교체). 팔레트 검사 palette-inspect.js + check-palette.mjs(npm run check:palette), 로컬 11경로 위반 0

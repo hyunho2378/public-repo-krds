@@ -39,7 +39,6 @@
 .rb-side-group-btn[aria-expanded="false"] .ico-toggle { transform: rotate(-90deg); }
 .rb-side-link { display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-3) var(--krds-padding-4); border-radius: var(--krds-radius-medium2); color: var(--krds-color-text-basic); text-decoration: none; }
 .rb-side-link:hover { background: var(--krds-color-action-secondary-hover); }
-.rb-side-link.active { background: var(--krds-color-action-secondary-selected); color: var(--krds-color-text-primary); font-weight: var(--krds-font-weight-bold); }
 .rb-avatar { display: inline-flex; flex: none; align-items: center; justify-content: center; width: var(--krds-size-height-4); height: var(--krds-size-height-4); border-radius: var(--krds-radius-small2); background: var(--krds-color-surface-primary-subtler); color: var(--krds-color-text-primary); font-weight: var(--krds-font-weight-bold); }
 .rb-icon-only { padding-inline: var(--krds-padding-3); }
 .rb-icon-only .ico-toggle { display: none; }

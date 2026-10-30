@@ -350,3 +350,23 @@
 .rb-gsearch-panel .item-link .rb-avatar { width: var(--krds-number-9); height: var(--krds-number-9); font-size: var(--krds-font-size-body-xsmall); }
 @media (max-width: 1023px) { #root .rb-gbar-in > .rb-gsearch { flex: 1 1 auto; min-width: 0; max-width: var(--rb-gbar-search-w); margin-inline: auto; } }
 @media (max-width: 767px) { #root .rb-gbar-in > .rb-gsearch { display: none; } }
+
+/* 공공 깃랩 03, 15, 25: 현재 항목은 회색 면 + 본문색 굵게 + 사이드바 왼쪽 끝 세로 막대. 고정됨과 묶음 안에 같은 항목이 있으면 둘 다 표시(공공 깃랩 원래 동작) */
+.rb-side-link { position: relative; }
+.rb-side-link.active { color: var(--krds-color-text-basic); background: var(--krds-color-action-secondary-selected); font-weight: var(--krds-font-weight-bold); }
+.rb-side-link.active::before { content: ""; position: absolute; left: calc(var(--rb-side-pad-x) * -1); top: var(--krds-number-3); bottom: var(--krds-number-3); width: var(--krds-number-2); border-radius: var(--krds-radius-max); background: var(--krds-color-text-basic); }
+/* 탭 줄(KRDS tab line): 활성 탭 글자와 밑줄이 secondary(청록)로 풀리던 것. 글자는 본문색 굵게, 밑줄은 primary 50(공공 깃랩 01 파란 밑줄) */
+#root .krds-tab-area .tab ul li.active .btn-tab, #root .krds-tab-area .tab ul li .btn-tab[aria-selected="true"] { color: var(--krds-color-text-basic); font-weight: var(--krds-font-weight-bold); }
+#root .krds-tab-area .tab ul li.active .btn-tab::before, #root .krds-tab-area .tab ul li .btn-tab[aria-selected="true"]::before { background-color: var(--rb-status-primary); }
+/* KRDS tab line 변수의 청록(secondary)을 primary 50과 본문색으로 */
+#root .krds-tab-area { --krds-tab--line-button-color-line-active: var(--rb-status-primary); }
+#root .krds-tab-area { --krds-tab--line-button-color-text-active: var(--krds-color-text-basic); }
+/* D-07: KRDS secondary(청록)의 활성 면과 글자 변수를 KRDS primary 50과 본문색으로(탭, 선택 표시 등 KRDS 부품 전체) */
+html, html[data-krds-mode="dark"], html[data-krds-mode="light"] {
+  --krds-light-color-action-secondary-active: var(--krds-color-light-primary-50);
+  --krds-dark-color-action-secondary-active: var(--krds-color-light-primary-50);
+  --krds-color-action-secondary-active: var(--krds-color-light-primary-50);
+  --krds-light-color-text-secondary: var(--krds-light-color-text-basic);
+  --krds-dark-color-text-secondary: var(--krds-dark-color-text-basic);
+  --krds-color-text-secondary: var(--krds-color-text-basic);
+}

@@ -27,8 +27,13 @@ const KEEP = ['id', 'name', 'name_with_namespace', 'path', 'path_with_namespace'
 const slim = (p) => Object.fromEntries(KEEP.filter((k) => p[k] !== undefined).map((k) => [k, k === 'namespace' ? { id: p.namespace?.id, name: p.namespace?.name, path: p.namespace?.path, full_path: p.namespace?.full_path, avatar_url: p.namespace?.avatar_url } : p[k]]));
 
 const kTotals = read(path.join(KOR, 'totals.json'), {});
+const counts = (id) => read(path.join(RAW, String(id), 'counts.json'), {}) || {};
 const index = list.filter((p) => p.visibility === 'public').map((p) => ({
   ...slim(p),
+  // 커밋, 브랜치, 태그 개수(scripts/snapshot/fetch-counts.mjs가 data/raw/{id}/counts.json에 모은 값). 없으면 null
+  commit_count: p.id === 150 ? kTotals.commits ?? null : counts(p.id).commits ?? null,
+  branch_count: p.id === 150 ? kTotals.branches ?? null : counts(p.id).branches ?? null,
+  tag_count: p.id === 150 ? kTotals.tags ?? null : counts(p.id).tags ?? null,
   open_issues_count: p.id === 150 ? kTotals.issues ?? null : p.open_issues_count ?? null,
   open_merge_requests_count: p.id === 150 ? kTotals.merge_requests ?? null : null,
   archived: !!p.archived,
