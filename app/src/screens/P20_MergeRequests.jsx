@@ -8,50 +8,79 @@ import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { u } from '../copy/ui';
-import { ListBox, SearchBox, matchTitle, sortItems } from '../components/Code/ListTools';
+import { matchTitle } from '../components/Code/ListTools';
+import { Drop } from '../components/Code/Drop';
+import { Icon } from '../components/Code/Icon';
+import { mr } from '../copy/work';
+import { ago } from './parts/glTime';
 import { Readme } from '../components/Help/Readme';
 import { DiffView } from '../components/Code/DiffView';
-import { StateTabs } from './P19_Issues';
 import { day } from './parts/repoCommon';
 import '../components/Code/code.css';
+import './parts/glMr.css';
 
-const LABEL = { opened: t.P20_opened, merged: t.P20_merged, closed: t.P20_closed };
+const LABEL = { opened: t.P20_opened, merged: mr.tabMerged, closed: t.P20_closed };
+
+const STATES = [['opened', mr.tabOpen], ['merged', mr.tabMerged], ['closed', mr.tabClosed], ['all', mr.tabAll]];
+const PILL = { merged: mr.tabMerged, closed: mr.tabClosed };
 
 export function MergeRequests() {
   const frame = useProject();
-  const [st, setSt] = useState('opened');
-  const [sort, setSort] = useState('newest');
+  const [st, setSt] = useState('all');
+  const [sortKey, setSortKey] = useState('created_at');
+  const [dir, setDir] = useState('desc');
   const [query, setQuery] = useState('');
   const body = useData(async () => {
-    const [opened, merged, closed] = await Promise.all(['opened', 'merged', 'closed'].map((s) => gitlab.mergeRequests(frame.id, s)));
-    return { opened: opened.data, merged: merged.data, closed: closed.data };
+    const [opened, merged, closed] = await Promise.all(['opened', 'merged', 'closed'].map((x) => gitlab.mergeRequests(frame.id, x)));
+    return { opened: opened.data, merged: merged.data, closed: closed.data, all: [...opened.data, ...merged.data, ...closed.data] };
   }, [frame.id]);
   if (!frame.data) return <ProjectFrame screenId="R-16" data={frame} />;
   const all = body.data;
-  const list = all ? sortItems(matchTitle(all[st], query), sort) : null;
+  const list = all ? [...matchTitle(all[st], query)].sort((x, y) => (new Date(y[sortKey] || 0) - new Date(x[sortKey] || 0)) * (dir === 'desc' ? 1 : -1)) : null;
   return (
-    <ProjectFrame screenId="R-16" tab="" tabLabel={t.P20_title} data={frame} state={all ? (all.opened.length + all.merged.length + all.closed.length ? 'Ideal' : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-16" tab="" tabLabel={t.P20_title} data={frame} state={all ? (all.all.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
-        <SearchBox value={query} onChange={setQuery} />
-        {!all ? <Status {...body} /> : (
-          <ListBox label={t.P20_title} value={st} onChange={setSt} sort={sort} onSort={setSort}
-            states={[['opened', t.P20_opened, all.opened.length], ['merged', t.P20_merged, all.merged.length], ['closed', t.P20_closed, all.closed.length]]}>
-            {list.length ? (
-              <ul className="rb-row-list">
-                {list.map((m) => (
-                  <li className="rb-row" key={m.iid}>
-                    <div className="rb-row-main">
-                      <p className="rb-row-title">
-                        <Link className="krds-link krds-text-body-small rb-ellipsis" to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link>
-                      </p>
-                      <p className="krds-text-body-xsmall rb-row-meta"><span>{t.fn.issueNo(m.iid)}</span><span>{day(m.created_at)}</span><span className="rb-break-any">{u.MR_from} {m.source_branch} {u.MR_to} {m.target_branch}</span></p>
-                    </div>
-                    <div className="rb-row-side krds-text-body-xsmall rb-subtle">{t.fn.commentCount(m.user_notes_count || 0)}</div>
-                  </li>
+        <div className="gl-mr-tabs" role="tablist" aria-label={t.P20_title}>
+          {STATES.map(([k, n]) => (
+            <button key={k} type="button" role="tab" aria-selected={k === st} className="gl-mr-tab" onClick={() => setSt(k)}>
+              <span>{n}</span>{all ? <span className="gl-mr-count">{all[k].length}</span> : null}
+            </button>
+          ))}
+        </div>
+        <div className="gl-work-filter">
+          <div className="gl-work-bar" role="search">
+            <button type="button" className="krds-btn small text" aria-label={mr.recent} onClick={() => setQuery('')}><Icon name="ext/history" /></button>
+            <input type="search" value={query} placeholder={mr.search} aria-label={mr.searchLabel} onChange={(e) => setQuery(e.target.value)} />
+            <Icon name="search" />
+          </div>
+          <Drop label={mr.sortBy} align="right" button={<span>{sortKey === 'created_at' ? mr.sortCreated : mr.sortUpdated}</span>}>
+            {(close) => (
+              <ul className="drop-list" aria-label={mr.sortBy}>
+                {[['created_at', mr.sortCreated], ['updated_at', mr.sortUpdated]].map(([k, n]) => (
+                  <li key={k}><button type="button" className={'item-link' + (k === sortKey ? ' active' : '')} onClick={() => { close(); setSortKey(k); }}>{n}</button></li>
                 ))}
               </ul>
-            ) : <EmptyState title={query ? u.List_none : t.P20_none} />}
-          </ListBox>
+            )}
+          </Drop>
+          <button type="button" className="krds-btn small tertiary" aria-label={dir === 'desc' ? mr.desc : mr.asc} onClick={() => setDir(dir === 'desc' ? 'asc' : 'desc')}><Icon name={dir === 'desc' ? 'ext/sort-desc' : 'ext/sort-asc'} /></button>
+        </div>
+        {!all ? <Status {...body} /> : (
+          list.length ? (
+            <ul className="rb-row-list">
+              {list.map((m) => (
+                <li className="gl-mr-row" key={m.iid}>
+                  <div className="gl-mr-main">
+                    <p className="gl-mr-title"><Link to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link></p>
+                    <p className="gl-mr-meta">!{m.iid} · {ago(m.created_at)} {mr.createdBy(m.author?.name || '')}</p>
+                  </div>
+                  <div className="gl-mr-side">
+                    {PILL[m.state] ? <span className="rb-pill">{PILL[m.state]}</span> : null}
+                    <p className="gl-mr-meta">{mr.updated(ago(m.updated_at))}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : <EmptyState title={query ? u.List_none : mr.none} />
         )}
       </div>
     </ProjectFrame>
@@ -81,24 +110,29 @@ export function MergeRequest() {
       return [];
     }
   }, [frame.id, iid]);
+  const pipes = useData(async () => {
+    try {
+      const r = await request(`/api/gitlab/projects/${encodeURIComponent(frame.id)}/merge_requests/${encodeURIComponent(iid)}/pipelines`);
+      return r.data || [];
+    } catch {
+      return [];
+    }
+  }, [frame.id, iid]);
   if (!frame.data) return <ProjectFrame screenId="R-17" data={frame} />;
   const m = body.data;
   return (
     <ProjectFrame screenId="R-17" tab="" tabLabel={t.P20_title} crumbs={[[t.P20_title, `/projects/${frame.id}/merge-requests`], [`!${iid}`]]} data={frame} state={m ? 'Ideal' : body.state}>
       {!m ? <Status {...body} /> : (
         <div className="rb-code-area">
-          <Link className="krds-link" to={`/projects/${frame.id}/merge-requests`}>{t.P20_back}</Link>
-          <div className="rb-detail-head">
-            <h2 className="krds-text-heading-small">{m.title} <span className="rb-subtle">{t.fn.issueNo(m.iid)}</span></h2>
-            <p className="krds-text-body-xsmall rb-row-meta">
-              <span className="rb-pill">{LABEL[m.state] || m.state}</span>
-              <span>{day(m.created_at)}</span>
-              <span className="rb-break-any">{t.P20_from} {m.source_branch}</span>
-              <span className="rb-break-any">{t.P20_to} {m.target_branch}</span>
+          <div className="gl-mr-head">
+            <h2>{m.title}</h2>
+            <p className="gl-mr-meta">
+              <span className="rb-pill">{LABEL[m.state] || m.state}</span> !{m.iid} · {ago(m.created_at)} {mr.createdBy(m.author?.name || '')}
             </p>
+            <p className="gl-mr-meta rb-break-any">{mr.source} {m.source_branch}, {mr.target} {m.target_branch}</p>
           </div>
           <div className="rb-code-views" role="tablist" aria-label={t.P20_tabsLabel}>
-            {[['talk', t.P20_tabTalk], ['commits', t.fn.tabCommits(commits.data?.length ?? 0)], ['files', t.fn.tabFiles(changes.data?.length ?? 0)]].map(([key, label]) => (
+            {[['talk', mr.overview], ['commits', `${mr.commits} ${commits.data?.length ?? 0}`], ['pipes', `${mr.pipelines} ${pipes.data?.length ?? 0}`], ['files', `${mr.changes} ${changes.data?.length ?? 0}`]].map(([key, label]) => (
               <button key={key} type="button" role="tab" aria-selected={view === key} className={'rb-code-view' + (view === key ? ' active' : '')} onClick={() => setView(key)}>{label}</button>
             ))}
           </div>
@@ -116,6 +150,19 @@ export function MergeRequest() {
                 ))}
               </ul>
             ) : <EmptyState title={t.P20_noCommits} />
+          ) : view === 'pipes' ? (
+            pipes.data?.length ? (
+              <ul className="rb-plain-list">
+                {pipes.data.map((p) => (
+                  <li className="gl-mr-pipe" key={p.id}>
+                    <span className="rb-pill">{p.status}</span>
+                    <span>#{p.id}</span>
+                    <span className="rb-break-any">{p.ref}</span>
+                    <span className="rb-subtle">{ago(p.created_at)}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : <EmptyState title={mr.noPipelines} />
           ) : (
             changes.data?.length ? <DiffView files={changes.data} /> : <EmptyState title={t.P17_noDiff} />
           )}
