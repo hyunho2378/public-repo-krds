@@ -12,6 +12,7 @@ import { matchTitle } from '../components/Code/ListTools';
 import { Drop } from '../components/Code/Drop';
 import { Icon } from '../components/Code/Icon';
 import { mr } from '../copy/work';
+import { IconButton } from '../components/Action/IconButton';
 import { ago } from './parts/glTime';
 import { Readme } from '../components/Help/Readme';
 import { DiffView } from '../components/Code/DiffView';
@@ -53,7 +54,7 @@ export function MergeRequests() {
         </div>
         <div className="gl-work-filter">
           <div className="gl-work-bar" role="search">
-            <button type="button" className="krds-btn small text" aria-label={mr.recent} onClick={() => setQuery('')}><Icon name="ext/history" /></button>
+            <IconButton icon="ext/history" label={mr.recent} onClick={() => setQuery('')} />
             <input type="search" value={query} placeholder={mr.search} aria-label={mr.searchLabel} onChange={(e) => setQuery(e.target.value)} />
             <Icon name="search" />
           </div>
@@ -66,7 +67,7 @@ export function MergeRequests() {
               </ul>
             )}
           </Drop>
-          <button type="button" className="krds-btn small tertiary" aria-label={dir === 'desc' ? mr.desc : mr.asc} onClick={() => setDir(dir === 'desc' ? 'asc' : 'desc')}><Icon name={dir === 'desc' ? 'ext/sort-desc' : 'ext/sort-asc'} /></button>
+          <IconButton icon={dir === 'desc' ? 'ext/sort-desc' : 'ext/sort-asc'} label={dir === 'desc' ? mr.desc : mr.asc} onClick={() => setDir(dir === 'desc' ? 'asc' : 'desc')} />
         </div>
         {!all ? <Status {...body} /> : (
           list.length ? (
