@@ -1,4 +1,5 @@
 // AI 정리 대상 20개를 줄 번호 붙여 출력. 사용: node scripts/cards/prepare.mjs [시작 오프셋=0] [개수=20] [줄수=70]
+// 읽기 규칙: README만 근거로 삼는다(CLAUDE.md, AGENTS.md 등 AI 작업 문서 제외). 한계 칸은 '현재 범위(되는 것, 안 되는 것)' 문단이 있으면 우선 근거.
 import path from 'node:path';
 import {CARDS,RAW,rj,rt,loadCards}from'./lib.mjs';
 const n=Number(process.argv[3]||20),maxL=Number(process.argv[4]||70);

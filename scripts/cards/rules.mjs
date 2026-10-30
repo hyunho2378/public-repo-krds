@@ -36,6 +36,13 @@ export function ruleFields(p,tree,languages,readme,done){
   for(const [re,label] of [[/^package\.json$/,'Node.js(package.json)'],[/^requirements\.txt$/,'Python(requirements.txt)'],[/^pyproject\.toml$/,'Python(pyproject.toml)'],[/^Dockerfile$/,'Docker'],[/^pom\.xml$/,'Java(Maven)'],[/^build\.gradle/,'Java(Gradle)']])if(names.some(n=>re.test(n)))mk.push({label,path:names.find(n=>re.test(n))});
   const techVals=[...langs.map(l=>l),...mk.map(m=>m.label)];
   const org=organizationName((p.name_with_namespace||'').split(' / ')[0]);
+  const AIDOC=/^(CLAUDE|AGENTS|SESSION_HEADER|PROGRESS|DESIGN|IA|GEMINI|CURSOR)\.md$/i;
+  const aiDocs=names.filter(n=>!n.includes('/')&&AIDOC.test(n));
+  const urlRe=/https?:\/\/[^\s)>\]"'`]+(?:vercel\.app|github\.io|netlify\.app|pages\.dev|onrender\.com|streamlit\.app|hf\.space|herokuapp\.com)[^\s)>\]"'`]*/i;
+  const ul=lines.findIndex(l=>urlRe.test(l));const openUrl=ul>=0?lines[ul].match(urlRe)[0]:null;
+  const wl=lines.findIndex(l=>/(서버.{0,20}(켜지|준비|깨어|기동|대기).{0,20}[분초]|cold start|첫 접속.{0,15}(느|지연))/i.test(l));
+  const rightsL=lines.findIndex(l=>/(이용 허락|콘텐츠 권리|이미지 출처|사진 출처|서면 확인|저작권자)/.test(l));
+  const baseL=[];lines.forEach((l,i)=>{if(/(복제|기반으로|바탕으로|참고하여|참고해|포크|fork|원본 저장소|based on|forked from)/i.test(l)&&/(https?:\/\/|[`\[][\w.\-/]+[`\]])/.test(l))baseL.push(i+1)});
   const pub=publication(files,readme||'',false);
   return{
     rule:{
@@ -45,6 +52,11 @@ export function ruleFields(p,tree,languages,readme,done){
       referenceDates:field(refs.length?refs:null,refs.length?{lines:range(refs.map(r=>r.lines?.[0]).filter(Boolean))}:null,'rule',{note:'README 추출 후보, 현행 여부 미확인'}),
       updatedAt:field(p.last_activity_at||null,null,'rule',{evidence:'API last_activity_at'}),
       organization:field(org,'API name_with_namespace','rule'),
+      openUrl:field(openUrl,ul>=0?{lines:[ul+1,ul+1]}:null,'rule',{note:'README 안 배포 주소. 프로젝트 web_url이 아님'}),
+      startupNote:field(wl>=0?lines[wl].trim().slice(0,200):null,wl>=0?{lines:[wl+1,wl+1]}:null,'rule'),
+      contentRights:field(rightsL>=0?lines[rightsL].trim().slice(0,200):null,rightsL>=0?{lines:[rightsL+1,rightsL+1]}:null,'rule',{note:'코드 라이선스(license)와 별도'}),
+      baseProjects:field(baseL.length||p.forked_from_project?[...baseL.map(n=>({quote:lines[n-1].trim().slice(0,240),line:n})),...(p.forked_from_project?[{fork:p.forked_from_project.path_with_namespace}]:[])]:null,baseL.length?{lines:[baseL[0],baseL[baseL.length-1]]}:null,'rule',{note:'README 문구 기반 재사용 계보 후보. 사람 확인 필요'}),
+      docComposition:field(aiDocs.length?{aiWorkDocs:aiDocs.length}:null,aiDocs.length?{paths:aiDocs}:null,'rule',{note:'AI 작업 문서는 카드 근거에서 제외, 개수만 표시'}),
       techStack:field(techVals.length?techVals:null,techVals.length?{api:'languages',paths:mk.map(m=>m.path)}:null,'rule')
     },
     publicChecks:pub.publicResult.checks,

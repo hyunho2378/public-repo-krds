@@ -1,0 +1,2 @@
+[{"id":9,"oneLine":"공공 프로젝트의 현황과 최근 활동을 한눈에 보여 주는 대시보드","targetTask":"공공 AI 프로젝트 현황 파악","fields":["데이터·통계·분석"],"runSummary":"README의 '대시보드 둘러보기' 주소로 바로 열어 본다","rawCommands":null,"limitations":null,"lines":{"oneLine":[3,3],"targetTask":[11,17],"fields":[3,17],"runSummary":[5,5]}},
+{"id":13,"oneLine":"열린 재정 사이트의 예산 상세 자료를 자동으로 내려받는 도구","targetTask":"부처별 예산 자료 수집","fields":["회계·예산·출장","엑셀·사무 자동화"],"runSummary":"파이썬과 Selenium을 설치한 뒤 스크립트를 실행한다","rawCommands":null,"limitations":null,"lines":{"oneLine":[3,3],"targetTask":[9,12],"fields":[3,12],"runSummary":[22,25]}}]
