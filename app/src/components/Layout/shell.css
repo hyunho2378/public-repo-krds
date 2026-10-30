@@ -346,7 +346,7 @@
 .rb-snapband { display: flex; align-items: center; justify-content: center; min-height: var(--rb-masthead-h); padding-inline: var(--rb-gbar-pad-x); background: var(--rb-status-warning); color: var(--krds-color-text-basic-static, var(--krds-color-light-gray-90)); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 /* 공공 깃랩 51b: 상단 검색 대화창(검색칸 아래, 같은 폭) */
 .rb-gsearch { position: relative; min-width: 0; width: 100%; }
-.rb-gsearch-panel { position: absolute; left: 0; right: 0; top: calc(100% + var(--krds-number-2)); z-index: 80; max-height: 60dvh; overflow-y: auto; }
+#root .rb-gsearch .rb-gsearch-panel { position: absolute; left: 0; right: 0; top: calc(100% + var(--krds-number-2)); z-index: 80; max-height: 60dvh; overflow-y: auto; }
 .rb-gsearch-panel .item-link .rb-avatar { width: var(--krds-number-9); height: var(--krds-number-9); font-size: var(--krds-font-size-body-xsmall); }
 @media (max-width: 1023px) { #root .rb-gbar-in > .rb-gsearch { flex: 1 1 auto; min-width: 0; max-width: var(--rb-gbar-search-w); margin-inline: auto; } }
 @media (max-width: 767px) { #root .rb-gbar-in > .rb-gsearch { display: none; } }
