@@ -563,7 +563,7 @@ export const t = {
   Login_signupBody: "기관 메일 필요, 공공 저장소에서 직접 생성",
   Login_signupGo: "등록 화면 열기",
   Login_resetTitle: "비밀번호 찾기",
-  Login_resetBody: "가입 메일로 재설정 주소 발송",
+  Login_resetBody: "등록 메일로 재설정 주소 발송",
   Login_resetLabel: "메일 주소",
   Login_resetGo: "비밀번호 찾기 화면 열기",
   Login_back: "로그인으로 돌아가기",

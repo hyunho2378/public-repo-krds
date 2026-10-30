@@ -9,7 +9,7 @@ export const u = {
   Dock_info: "정보",
   Tree_toggle: "파일 트리",
   More_menu: "더보기",
-  Hdr_signup: "가입",
+  Hdr_signup: "등록",
   Hdr_settings: "화면 설정",
   Alert_note: "참고",
   Alert_tip: "팁",
