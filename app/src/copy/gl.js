@@ -99,6 +99,8 @@ export const g = {
   copyPath: '파일 경로 복사',
   downloadFile: '다운로드',
   outline: '목차',
+  moreLines: (n) => `나머지 ${n}줄 더 보기`,
+  openOrigin: '공공 깃랩에서 열기',
   lines: (n) => `${n}줄`,
   lineLink: (n) => `${n}번 줄 링크`,
 };

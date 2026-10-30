@@ -11,7 +11,10 @@ import { gitlab, request } from '../api/client';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
-import { CodeView } from '../components/Code/CodeView';
+import { GlFile, FileTitle } from './gl/GlFile';
+import { IconButton as GlIconButton } from '../components/Action/IconButton';
+import { g } from '../copy/gl';
+import './gl/gl.css';
 import { Icon } from '../components/Code/Icon';
 import { AddFileMenu, BranchSelect, CodeMenu, CommitBar, FileFind, FileTable, ReadmeBox, enc } from '../components/Code/RepoParts';
 import { FileTreePanel } from '../components/Code/FileTreePanel';
@@ -19,14 +22,14 @@ import '../components/Code/code.css';
 
 const LOG_LIMIT = 30;
 
-function PathCrumbs({ id, path, refQuery }) {
+function PathCrumbs({ id, path, refQuery, root }) {
   const parts = path ? path.split('/') : [];
   const [copied, setCopied] = useState(false);
   return (
     <div className="rb-pathline">
       <nav className="krds-breadcrumb-wrap rb-path" aria-label={t.P16_path}>
         <ol className="breadcrumb">
-          <li className="home"><Link className="txt" to={`/projects/${id}${refQuery}`}>{t.P16_root}</Link></li>
+          <li className="home"><Link className="txt" to={`/projects/${id}${refQuery}`}>{root || t.P16_root}</Link></li>
           {parts.map((p, i) => {
             const to = parts.slice(0, i + 1).join('/');
             return (
@@ -214,8 +217,14 @@ export default function Code() {
 
   return (
     <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} stats={{ commits: commitInfo.data?.count ?? b?.count ?? 0, more: commitInfo.data?.count != null ? false : b?.more }} wide={!!path} hideCrumbs={!!path} title={isHome} info={isHome}>
+      {path ? <h1 className="sr-only">{path.split('/').pop()}</h1> : null}
       <div className={`rb-code-wrap${path && treeOpen && treeWide ? ' has-tree' : ''}`}>
-        {path && treeOpen && treeWide ? <FileTreePanel id={frame.id} items={root} current={path} refQuery={refQuery} /> : null}
+        {path && treeOpen && treeWide ? (
+          <div className="gl-treewrap">
+            <div className="gl-treehead"><Icon name="ext/folder" /><span className="gl-treetitle">{g.fileTree}</span><GlIconButton icon="panel_close" label={g.treeHide} size="small" onClick={() => setTreeOpen(false)} /></div>
+            <FileTreePanel id={frame.id} items={root} current={path} refQuery={refQuery} />
+          </div>
+        ) : null}
         <div className="rb-code-area">
           <div className="rb-toolbar" data-figma="toolbar">
             <div className="rb-toolbar-left">
@@ -228,7 +237,7 @@ export default function Code() {
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />
               {isHome ? (
                 <span className="rb-toolbar-path krds-text-body-small-bold">{project.path}</span>
-              ) : <PathCrumbs id={frame.id} path={path} refQuery={refQuery} />}
+              ) : <PathCrumbs id={frame.id} path={path} refQuery={refQuery} root={project.name} />}
             </div>
             <div className="rb-toolbar-right">
               {b?.kind === 'tree' ? <FileFind value={filter} onChange={setFilter} /> : null}
@@ -240,8 +249,9 @@ export default function Code() {
             <Status {...body} />
           ) : b.kind === 'file' ? (
             <>
+              <FileTitle path={path} project={project} refName={ref} onFind={() => navigate(`/projects/${frame.id}/code${refQuery}`)} />
               <CommitBar id={frame.id} commit={b.last} count={1} path={path} owner={project.namespace} />
-              <CodeView path={path} base={{ id: frame.id, rawBase: `${project.web_url}/-/raw/${ref}/${path.includes('/') ? path.slice(0, path.lastIndexOf('/') + 1).split('/').map(enc).join('/') : ''}` }} text={b.text} rawUrl={rawUrl} size={b.meta?.size} historyTo onHistory={() => navigate(`/projects/${frame.id}/changes?path=${enc(path)}`)} {...blameApi} />
+              <GlFile path={path} base={{ id: frame.id, rawBase: `${project.web_url}/-/raw/${ref}/${path.includes('/') ? path.slice(0, path.lastIndexOf('/') + 1).split('/').map(enc).join('/') : ''}` }} text={b.text} rawUrl={rawUrl} size={b.meta?.size} {...blameApi} />
             </>
           ) : b.items.length ? (
             <>

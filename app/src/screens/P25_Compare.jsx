@@ -1,28 +1,52 @@
-// R-07 리비전 비교. 공공 깃랩 "비교" 화면 구성을 그대로 옮긴다.
-// 두 지점을 고르고 변경 목록과 파일별 차이를 본다. 결과에서 바로 변경 제안으로 넘어간다.
+// R-06 리비전 비교. 공공 깃랩 캡처 18(선택), 19(결과) 구성: 소스/대상 선택, 변경 사항 표시, 비교 단추, 소스상의 커밋, 변경 비교.
 import { useEffect, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { t } from '../copy/ko';
-import { gitlab } from '../api/client';
+import { g } from '../copy/gl';
+import { gitlab, request } from '../api/client';
 import { useData } from '../api/useData';
-import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
+import { ProjectFrame, useProject, organizationOf } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
-import { DiffView } from '../components/Code/DiffView';
-import { day } from './parts/repoCommon';
-import '../components/Write/write.css';
+import { Icon } from '../components/Code/Icon';
+import { IconButton } from '../components/Action/IconButton';
+import { Menu } from '../components/Navigation/Menu';
+import { Avatar } from '../components/Layout/Avatar';
+import { orgLabel } from '../components/Layout/orgLabel';
+import { newWindow } from '../components/Layout/newWindow';
+import { CopyButton } from './gl/parts';
+import { GlDiff } from './gl/GlDiff';
+import './gl/gl.css';
 import '../components/Code/code.css';
 
-function Picker({ label, id, list, value, onChange }) {
+const enc = encodeURIComponent;
+
+function RefPicker({ label, value, list, onChange }) {
+  const [q, setQ] = useState('');
+  const shown = list.filter((n) => !q || n.toLowerCase().includes(q.toLowerCase()));
   return (
-    <div className="rb-compare-field">
-      <span className="krds-text-body-small-bold" id={`${id}-label`}>{label}</span>
-      <ul className="rb-branch-pick" aria-labelledby={`${id}-label`}>
-        {list.map((name) => (
-          <li key={name}>
-            <button type="button" className={'krds-btn xsmall ' + (value === name ? 'primary' : 'tertiary')} onClick={() => onChange(name)}>{name}</button>
-          </li>
-        ))}
-      </ul>
+    <Menu label={label} align="left" btnClass="krds-btn small tertiary gl-select" button={<span className="gl-select-text">{value || g.pickRef}</span>}>
+      {(close) => (
+        <div className="gl-pick">
+          <input type="search" className="gl-pick-input" value={q} placeholder={g.search} aria-label={g.search} onChange={(e) => setQ(e.target.value)} />
+          <ul className="drop-list" aria-label={label}>
+            {shown.map((n) => (
+              <li key={n}><button type="button" className={'item-link' + (n === value ? ' active' : '')} aria-current={n === value ? 'true' : undefined} onClick={() => { close(); onChange(n); }}>{n}</button></li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </Menu>
+  );
+}
+
+function Side({ title, name, value, list, onChange, fixedProject }) {
+  return (
+    <div className="gl-side">
+      <span className="gl-side-title">{title}</span>
+      <div className="gl-side-row">
+        <span className="gl-select is-fixed"><span className="gl-select-text">{fixedProject}</span></span>
+        <RefPicker label={`${title} ${g.pickRef}`} value={value} list={list} onChange={onChange} />
+      </div>
     </div>
   );
 }
@@ -33,6 +57,8 @@ export default function Compare() {
   const frame = useProject();
   const [from, setFrom] = useState(search.get('from') || '');
   const [to, setTo] = useState(search.get('to') || '');
+  const [straight, setStraight] = useState(search.get('straight') === '1');
+  const [applied, setApplied] = useState(search.get('from') && search.get('to') ? { from: search.get('from'), to: search.get('to'), straight: search.get('straight') === '1' } : null);
 
   const refs = useData(async () => {
     const [branches, tags] = await Promise.all([
@@ -43,66 +69,71 @@ export default function Compare() {
   }, [id]);
 
   useEffect(() => {
-    const def = frame.data?.project.default_branch || 'main';
-    setFrom((v) => v || def);
-    setTo((v) => v || (refs.data || []).find((n) => n !== def) || def);
-  }, [frame.data, refs.data]);
-
-  // 주소에 고른 지점을 남긴다(공유와 뒤로 가기).
-  useEffect(() => {
-    if (!from || !to) return;
+    if (!applied) return;
     const next = new URLSearchParams(search);
-    next.set('from', from);
-    next.set('to', to);
+    next.set('from', applied.from);
+    next.set('to', applied.to);
+    if (applied.straight) next.set('straight', '1'); else next.delete('straight');
     setSearch(next, { replace: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [from, to]);
+  }, [applied]);
 
   const result = useData(
-    async () => (from && to && from !== to ? (await gitlab.compare(id, from, to)).data : null),
-    [id, from, to],
+    async () => (applied && applied.from !== applied.to
+      ? (await request(`/api/gitlab/projects/${enc(id)}/repository/compare?from=${enc(applied.from)}&to=${enc(applied.to)}${applied.straight ? '&straight=true' : ''}`)).data
+      : null),
+    [id, applied?.from, applied?.to, applied?.straight],
   );
 
   if (!frame.data) return <ProjectFrame screenId="R-06" data={frame} />;
+  const project = frame.data.project;
+  const owner = organizationOf(project);
+  const projectName = `${owner} / ${project.name}`;
   const list = refs.data || [];
   const diffs = result.data?.diffs || [];
-  const commits = result.data?.commits || [];
-  const same = from === to;
-
+  const commits = [...(result.data?.commits || [])].reverse();
+  const same = applied && applied.from === applied.to;
   return (
-    <ProjectFrame screenId="R-06" tab="" tabLabel={t.Compare_title} wide data={frame} state={same ? 'Empty' : result.state}>
-      <div className="rb-write">
-        <div className="rb-write-head">
-          <h2 className="krds-text-body-small-bold">{t.Compare_title}</h2>
-          <p className="krds-text-body-xsmall rb-subtle">{t.Compare_hint}</p>
+    <ProjectFrame screenId="R-06" tab="" tabLabel={g.compareTitle} data={frame} state={applied ? (same ? 'Empty' : result.state) : 'Ideal'}>
+      <div className="gl-page">
+        <div className="gl-head-text">
+          <h1 className="gl-title">{g.compareTitle}</h1>
+          <p className="gl-intro">{g.compareIntro} <a className="krds-link" href="https://docs.gitlab.com/user/project/repository/branches/#compare-branches" {...newWindow(g.compareHelp)}>{g.compareHelp}</a></p>
         </div>
-        <section className="rb-compare-pick" aria-label={t.Issue_comparePick}>
-          <Picker label={t.Compare_from} id="cmp-from" list={list} value={from} onChange={setFrom} />
-          <Picker label={t.Compare_to} id="cmp-to" list={list} value={to} onChange={setTo} />
-        </section>
-
-        {same ? (
-          <EmptyState title={t.Issue_sameBranch} />
-        ) : !result.data ? (
-          <Status {...result} />
-        ) : (
+        <form className="gl-compare" onSubmit={(e) => { e.preventDefault(); if (from && to) setApplied({ from, to, straight }); }}>
+          <div className="gl-compare-pick">
+            <Side title={g.source} value={to} list={list} onChange={setTo} fixedProject={projectName} />
+            <IconButton icon="arrow-right" label={g.swap} size="medium" className="gl-swap" onClick={() => { setFrom(to); setTo(from); }} />
+            <Side title={g.target} value={from} list={list} onChange={setFrom} fixedProject={projectName} />
+          </div>
+          <fieldset className="gl-radios">
+            <legend className="gl-side-title">{g.showChanges}</legend>
+            <div className="krds-form-check"><input id="gl-st-0" type="radio" name="straight" checked={!straight} onChange={() => setStraight(false)} /><label htmlFor="gl-st-0">{g.onlySource}</label></div>
+            <div className="krds-form-check"><input id="gl-st-1" type="radio" name="straight" checked={straight} onChange={() => setStraight(true)} /><label htmlFor="gl-st-1">{g.sinceSource}</label></div>
+          </fieldset>
+          <div><button type="submit" className="krds-btn small primary" disabled={!from || !to}>{g.compareBtn}</button></div>
+        </form>
+        {!applied ? null : same ? <EmptyState title={t.Issue_sameBranch} /> : !result.data ? <Status {...result} /> : (
           <>
-            <p className="krds-text-body-small">{t.fn.compareSummary(commits.length, diffs.length)}</p>
-            {commits.length ? (
-              <ul className="rb-plain-list">
+            <section className="gl-box" aria-labelledby="gl-src-commits">
+              <h2 id="gl-src-commits" className="gl-box-title">{g.sourceCommits} <span className="gl-tab-count">{commits.length}</span></h2>
+              <ul className="gl-rows">
                 {commits.map((c) => (
-                  <li className="rb-plain-row" key={c.id}>
-                    <span className="rb-plain-main rb-ellipsis">{c.title}</span>
-                    <span className="rb-plain-sub rb-subtle">{c.author_name}</span>
-                    <span className="rb-plain-meta rb-subtle">{day(c.created_at)}</span>
+                  <li key={c.id}>
+                    <div className="gl-ref-row">
+                      <Avatar className="is-24" src={project.namespace?.avatar_url} name={orgLabel(c.author_name)} />
+                      <div className="gl-ref-main gl-grow">
+                        <p className="gl-ref-name"><Link to={`/projects/${id}/changes/${c.id}`}>{c.title}</Link></p>
+                        <p className="gl-ref-meta"><time dateTime={c.created_at}>{t.fn.ago(c.created_at)}</time><span>{c.author_name}{g.commitedBy}</span></p>
+                      </div>
+                      <div className="gl-ref-side"><code className="gl-sha">{c.short_id}</code><CopyButton text={c.id} label={g.copySha} /></div>
+                    </div>
                   </li>
                 ))}
               </ul>
-            ) : null}
-            {diffs.length ? <DiffView files={diffs} /> : <EmptyState title={t.Compare_noDiff} />}
-            <div className="rb-write-actions">
-              <Link className="krds-btn small primary" to={`/projects/${id}/merge-requests/new?source=${encodeURIComponent(to)}`}>{t.Compare_propose}</Link>
-            </div>
+            </section>
+            {diffs.length ? <GlDiff files={diffs} /> : <EmptyState title={g.noDiffHere} />}
+            <div><Link className="krds-btn small primary" to={`/projects/${id}/merge-requests/new?source=${enc(applied.to)}`}>{g.toMr}</Link></div>
           </>
         )}
       </div>
