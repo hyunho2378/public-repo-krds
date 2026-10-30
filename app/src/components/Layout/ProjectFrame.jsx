@@ -8,6 +8,7 @@ import { LoginRequiredModal } from '../Feedback/LoginRequiredModal';
 import { Icon } from '../Code/Icon';
 import { ReuseAction } from '../../screens/parts/ReuseAction';
 import { orgLabel } from './orgLabel';
+import { Avatar } from './Avatar';
 import './repo.css';
 import { useData } from '../../api/useData';
 import { Page } from './Page';
@@ -54,8 +55,8 @@ function RepoHeader({ project, id }) {
     <>
       <div className="rb-repo-head">
         <div className="rb-repo-title">
-          <h1 className="krds-text-heading-large rb-repo-name">
-            <span className="rb-avatar" aria-hidden="true">{project.name.slice(0, 1)}</span>
+          <h1 className="krds-text-heading-large rb-repo-name" data-figma="repo-title">
+            <Avatar src={project.avatar_url || project.namespace?.avatar_url} name={project.name} />
             <span className="rb-repo-org">{organizationOf(project)} /</span>
             <span>{project.name}</span>
             <span className="krds-badge small bg-light-gray">{t.RepoHead_public}</span>
@@ -65,7 +66,7 @@ function RepoHeader({ project, id }) {
             <p className="krds-text-body-small rb-repo-meta">{t.fn.updated(new Date(project.last_activity_at).toLocaleDateString('ko-KR'))}</p>
           ) : null}
         </div>
-        <div className="rb-repo-actions" role="group" aria-label={t.RepoHead_actions}>
+        <div className="rb-repo-actions" data-figma="repo-actions" role="group" aria-label={t.RepoHead_actions}>
           <button type="button" className="krds-btn small tertiary" onClick={star}>
             {t.RepoHead_star}
             <span className="rb-subtle">{project.star_count ?? 0}</span>
@@ -93,7 +94,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, data, children, state, a
   // 전역 왼쪽 메뉴를 이 프로젝트 메뉴로 바꾼다(공공 깃랩과 같은 구조). 화면을 떠나면 탐색 메뉴로 돌아간다.
   const project0 = data.data?.project;
   useEffect(() => {
-    if (project0) setProjectNav({ id: data.id, name: project0.name });
+    if (project0) setProjectNav({ id: data.id, name: project0.name, avatarUrl: project0.avatar_url || project0.namespace?.avatar_url });
     return () => setProjectNav(null);
   }, [data.id, project0?.name]);
   if (!data.data) {
@@ -107,7 +108,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, data, children, state, a
   return (
     <Page id={screenId} title={`${project.name} ${tabLabel || ''}`} state={state}>
       <div className={'rb-repo-layout' + (aside ? ' has-aside' : '')}>
-        <div className="rb-repo-main">
+        <div className="rb-repo-main" data-figma="main">
           <div className="rb-repo-top">
             <Breadcrumb items={[[t.Header_2, '/search'], [organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project))}`], [project.name, tab ? `/projects/${data.id}` : null], ...(tab ? [[tabLabel]] : [])]} />
             <RepoHeader project={project} id={data.id} />
@@ -115,7 +116,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, data, children, state, a
           </div>
           {children}
         </div>
-        {aside ? <div className="rb-repo-aside">{aside}</div> : null}
+        {aside ? <div className="rb-repo-aside" data-figma="info-panel">{aside}</div> : null}
       </div>
     </Page>
   );

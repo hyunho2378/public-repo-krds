@@ -39,11 +39,11 @@ p, li, dd, dt, label { text-wrap: balance; }
 
 .rb-notice { padding-block: var(--krds-padding-6); background: var(--krds-color-surface-information-subtler); }
 #krds-footer .f-logo.rb-f-logo { width: auto; height: auto; background-image: none; font-size: var(--krds-pc-font-size-heading-small); font-weight: var(--krds-font-weight-bold); }
-.rb-main { flex: 1; width: 100%; padding-block: var(--krds-padding-8) var(--krds-padding-10); }
+.rb-main { min-width: 0; padding: 0; }
 
 @media (max-width: 767px) {
   #krds-header .header-container .logo.rb-logo a { font-size: var(--krds-mobile-font-size-heading-small); min-height: var(--krds-size-height-5); }
-  .rb-main { padding-block: var(--krds-padding-6) var(--krds-padding-9); }
+  .rb-main { min-width: 0; padding: 0; }
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 #krds-masthead .nuri-txt, #krds-header, .krds-main-menu-mobile { word-break: keep-all; }

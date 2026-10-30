@@ -1,0 +1,37 @@
+{
+ "screen": "G-09",
+ "title": "G-09 오류",
+ "breakpoint": 1920,
+ "auth": "Guest",
+ "variant": "breakpoint=1920, auth=Guest",
+ "frame": {
+  "w": 1920,
+  "h": 602
+ },
+ "boxes": {
+  "masthead": {
+   "x": 0,
+   "y": 0,
+   "w": 1920,
+   "h": 32
+  },
+  "header": {
+   "x": 0,
+   "y": 32,
+   "w": 1920,
+   "h": 65
+  },
+  "footer": {
+   "x": 0,
+   "y": 489,
+   "w": 1920,
+   "h": 113
+  },
+  "body": {
+   "x": 0,
+   "y": 97,
+   "w": 1920,
+   "h": 392
+  }
+ }
+}

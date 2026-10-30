@@ -27,7 +27,7 @@
 .rb-repo-aside { display: flex; flex-direction: column; gap: var(--krds-gap-7); min-width: 0; }
 @media (min-width: 1024px) {
   /* Figma: 오른쪽 정보 영역이 맨 위(브레드크럼 줄)부터 시작한다 */
-  .rb-repo-layout.has-aside { grid-template-columns: minmax(0, 1fr) minmax(0, 18em); }
+  .rb-repo-layout.has-aside { grid-template-columns: minmax(0, 1fr) var(--rb-info-w); column-gap: var(--rb-col-gap); }
 }
 @media (min-width: 1280px) {
   .rb-repo-top .rb-tabs { display: none; }
@@ -42,3 +42,4 @@
 .rb-avatar { display: inline-flex; flex: none; align-items: center; justify-content: center; width: var(--krds-size-height-4); height: var(--krds-size-height-4); border-radius: var(--krds-radius-small2); background: var(--krds-color-surface-primary-subtler); color: var(--krds-color-text-primary); font-weight: var(--krds-font-weight-bold); }
 .rb-icon-only { padding-inline: var(--krds-padding-3); }
 .rb-icon-only .ico-toggle { display: none; }
+.rb-avatar-img { object-fit: cover; }

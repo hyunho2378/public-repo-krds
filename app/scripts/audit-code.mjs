@@ -23,7 +23,8 @@ async function walk(dir) {
       await walk(file);
       continue;
     }
-    if (!/\.(jsx?|css)$/.test(file) || file.endsWith('.generated.css')) continue;
+    // .generated.css는 자동 생성, .tokens.css는 Figma 뼈대 값을 모아 둔 곳(D-13)이라 검사에서 뺀다
+    if (!/\.(jsx?|css)$/.test(file) || file.endsWith('.generated.css') || file.endsWith('.tokens.css')) continue;
     const raw = await fs.readFile(file, 'utf8');
     const source = raw.replace(KRDS_MEDIA, '@media(KRDS_BREAKPOINT)');
     for (const [label, re] of RULES) for (const m of source.matchAll(re)) issues.push(`${file}: ${label} ${m[0]}`);

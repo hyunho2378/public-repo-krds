@@ -1,0 +1,49 @@
+{
+ "screen": "G-08e",
+ "title": "G-08e 비밀번호 찾기",
+ "breakpoint": 360,
+ "auth": "Signed-in",
+ "variant": "breakpoint=360, auth=Signed-in",
+ "frame": {
+  "w": 360,
+  "h": 856
+ },
+ "boxes": {
+  "masthead": {
+   "x": 0,
+   "y": 0,
+   "w": 360,
+   "h": 32
+  },
+  "header": {
+   "x": 0,
+   "y": 32,
+   "w": 360,
+   "h": 65
+  },
+  "footer": {
+   "x": 0,
+   "y": 539,
+   "w": 360,
+   "h": 224
+  },
+  "body": {
+   "x": 0,
+   "y": 97,
+   "w": 360,
+   "h": 442
+  },
+  "login-card": {
+   "x": 24,
+   "y": 129,
+   "w": 312,
+   "h": 378
+  },
+  "tabbar": {
+   "x": 0,
+   "y": 763,
+   "w": 360,
+   "h": 93
+  }
+ }
+}

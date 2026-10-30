@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export function Breadcrumb({ items }) {
   return (
-    <nav className="krds-breadcrumb-wrap" aria-label={t.Breadcrumb_1}>
+    <nav data-figma="breadcrumb" className="krds-breadcrumb-wrap" aria-label={t.Breadcrumb_1}>
       <ol className="breadcrumb">
         <li className="home">
           <Link className="txt" to="/">{t.Breadcrumb_2}</Link>

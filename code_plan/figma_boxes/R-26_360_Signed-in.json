@@ -1,0 +1,67 @@
+{
+ "screen": "R-26",
+ "title": "R-26 설정",
+ "breakpoint": 360,
+ "auth": "Signed-in",
+ "variant": "breakpoint=360, auth=Signed-in, role=developer",
+ "frame": {
+  "w": 360,
+  "h": 1359
+ },
+ "boxes": {
+  "masthead": {
+   "x": 0,
+   "y": 0,
+   "w": 360,
+   "h": 32
+  },
+  "header": {
+   "x": 0,
+   "y": 32,
+   "w": 360,
+   "h": 65
+  },
+  "footer": {
+   "x": 0,
+   "y": 894,
+   "w": 360,
+   "h": 372
+  },
+  "body": {
+   "x": 0,
+   "y": 97,
+   "w": 360,
+   "h": 797
+  },
+  "main": {
+   "x": 12,
+   "y": 121,
+   "w": 336,
+   "h": 749
+  },
+  "breadcrumb": {
+   "x": 12,
+   "y": 121,
+   "w": 251,
+   "h": 23
+  },
+  "repo-title": {
+   "x": 12,
+   "y": 164,
+   "w": 336,
+   "h": 72
+  },
+  "section-title": {
+   "x": 12,
+   "y": 256,
+   "w": 336,
+   "h": 100
+  },
+  "tabbar": {
+   "x": 0,
+   "y": 1266,
+   "w": 360,
+   "h": 93
+  }
+ }
+}

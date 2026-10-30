@@ -180,7 +180,7 @@ export default function Code() {
         <div className="rb-code-area">
           {isHome ? <div className="rb-only-narrow">{about}</div> : null}
           {isHome ? <RepoMenuList id={frame.id} /> : null}
-          <div className="rb-toolbar">
+          <div className="rb-toolbar" data-figma="toolbar">
             <div className="rb-toolbar-left">
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />
               {isHome ? (

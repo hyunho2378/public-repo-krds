@@ -7,7 +7,7 @@ import { SERVICE_NAME } from './Header';
 
 export function Footer() {
   return (
-    <footer id="krds-footer" data-krds="footer">
+    <footer data-figma="footer" id="krds-footer" data-krds="footer">
       <div className="inner">
         <div className="f-logo rb-f-logo">{SERVICE_NAME}</div>
         <div className="f-cnt">

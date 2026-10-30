@@ -12,7 +12,8 @@
   display: flex;
   align-items: center;
   gap: var(--krds-gap-3);
-  padding: var(--krds-padding-3) var(--krds-padding-5);
+  padding: var(--krds-padding-3) var(--rb-page-pad);
+  min-height: var(--rb-header-h);
 }
 .rb-gbar-brand { display: flex; align-items: center; gap: var(--krds-gap-3); color: var(--krds-color-text-basic); text-decoration: none; flex: none; }
 .rb-gbar-mark {
@@ -83,21 +84,21 @@
 .rb-gbar-menu { position: absolute; right: 0; top: 100%; z-index: 70; min-width: var(--krds-size-width-menu, 24ch); }
 
 /* 본문 틀: 왼쪽 메뉴 + 본문 */
-.rb-shell { display: flex; flex: 1; width: 100%; align-items: stretch; }
+.rb-shell { display: grid; grid-template-columns: var(--rb-sidebar-w) minmax(0, 1fr); column-gap: var(--rb-col-gap); flex: 1; width: 100%; align-items: start; padding: var(--rb-page-pad); }
+.rb-shell.is-bare { grid-template-columns: minmax(0, 1fr); }
 .rb-side {
-  flex: none;
-  width: 26ch;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--krds-gap-1);
   padding: var(--krds-padding-4) var(--krds-padding-3);
-  border-right: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light);
   background: var(--krds-color-surface-gray-subtler);
+  border-radius: var(--krds-radius-medium3);
   overflow-y: auto;
   position: sticky;
-  top: 0;
-  align-self: stretch;
-  max-height: 100dvh;
+  top: var(--rb-page-pad);
+  align-self: start;
+  max-height: calc(100dvh - var(--rb-header-h) - var(--rb-masthead-h) - var(--rb-page-pad) * 2);
 }
 .rb-side-dim { display: none; }
 .rb-side-project { display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-3); min-width: 0; }
@@ -124,9 +125,10 @@
 .rb-side ul { list-style: none; margin: 0; padding: 0; }
 
 /* 본문 */
-.rb-main { flex: 1 1 auto; min-width: 0; padding: var(--krds-padding-3) var(--krds-padding-7) var(--krds-padding-10); }
+.rb-main { min-width: 0; padding: 0; }
 
 @media (max-width: 1023px) {
+  .rb-shell { grid-template-columns: minmax(0, 1fr); }
   .rb-gbar-navtoggle { display: inline-flex; }
   .rb-gbar-explore, .rb-gbar-btn-text, .rb-gbar-brand-text { display: none; }
   .rb-gbar-right .krds-btn.secondary { display: none; }
@@ -141,7 +143,7 @@
   }
   .rb-side.is-open { transform: translateX(0); }
   .rb-side-dim { display: block; position: fixed; inset: 0; z-index: 80; background: var(--krds-color-background-dim); }
-  .rb-main { padding: var(--krds-padding-5) var(--krds-padding-5) var(--krds-padding-9); }
+  .rb-main { min-width: 0; padding: 0; }
 }
 
 @media (max-width: 767px) {
@@ -150,10 +152,15 @@
   .rb-gbar-search { display: none; }
   .rb-gbar-searchlink { display: inline-flex; }
   .rb-gbar-right { margin-left: auto; }
-  .rb-main { padding: var(--krds-padding-4) var(--krds-padding-4) var(--krds-padding-11); }
+  .rb-main { min-width: 0; padding: 0; }
 }
 
 /* 목록 줄: 긴 기관 이름이 넘치지 않게 */
 .rb-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--krds-gap-3); min-width: 0; }
 .rb-row > * { min-width: 0; overflow-wrap: anywhere; }
 .krds-structured-list .structured-item { min-width: 0; }
+.rb-side-groups { display: flex; flex-direction: column; gap: var(--krds-gap-1); }
+/* Figma 상자 기준: 브레드크럼은 내용 폭만 차지한다 */
+.krds-breadcrumb-wrap { width: fit-content; max-width: 100%; }
+/* KRDS 기본 위 여백은 화면 틀에서 이미 주므로 뺀다(Figma 상자 기준) */
+.krds-breadcrumb-wrap { padding-top: 0; }

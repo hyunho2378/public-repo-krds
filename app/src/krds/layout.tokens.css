@@ -1,0 +1,17 @@
+/* D-13 화면 뼈대 값. Figma 화면 상자(code_plan/figma_boxes)에서 가져온 숫자를 한곳에 모은다.
+   다른 파일은 이 변수만 쓴다. 값을 고칠 때는 Figma 상자 자료와 함께 고친다.
+   근거: R-01_1920_Guest.json — 좌우 여백 24, 왼쪽 메뉴 296, 칸 사이 32, 정보 영역 320, 머리 65 */
+:root {
+  --rb-page-pad: 2.4rem;
+  --rb-sidebar-w: 29.6rem;
+  --rb-col-gap: 3.2rem;
+  --rb-info-w: 32rem;
+  --rb-header-h: 6.5rem;
+  --rb-masthead-h: 3.2rem;
+}
+@media (max-width: 1023px) {
+  :root {
+    --rb-page-pad: 1.6rem;
+    --rb-col-gap: 2.4rem;
+  }
+}

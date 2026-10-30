@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { Icon } from './Icon';
+import { Avatar } from '../Layout/Avatar';
 import { Drop } from './Drop';
 import { Readme } from '../Help/Readme';
 import { orgLabel } from '../Layout/orgLabel';
@@ -108,8 +109,8 @@ export function CommitBar({ id, commit, count, more, path, owner }) {
   // 커밋 자료는 계정 이름(chrisryugj)만 준다. 그 계정이 이 프로젝트 소유자면 공개 이름을 쓴다.
   const org = owner && owner.path === commit.author_name ? owner.name : orgLabel(commit.author_name);
   return (
-    <div className="rb-commit-bar">
-      <span className="rb-avatar rb-commit-avatar" aria-hidden="true">{org.slice(0, 1)}</span>
+    <div className="rb-commit-bar" data-figma="commit-bar">
+      <Avatar className="rb-commit-avatar" src={owner?.avatar_url} name={org} />
       <span className="rb-commit-texts">
         <Link className="krds-link krds-text-body-small-bold rb-ellipsis" to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>
         <span className="krds-text-body-small rb-subtle">{t.fn.wroteAt(org)} <Ago iso={commit.committed_date} />{t.fn.wroteSuffix}</span>
@@ -136,7 +137,7 @@ export function FileTable({ id, path, items, log, filter, refQuery }) {
   const up = path.includes('/') ? path.slice(0, path.lastIndexOf('/')) : '';
   return (
     <div className="krds-table-wrap rb-tree-wrap">
-      <table className="tbl data rb-tree">
+      <table className="tbl data rb-tree" data-figma="file-table">
         <caption className="sr-only">{t.fn.treeCount(sorted.length)}</caption>
         <thead>
           <tr>
@@ -197,7 +198,7 @@ export function ReadmeBox({ source }) {
     h?.focus({ preventScroll: true });
   };
   return (
-    <section className="rb-readme-box" aria-label={t.Readme_label} ref={box}>
+    <section className="rb-readme-box" data-figma="readme" aria-label={t.Readme_label} ref={box}>
       <header className="rb-readme-head">
         <p className="krds-text-body-medium-bold"><Icon name="document" /> {t.Readme_label}</p>
         {list.length > 1 ? (
@@ -229,7 +230,7 @@ export function About({ id, project, readme, languages, stats, summary }) {
   const desc = cleanDescription(project.description);
   const langs = Object.entries(languages || {}).sort((a, b) => b[1] - a[1]);
   return (
-    <section className="rb-about-block" aria-labelledby="about-title">
+    <section className="rb-about-block" data-figma="about" aria-labelledby="about-title">
       <h2 id="about-title" className="krds-text-heading-small">{t.About_title}</h2>
       <div className="rb-about-does">
         <p className="krds-text-body-small-bold">{t.About_does}</p>

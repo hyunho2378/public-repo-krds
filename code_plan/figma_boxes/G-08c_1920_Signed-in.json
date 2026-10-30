@@ -1,0 +1,43 @@
+{
+ "screen": "G-08c",
+ "title": "G-08c 2단계 인증",
+ "breakpoint": 1920,
+ "auth": "Signed-in",
+ "variant": "breakpoint=1920, auth=Signed-in",
+ "frame": {
+  "w": 1920,
+  "h": 656
+ },
+ "boxes": {
+  "masthead": {
+   "x": 0,
+   "y": 0,
+   "w": 1920,
+   "h": 32
+  },
+  "header": {
+   "x": 0,
+   "y": 32,
+   "w": 1920,
+   "h": 65
+  },
+  "footer": {
+   "x": 0,
+   "y": 543,
+   "w": 1920,
+   "h": 113
+  },
+  "body": {
+   "x": 0,
+   "y": 97,
+   "w": 1920,
+   "h": 446
+  },
+  "login-card": {
+   "x": 740,
+   "y": 129,
+   "w": 440,
+   "h": 382
+  }
+ }
+}

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { Icon } from '../Code/Icon';
+import { Avatar } from '../Layout/Avatar';
 import { useAuth } from '../Identity/useAuth';
 
 /** 전역 탐색 메뉴. [묶음 이름, [항목 이름, 주소, 아이콘, 끝경로 여부, 보조 설명]] */
@@ -136,20 +137,23 @@ export function Sidebar({ project, open, onClose }) {
       <nav
         id="rb-sidebar"
         ref={panel}
+        data-figma="sidebar"
         className={'rb-side' + (open ? ' is-open' : '')}
         aria-label={project ? t.Side_labelProject : t.Side_label}
       >
         {project ? (
           <p className="rb-side-project krds-text-body-medium-bold">
-            <span className="rb-avatar" aria-hidden="true">{(project.name || '').slice(0, 1)}</span>
+            <Avatar src={project.avatarUrl} name={project.name} />
             <span className="rb-ellipsis">{project.name}</span>
           </p>
         ) : (
           <p className="rb-side-project krds-text-body-medium-bold">{t.Side_explore}</p>
         )}
-        {groups.map(([group, items], i) => (
-          <Group key={group || `g${i}`} group={group} items={items} />
-        ))}
+        <div className="rb-side-groups" data-figma="sidebar-nav">
+          {groups.map(([group, items], i) => (
+            <Group key={group || `g${i}`} group={group} items={items} />
+          ))}
+        </div>
         <div className="rb-side-foot">
           {project ? null : (
             <NavLink to="/settings" className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`}>

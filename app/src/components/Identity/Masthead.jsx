@@ -6,7 +6,7 @@ export function Masthead() {
   return (
     <>
       <a className="rb-skip" href="#main">{t.Header_skip}</a>
-      <div id="krds-masthead" className="rb-masthead">
+      <div id="krds-masthead" className="rb-masthead" data-figma="masthead">
         <div className="toggle-wrap">
           <div className="toggle-head">
             <div className="inner">

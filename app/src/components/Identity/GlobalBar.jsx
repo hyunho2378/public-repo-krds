@@ -47,6 +47,7 @@ function GlobalSearch() {
   return (
     <form
       className="rb-gbar-search"
+      data-figma="global-search"
       role="search"
       onSubmit={(e) => {
         e.preventDefault();
@@ -73,7 +74,7 @@ export function GlobalBar({ onToggleNav, navOpen }) {
   const { signedIn } = useAuth();
   const loginTo = `/login?returnTo=${encodeURIComponent(location.pathname + location.search)}`;
   return (
-    <header className="rb-gbar" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
+    <header className="rb-gbar" data-figma="header" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
       <div className="rb-gbar-in">
         <button
           type="button"
