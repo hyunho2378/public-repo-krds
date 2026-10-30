@@ -86,6 +86,30 @@ export function useFontSize() {
 
 const SIZES = [['normal', u.Font_normal], ['large', u.Font_large]];
 
+// D-22 1장: 움직임 줄이기(화면 설정). html 클래스로 모션 변수를 0으로 바꾼다
+const MOTION_KEY = 'rb-motion';
+const MOTION_EVENT = 'rb-motion-change';
+const applyMotion = (v) => document.documentElement.classList.toggle('rb-reduce-motion', v === 'reduce');
+function initialMotion() {
+  try { return localStorage.getItem(MOTION_KEY) === 'reduce' ? 'reduce' : 'normal'; } catch { return 'normal'; }
+}
+if (typeof document !== 'undefined') applyMotion(initialMotion());
+export function useMotion() {
+  const [v, setV] = useState(initialMotion);
+  useEffect(() => {
+    const on = (e) => setV(e.detail);
+    window.addEventListener(MOTION_EVENT, on);
+    return () => window.removeEventListener(MOTION_EVENT, on);
+  }, []);
+  const set = (next) => {
+    try { localStorage.setItem(MOTION_KEY, next); } catch { /* 무시 */ }
+    applyMotion(next);
+    window.dispatchEvent(new CustomEvent(MOTION_EVENT, { detail: next }));
+  };
+  return [v, set];
+}
+const MOTIONS = [['normal', u.Motion_normal], ['reduce', u.Motion_reduce]];
+
 export function ScreenModeOptions({ name, mode, setMode }) {
   const [size, setSize] = useFontSize();
   return (
@@ -115,6 +139,7 @@ export function ScreenModeOptions({ name, mode, setMode }) {
 /** 화면 설정을 메뉴 항목으로 보여 준다(UX-007 12장 공통 메뉴 안). 고르면 값이 바뀌고 메뉴는 열린 채 선택 표시만 바뀐다. */
 export function ScreenModeItems({ mode, setMode }) {
   const [size, setSize] = useFontSize();
+  const [motion, setMotion] = useMotion();
   return (
     <>
       <div className="rb-menu-group" role="group" aria-label={t.Header_6}>
@@ -127,6 +152,12 @@ export function ScreenModeItems({ mode, setMode }) {
         <p className="rb-menu-title">{u.Font_title}</p>
         {SIZES.map(([value, label]) => (
           <button key={value} type="button" role="menuitemradio" aria-checked={size === value} className="rb-menu-item" onClick={() => setSize(value)}><span>{label}</span></button>
+        ))}
+      </div>
+      <div className="rb-menu-group" role="group" aria-label={u.Motion_title}>
+        <p className="rb-menu-title">{u.Motion_title}</p>
+        {MOTIONS.map(([value, label]) => (
+          <button key={value} type="button" role="menuitemradio" aria-checked={motion === value} className="rb-menu-item" onClick={() => setMotion(value)}><span>{label}</span></button>
         ))}
       </div>
     </>

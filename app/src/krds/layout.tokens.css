@@ -101,7 +101,26 @@
   /* D-21: 본문 판 안 컨테이너 최대 1280 가운데(D-18의 960 읽기 폭, 도킹 360, 탭 줄 48은 폐기). 판 모서리 8, 판 바깥 여백 8 */
   --rb-panel-radius: var(--krds-radius-medium3);
   --rb-panel-gap: var(--krds-number-5);
-  --rb-container-w: calc(var(--krds-number-12) * 40);
+  /* D-22 1장 모션(Figma 프로토타입과 같은 값). 움직임 줄이기(설정 또는 OS)면 0 */
+  --rb-motion-fast: 120ms;
+  --rb-motion-base: 200ms;
+  --rb-motion-slow: 280ms;
+  --rb-motion-ease: cubic-bezier(0.2, 0, 0, 1);
+  --rb-motion-exit-ease: cubic-bezier(0.4, 0, 1, 1);
+  --rb-motion-exit-base: calc(var(--rb-motion-base) * 0.75);
+  --rb-tip-delay: 400ms;
+  --rb-menu-rise: var(--krds-number-5);
+  /* D-21 7장 여백(KRDS 레이아웃: 최대 콘텐츠 1200, 스크린 마진 24/16, 가터 24). 값은 이 한 곳에서만 */
+  --rb-container-w: calc(var(--krds-number-21) * 12 + var(--krds-number-16));
+  --rb-gbar-pad-x: var(--krds-number-8);
+  --rb-side-pad-x: var(--krds-number-5);
+  --rb-side-item-pad-x: var(--krds-number-7);
+  --rb-panel-pad-x: var(--krds-number-10);
+  --rb-panel-pad-y: var(--krds-number-10);
+  --rb-section-gap: var(--krds-number-10);
+  --rb-filter-gap: var(--krds-number-8);
+  --rb-row-pad-y: var(--krds-number-8);
+  --rb-gutter: var(--krds-number-10);
   /* 바닥글 위아래 여백과 줄 사이 간격(24). 높이는 내용에 맡긴다 */
   --rb-footer-pad: var(--krds-number-10);
   --rb-fw-title: var(--krds-font-weight-bold);
@@ -158,9 +177,18 @@ html.rb-font-large {
   --rb-lh-17: 2.8rem;
 }
 
+@media (max-width: 767px) {
+  :root { --rb-panel-pad-x: var(--krds-number-8); --rb-gutter: var(--krds-number-8); }
+}
 @media (max-width: 1023px) {
   :root {
     --rb-page-pad: var(--krds-padding-5);
     --rb-col-gap: var(--krds-gap-7);
   }
 }
+
+/* D-22 1장: 움직임 줄이기 */
+@media (prefers-reduced-motion: reduce) {
+  :root { --rb-motion-fast: 0ms; --rb-motion-base: 0ms; --rb-motion-slow: 0ms; --rb-tip-delay: 0ms; }
+}
+html.rb-reduce-motion { --rb-motion-fast: 0ms; --rb-motion-base: 0ms; --rb-motion-slow: 0ms; --rb-tip-delay: 0ms; }

@@ -158,18 +158,19 @@ function Group({ group, tipApi }) {
       <button type="button" className="rb-side-group-btn" aria-expanded={open} aria-controls={listId} onClick={() => setOpen(!open)}>
         <Icon name={group.icon} />
         <span className="rb-side-text">{group.name}</span>
-        <Icon name="chevron_down" />
+        <Icon name="arrow-down" />
       </button>
-      {open ? (
-        <ul id={listId} className="rb-side-list">
+      {/* D-22: 목록은 늘 그려 두고 grid-template-rows 0fr↔1fr로 접는다(조건부 렌더링은 끊김 원인) */}
+      <div className={'rb-side-fold' + (open ? ' is-open' : '')}>
+        <ul id={listId} className="rb-side-list" aria-hidden={!open || undefined} ref={(el) => { if (el) el.inert = !open; }}>
           {group.items.map((it) => <li key={(it.to || it.href) + it.label}><SideLink it={it} tipApi={tipApi} indent /></li>)}
         </ul>
-      ) : null}
+      </div>
     </div>
   );
 }
 
-export function Sidebar({ project, open, onClose, onHide }) {
+export function Sidebar({ project, open, onClose, onHide, hidden = false }) {
   const { signedIn, role } = useAuth();
   const menu = project ? projectMenu(project.id, { signedIn, role, issues: project.issues, webUrl: project.webUrl }) : globalMenu({ signedIn });
   const tipApi = useTip();
@@ -184,7 +185,7 @@ export function Sidebar({ project, open, onClose, onHide }) {
   return (
     <>
       {open ? <div className="rb-side-dim" onClick={onClose} /> : null}
-      <div className="rb-side-wrap" data-figma="sidebar">
+      <div className="rb-side-wrap" data-figma="sidebar" aria-hidden={hidden || undefined} ref={(el) => { if (el) el.inert = hidden; }}>
         <nav id="rb-sidebar" className={'rb-side' + (open ? ' is-open' : '')} aria-label={project ? t.Side_labelProject : t.Side_label}>
           <div className="rb-side-scroll">
             <p className="rb-side-title">{project ? u.G_project : menu.title}</p>

@@ -14,6 +14,8 @@ const RULES = [
   ['이모지', /\p{Extended_Pictographic}/gu],
   ['hover 확대', /:hover[^}]*scale\(/g],
   // UX-007 12장: 외부 링크 아이콘과 장식 화살표 글자 금지. 새 창 링크는 newWindow()만 쓴다
+  // D-22 2: 묶음 꺾쇠는 얇은 KRDS arrow-down(›, ⌄). 채운 삼각형 아이콘과 글자 금지
+  ['채운 삼각형', /chevron_down|arrow-drop-(?:down|up)|ico_arrow_dropdown|[\u25B2\u25B6\u25BC\u25C0]/g],
   ['외부 링크 아이콘', /\bico-go\b|ico-external|ico-blank|open-new-window|open_new_window|external[-_]?link|launch\.svg|[↗↘↖↙➚➜›»]|\u2192/g],
   ['새 창 링크는 newWindow() 사용', /target=["']_blank["']/g],
 ];

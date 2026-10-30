@@ -53,7 +53,7 @@
 .rb-kbd-inline { font-family: 'D2Coding', ui-monospace, monospace; font-size: var(--krds-font-size-body-xsmall); padding: 0 var(--krds-padding-2); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-small2); }
 .rb-repo-top:empty { display: none; }
 
-.rb-repo-main.has-info { display: grid; grid-template-columns: minmax(0, 1fr) var(--rb-info-w); column-gap: var(--rb-col-gap); align-items: start; }
+.rb-repo-main.has-info { display: grid; grid-template-columns: minmax(0, 1fr) var(--rb-info-w); column-gap: var(--rb-gutter); align-items: start; }
 .rb-repo-body { display: flex; flex-direction: column; gap: var(--krds-gap-7); min-width: 0; }
 .rb-repo-info { display: flex; flex-direction: column; gap: var(--krds-gap-5); min-width: 0; }
 .rb-repo-info h2 { margin: 0; }
@@ -81,7 +81,7 @@
 .rb-x-extra { display: flex; align-items: center; gap: var(--krds-gap-3); }
 .rb-x-pager { display: flex; align-items: center; justify-content: center; gap: var(--krds-gap-5); }
 .rb-prows { list-style: none; margin: 0; padding: 0; }
-.rb-prow { display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto auto; column-gap: var(--krds-gap-3); align-items: start; padding: var(--krds-padding-5) 0; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-prow { display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto auto; column-gap: var(--krds-gap-3); align-items: start; padding: var(--rb-row-pad-y) 0; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
 .rb-prow > .rb-icon { margin-top: var(--krds-number-3); color: var(--krds-color-text-subtle); }
 .rb-avatar.is-32 { width: var(--krds-number-12); height: var(--krds-number-12); border-radius: var(--krds-radius-small2); }
 .rb-prow-main { min-width: 0; display: flex; flex-direction: column; gap: var(--krds-gap-1); }
@@ -139,3 +139,6 @@
 .rb-lang-list li { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
 .rb-lang-list i { display: inline-block; width: var(--krds-number-5); height: var(--krds-number-5); border-radius: var(--krds-radius-max); }
 .rb-branch-btn .rb-icon { flex: none; }
+
+/* D-21 7장: 필터 막대와 목록 16, 제목과 탭 16 */
+.rb-x-tabs + .rb-x-filter, .rb-x-filter + * { margin-top: calc(var(--rb-filter-gap) - var(--rb-rhythm)); }

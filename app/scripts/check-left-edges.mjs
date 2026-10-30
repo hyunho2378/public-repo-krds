@@ -6,9 +6,10 @@ import { fileURLToPath } from 'node:url';
 import { setViewport } from './viewport.mjs';
 const { chromium } = await import('playwright');
 const BASE = process.env.BASE || 'http://127.0.0.1:5731';
-const WIDTHS = (process.env.WIDTHS || '1440').split(',').map(Number);
+const WIDTHS = (process.env.WIDTHS || '360,768,1024,1440,1920,2560').split(',').map(Number);
 import { PATHS } from './paths.mjs';
-const inspect = await fs.readFile(path.join(path.dirname(fileURLToPath(import.meta.url)), 'edge-inspect.js'), 'utf8');
+// D-21 7장: 기준은 본문 판 안 컨테이너. 왼쪽 끝, 오른쪽 끝, 좌우 여백 대칭, 사이드바와 판 아래 끝(margin-inspect.js)
+const inspect = await fs.readFile(path.join(path.dirname(fileURLToPath(import.meta.url)), 'margin-inspect.js'), 'utf8');
 const browser = await chromium.launch();
 const page = await browser.newPage();
 let fails = 0;
@@ -17,7 +18,9 @@ for (const width of WIDTHS) {
     await page.goto(BASE + p);
     await setViewport(page, width, 900);
     await page.waitForFunction(() => !document.querySelector('[data-state="Loading"]'), null, { timeout: 15000 }).catch(() => {});
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
     const r = await page.evaluate(inspect);
+    if (r.skip) continue;
     if (r.bad.length) { fails += 1; console.log('위반', width, p, r.bad.join(' / ')); }
   }
 }
