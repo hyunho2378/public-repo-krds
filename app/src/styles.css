@@ -345,7 +345,7 @@ html[data-krds-mode="dark"] {
 .rb-foot-links a { color: var(--krds-color-text-basic); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); text-decoration: none; }
 .rb-foot-links a:hover, .rb-foot-links a:focus-visible { text-decoration: underline; text-underline-offset: var(--krds-number-3); }
 .rb-foot-links a.is-strong { font-weight: var(--rb-fw-current); }
-.rb-foot-bottom { display: flex; align-items: center; justify-content: space-between; gap: var(--rb-footer-pad); flex-wrap: wrap; margin-top: var(--rb-footer-pad); padding-top: var(--rb-footer-pad); border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-foot-bottom { display: flex; align-items: center; justify-content: space-between; gap: var(--rb-footer-pad); flex-wrap: wrap; margin-top: var(--rb-footer-divider-gap); padding-top: var(--rb-footer-divider-gap); border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
 .rb-foot-copy { margin: 0; color: var(--krds-color-text-basic); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
 @media (max-width: 1023px) {
   .rb-foot-top { flex-direction: column; align-items: flex-start; }
