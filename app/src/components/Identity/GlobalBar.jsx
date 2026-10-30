@@ -72,6 +72,8 @@ function GlobalSearch() {
 export function GlobalBar({ onToggleNav, navOpen }) {
   const location = useLocation();
   const { signedIn } = useAuth();
+  // UX-007 1장: 기본은 어두운 화면. 로그인 여부와 상관없이 항상 적용되어야 하므로 여기서 한 번 불러 쓴다(전에는 로그인 후에만 불리는 버그가 있었다)
+  const [mode, setMode] = useScreenMode();
   const loginTo = `/login?returnTo=${encodeURIComponent(location.pathname + location.search)}`;
   return (
     <header className="rb-gbar" data-figma="header" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
@@ -111,10 +113,11 @@ export function GlobalBar({ onToggleNav, navOpen }) {
                 <Icon name="plus" />
                 <span className="rb-gbar-btn-text">{t.GlobalBar_create}</span>
               </Link>
-              <AccountMenu />
+              <AccountMenu mode={mode} setMode={setMode} />
             </>
           ) : (
             <>
+              <ScreenModeMenu mode={mode} setMode={setMode} />
               <Link className="rb-gbar-btn" to="/login">
                 <Icon name="my" />
                 <span className="rb-gbar-btn-text">{t.GlobalBar_signup}</span>
@@ -131,10 +134,28 @@ export function GlobalBar({ onToggleNav, navOpen }) {
   );
 }
 
-/** 로그인 뒤 내 계정 메뉴. 화면 설정도 이 안에 둔다(Figma R-01 Signed-in). */
-function AccountMenu() {
+/** 게스트도 화면 설정을 바꿀 수 있다(로그인 전용 버그 고침). */
+function ScreenModeMenu({ mode, setMode }) {
   const [open, setOpen] = useState(false);
-  const [mode, setMode] = useScreenMode();
+  const wrap = useDismiss(open, () => setOpen(false));
+  return (
+    <div className="krds-drop-wrap rb-gbar-drop" ref={wrap}>
+      <button type="button" className={'rb-gbar-btn' + (open ? ' active' : '')} aria-expanded={open} aria-controls="gbar-mode-guest" onClick={() => setOpen(!open)}>
+        <Icon name="setting" />
+        <span className="rb-gbar-btn-text">{t.Header_6}</span>
+      </button>
+      <div id="gbar-mode-guest" className="drop-menu rb-gbar-menu" style={{ display: open ? 'block' : 'none' }}>
+        <div className="drop-in">
+          <ScreenModeOptions name="mode-guest" mode={mode} setMode={setMode} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** 로그인 뒤 내 계정 메뉴. 화면 설정도 이 안에 둔다(Figma R-01 Signed-in). */
+function AccountMenu({ mode, setMode }) {
+  const [open, setOpen] = useState(false);
   const wrap = useDismiss(open, () => setOpen(false));
   return (
     <div className="krds-drop-wrap rb-gbar-drop" ref={wrap}>
