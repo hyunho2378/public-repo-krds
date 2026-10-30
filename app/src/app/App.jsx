@@ -18,16 +18,32 @@ import '../components/Layout/shell.css';
 /** 화면이 바뀌면 맨 위로, 본문에 초점(화면 낭독기가 새 화면을 읽도록). 좁은 화면 서랍도 닫는다.
  *  D-22: 뒤로/앞으로 가기(POP)에서는 그 화면의 스크롤 위치를 되살린다(이 탭에서만 기억). */
 const scrollMemo = new Map();
+// 본문 높이를 계속 적어 둔다(ResizeObserver는 그린 뒤에 알리므로 화면이 바뀐 순간에는 이전 화면 높이가 남아 있다)
+if (typeof window !== 'undefined' && 'ResizeObserver' in window) {
+  const watch = () => {
+    const m = document.getElementById('main');
+    if (!m) { requestAnimationFrame(watch); return; }
+    new ResizeObserver(([e]) => { if (!m.style.minHeight) m.dataset.h = String(Math.round(e.contentRect.height)); }).observe(m);
+  };
+  requestAnimationFrame(watch);
+}
 function FocusOnNavigate({ onNavigate }) {
   const { pathname, key } = useLocation();
   const type = useNavigationType();
   useEffect(() => {
+    // 화면이 바뀌는 동안 본문 높이를 이전 높이로 잠깐 붙잡아 바닥글과 스크롤이 튀지 않게 한다(새 내용이 그려지면 푼다)
+    const main = document.getElementById('main');
+    if (main && main.dataset.h) main.style.minHeight = `${main.dataset.h}px`;
+    const release = setTimeout(() => { if (main) main.style.minHeight = ''; }, 700);
     const y = type === 'POP' ? scrollMemo.get(key) : undefined;
     if (y != null) requestAnimationFrame(() => window.scrollTo(0, y));
     else window.scrollTo(0, 0);
     document.getElementById('main')?.focus({ preventScroll: true });
     onNavigate();
-    return () => { scrollMemo.set(key, window.scrollY); };
+    return () => {
+      clearTimeout(release);
+      scrollMemo.set(key, window.scrollY);
+    };
   }, [pathname, key, type, onNavigate]);
   return null;
 }

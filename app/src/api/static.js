@@ -171,11 +171,21 @@ const routes = [
   }],
 ];
 
+const gitCache = new Map();
+
 /** client.request와 같은 인자를 받아 서버와 같은 응답 모양을 돌려준다. */
 export async function staticRequest(path, options = {}) {
   const method = (options.method || 'GET').toUpperCase();
   if (path === '/auth/session') return { authenticated: false, staticMode: true, notice: STATIC_NOTICE };
-  if (path.startsWith('/api/gitlab/')) return gitlabGet(path.slice('/api/gitlab/'.length));
+  if (path.startsWith('/api/gitlab/')) {
+    // 같은 공개 자료는 2분 동안 한 번만 받는다(다시 열 때 로딩 없이 바로, 실패한 요청은 기억하지 않는다)
+    const hit = gitCache.get(path);
+    if (hit && Date.now() - hit.at < 120000) return hit.p;
+    const p = gitlabGet(path.slice('/api/gitlab/'.length));
+    gitCache.set(path, { at: Date.now(), p });
+    p.catch(() => gitCache.delete(path));
+    return p;
+  }
   if (path.startsWith('/api/v1/')) {
     const [p, qs = ''] = path.slice('/api/v1'.length).split('?');
     const query = Object.fromEntries(new URLSearchParams(qs));

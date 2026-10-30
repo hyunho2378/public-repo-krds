@@ -310,8 +310,7 @@
 .rb-menu { animation: rb-rise var(--rb-motion-base) var(--rb-motion-ease) both; }
 /* 툴팁: 400 지연 뒤 나타남 */
 .rb-tip { animation: rb-fade-in var(--rb-motion-fast) var(--rb-motion-ease) var(--rb-tip-delay) both; }
-/* 페이지 이동: 본문만 교차 */
-.rb-main > .rb-page { animation: rb-fade-in var(--rb-motion-fast) var(--rb-motion-ease) both; }
+/* 페이지 이동: 상단 바와 사이드바는 그대로. 본문 투명도 애니메이션은 클릭마다 깜빡여 보여 쓰지 않는다(2026. 10. 31. 측정) */
 /* 목록 행과 파일 표 행 호버 */
 .rb-prow, .rb-tree tbody tr { transition: background-color var(--rb-motion-fast) var(--rb-motion-ease); }
 .rb-prow:hover, .rb-tree tbody tr:hover { background: var(--krds-color-surface-gray-subtler); }

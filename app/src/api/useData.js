@@ -23,7 +23,8 @@ export function useData(load, deps, isEmpty = () => false, shape = shapeList) {
   useEffect(() => {
     let live = true;
     const forced = devState();
-    setResult({ state: 'Loading' });
+    // 같은 화면에서 조건만 바뀌면(탭, 필터, 정렬, 쪽) 이전 내용을 그대로 두고 새 자료가 오면 바꾼다(화면이 비었다 채워지며 튀지 않게)
+    setResult((prev) => (prev.data !== undefined && !forced ? { ...prev, refreshing: true } : { state: 'Loading' }));
     if (forced === 'Loading') return () => { live = false; };
     const run = forced === 'Error' ? Promise.reject(new Error('시험용 오류 상태')) : load();
     withLimit(run)
