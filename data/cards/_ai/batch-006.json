@@ -1,0 +1,383 @@
+[
+ {
+  "id": 352,
+  "oneLine": "Windows에서 고른 폴더를 감시하다가 새로 만들거나 고친 파일을 다른 디스크에 자동으로 한 번 더 복사해 두는 프로그램",
+  "targetTask": "중요 문서 저장본 이중 백업",
+  "fields": [
+   "엑셀·사무 자동화",
+   "개발·보안·인프라"
+  ],
+  "runSummary": "ZIP을 내려받아 압축을 풀고 SafeCopy.exe를 두 번 눌러 열면 된다. 설치는 없다",
+  "rawCommands": null,
+  "limitations": "폴더를 체크하기 전부터 있던 파일은 자동으로 복사하지 않는다",
+  "lines": {
+   "oneLine": [
+    5,
+    7
+   ],
+   "targetTask": [
+    3,
+    5
+   ],
+   "fields": [
+    5,
+    7
+   ],
+   "runSummary": [
+    13,
+    26
+   ],
+   "limitations": [
+    75,
+    75
+   ]
+  }
+ },
+ {
+  "id": 359,
+  "oneLine": "온나라 문서 화면에서 여러 부서의 문서를 긴 기간에 걸쳐 한 번에 검색해 결과표와 CSV로 보여 주는 브라우저 확장",
+  "targetTask": "온나라 전 부서 문서 통합 검색",
+  "fields": [
+   "문서·보고서",
+   "엑셀·사무 자동화"
+  ],
+  "runSummary": "ZIP을 풀고 Edge·Chrome 확장 관리 화면에서 개발자 모드를 켠 뒤 압축해제된 확장 프로그램으로 불러온다",
+  "rawCommands": null,
+  "limitations": "현재 사용자의 온나라 로그인 권한 범위에서만 조회한다",
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    3
+   ],
+   "runSummary": [
+    37,
+    40
+   ],
+   "limitations": [
+    59,
+    59
+   ]
+  }
+ },
+ {
+  "id": 362,
+  "oneLine": "서울시교육청 도서관 이용자가 휴대폰으로 회원증, 대출·예약, 도서 연장을 확인하는 도서관 지갑 앱",
+  "targetTask": "도서관 회원증·대출·예약 조회",
+  "fields": [
+   "민원·복지·상담"
+  ],
+  "runSummary": "소스를 내려받아 npm으로 설치한 뒤 개발 서버를 켜서 이용자 앱·관리자 앱·API 주소로 접속한다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    7,
+    15
+   ],
+   "fields": [
+    3,
+    15
+   ],
+   "runSummary": [
+    40,
+    52
+   ]
+  }
+ },
+ {
+  "id": 363,
+  "oneLine": "학교 행정실이 월별 한전 고지서를 넣으면 전기요금, 요금제 비교, 피크 관리 방안과 변경신청 문서까지 만들어 주는 웹앱",
+  "targetTask": "학교 전기요금 절감 진단과 계약 변경 신청",
+  "fields": [
+   "회계·예산·출장"
+  ],
+  "runSummary": "npm으로 설치하고 개발 서버를 켠 뒤 브라우저에서 쓴다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    3
+   ],
+   "runSummary": [
+    5,
+    10
+   ]
+  }
+ },
+ {
+  "id": 364,
+  "oneLine": "학교 급식 식단을 보고 아이의 식사 정도를 혼내지 않고 기록하며 칭찬과 성장으로 이어 주는 iOS 앱",
+  "targetTask": "학생 급식 식단 확인과 식습관 기록",
+  "fields": [
+   "기타"
+  ],
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    5,
+    14
+   ],
+   "fields": [
+    3,
+    14
+   ]
+  }
+ },
+ {
+  "id": 365,
+  "oneLine": "강의 홈페이지(edu2) 배포본을 그대로 담은 정적 사이트 사본",
+  "targetTask": null,
+  "fields": null,
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": "원본 소스가 아니라 배포된 결과물만 담고 있다",
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "limitations": [
+    27,
+    27
+   ]
+  }
+ },
+ {
+  "id": 367,
+  "oneLine": "학교를 검색하면 우리학교의 학사일정, 급식, 시간표를 한 화면에서 보여 주는 웹앱",
+  "targetTask": "학교 오늘의 일정·급식·시간표 확인",
+  "fields": [
+   "기타"
+  ],
+  "runSummary": "바로가기 주소로 열고 학교를 검색해 선택한다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    11,
+    12
+   ],
+   "targetTask": [
+    16,
+    18
+   ],
+   "fields": [
+    11,
+    18
+   ],
+   "runSummary": [
+    5,
+    5
+   ]
+  }
+ },
+ {
+  "id": 368,
+  "oneLine": "기간제교원·시간강사·공무직 발령대장 엑셀을 불러와 대상자의 경력을 확인하고 경력증명서를 발급하는 웹 도구",
+  "targetTask": "경력증명서 발급",
+  "fields": [
+   "문서·보고서",
+   "엑셀·사무 자동화"
+  ],
+  "runSummary": "웹앱 주소에서 엑셀 발령대장을 올리고 대상자를 검색해 인쇄한다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    4
+   ],
+   "targetTask": [
+    3,
+    4
+   ],
+   "fields": [
+    3,
+    22
+   ],
+   "runSummary": [
+    8,
+    8
+   ]
+  }
+ },
+ {
+  "id": 369,
+  "oneLine": "학교 이름과 기준월을 넣으면 서울시교육청 업무추진비 공개자료를 모아 학교카드 사용처를 표와 지도에 보여 주는 웹 도구",
+  "targetTask": "학교 업무추진비 사용처 확인",
+  "fields": [
+   "회계·예산·출장",
+   "데이터·통계·분석"
+  ],
+  "runSummary": "웹 주소에 접속해 학교명과 기준월을 넣고 사용처 지도 만들기를 누른다",
+  "rawCommands": null,
+  "limitations": "서울특별시교육청 소속 학교만 지원한다",
+  "lines": {
+   "oneLine": [
+    3,
+    4
+   ],
+   "targetTask": [
+    3,
+    4
+   ],
+   "fields": [
+    3,
+    24
+   ],
+   "runSummary": [
+    30,
+    35
+   ],
+   "limitations": [
+    8,
+    8
+   ]
+  }
+ },
+ {
+  "id": 382,
+  "oneLine": "영수증 사진에서 날짜·차량번호·금액을 읽어 차량 세차내역 엑셀에 자동으로 채워 주는 프로그램",
+  "targetTask": "세차 영수증 정산 엑셀 입력",
+  "fields": [
+   "엑셀·사무 자동화",
+   "회계·예산·출장"
+  ],
+  "runSummary": "파이썬 환경을 만들어 패키지를 설치하고 설정 파일에 API 키를 넣은 뒤 프로그램을 실행해 파일을 차례로 고른다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    1,
+    6
+   ],
+   "targetTask": [
+    1,
+    12
+   ],
+   "fields": [
+    1,
+    12
+   ],
+   "runSummary": [
+    14,
+    40
+   ]
+  }
+ },
+ {
+  "id": 383,
+  "oneLine": "드론관제실 회의실 예약, 변경, 취소와 예약 현황을 함께 보는 웹 서비스",
+  "targetTask": "회의실 대관 예약 관리",
+  "fields": [
+   "기타"
+  ],
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": 384,
+  "oneLine": "계약심사·일상감사 처리대장을 관리하는 웹앱과 감사 검토를 돕는 내부망용 로컬 AI",
+  "targetTask": "계약심사·일상감사 처리 관리와 검토 보조",
+  "fields": [
+   "법령·규제·감사",
+   "생성형 AI·챗봇·검색"
+  ],
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": "AI 검토 결과는 감사자 판단을 돕는 초안이며 최종 판단과 책임은 감사자에게 있다",
+  "lines": {
+   "oneLine": [
+    3,
+    4
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    10
+   ],
+   "limitations": [
+    10,
+    10
+   ]
+  }
+ },
+ {
+  "id": 391,
+  "oneLine": "브라우저 즐겨찾기와 방문 기록을 비교해 분야별 정리, 중복·저사용 삭제 후보, 새 즐겨찾기 후보를 제안하는 크롬·엣지 확장",
+  "targetTask": "즐겨찾기 정리",
+  "fields": [
+   "엑셀·사무 자동화"
+  ],
+  "runSummary": "GitHub 릴리스에서 내려받아 크롬·엣지에 확장으로 넣는다",
+  "rawCommands": null,
+  "limitations": "사용 신호 0회가 필요 없는 즐겨찾기라는 뜻은 아니며, 동기화가 켜져 있으면 다른 기기에도 변경이 반영될 수 있다",
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    13,
+    16
+   ],
+   "runSummary": [
+    7,
+    7
+   ],
+   "limitations": [
+    25,
+    26
+   ]
+  }
+ }
+]

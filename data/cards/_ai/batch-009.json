@@ -1,0 +1,419 @@
+[
+ {
+  "id": 527,
+  "oneLine": "내 PC의 로컬 AI만 써서 웹한글 기안기 옆에서 보고서 양식 세팅, 본문 작성, 요약, 교정을 도와주는 크롬 확장",
+  "targetTask": "보고서·공문 초안 작성과 교정",
+  "fields": [
+   "문서·보고서",
+   "생성형 AI·챗봇·검색"
+  ],
+  "runSummary": "LM Studio와 AI 모델을 먼저 설치하고 서버를 켠 뒤, 크롬에 이 폴더를 확장으로 불러온다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    1,
+    8
+   ],
+   "targetTask": [
+    7,
+    8
+   ],
+   "fields": [
+    1,
+    8
+   ],
+   "runSummary": [
+    21,
+    32
+   ]
+  }
+ },
+ {
+  "id": 528,
+  "oneLine": "HWP·PDF·DOCX·XLSX 파일을 끌어다 놓으면 인터넷 없이 내 PC에서 마크다운 문서로 바꿔 주는 도구",
+  "targetTask": "한글 등 문서를 AI·검색용 마크다운으로 변환",
+  "fields": [
+   "문서·보고서",
+   "엑셀·사무 자동화"
+  ],
+  "runSummary": "처음 한 번 1_setup.bat을 실행해 설치하고, 이후 파일을 2_convert.bat 위로 끌어다 놓는다",
+  "rawCommands": null,
+  "limitations": "zip을 풀지 않고 바로 실행하면 변환이 실패한다",
+  "lines": {
+   "oneLine": [
+    7,
+    8
+   ],
+   "targetTask": [
+    16,
+    17
+   ],
+   "fields": [
+    7,
+    17
+   ],
+   "runSummary": [
+    21,
+    28
+   ],
+   "limitations": [
+    30,
+    31
+   ]
+  }
+ },
+ {
+  "id": 534,
+  "oneLine": "내 PC 문서를 가져와 로컬에서 검색하고 출처가 붙은 지식 위키로 정리하는 Windows 프로그램",
+  "targetTask": "개인 문서 검색과 근거 있는 지식 정리",
+  "fields": [
+   "생성형 AI·챗봇·검색",
+   "문서·보고서"
+  ],
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": "외부 검증을 마치지 않은 베타라서 유일한 원본이나 민감 자료는 맡기지 말아야 하고, HWP·XLSX·PPTX·이미지 OCR은 지원하지 않는다",
+  "lines": {
+   "oneLine": [
+    8,
+    8
+   ],
+   "targetTask": [
+    8,
+    8
+   ],
+   "fields": [
+    8,
+    8
+   ],
+   "limitations": [
+    149,
+    155
+   ]
+  }
+ },
+ {
+  "id": 535,
+  "oneLine": "내 PC의 Ollama AI로 채팅, 문서·이미지 분석, 엑셀 자료 처리를 도와주는 개인 AI 비서 웹앱",
+  "targetTask": "문서·표 자료 분석과 질의",
+  "fields": [
+   "생성형 AI·챗봇·검색",
+   "문서·보고서"
+  ],
+  "runSummary": "npm으로 설치해 시작한 뒤 브라우저에서 localhost 주소로 접속한다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    3
+   ],
+   "runSummary": [
+    25,
+    38
+   ]
+  }
+ },
+ {
+  "id": 537,
+  "oneLine": "마우스 포인터 주변 강조 원과 클릭·휠 효과를 화면에 표시해 발표나 시연에서 포인터를 잘 보이게 하는 Windows 프로그램",
+  "targetTask": "발표·시연 시 마우스 위치 강조",
+  "fields": [
+   "영상·이미지·음성"
+  ],
+  "runSummary": "spotlight.exe를 두 번 눌러 실행하고, 작업표시줄 알림 영역 아이콘 메뉴에서 설정과 종료를 한다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    3
+   ],
+   "runSummary": [
+    19,
+    24
+   ]
+  }
+ },
+ {
+  "id": 540,
+  "oneLine": "서버 업로드 없이 브라우저에서 영상·음성 자르기, 합치기, 화면 녹화, 형식 변환을 하는 멀티미디어 편집기",
+  "targetTask": "영상·음성 편집과 화면 녹화",
+  "fields": [
+   "영상·이미지·음성"
+  ],
+  "runSummary": "별도 설치 없이 media_editor.html 파일을 브라우저로 연다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    4
+   ],
+   "targetTask": [
+    13,
+    13
+   ],
+   "fields": [
+    3,
+    13
+   ],
+   "runSummary": [
+    11,
+    11
+   ]
+  }
+ },
+ {
+  "id": 545,
+  "oneLine": "등록한 인물의 얼굴을 기준으로 행사 사진을 인물별 폴더로 자동 분류하는 프로그램, 사진은 PC 밖으로 나가지 않는다",
+  "targetTask": "행사 사진 중 특정 인물 사진 골라내기",
+  "fields": [
+   "영상·이미지·음성"
+  ],
+  "runSummary": "인물사진분류_실행.bat을 두 번 누른다. 처음 한 번만 인터넷으로 모델을 받고 이후에는 폐쇄망에서도 된다",
+  "rawCommands": null,
+  "limitations": "1,000장 기준 약 40분 걸리고, 이용은 비상업적 목적으로 한정된다",
+  "lines": {
+   "oneLine": [
+    3,
+    4
+   ],
+   "targetTask": [
+    3,
+    4
+   ],
+   "fields": [
+    3,
+    4
+   ],
+   "runSummary": [
+    20,
+    22
+   ],
+   "limitations": [
+    10,
+    26
+   ]
+  }
+ },
+ {
+  "id": 553,
+  "oneLine": "참가자가 QR로 휴대폰에서 참여하는 기관 타운홀미팅 행사 운영 프로그램, 익명 질의응답·투표·워드클라우드를 제공",
+  "targetTask": "기관 타운홀미팅 진행",
+  "fields": [
+   "기타"
+  ],
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": "데이터 파일의 예상질의 답변과 약속 카드에 대외 공개가 곤란한 내용이 있을 수 있어 확인이 필요하다",
+  "lines": {
+   "oneLine": [
+    3,
+    4
+   ],
+   "targetTask": [
+    3,
+    4
+   ],
+   "fields": [
+    3,
+    7
+   ],
+   "limitations": [
+    106,
+    108
+   ]
+  }
+ },
+ {
+  "id": 557,
+  "oneLine": "공공문서의 개인정보 후보를 인터넷이 막힌 내부망 PC에서 찾아 가리고 사람이 확인하게 돕는 Windows 프로그램",
+  "targetTask": "문서 공개·외부 AI 활용 전 개인정보 비식별 처리",
+  "fields": [
+   "문서·보고서",
+   "개발·보안·인프라"
+  ],
+  "runSummary": "릴리스 페이지에서 설치 파일(Setup.exe)을 받아 설치한다",
+  "rawCommands": null,
+  "limitations": "공공 GitLab 최초 검토용 공개본이며 기관 간 재사용과 업무망 배포를 위한 요구사항은 앞으로 반영한다",
+  "lines": {
+   "oneLine": [
+    25,
+    26
+   ],
+   "targetTask": [
+    25,
+    26
+   ],
+   "fields": [
+    3,
+    7
+   ],
+   "runSummary": [
+    11,
+    12
+   ],
+   "limitations": [
+    113,
+    115
+   ]
+  }
+ },
+ {
+  "id": 558,
+  "oneLine": "여러 부서·기관이 낸 비슷한 형식의 엑셀 자료를 내 PC에서 자동으로 합치고 형식 차이를 검토하게 돕는 Windows 프로그램",
+  "targetTask": "엑셀 자료 취합과 오류 검증",
+  "fields": [
+   "엑셀·사무 자동화"
+  ],
+  "runSummary": "릴리스 페이지에서 설치 파일(Setup.exe)을 받아 설치한다",
+  "rawCommands": null,
+  "limitations": "공공 GitLab 최초 검토용 공개본이며 기관 간 재사용과 업무망 배포를 위한 요구사항은 앞으로 반영한다",
+  "lines": {
+   "oneLine": [
+    23,
+    25
+   ],
+   "targetTask": [
+    23,
+    25
+   ],
+   "fields": [
+    5,
+    6
+   ],
+   "runSummary": [
+    10,
+    12
+   ],
+   "limitations": [
+    111,
+    113
+   ]
+  }
+ },
+ {
+  "id": 561,
+  "oneLine": "인터넷 없이 내 PC 안에서 로컬 AI로 대화, 일정, 지식 검색, 한글 보고서 작성을 하는 공무원용 업무 AI 프로그램",
+  "targetTask": "공무원 일상 업무 보조와 보고서 작성",
+  "fields": [
+   "생성형 AI·챗봇·검색",
+   "문서·보고서"
+  ],
+  "runSummary": "릴리스 페이지에서 설치 패키지를 받아 설치한다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    5,
+    6
+   ],
+   "targetTask": [
+    26,
+    26
+   ],
+   "fields": [
+    5,
+    6
+   ],
+   "runSummary": [
+    16,
+    16
+   ]
+  }
+ },
+ {
+  "id": 562,
+  "oneLine": "인터넷 연결 없이 HWPX 문서를 편집하고 내 PC의 로컬 AI 조수로 도움받는 에디터",
+  "targetTask": null,
+  "fields": [
+   "문서·보고서",
+   "생성형 AI·챗봇·검색"
+  ],
+  "runSummary": "Node.js 20 이상을 설치하고 저장소를 받아 npm으로 설치한 뒤 개발 서버를 켜서 localhost 주소로 연다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    4
+   ],
+   "fields": [
+    3,
+    4
+   ],
+   "runSummary": [
+    17,
+    40
+   ]
+  }
+ },
+ {
+  "id": 569,
+  "oneLine": "한국적 미학을 바탕으로 디자인 작업을 하도록 돕는 Claude용 캔버스 디자인 스킬과 한글 글꼴 묶음",
+  "targetTask": null,
+  "fields": [
+   "영상·이미지·음성"
+  ],
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    3
+   ]
+  }
+ },
+ {
+  "id": 573,
+  "oneLine": "전국 등대의 기상·여객선·관광 공공데이터를 한 곳에 모아 지도와 안전 지수로 보여 주는 해양관광 웹서비스",
+  "targetTask": "등대 여행 계획 시 기상·이동·관광 정보 확인",
+  "fields": [
+   "데이터·통계·분석"
+  ],
+  "runSummary": "서비스 바로가기 주소에서 웹으로 쓴다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    11,
+    13
+   ],
+   "fields": [
+    15,
+    16
+   ],
+   "runSummary": [
+    5,
+    5
+   ]
+  }
+ }
+]
