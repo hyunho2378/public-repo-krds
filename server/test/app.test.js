@@ -10,3 +10,13 @@ test('product routes actual analysis, caching and adapters',()=>running(async ba
 test('SQLite authenticated writes, CSRF, isolated dev activity, duplicate vote',()=>running(async base=>{const post=(path,body={},headers={})=>fetch(base+path,{method:'POST',headers:{'Content-Type':'application/json',...headers},body:JSON.stringify(body)});assert.equal((await post('/api/v1/requests',{task:'x'})).status,401);const login=await post('/auth/dev-login');const cookie=login.headers.get('set-cookie').split(';')[0],user=await login.json();assert(user.mock);const h={Cookie:cookie,'X-CSRF-Token':user.csrf};assert.equal((await post('/api/v1/requests',{task:'x'},{Cookie:cookie})).status,403);const saved=await post('/api/v1/requests',{task:'출장 정산',currentProcess:'수기 계산',expectedOutcome:'계산 확인'},h);assert.equal(saved.status,201);const{data}=await saved.json();for(let i=0;i<2;i++){const vote=await(await post('/api/v1/requests/'+data.id+'/votes',{},h)).json();assert.equal(vote.data.votes,1);}assert.equal((await(await fetch(base+'/api/v1/requests')).json()).data.total,0);assert.equal((await(await fetch(base+'/api/v1/requests',{headers:{Cookie:cookie}})).json()).data.total,1);assert.equal((await fetch(base+'/api/v1/projects/1672/security-alerts',{headers:{Cookie:cookie}})).status,403);}));
 test('dev auth disabled in production',()=>running(async base=>assert.equal((await fetch(base+'/auth/dev-login',{method:'POST'})).status,404),{environment:'production'}));
 test('MCP tools/list and search tools/call JSON RPC',()=>running(async base=>{const req=async body=>(await(await fetch(base+'/api/v1/mcp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})).json());assert.equal((await req({jsonrpc:'2.0',id:1,method:'tools/list'})).result.tools[0].name,'search_projects');assert((await req({jsonrpc:'2.0',id:2,method:'tools/call',params:{name:'search_projects',arguments:{query:'출장'}}})).result.content[0].text.includes('items'));}));
+
+test('license: 배지 마크다운을 걸러 내고 이름만, 없으면 null', async () => {
+  const { licenseName, card } = await import('../src/analysis.js');
+  const badge = '[![license](https://img.shields.io/npm/l/kordoc.svg)](LICENSE)';
+  assert.equal(licenseName(badge), null);
+  assert.equal(licenseName(badge + '\n- [보안 정책](SECURITY.md) · [라이선스 MIT](LICENSE)'), 'MIT');
+  assert.equal(licenseName('[![license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)'), 'Apache-2.0');
+  assert.equal(licenseName(''), null);
+  assert(!/\[|\]|https?:/.test(card({ id: 1, name: 'x' }, badge, []).license || ''));
+});
