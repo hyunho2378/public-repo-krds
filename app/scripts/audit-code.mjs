@@ -64,6 +64,19 @@ async function walk(dir) {
   }
 }
 
+// D-07, D-15: 청록 계열(색상 170~200도) 면 금지. 호버/선택/눌림 변수(action-secondary-*)가 최종적으로 청록이면 실패한다.
+// 화면에서 실제로 풀린 색은 scripts/teal-inspect.js(브라우저)로 확인한다. 여기서는 소스에서 직접 쓴 청록 16진수 색을 찾는다.
+async function tealCheck() {
+  const hue = (hex) => { const n = parseInt(hex.slice(1), 16); const r = (n >> 16) / 255; const g = ((n >> 8) & 255) / 255; const b = (n & 255) / 255; const mx = Math.max(r, g, b); const mn = Math.min(r, g, b); const d = mx - mn; if (!d) return null; const l = (mx + mn) / 2; const s = d / (1 - Math.abs(2 * l - 1)); if (s < 0.12) return null; const h = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; return (h * 60 + 360) % 360; };
+  const css = await fs.readFile('src/styles.css', 'utf8');
+  const dark = await fs.readFile('src/krds/dark.generated.css', 'utf8');
+  const overridden = /html\[data-krds-mode="dark"\]\s*\{[^}]*--krds-color-action-secondary-hover:/.test(css);
+  for (const m of dark.matchAll(/(--krds-dark-color-action-secondary-(?:hover|selected|pressed)):\s*(#[0-9a-fA-F]{6})/g)) {
+    const h = hue(m[2]);
+    if (h !== null && h >= 170 && h <= 200 && !overridden) issues.push('src/krds/dark.generated.css: 청록 면 ' + m[1] + ' ' + m[2] + ' (styles.css에서 회색으로 덮어쓰지 않음)');
+  }
+}
+await tealCheck();
 await walk('src');
 console.log(issues.length ? issues.join('\n') : 'PASS: source code forbidden patterns 0');
 if (issues.length) process.exitCode = 1;

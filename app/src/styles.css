@@ -315,3 +315,93 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 /* 도킹 패널이 열려도 본문 왼쪽 선은 머리글, 탭 줄과 같은 컨테이너 왼쪽이다. 본문 영역과 패널을 컨테이너 안에 함께 가운데 둔다(패널은 컨테이너 오른쪽 끝) */
 .rb-work { width: 100%; max-width: calc(var(--rb-container-w) + var(--rb-page-pad) * 2); margin-inline: auto; box-sizing: border-box; }
 .rb-work > .rb-shell { max-width: none; margin-inline: 0; flex: 1 1 auto; min-width: 0; }
+
+/* D-07, D-15: 어두운 화면의 마우스 올림, 선택, 누름 면이 청록(#0E3139, #113B45)이던 문제. 위 규칙은 light 변수만 덮어 실제 색에 닿지 않았다.
+   실제로 쓰이는 dark 변수와 최종 변수를 함께 회색 단계(80, 70)로 바꾼다 */
+html[data-krds-mode="dark"] {
+  --krds-dark-color-action-secondary-hover: var(--krds-color-high-contrast-gray-80);
+  --krds-dark-color-action-secondary-selected: var(--krds-color-high-contrast-gray-80);
+  --krds-dark-color-action-secondary-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-color-action-secondary-hover: var(--krds-color-high-contrast-gray-80);
+  --krds-color-action-secondary-selected: var(--krds-color-high-contrast-gray-80);
+  --krds-color-action-secondary-pressed: var(--krds-color-high-contrast-gray-70);
+}
+
+/* 머리글 폭 배분(1024 이상): [로고+이름+경로](내용만큼, 부족하면 만든 사람 이름이 먼저 줄어듦) 24 [검색칸 240~640] 24 [오른쪽 묶음]. 저장소 이름은 말줄임 없이 전체 */
+@media (min-width: 1024px) {
+  .rb-gbar-in { display: flex; align-items: center; column-gap: var(--krds-number-10); }
+  .rb-gbar-left { flex: 0 1 auto; min-width: 0; gap: var(--krds-number-10); }
+  .rb-gbar-in > .rb-gbar-search { flex: 1 1 var(--rb-gbar-search-min); width: auto; min-width: var(--rb-gbar-search-min); max-width: var(--rb-gbar-search-w); }
+  .rb-gbar-right { flex: none; margin-inline-start: auto; }
+  .rb-gbar-path { flex: 0 1 auto; min-width: 0; overflow: visible; gap: var(--krds-gap-3); }
+  .rb-gbar-pathlink.is-owner { flex: 0 1 auto; min-width: 0; max-width: var(--rb-gbar-owner-max); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rb-gbar-pathlink.is-name { flex: none; max-width: none; overflow: visible; text-overflow: clip; }
+  .rb-gbar-sep { flex: none; }
+}
+/* 1023 이하(768 포함): 경로는 머리글 아래 한 줄(모바일 규칙). 만든 사람은 말줄임, 저장소 이름은 전체 */
+@media (max-width: 1023px) {
+  .rb-gbar { height: auto; min-height: var(--rb-header-h); }
+  .rb-gbar-in { flex-wrap: wrap; row-gap: 0; }
+  .rb-gbar-left { display: contents; }
+  .rb-gbar-path { order: 9; flex: 1 0 100%; min-width: 0; padding-bottom: var(--krds-padding-3); gap: var(--krds-gap-3); }
+  .rb-gbar-pathlink.is-owner { flex: 0 1 auto; min-width: 0; max-width: var(--rb-gbar-owner-max); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rb-gbar-pathlink.is-name { flex: none; max-width: none; }
+}
+/* 정보 버튼 열림: 채움 없이 글자 굵게 + 아래 선(탭 선택과 같은 방식) */
+.rb-rtab-info .rb-rtab.active, .rb-rtab-info .rb-rtab.active:hover { background: none; font-weight: var(--rb-fw-current); border-bottom-color: var(--krds-color-border-primary); }
+/* 768~1023: 검색칸은 같은 줄에서 남는 폭을 쓴다(240 이상). 767 이하에서는 로고만 두고 이름 글자는 숨겨 한 줄에 맞춘다(접근성 이름은 링크가 가짐) */
+@media (max-width: 1023px) {
+  .rb-gbar-in > .rb-gbar-search { flex: 1 1 var(--rb-gbar-search-min); width: auto; min-width: var(--rb-gbar-search-min); max-width: var(--rb-gbar-search-w); }
+  .rb-gbar-left { gap: var(--krds-gap-3); }
+}
+@media (max-width: 767px) { .rb-gbar-brand-text { display: none; } }
+
+/* D-07, D-15: 어두운 화면에서 청록(secondary)으로 풀리던 나머지 면 변수도 회색 단계로(글자 단추의 마우스 올림/누름, 보조 면, 보조 요소 면). 테두리와 구분선의 secondary-light도 회색 */
+html[data-krds-mode="dark"] {
+  --krds-color-button-text-fill-hover: var(--krds-color-high-contrast-gray-80);
+  --krds-color-button-text-fill-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-color-surface-secondary-subtler: var(--krds-color-high-contrast-gray-90, var(--krds-color-surface-gray-subtler));
+  --krds-color-element-secondary-lighter: var(--krds-color-high-contrast-gray-80);
+  --krds-color-element-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-color-action-secondary-on-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-color-border-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-color-divider-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-color-icon-secondary-static: var(--krds-color-high-contrast-gray-60, var(--krds-color-high-contrast-gray-70));
+}
+
+/* D-07, D-15: 위 변수들을 KRDS가 읽는 세 이름(light, dark, 최종)에 모두 회색으로 둔다. 어느 이름으로 풀려도 청록이 나오지 않게 한다 */
+html[data-krds-mode="dark"] {
+  --krds-light-color-button-text-fill-hover: var(--krds-color-high-contrast-gray-80);
+  --krds-dark-color-button-text-fill-hover: var(--krds-color-high-contrast-gray-80);
+  --krds-color-button-text-fill-hover: var(--krds-color-high-contrast-gray-80);
+  --krds-light-color-button-text-fill-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-dark-color-button-text-fill-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-color-button-text-fill-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-light-color-element-secondary-lighter: var(--krds-color-high-contrast-gray-80);
+  --krds-dark-color-element-secondary-lighter: var(--krds-color-high-contrast-gray-80);
+  --krds-color-element-secondary-lighter: var(--krds-color-high-contrast-gray-80);
+  --krds-light-color-element-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-dark-color-element-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-color-element-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-light-color-action-secondary-on-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-dark-color-action-secondary-on-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-color-action-secondary-on-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-light-color-border-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-dark-color-border-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-color-border-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-light-color-divider-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-dark-color-divider-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-color-divider-secondary-light: var(--krds-color-high-contrast-gray-70);
+  --krds-light-color-action-secondary-hover: var(--krds-color-high-contrast-gray-80);
+  --krds-dark-color-action-secondary-hover: var(--krds-color-high-contrast-gray-80);
+  --krds-color-action-secondary-hover: var(--krds-color-high-contrast-gray-80);
+  --krds-light-color-action-secondary-selected: var(--krds-color-high-contrast-gray-80);
+  --krds-dark-color-action-secondary-selected: var(--krds-color-high-contrast-gray-80);
+  --krds-color-action-secondary-selected: var(--krds-color-high-contrast-gray-80);
+  --krds-light-color-action-secondary-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-dark-color-action-secondary-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-color-action-secondary-pressed: var(--krds-color-high-contrast-gray-70);
+  --krds-light-color-surface-secondary-subtler: var(--krds-color-high-contrast-gray-90);
+  --krds-dark-color-surface-secondary-subtler: var(--krds-color-high-contrast-gray-90);
+  --krds-color-surface-secondary-subtler: var(--krds-color-high-contrast-gray-90);
+}

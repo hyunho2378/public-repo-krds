@@ -41,6 +41,9 @@
   --rb-gbar-side: calc(var(--krds-number-12) * 7 + var(--krds-number-11));
   --rb-gbar-right: calc(var(--krds-number-21) * 3);
   --rb-actions-w: calc(var(--krds-number-21) * 3);
+  /* 머리글: 검색칸은 240~640으로 줄고 늘며 남는 폭은 경로에 준다. 만든 사람 이름은 최대 320에서 말줄임, 저장소 이름은 말줄임 없음 */
+  --rb-gbar-search-min: calc(var(--krds-number-5) * 30);
+  --rb-gbar-owner-max: calc(var(--krds-number-12) * 10);
   --rb-gbar-search-w: calc(var(--krds-number-21) * 6 + var(--krds-number-12) * 2);
   --rb-info-w: calc(var(--krds-number-12) * 9 + var(--krds-number-5));
   /* 커밋 상세 왼쪽 파일 트리 폭(296): GitHub 비교 화면 기준 */
