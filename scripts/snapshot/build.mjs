@@ -58,7 +58,8 @@ for (const p of index) {
   // 프로젝트 보조 자료(멤버, 라벨, 마일스톤, 활동, 기여자): data/raw/{id}/에 수집된 것이 있으면 싣는다
   for (const k of ['members', 'labels', 'milestones', 'events', 'contributors']) {
     const v = read(path.join(dir, `${k}.json`), null);
-    if (Array.isArray(v)) detail[k] = v;
+    // 활동 작성자의 공개 이메일(public_email)은 싣지 않는다
+    if (Array.isArray(v)) detail[k] = k === 'events' ? JSON.parse(JSON.stringify(v, (key, val) => (key === 'public_email' ? undefined : val))) : v;
   }
   if (p.id === 150) {
     // kordoc: 받아 둔 공공 깃랩 응답 전체(커밋, 브랜치, 태그, 릴리스, 이슈, MR, 파일 트리, 총계)
