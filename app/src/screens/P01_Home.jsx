@@ -111,8 +111,8 @@ export default function Home() {
   const hasNext = !!list.data?.pagination?.nextPage;
   return (
     <Page id="A-01" title={u.X_title} state={list.state}>
-      <h1 className="rb-x-title" data-figma="section-title">{u.X_title}</h1>
-      <div className="krds-tab-area rb-x-tabs" data-figma="tabs">
+      <h1 className="rb-x-title" data-figma="page-head">{u.X_title}</h1>
+      <div className="krds-tab-area rb-x-tabs" data-figma="gl-tabs">
         <div className="tab line" role="tablist" aria-label={u.X_tabs}>
           <ul>
             {[[false, u.X_active], [true, u.X_inactive]].map(([v, label]) => (
@@ -123,7 +123,7 @@ export default function Home() {
           </ul>
         </div>
       </div>
-      <div className="rb-x-filter" data-figma="filter-bar">
+      <div className="rb-x-filter" data-figma="gl-filter">
         <Menu label={u.X_recent} align="left" toggle btnClass="rb-x-recent" btnProps={{ title: u.X_recent }} button={<Icon name="ext/history" />}>
           {(close) => {
             const r = recentList();

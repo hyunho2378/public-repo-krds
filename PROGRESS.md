@@ -99,3 +99,4 @@
 - 클릭 튕김: useData가 조건만 바뀌면 이전 내용 유지(로딩 표시로 본문이 무너지지 않게), 정적 모드 공개 자료 2분 메모리 캐시, 화면 이동 때 본문 최소 높이를 이전 높이로 700ms 유지, 본문 투명도 애니메이션 제거
 - 화면 이동 높이 유지를 그리기 전(useLayoutEffect)으로, 스켈레톤은 160ms 넘을 때만 보이게(캐시 자료면 번쩍임 없음)
 - 사이드바 현재 항목 왼쪽 막대가 잘리던 것(스크롤 상자, 접기 상자) 보정. UX/16 5절에 클릭 튕김 측정 전후 기록
+- data-figma를 Figma 새 이름으로(topbar, gitlab-sidebar, content-panel, page-head, gl-tabs, gl-filter, intro-card, file-tree), code_plan/measured.json을 18경로 x 1920/360(Guest, 로컬 kordoc 자료)으로 다시 잼

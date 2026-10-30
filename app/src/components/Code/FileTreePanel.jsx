@@ -55,7 +55,7 @@ export function FileTreePanel({ id, items, current, refQuery }) {
   }, []);
   const sorted = (items || []).slice().sort((a, b) => (a.type === b.type ? a.name.localeCompare(b.name) : a.type === 'tree' ? -1 : 1));
   return (
-    <aside className="rb-filetree" aria-label={t.Tree_label}>
+    <aside className="rb-filetree" aria-label={t.Tree_label} data-figma="file-tree">
       <div className="krds-input-wrap rb-find">
         <label className="sr-only" htmlFor="tree-find">{t.Tree_search}</label>
         <Icon name="search" />

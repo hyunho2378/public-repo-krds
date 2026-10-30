@@ -184,7 +184,7 @@ export function Sidebar({ project, open, onClose, onHide, hidden = false }) {
   return (
     <>
       {open ? <div className="rb-side-dim" onClick={onClose} /> : null}
-      <div className="rb-side-wrap" data-figma="sidebar" aria-hidden={hidden || undefined} ref={(el) => { if (el) el.inert = hidden; }}>
+      <div className="rb-side-wrap" data-figma="gitlab-sidebar" aria-hidden={hidden || undefined} ref={(el) => { if (el) el.inert = hidden; }}>
         <nav id="rb-sidebar" className={'rb-side' + (open ? ' is-open' : '')} aria-label={project ? t.Side_labelProject : t.Side_label}>
           <div className="rb-side-scroll">
             <p className="rb-side-title">{project ? u.G_project : menu.title}</p>

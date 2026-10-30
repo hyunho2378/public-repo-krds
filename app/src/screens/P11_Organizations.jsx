@@ -93,9 +93,9 @@ export default function Organizations() {
   const counts = useCounts(items);
   return (
     <Page id="G-04" title={u.Gr_title} state={list.state}>
-      <h1 className="rb-x-title" data-figma="section-title">{u.Gr_title}</h1>
+      <h1 className="rb-x-title" data-figma="page-head">{u.Gr_title}</h1>
       <p className="krds-text-body-small rb-subtle">{u.Gr_desc}</p>
-      <div className="krds-tab-area rb-x-tabs" data-figma="tabs">
+      <div className="krds-tab-area rb-x-tabs" data-figma="gl-tabs">
         <div className="tab line" role="tablist" aria-label={u.X_tabs}>
           <ul>
             {[[false, u.X_active], [true, u.X_inactive]].map(([v, label]) => (
@@ -106,7 +106,7 @@ export default function Organizations() {
           </ul>
         </div>
       </div>
-      <div className="rb-x-filter" data-figma="filter-bar">
+      <div className="rb-x-filter" data-figma="gl-filter">
         <form className="rb-x-search" role="search" onSubmit={(e) => { e.preventDefault(); set({ q: text.trim() }); }}>
           <label className="sr-only" htmlFor="gr-q">{u.Gr_search}</label>
           <input id="gr-q" type="search" value={text} placeholder={u.Gr_search} onChange={(e) => setText(e.target.value)} />

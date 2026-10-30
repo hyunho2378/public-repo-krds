@@ -21,7 +21,7 @@ export function Topics() {
   const items = list.data?.data || [];
   return (
     <Page id="G-01t" title={u.T_title} state={list.state}>
-      <h1 className="rb-x-title" data-figma="section-title">{u.T_title}</h1>
+      <h1 className="rb-x-title" data-figma="page-head">{u.T_title}</h1>
       <label className="sr-only" htmlFor="tp-q">{u.T_filter}</label>
       <div className="rb-s-input"><input id="tp-q" type="search" value={q} placeholder={u.T_filter} onChange={(e) => setQ(e.target.value)} /></div>
       <Status {...list} />
@@ -49,7 +49,7 @@ export function Topics() {
 export function Snippets() {
   return (
     <Page id="G-01s" title={u.Sn_title} state="Empty">
-      <h1 className="rb-x-title" data-figma="section-title">{u.Sn_title}</h1>
+      <h1 className="rb-x-title" data-figma="page-head">{u.Sn_title}</h1>
       <div className="rb-empty-center">
         <Icon name="ext/snippet" />
         <p className="krds-text-body-medium-bold">{u.Sn_none}</p>

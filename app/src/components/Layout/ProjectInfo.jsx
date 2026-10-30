@@ -101,7 +101,7 @@ export function ProjectInfo({ id, project, readme, totals, stats, languages, roo
       ) : null}
       {/* 덧붙임 자리(UX/14 1, 5, 6, 8): 소개 카드가 있으면 카드 4줄, 없으면 사용 전 확인 4줄. 한 묶음, 4줄 + 더보기 */}
       {card ? <IntroCard id={id} card={card} /> : (
-        <section className="rb-info-sep rb-info-extra" data-figma="extra-intro-card" aria-labelledby="rb-info-extra">
+        <section className="rb-info-sep rb-info-extra" data-figma="intro-card" aria-labelledby="rb-info-extra">
           <h3 id="rb-info-extra" className="krds-text-body-small-bold">{u.I_extra}</h3>
           {d.data ? (
             <dl className="rb-dock-list">
@@ -131,7 +131,7 @@ function IntroCard({ id, card }) {
     [u.C_refs, text(card.refs), ai(card.refs)],
   ];
   return (
-    <section className="rb-info-sep rb-info-extra" data-figma="extra-intro-card" aria-labelledby="rb-info-card">
+    <section className="rb-info-sep rb-info-extra" data-figma="intro-card" aria-labelledby="rb-info-card">
       <h3 id="rb-info-card" className="krds-text-body-small-bold">{u.C_title}</h3>
       <dl className="rb-dock-list">
         {rows.map(([label, value, mark, open]) => (

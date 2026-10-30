@@ -123,7 +123,7 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true, sideHidden = fa
   const [mode, setMode] = useScreenMode();
   const loginTo = `/login?returnTo=${encodeURIComponent(location.pathname + location.search)}`;
   return (
-    <header className="rb-gbar" data-figma="header" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
+    <header className="rb-gbar" data-figma="topbar" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
       <div className="rb-gbar-in">
         <div className="rb-gbar-left">
           {hasNav ? (

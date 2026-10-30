@@ -55,7 +55,7 @@ function RepoHeader({ project, id }) {
   };
   return (
     <>
-      <div className="rb-repo-head" data-figma="repo-title">
+      <div className="rb-repo-head" data-figma="page-head">
         <h1 className="rb-repo-name">
           <Avatar className="is-48" src={project.avatar_url || project.namespace?.avatar_url} name={project.name} />
           <span className="rb-repo-title-text">{project.name}</span>
