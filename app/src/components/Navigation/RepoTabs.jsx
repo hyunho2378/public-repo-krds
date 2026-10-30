@@ -6,6 +6,8 @@ import { u } from '../../copy/ui';
 import { Icon } from '../Code/Icon';
 import { atLeast, useAuth } from '../Identity/useAuth';
 import { projectGroups } from './Sidebar';
+import { useDock } from '../../app/dock';
+import { DOCK_ID } from '../Layout/DockPanel';
 
 const under = (path, base, list) => list.some((s) => path === base + s || path.startsWith(base + s + '/'));
 
@@ -77,6 +79,7 @@ export function RepoTabs({ id, nav }) {
   const moreActive = groups.some(([, items]) => items.some(([, to]) => pathname === to || pathname.startsWith(to + '/')))
     && !TABS.some((x) => x.match(pathname));
   const useActive = under(pathname, p, ['/use']);
+  const dock = useDock();
   return (
     <nav className="rb-rtabs" aria-label={t.ProjectTabs_6} data-figma="repo-tabs">
       <ul className="rb-rtabs-in">
@@ -99,6 +102,12 @@ export function RepoTabs({ id, nav }) {
           </Link>
         </li>
         <MoreMenu id={id} groups={groups} active={moreActive} />
+        <li className="rb-rtab-info">
+          <button type="button" className={'rb-rtab' + (dock.open ? ' active' : '')} aria-expanded={dock.open} aria-controls={DOCK_ID} onClick={() => dock.setOpen(!dock.open)}>
+            <Icon name="help" />
+            <span>{u.Dock_info}</span>
+          </button>
+        </li>
       </ul>
     </nav>
   );

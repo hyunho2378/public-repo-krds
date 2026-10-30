@@ -124,10 +124,6 @@ export function CodeView({ path, base, text, rawUrl, size, historyTo, onHistory,
   return (
     <section className="rb-code" aria-label={t.P16_codeLabel}>
       <div className="rb-code-bar">
-        <div className="rb-code-meta">
-          <p className="krds-text-body-xsmall rb-subtle">{t.fn.lines(lines.length)}</p>
-          {size ? <p className="krds-text-body-xsmall rb-subtle">{sizeLabel(size)}</p> : null}
-        </div>
         {!binary ? (
           <div className="rb-code-views" role="tablist" aria-label={t.P16_viewLabel}>
             {views.map(([key, label]) => (
@@ -144,6 +140,10 @@ export function CodeView({ path, base, text, rawUrl, size, historyTo, onHistory,
             ))}
           </div>
         ) : null}
+        <div className="rb-code-meta">
+          <p className="krds-text-body-xsmall rb-subtle">{t.fn.lines(lines.length)}</p>
+          {size ? <p className="krds-text-body-xsmall rb-subtle">{sizeLabel(size)}</p> : null}
+        </div>
         <div className="rb-code-actions">
           {!binary && view === 'code' ? (
             <button type="button" className="krds-btn small tertiary" aria-pressed={wrap} onClick={() => setWrap(!wrap)}>{t.P16_wrap}</button>

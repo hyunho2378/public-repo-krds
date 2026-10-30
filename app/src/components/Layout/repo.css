@@ -51,3 +51,4 @@
 .rb-repo-title-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .rb-repo-name .rb-pill { flex: none; }
 .rb-kbd-inline { font-family: 'D2Coding', ui-monospace, monospace; font-size: var(--krds-font-size-body-xsmall); padding: 0 var(--krds-padding-2); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-small2); }
+.rb-repo-top:empty { display: none; }

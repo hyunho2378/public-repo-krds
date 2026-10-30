@@ -169,3 +169,16 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 .rb-filter-pc fieldset { padding-block: var(--krds-padding-4); }
 .rb-cards { gap: var(--krds-gap-6); border-top: 0 !important; }
 .rb-cards .structured-item { border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light) !important; border-radius: var(--krds-radius-medium2); padding-inline: var(--krds-padding-7); }
+
+/* 파일 보기 막대: 보기 전환(미리보기/코드/Blame)과 크기가 왼쪽, 도구는 오른쪽(GitHub 순서) */
+.rb-code-actions { margin-inline-start: auto; }
+.rb-code-bar { justify-content: flex-start; }
+.rb-rtab-info { margin-inline-start: auto; }
+.rb-rtab-info .rb-rtab.active { border-bottom-color: transparent; }
+
+/* 이슈/변경 제안 목록: GitHub처럼 테두리 상자 안에 행(높이 70 안팎). 열림/닫힘은 글자 전환 */
+.rb-row-list { border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); overflow: hidden; }
+.rb-row-list .rb-row { padding: var(--krds-padding-5) var(--krds-padding-7); min-height: var(--krds-number-19); box-sizing: border-box; }
+.rb-row-list .rb-row:last-child { border-bottom: 0; }
+.krds-tab-area.rb-subnav .tab.fill ul li button.btn-tab, .krds-tab-area.rb-subnav .tab.fill ul li.active button.btn-tab { background: none; border: 0; box-shadow: none; color: var(--krds-color-text-subtle); font-weight: var(--krds-font-weight-regular); }
+.krds-tab-area.rb-subnav .tab.fill ul li.active button.btn-tab { color: var(--krds-color-text-basic); font-weight: var(--rb-fw-current); text-decoration: underline; text-underline-offset: var(--krds-number-5); }

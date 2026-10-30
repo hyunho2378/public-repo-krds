@@ -64,9 +64,6 @@ function RepoHeader({ project, id }) {
           <span className="rb-pill">{t.RepoHead_public}</span>
         </h1>
         <div className="rb-repo-actions" data-figma="repo-actions" role="group" aria-label={t.RepoHead_actions}>
-          <button type="button" className="krds-btn small tertiary" aria-expanded={dock.open} aria-controls={DOCK_ID} onClick={() => dock.setOpen(!dock.open)}>
-            {u.Dock_info}
-          </button>
           <button type="button" className="krds-btn small tertiary" onClick={star}>
             {t.RepoHead_star}
             <span className="rb-subtle">{project.star_count ?? 0}</span>
@@ -90,7 +87,7 @@ function RepoHeader({ project, id }) {
   );
 }
 
-export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false, hideCrumbs = false }) {
+export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false, hideCrumbs = false, title = false }) {
   // 프로젝트 알림: 머리글 경로(만든 사람 / 이름)와 탭 줄 이슈 수에 쓴다. 화면을 떠나면 지운다.
   const project0 = data.data?.project;
   const dock = useDock();
@@ -117,7 +114,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
           {crumbs?.length && !hideCrumbs ? (
             <Breadcrumb home={false} items={[[organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project))}`], [project.name, `/projects/${data.id}`], ...crumbs]} />
           ) : null}
-          <RepoHeader project={project} id={data.id} />
+          {title ? <RepoHeader project={project} id={data.id} /> : null}
         </div>
         {children}
       </div>
