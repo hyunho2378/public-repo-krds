@@ -21,6 +21,9 @@ import Write from '../screens/P23_Write';
 import NewIssue from '../screens/P24_NewIssue';
 import Compare from '../screens/P25_Compare';
 import NewProject from '../screens/P28_NewProject';
+import Explore from '../screens/P29_Explore';
+import Jobs from '../screens/P30_Jobs';
+import { LoginFailed, LoginOtp, LoginSignup, LoginReset } from '../screens/P12b_LoginStates';
 import { Insights, Checklist, LawAlerts, Handover, Mcp } from '../screens/P26_Insights';
 import { Notifications, Settings, ProjectSettings, RepoGraph, Collaborate } from '../screens/P27_Account';
 import Commit from '../screens/P17_Commit';
@@ -39,7 +42,8 @@ export const routes = [
   { id: 'P-06', path: '/projects/:id/changes', Screen: Changes },
   { id: 'P-07', path: '/projects/:id/use', Screen: Usage },
   { id: 'P-08', path: '/projects/:id/feedback', Screen: Feedback },
-  { id: 'P-09', path: '/publish', Screen: Publish },
+  { id: 'A-03', path: '/projects/:id/publish-check', Screen: Publish },
+  { id: 'G-05', path: '/publish', Screen: Publish },
   { id: 'P-10', path: '/my', Screen: MyProjects },
   { id: 'P-11', path: '/organizations', Screen: Organizations },
   { id: 'P-12', path: '/login', Screen: Login },
@@ -79,4 +83,10 @@ export const routes = [
   { id: 'R-26', path: '/projects/:id/settings', Screen: ProjectSettings },
   { id: 'R-11', path: '/projects/:id/graph', Screen: RepoGraph },
   { id: 'G-04', path: '/projects/new', Screen: NewProject },
+  { id: 'G-01', path: '/explore', Screen: Explore },
+  { id: 'R-19', path: '/projects/:id/jobs', Screen: Jobs },
+  { id: 'G-08b', path: '/login/failed', Screen: LoginFailed },
+  { id: 'G-08c', path: '/login/otp', Screen: LoginOtp },
+  { id: 'G-08d', path: '/register', Screen: LoginSignup },
+  { id: 'G-08e', path: '/password', Screen: LoginReset },
 ];

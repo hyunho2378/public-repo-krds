@@ -23,7 +23,7 @@ function FocusOnNavigate({ onNavigate }) {
 }
 
 /** 로그인처럼 혼자 서는 화면은 왼쪽 메뉴를 두지 않는다(Figma G-08). */
-const NO_SIDEBAR = ['/login'];
+const NO_SIDEBAR = ['/login', '/login/failed', '/login/otp', '/register', '/password'];
 
 function Shell() {
   const [navOpen, setNavOpen] = useState(false);

@@ -53,18 +53,14 @@ function RepoHeader({ project, id }) {
   const desc = cleanDescription(project.description);
   return (
     <>
-      <div className="rb-repo-head">
+      <div className="rb-repo-head" data-figma="repo-title">
         <div className="rb-repo-title">
-          <h1 className="krds-text-heading-large rb-repo-name" data-figma="repo-title">
+          <h1 className="krds-text-heading-large rb-repo-name">
             <Avatar src={project.avatar_url || project.namespace?.avatar_url} name={project.name} />
             <span className="rb-repo-org">{organizationOf(project)} /</span>
             <span>{project.name}</span>
             <span className="krds-badge small bg-light-gray">{t.RepoHead_public}</span>
           </h1>
-          <p className="krds-text-body-medium rb-repo-desc" title={desc || undefined}>{desc || t.RepoHead_noDesc}</p>
-          {project.last_activity_at ? (
-            <p className="krds-text-body-small rb-repo-meta">{t.fn.updated(new Date(project.last_activity_at).toLocaleDateString('ko-KR'))}</p>
-          ) : null}
         </div>
         <div className="rb-repo-actions" data-figma="repo-actions" role="group" aria-label={t.RepoHead_actions}>
           <button type="button" className="krds-btn small tertiary" onClick={star}>
@@ -84,6 +80,10 @@ function RepoHeader({ project, id }) {
           </Drop>
         </div>
       </div>
+      <p className="krds-text-body-medium rb-repo-desc" title={desc || undefined}>{desc || t.RepoHead_noDesc}</p>
+      {project.last_activity_at ? (
+        <p className="krds-text-body-small rb-repo-meta">{t.fn.updated(new Date(project.last_activity_at).toLocaleDateString('ko-KR'))}</p>
+      ) : null}
       {reuseOpen && <ReuseAction id={id} onClose={() => setReuse(false)} />}
       {loginFor && <LoginRequiredModal action={loginFor} onClose={() => setLoginFor(null)} />}
     </>

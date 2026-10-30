@@ -68,6 +68,7 @@ export function projectGroups(id, { signedIn, role } = {}) {
       [t.RepoSub_releases, `${p}/releases`, 'upload', false, t.Side_hintRelease],
       [t.P22_packages, `${p}/packages`, 'component'],
       [t.P22_pipelines, `${p}/pipelines`, 'reset', false, t.Side_hintPipeline],
+      [t.Jobs_title, `${p}/jobs`, 'check_circle'],
     ]],
     [t.Side_analyze, [
       [t.RepoSub_people, `${p}/contributors`, 'myinfo'],
@@ -80,7 +81,7 @@ export function projectGroups(id, { signedIn, role } = {}) {
   if (signedIn && (role === 'developer' || role === 'owner')) {
     groups.push([t.Side_projectManage, [
       [t.PSet_title, `${p}/settings`, 'setting'],
-      [t.Header_menuPublish, '/publish', 'document-check', false, t.Side_hintPublish],
+      [t.Side_publishCheck, `${p}/publish-check`, 'document-check', false, t.Side_hintPublish],
     ]]);
   }
   return groups;

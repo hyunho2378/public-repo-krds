@@ -40,7 +40,7 @@
  "G-11": "/settings",
  "A-01": "/",
  "A-02": "/projects/150/about",
- "A-03": "/publish",
+ "A-03": "/projects/150/publish-check",
  "A-04": "/projects/150/feedback",
  "A-05": "/requests",
  "A-06": "/insights",
@@ -48,5 +48,11 @@
  "A-08": "/projects/150/handover",
  "A-09": "/collaborate",
  "A-10": "/projects/150/law-alerts",
- "A-11": "/checklist"
+ "A-11": "/checklist",
+ "G-01": "/explore",
+ "R-19": "/projects/150/jobs",
+ "G-08b": "/login/failed",
+ "G-08c": "/login/otp",
+ "G-08d": "/register",
+ "G-08e": "/password"
 }
