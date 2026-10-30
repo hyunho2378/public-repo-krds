@@ -1,5 +1,6 @@
 // C1 변경 비교(커밋 상세 14, 14b, 14c, 리비전 비교 19). 공공 깃랩: 위 줄(n개 파일 +a -d, 모두 펼침/접기, 보기 방식),
 // 왼쪽 파일 패널(목록/트리 보기, 검색), 오른쪽 파일별 접이식 비교.
+import { FileIcon } from '../../components/Code/FileIcon';
 import { useMemo, useState } from 'react';
 import { g } from '../../copy/gl';
 import { Icon } from '../../components/Code/Icon';
@@ -157,7 +158,7 @@ function FileLine({ name, index, stat }) {
   return (
     <li>
       <button type="button" className="gl-pl-file" onClick={() => jump(index)}>
-        <Icon name="document" /><span className="gl-pl-name">{name}</span>
+        <FileIcon name={name} /><span className="gl-pl-name">{name}</span>
         <Stat add={stat.add} del={stat.del} />
       </button>
     </li>

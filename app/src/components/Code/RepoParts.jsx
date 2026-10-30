@@ -1,4 +1,5 @@
 // Figma: Repo/Toolbar, Repo/CommitBar, Repo/FileTable, Repo/Readme, Repo/About. GitHub와 GitLab 저장소 첫 화면 배치(D-04 개정).
+import { FileIcon } from './FileIcon';
 import { u } from '../../copy/ui';
 import { newWindow } from '../Layout/newWindow';
 import { toast } from '../Feedback/Toast';
@@ -170,7 +171,7 @@ export function FileTable({ id, path, items, log, pending, filter, refQuery }) {
               <tr key={f.path}>
                 <td>
                   <Link className="rb-tree-name" to={`/projects/${id}/code/${f.path}${refQuery}`}>
-                    <Icon name={f.type === 'tree' ? 'ext/folder' : 'ext/file'} label={f.type === 'tree' ? t.P16_folder : t.P16_file} />
+                    {f.type === 'tree' ? <Icon name="ext/folder" label={t.P16_folder} /> : <FileIcon name={f.name} label={t.P16_file} />}
                     <span className="rb-ellipsis rb-break-any">{f.name}</span>
                   </Link>
                   <span className="rb-tree-mobile krds-text-body-xsmall rb-subtle">
@@ -210,7 +211,7 @@ export function ReadmeBox({ source, base }) {
   return (
     <section className="rb-readme-box" data-figma="readme" aria-label={t.Readme_label} ref={box}>
       <header className="rb-readme-head">
-        <p className="krds-text-body-small-bold"><Icon name="document" /> {t.Readme_label}</p>
+        <p className="krds-text-body-small-bold"><FileIcon name="README.md" /> {t.Readme_label}</p>
         {list.length > 1 ? (
           <button type="button" className="krds-btn small tertiary" aria-expanded={toc} onClick={() => setToc(!toc)}>{t.Readme_toc}</button>
         ) : null}

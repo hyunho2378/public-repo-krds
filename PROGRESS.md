@@ -93,4 +93,5 @@
 - [C2] P21 기여자 분석 이식과 비교 이미지 push. sample/kordoc/api에 members, labels, activity 등 자료가 없어 P22 나머지, P30, P26, P15는 보류(자료 들어온 뒤 재개). P19 상세는 대응 캡처 없음
 - 배포본 대표 화면 10개 x 1440/1920/360 스크린샷 30장(UX/gitlab_compare/deployed, 가로 넘침 0). 대조표 7장 최종 빠짐 집계: D-21 6, C1 3, C2 7, 합계 16(옮기지 않은 C2 화면 별도)
 - 아이콘 대조(UX/gitlab_compare/icons): project를 사다리꼴+탭으로(Pajamas 좌표), cloud 상자 면 선, 새 rocket-launch(릴리스 개수), scale(라이선스). 나머지 ext는 Pajamas와 같음. README에 folder/project 구분 근거와 KRDS 묶음 아이콘 차이 기록
-- 오류 보고 수정: 저장된 자료에 없는 하위 폴더/파일(SNAPSHOT_MISSING)은 "존재하지 않습니다" 알림 대신 "저장된 자료에 없습니다" 한 줄과 상위 폴더 링크(진짜 없을 때만 알림), 파일 트리 하위도 같음. 트리 겹침: 열 폭 고정, 검색칸 폭 100
+- 오류 보고 수정: 저장된 자료에 없는 하위 폴더/파일(SNAPSHOT_MISSING)은 "존재하지 않습니다" 알림 대신 "저장된 자료에 없습니다" 한 줄과 상위 폴더 링크(진짜 없을 때만 알림), 파일 트리 하위도 같음. 트리 겹침: 열 폭 고정, 검색칸 폭 100%, 항목 한 줄 말줄임, 트리 고정 위치를 상단 묶음 아래로
+- 파일 종류 아이콘: @gitlab/svgs 3.171.0 file_icons 187개(app/public/icons/file, MIT), 대응 규칙 src/lib/fileIcon.js(getIconForFile 그대로), FileIcon 부품을 파일 표, 트리, README 머리, 커밋/비교 파일 목록과 머리, 파일 보기 머리에 적용

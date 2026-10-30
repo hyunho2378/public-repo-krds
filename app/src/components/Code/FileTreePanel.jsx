@@ -1,4 +1,5 @@
 // Figma: Repo/FileTree. GitLab 파일 트리 패널: 파일 검색(f), 폴더 펼침, 현재 위치 강조. 폴더는 펼칠 때 불러온다.
+import { FileIcon } from './FileIcon';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { t } from '../../copy/ko';
@@ -25,7 +26,7 @@ function Node({ id, item, current, refQuery, depth, filter }) {
           </button>
         ) : <span className="rb-ft-gap" aria-hidden="true" />}
         <Link className="rb-ft-link" to={`/projects/${id}/code/${item.path}${refQuery}`} aria-current={current === item.path ? 'page' : undefined}>
-          <Icon name={isDir ? 'ext/folder' : 'ext/file'} />
+          {isDir ? <Icon name="ext/folder" /> : <FileIcon name={item.name} />}
           <span className="rb-ellipsis rb-break-any">{item.name}</span>
         </Link>
       </div>

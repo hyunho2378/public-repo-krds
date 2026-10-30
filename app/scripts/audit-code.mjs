@@ -28,6 +28,7 @@ async function walk(dir) {
       await walk(file);
       continue;
     }
+    // 파일 종류 아이콘(app/public/icons/file, @gitlab/svgs file_icons 원본 색)은 D-15 팔레트 예외: src만 검사하므로 public은 대상이 아니다
     // .generated.css는 자동 생성, .tokens.css는 Figma 뼈대 값을 모아 둔 곳(D-13)이라 검사에서 뺀다
     if (!/\.(jsx?|css)$/.test(file) || file.endsWith('.generated.css') || file.endsWith('.tokens.css')) continue;
     const raw = await fs.readFile(file, 'utf8');

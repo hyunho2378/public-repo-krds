@@ -1,4 +1,5 @@
 // Figma: Code/DiffView. 변경 비교(D-05): 한 줄로 보기(통합), 나란히 보기. 줄 앞 +, - 표시로 색에만 기대지 않는다.
+import { FileIcon } from './FileIcon';
 import { useEffect, useState } from 'react';
 import { u } from '../../copy/ui';
 import { useBoolPref } from '../../app/prefs';
@@ -63,7 +64,7 @@ function FileDiff({ file, mode, index }) {
     <section className="rb-diff-file" id={`file-${index}`} aria-label={name}>
       <header className="rb-diff-head">
         <span className="rb-diff-name">
-          <Icon name="document" />
+          <FileIcon name={file.new_path} />
           <span className="rb-ellipsis rb-break-any">{name}</span>
           {badge ? <span className="rb-pill">{badge}</span> : null}
         </span>
@@ -142,7 +143,7 @@ function TreeNode({ node }) {
       {node.files.map((f) => (
         <li key={f.index}>
           <button type="button" className="rb-dtree-file" onClick={() => jump(f.index)}>
-            <Icon name="document" /><span className="rb-break-any">{f.name}</span>
+            <FileIcon name={f.name} /><span className="rb-break-any">{f.name}</span>
           </button>
         </li>
       ))}

@@ -1,4 +1,5 @@
 // C1 파일 보기(공공 깃랩 08, 09, 10, 11). 파일 이름 큰 제목과 단추 줄, 파일 상자(이름 크기, 목차, 코드/미리보기/Blame, 복사, raw, 내려받기), 줄 번호 링크.
+import { FileIcon } from '../../components/Code/FileIcon';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { g } from '../../copy/gl';
 import { t } from '../../copy/ko';
@@ -76,7 +77,7 @@ export function FileTitle({ path, project, refName, onFind, permalink }) {
   const web = `${project.web_url}/-/blob/${encodeURIComponent(refName)}/${path.split('/').map(encodeURIComponent).join('/')}`;
   return (
     <div className="gl-filetitle">
-      <h2 className="gl-title gl-filetitle-name"><Icon name={isMd(path) ? 'ext/file-text' : 'ext/file'} /><span>{name}</span></h2>
+      <h2 className="gl-title gl-filetitle-name"><FileIcon name={name} /><span>{name}</span></h2>
       <div className="gl-head-actions">
         <button type="button" className="krds-btn small tertiary" onClick={onFind}>{g.findFile}</button>
         <button type="button" className="krds-btn small tertiary" disabled title={g.editDisabled} aria-label={g.editMenu}><span>{g.edit}</span><Icon name="arrow-down" /></button>
@@ -125,7 +126,7 @@ export function GlFile({ path, base, text, rawUrl, size, blame, onBlame, blameSt
   return (
     <section className="gl-filebox" aria-label={path.split('/').pop()} ref={box}>
       <header className="gl-filebox-head">
-        <p className="gl-filebox-name"><Icon name={md ? 'ext/file-text' : 'ext/file'} /><strong>{path.split('/').pop()}</strong><span className="gl-filebox-size">{sizeLabel(size)}</span></p>
+        <p className="gl-filebox-name"><FileIcon name={path} /><strong>{path.split('/').pop()}</strong><span className="gl-filebox-size">{sizeLabel(size)}</span></p>
         <div className="gl-filebox-tools">
           {outline.length > 1 ? (
             <Menu label={g.outline} align="right" btnClass="krds-btn small tertiary" button={<Icon name="view_all" label={g.outline} />}>
