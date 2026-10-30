@@ -1,0 +1,442 @@
+[
+ {
+  "id": 198,
+  "oneLine": "만든 웹앱을 코딩 에이전트에게 \"데모 영상 만들어줘\"라고 말하면 자막과 커서가 들어간 시연 영상으로 만들어 주는 도구",
+  "targetTask": "업무 보고·내부 발표용 앱 시연 영상 제작",
+  "fields": [
+   "영상·이미지·음성",
+   "개발·보안·인프라"
+  ],
+  "runSummary": "앱을 켜 두고 코딩 에이전트에게 우리말로 요청하면 영상 파일이 만들어진다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    7,
+    8
+   ],
+   "targetTask": [
+    33,
+    36
+   ],
+   "fields": [
+    7,
+    8
+   ],
+   "runSummary": [
+    44,
+    49
+   ]
+  }
+ },
+ {
+  "id": 200,
+  "oneLine": null,
+  "targetTask": null,
+  "fields": null,
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {}
+ },
+ {
+  "id": 211,
+  "oneLine": "파티원이 예측 5개씩 암호화해 제출하고 서로 투표로 맞았는지 가려 점수를 매기는 모바일 예측 게임",
+  "targetTask": null,
+  "fields": [
+   "기타"
+  ],
+  "runSummary": "npm으로 설치해 시작한 뒤 브라우저에서 localhost 주소로 접속한다",
+  "rawCommands": null,
+  "limitations": "Vercel에 올린 판은 서버가 다시 시작되면 파티 데이터가 사라질 수 있다",
+  "lines": {
+   "oneLine": [
+    3,
+    11
+   ],
+   "fields": [
+    3,
+    11
+   ],
+   "runSummary": [
+    15,
+    20
+   ],
+   "limitations": [
+    25,
+    26
+   ]
+  }
+ },
+ {
+  "id": 214,
+  "oneLine": "화면에서 마우스로 끌어 지정한 영역의 숫자를 읽어 더하기·곱하기·사용자 수식으로 계산해 주는 Windows 계산기",
+  "targetTask": "화면 속 숫자의 합계 등 계산",
+  "fields": [
+   "엑셀·사무 자동화",
+   "영상·이미지·음성"
+  ],
+  "runSummary": "파이썬 가상환경을 만들고 필요한 패키지를 설치한 뒤 run.py를 실행하며, 별도 명령으로 Windows 실행파일도 만든다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    5,
+    5
+   ],
+   "targetTask": [
+    5,
+    5
+   ],
+   "fields": [
+    5,
+    19
+   ],
+   "runSummary": [
+    14,
+    31
+   ]
+  }
+ },
+ {
+  "id": 215,
+  "oneLine": "HWP·HWPX·DOCX·TXT 문서의 맞춤법·띄어쓰기·공공언어를 내 Windows PC 안에서 검사하는 도구",
+  "targetTask": "공문서 맞춤법과 표기 검수",
+  "fields": [
+   "문서·보고서"
+  ],
+  "runSummary": "최신 Windows 실행파일을 내려받아 열고 문서를 불러오면 된다. 설치나 서버 설정은 없다",
+  "rawCommands": null,
+  "limitations": "DOCX 원본 형식 재생성과 HWP·HWPX 원본 직접 수정은 아직 안 되고, 규칙 기반 제안이라 정답을 보장하지 않는다",
+  "lines": {
+   "oneLine": [
+    3,
+    4
+   ],
+   "targetTask": [
+    3,
+    4
+   ],
+   "fields": [
+    3,
+    4
+   ],
+   "runSummary": [
+    23,
+    36
+   ],
+   "limitations": [
+    51,
+    57
+   ]
+  }
+ },
+ {
+  "id": 216,
+  "oneLine": "전임자 업무 폴더의 파일명·날짜만 읽어 업무 가지별로 나누고 인수인계 초안을 만드는 도구",
+  "targetTask": "담당자 교체 시 업무 폴더 인수인계 준비",
+  "fields": [
+   "문서·보고서"
+  ],
+  "runSummary": "소스를 내려받아 npm으로 설치·실행한 뒤 브라우저에서 localhost 주소를 연다. 전용 Windows 실행파일은 없다",
+  "rawCommands": null,
+  "limitations": "검증용 초안 단계이며 자동 결과는 업무 상태의 확정본이 아니라 원문과 결재 기록 확인이 필요하다",
+  "lines": {
+   "oneLine": [
+    19,
+    28
+   ],
+   "targetTask": [
+    19,
+    28
+   ],
+   "fields": [
+    19,
+    28
+   ],
+   "runSummary": [
+    56,
+    68
+   ],
+   "limitations": [
+    3,
+    6
+   ]
+  }
+ },
+ {
+  "id": 217,
+  "oneLine": "Windows에서 화면 영상과 마우스·키보드 동작을 기록하고 저장한 입력을 반복 재실행하는 업무 매크로",
+  "targetTask": "반복 입력 업무 자동화",
+  "fields": [
+   "엑셀·사무 자동화"
+  ],
+  "runSummary": "설치 EXE를 실행하거나 포터블 압축을 풀어 exe를 연다. Node.js 등 별도 설치는 필요 없다",
+  "rawCommands": null,
+  "limitations": "영상 분석이나 AI 학습 기능이 아니고 저장된 입력 재실행뿐이며, 창 위치와 화면 배율을 맞춰 1회 시험해야 한다",
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    3
+   ],
+   "runSummary": [
+    16,
+    17
+   ],
+   "limitations": [
+    42,
+    43
+   ]
+  }
+ },
+ {
+  "id": 218,
+  "oneLine": "공공기관 업무보고·주민설명회 슬라이드를 브라우저에서 만들고 발표하는 웹 PPT 제작기",
+  "targetTask": "업무보고·성과보고 발표자료 제작",
+  "fields": [
+   "문서·보고서"
+  ],
+  "runSummary": "npm으로 설치한 뒤 개발 서버를 켜서 브라우저로 연다",
+  "rawCommands": null,
+  "limitations": "제작 중인 MVP이며 서버 저장·협업·승인은 미구현이고 기관별 보안·접근성 인증은 검증 전이다",
+  "lines": {
+   "oneLine": [
+    5,
+    7
+   ],
+   "targetTask": [
+    5,
+    5
+   ],
+   "fields": [
+    5,
+    5
+   ],
+   "runSummary": [
+    21,
+    22
+   ],
+   "limitations": [
+    15,
+    27
+   ]
+  }
+ },
+ {
+  "id": 220,
+  "oneLine": "파티원이 예측 5개씩 암호화해 제출하고 투표로 맞았는지 가려 점수를 매기는 예측 게임",
+  "targetTask": null,
+  "fields": [
+   "기타"
+  ],
+  "runSummary": "npm으로 설치해 시작한 뒤 브라우저에서 localhost 주소로 접속한다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    11
+   ],
+   "fields": [
+    3,
+    11
+   ],
+   "runSummary": [
+    15,
+    20
+   ]
+  }
+ },
+ {
+  "id": 221,
+  "oneLine": "만들고 싶은 서비스를 말하면 공공데이터포털 목록에서 관련 데이터 이름·제공기관·공식 링크를 찾아 주는 MCP 서버",
+  "targetTask": "공공데이터 활용 서비스 기획 시 데이터 후보 탐색",
+  "fields": [
+   "데이터·통계·분석",
+   "생성형 AI·챗봇·검색"
+  ],
+  "runSummary": "Claude에서 공개 원격 서버 주소를 사용자 지정 커넥터로 추가하거나 로컬 서버를 직접 실행해 연결한다",
+  "rawCommands": null,
+  "limitations": "실제 데이터 값과 실시간 정보는 주지 않고 목록 정보만 알려 주며 이용조건은 공식 페이지에서 확인해야 한다",
+  "lines": {
+   "oneLine": [
+    7,
+    10
+   ],
+   "targetTask": [
+    7,
+    8
+   ],
+   "fields": [
+    7,
+    10
+   ],
+   "runSummary": [
+    66,
+    75
+   ],
+   "limitations": [
+    12,
+    14
+   ]
+  }
+ },
+ {
+  "id": 222,
+  "oneLine": "기존 문서와 변경 문서를 비교해 달라진 문장·수치·날짜를 원문 위치와 함께 정리하는 신구대비표 초안 도구",
+  "targetTask": "규정·지침·계획서 개정 전후 비교",
+  "fields": [
+   "문서·보고서",
+   "법령·규제·감사"
+  ],
+  "runSummary": "Windows 실행파일을 내려받아 두 번 클릭하면 브라우저에 화면이 열린다. 설치나 파이썬은 필요 없다",
+  "rawCommands": null,
+  "limitations": "결과는 초안이라 담당자가 확인해야 하며 복잡한 표·다단·수식과 HWPX 조판은 원본과 다르게 나올 수 있다",
+  "lines": {
+   "oneLine": [
+    3,
+    5
+   ],
+   "targetTask": [
+    15,
+    21
+   ],
+   "fields": [
+    3,
+    21
+   ],
+   "runSummary": [
+    27,
+    32
+   ],
+   "limitations": [
+    104,
+    109
+   ]
+  }
+ },
+ {
+  "id": 223,
+  "oneLine": "마스코트 이미지를 AI로 픽셀 아트 프레임으로 만들고 배경을 지워 화면 위를 걷는 데스크톱 펫으로 만드는 앱",
+  "targetTask": null,
+  "fields": [
+   "영상·이미지·음성"
+  ],
+  "runSummary": "GitHub 릴리스에서 Windows·macOS용 설치 파일을 받아 실행하며, 소스로는 npm으로 실행한다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    6,
+    8
+   ],
+   "fields": [
+    6,
+    8
+   ],
+   "runSummary": [
+    66,
+    72
+   ]
+  }
+ },
+ {
+  "id": 224,
+  "oneLine": "PDF를 눈으로 보며 끌어서 순서를 바꾸고 불필요한 페이지를 지워 하나로 저장하는 오프라인 편집 도구",
+  "targetTask": "PDF 합치기·쪽 순서 정리",
+  "fields": [
+   "문서·보고서"
+  ],
+  "runSummary": "ZIP을 내려받아 압축을 완전히 푼 뒤 offline 폴더의 index.html을 연다. 설치와 로그인은 필요 없다",
+  "rawCommands": null,
+  "limitations": "암호 PDF와 DRM 문서는 안 되고 파일당 100MB, 전체 200MB, 50개, 1,000쪽까지다",
+  "lines": {
+   "oneLine": [
+    5,
+    7
+   ],
+   "targetTask": [
+    5,
+    5
+   ],
+   "fields": [
+    5,
+    7
+   ],
+   "runSummary": [
+    7,
+    7
+   ],
+   "limitations": [
+    134,
+    143
+   ]
+  }
+ },
+ {
+  "id": 225,
+  "oneLine": null,
+  "targetTask": null,
+  "fields": null,
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {}
+ },
+ {
+  "id": 226,
+  "oneLine": "클립보드에 복사하거나 드래그한 글을 바로 번역해 주는 번역 프로그램",
+  "targetTask": null,
+  "fields": null,
+  "runSummary": "requirements.txt로 패키지를 설치한 뒤 파이썬 파일을 실행한다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    8
+   ],
+   "runSummary": [
+    10,
+    15
+   ]
+  }
+ },
+ {
+  "id": 227,
+  "oneLine": "서버·로그인 없이 휴대폰 안에서 PSAT 유형별 짧은 훈련과 오답노트를 풀 수 있는 안드로이드 앱",
+  "targetTask": "PSAT 수험 준비 훈련",
+  "fields": [
+   "인사·교육"
+  ],
+  "runSummary": "APK 파일을 내려받아 설치한다. 알 수 없는 앱 설치 허용이 필요할 수 있다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    8,
+    9
+   ],
+   "targetTask": [
+    28,
+    28
+   ],
+   "fields": [
+    8,
+    9
+   ],
+   "runSummary": [
+    18,
+    24
+   ]
+  }
+ }
+]

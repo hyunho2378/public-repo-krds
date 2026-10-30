@@ -338,5 +338,171 @@
     5
    ]
   }
+ },
+ {
+  "id": 44,
+  "oneLine": "직원이 올린 필수교육 수료증을 AI가 1차 검수하고 부서별 이수 현황을 모아 보여 주는 웹 시스템",
+  "targetTask": "공무원 필수교육 수료증 취합과 이수 현황 관리",
+  "fields": [
+   "인사·교육",
+   "문서·보고서"
+  ],
+  "runSummary": "Docker를 설치한 뒤 저장소를 내려받아 Windows는 setup.bat을 두 번 눌러, Linux·macOS는 setup.sh로 설치한다",
+  "rawCommands": null,
+  "limitations": "현재 기관 시범 운영 예정 단계이며, 운영 중 나오는 문제를 반영해 계속 고칠 예정이다",
+  "lines": {
+   "oneLine": [
+    11,
+    12
+   ],
+   "targetTask": [
+    29,
+    31
+   ],
+   "fields": [
+    11,
+    12
+   ],
+   "runSummary": [
+    217,
+    229
+   ],
+   "limitations": [
+    39,
+    39
+   ]
+  }
+ },
+ {
+  "id": 46,
+  "oneLine": "민원 내용이 공익신고 등 7가지 신고 유형에 해당하는지 근거 법령과 소관 부서를 함께 알려 주는 도구",
+  "targetTask": "민원 접수 시 신고 해당 여부와 유형 판단",
+  "fields": [
+   "민원·복지·상담",
+   "법령·규제·감사"
+  ],
+  "runSummary": "Node.js 18 이상에서 설치와 빌드 명령 뒤 서버를 켜거나, web/index.html 파일을 브라우저로 직접 열어 쓴다",
+  "rawCommands": null,
+  "limitations": "AI는 근거와 유사사례를 돕는 보조 역할이고 단정하지 않으며 최종 판정은 담당자가 한다",
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    23
+   ],
+   "runSummary": [
+    88,
+    98
+   ],
+   "limitations": [
+    28,
+    29
+   ]
+  }
+ },
+ {
+  "id": 47,
+  "oneLine": "국립국어원 온라인가나다 상담에서 어문 규범 근거를 한 번에 찾아 주고 검토용 답변 초안을 만드는 도구",
+  "targetTask": "어문 규범 상담의 근거 조회와 답변 초안 작성",
+  "fields": [
+   "문서·보고서",
+   "생성형 AI·챗봇·검색"
+  ],
+  "runSummary": "파이썬 가상환경을 만들고 pip로 설치한 뒤 시험 명령으로 확인하며, 로그인 없이 쓰는 공개 체험판도 있다",
+  "rawCommands": null,
+  "limitations": "완성된 서비스가 아닌 시제품이고 출력은 검토용 초안이라 최종 판단은 사람이 한다",
+  "lines": {
+   "oneLine": [
+    3,
+    4
+   ],
+   "targetTask": [
+    3,
+    4
+   ],
+   "fields": [
+    3,
+    10
+   ],
+   "runSummary": [
+    1040,
+    1048
+   ],
+   "limitations": [
+    9,
+    15
+   ]
+  }
+ },
+ {
+  "id": 48,
+  "oneLine": "자치행정 협력사업 신청서를 인구수 기준으로 승인과 반려로 자동 분류하고 신청 현황을 웹 페이지로 보여 주는 도구",
+  "targetTask": "협력사업 신청서 승인·반려 분류",
+  "fields": [
+   "엑셀·사무 자동화",
+   "데이터·통계·분석"
+  ],
+  "runSummary": "파이썬 분류 프로그램을 실행하면 승인과 반려 폴더로 나뉘고 결과 보고서 파일이 만들어진다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    11
+   ],
+   "runSummary": [
+    15,
+    19
+   ]
+  }
+ },
+ {
+  "id": 49,
+  "oneLine": "문서 속 개인정보를 내 PC 브라우저 안에서 찾아 가리는 프로그램, 파일이 밖으로 나가지 않는다",
+  "targetTask": "문서 공개 전 개인정보 비식별 처리",
+  "fields": [
+   "문서·보고서",
+   "개발·보안·인프라"
+  ],
+  "runSummary": "빌드한 뒤 deploy/start.bat을 실행하면 localhost 주소로 브라우저가 열린다",
+  "rawCommands": null,
+  "limitations": "스캔 이미지 PDF와 구형 HWP·DOC·XLS, 암호·DRM 문서, 압축파일은 지원하지 않고 입력은 20MB까지다",
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    30
+   ],
+   "runSummary": [
+    85,
+    95
+   ],
+   "limitations": [
+    24,
+    26
+   ]
+  }
  }
 ]
