@@ -103,3 +103,4 @@
 - 세로 바와 본문 판 사이 8 간격(D-21 7장, Figma content-panel x 248과 같게). measured.json을 스크롤바 뺀 상태로 다시 잼(R-01 1920: 판 248/1664, main 480/1200 = Figma)
 - 경로 줄 13/줄 높이 20, 경로 → 본문 24(layout/crumb-title-gap): main y 159 → 141(Figma 140, 판 테두리 1)
 - 바닥글 구분선 위아래 24 → 16(--rb-footer-divider-gap, Figma 대조): R-01 1920 바닥글 높이 214 → 198(Figma와 같음), 360은 318. measured.json 다시 잼
+- 모바일(1023 이하) 바닥글: 로고-주소 간격 12, 정책 링크-저작권 문장 간격 8(Figma 대조): 360 바닥글 318 → 290, 1920 198 유지
