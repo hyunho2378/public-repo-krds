@@ -150,7 +150,7 @@ export function FileTable({ id, path, items, log, pending, filter, refQuery }) {
           {path ? (
             <tr>
               <td colSpan={3}>
-                <Link className="rb-tree-name" to={`/projects/${id}${up ? '/code/' + up : ''}${refQuery}`}><Icon name="new_folder" /><span>{t.P16_up}</span></Link>
+                <Link className="rb-tree-name" to={`/projects/${id}${up ? '/code/' + up : ''}${refQuery}`}><Icon name="folder" /><span>{t.P16_up}</span></Link>
               </td>
             </tr>
           ) : null}
@@ -161,7 +161,7 @@ export function FileTable({ id, path, items, log, pending, filter, refQuery }) {
               <tr key={f.path}>
                 <td>
                   <Link className="rb-tree-name" to={`/projects/${id}/code/${f.path}${refQuery}`}>
-                    <Icon name={f.type === 'tree' ? 'new_folder' : 'document'} label={f.type === 'tree' ? t.P16_folder : t.P16_file} />
+                    <Icon name={f.type === 'tree' ? 'folder' : 'document'} label={f.type === 'tree' ? t.P16_folder : t.P16_file} />
                     <span className="rb-ellipsis rb-break-any">{f.name}</span>
                   </Link>
                   <span className="rb-tree-mobile krds-text-body-xsmall rb-subtle">

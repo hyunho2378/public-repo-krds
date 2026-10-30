@@ -58,7 +58,7 @@ export function projectGroups(id, { signedIn, role } = {}) {
       [t.P22_wiki, `${p}/wiki`, 'document_fill'],
     ]],
     [t.Side_code, [
-      [t.RepoSub_files, `${p}/code`, 'new_folder'],
+      [t.RepoSub_files, `${p}/code`, 'folder'],
       [t.ProjectTabs_4, `${p}/changes`, 'time', false, t.Side_hintCommit],
       [t.RepoSub_branches, `${p}/branches`, 'share', false, t.Side_hintBranch],
       [t.RepoSub_mr, `${p}/merge-requests`, 'edit', false, t.Side_hintMr],

@@ -24,7 +24,7 @@ function Node({ id, item, current, refQuery, depth, filter }) {
           </button>
         ) : <span className="rb-ft-gap" aria-hidden="true" />}
         <Link className="rb-ft-link" to={`/projects/${id}/code/${item.path}${refQuery}`} aria-current={current === item.path ? 'page' : undefined}>
-          <Icon name={isDir ? 'new_folder' : 'document'} />
+          <Icon name={isDir ? 'folder' : 'document'} />
           <span className="rb-ellipsis rb-break-any">{item.name}</span>
         </Link>
       </div>
