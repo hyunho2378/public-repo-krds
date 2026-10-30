@@ -23,30 +23,32 @@ export function ruleFields(p,tree,languages,readme,done){
   const lines=(readme||'').split('\n');const status=readmeStatus(readme);
   const files=(tree||[]).map(f=>({path:f.path,type:f.type}));
   const exec=execution(files,readme||'');
-  let form='check',ev=null;
-  const map={download:'download',install:'install'};
-  if(map[exec.form]){form=map[exec.form];ev=exec.evidence.map(e=>e.path)}
-  else if(exec.form==='web-candidate'){form='check';ev=exec.evidence.map(e=>e.path)}
-  const lic=licenseName(readme||'');
-  const licFile=files.find(f=>/^licen[cs]e/i.test(path.basename(f.path)));
-  const licLine=lic?lineOf(lines,new RegExp(lic.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'))[0]:null;
-  const refs=referenceDates(readme||'').references.map(r=>{const idx=lines.findIndex(l=>l.slice(0,800)===r.original);return{quote:r.original.trim().slice(0,300),lines:idx<0?null:[idx+1,idx+1],dates:r.dates,identifiers:r.identifiers}});
-  const langs=Object.keys(languages||{});
-  const mk=[];const names=files.map(f=>f.path);
-  for(const [re,label] of [[/^package\.json$/,'Node.js(package.json)'],[/^requirements\.txt$/,'Python(requirements.txt)'],[/^pyproject\.toml$/,'Python(pyproject.toml)'],[/^Dockerfile$/,'Docker'],[/^pom\.xml$/,'Java(Maven)'],[/^build\.gradle/,'Java(Gradle)']])if(names.some(n=>re.test(n)))mk.push({label,path:names.find(n=>re.test(n))});
-  const techVals=[...langs.map(l=>l),...mk.map(m=>m.label)];
-  const org=organizationName((p.name_with_namespace||'').split(' / ')[0]);
+  const names=files.map(f=>f.path);
   const AIDOC=/^(CLAUDE|AGENTS|SESSION_HEADER|PROGRESS|DESIGN|IA|GEMINI|CURSOR)\.md$/i;
   const aiDocs=names.filter(n=>!n.includes('/')&&AIDOC.test(n));
   const urlRe=/https?:\/\/[^\s)>\]"'`]+(?:vercel\.app|github\.io|netlify\.app|pages\.dev|onrender\.com|streamlit\.app|hf\.space|herokuapp\.com)[^\s)>\]"'`]*/i;
   const ul=lines.findIndex(l=>urlRe.test(l));const openUrl=ul>=0?lines[ul].match(urlRe)[0]:null;
   const wl=lines.findIndex(l=>/(서버.{0,20}(켜지|준비|깨어|기동|대기).{0,20}[분초]|cold start|첫 접속.{0,15}(느|지연))/i.test(l));
   const rightsL=lines.findIndex(l=>/(이용 허락|콘텐츠 권리|이미지 출처|사진 출처|서면 확인|저작권자)/.test(l));
-  const baseL=[];lines.forEach((l,i)=>{if(/(복제|기반으로|바탕으로|참고하여|참고해|포크|fork|원본 저장소|based on|forked from)/i.test(l)&&/(https?:\/\/|[`\[][\w.\-/]+[`\]])/.test(l))baseL.push(i+1)});
+  const baseL=[];lines.forEach((l,i)=>{if(/(복제|기반으로|바탕으로|참고하|참고해|참고했|포크|fork|원본 저장소|based on|forked from)/i.test(l)&&/(https?:\/\/|[`\[][\w.\-/]+[`\]]|코드|프로젝트|저장소|구조)/.test(l))baseL.push(i+1)});
+  let form='check',ev=null;
+  const map={download:'download',install:'install'};
+  if(map[exec.form]){form=map[exec.form];ev=exec.evidence.map(e=>e.path)}
+  else if(exec.form==='web-candidate'){form='check';ev=exec.evidence.map(e=>e.path)}
+  if(openUrl&&form!=='download'){form='open'}
+  const lic=licenseName(readme||'');
+  const licFile=files.find(f=>/^licen[cs]e/i.test(path.basename(f.path)));
+  const licLine=lic?lineOf(lines,new RegExp(lic.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'))[0]:null;
+  const refs=referenceDates(readme||'').references.map(r=>{const idx=lines.findIndex(l=>l.slice(0,800)===r.original);return{quote:r.original.trim().slice(0,300),lines:idx<0?null:[idx+1,idx+1],dates:r.dates,identifiers:r.identifiers}});
+  const langs=Object.keys(languages||{});
+  const mk=[];
+  for(const [re,label] of [[/^package\.json$/,'Node.js(package.json)'],[/^requirements\.txt$/,'Python(requirements.txt)'],[/^pyproject\.toml$/,'Python(pyproject.toml)'],[/^Dockerfile$/,'Docker'],[/^pom\.xml$/,'Java(Maven)'],[/^build\.gradle/,'Java(Gradle)']])if(names.some(n=>re.test(n)))mk.push({label,path:names.find(n=>re.test(n))});
+  const techVals=[...langs.map(l=>l),...mk.map(m=>m.label)];
+  const org=organizationName((p.name_with_namespace||'').split(' / ')[0]);
   const pub=publication(files,readme||'',false);
   return{
     rule:{
-      executionForm:field(form,ev,'rule',{label:FORM_LABEL[form],note:'파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요'}),
+      executionForm:field(form,ev,'rule',{label:FORM_LABEL[form],note:'파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요'+(wl>=0?'. 서버 준비 안내: '+lines[wl].trim().slice(0,80):'')}),
       license:field(lic,lic?{lines:licLine?[licLine,licLine]:null}:(licFile?{paths:[licFile.path]}:null),'rule',licFile&&!lic?{note:'LICENSE 파일은 있으나 이름은 README에 없음'}:{}),
       readmeStatus:field(status,status==='none'?null:{lines:[1,Math.max(1,lines.length)]},'rule',{label:{none:'없음',template:'기본 템플릿',present:'있음'}[status]}),
       referenceDates:field(refs.length?refs:null,refs.length?{lines:range(refs.map(r=>r.lines?.[0]).filter(Boolean))}:null,'rule',{note:'README 추출 후보, 현행 여부 미확인'}),
@@ -55,12 +57,12 @@ export function ruleFields(p,tree,languages,readme,done){
       openUrl:field(openUrl,ul>=0?{lines:[ul+1,ul+1]}:null,'rule',{note:'README 안 배포 주소. 프로젝트 web_url이 아님'}),
       startupNote:field(wl>=0?lines[wl].trim().slice(0,200):null,wl>=0?{lines:[wl+1,wl+1]}:null,'rule'),
       contentRights:field(rightsL>=0?lines[rightsL].trim().slice(0,200):null,rightsL>=0?{lines:[rightsL+1,rightsL+1]}:null,'rule',{note:'코드 라이선스(license)와 별도'}),
-      baseProjects:field(baseL.length||p.forked_from_project?[...baseL.map(n=>({quote:lines[n-1].trim().slice(0,240),line:n})),...(p.forked_from_project?[{fork:p.forked_from_project.path_with_namespace}]:[])]:null,baseL.length?{lines:[baseL[0],baseL[baseL.length-1]]}:null,'rule',{note:'README 문구 기반 재사용 계보 후보. 사람 확인 필요'}),
+      baseProjects:field(baseL.length||p.forked_from_project?[...baseL.map(n=>({quote:lines[n-1].trim().slice(0,240),line:n,name:(lines[n-1].match(/([가-힣A-Za-z0-9_\-]{2,30})\s*(?:코드|프로젝트|저장소)/)||[])[1]??null,url:(lines[n-1].match(/https?:\/\/[^\s)>\]]+/)||[])[0]??null})),...(p.forked_from_project?[{fork:p.forked_from_project.path_with_namespace}]:[])]:null,baseL.length?{lines:[baseL[0],baseL[baseL.length-1]]}:null,'rule',{note:'README 문구 기반 재사용 계보 후보. 사람 확인 필요'}),
       docComposition:field(aiDocs.length?{aiWorkDocs:aiDocs.length}:null,aiDocs.length?{paths:aiDocs}:null,'rule',{note:'AI 작업 문서는 카드 근거에서 제외, 개수만 표시'}),
       techStack:field(techVals.length?techVals:null,techVals.length?{api:'languages',paths:mk.map(m=>m.path)}:null,'rule')
     },
     publicChecks:pub.publicResult.checks,
-    privateItems:pub.privateResult.items.filter(i=>i.type==='sensitive-filename').map(i=>i.path).concat((done?.markers?.envLike||[]).filter(x=>!/\.(example|sample|template)$/.test(x)))
+    privateItems:[...new Set(pub.privateResult.items.filter(i=>i.type==='sensitive-filename').map(i=>i.path).concat((done?.markers?.envLike||[]).filter(x=>!/\.(example|sample|template)$/.test(x))))]
   };
 }
 export function blankAI(){const n=()=>({value:null,evidence:null,source:'ai'});return{oneLine:n(),targetTask:n(),fields:n(),runSummary:{...n(),rawCommands:null},limitations:n()}}

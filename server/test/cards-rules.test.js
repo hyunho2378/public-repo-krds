@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {ruleFields} from '../../scripts/cards/rules.mjs';
+const load=n=>{const d=new URL('./fixtures/cards/'+n+'/',import.meta.url);const r=f=>fs.readFileSync(new URL(f,d),'utf8');return ruleFields(JSON.parse(r('project.json')),JSON.parse(r('tree.json')),{},r('README.md'),{markers:{envLike:JSON.parse(r('tree.json')).map(f=>f.path).filter(x=>/^\.env/.test(x))}})};
+test('fixture 1: 바로 열기 주소와 실행 형태',()=>{const {rule}=load('youth-chatbot');assert.equal(rule.openUrl.value,'https://example.vercel.app');assert.deepEqual(rule.openUrl.evidence.lines,[5,5]);assert.equal(rule.executionForm.value,'open')});
+test('fixture 1: 서버 준비 안내가 실행 형태 비고에 함께',()=>{const {rule}=load('youth-chatbot');assert.match(rule.startupNote.value,/약 1분/);assert.match(rule.executionForm.note,/서버 준비 안내/)});
+test('fixture 1: 콘텐츠 권리는 코드 라이선스와 따로',()=>{const {rule}=load('youth-chatbot');assert.match(rule.contentRights.value,/서면 확인 필요/);assert.equal(rule.license.value,null)});
+test('fixture 1: 바탕 프로젝트 문구에서 이름 추출',()=>{const {rule}=load('youth-chatbot');const b=rule.baseProjects.value;assert.ok(b.some(x=>x.name==='어여우라지'));assert.ok(b.length>=1)});
+test('fixture 1: AI 작업 문서는 개수만, .env.example 은 위험 아님',()=>{const r=load('youth-chatbot');assert.equal(r.rule.docComposition.value.aiWorkDocs,2);assert.deepEqual(r.privateItems.filter(x=>/example/.test(x)),[]);assert.equal(r.privateItems.length,0)});
+test('fixture 2: 실제 .env 만 위험, .env.sample 은 정상, exe 는 내려받아 실행',()=>{const r=load('console');assert.deepEqual(r.privateItems,['.env']);assert.equal(r.rule.executionForm.value,'download');assert.equal(r.rule.openUrl.value,null);assert.equal(r.rule.baseProjects.value,null)});
