@@ -4,7 +4,6 @@ import { newWindow } from './newWindow';
 import { t } from '../../copy/ko';
 import { useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
-import { createPortal } from 'react-dom';
 import { auth, gitlab, readmeOrEmpty } from '../../api/client';
 import { cleanDescription } from './StructuredList';
 import { LoginRequiredModal } from '../Feedback/LoginRequiredModal';
@@ -22,8 +21,6 @@ import { setProjectNav } from '../../app/projectNav';
 import { Drop } from '../Code/Drop';
 import { Link } from 'react-router-dom';
 import { DockInfo } from './DockInfo';
-import { useDock } from '../../app/dock';
-import { DOCK_ID } from './DockPanel';
 import { u } from '../../copy/ui';
 
 export function organizationOf(project) {
@@ -56,7 +53,6 @@ function RepoHeader({ project, id }) {
     if (!s.authenticated) setLoginFor(t.RepoHead_star);
     else window.open(project.web_url, '_blank', 'noopener');
   };
-  const dock = useDock();
   return (
     <>
       <div className="rb-repo-head" data-figma="repo-title">
@@ -98,12 +94,11 @@ function RepoHeader({ project, id }) {
 // 탭 제목이 너무 길어지지 않게 설명은 80자에서 말줄임
 const clip = (s) => (s.length > 80 ? `${s.slice(0, 79)}…` : s);
 
-export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false, hideCrumbs = false, title = false }) {
-  // 프로젝트 알림: 머리글 경로(만든 사람 / 이름)와 탭 줄 이슈 수에 쓴다. 화면을 떠나면 지운다.
+export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false, hideCrumbs = false, title = false, info = false }) {
+  // 프로젝트 알림: 왼쪽 바(프로젝트 메뉴, 작업 항목 수)에 쓴다. 화면을 떠나면 지운다.
   const project0 = data.data?.project;
-  const dock = useDock();
   useEffect(() => {
-    if (project0) setProjectNav({ id: data.id, name: project0.name, owner: organizationOf(project0), issues: project0.open_issues_count, avatarUrl: project0.avatar_url || project0.namespace?.avatar_url });
+    if (project0) setProjectNav({ id: data.id, name: project0.name, owner: organizationOf(project0), issues: project0.open_issues_count, avatarUrl: project0.avatar_url || project0.namespace?.avatar_url, webUrl: project0.web_url });
     return () => setProjectNav(null);
   }, [data.id, project0?.name, project0?.open_issues_count]);
   if (!data.data) {
@@ -118,18 +113,27 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
   const ownerProject = `${organizationOf(project)}/${project.name}`;
   const deepLabel = crumbs?.length ? crumbs[crumbs.length - 1][0] : tabLabel;
   const docTitle = deepLabel ? `${deepLabel}: ${ownerProject}` : `${ownerProject}: ${clip(cleanDescription(project.description) || '')}`.replace(/: $/, '');
+  // D-21: 판 안 맨 위 경로 '만든 곳 / 이름 / 화면'(공공 깃랩 그대로)
+  const path = [
+    [organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project) || '')}`],
+    [project.name, crumbs?.length || tabLabel ? `/projects/${data.id}` : null],
+    ...(crumbs?.length && !hideCrumbs ? crumbs : tabLabel ? [[tabLabel, null]] : []),
+  ];
   return (
     <Page id={screenId} title={docTitle} state={state} noFigma>
-      <div className={'rb-repo-main' + (wide ? ' is-wide' : '')} data-figma="main">
-        <div className="rb-repo-top">
-          {crumbs?.length && !hideCrumbs ? (
-            <Breadcrumb home={false} items={crumbs} />
-          ) : null}
+      <Breadcrumb home={false} items={path} />
+      <div className={'rb-repo-main' + (wide ? ' is-wide' : '') + (info ? ' has-info' : '')} data-figma="main">
+        <div className="rb-repo-body">
           {title ? <RepoHeader project={project} id={data.id} /> : null}
+          {children}
         </div>
-        {children}
+        {info ? (
+          <aside className="rb-repo-info" aria-labelledby="rb-info-title">
+            <h2 id="rb-info-title" className="krds-text-body-small-bold">{u.G_projectInfo}</h2>
+            <DockInfo id={data.id} project={project} readme={data.data.readme} totals={data.data.totals} stats={stats} />
+          </aside>
+        ) : null}
       </div>
-      {dock.open && dock.slot ? createPortal(<DockInfo id={data.id} project={project} readme={data.data.readme} totals={data.data.totals} stats={stats} />, dock.slot) : null}
     </Page>
   );
 }

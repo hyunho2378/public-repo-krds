@@ -1,18 +1,15 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { GlobalBar } from '../components/Identity/GlobalBar';
 import { Sidebar } from '../components/Navigation/Sidebar';
 import { Footer } from '../components/Identity/Footer';
 import { NoticeBanner } from '../components/Feedback/NoticeBanner';
 import { Masthead } from '../components/Identity/Masthead';
+import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import ErrorScreen from '../screens/P13_Error';
 import { routes } from './routes';
 import { TabBar } from '../components/Navigation/TabBar';
 import { useProjectNav } from './projectNav';
-import { projectIdOf, sidebarMode } from './screenKind';
-import { DockContext } from './dock';
-import { DockPanel } from '../components/Layout/DockPanel';
-import { RepoTabs } from '../components/Navigation/RepoTabs';
 import { u } from '../copy/ui';
 import { breakpoint, useBoolPref, useMinWidth } from './prefs';
 import '../components/Layout/shell.css';
@@ -28,53 +25,56 @@ function FocusOnNavigate({ onNavigate }) {
   return null;
 }
 
-/** 로그인처럼 혼자 서는 화면은 왼쪽 메뉴를 두지 않는다(Figma G-08). */
+/** 로그인처럼 혼자 서는 화면은 왼쪽 바를 두지 않는다(공공 깃랩 46). */
 const NO_SIDEBAR = ['/login', '/login/failed', '/login/otp', '/register', '/password'];
-const SIDEBAR_KEY = 'rb-sidebar-collapsed-';
+/** 탐색 목록 화면의 판 안 경로(공공 깃랩 '탐색 / 프로젝트') */
+const EXPLORE_PATH = { '/': u.G_projects, '/explore': u.G_projects, '/organizations': u.G_groups };
 
 function Shell() {
   const [navOpen, setNavOpen] = useState(false);
   const project = useProjectNav();
   const { pathname } = useLocation();
   const bare = NO_SIDEBAR.includes(pathname);
-  const mode = sidebarMode(pathname, bare);
-  const pid = projectIdOf(pathname);
   const closeNav = useCallback(() => setNavOpen(false), []);
-  // D-18: 왼쪽 메뉴는 전역 개인 목록(full)에서만 펼쳐 둔다. 이용자 선택은 기억하고, 기본은 1280 미만 접힘
-  const wide = useMinWidth(breakpoint('--rb-bp-side-open'));
+  // D-21: 왼쪽 바는 기본 펼침. '사이드바 접음'을 누르면 완전히 숨기고 상단 바의 펼침 단추로 연다(선택 기억). 768 미만은 서랍
   const mobile = !useMinWidth(breakpoint('--rb-bp-mobile'));
-  const [pref, setPref] = useBoolPref(SIDEBAR_KEY + 'list', !wide);
-  const collapsed = mode === 'full' && !mobile && pref;
-  const toggleCollapsed = useCallback(() => setPref(!pref), [pref, setPref]);
-  // D-18 4장: 도킹 패널. 저장소 화면에서만 있고 기본 닫힘, 열림 여부 기억
-  const [dockOpen, setDockOpen] = useBoolPref('rb-dock-open', false);
-  const [slot, setSlot] = useState(null);
-  const dockAvailable = !!pid && !bare;
-  const dock = useMemo(() => ({ open: dockAvailable && dockOpen, setOpen: setDockOpen, slot, available: dockAvailable }), [dockAvailable, dockOpen, setDockOpen, slot]);
+  const [hidden, setHidden] = useBoolPref('rb-sidebar-hidden', false);
+  const sideShown = !bare && !mobile && !hidden;
+  const explore = EXPLORE_PATH[pathname];
   return (
-    <DockContext.Provider value={dock}>
+    <>
       <FocusOnNavigate onNavigate={closeNav} />
       <Masthead />
-      <GlobalBar navOpen={navOpen} onToggleNav={() => setNavOpen((v) => !v)} hasNav={mode !== 'none'} />
-      {pid && !bare ? <RepoTabs id={pid} nav={project} /> : null}
+      <GlobalBar
+        navOpen={navOpen}
+        onToggleNav={() => setNavOpen((v) => !v)}
+        hasNav={!bare}
+        sideHidden={!bare && !mobile && hidden}
+        onShowSide={() => setHidden(false)}
+        area={u.G_explore}
+      />
       <NoticeBanner message={import.meta.env.VITE_NOTICE} />
-      <div className="rb-work">
-      <div className={'rb-shell is-' + mode + (collapsed ? ' is-collapsed' : '')} data-figma="body">
-        {mode === 'none' ? null : <Sidebar project={null} open={navOpen} onClose={closeNav} collapsed={collapsed} onToggleCollapsed={toggleCollapsed} />}
-        <main id="main" tabIndex={-1} className="rb-main">
-          <Routes>
-            {routes.map(({ id, path, Screen }) => (
-              <Route key={id + path} path={path} element={<Screen />} />
-            ))}
-            <Route path="*" element={<ErrorScreen kind="not-found" />} />
-          </Routes>
-        </main>
+      <div className={'rb-shell' + (sideShown ? ' has-side' : '') + (bare ? ' is-bare' : '')} data-figma="body">
+        {bare || (!sideShown && !mobile) ? null : (
+          <Sidebar project={project} open={navOpen} onClose={closeNav} onHide={() => setHidden(true)} />
+        )}
+        <div className="rb-panel">
+          <div className="rb-panel-in">
+            {explore ? <Breadcrumb home={false} items={[[u.G_explore, '/'], [explore, null]]} /> : null}
+            <main id="main" tabIndex={-1} className="rb-main">
+              <Routes>
+                {routes.map(({ id, path, Screen }) => (
+                  <Route key={id + path} path={path} element={<Screen />} />
+                ))}
+                <Route path="*" element={<ErrorScreen kind="not-found" />} />
+              </Routes>
+            </main>
+          </div>
+          <Footer />
+        </div>
       </div>
-      <DockPanel open={dock.open} onClose={() => setDockOpen(false)} title={u.Dock_info} slotRef={setSlot} />
-      </div>
-      <Footer />
       <TabBar />
-    </DockContext.Provider>
+    </>
   );
 }
 

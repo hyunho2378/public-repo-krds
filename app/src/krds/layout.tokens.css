@@ -22,9 +22,10 @@
    | 행간 | 13:20, 15:22, 17:26, 19:28, 24:32, 32:40, 40:48 | D-16 2장 | KRDS 150%를 짝수 px로 대체(퍼센트 금지) |
    | 왼쪽 메뉴 펼침 기준 폭 | 1280 | D-18(전역 개인 목록만) | 단위 없는 숫자(자바스크립트가 읽는다) |
    | 가운데 컨테이너 | 1280 | D-18 2장 | number-12(32) x 40 |
-   | 저장소 본문 읽기 폭 | 960 | D-18 4장 | number-12(32) x 30 |
-   | 도킹 패널 폭 | 360 | D-18 4장 | number-12(32) x 11 + number-5(8) |
-   | 탭 줄 높이 | 48 | D-18 2장 | --krds-number-16 |
+   | (D-21) 시스템 머리 띠 | 24 | 공공 깃랩 맨 위 띠 | --krds-number-10 |
+   | (D-21) 상단 바 | 48 | 공공 깃랩 상단 바 | --krds-number-16 |
+   | (D-21) 왼쪽 세로 바 | 240 | 공공 깃랩 사이드바 | number-21 x 2 + number-16 |
+   | (D-21) 본문 판 모서리, 판 바깥 여백 | 8, 8 | 공공 깃랩 둥근 판 | radius-medium3, number-5 |
    | 로그인 공지 열 / 폼 열 | 360 / 400 | Figma G-08 | 96x3+72 / 96x4+16 |
    | 바닥글 높이 | 내용 높이 + 위아래 24 | D-13: 168은 KRDS 원본 값이었으나 GitHub식 한 줄 구조(로고/링크 한 줄, 구분선, 문장)에서는 낭비라 고정 높이를 버림 | number-10(24) |
    | 왼쪽 메뉴 숨김 기준 폭 | 768 | D-17 5장 | KRDS 모바일 구간. 단위 없는 숫자 |
@@ -33,22 +34,27 @@
 :root {
   --rb-page-pad: var(--krds-padding-8);
   --rb-col-gap: var(--krds-gap-9);
-  --rb-masthead-h: var(--krds-number-12);
-  --rb-sidebar-w: calc(var(--krds-number-12) * 8 + var(--krds-number-5));
+  /* D-21 시스템 머리 띠 24 */
+  --rb-masthead-h: var(--krds-number-10);
+  /* D-21 왼쪽 세로 바 240(공공 깃랩 약 240) = 96x2 + 48 */
+  --rb-sidebar-w: calc(var(--krds-number-21) * 2 + var(--krds-number-16));
   --rb-sidebar-w-project: var(--rb-sidebar-w);
   --rb-sidebar-w-collapsed: calc(var(--krds-size-height-9) - var(--krds-number-5));
-  --rb-search-h: var(--krds-number-16);
+  /* D-21 상단 검색칸 32(상단 바 48 안) */
+  --rb-search-h: var(--krds-number-12);
   --rb-gbar-side: calc(var(--krds-number-12) * 7 + var(--krds-number-11));
   --rb-gbar-right: calc(var(--krds-number-21) * 3);
   --rb-actions-w: calc(var(--krds-number-21) * 3);
   /* 머리글: 검색칸은 240~640으로 줄고 늘며 남는 폭은 경로에 준다. 만든 사람 이름은 최대 320에서 말줄임, 저장소 이름은 말줄임 없음 */
   --rb-gbar-search-min: calc(var(--krds-number-5) * 30);
   --rb-gbar-owner-max: calc(var(--krds-number-12) * 10);
-  --rb-gbar-search-w: calc(var(--krds-number-21) * 6 + var(--krds-number-12) * 2);
+  /* D-21 상단 검색 480(1440 기준) = 96x5 */
+  --rb-gbar-search-w: calc(var(--krds-number-21) * 5);
   --rb-info-w: calc(var(--krds-number-12) * 9 + var(--krds-number-5));
   /* 커밋 상세 왼쪽 파일 트리 폭(296): GitHub 비교 화면 기준 */
   --rb-dtree-w: calc(var(--krds-number-12) * 9 + var(--krds-number-5));
-  --rb-header-h: calc(var(--krds-number-12) * 2);
+  /* D-21 상단 바 48 */
+  --rb-header-h: var(--krds-number-16);
   /* D-14 끝절: 줄 높이 */
   --rb-row-h: var(--krds-number-14);
   --rb-side-item-h: var(--krds-number-12);
@@ -90,11 +96,10 @@
   --rb-login-min-h: calc(100dvh - var(--rb-header-h) - var(--krds-number-18) * 3);
   --rb-login-mark-w: calc(var(--krds-number-9) * 6);
   --rb-login-form-w: calc(var(--krds-number-21) * 4 + var(--krds-number-8));
-  /* D-18: 가운데 컨테이너 1280, 저장소 홈/목록 읽기 폭 960, 도킹 패널 360, 탭 줄 48 */
+  /* D-21: 본문 판 안 컨테이너 최대 1280 가운데(D-18의 960 읽기 폭, 도킹 360, 탭 줄 48은 폐기). 판 모서리 8, 판 바깥 여백 8 */
+  --rb-panel-radius: var(--krds-radius-medium3);
+  --rb-panel-gap: var(--krds-number-5);
   --rb-container-w: calc(var(--krds-number-12) * 40);
-  --rb-read-w: calc(var(--krds-number-12) * 30);
-  --rb-dock-w: calc(var(--krds-number-12) * 11 + var(--krds-number-5));
-  --rb-tabs-h: var(--krds-number-16);
   /* 바닥글 위아래 여백과 줄 사이 간격(24). 높이는 내용에 맡긴다 */
   --rb-footer-pad: var(--krds-number-10);
   --rb-fw-title: var(--krds-font-weight-bold);

@@ -3,10 +3,9 @@
 // 부품과 값은 KRDS만 쓴다.
 import { IconButton, iconBtnClass } from '../Action/IconButton';
 import { useEffect, useRef, useState } from 'react';
-import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { u } from '../../copy/ui';
-import { useProjectNav } from '../../app/projectNav';
 import { Icon } from '../Code/Icon';
 import { ScreenModeItems, useScreenMode } from './ScreenMode';
 import { Menu } from '../Navigation/Menu';
@@ -74,8 +73,7 @@ function GlobalSearch() {
   );
 }
 
-export function GlobalBar({ onToggleNav, navOpen, hasNav = true }) {
-  const nav = useProjectNav();
+export function GlobalBar({ onToggleNav, navOpen, hasNav = true, sideHidden = false, onShowSide, area }) {
   const location = useLocation();
   const { signedIn } = useAuth();
   // UX-007 1장: 기본은 어두운 화면. 로그인 여부와 상관없이 항상 적용되어야 하므로 여기서 한 번 불러 쓴다(전에는 로그인 후에만 불리는 버그가 있었다)
@@ -84,27 +82,18 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true }) {
   return (
     <header className="rb-gbar" data-figma="header" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
       <div className="rb-gbar-in">
-        {hasNav ? (
-          <IconButton icon="menu" label={t.GlobalBar_navToggle} size="medium" className="rb-gbar-navtoggle" aria-expanded={navOpen} aria-controls="rb-sidebar" onClick={onToggleNav} />
-        ) : null}
         <div className="rb-gbar-left">
+          {hasNav ? (
+            <IconButton icon="menu" label={t.GlobalBar_navToggle} size="medium" className="rb-gbar-navtoggle" aria-expanded={navOpen} aria-controls="rb-sidebar" onClick={onToggleNav} />
+          ) : null}
+          {/* D-21: 사이드바를 접으면 상단 바 맨 왼쪽에 펼침 단추(공공 깃랩 방식) */}
+          {sideHidden ? (
+            <IconButton icon="panel_close" label={u.G_sideExpand} size="medium" className="rb-gbar-sideopen" title={u.G_sideExpand} onClick={onShowSide} />
+          ) : null}
           <Link className="rb-gbar-brand" to="/" aria-label={u.Brand_home}>
             <Logo size={24} />
-            <span className="rb-gbar-brand-text" aria-hidden="true">{SERVICE_NAME}</span>
           </Link>
-          {nav ? (
-            <span className="rb-gbar-path" data-figma="repo-path" role="group" aria-label={`${nav.owner} / ${nav.name}`} title={`${nav.owner} / ${nav.name}`}>
-              <Link className="rb-gbar-pathlink is-owner" to={`/search?q=${encodeURIComponent(nav.owner || '')}`}>{nav.owner}</Link>
-              <span className="rb-gbar-sep" aria-hidden="true">/</span>
-              <Link className="rb-gbar-pathlink is-name" to={`/projects/${nav.id}`}>{nav.name}</Link>
-            </span>
-          ) : null}
-          {nav ? null : (
-            <NavLink end className="rb-gbar-btn rb-gbar-explore" to="/">
-              <Icon name="view_all" />
-              <span>{t.GlobalBar_explore}</span>
-            </NavLink>
-          )}
+          {hasNav && area ? <span className="rb-gbar-area">{area}</span> : null}
         </div>
         <GlobalSearch />
         <IconButton to="/search" icon="search" label={t.GlobalBar_searchLabel} size="medium" className="rb-gbar-searchlink" data-figma="global-search" />
@@ -118,8 +107,9 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true }) {
           ) : (
             <>
               <ScreenModeMenu mode={mode} setMode={setMode} />
-              <Link className="krds-btn small tertiary rb-gbar-cta" to={loginTo}>{t.Header_login}</Link>
-              <Link className="krds-btn small primary rb-gbar-cta" to="/register">{u.Hdr_signup}</Link>
+              {/* 공공 깃랩 순서: 등록, 로그인 */}
+              <Link className="krds-btn small tertiary rb-gbar-cta" to="/register">{u.Hdr_signup}</Link>
+              <Link className="krds-btn small primary rb-gbar-cta" to={loginTo}>{t.Header_login}</Link>
             </>
           )}
         </div>

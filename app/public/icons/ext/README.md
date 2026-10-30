@@ -21,3 +21,19 @@
 | file-text.svg | 글 파일(md, txt) | doc-text |
 
 - KRDS에서 복사한 것(app/public/icons/krds): globe(공개), ellipsis_vertical(점 세 개), panel_open/panel_close(사이드바 접음/펼침), sys_success_mark/sys_danger_mark(파이프라인 성공/실패)
+
+## 사이드바 묶음과 탐색 메뉴 (공공 깃랩 03, 01 캡처)
+| 파일 | 쓰는 곳 | Pajamas 원본 |
+|---|---|---|
+| pin.svg | 고정됨 | thumbtack |
+| users.svg | 관리 | users |
+| code.svg | 코드 | code |
+| deploy.svg | 배포 | deployments |
+| cloud.svg | 운영 | cloud-pod |
+| monitor.svg | 모니터 | monitor |
+| project.svg | 탐색 > 프로젝트 | project |
+| group.svg | 탐색 > 그룹 | group |
+| catalog.svg | 탐색 > CI/CD 카탈로그 | catalog-checkmark |
+| sparkle.svg | 탐색 > AI 카탈로그 | tanuki-ai의 반짝임만(GitLab 로고 상표는 쓰지 않음) |
+| snippet.svg | 탐색 > 스니펫 | snippet |
+- 빌드는 rocket(공공 깃랩도 같은 로켓), 계획은 KRDS calendar, 추가 기능은 KRDS view_all, 분석은 KRDS analytics, 주제는 확장 tag(같은 뜻의 KRDS 아이콘이 있으면 KRDS 우선)

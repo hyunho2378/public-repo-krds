@@ -45,10 +45,21 @@
 .rb-icon-only .ico-toggle { display: none; }
 .rb-avatar-img { object-fit: cover; }
 
-/* D-18 4장: 저장소 본문 열은 읽기 폭 960을 가운데에 두고, 파일 보기와 비교만 컨테이너 전체를 쓴다 */
-.rb-repo-main { display: flex; flex-direction: column; gap: var(--krds-gap-7); width: 100%; max-width: var(--rb-read-w); margin-inline: 0 auto; min-width: 0; }
+/* D-21: 저장소 본문은 판 안 컨테이너(최대 1280) 전체. 프로젝트 홈만 오른쪽 '프로젝트 정보' 열(296)을 상시 둔다(공공 깃랩 02) */
+.rb-repo-main { display: flex; flex-direction: column; gap: var(--krds-gap-7); width: 100%; margin-inline: auto; min-width: 0; }
 .rb-repo-main.is-wide { max-width: none; }
 .rb-repo-title-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .rb-repo-name .rb-pill { flex: none; }
 .rb-kbd-inline { font-family: 'D2Coding', ui-monospace, monospace; font-size: var(--krds-font-size-body-xsmall); padding: 0 var(--krds-padding-2); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-small2); }
 .rb-repo-top:empty { display: none; }
+
+.rb-repo-main.has-info { display: grid; grid-template-columns: minmax(0, 1fr) var(--rb-info-w); column-gap: var(--rb-col-gap); align-items: start; }
+.rb-repo-body { display: flex; flex-direction: column; gap: var(--krds-gap-7); min-width: 0; }
+.rb-repo-info { display: flex; flex-direction: column; gap: var(--krds-gap-5); min-width: 0; }
+.rb-repo-info h2 { margin: 0; }
+@media (max-width: 1023px) {
+  .rb-repo-main.has-info { grid-template-columns: minmax(0, 1fr); row-gap: var(--krds-gap-7); }
+}
+.rb-dock-info { display: flex; flex-direction: column; gap: var(--krds-gap-6); }
+.rb-dock-intro { margin: 0; overflow-wrap: anywhere; }
+.rb-dock-counts { display: flex; flex-direction: column; gap: var(--krds-gap-2); list-style: none; margin: 0; padding: 0; }

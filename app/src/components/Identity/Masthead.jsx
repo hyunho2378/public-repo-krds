@@ -1,6 +1,15 @@
-// UX-007 2장: 시제품 배너는 화면 맨 위에 두지 않는다(모든 화면). 시제품 고지는 도움말 "이 서비스에 대해"와 README에만. 건너뛰기 링크는 남겨 둔다.
+// D-21 시스템 머리 띠: 공공 깃랩 맨 위 한 줄을 그대로 둔다(높이 24, primary 채움, 흰 글자 13). 건너뛰기 링크는 그 앞.
 import { t } from '../../copy/ko';
+import { u } from '../../copy/ui';
+import { newWindow } from '../Layout/newWindow';
 
 export function Masthead() {
-  return <a className="rb-skip" href="#main">{t.Header_skip}</a>;
+  return (
+    <>
+      <a className="rb-skip" href="#main">{t.Header_skip}</a>
+      <div className="rb-sysband" data-figma="system-band">
+        <span>{u.Sys_band} ( {u.Sys_bandBoard} <a href={`https://${u.Sys_bandBoardUrl}`} {...newWindow(u.Sys_bandBoard)}>{u.Sys_bandBoardUrl}</a> )</span>
+      </div>
+    </>
+  );
 }
