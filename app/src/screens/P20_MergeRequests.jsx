@@ -32,7 +32,11 @@ export function MergeRequests() {
   const [query, setQuery] = useState('');
   const body = useData(async () => {
     const [opened, merged, closed] = await Promise.all(['opened', 'merged', 'closed'].map((x) => gitlab.mergeRequests(frame.id, x)));
-    return { opened: opened.data, merged: merged.data, closed: closed.data, all: [...opened.data, ...merged.data, ...closed.data] };
+    const seen = new Map();
+    [...opened.data, ...merged.data, ...closed.data].forEach((m) => seen.set(m.iid, m));
+    const every = [...seen.values()];
+    const by = (x) => every.filter((m) => m.state === x);
+    return { opened: by('opened'), merged: by('merged'), closed: by('closed'), all: every };
   }, [frame.id]);
   if (!frame.data) return <ProjectFrame screenId="R-16" data={frame} />;
   const all = body.data;
