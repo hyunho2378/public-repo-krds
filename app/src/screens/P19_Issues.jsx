@@ -7,10 +7,15 @@ import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { u } from '../copy/ui';
-import { ListBox, SearchBox, matchTitle, sortItems } from '../components/Code/ListTools';
+import { w } from '../copy/work';
+import { SORTS, matchTitle, sortItems } from '../components/Code/ListTools';
+import { Drop } from '../components/Code/Drop';
+import { Icon } from '../components/Code/Icon';
+import { LinkButton } from '../components/Action/Button';
 import { Readme } from '../components/Help/Readme';
 import { day } from './parts/repoCommon';
 import '../components/Code/code.css';
+import './parts/glWork.css';
 
 export function StateTabs({ value, onChange, items, label }) {
   return (
@@ -40,13 +45,43 @@ export function Issues() {
   if (!frame.data) return <ProjectFrame screenId="R-11" data={frame} />;
   const all = body.data;
   const list = all ? sortItems(matchTitle(all[st], query), sort) : null;
+  const stateName = st === 'opened' ? t.P19_open : t.P19_closed;
   return (
     <ProjectFrame screenId="R-11" tab="/feedback" tabLabel={t.P19_title} data={frame} state={all ? (all.opened.length + all.closed.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
-        <SearchBox value={query} onChange={setQuery} />
+        <div className="gl-work-tabs">
+          <span className="gl-work-tab">{w.all}</span>
+          <LinkButton to={`/projects/${frame.id}/issues/new`} Type="secondary" Size="small">{w.new}</LinkButton>
+        </div>
+        <div className="gl-work-filter">
+          <div className="gl-work-bar" role="search">
+            <span className="gl-work-token">{w.status} {w.is}
+              <Drop label={w.status} align="left" btnClass="krds-btn small text" button={<span>{stateName}</span>}>
+                {(close) => (
+                  <ul className="drop-list" aria-label={w.status}>
+                    {[['opened', t.P19_open], ['closed', t.P19_closed]].map(([k, n]) => (
+                      <li key={k}><button type="button" className={'item-link' + (k === st ? ' active' : '')} onClick={() => { close(); setSt(k); }}>{n}</button></li>
+                    ))}
+                  </ul>
+                )}
+              </Drop>
+            </span>
+            <input type="search" value={query} placeholder={w.search} aria-label={u.List_searchLabel} onChange={(e) => setQuery(e.target.value)} />
+            <Icon name="search" />
+          </div>
+          <Drop label={w.display} align="right" button={<span>{w.display}</span>}>
+            {(close) => (
+              <ul className="drop-list" aria-label={u.List_sort}>
+                {SORTS.map(([k, n]) => (
+                  <li key={k}><button type="button" className={'item-link' + (k === sort ? ' active' : '')} onClick={() => { close(); setSort(k); }}>{n}</button></li>
+                ))}
+              </ul>
+            )}
+          </Drop>
+        </div>
         {!all ? <Status {...body} /> : (
-          <ListBox label={t.P19_title} value={st} onChange={setSt} sort={sort} onSort={setSort}
-            states={[['opened', t.P19_open, all.opened.length], ['closed', t.P19_closed, all.closed.length]]}>
+          <>
+            <p className="gl-work-count">{list.length} {w.item}</p>
             {list.length ? (
               <ul className="rb-row-list">
                 {list.map((i) => (
@@ -62,8 +97,14 @@ export function Issues() {
                   </li>
                 ))}
               </ul>
-            ) : <EmptyState title={query ? u.List_none : t.P19_none} />}
-          </ListBox>
+            ) : (
+              <div className="gl-work-empty">
+                <h3>{w.noResult}</h3>
+                <p>{w.noResultHelp}</p>
+                <LinkButton to={`/projects/${frame.id}/issues/new`} Type="secondary" Size="small">{w.new}</LinkButton>
+              </div>
+            )}
+          </>
         )}
       </div>
     </ProjectFrame>
