@@ -43,6 +43,8 @@
   --rb-actions-w: calc(var(--krds-number-21) * 3);
   --rb-gbar-search-w: calc(var(--krds-number-21) * 6 + var(--krds-number-12) * 2);
   --rb-info-w: calc(var(--krds-number-12) * 9 + var(--krds-number-5));
+  /* 커밋 상세 왼쪽 파일 트리 폭(296): GitHub 비교 화면 기준 */
+  --rb-dtree-w: calc(var(--krds-number-12) * 9 + var(--krds-number-5));
   --rb-header-h: calc(var(--krds-number-12) * 2);
   /* D-14 끝절: 줄 높이 */
   --rb-row-h: var(--krds-number-14);

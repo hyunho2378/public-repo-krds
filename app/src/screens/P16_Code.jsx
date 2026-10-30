@@ -227,7 +227,7 @@ export default function Code() {
               {isHome ? (
                 <p className="rb-toolbar-counts krds-text-body-small">
                   {totals.branches != null ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}>{t.fn.nBranches(totals.branches)}</Link> : null}
-                  {totals.tags != null ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}>{t.fn.nTags(totals.tags)}</Link> : null}
+                  {totals.tags != null ? <Link className="krds-link" to={`/projects/${frame.id}/tags`}>{t.fn.nTags(totals.tags)}</Link> : null}
                 </p>
               ) : <PathCrumbs id={frame.id} path={path} refQuery={refQuery} />}
             </div>

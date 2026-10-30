@@ -182,3 +182,44 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 .rb-row-list .rb-row:last-child { border-bottom: 0; }
 .krds-tab-area.rb-subnav .tab.fill ul li button.btn-tab, .krds-tab-area.rb-subnav .tab.fill ul li.active button.btn-tab { background: none; border: 0; box-shadow: none; color: var(--krds-color-text-subtle); font-weight: var(--krds-font-weight-regular); }
 .krds-tab-area.rb-subnav .tab.fill ul li.active button.btn-tab { color: var(--krds-color-text-basic); font-weight: var(--rb-fw-current); text-decoration: underline; text-underline-offset: var(--krds-number-5); }
+
+/* 목록 머리(검색칸, 상태 전환, 정렬)와 행 상자: GitHub 이슈/변경 제안 목록 구조 */
+.rb-listsearch { display: flex; align-items: center; gap: var(--krds-gap-3); height: var(--krds-number-14); padding: 0 var(--krds-padding-5); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-medium2); }
+.rb-listsearch-input { flex: 1; min-width: 0; height: 100%; border: 0; background: none; color: var(--krds-color-text-basic); font: inherit; outline: 0; }
+.rb-listsearch:focus-within { outline: var(--krds-number-2) solid var(--krds-color-border-focus, currentColor); outline-offset: var(--krds-number-1); }
+.rb-listbox { border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); overflow: hidden; }
+.rb-listbox .rb-row-list { border: 0; border-radius: 0; }
+.rb-listbox-head { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); min-height: var(--krds-number-15); padding: 0 var(--krds-padding-7); background: var(--krds-color-surface-gray-subtler); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); flex-wrap: wrap; }
+.rb-statetabs { display: flex; align-items: center; gap: var(--krds-gap-6); }
+.rb-statetab { display: inline-flex; align-items: center; gap: var(--krds-gap-2); height: var(--krds-number-15); padding: 0; border: 0; background: none; color: var(--krds-color-text-subtle); font: inherit; cursor: pointer; }
+.rb-statetab.active { color: var(--krds-color-text-basic); font-weight: var(--rb-fw-current); }
+.rb-statetab-count { padding: 0 var(--krds-padding-3); border-radius: var(--krds-radius-large2, var(--krds-radius-medium2)); background: var(--krds-color-surface-gray-subtle); font-size: var(--rb-step-1); line-height: var(--rb-lh-1); }
+.rb-brtabs { border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+
+/* 브랜치/태그/릴리스 전환 링크와 브랜치 표 */
+.rb-refnav { display: flex; gap: var(--krds-gap-6); }
+.rb-refnav-link { color: var(--krds-color-text-subtle); text-decoration: none; padding: var(--krds-padding-3) 0; border-bottom: var(--krds-number-2) solid transparent; }
+.rb-refnav-link.active { color: var(--krds-color-text-basic); font-weight: var(--rb-fw-current); border-bottom-color: var(--krds-color-border-primary, currentColor); }
+.rb-reftable-wrap { border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); overflow-x: auto; }
+.rb-reftable { width: 100%; border-collapse: collapse; }
+.rb-reftable th, .rb-reftable td { padding: var(--krds-padding-4) var(--krds-padding-7); text-align: left; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); height: var(--krds-number-14); }
+.rb-reftable th { background: var(--krds-color-surface-gray-subtler); color: var(--krds-color-text-subtle); font-weight: var(--rb-fw-current); font-size: var(--rb-step-1); line-height: var(--rb-lh-1); }
+.rb-reftable tr:last-child td { border-bottom: 0; }
+.rb-reftable .rb-pill { margin-inline-start: var(--krds-gap-3); }
+
+/* 빈 위키 */
+.rb-wiki-empty { display: flex; flex-direction: column; align-items: center; gap: var(--krds-gap-5); padding: var(--krds-padding-12) 0; text-align: center; }
+
+/* 커밋 상세: 왼쪽 파일 트리와 변경 본문 */
+.rb-diff-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--krds-gap-6); align-items: start; }
+@media (min-width: 64em) { .rb-diff-layout.has-tree { grid-template-columns: var(--rb-dtree-w) minmax(0, 1fr); } }
+.rb-dtree { position: sticky; top: var(--krds-gap-5); max-height: calc(100vh - var(--krds-number-18) - var(--krds-number-12)); overflow: auto; padding: var(--krds-padding-4); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); }
+.rb-dtree-list { list-style: none; margin: 0; padding: 0; }
+.rb-dtree-list .rb-dtree-list { padding-inline-start: var(--krds-padding-6); }
+.rb-dtree-dir, .rb-dtree-file { display: flex; align-items: center; gap: var(--krds-gap-3); min-height: var(--rb-side-item-h); padding: 0 var(--krds-padding-3); width: 100%; border: 0; background: none; color: var(--krds-color-text-basic); font: inherit; text-align: left; cursor: pointer; border-radius: var(--krds-radius-small2); }
+.rb-dtree-dir { list-style: none; }
+.rb-dtree-dir::-webkit-details-marker { display: none; }
+.rb-dtree-file:hover, .rb-dtree-dir:hover { background: var(--krds-color-action-secondary-hover); }
+.rb-diff-bar-left { display: flex; align-items: center; gap: var(--krds-gap-5); }
+.rb-dtree-dir, .rb-dtree-file { box-sizing: border-box; }
+.rb-dtree { overflow-x: hidden; }

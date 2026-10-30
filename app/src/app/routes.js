@@ -28,7 +28,7 @@ import { LoginFailed, LoginOtp, LoginSignup, LoginReset } from '../screens/P12b_
 import { Insights, Checklist, LawAlerts, Handover, Mcp } from '../screens/P26_Insights';
 import { Notifications, Settings, ProjectSettings, RepoGraph, Collaborate } from '../screens/P27_Account';
 import Commit from '../screens/P17_Commit';
-import { Branches, Releases } from '../screens/P18_Refs';
+import { Branches, Tags, Releases } from '../screens/P18_Refs';
 import { Issues, Issue } from '../screens/P19_Issues';
 import { MergeRequests, MergeRequest } from '../screens/P20_MergeRequests';
 import Contributors from '../screens/P21_Contributors';
@@ -57,6 +57,7 @@ export const routes = [
   { id: 'R-03', path: '/projects/:id/code/*', Screen: Code },
   { id: 'R-05', path: '/projects/:id/changes/:sha', Screen: Commit },
   { id: 'R-07', path: '/projects/:id/branches', Screen: Branches },
+  { id: 'R-08', path: '/projects/:id/tags', Screen: Tags },
   { id: 'R-09', path: '/projects/:id/releases', Screen: Releases },
   { id: 'R-11', path: '/projects/:id/issues', Screen: Issues },
   { id: 'R-12', path: '/projects/:id/issues/:iid', Screen: Issue },

@@ -7,6 +7,7 @@ import { gitlab } from '../api/client';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
+import { u } from '../copy/ui';
 import { orgLabel } from '../components/Layout/orgLabel';
 import { day } from './parts/repoCommon';
 import '../components/Code/code.css';
@@ -94,6 +95,19 @@ export default function RepoSections({ section }) {
   if (!frame.data) return <ProjectFrame screenId={SECTION_SCREEN[section]} data={frame} />;
   const list = Array.isArray(body.data) ? body.data : null;
   const needsLogin = body.state === 'Error' && body.status === 401;
+  // GitHub의 빈 위키: 제목과 첫 문서 만들기 버튼만 둔다. 문서 작성은 공공 깃랩 위키 화면에서 한다
+  if (section === 'wiki' && list && !list.length) {
+    const url = frame.data.project.web_url;
+    return (
+      <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state="Empty">
+        <div className="rb-wiki-empty">
+          <h2 className="krds-text-heading-small">{u.Wiki_emptyTitle}</h2>
+          <p className="krds-text-body-medium rb-subtle">{u.Wiki_emptyBody}</p>
+          <a className="krds-btn medium primary" href={`${url}/-/wikis/home?view=create`} target="_blank" rel="noreferrer">{u.Wiki_create}<span className="sr-only"> {t.Footer_3}</span></a>
+        </div>
+      </ProjectFrame>
+    );
+  }
   const state = list ? (list.length ? 'Ideal' : 'Empty') : body.state;
   return (
     <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state={state}>

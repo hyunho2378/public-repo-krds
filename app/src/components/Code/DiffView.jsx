@@ -1,5 +1,7 @@
 // Figma: Code/DiffView. 변경 비교(D-05): 한 줄로 보기(통합), 나란히 보기. 줄 앞 +, - 표시로 색에만 기대지 않는다.
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { u } from '../../copy/ui';
+import { useBoolPref } from '../../app/prefs';
 import { t } from '../../copy/ko';
 import { Icon } from './Icon';
 
@@ -110,24 +112,84 @@ function FileDiff({ file, mode, index }) {
   );
 }
 
+function buildTree(files) {
+  const root = { dirs: new Map(), files: [] };
+  files.forEach((f, i) => {
+    const parts = (f.new_path || f.old_path || '').split('/');
+    let node = root;
+    parts.slice(0, -1).forEach((dir) => {
+      if (!node.dirs.has(dir)) node.dirs.set(dir, { dirs: new Map(), files: [] });
+      node = node.dirs.get(dir);
+    });
+    node.files.push({ name: parts[parts.length - 1], index: i });
+  });
+  return root;
+}
+
+const jump = (i) => document.getElementById(`file-${i}`)?.scrollIntoView({ block: 'start' });
+
+function TreeNode({ node }) {
+  return (
+    <ul className="rb-dtree-list">
+      {[...node.dirs.entries()].map(([name, child]) => (
+        <li key={name}>
+          <details open>
+            <summary className="rb-dtree-dir"><Icon name="new_folder" /><span className="rb-break-any">{name}</span></summary>
+            <TreeNode node={child} />
+          </details>
+        </li>
+      ))}
+      {node.files.map((f) => (
+        <li key={f.index}>
+          <button type="button" className="rb-dtree-file" onClick={() => jump(f.index)}>
+            <Icon name="document" /><span className="rb-break-any">{f.name}</span>
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function DiffView({ files }) {
   const [mode, setMode] = useState('unified');
+  const [treeOpen, setTreeOpen] = useBoolPref('rb-difftree-open', true);
+  useEffect(() => {
+    const onB = (e) => {
+      if (e.key !== 'b' || e.metaKey || e.ctrlKey || e.altKey) return;
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
+      e.preventDefault();
+      setTreeOpen(!treeOpen);
+    };
+    document.addEventListener('keydown', onB);
+    return () => document.removeEventListener('keydown', onB);
+  }, [treeOpen, setTreeOpen]);
+  const tree = buildTree(files);
   return (
-    <div className="rb-diffs">
-      <div className="rb-diff-bar">
-        <p className="krds-text-body-small-bold">{t.fn.filesChanged(files.length)}</p>
-        <div className="krds-form-chip rb-diff-mode" role="radiogroup" aria-label={t.P17_view}>
-          {[['unified', t.P17_unified], ['split', t.P17_split]].map(([v, label]) => (
-            <button key={v} type="button" role="radio" aria-checked={mode === v} className={`krds-btn small ${mode === v ? 'primary' : 'tertiary'} rb-mode-${v}`} onClick={() => setMode(v)}>{label}</button>
-          ))}
+    <div className={'rb-diff-layout' + (treeOpen ? ' has-tree' : '')}>
+      {treeOpen ? (
+        <nav className="rb-dtree" aria-label={u.Diff_tree}>
+          <TreeNode node={tree} />
+        </nav>
+      ) : null}
+      <div className="rb-diffs">
+        <div className="rb-diff-bar">
+          <div className="rb-diff-bar-left">
+            <button type="button" className="krds-btn small tertiary" aria-expanded={treeOpen} aria-keyshortcuts="B" onClick={() => setTreeOpen(!treeOpen)}>
+              <Icon name="view_all" />
+              <span>{u.Diff_treeToggle}</span>
+              <kbd className="rb-kbd-inline">B</kbd>
+            </button>
+            <p className="krds-text-body-small-bold">{t.fn.filesChanged(files.length)}</p>
+          </div>
+          <div className="krds-form-chip rb-diff-mode" role="radiogroup" aria-label={t.P17_view}>
+            {[['unified', t.P17_unified], ['split', t.P17_split]].map(([v, label]) => (
+              <button key={v} type="button" role="radio" aria-checked={mode === v} className={`krds-btn small ${mode === v ? 'primary' : 'tertiary'} rb-mode-${v}`} onClick={() => setMode(v)}>{label}</button>
+            ))}
+          </div>
         </div>
+        {files.map((f, i) => <FileDiff key={i} file={f} mode={mode} index={i} />)}
       </div>
-      <ol className="rb-diff-index">
-        {files.map((f, i) => (
-          <li key={i}><a className="krds-link rb-break-any" href={`#file-${i}`}>{f.new_path}</a></li>
-        ))}
-      </ol>
-      {files.map((f, i) => <FileDiff key={i} file={f} mode={mode} index={i} />)}
     </div>
   );
 }

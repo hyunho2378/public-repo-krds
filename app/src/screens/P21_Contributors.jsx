@@ -4,7 +4,6 @@ import { gitlab } from '../api/client';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
-import { RepoSubNav } from '../components/Code/RepoSubNav';
 import { orgLabel } from '../components/Layout/orgLabel';
 import '../components/Code/code.css';
 
@@ -16,7 +15,6 @@ export default function Contributors() {
   return (
     <ProjectFrame screenId="R-10" tab="" tabLabel={t.P21_title} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
       <div className="rb-code-area">
-        <RepoSubNav id={frame.id} active="people" />
         <div className="rb-detail-head">
           <h2 className="krds-text-body-small-bold">{list ? t.fn.countLabel(t.P21_title, t.fn.peopleCount(list.length)) : t.P21_title}</h2>
           <p className="krds-text-body-xsmall rb-subtle">{t.P21_help}</p>

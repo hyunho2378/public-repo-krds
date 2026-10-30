@@ -64,7 +64,7 @@ export function RepoTabs({ id, nav }) {
   const p = `/projects/${id}`;
   const manage = signedIn && atLeast(role, 'developer');
   const TABS = [
-    { to: p, label: t.Tab_code, icon: 'document', match: (s) => s === p || under(s, p, ['/code', '/changes', '/branches', '/releases', '/compare', '/snippets']) },
+    { to: p, label: t.Tab_code, icon: 'document', match: (s) => s === p || under(s, p, ['/code', '/changes', '/branches', '/tags', '/releases', '/compare', '/snippets']) },
     { to: p + '/issues', label: t.Side_issues, icon: 'guide_check', count: nav?.issues, match: (s) => under(s, p, ['/issues']) },
     { to: p + '/merge-requests', label: t.RepoSub_mr, icon: 'edit', match: (s) => under(s, p, ['/merge-requests']) },
     { to: p + '/pipelines', label: t.P22_pipelines, icon: 'component', match: (s) => under(s, p, ['/pipelines', '/jobs']) },

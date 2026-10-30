@@ -7,7 +7,8 @@ import { gitlab, request } from '../api/client';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
-import { RepoSubNav } from '../components/Code/RepoSubNav';
+import { u } from '../copy/ui';
+import { ListBox, SearchBox, matchTitle, sortItems } from '../components/Code/ListTools';
 import { Readme } from '../components/Help/Readme';
 import { DiffView } from '../components/Code/DiffView';
 import { StateTabs } from './P19_Issues';
@@ -19,30 +20,39 @@ const LABEL = { opened: t.P20_opened, merged: t.P20_merged, closed: t.P20_closed
 export function MergeRequests() {
   const frame = useProject();
   const [st, setSt] = useState('opened');
-  const body = useData(async () => (await gitlab.mergeRequests(frame.id, st)).data, [frame.id, st]);
+  const [sort, setSort] = useState('newest');
+  const [query, setQuery] = useState('');
+  const body = useData(async () => {
+    const [opened, merged, closed] = await Promise.all(['opened', 'merged', 'closed'].map((s) => gitlab.mergeRequests(frame.id, s)));
+    return { opened: opened.data, merged: merged.data, closed: closed.data };
+  }, [frame.id]);
   if (!frame.data) return <ProjectFrame screenId="R-16" data={frame} />;
-  const list = body.data;
+  const all = body.data;
+  const list = all ? sortItems(matchTitle(all[st], query), sort) : null;
   return (
-    <ProjectFrame screenId="R-16" tab="" tabLabel={t.P20_title} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-16" tab="" tabLabel={t.P20_title} data={frame} state={all ? (all.opened.length + all.merged.length + all.closed.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
-        <RepoSubNav id={frame.id} active="mr" />
-        <p className="krds-text-body-xsmall rb-subtle">{t.P20_help}</p>
-        <StateTabs value={st} onChange={setSt} label={t.P20_title} items={[['opened', t.P20_opened], ['merged', t.P20_merged], ['closed', t.P20_closed]]} />
-        {!list ? <Status {...body} /> : list.length ? (
-          <ul className="rb-row-list">
-            {list.map((m) => (
-              <li className="rb-row" key={m.iid}>
-                <div className="rb-row-main">
-                  <p className="rb-row-title">
-                    <span className="rb-pill">{LABEL[m.state] || m.state}</span>
-                    <Link className="krds-link krds-text-body-small rb-ellipsis" to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link>
-                  </p>
-                  <p className="krds-text-body-xsmall rb-row-meta"><span>{t.fn.issueNo(m.iid)}</span><span>{day(m.created_at)}</span><span className="rb-break-any">{m.source_branch} → {m.target_branch}</span></p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        ) : <EmptyState title={t.P20_none} />}
+        <SearchBox value={query} onChange={setQuery} />
+        {!all ? <Status {...body} /> : (
+          <ListBox label={t.P20_title} value={st} onChange={setSt} sort={sort} onSort={setSort}
+            states={[['opened', t.P20_opened, all.opened.length], ['merged', t.P20_merged, all.merged.length], ['closed', t.P20_closed, all.closed.length]]}>
+            {list.length ? (
+              <ul className="rb-row-list">
+                {list.map((m) => (
+                  <li className="rb-row" key={m.iid}>
+                    <div className="rb-row-main">
+                      <p className="rb-row-title">
+                        <Link className="krds-link krds-text-body-small rb-ellipsis" to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link>
+                      </p>
+                      <p className="krds-text-body-xsmall rb-row-meta"><span>{t.fn.issueNo(m.iid)}</span><span>{day(m.created_at)}</span><span className="rb-break-any">{m.source_branch} → {m.target_branch}</span></p>
+                    </div>
+                    <div className="rb-row-side krds-text-body-xsmall rb-subtle">{t.fn.commentCount(m.user_notes_count || 0)}</div>
+                  </li>
+                ))}
+              </ul>
+            ) : <EmptyState title={query ? u.List_none : t.P20_none} />}
+          </ListBox>
+        )}
       </div>
     </ProjectFrame>
   );
@@ -77,7 +87,6 @@ export function MergeRequest() {
     <ProjectFrame screenId="R-17" tab="" tabLabel={t.P20_title} crumbs={[[t.P20_title, `/projects/${frame.id}/merge-requests`], [`!${iid}`]]} data={frame} state={m ? 'Ideal' : body.state}>
       {!m ? <Status {...body} /> : (
         <div className="rb-code-area">
-          <RepoSubNav id={frame.id} active="mr" />
           <Link className="krds-link" to={`/projects/${frame.id}/merge-requests`}>{t.P20_back}</Link>
           <div className="rb-detail-head">
             <h2 className="krds-text-heading-small">{m.title} <span className="rb-subtle">{t.fn.issueNo(m.iid)}</span></h2>
