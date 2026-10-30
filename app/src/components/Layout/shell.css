@@ -287,7 +287,7 @@
     transform: translateX(0); visibility: visible;
     transition: transform var(--rb-motion-base) var(--rb-motion-ease), visibility 0s linear 0s;
   }
-  .rb-shell.has-side > .rb-panel { margin-left: calc(var(--rb-sidebar-w) - var(--rb-panel-gap)); transition: margin-left var(--rb-motion-base) var(--rb-motion-ease); }
+  .rb-shell.has-side > .rb-panel { margin-left: var(--rb-sidebar-w); transition: margin-left var(--rb-motion-base) var(--rb-motion-ease); }
   .rb-shell.has-side.is-side-hidden > .rb-side-wrap {
     transform: translateX(-100%); visibility: hidden;
     transition: transform var(--rb-motion-exit-base) var(--rb-motion-exit-ease), visibility 0s linear var(--rb-motion-exit-base);
