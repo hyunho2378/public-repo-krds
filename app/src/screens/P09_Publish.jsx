@@ -1,4 +1,5 @@
 // P-09 새 도구 올리기. 단계: 비슷한 도구 확인(F-04, F-05) → 공개 준비 점검(F-21, F-22) → 설명 확인. 공개 승인이 아님을 분명히.
+import { CHECK_LABEL } from './parts/checkLabels';
 import { phrase } from '../components/Help/Phrase';
 import { t } from '../copy/ko';
 import { useEffect, useState } from 'react';
@@ -14,16 +15,6 @@ import { Steps } from '../components/Navigation/StepIndicator';
 import { EmptyState } from '../components/Feedback/Status';
 
 const STEPS = [t.P09_1, t.P04_10, t.P09_2];
-const CHECK_LABEL = {
-  gitignore: t.P09_3,
-  readme: t.P09_4,
-  purpose: t.P09_5,
-  usage: t.P09_6,
-  environment: t.P09_7,
-  license: t.P09_8,
-  tests: t.P09_9,
-  ci: t.P09_10,
-};
 
 export default function Publish() {
   const [step, setStep] = useState(0);

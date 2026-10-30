@@ -1,5 +1,6 @@
 // A-03 공개 준비 점검. 프로젝트 안 화면. 서버의 점검 결과(F-21)를 이 프로젝트의 파일 목록과 설명서로 받아 항목별로 보인다.
 // 공개 승인이 아님을 화면에서 분명히 한다.
+import { CHECK_LABEL } from './parts/checkLabels';
 import { Link, useParams } from 'react-router-dom';
 import { phrase } from '../components/Help/Phrase';
 import { t } from '../copy/ko';
@@ -9,16 +10,6 @@ import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { Status } from '../components/Feedback/Status';
 import '../components/Code/code.css';
 
-const CHECK_LABEL = {
-  gitignore: t.P09_3,
-  readme: t.P09_4,
-  purpose: t.P09_5,
-  usage: t.P09_6,
-  environment: t.P09_7,
-  license: t.P09_8,
-  tests: t.P09_9,
-  ci: t.P09_10,
-};
 
 export default function PublishCheck() {
   const { id } = useParams();

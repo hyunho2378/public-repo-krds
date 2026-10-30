@@ -1,4 +1,6 @@
 // Figma: Repo/Decision. 공무원 판단 정보(U3): 칸마다 값, 비었으면 이유와 다음 행동(U6). 저장소 첫 화면 오른쪽과 소개 탭에서 같이 쓴다.
+import { u } from '../../copy/ui';
+import { FoldText, InfoPair } from './FoldText';
 import { Link } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { product } from '../../api/client';
@@ -14,7 +16,8 @@ export async function loadDecision(id) {
 }
 
 function findLine(readme, pattern) {
-  return (readme || '').split('\n').find((l) => pattern.test(l))?.replace(/^\s*[-*]\s*/, '').replace(/\*\*/g, '');
+  // README 원문 한 줄을 글자로 정리: 목록 기호, 굵게, 코드 표시, 표 구분 글자, 마크다운 링크 주소를 지운다
+  return (readme || '').split('\n').find((l) => pattern.test(l))?.replace(/^\s*[-*]\s*/, '').replace(/\*\*/g, '').replace(/`/g, '').replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/^\s*\|\s*|\s*\|\s*$/g, '').replace(/\s*\|\s*/g, ' ').trim();
 }
 
 export function decisionRows(id, readme, d) {
@@ -29,17 +32,16 @@ export function decisionRows(id, readme, d) {
   ];
 }
 
-export function DecisionList({ rows }) {
+export function DecisionList({ rows, id }) {
   return (
-    <dl className="rb-stack rb-decision-list">
-      {rows.map(([title, value, [action, to]]) => (
-        <div className="rb-decision-item" key={title}>
-          <dt className="krds-text-body-small-bold">{title}</dt>
-          <dd className="krds-text-body-xsmall rb-subtle">{value}</dd>
-          <dd><Link className="krds-link krds-text-body-small" to={to}>{action}</Link></dd>
-        </div>
-      ))}
-    </dl>
+    <>
+      <dl className="rb-decision-list">
+        {rows.map(([title, value]) => (
+          <InfoPair key={title} label={title}><FoldText>{value}</FoldText></InfoPair>
+        ))}
+      </dl>
+      {id ? <p className="rb-dock-more"><Link className="krds-link" to={`/projects/${id}/use`}>{u.Dock_allUsage}</Link></p> : null}
+    </>
   );
 }
 
@@ -48,7 +50,7 @@ export function DecisionBlock({ id, readme, d, headingId = 'decision-title' }) {
   return (
     <section data-figma="decision-panel" className="rb-about-block" aria-labelledby={headingId}>
       <h2 id={headingId} className="krds-text-body-small-bold">{t.P04_25}</h2>
-      {d.data ? <DecisionList rows={decisionRows(id, readme, d.data)} /> : <p className="krds-text-body-xsmall rb-subtle" role="status">{d.state === 'Error' ? d.error : t.P10_1}</p>}
+      {d.data ? <DecisionList id={id} rows={decisionRows(id, readme, d.data)} /> : <p className="krds-text-body-xsmall rb-subtle" role="status">{d.state === 'Error' ? d.error : t.P10_1}</p>}
     </section>
   );
 }

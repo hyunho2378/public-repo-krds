@@ -45,6 +45,17 @@
       if (lastW <= fs * 4 && lastWord.length <= 4 && text.includes(' ')) out.push(['K', `${name(e)} 마지막 줄 "${lastWord}"`]);
     }
   }
+  // P 정보 패널(UX-007 14장): 접힌 글은 3줄(소개 4줄) 이하, 값 열 폭은 쌍마다 같아야 한다, 행마다 링크 열이 없어야 한다
+  for (const tx of document.querySelectorAll('.rb-fold-text:not(.is-open)')) {
+    if (!shown(tx)) continue;
+    const lh = parseFloat(getComputedStyle(tx).lineHeight);
+    const n = Math.round(tx.clientHeight / lh);
+    const max = tx.closest('.rb-dock-intro') ? 4 : 3;
+    if (n > max) out.push(['P', `접힌 글 ${n}줄(최대 ${max}) "${tx.textContent.trim().slice(0, 10)}"`]);
+  }
+  const pw = [...document.querySelectorAll('.rb-dock-list .rb-pair-value')].filter(shown).map((e) => e.getBoundingClientRect().width);
+  if (pw.length > 1 && Math.max(...pw) - Math.min(...pw) > 2) out.push(['P', `값 열 폭 불일치 ${Math.round(Math.min(...pw))}~${Math.round(Math.max(...pw))}`]);
+  if (document.querySelector('.rb-dock-list .rb-pair > dd + dd')) out.push(['P', '행마다 링크 열 있음']);
   // B 겹침: 형제 상자가 서로 겹침(둘 다 글자 포함, 흐름 안 요소)
   const flow = (e) => { const cs = getComputedStyle(e); return (cs.position === 'static' || cs.position === 'relative') && cs.display !== 'inline'; };
   let pairs = 0;

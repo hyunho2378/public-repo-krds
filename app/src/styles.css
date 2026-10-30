@@ -299,3 +299,19 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 
 /* UX/12 장식 점검: 상태 전환의 개수는 GitHub처럼 알약 없이 숫자만, 이미지 대체 글자는 알약 없이 글자만 */
 .rb-statetab-count { padding: 0; background: none; border-radius: 0; color: var(--krds-color-text-subtle); }
+
+/* UX-007 14장: 정보 패널과 판단 정보는 라벨(13 보조색) 위, 값(15) 아래의 세로 쌍. 긴 글은 3줄(소개 4줄)까지 보이고 '더보기'로 펼친다 */
+.rb-dock-list, .rb-decision-list { display: flex; flex-direction: column; gap: var(--krds-gap-5); margin: 0; }
+.rb-pair { display: flex; flex-direction: column; gap: var(--krds-gap-1); margin: 0; min-width: 0; }
+.rb-pair-label { margin: 0; color: var(--krds-color-text-subtle); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
+.rb-pair-value { margin: 0; min-width: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.rb-fold { display: flex; flex-direction: column; align-items: flex-start; gap: var(--krds-gap-1); min-width: 0; width: 100%; }
+.rb-fold-text { margin: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--rb-fold-lines, 3); line-clamp: var(--rb-fold-lines, 3); overflow: hidden; overflow-wrap: anywhere; }
+.rb-fold-text.is-open { display: block; -webkit-line-clamp: unset; line-clamp: unset; overflow: visible; }
+.rb-fold-btn { padding: 0; border: 0; background: none; white-space: nowrap; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: var(--krds-number-3); }
+.rb-fold-checks { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--krds-gap-1); }
+.rb-dock-more { margin: 0; }
+
+/* 도킹 패널이 열려도 본문 왼쪽 선은 머리글, 탭 줄과 같은 컨테이너 왼쪽이다. 본문 영역과 패널을 컨테이너 안에 함께 가운데 둔다(패널은 컨테이너 오른쪽 끝) */
+.rb-work { width: 100%; max-width: calc(var(--rb-container-w) + var(--rb-page-pad) * 2); margin-inline: auto; box-sizing: border-box; }
+.rb-work > .rb-shell { max-width: none; margin-inline: 0; flex: 1 1 auto; min-width: 0; }

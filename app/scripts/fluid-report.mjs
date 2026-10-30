@@ -29,7 +29,8 @@ md += `- 범위: 경로 ${first.paths}개 x 폭 ${first.widths}단계(${first.wi
 md += `- 메뉴 열림: 대표 ${first.menuPaths?.length || 0}개 경로(${(first.menuPaths || []).join(', ')}), 폭 ${first.menuWidths}단계, 메뉴 ${first.menuOpened}번 열어 높이 32/한 줄/폭 160~320/가장자리 12 검사\n`;
 md += `- 큰 폭: ${first.centered || ''}\n`;
 md += `- 결과: 위반(A 넘침, B 겹침, C 한 글자 줄바꿈, D 두 줄 쪼개짐, E 왼쪽 선, F 잘림) ${bad.length}건, 메뉴 위반 ${menuViolations.length}건. 참고(K 마지막 줄 한 어절) ${info.length}종\n\n`;
-md += `## 위반\n\n`;
+if (first.dock) md += `- 정보 패널(UX-007 14장): ${first.dock.note} (${first.dock.states}단계, 위반 ${first.dock.violations}건). 대표 스크린샷: ${(first.dock.shots || []).map((s) => `fluid_check/${s}`).join(', ')}\n`;
+md += `\n## 위반\n\n`;
 if (!bad.length && !menuViolations.length) md += `없음.\n\n`;
 else {
   md += `| 폭 구간 | 경로 | 종류 | 내용 | 스크린샷 |\n|---|---|---|---|---|\n`;

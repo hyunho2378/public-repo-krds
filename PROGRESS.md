@@ -37,3 +37,11 @@
 
 ### 18. 로그인 로고 120, 폭 점검 전체 실행, 가입 -> 등록
 - 로그인 중심 y 차이 0.1, 위아래 간격 같음, 61경로 x 291폭 x 높이 600/900(35,502단계) 위반 0, 메뉴 1,474번 열어 위반 0, 2560/3840 컨테이너 가운데, fluid-report.mjs, UX/10
+
+## 2026. 10. 30. Figma R 페이지 분할 (Figma 갈래)
+- Figma 'Screens / R Repository'를 'Screens / R1 Repository (R-01~R-15)'(같은 페이지 id 11061:89541)와 'Screens / R2 Repository (R-16~R-30)'(새 id 11126:555821)로 나눔. 세트 노드 id는 바뀌지 않음(이동 전후 30세트 id 같음 확인).
+- 코드 갈래가 읽는 값: code_plan/figma_boxes/ 파일 이름 규칙(화면번호_폭_auth.json)과 상자 이름은 그대로. 바뀐 것은 Figma 페이지 이름뿐이며 code_plan/figma_name_map.json의 pages, screens[].page/pageName, screenPages에 반영. figma_scripts/export_boxes.js, norm_lib.js의 페이지 이름 예시도 갱신.
+- 변형 속성 이름은 앞서 Breakpoint, Auth, Role, Panel(대문자)로 바뀜. figma_boxes JSON 안 variant 문자열도 대문자 속성 이름을 씀(breakpoint, auth 필드 값은 그대로).
+
+### 19. 정보 패널 쌍 형식과 접기, 도킹 컨테이너, 비교 이미지 24장, 폭 점검 재실행
+- DockInfo/DecisionList를 라벨 위/값 아래 쌍 + FoldText(3줄, 소개 4줄)로, 행 링크 제거 후 맨 아래 한 줄. 도킹 패널을 컨테이너 안에 두어 본문 왼쪽 선 유지. fluid-inspect에 P 검사. 비교 이미지 12쌍 x 1440/1920 재생성

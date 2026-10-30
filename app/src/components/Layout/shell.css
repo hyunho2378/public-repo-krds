@@ -295,13 +295,6 @@
 .rb-dock-info { display: flex; flex-direction: column; gap: var(--krds-gap-6); }
 .rb-dock-intro { margin: 0; overflow-wrap: anywhere; }
 .rb-dock-counts { display: flex; flex-wrap: wrap; gap: var(--krds-gap-2) var(--krds-gap-6); list-style: none; margin: 0; padding: 0; }
-.rb-dock-list { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; margin: 0; }
-.rb-dock-row > dd.rb-dock-value, .rb-dock-row > dd.rb-dock-link { padding-inline-start: var(--krds-padding-6); }
-.rb-dock-row { display: contents; }
-.rb-dock-row > dt, .rb-dock-row > dd { display: flex; align-items: center; min-height: var(--rb-row-h); margin: 0; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); text-align: start; }
-.rb-dock-row > dt { color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); white-space: nowrap; }
-.rb-dock-value { overflow-wrap: anywhere; }
-.rb-dock-link { white-space: nowrap; font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
 @media (max-width: 767px) {
   .rb-work { flex-direction: column; }
   .rb-dock { position: fixed; inset-inline: 0; bottom: 0; top: auto; width: auto; height: 70dvh; z-index: 95; border-inline-start: 0; border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium3) var(--krds-radius-medium3) 0 0; }

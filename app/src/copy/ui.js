@@ -70,4 +70,7 @@ export const u = {
   Tip_star: "챙겨 볼 저장소 표시",
   Tip_usage: "이 도구를 써 본 기관의 기록",
   Login_moisAlt: "행정안전부",
+  Fold_more: "더보기",
+  Fold_less: "접기",
+  Dock_allUsage: "사용 방법 전체 보기",
 };
