@@ -1,6 +1,7 @@
 // Figma: Repo/Toolbar, Repo/CommitBar, Repo/FileTable, Repo/Readme, Repo/About. GitHub와 GitLab 저장소 첫 화면 배치(D-04 개정).
 import { u } from '../../copy/ui';
 import { newWindow } from '../Layout/newWindow';
+import { toast } from '../Feedback/Toast';
 import { IconButton } from '../Action/IconButton';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -26,6 +27,7 @@ function useCopy() {
   const copy = async (text) => {
     await navigator.clipboard.writeText(text);
     setNote(t.Home_copied);
+    toast(t.Home_copied);
     setTimeout(() => setNote(''), 2000);
   };
   return [note, copy];

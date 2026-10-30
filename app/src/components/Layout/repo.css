@@ -89,7 +89,8 @@
 .rb-prow-title a { color: var(--krds-color-text-basic); text-decoration: none; overflow-wrap: anywhere; }
 .rb-prow-title a:hover { text-decoration: underline; }
 .rb-prow-title .rb-icon { flex: none; width: var(--krds-number-8); height: var(--krds-number-8); color: var(--krds-color-text-subtle); }
-.rb-prow-desc { margin: 0; color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; overflow-wrap: anywhere; max-width: calc(var(--krds-number-21) * 8); }
+.rb-prow-desc { margin: 0; color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); max-width: calc(var(--krds-number-21) * 8); }
+.rb-prow-desc .rb-fold-btn { font-size: var(--krds-font-size-body-xsmall); }
 .rb-prow-topics { margin: var(--krds-gap-1) 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-2); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
 .rb-topic { white-space: nowrap; }
 .rb-prow-side { display: flex; flex-direction: column; align-items: flex-end; gap: var(--krds-gap-1); }

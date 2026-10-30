@@ -55,7 +55,7 @@ export function projectMenu(id, { signedIn, role, issues, webUrl } = {}) {
       item(u.G_pipelines, `${p}/pipelines`, { hint: t.Side_hintPipeline }),
       item(u.G_usage, `${p}/use`, { hint: t.Side_hintUse, extra: true }),
     ] },
-    { name: u.G_more, icon: 'view_all', items: [
+    { name: u.G_more, icon: 'view_all', sep: true, items: [
       item(t.ProjectTabs_1, `${p}/about`),
       item(t.ProjectTabs_5, `${p}/feedback`, { hint: t.Side_hintFeedback }),
       item(t.Law_title, `${p}/law-alerts`),
@@ -154,7 +154,7 @@ function Group({ group, tipApi }) {
   }
   const listId = 'rb-side-g-' + group.name.replace(/\s/g, '');
   return (
-    <div className={'rb-side-group' + (group.extra ? ' is-extra' : '')}>
+    <div className={'rb-side-group' + (group.extra && !group.sep ? ' is-extra' : '') + (group.sep ? ' has-sep' : '')}>
       <button type="button" className="rb-side-group-btn" aria-expanded={open} aria-controls={listId} onClick={() => setOpen(!open)}>
         <Icon name={group.icon} />
         <span className="rb-side-text">{group.name}</span>

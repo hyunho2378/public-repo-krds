@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
+import { Toasts } from '../components/Feedback/Toast';
 import { ShortcutsDialog } from '../components/Feedback/ShortcutsDialog';
 import { GlobalBar } from '../components/Identity/GlobalBar';
 import { Sidebar } from '../components/Navigation/Sidebar';
@@ -14,14 +15,20 @@ import { u } from '../copy/ui';
 import { breakpoint, useBoolPref, useMinWidth } from './prefs';
 import '../components/Layout/shell.css';
 
-/** 화면이 바뀌면 맨 위로, 본문에 초점(화면 낭독기가 새 화면을 읽도록). 좁은 화면 서랍도 닫는다. */
+/** 화면이 바뀌면 맨 위로, 본문에 초점(화면 낭독기가 새 화면을 읽도록). 좁은 화면 서랍도 닫는다.
+ *  D-22: 뒤로/앞으로 가기(POP)에서는 그 화면의 스크롤 위치를 되살린다(이 탭에서만 기억). */
+const scrollMemo = new Map();
 function FocusOnNavigate({ onNavigate }) {
-  const { pathname } = useLocation();
+  const { pathname, key } = useLocation();
+  const type = useNavigationType();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const y = type === 'POP' ? scrollMemo.get(key) : undefined;
+    if (y != null) requestAnimationFrame(() => window.scrollTo(0, y));
+    else window.scrollTo(0, 0);
     document.getElementById('main')?.focus({ preventScroll: true });
     onNavigate();
-  }, [pathname, onNavigate]);
+    return () => { scrollMemo.set(key, window.scrollY); };
+  }, [pathname, key, type, onNavigate]);
   return null;
 }
 
@@ -106,6 +113,7 @@ function Shell() {
         </div>
       </div>
       {keys ? <ShortcutsDialog onClose={() => setKeys(false)} /> : null}
+      <Toasts />
     </>
   );
 }

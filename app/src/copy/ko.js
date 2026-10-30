@@ -792,11 +792,15 @@ export const t = {
     countLabel: (label, n) => `${label} ${n}`,
     relativeDate: (iso) => {
       const d = new Date(iso); const now = new Date();
-      const days = Math.floor((now - d) / 86400000);
+      // 공공 깃랩과 같은 단위: 분, 시간, 일, 주, 개월, 년
+      const min = Math.floor((now - d) / 60000);
+      const days = Math.floor(min / 1440);
       let rel;
-      if (days <= 0) rel = '오늘';
-      else if (days === 1) rel = '1일 전';
-      else if (days < 30) rel = `${days}일 전`;
+      if (min < 1) rel = '방금 전';
+      else if (min < 60) rel = `${min}분 전`;
+      else if (min < 1440) rel = `${Math.floor(min / 60)}시간 전`;
+      else if (days < 7) rel = `${days}일 전`;
+      else if (days < 30) rel = `${Math.floor(days / 7)}주 전`;
       else if (days < 365) rel = `${Math.floor(days / 30)}개월 전`;
       else rel = `${Math.floor(days / 365)}년 전`;
       const full = isNaN(d) ? iso : `${d.getFullYear()}. ${d.getMonth() + 1}. ${d.getDate()}.`;

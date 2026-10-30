@@ -9,6 +9,7 @@ import { Menu } from '../Navigation/Menu';
 import { iconBtnClass } from '../Action/IconButton';
 import { cleanDescription } from './description';
 import { newWindow } from './newWindow';
+import { FoldText } from './FoldText';
 
 function Stat({ icon, label, n, href }) {
   return (
@@ -35,7 +36,7 @@ export function ProjectRow({ p, mrs, issues }) {
           <Link to={`/projects/${p.id}`}>{owner ? `${owner} / ` : ''}{p.name}</Link>
           <Icon name="globe" label={u.X_public} />
         </p>
-        {desc ? <p className="rb-prow-desc">{desc}</p> : null}
+        {desc ? <FoldText lines={2} className="rb-prow-desc">{desc}</FoldText> : null}
         {topics.length ? (
           <p className="rb-prow-topics">
             <span className="rb-subtle">{u.X_topics}</span>

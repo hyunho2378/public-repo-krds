@@ -9,7 +9,20 @@ export function Menu({ label, button, btnClass = 'krds-btn small tertiary', btnP
   const wrap = useRef(null);
   const btn = useRef(null);
   const panel = useRef(null);
+  // D-22: 닫힐 때 150ms 동안 내려가며 사라진 뒤 지운다(열릴 때보다 짧게)
+  const [leaving, setLeaving] = useState(false);
   const close = () => setOpen(false);
+  const wasOpen = useRef(false);
+  useEffect(() => {
+    if (open) { wasOpen.current = true; setLeaving(false); return undefined; }
+    if (!wasOpen.current) return undefined;
+    wasOpen.current = false;
+    const ms = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--rb-motion-base')) || 0) * 0.75;
+    if (!ms) return undefined;
+    setLeaving(true);
+    const timer = setTimeout(() => setLeaving(false), ms);
+    return () => clearTimeout(timer);
+  }, [open]);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -30,7 +43,7 @@ export function Menu({ label, button, btnClass = 'krds-btn small tertiary', btnP
 
   // 그린 뒤 크기를 재서 위치를 정한다. 가장자리 여백은 CSS(--rb-menu-edge)를 scroll-margin으로 읽는다
   useLayoutEffect(() => {
-    if (!open) { setPos(null); return; }
+    if (!open) return;
     const b = btn.current.getBoundingClientRect();
     const p = panel.current;
     const edge = parseFloat(getComputedStyle(p).scrollMarginTop) || 0;
@@ -60,8 +73,8 @@ export function Menu({ label, button, btnClass = 'krds-btn small tertiary', btnP
         {button}
         {toggle ? <i className="svg-icon ico-toggle" aria-hidden="true" /> : null}
       </button>
-      {open ? (
-        <div ref={panel} className={`rb-menu ${panelClass}`} role="menu" aria-label={label} style={pos ? { left: pos.left, top: pos.top, maxHeight: pos.maxHeight } : { left: 0, top: 0, visibility: 'hidden' }}>
+      {open || leaving ? (
+        <div ref={panel} className={`rb-menu ${panelClass}${leaving && !open ? ' is-leaving' : ''}`} aria-hidden={leaving && !open ? true : undefined} role="menu" aria-label={label} style={pos ? { left: pos.left, top: pos.top, maxHeight: pos.maxHeight } : { left: 0, top: 0, visibility: 'hidden' }}>
           {typeof children === 'function' ? children(close) : children}
         </div>
       ) : null}

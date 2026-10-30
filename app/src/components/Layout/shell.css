@@ -323,3 +323,12 @@
 .rb-keys-list { display: flex; flex-direction: column; gap: var(--krds-gap-2); margin: 0; }
 .rb-keys-row { display: grid; grid-template-columns: calc(var(--krds-number-12) * 2) minmax(0, 1fr); gap: var(--krds-gap-4); align-items: baseline; }
 .rb-keys-row dt, .rb-keys-row dd { margin: 0; }
+/* 공공 깃랩 03: '추가 기능' 아래 구분선 */
+.rb-side-group.has-sep { padding-bottom: var(--krds-gap-3); margin-bottom: var(--krds-gap-3); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+/* 더보기 펼침: 펼친 글이 opacity로 이어서 나타난다(D-22, 높이 직접 애니메이션 금지) */
+.rb-fold-text.is-open { animation: rb-fade-in var(--rb-motion-base) var(--rb-motion-ease) both; }
+.rb-menu.is-leaving { animation: rb-sink var(--rb-motion-exit-base) var(--rb-motion-exit-ease) both; pointer-events: none; }
+@keyframes rb-sink { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateY(var(--rb-menu-rise)); } }
+/* D-22 토스트(KRDS 토스트 자리, 오른쪽 아래, 4초) */
+.rb-toasts { position: fixed; right: var(--rb-panel-gap); bottom: var(--rb-panel-gap); z-index: 120; display: flex; flex-direction: column; gap: var(--krds-gap-2); pointer-events: none; }
+.rb-toast { padding: var(--krds-padding-4) var(--krds-padding-5); border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-inverse); color: var(--krds-color-text-inverse); font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); animation: rb-rise var(--rb-motion-base) var(--rb-motion-ease) both; }
