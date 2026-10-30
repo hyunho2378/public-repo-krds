@@ -9,7 +9,10 @@
    | 왼쪽 메뉴 너비(프로젝트 안) | 296px | R-01 sidebar.w | KRDS에 없음. number-12(32) x 9 + number-5(8) |
    | 왼쪽 메뉴 너비(전역) | 264px | G-01 sidebar.w | KRDS에 없음. number-12(32) x 8 + number-5(8) |
    | 머리 검색칸 높이 | 48px | G-01 global-search.h | --krds-number-16 (4.8rem) |
-   | 머리 좌우 묶음 너비 | 252px | global-search.x - 좌우 여백 | KRDS에 없음. number-12(32) x 7 + number-11(28) |
+   | 머리 왼쪽 묶음 최소 너비 | 252px | 로고와 탐색이 들어가는 최소 폭 | KRDS에 없음. number-12(32) x 7 + number-11(28) |
+   | 머리 오른쪽 묶음 너비 | 288px | Figma 확정(2026. 10. 30.) | number-21(96) x 3 |
+   | 저장소 오른쪽 버튼 묶음 너비 | 288px | Figma repo-actions.w | number-21(96) x 3 |
+   | 머리 검색칸 너비 | 640px | Figma 확정. 1920에서 x 640 | KRDS에 없음. number-21(96) x 6 + number-12(32) x 2 |
    | 정보 영역 너비 | 320px | info-panel.w | KRDS에 없음. number-12(32) x 10 |
    | 머리 높이 | 65px | header.h | KRDS에 없음. KRDS 헤더 기본 높이를 Figma가 그대로 씀 |
    | 공식 배너 높이 | 32px | masthead.h | --krds-number-12 (3.2rem) |
@@ -23,6 +26,9 @@
   --rb-sidebar-w-project: calc(var(--krds-number-12) * 9 + var(--krds-number-5));
   --rb-search-h: var(--krds-number-16);
   --rb-gbar-side: calc(var(--krds-number-12) * 7 + var(--krds-number-11));
+  --rb-gbar-right: calc(var(--krds-number-21) * 3);
+  --rb-actions-w: calc(var(--krds-number-21) * 3);
+  --rb-gbar-search-w: calc(var(--krds-number-21) * 6 + var(--krds-number-12) * 2);
   --rb-info-w: calc(var(--krds-number-12) * 10);
   --rb-header-h: calc(var(--krds-number-12) * 2 + var(--krds-number-1));
 }

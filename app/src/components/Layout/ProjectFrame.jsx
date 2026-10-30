@@ -110,7 +110,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, data, children, state, a
       <div className={'rb-repo-layout' + (aside ? ' has-aside' : '')}>
         <div className="rb-repo-main" data-figma="main">
           <div className="rb-repo-top">
-            <Breadcrumb items={[[t.Header_2, '/search'], [organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project))}`], [project.name, tab ? `/projects/${data.id}` : null], ...(tab ? [[tabLabel]] : [])]} />
+            <Breadcrumb home={false} items={[[organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project))}`], [project.name, tabLabel ? `/projects/${data.id}` : null], ...(tabLabel ? [[tabLabel]] : [])]} />
             <RepoHeader project={project} id={data.id} />
             <ProjectTabs id={data.id} active={tab} />
           </div>

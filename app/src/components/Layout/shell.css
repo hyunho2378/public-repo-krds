@@ -11,13 +11,13 @@
 /* Figma: 왼쪽 묶음, 검색칸, 오른쪽 묶음 3칸. 좌우 묶음 너비가 같아 검색칸이 가운데에 온다 */
 .rb-gbar-in {
   display: grid;
-  grid-template-columns: var(--rb-gbar-side) minmax(0, 1fr) var(--rb-gbar-side);
+  grid-template-columns: minmax(var(--rb-gbar-side), 1fr) minmax(0, var(--rb-gbar-search-w)) minmax(var(--rb-gbar-right), 1fr);
   align-items: center;
   column-gap: 0;
   padding-inline: var(--rb-page-pad);
   height: var(--rb-header-h);
 }
-.rb-gbar-left { display: flex; align-items: center; gap: var(--krds-gap-3); flex: none; width: var(--rb-gbar-side); }
+.rb-gbar-left { display: flex; align-items: center; gap: var(--krds-gap-3); flex: none; }
 .rb-gbar-brand { display: flex; align-items: center; gap: var(--krds-gap-3); color: var(--krds-color-text-basic); text-decoration: none; flex: none; }
 .rb-gbar-mark {
   display: grid;
@@ -82,7 +82,7 @@
   color: var(--krds-color-text-subtle);
   font-size: var(--krds-font-size-detail-small);
 }
-.rb-gbar-right { display: flex; align-items: center; justify-content: flex-end; gap: var(--krds-gap-2); flex: none; width: var(--rb-gbar-side); }
+.rb-gbar-right { display: flex; align-items: center; justify-content: flex-end; gap: var(--krds-gap-2); flex: none; width: var(--rb-gbar-right); }
 .rb-gbar-drop { position: relative; }
 .rb-gbar-menu { position: absolute; right: 0; top: 100%; z-index: 70; min-width: var(--krds-size-width-menu, 24ch); }
 
@@ -173,3 +173,17 @@
 .krds-breadcrumb-wrap { padding-top: 0; margin: 0; }
 /* 사이드바 바깥 상자와 안쪽 메뉴는 같은 크기다(Figma 상자 기준) */
 .rb-side-wrap { min-width: 0; }
+
+/* 프로젝트 경로(만든 사람 / 프로젝트 / 화면): 공공 깃랩처럼 슬래시로 나눈다. Figma 경로 상자와 같은 폭을 맞추려고 구분자 아이콘 대신 글자를 쓴다 */
+.krds-breadcrumb-wrap.is-path .breadcrumb li:not(:last-child)::after {
+  content: "/";
+  width: auto;
+  height: auto;
+  margin-left: 0;
+  background: none;
+  -webkit-mask: none;
+  mask: none;
+  transform: none;
+  color: var(--krds-color-text-subtle);
+}
+.krds-breadcrumb-wrap.is-path .breadcrumb { gap: 0; }

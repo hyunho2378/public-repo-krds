@@ -7,7 +7,7 @@
 .rb-repo-name .rb-repo-org { color: var(--krds-color-text-subtle); font-weight: inherit; }
 .rb-repo-desc { color: var(--krds-color-text-subtle); word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .rb-repo-meta { color: var(--krds-color-text-subtle); }
-.rb-repo-actions { display: flex; flex: none; flex-wrap: wrap; gap: var(--krds-gap-2); align-items: center; }
+.rb-repo-actions { display: flex; flex: none; flex-wrap: wrap; gap: var(--krds-gap-2); align-items: center; justify-content: flex-end; width: var(--rb-actions-w); }
 .rb-repo-actions .krds-btn { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
 @media (max-width: 767px) {
   .rb-repo-title { flex-basis: 100%; }

@@ -2,13 +2,15 @@
 import { t } from '../../copy/ko';
 import { Link } from 'react-router-dom';
 
-export function Breadcrumb({ items }) {
+export function Breadcrumb({ items, home = true }) {
   return (
-    <nav data-figma="breadcrumb" className="krds-breadcrumb-wrap" aria-label={t.Breadcrumb_1}>
+    <nav data-figma="breadcrumb" className={'krds-breadcrumb-wrap' + (home ? '' : ' is-path')} aria-label={t.Breadcrumb_1}>
       <ol className="breadcrumb">
-        <li className="home">
-          <Link className="txt" to="/">{t.Breadcrumb_2}</Link>
-        </li>
+        {home && (
+          <li className="home">
+            <Link className="txt" to="/">{t.Breadcrumb_2}</Link>
+          </li>
+        )}
         {items.map(([label, to], i) => (
           <li key={label + i}>
             {to ? (

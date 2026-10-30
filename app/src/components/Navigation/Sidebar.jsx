@@ -29,7 +29,7 @@ export function globalGroups() {
       [t.Mcp_title, '/mcp', 'component'],
     ]],
     [t.Side_operate, [
-      [t.Insights_title, '/insights', 'multi'],
+      [t.Insights_title, '/insights', 'analytics'],
     ]],
   ];
 }
@@ -38,43 +38,43 @@ export function globalGroups() {
 export function projectGroups(id, { signedIn, role } = {}) {
   const p = `/projects/${id}`;
   const manage = [
-    [t.P22_activity, `${p}/activity`, 'time'],
+    [t.P22_activity, `${p}/activity`, 'ecg_heart'],
     [t.P22_members, `${p}/members`, 'myinfo'],
     [t.P22_labels, `${p}/labels`, 'bookmarks'],
   ];
   const groups = [
     [t.Side_pinned, [
       [t.Tab_code, p, 'document', true],
-      [t.ProjectTabs_1, `${p}/about`, 'faq'],
-      [t.ProjectTabs_2, `${p}/use`, 'help', false, t.Side_hintUse],
+      [t.ProjectTabs_1, `${p}/about`, 'identity'],
+      [t.ProjectTabs_2, `${p}/use`, 'play', false, t.Side_hintUse],
     ]],
     [t.Side_manage, manage],
     [t.Side_plan, [
-      [t.ProjectTabs_5, `${p}/feedback`, 'edit', false, t.Side_hintFeedback],
-      [t.Side_issues, `${p}/issues`, 'attach', false, t.Side_hintIssue],
-      [t.P22_boards, `${p}/boards`, 'multi'],
-      [t.P22_milestones, `${p}/milestones`, 'check_circle'],
-      [t.P22_wiki, `${p}/wiki`, 'document'],
+      [t.ProjectTabs_5, `${p}/feedback`, 'inquiry', false, t.Side_hintFeedback],
+      [t.Side_issues, `${p}/issues`, 'guide_check', false, t.Side_hintIssue],
+      [t.P22_boards, `${p}/boards`, 'component'],
+      [t.P22_milestones, `${p}/milestones`, 'calendar'],
+      [t.P22_wiki, `${p}/wiki`, 'document_fill'],
     ]],
     [t.Side_code, [
       [t.RepoSub_files, `${p}/code`, 'new_folder'],
       [t.ProjectTabs_4, `${p}/changes`, 'time', false, t.Side_hintCommit],
-      [t.RepoSub_branches, `${p}/branches`, 'multi', false, t.Side_hintBranch],
-      [t.RepoSub_mr, `${p}/merge-requests`, 'component', false, t.Side_hintMr],
-      [t.Compare_title, `${p}/compare`, 'reset'],
-      [t.P22_snippets, `${p}/snippets`, 'file'],
+      [t.RepoSub_branches, `${p}/branches`, 'share', false, t.Side_hintBranch],
+      [t.RepoSub_mr, `${p}/merge-requests`, 'edit', false, t.Side_hintMr],
+      [t.Compare_title, `${p}/compare`, 'filter'],
+      [t.P22_snippets, `${p}/snippets`, 'attach'],
     ]],
     [t.Side_deploy, [
       [t.RepoSub_releases, `${p}/releases`, 'upload', false, t.Side_hintRelease],
-      [t.P22_packages, `${p}/packages`, 'component'],
-      [t.P22_pipelines, `${p}/pipelines`, 'reset', false, t.Side_hintPipeline],
+      [t.P22_packages, `${p}/packages`, 'scrap'],
+      [t.P22_pipelines, `${p}/pipelines`, 'component', false, t.Side_hintPipeline],
       [t.Jobs_title, `${p}/jobs`, 'check_circle'],
     ]],
     [t.Side_analyze, [
-      [t.RepoSub_people, `${p}/contributors`, 'myinfo'],
-      [t.Graph_title, `${p}/graph`, 'multi'],
+      [t.RepoSub_people, `${p}/contributors`, 'nonmember'],
+      [t.Graph_title, `${p}/graph`, 'analytics'],
       [t.Law_title, `${p}/law-alerts`, 'bell'],
-      [t.Handover_title, `${p}/handover`, 'document'],
+      [t.Handover_title, `${p}/handover`, 'file'],
     ]],
   ];
   // 프로젝트 관리는 권한이 있을 때만 보인다(D-10 role).
