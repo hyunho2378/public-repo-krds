@@ -4,6 +4,7 @@
 import { createCatalog } from '@server/catalog-core.js';
 import { classify, referenceDates, execution, publication, card, taxonomy } from '@server/analysis.js';
 import { repository } from '@server/repository.js';
+import { setSnapshotOn, snapshotGet } from './snapshot.js';
 
 const UPSTREAM = 'https://gitlab.aigov.go.kr';
 const DATA = import.meta.env.BASE_URL + 'data/';
@@ -28,45 +29,45 @@ function catalog() {
   return catalogPromise;
 }
 
-const repo = repository({ upstream: UPSTREAM, fetchImpl: (...a) => fetch(...a) });
+// 분석 기능(카드, 공개 준비 점검 등)이 쓰는 원문 읽기도 같은 방식으로 저장된 자료로 바꾼다
+async function fetchOrSnapshot(url, init) {
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), FETCH_TIMEOUT_MS);
+  try {
+    const r = await fetch(url, { ...init, signal: ctl.signal });
+    if (r.ok || (r.status < 500 && r.status !== 429)) return r;
+  } catch { /* 저장된 자료로 */ } finally { clearTimeout(timer); }
+  const u = new URL(url);
+  try {
+    const res = await snapshotGet(u.pathname.replace(/^\/api\/v4\//, ''), u.search.slice(1));
+    const body = typeof res.data === 'string' ? res.data : JSON.stringify(res.data);
+    return new Response(body, { status: 200, headers: { 'content-type': typeof res.data === 'string' ? 'text/plain' : 'application/json', ...(res.pagination?.total != null ? { 'x-total': String(res.pagination.total) } : {}) } });
+  } catch {
+    return new Response('{}', { status: 404 });
+  }
+}
+const repo = repository({ upstream: UPSTREAM, fetchImpl: fetchOrSnapshot });
 
 // 서버 app.js와 같은 허용 경로
 const allowed = /^(?:groups(?:\/[^/]+(?:\/(?:subgroups|projects|members(?:\/all)?))?)?|topics|projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|compare|commits(?:\/[0-9a-f]{7,40}(?:\/diff)?)?|files\/[^/]+(?:\/(?:raw|blame))?|branches|tags|contributors)|languages|releases|events|wikis|pipelines|jobs|packages|labels|milestones|members(?:\/all)?|boards|snippets|issues(?:\/\d+(?:\/notes)?)?|merge_requests(?:\/\d+(?:\/(?:changes|notes|commits))?)?))?)?)$/;
 
-// 요청마다 시간 제한을 두고, 시간 초과/네트워크 오류/429/5xx는 두 번까지 다시 부른다(속도 제한이면 Retry-After를 따른다).
-const FETCH_TIMEOUT_MS = 12000;
-const FETCH_RETRIES = 2;
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-async function fetchWithRetry(url, raw) {
-  let last;
-  for (let n = 0; n <= FETCH_RETRIES; n++) {
-    const ctl = new AbortController();
-    const timer = setTimeout(() => ctl.abort(), FETCH_TIMEOUT_MS);
-    let delay = 500 * (n + 1);
-    try {
-      const r = await fetch(url, { headers: { Accept: 'application/json' }, signal: ctl.signal });
-      if (r.ok) return { r, data: raw ? await r.text() : await r.json() };
-      if (r.status !== 429 && r.status < 500) throw new StaticError(r.status === 404 ? '자료를 찾을 수 없습니다.' : '공개 저장소 조회 실패', r.status);
-      last = new StaticError(r.status === 429 ? '조회 한도 초과' : '공개 저장소 조회 실패', r.status);
-      const after = Number(r.headers.get('retry-after'));
-      if (after > 0) delay = Math.min(after * 1000, 5000);
-    } catch (e) {
-      if (e instanceof StaticError) throw e;
-      last = new StaticError(e.name === 'AbortError' ? '응답 시간 초과' : '네트워크 오류', e.name === 'AbortError' ? 408 : 0);
-    } finally {
-      clearTimeout(timer);
-    }
-    if (n < FETCH_RETRIES) await wait(delay);
-  }
-  throw last;
-}
+// 공공 깃랩이 6초 안에 답하지 않거나 5xx, 네트워크 오류면 다시 부르지 않고 저장된 자료(snapshot.js)로 바꾼다
+const FETCH_TIMEOUT_MS = 6000;
 
 async function gitlabGet(rest) {
   const [sub, query = ''] = rest.split('?');
   if (!allowed.test(sub)) throw new StaticError('허용 안 된 경로', 400, 'NOT_ALLOWED');
   const raw = sub.endsWith('/raw');
-  const { r, data } = await fetchWithRetry(`${UPSTREAM}/api/v4/${sub}${query ? '?' + query : ''}`, raw);
+  let got;
+  try {
+    got = await fetchOnce(`${UPSTREAM}/api/v4/${sub}${query ? '?' + query : ''}`, raw);
+  } catch (e) {
+    // 점검, 5xx, 네트워크 오류, 시간 초과, 속도 제한: 저장된 자료로
+    if (!e.status || e.status === 408 || e.status === 429 || e.status >= 500) return snapshotGet(sub, query);
+    throw e;
+  }
+  const { r, data } = got;
+  setSnapshotOn(false);
   if (data?.visibility && data.visibility !== 'public') throw new StaticError('공개 자료만 볼 수 있습니다.', 403, 'NOT_PUBLIC');
   return {
     mock: false,
@@ -78,6 +79,22 @@ async function gitlabGet(rest) {
       total: r.headers.get('x-total') ? Number(r.headers.get('x-total')) : null,
     },
   };
+}
+
+/** 한 번만 부른다(6초). 실패하면 상태 코드를 담은 오류 */
+async function fetchOnce(url, raw) {
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), FETCH_TIMEOUT_MS);
+  try {
+    const r = await fetch(url, { headers: { Accept: 'application/json' }, signal: ctl.signal });
+    if (r.ok) return { r, data: raw ? await r.text() : await r.json() };
+    throw new StaticError(r.status === 404 ? '자료를 찾을 수 없습니다.' : '공개 저장소 조회 실패', r.status);
+  } catch (e) {
+    if (e instanceof StaticError) throw e;
+    throw new StaticError(e.name === 'AbortError' ? '응답 시간 초과' : '네트워크 오류', e.name === 'AbortError' ? 408 : 0);
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 const wrap = (feature, data) => ({ mock: false, feature, state: Array.isArray(data.items) && data.items.length === 0 ? 'Empty' : 'Ideal', data });

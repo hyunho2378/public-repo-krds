@@ -105,7 +105,7 @@
 .rb-shell { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; width: 100%; box-sizing: border-box; flex: 1; padding: 0 var(--rb-panel-gap) var(--rb-panel-gap); background: var(--krds-color-surface-gray-subtler); }
 .rb-shell.has-side { grid-template-columns: var(--rb-sidebar-w) minmax(0, 1fr); padding-left: 0; }
 .rb-panel {
-  min-width: 0; box-sizing: border-box; min-height: calc(100dvh - var(--rb-header-h) - var(--rb-masthead-h) - var(--rb-panel-gap));
+  min-width: 0; box-sizing: border-box; min-height: calc(100dvh - var(--rb-header-h) - var(--rb-masthead-h) - var(--rb-top-extra) - var(--rb-panel-gap));
   display: flex; flex-direction: column;
   background: var(--krds-color-surface-white);
   border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light);
@@ -117,11 +117,11 @@
 .rb-main { width: 100%; min-width: 0; padding: 0; }
 .rb-top { position: sticky; top: 0; z-index: 60; }
 #root .rb-top .rb-gbar { position: static; }
-.rb-side-wrap { min-width: 0; align-self: start; position: sticky; z-index: 20; top: calc(var(--rb-header-h) + var(--rb-masthead-h)); }
+.rb-side-wrap { min-width: 0; align-self: start; position: sticky; z-index: 20; top: calc(var(--rb-header-h) + var(--rb-masthead-h) + var(--rb-top-extra)); }
 .rb-side {
   box-sizing: border-box; width: var(--rb-sidebar-w);
   /* D-21 7장: 사이드바 아래 끝 = 본문 판 아래 끝(화면 아래 8 위) */
-  height: calc(100dvh - var(--rb-header-h) - var(--rb-masthead-h) - var(--rb-panel-gap));
+  height: calc(100dvh - var(--rb-header-h) - var(--rb-masthead-h) - var(--rb-top-extra) - var(--rb-panel-gap));
   display: flex; flex-direction: column;
   padding: 0 var(--rb-side-pad-x) var(--rb-side-pad-x);
   background: var(--krds-color-surface-gray-subtler);
@@ -283,7 +283,7 @@
 @media (min-width: 768px) {
   .rb-shell.has-side { display: block; padding-left: var(--rb-panel-gap); }
   .rb-shell.has-side > .rb-side-wrap {
-    position: fixed; left: 0; top: calc(var(--rb-header-h) + var(--rb-masthead-h)); z-index: 20; width: var(--rb-sidebar-w);
+    position: fixed; left: 0; top: calc(var(--rb-header-h) + var(--rb-masthead-h) + var(--rb-top-extra)); z-index: 20; width: var(--rb-sidebar-w);
     transform: translateX(0); visibility: visible;
     transition: transform var(--rb-motion-base) var(--rb-motion-ease), visibility 0s linear 0s;
   }
@@ -341,3 +341,6 @@
   #root .rb-gbar .rb-gbar-user { display: inline-flex; }
   #root .rb-gbar-left .rb-gbar-brand { order: -1; }
 }
+
+/* 공공 깃랩 점검 중 저장된 자료 안내(머리 띠 아래 한 줄, 공지 띠와 같은 모양) */
+.rb-snapband { display: flex; align-items: center; justify-content: center; min-height: var(--rb-masthead-h); padding-inline: var(--rb-gbar-pad-x); background: var(--rb-status-warning); color: var(--krds-color-text-basic-static, var(--krds-color-light-gray-90)); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

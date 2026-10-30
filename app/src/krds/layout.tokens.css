@@ -36,6 +36,8 @@
   --rb-col-gap: var(--krds-gap-9);
   /* D-21 시스템 머리 띠 24 */
   --rb-masthead-h: var(--krds-number-10);
+  /* 공공 깃랩 점검 안내 띠가 있을 때 상단 묶음이 늘어나는 높이(평소 0) */
+  --rb-top-extra: calc(var(--krds-number-10) * 0);
   /* D-21 왼쪽 세로 바 240(공공 깃랩 약 240) = 96x2 + 48 */
   --rb-sidebar-w: calc(var(--krds-number-21) * 2 + var(--krds-number-16));
   --rb-sidebar-w-project: var(--rb-sidebar-w);
@@ -212,3 +214,5 @@ html.rb-font-large {
   :root { --rb-motion-fast: 0ms; --rb-motion-base: 0ms; --rb-motion-slow: 0ms; --rb-tip-delay: 0ms; }
 }
 html.rb-reduce-motion { --rb-motion-fast: 0ms; --rb-motion-base: 0ms; --rb-motion-slow: 0ms; --rb-tip-delay: 0ms; }
+
+html.rb-snap-on { --rb-top-extra: var(--krds-number-10); }

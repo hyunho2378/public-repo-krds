@@ -26,7 +26,7 @@ export async function request(path, { signal, ...options } = {}) {
     try {
       return await staticRequest(path, options);
     } catch (e) {
-      throw new ApiError(e.message || '자료를 불러오지 못했습니다.', e.status || 500);
+      throw Object.assign(new ApiError(e.message || '자료를 불러오지 못했습니다.', e.status || 500), { code: e.code });
     }
   }
   const ctl = new AbortController();

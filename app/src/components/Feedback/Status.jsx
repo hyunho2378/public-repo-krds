@@ -1,6 +1,7 @@
 // 데이터 상태 표시. Loading은 KRDS spinner, Error는 KRDS 오류 안내 구조.
 import { phrase } from '../Help/Phrase';
 import { t } from '../../copy/ko';
+import { u } from '../../copy/ui';
 import { Button, LinkButton } from '../Action/Button';
 import './skeleton.css';
 
@@ -11,7 +12,7 @@ export function Skeleton({ widths = SKEL_WIDTHS, inline = false }) {
   return widths.map((w, i) => <span key={i} className={`rb-skel${inline ? ' rb-skel-inline' : ''}`} style={{ width: w }} aria-hidden="true" />);
 }
 
-export function Status({ state, error, retry, status }) {
+export function Status({ state, error, retry, status, code }) {
   if (state === 'Loading') {
     return (
       <div role="status" aria-busy="true" className="rb-skel-group" data-state="Loading">
@@ -20,6 +21,8 @@ export function Status({ state, error, retry, status }) {
       </div>
     );
   }
+  // 공공 깃랩 점검 중 저장된 자료에도 없는 영역: 오류 화면이 아니라 빈 상태 한 줄
+  if (state === 'Error' && code === 'SNAPSHOT_MISSING') return <p className="krds-text-body-small rb-subtle" data-state="Empty">{u.Snap_missing}</p>;
   if (state === 'Error') {
     const notFound = status === 404;
     return (

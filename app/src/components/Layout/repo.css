@@ -145,7 +145,7 @@
 .rb-x-tabs + .rb-x-filter, .rb-x-filter + * { margin-top: calc(var(--rb-filter-gap) - var(--rb-rhythm)); }
 /* 공공 깃랩 02: 프로젝트 정보 열은 스크롤해도 화면에 남는다 */
 @media (min-width: 1024px) {
-  .rb-repo-main.has-info > .rb-repo-info { position: sticky; top: calc(var(--rb-header-h) + var(--rb-masthead-h) + var(--rb-panel-pad-y)); }
+  .rb-repo-main.has-info > .rb-repo-info { position: sticky; top: calc(var(--rb-header-h) + var(--rb-masthead-h) + var(--rb-top-extra) + var(--rb-panel-pad-y)); }
 }
 .rb-card-ai { margin-inline-start: var(--krds-gap-2); color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); }
 

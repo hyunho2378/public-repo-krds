@@ -93,6 +93,9 @@ export const u = {
   Src_license: "이용 조건",
   Src_licenseValue: "공공누리 제1유형(출처 표시)",
   Src_origin: "원본 주소",
+  // 공공 깃랩 점검 중 저장된 자료 대체
+  Snap_band: (d) => `공공 깃랩 점검 중입니다. ${d} 기준으로 저장한 자료를 보여 줍니다.`,
+  Snap_missing: "저장된 자료에 없습니다",
   // D-21 전역 틀: 공공 깃랩 화면 말 그대로
   Sys_band: "AI 정부 실험실 공공 GitLab 저장소",
   Sys_bandBoard: "프로젝트 현황판",

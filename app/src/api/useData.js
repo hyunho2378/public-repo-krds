@@ -32,7 +32,7 @@ export function useData(load, deps, isEmpty = () => false, shape = shapeList) {
         const data = forced ? shape(raw, forced) : raw;
         setResult({ state: isEmpty(data) ? 'Empty' : forced === 'Min' || forced === 'Max' ? forced : 'Ideal', data });
       })
-      .catch((error) => live && setResult({ state: 'Error', error: error.message, status: error.status }));
+      .catch((error) => live && setResult({ state: 'Error', error: error.message, status: error.status, code: error.code }));
     return () => {
       live = false;
     };
