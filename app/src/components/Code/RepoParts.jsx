@@ -1,4 +1,6 @@
 // Figma: Repo/Toolbar, Repo/CommitBar, Repo/FileTable, Repo/Readme, Repo/About. GitHub와 GitLab 저장소 첫 화면 배치(D-04 개정).
+import { u } from '../../copy/ui';
+import { newWindow } from '../Layout/newWindow';
 import { IconButton } from '../Action/IconButton';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -33,7 +35,7 @@ export function BranchSelect({ id, current, branches = [], path }) {
   branches = branches || [];
   const navigate = useNavigate();
   return (
-    <Drop label={t.Home_branchSelect} align="left" btnClass="rb-branch-btn" button={<span className="rb-ellipsis">{current}</span>}>
+    <Drop label={t.Home_branchSelect} align="left" btnClass="rb-branch-btn" button={<><Icon name="ext/branch" /><span className="rb-ellipsis">{current}</span></>}>
       {(close) => (
         <ul className="drop-list" aria-label={t.Home_branchSelect}>
           {(branches || [{ name: current }]).map((b) => (
@@ -105,7 +107,7 @@ export function FileFind({ value, onChange }) {
   );
 }
 
-export function CommitBar({ id, commit, count, more, path, owner }) {
+export function CommitBar({ id, commit, count, more, path, owner, pipeline }) {
   const [note, copy] = useCopy();
   if (!commit) return null;
   // 커밋 자료는 계정 이름(chrisryugj)만 준다. 그 계정이 이 프로젝트 소유자면 공개 이름을 쓴다.
@@ -114,10 +116,15 @@ export function CommitBar({ id, commit, count, more, path, owner }) {
     <div className="rb-commit-bar" data-figma="commit-bar">
       <Avatar className="rb-commit-avatar" src={owner?.avatar_url} name={org} />
       <span className="rb-commit-texts">
-        <Link className="krds-link krds-text-body-small-bold rb-ellipsis" to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>
+        <Link className="rb-plain-link krds-text-body-small-bold rb-ellipsis" to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>
         <span className="krds-text-body-xsmall rb-subtle">{t.fn.wroteAt(org)} <Ago iso={commit.committed_date} />{t.fn.wroteSuffix}</span>
       </span>
       <p className="rb-commit-meta krds-text-body-xsmall rb-subtle">
+        {pipeline ? (
+          <a className={'rb-pipe is-' + (pipeline.status === 'success' ? 'ok' : pipeline.status === 'failed' ? 'fail' : 'other')} href={pipeline.web_url} {...newWindow(pipeline.status === 'success' ? u.I_pipeOk : pipeline.status === 'failed' ? u.I_pipeFail : u.I_pipe(pipeline.status))} title={pipeline.status === 'success' ? u.I_pipeOk : pipeline.status === 'failed' ? u.I_pipeFail : u.I_pipe(pipeline.status)}>
+            <Icon name={pipeline.status === 'failed' ? 'sys_danger_mark' : pipeline.status === 'success' ? 'sys_success_mark' : 'ext/pipeline'} />
+          </a>
+        ) : null}
         <code>{commit.short_id}</code>
         <IconButton icon="copy" label={t.Home_copySha} size="small" onClick={() => copy(commit.id)} />
         <Link className="krds-btn small tertiary rb-commit-count" to={`/projects/${id}/changes${path ? `?path=${enc(path)}` : ''}`}>
@@ -170,7 +177,7 @@ export function FileTable({ id, path, items, log, pending, filter, refQuery }) {
                   </span>
                 </td>
                 <td className="rb-col-msg">
-                  {c ? <Link className="krds-link rb-ellipsis rb-muted-link" to={`/projects/${id}/changes/${c.id}`}>{c.title}</Link> : wait ? <Skeleton widths={['70%']} inline /> : null}
+                  {c ? <Link className="rb-ellipsis rb-plain-link" to={`/projects/${id}/changes/${c.id}`}>{c.title}</Link> : wait ? <Skeleton widths={['70%']} inline /> : null}
                 </td>
                 <td className="rb-col-date rb-subtle">{c ? <Ago iso={c.committed_date} /> : wait ? <Skeleton widths={['50%']} inline /> : ''}</td>
               </tr>

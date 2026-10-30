@@ -20,7 +20,7 @@ import { useEffect } from 'react';
 import { setProjectNav } from '../../app/projectNav';
 import { Drop } from '../Code/Drop';
 import { Link } from 'react-router-dom';
-import { DockInfo } from './DockInfo';
+import { ProjectInfo } from './ProjectInfo';
 import { u } from '../../copy/ui';
 
 export function organizationOf(project) {
@@ -56,33 +56,32 @@ function RepoHeader({ project, id }) {
   return (
     <>
       <div className="rb-repo-head" data-figma="repo-title">
-        <h1 className="krds-text-heading-small rb-repo-name">
-          <Avatar src={project.avatar_url || project.namespace?.avatar_url} name={project.name} />
+        <h1 className="rb-repo-name">
+          <Avatar className="is-48" src={project.avatar_url || project.namespace?.avatar_url} name={project.name} />
           <span className="rb-repo-title-text">{project.name}</span>
-          <span className="rb-pill">{t.RepoHead_public}</span>
+          <Icon name="globe" label={u.X_public} />
         </h1>
         <div className="rb-repo-actions" data-figma="repo-actions" role="group" aria-label={t.RepoHead_actions}>
-          <button type="button" className="krds-btn small tertiary" title={u.Tip_star} onClick={star}>
-            {t.RepoHead_star}
-            <span className="rb-subtle">{project.star_count ?? 0}</span>
+          <span className="rb-split">
+            <button type="button" className="rb-split-main" title={u.Tip_star} onClick={star}>
+              <Icon name="ext/star" />
+              <span>{u.I_star}</span>
+            </button>
+            <a className="rb-split-count" href={`${project.web_url}/-/starrers`} {...newWindow(`${u.I_starrers} ${project.star_count ?? 0}`)}>{project.star_count ?? 0}</a>
+          </span>
+          {/* 덧붙임(UX/14 6): 별표 옆 '사용 기록' 단추 하나 */}
+          <button type="button" className="krds-btn small tertiary" data-figma="extra-reuse" title={u.Tip_usage} aria-expanded={reuseOpen} onClick={() => setReuse(!reuseOpen)}>
+            {t.RepoHead_reuse}
           </button>
-          {project.forks_count != null ? (
-            <a className="krds-btn small tertiary" href={`${project.web_url}/-/forks`} {...newWindow(u.Fork_label)}>
-              {u.Fork_label}
-              <span className="rb-subtle">{project.forks_count}</span>
-            </a>
-          ) : null}
-          <Drop label={t.Home_more} btnClass={iconBtnClass('small', 'is-bordered')} toggle={false} button={<Icon name="ellipsis_horizontal" />}>
+          <Drop label={u.I_projectMore} btnClass={iconBtnClass('small')} toggle={false} button={<Icon name="ellipsis_vertical" />}>
             {(close) => (
               <ul className="drop-list">
                 <li><a className="item-link" href={project.web_url} {...newWindow(t.Home_openOrigin)} onClick={close}>{t.Home_openOrigin}</a></li>
+                <li><a className="item-link" href={`${project.web_url}/-/forks`} {...newWindow(u.Fork_label)} onClick={close}>{u.Fork_label} {project.forks_count ?? 0}</a></li>
                 <li><Link className="item-link" to={`/projects/${id}/feedback?type=bug`} onClick={close}>{t.Home_reportIssue}</Link></li>
               </ul>
             )}
           </Drop>
-          <button type="button" className="krds-btn small tertiary" title={u.Tip_usage} aria-expanded={reuseOpen} onClick={() => setReuse(!reuseOpen)}>
-            {t.RepoHead_reuse}
-          </button>
         </div>
       </div>
       {reuseOpen && <ReuseAction id={id} onClose={() => setReuse(false)} />}
@@ -128,10 +127,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
           {children}
         </div>
         {info ? (
-          <aside className="rb-repo-info" aria-labelledby="rb-info-title">
-            <h2 id="rb-info-title" className="krds-text-body-small-bold">{u.G_projectInfo}</h2>
-            <DockInfo id={data.id} project={project} readme={data.data.readme} totals={data.data.totals} stats={stats} />
-          </aside>
+            <ProjectInfo id={data.id} project={project} readme={data.data.readme} totals={data.data.totals} stats={stats} languages={data.data.languages} root={data.data.root} />
         ) : null}
       </div>
     </Page>

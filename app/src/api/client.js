@@ -76,7 +76,7 @@ const gitlabCommitsPage = (id, ref, page) =>
   request(`/api/gitlab/projects/${enc(id)}/repository/commits?per_page=100&page=${page}${ref ? `&ref_name=${enc(ref)}` : ''}`);
 
 export const gitlab = {
-  project: (id) => request(`/api/gitlab/projects/${enc(id)}`),
+  project: (id) => request(`/api/gitlab/projects/${enc(id)}?license=true`),
   readme: (id, ref = 'HEAD') => request(`/api/gitlab/projects/${enc(id)}/repository/files/README.md/raw?ref=${enc(ref)}`),
   tree: (id, path = '', ref = '') =>
     request(`/api/gitlab/projects/${enc(id)}/repository/tree?per_page=100${path ? `&path=${enc(path)}` : ''}${ref ? `&ref=${enc(ref)}` : ''}`),

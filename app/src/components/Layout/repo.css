@@ -105,3 +105,37 @@
   .rb-prow > .rb-icon { display: none; }
   .rb-prow-side { grid-column: 2; grid-row: 2; align-items: flex-start; }
 }
+
+/* ---------- D-21 6장 프로젝트 홈(공공 깃랩 02): 위계 24/15/13 ---------- */
+.rb-repo-name { gap: var(--krds-gap-3); font-size: var(--rb-step-24); line-height: var(--rb-lh-24); font-weight: var(--krds-font-weight-bold); }
+.rb-repo-name > .rb-icon { flex: none; color: var(--krds-color-text-subtle); }
+.rb-avatar.is-48 { width: var(--krds-number-16); height: var(--krds-number-16); border-radius: var(--krds-radius-medium2); font-size: var(--rb-step-19); }
+.rb-split { display: inline-flex; align-items: stretch; height: var(--krds-number-12); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-medium2); overflow: hidden; }
+.rb-split-main, .rb-split-count { display: inline-flex; align-items: center; gap: var(--krds-gap-2); padding: 0 var(--krds-padding-4); border: 0; background: none; color: var(--krds-color-text-basic); text-decoration: none; cursor: pointer; font-size: var(--krds-font-size-body-small); white-space: nowrap; }
+.rb-split-count { border-inline-start: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); }
+.rb-split-main:hover, .rb-split-count:hover { background: var(--krds-color-action-secondary-hover); }
+.rb-toolbar-path { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.rb-plain-link { color: var(--krds-color-text-basic); text-decoration: none; }
+.rb-plain-link:hover { text-decoration: underline; }
+.rb-pipe { display: inline-flex; align-items: center; }
+.rb-pipe.is-ok { color: var(--rb-status-success); }
+.rb-pipe.is-fail { color: var(--rb-status-danger); }
+.rb-pipe.is-other { color: var(--krds-color-text-subtle); }
+.rb-pipe .rb-icon { width: var(--krds-number-9); height: var(--krds-number-9); }
+.rb-repo-info { gap: var(--krds-gap-5); }
+.rb-info-intro { margin: 0; }
+.rb-info-sep { padding-top: var(--krds-padding-5); border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-info-list { display: flex; flex-direction: column; gap: var(--krds-gap-2); list-style: none; margin: 0; }
+.rb-info-list a { display: inline-flex; align-items: center; gap: var(--krds-gap-3); color: var(--krds-color-text-basic); text-decoration: none; font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); }
+.rb-info-list a:hover { text-decoration: underline; }
+.rb-info-list .rb-icon { width: var(--krds-number-8); height: var(--krds-number-8); color: var(--krds-color-text-subtle); }
+.rb-info-list b { font-weight: var(--krds-font-weight-bold); }
+.rb-info-extra { display: flex; flex-direction: column; gap: var(--krds-gap-3); }
+.rb-info-extra h3 { margin: 0; }
+.rb-lang { display: flex; flex-direction: column; gap: var(--krds-gap-2); }
+.rb-lang-bar { display: flex; height: var(--rb-lang-bar-h); border-radius: var(--krds-radius-max); overflow: hidden; gap: var(--krds-number-1); }
+.rb-lang-bar > span { display: block; min-width: var(--krds-number-2); }
+.rb-lang-list { display: flex; flex-wrap: wrap; gap: var(--krds-gap-1) var(--krds-gap-4); list-style: none; margin: 0; padding: 0; font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
+.rb-lang-list li { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
+.rb-lang-list i { display: inline-block; width: var(--krds-number-5); height: var(--krds-number-5); border-radius: var(--krds-radius-max); }
+.rb-branch-btn .rb-icon { flex: none; }

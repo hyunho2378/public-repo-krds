@@ -15,7 +15,7 @@ export function createApp({upstream=process.env.GITLAB_BASE_URL||'https://gitlab
   const sub=req.path.replace(/^\/api\/gitlab\//,'');
   const allowed=/^projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|compare|commits(?:\/[0-9a-f]{7,40}(?:\/diff)?)?|files\/[^/]+(?:\/(?:raw|blame))?|branches|tags|contributors)|languages|releases|events|wikis|pipelines|jobs|packages|labels|milestones|members(?:\/all)?|boards|snippets|issues(?:\/\d+(?:\/notes)?)?|merge_requests(?:\/\d+(?:\/(?:changes|notes|commits))?)?))?)?$/;
   if(!allowed.test(sub))return res.status(400).json({error:{code:'PATH_NOT_ALLOWED',message:'공개 프로젝트 읽기 전용'}});
-  const u=new URL('/api/v4/'+sub,upstream);for(const k of ['search','page','per_page','ref','ref_name','path','order_by','sort','updated_after','state','archived'])if(req.query[k]!==undefined)u.searchParams.set(k,String(req.query[k]));u.searchParams.set('per_page',String(Math.min(100,Math.max(1,Number(req.query.per_page)||20))));
+  const u=new URL('/api/v4/'+sub,upstream);for(const k of ['search','page','per_page','ref','ref_name','path','order_by','sort','updated_after','state','archived','license'])if(req.query[k]!==undefined)u.searchParams.set(k,String(req.query[k]));u.searchParams.set('per_page',String(Math.min(100,Math.max(1,Number(req.query.per_page)||20))));
   if(sub==='projects')u.searchParams.set('visibility','public');
   const key=u.href,cached=cache.get(key);if(cached&&Date.now()-cached.at<60000)return res.json({...cached.body,cached:true});
   if(Date.now()-windowStart>=60000){windowStart=Date.now();calls=0;}

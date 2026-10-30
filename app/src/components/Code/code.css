@@ -42,7 +42,7 @@
 .rb-drop-open .drop-menu { display: block; left: auto; right: 0; transform: none; }
 .rb-drop .drop-list .item-link { width: 100%; text-align: left; background: none; border: 0; cursor: pointer; }
 .rb-tree-block { display: flex; flex-direction: column; min-width: 0; }
-.rb-commit-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--krds-gap-3); padding: var(--krds-padding-4) var(--krds-padding-5); background: var(--krds-color-surface-gray-subtler); border-radius: var(--krds-radius-medium2) var(--krds-radius-medium2) 0 0; }
+.rb-commit-bar { display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: var(--krds-gap-3); padding: var(--krds-padding-4) var(--krds-padding-5); background: var(--krds-color-surface-gray-subtler); border-radius: var(--krds-radius-medium2) var(--krds-radius-medium2) 0 0; }
 .rb-commit-main { display: flex; align-items: center; gap: var(--krds-gap-3); min-width: 0; flex: 1 1 auto; }
 .rb-commit-meta { display: flex; align-items: center; gap: var(--krds-gap-4); }
 .rb-commit-count { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
@@ -223,3 +223,7 @@
 .rb-commit-texts { display: flex; flex-direction: column; min-width: 0; flex: 1 1 auto; }
 .rb-commit-avatar { align-self: center; }
 .rb-commit-meta { display: flex; align-items: center; gap: var(--krds-gap-3); margin: 0; flex: none; }
+
+/* D-21 6장: 최근 커밋 막대는 한 줄(제목 말줄임, 오른쪽 파이프라인/해시/이력 고정) */
+.rb-commit-bar .rb-commit-texts { flex: 1 1 auto; min-width: 0; }
+.rb-commit-bar .rb-commit-meta { flex: none; }

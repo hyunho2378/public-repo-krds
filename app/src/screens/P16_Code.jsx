@@ -76,6 +76,8 @@ async function loadRepo(id) {
   const releases = await gitlab.releases(id).catch(() => ({ data: null }));
   const root = await gitlab.tree(id, '').catch(() => ({ data: [] }));
   const languages = await request(`/api/gitlab/projects/${enc(id)}/languages`).catch(() => ({ data: {} }));
+  // D-21 6장: 최근 커밋 막대의 파이프라인 상태(기본 브랜치 최신 1개)
+  const pipelines = await gitlab.pipelines(id).catch(() => ({ data: [] }));
   const count = (r) => (r?.pagination?.total ?? (Array.isArray(r?.data) ? r.data.length : null));
   return {
     branches: branches.data,
@@ -84,6 +86,7 @@ async function loadRepo(id) {
     totals: { branches: count(branches), tags: count(tags), releases: count(releases) },
     root: root.data,
     languages: languages.data,
+    pipeline: Array.isArray(pipelines.data) ? pipelines.data[0] || null : null,
   };
 }
 
@@ -223,10 +226,7 @@ export default function Code() {
               ) : null}
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />
               {isHome ? (
-                <p className="rb-toolbar-counts krds-text-body-small">
-                  {totals.branches != null ? <Link className="krds-link" to={`/projects/${frame.id}/branches`}>{t.fn.nBranches(totals.branches)}</Link> : null}
-                  {totals.tags != null ? <Link className="krds-link" to={`/projects/${frame.id}/tags`}>{t.fn.nTags(totals.tags)}</Link> : null}
-                </p>
+                <span className="rb-toolbar-path krds-text-body-small-bold">{project.path}</span>
               ) : <PathCrumbs id={frame.id} path={path} refQuery={refQuery} />}
             </div>
             <div className="rb-toolbar-right">
@@ -245,7 +245,7 @@ export default function Code() {
           ) : b.items.length ? (
             <>
               <div className="rb-tree-block">
-                <CommitBar id={frame.id} commit={b.last} count={b.count} more={b.more} path={path} owner={project.namespace} />
+                <CommitBar id={frame.id} commit={b.last} count={b.count} more={b.more} path={path} owner={project.namespace} pipeline={isHome && frame.data.pipeline?.sha === b.last?.id ? frame.data.pipeline : null} />
                 <FileTable id={frame.id} path={path} items={b.items} log={rowLog.log} pending={rowLog.pending} filter={filter} refQuery={refQuery} />
               </div>
               {b.partial ? <p className="krds-text-body-xsmall rb-subtle">{t.P16_partial}</p> : null}
