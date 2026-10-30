@@ -5,6 +5,8 @@ import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { orgLabel } from '../components/Layout/orgLabel';
+import { ct } from '../copy/work';
+import './parts/glRepo.css';
 import '../components/Code/code.css';
 
 export default function Contributors() {
@@ -15,23 +17,23 @@ export default function Contributors() {
   return (
     <ProjectFrame screenId="R-10" tab="" tabLabel={t.P21_title} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
       <div className="rb-code-area">
-        <div className="rb-detail-head">
-          <h2 className="krds-text-body-small-bold">{list ? t.fn.countLabel(t.P21_title, t.fn.peopleCount(list.length)) : t.P21_title}</h2>
-          <p className="krds-text-body-xsmall rb-subtle">{t.P21_help}</p>
+        <h2 className="gl-page-title">{ct.title}</h2>
+        <div className="gl-ct-tools">
+          <span className="krds-btn small tertiary">{frame.data.project.default_branch || 'main'}</span>
+          <span className="krds-btn small tertiary">{ct.history}</span>
         </div>
+        <h3 className="gl-ct-sub">{ct.branchHead} {frame.data.project.default_branch || 'main'}</h3>
+        <p className="gl-page-help">{ct.note}</p>
         {!list ? <Status {...body} /> : list.length ? (
-          <div className="krds-table-wrap rb-table-scroll">
-            <table className="tbl data">
-              <caption className="sr-only">{t.P21_title}</caption>
-              <thead><tr><th scope="col">{t.P21_name}</th><th scope="col" className="rb-num">{t.P21_commits}</th></tr></thead>
-              <tbody>
-                {list.map((c) => (
-                  <tr key={c.name}><td>{orgLabel(c.name)}</td><td className="rb-num">{t.fn.times(c.commits)}</td></tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="gl-ct-grid">
+            {list.map((c) => (
+              <section className="gl-ct-card" key={c.name}>
+                <h3>{orgLabel(c.name)}</h3>
+                <p>{ct.commits(c.commits)}</p>
+              </section>
+            ))}
           </div>
-        ) : <EmptyState title={t.P21_none} />}
+        ) : <EmptyState title={ct.none} />}
       </div>
     </ProjectFrame>
   );

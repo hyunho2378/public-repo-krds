@@ -33,3 +33,9 @@ export const rp = {
   others: '다른 라벨', toIssues: '작업 항목', toMrs: '머지 리퀘스트', joined: '참여', items: '항목',
   roles: { 10: 'Guest', 20: 'Reporter', 30: 'Developer', 40: 'Maintainer', 50: 'Owner' },
 };
+
+// 기여자 분석(캡처 23)
+export const ct = {
+  title: '기여자 분석', history: '이력', branchHead: '커밋할 브랜치', note: '머지 커밋 제외',
+  commits: (n) => `${n}개의 커밋`, none: '표시할 기여자가 없습니다',
+};

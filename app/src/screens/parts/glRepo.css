@@ -20,3 +20,9 @@
 .gl-label-name { display: inline-flex; padding: 0 var(--krds-gap-4); border-radius: var(--krds-gap-5); font-size: var(--rb-step-13); line-height: var(--rb-lh-19); font-weight: var(--krds-font-weight-bold); }
 .gl-label-links { display: flex; gap: var(--krds-gap-5); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
 .gl-box-empty { padding: var(--layout-section-gap) var(--krds-gap-5); text-align: center; font-size: var(--rb-step-13); }
+.gl-ct-tools { display: flex; align-items: center; gap: var(--krds-gap-3); margin: var(--layout-filter-list-gap) 0; }
+.gl-ct-sub { margin: var(--layout-section-gap) 0 var(--krds-gap-3); font-size: var(--rb-step-17); line-height: var(--rb-lh-17); font-weight: var(--krds-font-weight-bold); }
+.gl-ct-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--layout-section-gap); margin-top: var(--layout-section-gap); }
+.gl-ct-card h3 { margin: 0; font-size: var(--rb-step-17); line-height: var(--rb-lh-17); font-weight: var(--krds-font-weight-bold); overflow-wrap: anywhere; }
+.gl-ct-card p { margin: var(--krds-gap-2) 0 0; font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
+@media (max-width: 767px) { .gl-ct-grid { grid-template-columns: minmax(0, 1fr); } }
