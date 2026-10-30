@@ -45,14 +45,14 @@ export function MergeRequests() {
   return (
     <ProjectFrame screenId="R-16" tab="" tabLabel={t.P20_title} data={frame} state={all ? (all.all.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
-        <div className="gl-mr-tabs" role="tablist" aria-label={t.P20_title}>
+        <div className="gl-mr-tabs" data-figma="gl-tabs" role="tablist" aria-label={t.P20_title}>
           {STATES.map(([k, n]) => (
             <button key={k} type="button" role="tab" aria-selected={k === st} className="gl-mr-tab" onClick={() => setSt(k)}>
               <span>{n}</span>{all ? <span className="gl-mr-count">{all[k].length}</span> : null}
             </button>
           ))}
         </div>
-        <div className="gl-work-filter">
+        <div className="gl-work-filter" data-figma="gl-filter">
           <div className="gl-work-bar" role="search">
             <IconButton icon="ext/history" label={mr.recent} onClick={() => setQuery('')} />
             <input type="search" value={query} placeholder={mr.search} aria-label={mr.searchLabel} onChange={(e) => setQuery(e.target.value)} />
@@ -129,7 +129,7 @@ export function MergeRequest() {
     <ProjectFrame screenId="R-17" tab="" tabLabel={t.P20_title} crumbs={[[t.P20_title, `/projects/${frame.id}/merge-requests`], [`!${iid}`]]} data={frame} state={m ? 'Ideal' : body.state}>
       {!m ? <Status {...body} /> : (
         <div className="rb-code-area">
-          <div className="gl-mr-head">
+          <div className="gl-mr-head" data-figma="page-head">
             <h2>{m.title}</h2>
             <p className="gl-mr-meta">
               <span className="rb-pill">{LABEL[m.state] || m.state}</span> !{m.iid} · {ago(m.created_at)} {mr.createdBy(m.author?.name || '')}

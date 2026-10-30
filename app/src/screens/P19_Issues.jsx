@@ -49,11 +49,11 @@ export function Issues() {
   return (
     <ProjectFrame screenId="R-11" tab="/feedback" tabLabel={t.P19_title} data={frame} state={all ? (all.opened.length + all.closed.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
-        <div className="gl-work-tabs">
+        <div className="gl-work-tabs" data-figma="gl-tabs">
           <span className="gl-work-tab">{w.all}</span>
           <LinkButton to={`/projects/${frame.id}/issues/new`} Type="secondary" Size="small">{w.new}</LinkButton>
         </div>
-        <div className="gl-work-filter">
+        <div className="gl-work-filter" data-figma="gl-filter">
           <div className="gl-work-bar" role="search">
             <span className="gl-work-token">{w.status} {w.is}
               <Drop label={w.status} align="left" btnClass="krds-btn small text" button={<span>{stateName}</span>}>

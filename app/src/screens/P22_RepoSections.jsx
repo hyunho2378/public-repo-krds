@@ -25,13 +25,13 @@ function MembersView({ list }) {
   const rows = list.filter((m) => `${m.name} ${m.username}`.toLowerCase().includes(q.trim().toLowerCase()));
   return (
     <>
-      <h2 className="gl-page-title">{rp.membersTitle}</h2>
+      <div data-figma="page-head"><h2 className="gl-page-title">{rp.membersTitle}</h2></div>
       <p className="gl-page-help">{rp.membersHelp}</p>
-      <div className="gl-tabs" role="tablist">
+      <div className="gl-tabs" data-figma="gl-tabs" role="tablist">
         <span className="gl-tab active" role="tab" aria-selected="true">{rp.tabMembers} <span className="rb-pill">{list.length}</span></span>
         <span className="gl-tab" role="tab" aria-selected="false">{rp.tabDirect} <span className="rb-pill">{list.length}</span></span>
       </div>
-      <div className="gl-work-filter">
+      <div className="gl-work-filter" data-figma="gl-filter">
         <div className="gl-work-bar" role="search">
           <IconButton icon="ext/history" label={rp.recent} onClick={() => setQ('')} />
           <input type="search" value={q} placeholder={rp.filterMembers} aria-label={rp.filterMembers} onChange={(e) => setQ(e.target.value)} />
