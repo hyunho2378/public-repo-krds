@@ -112,7 +112,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
       <div className={'rb-repo-main' + (wide ? ' is-wide' : '')} data-figma="main">
         <div className="rb-repo-top">
           {crumbs?.length && !hideCrumbs ? (
-            <Breadcrumb home={false} items={[[organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project))}`], [project.name, `/projects/${data.id}`], ...crumbs]} />
+            <Breadcrumb home={false} items={crumbs} />
           ) : null}
           {title ? <RepoHeader project={project} id={data.id} /> : null}
         </div>

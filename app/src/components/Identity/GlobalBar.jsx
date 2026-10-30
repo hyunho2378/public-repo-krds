@@ -98,7 +98,7 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true }) {
             <span className="rb-gbar-brand-text">{SERVICE_NAME}</span>
           </Link>
           {nav ? (
-            <span className="rb-gbar-path">
+            <span className="rb-gbar-path" data-figma="repo-path">
               <Link className="rb-gbar-pathlink" to={`/search?q=${encodeURIComponent(nav.owner || '')}`}>{nav.owner}</Link>
               <span aria-hidden="true">/</span>
               <Link className="rb-gbar-pathlink is-name" to={`/projects/${nav.id}`}>{nav.name}</Link>
