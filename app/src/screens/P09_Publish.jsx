@@ -114,7 +114,7 @@ export default function Publish() {
               <ul className="rb-checklist">
                 {check.checks.map((c) => (
                   <li key={c.id} className={c.pass ? 'is-pass' : 'is-fail'}>
-                    <span className={`rb-status-text ${c.pass ? 'is-success' : 'is-warning'}`}><i className="rb-status-dot" aria-hidden="true" />{c.pass ? t.P09_26 : t.P09_27}</span> {CHECK_LABEL[c.id] || c.id}
+                    <span className={`rb-status-text ${c.pass ? 'is-success' : 'is-warning'}`}>{c.pass ? t.P09_26 : t.P09_27}</span> {CHECK_LABEL[c.id] || c.id}
                   </li>
                 ))}
               </ul>

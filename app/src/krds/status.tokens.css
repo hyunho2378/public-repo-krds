@@ -42,13 +42,8 @@ html[data-krds-mode="high-contrast"] {
 .rb-status-text { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
 .rb-status-text.is-success { color: var(--rb-status-success); }
 .rb-status-text.is-warning { color: var(--krds-color-text-basic); }
-.rb-status-text.is-warning .rb-status-dot { background: var(--rb-status-warning); }
 .rb-status-text.is-danger { color: var(--rb-status-danger); }
 .rb-status-text.is-information { color: var(--rb-status-information); }
-.rb-status-dot { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 50%; flex: none; }
-.rb-status-text.is-success .rb-status-dot { background: var(--rb-status-success); }
-.rb-status-text.is-danger .rb-status-dot { background: var(--rb-status-danger); }
-.rb-status-text.is-information .rb-status-dot { background: var(--rb-status-information); }
 
 /* 공개, 상태 이름: GitHub Public처럼 회색 윤곽 알약 */
 .rb-pill {

@@ -10,6 +10,7 @@ import { u } from '../copy/ui';
 import { phrase } from '../components/Help/Phrase';
 import { auth, STATIC_MODE } from '../api/client';
 import { Page } from '../components/Layout/Page';
+import { MoisLogo } from '../components/Identity/MoisLogo';
 import { FormField } from '../components/Input/FormField';
 
 const GITLAB = 'https://gitlab.aigov.go.kr';
@@ -37,19 +38,22 @@ export default function Login() {
     window.location.href = auth.loginUrl(returnTo);
   };
 
+  // 공공 깃랩 로그인 공지 방식: 제목(굵게), 날짜(13 보조색). 점이나 색 아이콘은 쓰지 않는다
+  const [noticeTitle, noticeDate] = String(t.P12_notice || '').split(': ');
   return (
     <Page id="G-08" title={t.P10_2} state="Ideal">
       <div className="rb-login">
         {t.P12_notice ? (
           <section className="rb-login-notice" aria-labelledby="login-notice-title">
-            <div className="rb-login-mark"><img src={`${import.meta.env.BASE_URL}brand/mois-login-logo.jpg`} alt={u.Login_moisAlt} /></div>
-            <h2 id="login-notice-title" className="krds-text-body-small-bold">{u.Login_noticeTitle}</h2>
-            <p role="status">
-              <span className="rb-status-text is-warning"><i className="rb-status-dot" aria-hidden="true" />{t.P12_notice}</span>
-            </p>
+            <MoisLogo label={u.Login_moisAlt} />
+            <div className="rb-login-notice-item" role="status">
+              <h2 id="login-notice-title" className="krds-text-body-small-bold">{noticeTitle}</h2>
+              {noticeDate ? <p className="krds-text-body-xsmall rb-subtle">{noticeDate}</p> : null}
+            </div>
             <Link className="krds-link" to="/register">{u.Login_noticeLink}</Link>
           </section>
         ) : null}
+        <div className="rb-login-main">
         <h1 className="krds-text-heading-medium">{t.P10_2}</h1>
         <form className="rb-login-form" onSubmit={submit}>
           <FormField
@@ -101,6 +105,7 @@ export default function Login() {
             </div>
           </div>
         ) : null}
+        </div>
       </div>
     </Page>
   );

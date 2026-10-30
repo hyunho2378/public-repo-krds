@@ -291,3 +291,8 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 .krds-table-wrap, .rb-table-scroll { max-width: 100%; overflow-x: auto; }
 .rb-md .krds-table-wrap { min-width: 0; }
 .rb-pill { white-space: nowrap; flex: none; }
+
+/* 머리글 로고와 이름: 둘 다 높이 24(줄 높이 24), 가운데 정렬이라 중심선이 같다 */
+.rb-gbar-brand { align-items: center; }
+.rb-gbar-brand .rb-logo { display: block; }
+.rb-gbar-brand-text { display: block; line-height: var(--krds-number-10); height: var(--krds-number-10); }
