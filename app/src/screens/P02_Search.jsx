@@ -6,7 +6,7 @@ import { t } from '../copy/ko';
 import { u } from '../copy/ui';
 import { request } from '../api/client';
 import { useData } from '../api/useData';
-import { cardValue, isSentence, loadCards } from '../api/cards';
+import { isSentence, taskSearch } from '../api/cards';
 import { Page } from '../components/Layout/Page';
 import { Status } from '../components/Feedback/Status';
 import { Icon } from '../components/Code/Icon';
@@ -17,10 +17,9 @@ const PER = 20;
 const GITLAB = 'https://gitlab.aigov.go.kr';
 
 function TaskFind({ q }) {
-  const cards = useData(loadCards, []);
   const [more, setMore] = useState(false);
-  if (!cards.data || !isSentence(q)) return null;
-  const hits = cards.data.search(q, more ? 10 : 3);
+  const res = useData(() => (isSentence(q) ? taskSearch(q, more ? 10 : 3) : Promise.resolve([])), [q, more]);
+  const hits = res.data || [];
   if (!hits.length) return null;
   return (
     <section className="rb-taskfind" data-figma="extra-task-find" aria-labelledby="rb-taskfind">
@@ -29,7 +28,7 @@ function TaskFind({ q }) {
         {hits.map((c) => (
           <li key={c.id}>
             <Link className="rb-plain-link krds-text-body-small-bold" to={`/projects/${c.id}`}>{c.name}</Link>
-            <span className="krds-text-body-xsmall rb-subtle">{[cardValue(c.oneLine), cardValue(c.org)].filter(Boolean).join(' · ')}</span>
+            <span className="krds-text-body-xsmall rb-subtle">{c.sub}</span>
           </li>
         ))}
       </ul>

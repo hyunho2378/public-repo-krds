@@ -72,3 +72,19 @@ export function isSentence(q) {
   const s = String(q || '').trim();
   return s.split(/\s+/).length >= 2 || (/[가-힣]/.test(s) && s.length >= 6);
 }
+
+/** 업무 문장 검색(UX/14 3): 저장된 공개 목록(이름, 설명, 주제, 만든 곳)과 소개 카드(하는 일, 업무, 분야)를 같이 점수 매긴다.
+ *  공공 깃랩 검색 API를 쓰지 않으므로 점검 중에도 동작한다. [{ id, name, sub }] */
+export async function taskSearch(q, limit = 3) {
+  const { snapshotIndex } = await import('./snapshot.js');
+  const [idx, cards] = await Promise.all([snapshotIndex(), loadCards()]);
+  const g = ngramSet(q);
+  if (!g.size) return [];
+  const hit = (text) => { const s = ngramSet(text); let n = 0; for (const x of g) if (s.has(x)) n++; return n / g.size; };
+  const scored = (idx?.projects || []).map((p) => {
+    const c = cards?.get(p.id);
+    const s = 2 * hit(p.name) + 3 * hit(p.description) + 1 * hit((p.topics || []).join(' ')) + (c ? score(g, c) : 0);
+    return { p, c, s };
+  }).filter((x) => x.s > 0.5).sort((a, b) => b.s - a.s).slice(0, limit);
+  return scored.map(({ p, c }) => ({ id: p.id, name: p.name, sub: [val(c?.oneLine) || (p.description || '').slice(0, 80), p.namespace?.name].filter(Boolean).join(' · ') }));
+}

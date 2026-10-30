@@ -46,7 +46,7 @@ export function ProjectInfo({ id, project, readme, totals, stats, languages, roo
   const intro = cleanDescription(project.description);
   const topics = project.topics || [];
   const counts = [
-    ['ext/commit', fmt(stats?.commits) + (stats?.more ? '+' : ''), u.I_commits, `${p}/changes`, stats?.commits != null],
+    ['ext/commit', fmt(stats?.commits) + (stats?.more ? '+' : ''), u.I_commits, `${p}/changes`, !!stats?.commits],
     ['ext/branch', fmt(totals?.branches), u.I_branches, `${p}/branches`, totals?.branches != null],
     ['ext/tag', fmt(totals?.tags), u.I_tags, `${p}/tags`, totals?.tags != null],
     ['ext/rocket', fmt(totals?.releases), u.I_releases, `${p}/releases`, totals?.releases != null],
