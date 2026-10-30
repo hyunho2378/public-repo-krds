@@ -104,6 +104,14 @@
   --rb-footer-pad: var(--krds-number-10);
   --rb-fw-title: var(--krds-font-weight-bold);
   --rb-fw-current: 600;
+  /* D-21 6장 언어 막대 색(Figma 변수 모음 'language'와 같은 이름과 값, KRDS 원시 단계만). 막대 높이 8 */
+  --language-typescript: var(--krds-color-light-primary-50);
+  --language-javascript: var(--krds-color-light-warning-30);
+  --language-python: var(--krds-color-light-information-50);
+  --language-java: var(--krds-color-light-danger-50);
+  --language-shell: var(--krds-color-light-success-50);
+  --language-other: var(--krds-color-light-gray-50);
+  --rb-lang-bar-h: var(--krds-number-5);
 }
 
 /* D-16 2장 개정(2026. 10. 30. 사용자 지시): 글자 크기는 KRDS 원본 13/15/17/19를 그대로 쓴다.

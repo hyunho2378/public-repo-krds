@@ -8,7 +8,6 @@ import { Masthead } from '../components/Identity/Masthead';
 import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import ErrorScreen from '../screens/P13_Error';
 import { routes } from './routes';
-import { TabBar } from '../components/Navigation/TabBar';
 import { useProjectNav } from './projectNav';
 import { u } from '../copy/ui';
 import { breakpoint, useBoolPref, useMinWidth } from './prefs';
@@ -73,7 +72,6 @@ function Shell() {
           <Footer />
         </div>
       </div>
-      <TabBar />
     </>
   );
 }

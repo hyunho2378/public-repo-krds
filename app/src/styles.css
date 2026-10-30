@@ -64,36 +64,6 @@ p, li, dd, dt, label { text-wrap: balance; }
   #krds-footer .f-cnt { gap: var(--krds-gap-2); }
 }
 
-/* KRDS 탭바(D-03). 1023 이하 하단 고정. 아이콘은 KRDS 공식 svg를 mask로 써서 글자색을 따른다 */
-.rb-tabbar { display: none; }
-@media (max-width: 1023px) {
-  /* 탭바 전체 높이 72px(size-height-10, KRDS tab_bars__mo 부품 값). box-sizing border-box로 테두리까지 포함해 정확히 72 */
-  .rb-tabbar {
-    display: block; position: fixed; inset-inline: 0; bottom: 0; z-index: 90;
-    box-sizing: border-box; height: var(--krds-size-height-10);
-    background: var(--krds-color-surface-white);
-    border-top: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light);
-  }
-  .rb-tabbar ul { display: grid; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 0; padding: 0; height: 100%; }
-  .rb-tabbar li { height: 100%; }
-  .rb-tab {
-    position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--krds-gap-1);
-    min-height: 100%; color: var(--krds-color-text-subtle); text-decoration: none;
-    font-size: var(--krds-mobile-font-size-label-small);
-  }
-  .rb-tab.is-active { color: var(--krds-color-text-primary); font-weight: var(--krds-font-weight-bold); }
-  .rb-tab.is-active::before { content: ""; position: absolute; top: 0; inset-inline: var(--krds-gap-5); height: var(--krds-border-width-static-medium); background: var(--krds-color-border-primary); }
-  .rb-tab-icon { width: var(--krds-icon--size-medium); height: var(--krds-icon--size-medium); background-color: currentColor; mask: center / contain no-repeat; -webkit-mask: center / contain no-repeat; }
-  .rb-tab-home { mask-image: url(/krds/resources/img/component/icon/ico_bread_home.svg); -webkit-mask-image: url(/krds/resources/img/component/icon/ico_bread_home.svg); }
-  .rb-tab-find { mask-image: url(/krds/resources/img/component/icon/ico_sch.svg); -webkit-mask-image: url(/krds/resources/img/component/icon/ico_sch.svg); }
-  .rb-tab-alerts { mask-image: url(/krds/resources/img/component/icon/ico_information.svg); -webkit-mask-image: url(/krds/resources/img/component/icon/ico_information.svg); }
-  .rb-tab-alerts.is-fill, .rb-tab.is-active .rb-tab-alerts { mask-image: url(/krds/resources/img/component/icon/ico_information_fill.svg); -webkit-mask-image: url(/krds/resources/img/component/icon/ico_information_fill.svg); }
-  .rb-tab-my { mask-image: url(/krds/resources/img/component/icon/ico_my.svg); -webkit-mask-image: url(/krds/resources/img/component/icon/ico_my.svg); }
-  /* 탭바 높이만큼 본문 아래 여백. 탭바 높이는 KRDS tab_bars__mo 부품 72px(size-height-10, 홈 막대 영역 미구현) */
-  #root { padding-bottom: calc(var(--krds-size-height-10) + env(safe-area-inset-bottom)); }
-  /* 탭바에 로그인, 내 프로젝트가 있으므로 머리글에서는 전체메뉴만 둔다 */
-  #krds-header .header-container .btn-navi.login { display: none; }
-}
 @media (display-mode: standalone) {
   /* 홈 화면에 추가해 앱으로 열면 시제품 배너 아래 공간을 줄인다(배너 문구는 유지) */
   #krds-masthead .toggle-head .inner { padding-block: var(--krds-padding-2); }
@@ -242,8 +212,6 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 #krds-footer .f-btm .f-btm-text { margin: 0; padding: 0; }
 @media (max-width: 1023px) { #krds-footer > .inner { padding: var(--rb-footer-pad) 0; gap: var(--rb-footer-pad); } }
 
-/* 모바일 하단 탭바(고정 72)가 바닥글을 덮지 않게 바닥글 아래를 탭바 높이만큼 띄운다 */
-@media (max-width: 1023px) { #krds-footer { padding-bottom: var(--krds-size-height-10); } }
 
 /* README 안 인라인 코드는 긴 경로도 줄바꿈해 화면 밖으로 나가지 않는다 */
 .rb-md code, .rb-md-code { overflow-wrap: anywhere; }

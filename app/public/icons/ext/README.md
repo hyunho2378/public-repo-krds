@@ -37,3 +37,6 @@
 | sparkle.svg | 탐색 > AI 카탈로그 | tanuki-ai의 반짝임만(GitLab 로고 상표는 쓰지 않음) |
 | snippet.svg | 탐색 > 스니펫 | snippet |
 - 빌드는 rocket(공공 깃랩도 같은 로켓), 계획은 KRDS calendar, 추가 기능은 KRDS view_all, 분석은 KRDS analytics, 주제는 확장 tag(같은 뜻의 KRDS 아이콘이 있으면 KRDS 우선)
+| sort-asc.svg | 정렬 방향(오름차순) | sort-lowest |
+| sort-desc.svg | 정렬 방향(내림차순) | sort-highest |
+| history.svg | 최근 검색 | history |
