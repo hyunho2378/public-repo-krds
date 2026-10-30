@@ -60,6 +60,8 @@
   --rb-lh-32: 4rem;
   --rb-lh-40: 4.8rem;
   /* 위계 역할: 메타와 라벨, 본문, 제목 */
+  /* D-16 2장: KRDS 기본 행간(1.5배를 올림, 15px는 23px 홀수)을 가장 가까운 짝수 px로. 13:20, 15:22, 17:26, 19:28이 표와 같다 */
+  --krds-line-height-base: round(nearest, calc(1em * var(--krds-line-height-ratio)), 2px);
   --rb-fw-title: var(--krds-font-weight-bold);
   --rb-fw-current: 600;
 }
