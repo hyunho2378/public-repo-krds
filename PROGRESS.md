@@ -98,3 +98,4 @@
 - 정보 열 커밋·브랜치·태그 행 항상(모르면 '-'), 릴리스는 있을 때만, 스냅샷 index에 commit_count/branch_count/tag_count 자리, scripts/snapshot/fetch-counts.mjs(502면 시작 안 함, 1.1초 간격, 이어서). 사이드바 현재 항목 공공 깃랩대로(회색 면, 본문색 굵게, 왼쪽 막대, 고정됨·묶음 둘 다 표시), 연한 파랑 글자 제거. 탭 밑줄 청록 → primary 50(KRDS tab 변수와 secondary-active/text-secondary 전역 교체). 팔레트 검사 palette-inspect.js + check-palette.mjs(npm run check:palette), 로컬 11경로 위반 0
 - 클릭 튕김: useData가 조건만 바뀌면 이전 내용 유지(로딩 표시로 본문이 무너지지 않게), 정적 모드 공개 자료 2분 메모리 캐시, 화면 이동 때 본문 최소 높이를 이전 높이로 700ms 유지, 본문 투명도 애니메이션 제거
 - 화면 이동 높이 유지를 그리기 전(useLayoutEffect)으로, 스켈레톤은 160ms 넘을 때만 보이게(캐시 자료면 번쩍임 없음)
+- 사이드바 현재 항목 왼쪽 막대가 잘리던 것(스크롤 상자, 접기 상자) 보정. UX/16 5절에 클릭 튕김 측정 전후 기록
