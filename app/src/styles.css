@@ -419,3 +419,22 @@ html[data-krds-mode="dark"] {
 #root .rb-iconbtn:active { background: var(--krds-color-border-gray-light); }
 #root .rb-iconbtn:focus-visible { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); outline-offset: var(--krds-number-2); background: none; }
 .rb-dock-close { margin-inline-end: calc(var(--krds-number-3) * -1); }
+
+/* D-20 바닥글: 위 묶음(로고 왼쪽, 연락처와 유틸리티 링크 오른쪽), 구분선, 아래 줄(정책 링크 왼쪽, 저작권 오른쪽). 768 이하는 위에서 아래로 같은 순서. 링크 15, 연락처와 저작권 13 */
+#krds-footer > .inner.rb-foot { display: block; max-width: var(--rb-container-w); margin-inline: auto; padding: var(--rb-footer-pad) 0; box-sizing: border-box; }
+.rb-foot-top { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--rb-footer-pad); flex-wrap: wrap; }
+.rb-mois-logo-h { display: block; height: var(--krds-number-12); width: auto; flex: none; color: var(--krds-color-text-basic); }
+.rb-foot-info { display: flex; flex-direction: column; align-items: flex-end; gap: var(--krds-gap-3); text-align: end; min-width: 0; }
+.rb-foot-contact { font-style: normal; display: flex; flex-direction: column; gap: var(--krds-gap-1); color: var(--krds-color-text-basic); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
+.rb-foot-contact p { margin: 0; }
+.rb-foot-links { display: flex; flex-wrap: wrap; gap: var(--rb-footer-pad); list-style: none; margin: 0; padding: 0; }
+.rb-foot-links a { color: var(--krds-color-text-basic); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); text-decoration: none; }
+.rb-foot-links a:hover, .rb-foot-links a:focus-visible { text-decoration: underline; text-underline-offset: var(--krds-number-3); }
+.rb-foot-links a.is-strong { font-weight: var(--rb-fw-current); }
+.rb-foot-bottom { display: flex; align-items: center; justify-content: space-between; gap: var(--rb-footer-pad); flex-wrap: wrap; margin-top: var(--rb-footer-pad); padding-top: var(--rb-footer-pad); border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-foot-copy { margin: 0; color: var(--krds-color-text-basic); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
+@media (max-width: 1023px) {
+  .rb-foot-top { flex-direction: column; align-items: flex-start; }
+  .rb-foot-info { align-items: flex-start; text-align: start; }
+  .rb-foot-bottom { flex-direction: column; align-items: flex-start; }
+}

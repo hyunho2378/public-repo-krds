@@ -1,30 +1,44 @@
-// Figma: KRDS footer. 공식 마크업(code/html/code/footer.html): #krds-footer > .inner > .f-logo, .f-cnt(.f-info, .f-link), .f-btm(.f-menu, .f-copy)
-// 로고 자리는 서비스명 글자(정부 상징 미사용, D-04). 주소, 전화 칸은 운영 기관이 정해지면 채운다.
-import { Link } from 'react-router-dom';
-import { phrase } from '../Help/Phrase';
-import { t } from '../../copy/ko';
+// D-20: 공공기관 하단 형식(KRDS 푸터 지침: 로고, 연락처, 유틸리티 링크, 정책 링크, 저작권). 값은 행정안전부 누리집에 실제로 있는 것만.
+// 출처 표시(공공누리 제1유형)는 바닥글에 두지 않고 도움말 '이 서비스에 대해'의 '출처' 절과 README에 둔다.
+import { u } from '../../copy/ui';
 import { newWindow } from '../Layout/newWindow';
+import { MoisLogoHorizontal } from './MoisLogo';
 import { SERVICE_NAME } from './Header';
-import { Logo } from './Logo';
+
+const MOIS = 'https://www.mois.go.kr/frt/sub/a08';
+const LINKS = {
+  use: `${MOIS}/useInfo/screen.do`,
+  map: `${MOIS}/sitemap/screen.do`,
+  copyright: `${MOIS}/copyrightPolicy/screen.do`,
+  privacy: `${MOIS}/personalInfo/screen.do`,
+};
+
+export { SERVICE_NAME };
 
 export function Footer() {
   return (
     <footer data-figma="footer" id="krds-footer" data-krds="footer">
-      <div className="inner">
-        <div className="f-logo rb-f-logo"><Logo size={20} /><span>{SERVICE_NAME}</span></div>
-        {/* UX-007 2장: 시제품 문구는 바닥글에서 빼고 도움말 "이 서비스에 대해"에만 둔다 */}
-        <div className="f-cnt">
-          <div className="f-link">
-            <div className="link-go">
-              <Link className="krds-btn small text" to="/help">{t.Footer_2}</Link>
-              <a className="krds-btn small text" href="https://www.krds.go.kr/" {...newWindow(t.Footer_5)}>{t.Footer_5}</a>
-            </div>
+      <div className="inner rb-foot">
+        <div className="rb-foot-top">
+          <MoisLogoHorizontal label={u.Login_moisAlt} />
+          <div className="rb-foot-info">
+            <address className="rb-foot-contact">
+              <p>{u.Foot_addr}</p>
+              <p>{u.Foot_tel}</p>
+              <p>{u.Foot_call}</p>
+            </address>
+            <ul className="rb-foot-links">
+              <li><a href={LINKS.use} {...newWindow(u.Foot_use)}>{u.Foot_use}</a></li>
+              <li><a href={LINKS.map} {...newWindow(u.Foot_map)}>{u.Foot_map}</a></li>
+            </ul>
           </div>
         </div>
-        <div className="f-btm">
-          <div className="f-btm-text">
-            <p className="f-copy">{phrase(t.Footer_4)}</p>
-          </div>
+        <div className="rb-foot-bottom">
+          <ul className="rb-foot-links rb-foot-policy">
+            <li><a className="is-strong" href={LINKS.privacy} {...newWindow(u.Foot_privacy)}>{u.Foot_privacy}</a></li>
+            <li><a href={LINKS.copyright} {...newWindow(u.Foot_copyright)}>{u.Foot_copyright}</a></li>
+          </ul>
+          <p className="rb-foot-copy">{u.Foot_copy}</p>
         </div>
       </div>
     </footer>

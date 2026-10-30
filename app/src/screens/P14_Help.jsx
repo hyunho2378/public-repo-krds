@@ -1,4 +1,6 @@
 // P-14 도움말. 처음 쓰는 공무원 안내, 용어 풀이(U4), 설명서 표준 양식(F-24). KRDS 아코디언.
+import { newWindow } from '../components/Layout/newWindow';
+import { InfoPair } from '../components/Layout/FoldText';
 import { phrase } from '../components/Help/Phrase';
 import { t } from '../copy/ko';
 import { u } from '../copy/ui';
@@ -30,6 +32,15 @@ export default function Help() {
         <h2 id="about-title" className="krds-text-body-small-bold">{phrase(t.P14_about_title)}</h2>
         <p>{phrase(t.P14_about_body)}</p>
         <p className="krds-text-body-xsmall rb-subtle">{u.Build_label} <code className="rb-md-code">{__BUILD_ID__}</code></p>
+      </section>
+      <section className="rb-stack" aria-labelledby="src-title">
+        <h2 id="src-title" className="krds-text-body-small-bold">{u.Src_title}</h2>
+        <dl className="rb-decision-list">
+          <InfoPair label={u.Src_designSystem}>{u.Src_designSystemValue}</InfoPair>
+          <InfoPair label={u.Src_owner}>{u.Src_ownerValue}</InfoPair>
+          <InfoPair label={u.Src_license}>{u.Src_licenseValue}</InfoPair>
+          <InfoPair label={u.Src_origin}><a className="krds-link" href="https://www.krds.go.kr/" {...newWindow(u.Src_designSystemValue)}>https://www.krds.go.kr/</a></InfoPair>
+        </dl>
       </section>
       <section className="rb-stack" aria-labelledby="start-title">
         <h2 id="start-title" className="krds-text-body-small-bold">{phrase(t.P14_15)}</h2>

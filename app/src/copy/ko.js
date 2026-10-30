@@ -33,9 +33,7 @@ export const t = {
   Readme_1: "개발자용 명령어 보기",
   // Footer
   Footer_1: "공공 저장소 개선 시제품, 공식 서비스 아님",
-  Footer_2: "이용 안내",
   Footer_3: "새 창 열림",
-  Footer_4: "본 화면은 행정안전부 범정부 UI/UX 디자인 시스템(KRDS, 공공누리 제1유형)을 이용하였습니다.",
   // Header
   Header_1: "공공 깃랩",
   Header_2: "도구 찾기",
@@ -307,13 +305,11 @@ export const t = {
   P02_emptyHint: "검색어의 맞춤법을 확인해 주세요. | 더 짧은 단어나 다른 표현으로 | 검색해 주세요. | 선택한 조건이 있으면 해제해 주세요.",
   P07_19: "설치/실행 전 제작자 확인",
   Header_10: "본문 바로가기",
-  Footer_5: "KRDS 출처",
   TaskSearch_2: "업무 입력",
   TaskSearch_3: "검색",
   LoginRequiredModal_2: "로그인 필요",
   Status_6: "다시 불러오기",
   Status_7: "도구 찾기",
-  Footer_krds: "KRDS 출처",
   P09_similarHint: "기존 도구 의견/개선 참여",
   TaskSearch_hint: "예: 출장비 계산, 회의록 정리",
   req: "(필수)",
