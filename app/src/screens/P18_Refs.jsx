@@ -75,9 +75,9 @@ export function Branches() {
   const tabs = [['overview', g.tabOverview, null], ['active', g.tabActive, fresh.length], ['stale', g.tabStale, stale.length], ['all', g.tabAll, sorted.length]];
   const rows = (arr) => arr.map((x) => <RefRow key={x.name} id={frame.id} project={project} name={x.name} commit={x.commit} isBranch flags={<Flags x={x} />} />);
   return (
-    <ProjectFrame screenId="R-07" tab="" tabLabel={t.RepoSub_branches} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-07" tab="" tabLabel={g.brTitle} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
       <div className="gl-page">
-        <div className="gl-tabs" role="tablist" aria-label={t.RepoSub_branches}>
+        <div className="gl-tabs" role="tablist" aria-label={g.brTitle}>
           {tabs.map(([k, name, n]) => (
             <button key={k} type="button" role="tab" aria-selected={tab === k} className="gl-tab" onClick={() => setTab(k)}>
               <span>{name}</span>{n != null ? <span className="gl-tab-count">{n}</span> : null}

@@ -16,6 +16,7 @@ export const g = {
   tabStale: '오래됨',
   tabAll: '모두',
   brFilter: '브랜치 이름으로 필터링',
+  brTitle: '브랜치',
   brActive: '활성 브랜치',
   brStale: '오래된 브랜치',
   brNone: '브랜치가 없습니다',
