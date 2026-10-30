@@ -146,3 +146,27 @@
 @media (min-width: 1024px) {
   .rb-repo-main.has-info > .rb-repo-info { position: sticky; top: calc(var(--rb-header-h) + var(--rb-masthead-h) + var(--rb-panel-pad-y)); }
 }
+.rb-card-ai { margin-inline-start: var(--krds-gap-2); color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); }
+
+/* ---------- 전역 검색(공공 깃랩 44) ---------- */
+.rb-s-input { display: flex; align-items: center; gap: var(--krds-gap-3); height: var(--krds-number-12); padding: 0 var(--krds-padding-4); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-white); }
+.rb-s-input:focus-within { border-color: var(--krds-color-border-primary); }
+.rb-s-input input { flex: 1; min-width: 0; border: 0; background: none; color: var(--krds-color-text-basic); font-size: var(--krds-font-size-body-small); }
+.rb-s-input input:focus { outline: none; }
+.rb-s-clear { display: inline-flex; border: 0; background: none; color: var(--krds-color-text-subtle); cursor: pointer; padding: 0; }
+.rb-s-body { display: grid; grid-template-columns: calc(var(--krds-number-21) * 2 + var(--krds-number-12) * 2) minmax(0, 1fr); gap: var(--rb-gutter); align-items: start; }
+.rb-s-side { display: flex; flex-direction: column; gap: var(--krds-gap-5); align-items: flex-start; }
+.rb-s-scopes { list-style: none; margin: 0; padding: 0; width: 100%; }
+.rb-s-scope { display: flex; align-items: center; gap: var(--krds-gap-3); min-height: var(--rb-side-item-h); padding: 0 var(--rb-side-item-pad-x); border-radius: var(--krds-radius-medium2); color: var(--krds-color-text-basic); text-decoration: none; font-size: var(--krds-font-size-body-small); }
+.rb-s-scope > span { flex: 1; }
+.rb-s-scope .rb-icon { width: var(--krds-number-8); height: var(--krds-number-8); }
+a.rb-s-scope:hover { background: var(--krds-color-action-secondary-hover); }
+.rb-s-scope.is-current { background: var(--krds-color-action-secondary-selected); font-weight: var(--rb-fw-current); }
+.rb-s-arch { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--krds-gap-2); }
+.rb-s-results { display: flex; flex-direction: column; gap: var(--rb-filter-gap); min-width: 0; }
+.rb-taskfind { display: flex; flex-direction: column; gap: var(--krds-gap-3); padding-bottom: var(--rb-filter-gap); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-taskfind h2 { margin: 0; }
+.rb-taskfind-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--krds-gap-3); }
+.rb-taskfind-list li { display: flex; flex-direction: column; gap: var(--krds-gap-1); }
+.rb-taskfind .rb-fold-btn { align-self: flex-start; color: var(--krds-color-text-basic); }
+@media (max-width: 1023px) { .rb-s-body { grid-template-columns: minmax(0, 1fr); } .rb-s-side { flex-direction: row; flex-wrap: wrap; align-items: center; } }

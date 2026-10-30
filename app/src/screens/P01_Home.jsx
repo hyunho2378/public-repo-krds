@@ -13,6 +13,7 @@ import { Status } from '../components/Feedback/Status';
 import { Icon } from '../components/Code/Icon';
 import { Menu } from '../components/Navigation/Menu';
 import { ProjectRow } from '../components/Layout/ProjectRow';
+import { loadCards } from '../api/cards';
 
 export const FIELDS = [t.P01_1, t.P01_2, t.P01_3, t.P01_4, t.P01_5, t.P01_6, t.P01_7];
 const SORTS = [['last_activity_at', u.X_sortUpdated], ['created_at', u.X_sortCreated], ['name', u.X_sortName], ['star_count', u.X_sortStars]];
@@ -71,6 +72,9 @@ export default function Home() {
   const dir = params.get('dir') === 'asc' ? 'asc' : 'desc';
   const q = params.get('q') || '';
   const page = Math.max(1, Number(params.get('page')) || 1);
+  const field = params.get('field') || '';
+  const cards = useData(loadCards, []);
+  const fieldOpts = cards.data ? cards.data.fields() : [];
   const [text, setText] = useState(q);
   const [warn, setWarn] = useState(false);
   const set = (patch) => {
@@ -80,8 +84,17 @@ export default function Home() {
     setParams(next);
   };
   const list = useData(
-    () => request(`/api/gitlab/projects?order_by=${sort}&sort=${dir}&archived=${archived}&per_page=${PER}&page=${page}${q ? `&search=${encodeURIComponent(q)}` : ''}`),
-    [sort, dir, archived, q, page],
+    async () => {
+      // 덧붙임 '업무 분야'를 고르면 그 분야 소개 카드의 프로젝트만(공공 깃랩 자료로 행을 그린다)
+      if (field && cards.data) {
+        const ids = cards.data.idsInField(field).slice((page - 1) * PER, page * PER);
+        const rows = [];
+        for (const id of ids) { const r = await request(`/api/gitlab/projects/${id}`).catch(() => null); if (r?.data) rows.push(r.data); }
+        return { data: rows, pagination: { total: cards.data.idsInField(field).length, nextPage: page * PER < cards.data.idsInField(field).length ? String(page + 1) : null } };
+      }
+      return request(`/api/gitlab/projects?order_by=${sort}&sort=${dir}&archived=${archived}&per_page=${PER}&page=${page}${q ? `&search=${encodeURIComponent(q)}` : ''}`);
+    },
+    [sort, dir, archived, q, page, field, !!cards.data],
     (d) => !d.data?.length,
   );
   const items = list.data?.data || [];
@@ -136,11 +149,13 @@ export default function Home() {
         </div>
       </div>
       {warn ? <p id="x-filter-warn" className="krds-text-body-xsmall rb-subtle" role="status">{u.X_min3}</p> : null}
-      {/* 덧붙임(D-21 4장, UX/14 2): 업무 분야 선택 한 줄. 고르면 업무 분야 검색 결과로 간다 */}
-      <div className="rb-x-extra" data-figma="extra-field-filter">
-        <span className="krds-text-body-xsmall rb-subtle">{u.X_field}</span>
-        <PickMenu label={u.X_field} value="" options={[['', u.X_fieldAll], ...FIELDS.map((f) => [f, f])]} onPick={(f) => f && navigate(`/search?field=${encodeURIComponent(f)}`)} className="rb-x-sortbtn" />
-      </div>
+      {/* 덧붙임(D-21 4장, UX/14 2): 업무 분야 선택 한 줄. 소개 카드 분야가 있을 때만 */}
+      {fieldOpts.length ? (
+        <div className="rb-x-extra" data-figma="extra-field-filter">
+          <span className="krds-text-body-xsmall rb-subtle">{u.X_field}</span>
+          <PickMenu label={u.X_field} value={field} options={[['', u.X_fieldAll], ...fieldOpts.map((f) => [f.name, `${f.name} ${f.count}`])]} onPick={(f) => set({ field: f })} className="rb-x-sortbtn" />
+        </div>
+      ) : null}
       <Status {...list} />
       {list.state === 'Empty' ? <p className="krds-text-body-small rb-subtle">{u.X_none}</p> : null}
       {items.length ? <ul className="rb-prows">{items.map((p) => <ProjectRow key={p.id} p={p} mrs={mrs[p.id]?.mr} issues={mrs[p.id]?.issues} />)}</ul> : null}

@@ -9,6 +9,8 @@ import { Icon } from '../Code/Icon';
 import { cleanDescription } from './description';
 import { decisionRows, loadDecision } from './DecisionPanel';
 import { FoldText, InfoPair } from './FoldText';
+import { cardValue, loadCards } from '../../api/cards';
+import { newWindow } from './newWindow';
 
 const LANG_KEYS = ['typescript', 'javascript', 'python', 'java', 'shell'];
 const langVar = (name) => {
@@ -58,13 +60,18 @@ export function ProjectInfo({ id, project, readme, totals, stats, languages, roo
     log ? [u.I_changelog, `${p}/code/${log.path}`, true] : null,
   ].filter(Boolean);
   const rows = d.data ? decisionRows(id, readme, d.data).slice(0, 4) : [];
+  const cs = useData(loadCards, []);
+  const card = cs.data ? cs.data.get(id) : null;
+  const field = card ? [].concat(cardValue(card.fields) ?? [])[0] : null;
   return (
     <aside className="rb-repo-info" aria-labelledby="rb-info-title" data-figma="project-info">
       <h2 id="rb-info-title" className="krds-text-body-small-bold">{u.G_projectInfo}</h2>
       {intro ? <FoldText lines={4} className="rb-info-intro">{intro}</FoldText> : null}
-      {topics.length ? (
+      {topics.length || field ? (
         <div className="krds-tag-wrap small rb-info-topics">
           {topics.map((x) => <span key={x} className="krds-btn-tag">{x}</span>)}
+          {/* 덧붙임(UX/14 2): 주제 옆 분야 하나 */}
+          {field ? <Link className="krds-btn-tag" to={`/?field=${encodeURIComponent(field)}`} title={u.C_field} data-figma="extra-field">{u.C_field}: {field}</Link> : null}
         </div>
       ) : null}
       <LangBar languages={languages} />
@@ -89,18 +96,52 @@ export function ProjectInfo({ id, project, readme, totals, stats, languages, roo
           <InfoPair label={u.I_created}>{ymd(project.created_at)}</InfoPair>
         </div>
       ) : null}
-      {/* 덧붙임 자리(UX/14 1, 5, 6, 8): 소개 카드 요약과 사용 전 확인. 4줄 + 더보기 */}
-      <section className="rb-info-sep rb-info-extra" data-figma="extra-intro-card" aria-labelledby="rb-info-extra">
-        <h3 id="rb-info-extra" className="krds-text-body-small-bold">{u.I_extra}</h3>
-        {d.data ? (
-          <dl className="rb-dock-list">
-            {rows.map(([label, value]) => (
-              <InfoPair key={label} label={label}><FoldText lines={1}>{value}</FoldText></InfoPair>
-            ))}
-          </dl>
-        ) : <p className="krds-text-body-xsmall rb-subtle" role="status">{d.state === 'Error' ? d.error : t.P10_1}</p>}
-        <p className="rb-dock-more"><Link className="krds-link" to={`${p}/use`}>{u.I_more}</Link></p>
-      </section>
+      {/* 덧붙임 자리(UX/14 1, 5, 6, 8): 소개 카드가 있으면 카드 4줄, 없으면 사용 전 확인 4줄. 한 묶음, 4줄 + 더보기 */}
+      {card ? <IntroCard id={id} card={card} /> : (
+        <section className="rb-info-sep rb-info-extra" data-figma="extra-intro-card" aria-labelledby="rb-info-extra">
+          <h3 id="rb-info-extra" className="krds-text-body-small-bold">{u.I_extra}</h3>
+          {d.data ? (
+            <dl className="rb-dock-list">
+              {rows.map(([label, value]) => (
+                <InfoPair key={label} label={label}><FoldText lines={1}>{value}</FoldText></InfoPair>
+              ))}
+            </dl>
+          ) : <p className="krds-text-body-xsmall rb-subtle" role="status">{d.state === 'Error' ? d.error : t.P10_1}</p>}
+          <p className="rb-dock-more"><Link className="krds-link" to={`${p}/use`}>{u.I_more}</Link></p>
+        </section>
+      )}
     </aside>
+  );
+}
+
+/** UX/14 1 소개 카드: 하는 일, 실행 형태 + 바로 열기, 이용 조건, 기준 날짜. 값이 없으면 '미기재', AI가 정리한 값은 'AI 정리' 표시, 근거 줄 링크 */
+function IntroCard({ id, card }) {
+  const p = `/projects/${id}`;
+  const ai = (f) => (f?.s === 'ai' && cardValue(f) != null ? <span className="rb-card-ai">{u.C_ai}</span> : null);
+  const text = (f) => { const v = cardValue(f); return v == null ? u.C_none : Array.isArray(v) ? v.join(', ') : String(v); };
+  const run = cardValue(card.run);
+  const lines = card.readme?.e?.lines;
+  const rows = [
+    [u.C_does, text(card.oneLine), ai(card.oneLine)],
+    [u.C_form, card.form?.label || text(card.form), ai(card.form), typeof run === 'string' && /^https?:/.test(run) ? run : null],
+    [u.C_license, text(card.license), ai(card.license)],
+    [u.C_refs, text(card.refs), ai(card.refs)],
+  ];
+  return (
+    <section className="rb-info-sep rb-info-extra" data-figma="extra-intro-card" aria-labelledby="rb-info-card">
+      <h3 id="rb-info-card" className="krds-text-body-small-bold">{u.C_title}</h3>
+      <dl className="rb-dock-list">
+        {rows.map(([label, value, mark, open]) => (
+          <InfoPair key={label} label={<>{label}{mark}</>}>
+            <FoldText lines={1}>{value}</FoldText>
+            {open ? <a className="krds-link" href={open} {...newWindow(u.C_open)}>{u.C_open}</a> : null}
+          </InfoPair>
+        ))}
+      </dl>
+      <p className="rb-dock-more">
+        <Link className="krds-link" to={`${p}/use`}>{u.I_more}</Link>
+        {Array.isArray(lines) && lines.length === 2 ? <> · <Link className="rb-plain-link rb-subtle" to={`${p}/code/README.md#L${lines[0]}-${lines[1]}`}>{u.C_evidence(lines[0], lines[1])}</Link></> : null}
+      </p>
+    </section>
   );
 }

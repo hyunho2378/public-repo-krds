@@ -8,7 +8,8 @@ import { t } from '../copy/ko';
 import { product, STATIC_MODE as isStatic } from '../api/client';
 import { Page } from '../components/Layout/Page';
 import { FormField } from '../components/Input/FormField';
-import { EmptyState } from '../components/Feedback/Status';
+import { cardValue, loadCards } from '../api/cards';
+import { newWindow } from '../components/Layout/newWindow';
 import '../components/Write/write.css';
 
 /** 이름에서 주소 경로를 만든다(GitLab과 같은 규칙: 소문자, 공백은 -). */
@@ -41,8 +42,15 @@ export default function NewProject() {
     }
     const timer = setTimeout(async () => {
       try {
-        const res = await product.post('/duplicates', { name: q, description: desc });
-        setSimilar(res.data?.items?.slice(0, 5) || []);
+        // UX/14 4: 소개 카드 자료가 있으면 이름과 하는 일로 비슷한 프로젝트 3개, 없으면 검색 색인
+        const cards = await loadCards();
+        const hits = cards ? cards.similarToName(`${q} ${desc}`, 3) : [];
+        if (hits.length) {
+          setSimilar(hits.map((c) => ({ id: c.id, name: c.name, description: cardValue(c.oneLine) || '', organization: cardValue(c.org) || '', owner: c.url ? c.url.replace(/\/[^/]+$/, '') : null })));
+        } else {
+          const res = await product.post('/duplicates', { name: q, description: desc });
+          setSimilar(res.data?.items?.slice(0, 3) || []);
+        }
       } catch {
         setSimilar([]);
       }
@@ -61,7 +69,7 @@ export default function NewProject() {
         <FormField id="np-name" label={t.NewProject_name} required value={name} onChange={(e) => setName(e.target.value)} hint={t.NewProject_nameHint} />
 
         {similar.length ? (
-          <section className="rb-compare-pick" aria-labelledby="np-similar">
+          <section className="rb-compare-pick" aria-labelledby="np-similar" data-figma="extra-similar">
             <h2 id="np-similar" className="krds-text-body-small-bold">{t.NewProject_similar}</h2>
             <p className="krds-text-body-xsmall rb-subtle">{t.NewProject_similarHint}</p>
             <ul className="rb-plain-list">
@@ -69,7 +77,7 @@ export default function NewProject() {
                 <li className="rb-plain-row" key={p.id}>
                   <Link className="rb-plain-main krds-link" to={`/projects/${p.id}`}>{p.name}</Link>
                   <span className="rb-plain-sub rb-subtle rb-ellipsis">{cleanDescription(p.description)}</span>
-                  <span className="rb-plain-meta rb-subtle">{p.organization || ''}</span>
+                  <span className="rb-plain-meta rb-subtle">{p.owner ? <a className="rb-plain-link" href={p.owner} {...newWindow(p.organization || p.name)}>{p.organization || ''}</a> : p.organization || ''}</span>
                 </li>
               ))}
             </ul>
@@ -121,7 +129,6 @@ export default function NewProject() {
           </div>
         </div>
       ) : null}
-      {!similar.length && name.trim().length >= 2 ? <EmptyState title={t.NewProject_noSimilar} /> : null}
     </Page>
   );
 }
