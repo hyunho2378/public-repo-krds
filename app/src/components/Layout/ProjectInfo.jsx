@@ -49,15 +49,15 @@ export function ProjectInfo({ id, project, readme, totals, stats, languages, roo
     ['ext/commit', fmt(stats?.commits) + (stats?.more ? '+' : ''), u.I_commits, `${p}/changes`, !!stats?.commits],
     ['ext/branch', fmt(totals?.branches), u.I_branches, `${p}/branches`, totals?.branches != null],
     ['ext/tag', fmt(totals?.tags), u.I_tags, `${p}/tags`, totals?.tags != null],
-    ['ext/rocket', fmt(totals?.releases), u.I_releases, `${p}/releases`, totals?.releases != null],
+    ['ext/rocket-launch', fmt(totals?.releases), u.I_releases, `${p}/releases`, totals?.releases != null],
   ].filter((c) => c[4]);
   const file = (re) => (root || []).find((f) => f.type === 'blob' && re.test(f.name));
   const lic = file(/^(LICENSE|LICENCE|COPYING)(\.|$)/i);
   const log = file(/^CHANGELOG/i);
   const docs = [
-    readme ? [u.I_readme, '#readme', true] : null,
-    lic || project.license ? [project.license?.name || u.I_license, lic ? `${p}/code/${lic.path}` : project.license_url, !!lic] : null,
-    log ? [u.I_changelog, `${p}/code/${log.path}`, true] : null,
+    readme ? [u.I_readme, '#readme', true, 'ext/file-text'] : null,
+    lic || project.license ? [project.license?.name || u.I_license, lic ? `${p}/code/${lic.path}` : project.license_url, !!lic, 'ext/scale'] : null,
+    log ? [u.I_changelog, `${p}/code/${log.path}`, true, 'ext/file-text'] : null,
   ].filter(Boolean);
   const rows = d.data ? decisionRows(id, readme, d.data).slice(0, 4) : [];
   const cs = useData(loadCards, []);
@@ -86,9 +86,9 @@ export function ProjectInfo({ id, project, readme, totals, stats, languages, roo
       ) : null}
       {docs.length ? (
         <ul className="rb-info-list rb-info-sep">
-          {docs.map(([label, to, inside]) => (
+          {docs.map(([label, to, inside, icon]) => (
             <li key={label}>
-              {inside && to.startsWith('#') ? <a href={to}><Icon name="ext/file-text" />{label}</a> : inside ? <Link to={to}><Icon name="ext/file-text" />{label}</Link> : <a href={to}><Icon name="ext/file-text" />{label}</a>}
+              {inside && to.startsWith('#') ? <a href={to}><Icon name={icon} />{label}</a> : inside ? <Link to={to}><Icon name={icon} />{label}</Link> : <a href={to}><Icon name={icon} />{label}</a>}
             </li>
           ))}
         </ul>

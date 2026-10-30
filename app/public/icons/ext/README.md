@@ -40,3 +40,13 @@
 | sort-asc.svg | 정렬 방향(오름차순) | sort-lowest |
 | sort-desc.svg | 정렬 방향(내림차순) | sort-highest |
 | history.svg | 최근 검색 | history |
+| rocket-launch.svg | 프로젝트 정보 열 'n개의 릴리스'(공공 깃랩 02: 속도선 있는 로켓) | rocket-launch |
+| scale.svg | 프로젝트 정보 열 라이선스(공공 깃랩 02: 저울) | scale |
+
+## 대조 기록 (2026. 10. 30. 23시대)
+- 대조 이미지: UX/gitlab_compare/icons/ (00 Pajamas 원본 대 ext 전체, 01~05 공공 깃랩 캡처 01·02·03·08 확대, 06 프로젝트 아이콘 캡처 대 우리 사이드바)
+- 고친 것: project(평행사변형 → 왼쪽이 짧고 오른쪽이 긴 사다리꼴 + 오른쪽 둥근 탭, Pajamas project 좌표를 1.25배로 옮김), cloud(상자에 세 면 선 추가, Pajamas cloud-pod), 새로 rocket-launch(릴리스 개수), scale(라이선스). 빌드 묶음은 rocket(속도선 없음) 그대로
+- 그대로 맞는 것: group, catalog, snippet, pin, users, code, deploy, monitor, star, fork, tag, commit, branch, merge-request, issues, pipeline, rocket, folder, file, file-text, history, sort-asc, sort-desc
+- 일부러 다른 것: sparkle(AI 카탈로그)은 Pajamas tanuki-ai의 GitLab 로고(상표)를 빼고 반짝임만
+- folder와 project 구분: 공공 깃랩은 folder(folder-o)를 파일 표와 파일 트리의 폴더에만 쓰고(캡처 02 파일 표, 08 파일 트리), 탐색 사이드바 '프로젝트'와 목록 행 맨 왼쪽은 project 아이콘을 쓴다(캡처 01). 우리도 같게 둔다
+- KRDS를 쓰는 사이드바 묶음 아이콘(같은 뜻의 KRDS 아이콘이 있어 KRDS 우선, D-11): 추가 기능 view_all(공공 깃랩 grid), 계획 calendar(공공 깃랩 planning, 달력 + 체크), 분석 analytics(공공 깃랩 chart, 틀 없는 막대), 도움말 help(공공 깃랩 question-o), 사이드바 접음 panel_open(공공 깃랩 sidebar 접음 화살표). 모양이 똑같지 않다

@@ -92,3 +92,4 @@
 - 머리 띠 문구를 "공공 깃랩 점검 중. 2026. 10. 30. 기준 저장 자료."로(문구 검사 예외 제거). 스냅샷 재생성(상세 702, README 제외 9). 스냅샷 보조 자료 자리(members, labels, milestones, events, contributors: data/raw/{id}/에 있으면 싣고 대체 응답). 현재 data/raw와 sample/kordoc에는 contributors(150)만 있음
 - [C2] P21 기여자 분석 이식과 비교 이미지 push. sample/kordoc/api에 members, labels, activity 등 자료가 없어 P22 나머지, P30, P26, P15는 보류(자료 들어온 뒤 재개). P19 상세는 대응 캡처 없음
 - 배포본 대표 화면 10개 x 1440/1920/360 스크린샷 30장(UX/gitlab_compare/deployed, 가로 넘침 0). 대조표 7장 최종 빠짐 집계: D-21 6, C1 3, C2 7, 합계 16(옮기지 않은 C2 화면 별도)
+- 아이콘 대조(UX/gitlab_compare/icons): project를 사다리꼴+탭으로(Pajamas 좌표), cloud 상자 면 선, 새 rocket-launch(릴리스 개수), scale(라이선스). 나머지 ext는 Pajamas와 같음. README에 folder/project 구분 근거와 KRDS 묶음 아이콘 차이 기록
