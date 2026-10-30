@@ -114,9 +114,9 @@ export function CommitBar({ id, commit, count, more, path, owner }) {
       <Avatar className="rb-commit-avatar" src={owner?.avatar_url} name={org} />
       <span className="rb-commit-texts">
         <Link className="krds-link krds-text-body-small-bold rb-ellipsis" to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>
-        <span className="krds-text-body-small rb-subtle">{t.fn.wroteAt(org)} <Ago iso={commit.committed_date} />{t.fn.wroteSuffix}</span>
+        <span className="krds-text-body-xsmall rb-subtle">{t.fn.wroteAt(org)} <Ago iso={commit.committed_date} />{t.fn.wroteSuffix}</span>
       </span>
-      <p className="rb-commit-meta krds-text-body-small rb-subtle">
+      <p className="rb-commit-meta krds-text-body-xsmall rb-subtle">
         <code>{commit.short_id}</code>
         <button type="button" className="krds-btn xsmall text rb-icon-btn" onClick={() => copy(commit.id)}>
           <Icon name="copy" /><span className="sr-only">{t.Home_copySha}</span>
@@ -165,7 +165,7 @@ export function FileTable({ id, path, items, log, pending, filter, refQuery }) {
                     <Icon name={f.type === 'tree' ? 'new_folder' : 'document'} label={f.type === 'tree' ? t.P16_folder : t.P16_file} />
                     <span className="rb-ellipsis rb-break-any">{f.name}</span>
                   </Link>
-                  <span className="rb-tree-mobile krds-text-body-small rb-subtle">
+                  <span className="rb-tree-mobile krds-text-body-xsmall rb-subtle">
                     {wait ? <Skeleton widths={['60%']} inline /> : <span className="rb-ellipsis">{c ? c.title : ''}</span>}
                     <span>{c ? <Ago iso={c.committed_date} /> : ''}</span>
                   </span>

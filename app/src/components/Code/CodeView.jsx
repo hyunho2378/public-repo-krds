@@ -123,8 +123,8 @@ export function CodeView({ path, text, rawUrl, size, historyTo, onHistory, blame
     <section className="rb-code" aria-label={t.P16_codeLabel}>
       <div className="rb-code-bar">
         <div className="rb-code-meta">
-          <p className="krds-text-body-small rb-subtle">{t.fn.lines(lines.length)}</p>
-          {size ? <p className="krds-text-body-small rb-subtle">{sizeLabel(size)}</p> : null}
+          <p className="krds-text-body-xsmall rb-subtle">{t.fn.lines(lines.length)}</p>
+          {size ? <p className="krds-text-body-xsmall rb-subtle">{sizeLabel(size)}</p> : null}
         </div>
         {!binary ? (
           <div className="rb-code-views" role="tablist" aria-label={t.P16_viewLabel}>

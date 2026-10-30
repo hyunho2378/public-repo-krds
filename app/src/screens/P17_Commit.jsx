@@ -32,7 +32,7 @@ export default function Commit() {
             {b.commit.message && b.commit.message.trim() !== b.commit.title ? (
               <pre className="rb-detail-body krds-text-body-small rb-pre">{b.commit.message.trim()}</pre>
             ) : null}
-            <p className="krds-text-body-small rb-row-meta">
+            <p className="krds-text-body-xsmall rb-row-meta">
               <span>{t.P17_author} {orgLabel(b.commit.author_name)}</span>
               <span>{day(b.commit.committed_date)}</span>
               <code>{b.commit.short_id}</code>

@@ -35,7 +35,7 @@ export function DecisionList({ rows }) {
       {rows.map(([title, value, [action, to]]) => (
         <div className="rb-decision-item" key={title}>
           <dt className="krds-text-body-small-bold">{title}</dt>
-          <dd className="krds-text-body-small rb-subtle">{value}</dd>
+          <dd className="krds-text-body-xsmall rb-subtle">{value}</dd>
           <dd><Link className="krds-link krds-text-body-small" to={to}>{action}</Link></dd>
         </div>
       ))}
@@ -48,7 +48,7 @@ export function DecisionBlock({ id, readme, d, headingId = 'decision-title' }) {
   return (
     <section data-figma="decision-panel" className="rb-about-block" aria-labelledby={headingId}>
       <h2 id={headingId} className="krds-text-body-small-bold">{t.P04_25}</h2>
-      {d.data ? <DecisionList rows={decisionRows(id, readme, d.data)} /> : <p className="krds-text-body-small rb-subtle" role="status">{d.state === 'Error' ? d.error : t.P10_1}</p>}
+      {d.data ? <DecisionList rows={decisionRows(id, readme, d.data)} /> : <p className="krds-text-body-xsmall rb-subtle" role="status">{d.state === 'Error' ? d.error : t.P10_1}</p>}
     </section>
   );
 }

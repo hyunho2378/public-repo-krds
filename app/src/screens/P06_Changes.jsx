@@ -43,7 +43,7 @@ export default function Changes() {
           <h2 className="krds-text-body-small-bold">{path ? t.P06_filter : t.P06_title}</h2>
           {path ? <Link className="krds-link" to={`/projects/${frame.id}/changes`}>{t.P06_clearFilter}</Link> : null}
         </div>
-        {path ? <p className="krds-text-body-small rb-subtle rb-break-any"><code>{path}</code></p> : null}
+        {path ? <p className="krds-text-body-xsmall rb-subtle rb-break-any"><code>{path}</code></p> : null}
         {!list.data ? (
           <Status {...list} />
         ) : !items.length ? (
@@ -53,20 +53,20 @@ export default function Changes() {
             {groupByDay(items, 'committed_date').map((g) => (
               <section key={g.day} className="rb-commit-group" aria-label={`${t.P06_dayGroup} ${g.day}`}>
                 <h3 className="krds-text-body-small-bold">
-                  <Icon name="time" /> {g.day} <span className="rb-subtle krds-text-body-small">{t.fn.commitsOn(g.items.length)}</span>
+                  <Icon name="time" /> {g.day} <span className="rb-subtle krds-text-body-xsmall">{t.fn.commitsOn(g.items.length)}</span>
                 </h3>
                 <ul className="rb-row-list">
                   {g.items.map((c) => (
                     <li className="rb-row" key={c.id}>
                       <div className="rb-row-main">
                         <Link className="krds-link krds-text-body-small rb-ellipsis" to={`/projects/${frame.id}/changes/${c.id}`}>{c.title}</Link>
-                        <p className="krds-text-body-small rb-row-meta">
+                        <p className="krds-text-body-xsmall rb-row-meta">
                           <span>{orgLabel(c.author_name)}</span>
                           <span>{day(c.committed_date)}</span>
                         </p>
                       </div>
                       <div className="rb-row-side">
-                        <code className="krds-text-body-small">{c.short_id}</code>
+                        <code className="krds-text-body-xsmall">{c.short_id}</code>
                         <button type="button" className="krds-btn small tertiary" onClick={() => copy(c.id)}>
                           <Icon name="copy" />
                           <span className="sr-only">{t.P06_copySha}</span>

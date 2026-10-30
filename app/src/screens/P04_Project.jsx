@@ -45,7 +45,7 @@ export default function Project() {
           <h2 className="krds-text-body-small-bold">{t.P04_18}</h2>
           <p className="krds-text-body-small">{summary || t.StructuredList_5}</p>
           {card.summary && (
-            <p className="krds-text-body-small rb-subtle">
+            <p className="krds-text-body-xsmall rb-subtle">
               {t.P04_autoSummary} <a className="krds-link" href={`${project.web_url}/-/blob/${project.default_branch || 'main'}/README.md`} target="_blank" rel="noreferrer">{t.P04_19}<span className="sr-only"> {t.Footer_3}</span></a>
             </p>
           )}
@@ -73,7 +73,7 @@ export default function Project() {
             {decision.map(([title, value, [action, to]]) => (
               <div className="rb-decision-item" key={title}>
                 <dt className="krds-text-body-small-bold">{title}</dt>
-                <dd className="krds-text-body-small rb-subtle">{value}</dd>
+                <dd className="krds-text-body-xsmall rb-subtle">{value}</dd>
                 <dd>
                   <Link className="krds-link" to={to || '?reuse=1'}>{action}</Link>
                 </dd>

@@ -24,7 +24,7 @@ export default function Jobs() {
       <div className="rb-code-area">
         <div className="rb-detail-head">
           <h2 className="krds-text-body-small-bold" data-figma="section-title">{t.Jobs_title}</h2>
-          <p className="krds-text-body-small rb-subtle">{t.Jobs_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.Jobs_hint}</p>
         </div>
         {needsLogin ? (
           <EmptyState
@@ -46,7 +46,7 @@ export default function Jobs() {
         ) : (
           <EmptyState title={t.Jobs_none} />
         )}
-        <p className="krds-text-body-small rb-subtle">
+        <p className="krds-text-body-xsmall rb-subtle">
           <Link className="krds-link" to={`/projects/${id}/pipelines`}>{t.Jobs_toPipelines}</Link>
         </p>
       </div>

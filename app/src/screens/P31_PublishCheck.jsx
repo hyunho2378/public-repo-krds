@@ -33,7 +33,7 @@ export default function PublishCheck() {
       <div className="rb-code-area">
         <div className="rb-detail-head">
           <h2 className="krds-text-body-small-bold" data-figma="section-title">{t.PubCheck_title}</h2>
-          <p className="krds-text-body-small rb-subtle">{t.PubCheck_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.PubCheck_hint}</p>
         </div>
         {!check ? (
           <Status {...body} />
@@ -48,11 +48,11 @@ export default function PublishCheck() {
                 </li>
               ))}
             </ul>
-            <p className="krds-text-body-small rb-subtle">{phrase(t.PubCheck_scope)}</p>
-            {check.security?.notice && <p className="krds-text-body-small rb-subtle">{check.security.notice}</p>}
+            <p className="krds-text-body-xsmall rb-subtle">{phrase(t.PubCheck_scope)}</p>
+            {check.security?.notice && <p className="krds-text-body-xsmall rb-subtle">{check.security.notice}</p>}
           </section>
         )}
-        <p className="krds-text-body-small rb-subtle">
+        <p className="krds-text-body-xsmall rb-subtle">
           <Link className="krds-link" to={`/projects/${id}`}>{t.PubCheck_back}</Link>
         </p>
       </div>

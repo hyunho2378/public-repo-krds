@@ -50,18 +50,18 @@ export function RunSteps({ readme, cloneUrl }) {
     <section className="rb-run" aria-labelledby="run-title">
       <div className="rb-run-head">
         <h3 id="run-title" className="krds-text-body-small-bold">{t.Run_title}</h3>
-        <p className="krds-text-body-small rb-subtle">{t.Run_from}</p>
+        <p className="krds-text-body-xsmall rb-subtle">{t.Run_from}</p>
       </div>
       <ol className="rb-run-list">
         {steps.map((s, i) => (
           <li key={s.command}>
             <p className="krds-text-body-small-bold">{t.fn.stepNo(i + 1)} {s.title}</p>
-            {s.hint ? <p className="krds-text-body-small rb-subtle">{s.hint}</p> : null}
+            {s.hint ? <p className="krds-text-body-xsmall rb-subtle">{s.hint}</p> : null}
             <div className="rb-run-cmd">
               <code>{s.command}</code>
               <Copy value={s.command} />
             </div>
-            <p className="krds-text-body-small rb-subtle">{s.source}</p>
+            <p className="krds-text-body-xsmall rb-subtle">{s.source}</p>
           </li>
         ))}
       </ol>

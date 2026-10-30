@@ -19,7 +19,7 @@ export default function Contributors() {
         <RepoSubNav id={frame.id} active="people" />
         <div className="rb-detail-head">
           <h2 className="krds-text-body-small-bold">{list ? t.fn.countLabel(t.P21_title, t.fn.peopleCount(list.length)) : t.P21_title}</h2>
-          <p className="krds-text-body-small rb-subtle">{t.P21_help}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.P21_help}</p>
         </div>
         {!list ? <Status {...body} /> : list.length ? (
           <div className="krds-table-wrap rb-table-scroll">

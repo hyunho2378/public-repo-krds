@@ -47,9 +47,9 @@ export default function Explore() {
       </div>
       {items.length ? <ProjectList items={items} /> : <Status {...body} />}
       {body.data?.total ? (
-        <p className="krds-text-body-small rb-subtle">{t.fn.exploreTotal(body.data.total)}</p>
+        <p className="krds-text-body-xsmall rb-subtle">{t.fn.exploreTotal(body.data.total)}</p>
       ) : null}
-      <p className="krds-text-body-small rb-subtle">
+      <p className="krds-text-body-xsmall rb-subtle">
         <Link className="krds-link" to="/search">{t.Explore_toSearch}</Link>
       </p>
     </Page>

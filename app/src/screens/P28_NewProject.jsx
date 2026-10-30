@@ -54,7 +54,7 @@ export default function NewProject() {
       <div className="rb-write rb-narrow">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-small" data-figma="section-title">{t.NewProject_title}</h1>
-          <p className="krds-text-body-small rb-subtle">{t.NewProject_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.NewProject_hint}</p>
         </div>
 
         <FormField id="np-name" label={t.NewProject_name} required value={name} onChange={(e) => setName(e.target.value)} hint={t.NewProject_nameHint} />
@@ -62,7 +62,7 @@ export default function NewProject() {
         {similar.length ? (
           <section className="rb-compare-pick" aria-labelledby="np-similar">
             <h2 id="np-similar" className="krds-text-body-small-bold">{t.NewProject_similar}</h2>
-            <p className="krds-text-body-small rb-subtle">{t.NewProject_similarHint}</p>
+            <p className="krds-text-body-xsmall rb-subtle">{t.NewProject_similarHint}</p>
             <ul className="rb-plain-list">
               {similar.map((p) => (
                 <li className="rb-plain-row" key={p.id}>
@@ -102,7 +102,7 @@ export default function NewProject() {
           <Link className="krds-btn medium tertiary" to="/">{t.Commit_cancel}</Link>
           <button type="button" className="krds-btn medium primary" disabled={!name.trim() || !path.trim()} onClick={() => setDone(true)}>{t.NewProject_create}</button>
         </div>
-        <p className="krds-text-body-small rb-subtle">
+        <p className="krds-text-body-xsmall rb-subtle">
           <Link className="krds-link" to="/publish">{t.NewProject_toPublish}</Link>
         </p>
       </div>
@@ -112,7 +112,7 @@ export default function NewProject() {
           <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="np-result">
             <h2 id="np-result" className="krds-text-body-small-bold">{t.Write_cannotTitle}</h2>
             <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
-            <p className="krds-text-body-small rb-subtle">{t.fn.writeKind(t.NewProject_title)}</p>
+            <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeKind(t.NewProject_title)}</p>
             <div className="rb-modal-actions">
               <button type="button" className="krds-btn medium tertiary" onClick={() => setDone(false)}>{t.Commit_cancel}</button>
               {!isStatic ? <Link className="krds-btn medium primary" to="/login?returnTo=%2Fprojects%2Fnew">{t.Header_login}</Link> : null}

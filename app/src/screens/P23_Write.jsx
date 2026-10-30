@@ -20,7 +20,7 @@ function Result({ kind, onClose }) {
       <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="write-result">
         <h2 id="write-result" className="krds-text-body-small-bold">{t.Write_cannotTitle}</h2>
         <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
-        <p className="krds-text-body-small rb-subtle">{t.fn.writeKind(t[`Write_kind_${kind}`])}</p>
+        <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeKind(t[`Write_kind_${kind}`])}</p>
         <div className="rb-modal-actions">
           <button type="button" className="krds-btn medium tertiary" onClick={onClose}>{t.Commit_cancel}</button>
           {!isStatic ? <Link className="krds-btn medium primary" to={`/login?returnTo=${encodeURIComponent(window.location.pathname)}`}>{t.Header_login}</Link> : null}
@@ -90,7 +90,7 @@ export default function Write({ mode }) {
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-body-small-bold">{title}</h2>
-          <p className="krds-text-body-small rb-subtle">{t.fn.writeTarget(project.name, branch)}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeTarget(project.name, branch)}</p>
         </div>
 
         {mode === 'branch' ? (
@@ -103,7 +103,7 @@ export default function Write({ mode }) {
               onChange={(e) => setBranchName(e.target.value)}
               hint={t.Write_branchHint}
             />
-            <p className="krds-text-body-small rb-subtle">{t.fn.branchFrom(branch)}</p>
+            <p className="krds-text-body-xsmall rb-subtle">{t.fn.branchFrom(branch)}</p>
           </>
         ) : null}
 
@@ -127,7 +127,7 @@ export default function Write({ mode }) {
             <label className="rb-upload-drop" htmlFor="upload-input">
               <Icon name="upload" />
               <span className="krds-text-body-small">{t.Write_uploadDrop}</span>
-              <span className="krds-text-body-small rb-subtle">{t.Write_uploadHint}</span>
+              <span className="krds-text-body-xsmall rb-subtle">{t.Write_uploadHint}</span>
               <input
                 id="upload-input"
                 type="file"
@@ -146,7 +146,7 @@ export default function Write({ mode }) {
                 ))}
               </ul>
             ) : null}
-            <p className="krds-text-body-small rb-subtle">{t.Write_uploadWarn}</p>
+            <p className="krds-text-body-xsmall rb-subtle">{t.Write_uploadWarn}</p>
           </div>
         ) : null}
 

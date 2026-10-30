@@ -63,7 +63,7 @@ export default function Feedback() {
               <div className="krds-form-check" key={v}>
                 <input id={`type-${v}`} type="radio" name="type" checked={type === v} onChange={() => setType(v)} aria-describedby={`type-${v}-hint`} />
                 <label htmlFor={`type-${v}`}>{label}</label>
-                <p id={`type-${v}-hint`} className="krds-text-body-small rb-subtle">{hint}</p>
+                <p id={`type-${v}-hint`} className="krds-text-body-xsmall rb-subtle">{hint}</p>
               </div>
             ))}
           </fieldset>

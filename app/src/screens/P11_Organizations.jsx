@@ -27,7 +27,7 @@ export default function Organizations() {
             <li className="structured-item" key={o.name}>
               <Link className="rb-list-link rb-row" to={`/search?q=${encodeURIComponent(o.name)}`}>
                 <span className="krds-text-body-small-bold">{o.name}</span>
-                <span className="krds-text-body-small rb-subtle">{t.fn.orgCount(o.projectCount)}</span>
+                <span className="krds-text-body-xsmall rb-subtle">{t.fn.orgCount(o.projectCount)}</span>
               </Link>
             </li>
           ))}

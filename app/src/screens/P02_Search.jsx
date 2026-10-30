@@ -132,7 +132,7 @@ export default function Search() {
             </>
           )}
           {hasData(result.state) && result.data.data.sourceDate && (
-            <p className="krds-text-body-small rb-subtle">{t.fn.sourceDate(result.data.data.sourceDate)}</p>
+            <p className="krds-text-body-xsmall rb-subtle">{t.fn.sourceDate(result.data.data.sourceDate)}</p>
           )}
         </section>
       </div>

@@ -40,7 +40,7 @@ function Shell() {
   const wide = useMinWidth(breakpoint('--rb-bp-side-open'));
   const mobile = !useMinWidth(breakpoint('--rb-bp-mobile'));
   const [pref, setPref] = useBoolPref(SIDEBAR_KEY + (kind === 'detail' ? 'detail' : 'list'), kind === 'detail' ? true : !wide);
-  const collapsed = !mobile && pref;
+  const collapsed = !bare && !mobile && pref;
   const toggleCollapsed = useCallback(() => setPref(!pref), [pref, setPref]);
   return (
     <>

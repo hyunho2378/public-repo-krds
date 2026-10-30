@@ -20,7 +20,7 @@ function RefRow({ id, name, commit, badges }) {
           {badges}
         </p>
         {commit ? (
-          <p className="krds-text-body-small rb-row-meta">
+          <p className="krds-text-body-xsmall rb-row-meta">
             <span>{t.P18_lastCommit}</span>
             <Link className="krds-link rb-ellipsis" to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>
             <span>{day(commit.committed_date || commit.created_at)}</span>
@@ -86,7 +86,7 @@ export function Releases() {
                     <span className="krds-text-body-small-bold rb-break-any">{r.name || r.tag_name}</span>
                     {i === 0 ? <span className="rb-pill">{t.P18_latest}</span> : null}
                   </p>
-                  <p className="krds-text-body-small rb-row-meta"><span>{r.tag_name}</span><span>{day(r.released_at || r.created_at)}</span></p>
+                  <p className="krds-text-body-xsmall rb-row-meta"><span>{r.tag_name}</span><span>{day(r.released_at || r.created_at)}</span></p>
                   {r.description ? <Readme source={r.description} /> : null}
                   {r.assets?.sources?.length ? (
                     <div className="rb-labels" aria-label={t.P18_assets}>

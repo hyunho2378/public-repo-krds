@@ -232,7 +232,7 @@ export default function Code() {
                 <CommitBar id={frame.id} commit={b.last} count={b.count} more={b.more} path={path} owner={project.namespace} />
                 <FileTable id={frame.id} path={path} items={b.items} log={rowLog.log} pending={rowLog.pending} filter={filter} refQuery={refQuery} />
               </div>
-              {b.partial ? <p className="krds-text-body-small rb-subtle">{t.P16_partial}</p> : null}
+              {b.partial ? <p className="krds-text-body-xsmall rb-subtle">{t.P16_partial}</p> : null}
               {isHome && readme ? <div id="readme"><ReadmeBox source={readme} /></div> : null}
             </>
           ) : (

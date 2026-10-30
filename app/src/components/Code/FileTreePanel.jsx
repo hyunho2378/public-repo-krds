@@ -31,7 +31,7 @@ function Node({ id, item, current, refQuery, depth, filter }) {
       {isDir && open ? (
         kids ? (
           <ul role="group">{sorted.map((k) => <Node key={k.path} id={id} item={k} current={current} refQuery={refQuery} depth={depth + 1} filter={filter} />)}</ul>
-        ) : <p className="krds-text-body-small rb-subtle rb-ft-loading" role="status">{t.Tree_loading}</p>
+        ) : <p className="krds-text-body-xsmall rb-subtle rb-ft-loading" role="status">{t.Tree_loading}</p>
       ) : null}
     </li>
   );

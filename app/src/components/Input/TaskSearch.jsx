@@ -21,7 +21,7 @@ export function TaskSearch({ initial = '', keep }) {
       <label className="krds-text-label-small" htmlFor="task-search">
         {t.TaskSearch_2}
       </label>
-      <p id="task-search-hint" className="krds-text-body-small rb-subtle">{t.TaskSearch_hint}</p>
+      <p id="task-search-hint" className="krds-text-body-xsmall rb-subtle">{t.TaskSearch_hint}</p>
       <div className="rb-search-row">
         <input className="krds-input large" id="task-search" type="search" aria-describedby="task-search-hint" placeholder={t.TaskSearch_1} value={query} onChange={(e) => setQuery(e.target.value)} />
         <button className="krds-btn large primary" type="submit">

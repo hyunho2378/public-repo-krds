@@ -17,7 +17,7 @@ function Card({ id, title, children }) {
         <div className="rb-login-card" data-figma="login-card">
           <h1 className="krds-text-heading-medium">{title}</h1>
           {children}
-          <p className="krds-text-body-small rb-login-signup">
+          <p className="krds-text-body-xsmall rb-login-signup">
             <Link className="krds-link" to="/login">{t.Login_back}</Link>
           </p>
         </div>
@@ -29,7 +29,7 @@ function Card({ id, title, children }) {
 export function LoginFailed() {
   return (
     <Card id="G-08b" title={t.P10_2}>
-      <p className="krds-alert rb-login-notice" role="alert">
+      <p className="rb-login-notice" role="alert">
         <strong className="krds-text-body-small-bold">{t.Login_failTitle}</strong>
         <span className="krds-text-body-small">{t.Login_failBody}</span>
       </p>

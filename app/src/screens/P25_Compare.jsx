@@ -74,7 +74,7 @@ export default function Compare() {
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-body-small-bold">{t.Compare_title}</h2>
-          <p className="krds-text-body-small rb-subtle">{t.Compare_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.Compare_hint}</p>
         </div>
         <section className="rb-compare-pick" aria-label={t.Issue_comparePick}>
           <Picker label={t.Compare_from} id="cmp-from" list={list} value={from} onChange={setFrom} />

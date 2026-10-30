@@ -24,7 +24,7 @@ export function Insights() {
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-small" data-figma="section-title">{t.Insights_title}</h1>
-          <p className="krds-text-body-small rb-subtle">{t.Insights_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.Insights_hint}</p>
         </div>
         {!rows.length ? <Status {...map} /> : (
           <section aria-labelledby="field-dist">
@@ -38,7 +38,7 @@ export function Insights() {
                 </li>
               ))}
             </ul>
-            {map.data?.notice ? <p className="krds-text-body-small rb-subtle">{map.data.notice}</p> : null}
+            {map.data?.notice ? <p className="krds-text-body-xsmall rb-subtle">{map.data.notice}</p> : null}
           </section>
         )}
         {orgRows.length ? (
@@ -69,7 +69,7 @@ export function Checklist() {
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-small">{t.Checklist_title}</h1>
-          <p className="krds-text-body-small rb-subtle">{t.Checklist_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.Checklist_hint}</p>
         </div>
         {!steps.length ? <Status {...guide} /> : (
           <ul className="krds-accordion rb-steps">
@@ -111,7 +111,7 @@ export function LawAlerts() {
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-body-small-bold">{t.Law_title}</h2>
-          <p className="krds-text-body-small rb-subtle">{t.Law_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.Law_hint}</p>
         </div>
         {notConnected ? (
           <EmptyState title={t.Law_notConnected} />
@@ -126,7 +126,7 @@ export function LawAlerts() {
             ))}
           </ul>
         ) : <Status {...body} />}
-        {body.data?.notice ? <p className="krds-text-body-small rb-subtle">{body.data.notice}</p> : null}
+        {body.data?.notice ? <p className="krds-text-body-xsmall rb-subtle">{body.data.notice}</p> : null}
       </div>
     </ProjectFrame>
   );
@@ -154,7 +154,7 @@ export function Handover() {
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-body-small-bold">{t.Handover_title}</h2>
-          <p className="krds-text-body-small rb-subtle">{t.Handover_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.Handover_hint}</p>
         </div>
         <div className="rb-write-actions">
           <button type="button" className="krds-btn medium primary" onClick={make} disabled={state === 'loading'}>
@@ -165,7 +165,7 @@ export function Handover() {
         {text ? (
           <>
             <textarea className="krds-input rb-editor-area" aria-label={t.Handover_result} value={text} readOnly />
-            <p className="krds-text-body-small rb-subtle">{t.Handover_check}</p>
+            <p className="krds-text-body-xsmall rb-subtle">{t.Handover_check}</p>
           </>
         ) : null}
       </div>
@@ -186,7 +186,7 @@ export function Mcp() {
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-small">{t.Mcp_title}</h1>
-          <p className="krds-text-body-small rb-subtle">{t.Mcp_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.Mcp_hint}</p>
         </div>
         {!d ? <Status {...info} /> : (
           <>
@@ -207,10 +207,10 @@ export function Mcp() {
                 </ul>
               </>
             ) : null}
-            {d.endpoint ? <p className="krds-text-body-small rb-subtle">{t.fn.mcpEndpoint(d.endpoint)}</p> : null}
+            {d.endpoint ? <p className="krds-text-body-xsmall rb-subtle">{t.fn.mcpEndpoint(d.endpoint)}</p> : null}
           </>
         )}
-        <p className="krds-text-body-small rb-subtle"><Link className="krds-link" to="/help">{t.Header_menuHelp}</Link></p>
+        <p className="krds-text-body-xsmall rb-subtle"><Link className="krds-link" to="/help">{t.Header_menuHelp}</Link></p>
       </div>
     </Page>
   );

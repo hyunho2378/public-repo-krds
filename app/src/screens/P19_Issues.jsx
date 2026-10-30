@@ -37,7 +37,7 @@ export function Issues() {
       <div className="rb-code-area">
         <div className="rb-detail-head">
           <h2 className="krds-text-body-small-bold">{t.P19_title}</h2>
-          <p className="krds-text-body-small rb-subtle">{t.P19_help}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.P19_help}</p>
         </div>
         <StateTabs value={st} onChange={setSt} label={t.P19_title} items={[['opened', t.P19_open], ['closed', t.P19_closed]]} />
         {!list ? <Status {...body} /> : list.length ? (
@@ -49,10 +49,10 @@ export function Issues() {
                     <span className="rb-pill">{i.state === 'opened' ? t.P19_open : t.P19_closed}</span>
                     <Link className="krds-link krds-text-body-small rb-ellipsis" to={`/projects/${frame.id}/issues/${i.iid}`}>{i.title}</Link>
                   </p>
-                  <p className="krds-text-body-small rb-row-meta"><span>{t.fn.issueNo(i.iid)}</span><span>{day(i.created_at)}</span></p>
+                  <p className="krds-text-body-xsmall rb-row-meta"><span>{t.fn.issueNo(i.iid)}</span><span>{day(i.created_at)}</span></p>
                   {i.labels?.length ? <p className="rb-labels">{i.labels.map((l) => <span key={l} className="rb-pill">{l}</span>)}</p> : null}
                 </div>
-                <div className="rb-row-side krds-text-body-small rb-subtle">{t.fn.commentCount(i.user_notes_count || 0)}</div>
+                <div className="rb-row-side krds-text-body-xsmall rb-subtle">{t.fn.commentCount(i.user_notes_count || 0)}</div>
               </li>
             ))}
           </ul>
@@ -75,7 +75,7 @@ export function Issue() {
           <Link className="krds-link" to={`/projects/${frame.id}/issues`}>{t.P19_back}</Link>
           <div className="rb-detail-head">
             <h2 className="krds-text-heading-small">{i.title} <span className="rb-subtle">{t.fn.issueNo(i.iid)}</span></h2>
-            <p className="krds-text-body-small rb-row-meta">
+            <p className="krds-text-body-xsmall rb-row-meta">
               <span className="rb-pill">{i.state === 'opened' ? t.P19_open : t.P19_closed}</span>
               <span>{day(i.created_at)}</span>
               <span>{t.fn.commentCount(i.user_notes_count || 0)}</span>

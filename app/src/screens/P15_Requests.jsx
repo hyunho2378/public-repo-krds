@@ -83,7 +83,7 @@ export default function Requests() {
               {list.data.data.items.map((r) => (
                 <li className="structured-item rb-list-link" key={r.id}>
                   <span className="krds-text-body-small-bold">{r.task}</span>
-                  <span className="krds-text-body-small rb-subtle">{r.currentProcess}</span>
+                  <span className="krds-text-body-xsmall rb-subtle">{r.currentProcess}</span>
                   <Button Type="tertiary" Size="small" onClick={() => vote(r.id)}>{t.fn.votes(r.votes)}</Button>
                 </li>
               ))}

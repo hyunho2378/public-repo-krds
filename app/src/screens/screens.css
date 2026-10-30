@@ -122,7 +122,7 @@
 #root .krds-structured-list.rb-list .structured-item,
 #root .krds-structured-list.rb-list .structured-item .in { background: none; border: 0; border-radius: 0; box-shadow: none; }
 #root .krds-structured-list.rb-list .structured-item { border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
-#root .krds-structured-list.rb-list .structured-item .in { padding: var(--krds-padding-8) 0; }
+#root .krds-structured-list.rb-list .structured-item .in { padding: 0; }
 #root .krds-structured-list.rb-list .c-tit .span { color: var(--krds-color-link-default); text-decoration: underline; text-underline-offset: var(--krds-gap-1); }
 #root .krds-structured-list.rb-list .c-text:hover .c-tit .span { color: var(--krds-color-link-hover, var(--krds-color-link-default)); }
 

@@ -62,7 +62,7 @@ export default function Help() {
         {tpl.state === 'Ideal' && (
           <>
             <pre className="rb-code">{tpl.data.data.markdown}</pre>
-            <p className="krds-text-body-small rb-subtle">{tpl.data.data.notice}</p>
+            <p className="krds-text-body-xsmall rb-subtle">{tpl.data.data.notice}</p>
           </>
         )}
       </section>

@@ -24,7 +24,7 @@ export function Status({ state, error, retry, status }) {
     const notFound = status === 404;
     return (
       <div role="alert" className="rb-status" data-state="Error">
-        <h2 className="krds-text-heading-small">{notFound ? t.Status_2 : t.Status_3}</h2>
+        <h2 className="krds-text-body-small-bold">{notFound ? t.Status_2 : t.Status_3}</h2>
         <p>{phrase(notFound ? t.Status_4 : error || t.Status_5)}</p>
         <div className="rb-actions">
           {!notFound && retry && (
@@ -46,7 +46,7 @@ export function Status({ state, error, retry, status }) {
 export function EmptyState({ title, children, actions }) {
   return (
     <div className="rb-status" data-state="Empty">
-      <h2 className="krds-text-heading-small">{phrase(title)}</h2>
+      <h2 className="krds-text-body-small-bold">{phrase(title)}</h2>
       {children && <p className="rb-subtle">{phrase(children)}</p>}
       {actions && <div className="rb-actions">{actions}</div>}
     </div>

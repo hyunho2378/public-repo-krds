@@ -39,7 +39,9 @@ export default function Login() {
     <Page id="G-08" title={t.P10_2} state="Ideal">
       <div className="rb-login">
         {t.P12_notice ? (
-          <p className="krds-alert rb-login-notice" role="status">{t.P12_notice}</p>
+          <p className="rb-login-notice" role="status">
+            <span className="rb-status-text is-warning"><i className="rb-status-dot" aria-hidden="true" />{t.P12_notice}</span>
+          </p>
         ) : null}
         <h1 className="krds-text-heading-medium">{t.P10_2}</h1>
         <form className="rb-login-form" onSubmit={submit}>
@@ -71,13 +73,13 @@ export default function Login() {
               {t.P12_5}<span className="sr-only"> {t.Footer_3}</span>
             </a>
           </div>
-          <p className="krds-text-body-small rb-subtle">{phrase(t.P12_noStore)}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{phrase(t.P12_noStore)}</p>
           <button type="submit" className="krds-btn medium primary rb-login-submit">{t.P12_loginButton}</button>
         </form>
         <a className="krds-btn medium tertiary rb-login-submit" href={`${GITLAB}/users/sign_in`} target="_blank" rel="noreferrer">
           {t.P12_passkeyButton2}<span className="sr-only"> {t.Footer_3}</span>
         </a>
-        <p className="krds-text-body-small rb-login-signup">
+        <p className="krds-text-body-xsmall rb-login-signup">
           {t.P12_signupAsk}{' '}
           <a className="krds-link" href={`${GITLAB}/users/sign_up`} target="_blank" rel="noreferrer">
             {t.P12_signupNow}<span className="sr-only"> {t.Footer_3}</span>

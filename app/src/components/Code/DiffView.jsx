@@ -65,13 +65,13 @@ function FileDiff({ file, mode, index }) {
           <span className="rb-ellipsis rb-break-any">{name}</span>
           {badge ? <span className="rb-pill">{badge}</span> : null}
         </span>
-        <span className="krds-text-body-small rb-subtle">{t.fn.diffStat(stat.add, stat.del)}</span>
+        <span className="krds-text-body-xsmall rb-subtle">{t.fn.diffStat(stat.add, stat.del)}</span>
       </header>
       {!file.diff ? (
         <p className="krds-text-body-small rb-code-note rb-diff-note">{t.P17_noDiff}</p>
       ) : !open ? (
         <p className="rb-diff-note">
-          <span className="krds-text-body-small rb-subtle">{t.P17_tooBig}</span>{' '}
+          <span className="krds-text-body-xsmall rb-subtle">{t.P17_tooBig}</span>{' '}
           <button type="button" className="krds-btn small tertiary" onClick={() => setOpen(true)}>{t.P17_expand}</button>
         </p>
       ) : (

@@ -67,7 +67,7 @@ function Result({ kind, onClose }) {
       <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="issue-result">
         <h2 id="issue-result" className="krds-text-body-small-bold">{t.Write_cannotTitle}</h2>
         <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
-        <p className="krds-text-body-small rb-subtle">{t.fn.writeKind(kind)}</p>
+        <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeKind(kind)}</p>
         <div className="rb-modal-actions">
           <button type="button" className="krds-btn medium tertiary" onClick={onClose}>{t.Commit_cancel}</button>
           {!isStatic ? <Link className="krds-btn medium primary" to={`/login?returnTo=${encodeURIComponent(window.location.pathname)}`}>{t.Header_login}</Link> : null}
@@ -137,11 +137,11 @@ export default function NewIssue({ kind = 'issue' }) {
               </ul>
             </div>
             {source === target ? (
-              <p className="krds-text-body-small rb-subtle">{t.Issue_sameBranch}</p>
+              <p className="krds-text-body-xsmall rb-subtle">{t.Issue_sameBranch}</p>
             ) : compare.state === 'Loading' ? (
               <Status {...compare} />
             ) : (
-              <p className="krds-text-body-small rb-subtle">{t.fn.compareSummary(compare.data?.commits?.length || 0, diffs.length)}</p>
+              <p className="krds-text-body-xsmall rb-subtle">{t.fn.compareSummary(compare.data?.commits?.length || 0, diffs.length)}</p>
             )}
             {diffs.length ? (
               <ul className="rb-plain-list">
@@ -166,7 +166,7 @@ export default function NewIssue({ kind = 'issue' }) {
           </button>
         </div>
         {kind === 'issue' && frame.data.project.created_at ? (
-          <p className="krds-text-body-small rb-subtle">{t.fn.issueSince(day(frame.data.project.created_at))}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.fn.issueSince(day(frame.data.project.created_at))}</p>
         ) : null}
       </div>
       {done ? <Result kind={screenTitle} onClose={() => setDone(false)} /> : null}

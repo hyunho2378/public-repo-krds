@@ -118,7 +118,7 @@ export default function Publish() {
                   </li>
                 ))}
               </ul>
-              <p className="krds-text-body-small rb-subtle">{check.security?.notice}</p>
+              <p className="krds-text-body-xsmall rb-subtle">{check.security?.notice}</p>
               <div className="rb-actions">
                 <Button onClick={() => setStep(2)}>{t.Pagination_3}</Button>
                 <Button Type="text" onClick={() => setStep(0)}>{t.P09_28}</Button>
@@ -137,7 +137,7 @@ export default function Publish() {
             {projectId && <LinkButton Type="tertiary" to={`/projects/${projectId}`}>{t.P09_32}</LinkButton>}
             <Button Type="text" onClick={() => setStep(1)}>{t.P09_28}</Button>
           </div>
-          <p className="krds-text-body-small rb-subtle">{t.P09_33} <Link to="/my">{t.P09_34}</Link>{t.P09_35}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.P09_33} <Link to="/my">{t.P09_34}</Link>{t.P09_35}</p>
         </section>
       )}
     </Page>

@@ -14,7 +14,7 @@ export function Steps({ labels, current, label }) {
       ))}
     </ol>
     <p className="rb-step-current" aria-hidden="true">
-      <span className="krds-text-body-small rb-subtle">{t.fn.stepOf(current + 1, labels.length)}</span>
+      <span className="krds-text-body-xsmall rb-subtle">{t.fn.stepOf(current + 1, labels.length)}</span>
       <strong className="krds-text-heading-small">{labels[current]}</strong>
     </p>
     </div>

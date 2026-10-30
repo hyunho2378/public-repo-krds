@@ -93,7 +93,7 @@ function RepoHeader({ project, id, info }) {
       </div>
       <p className="krds-text-body-small rb-repo-desc" title={desc || undefined}>{desc || t.RepoHead_noDesc}</p>
       {project.last_activity_at ? (
-        <p className="krds-text-body-small rb-repo-meta">{t.fn.updated(new Date(project.last_activity_at).toLocaleDateString('ko-KR'))}</p>
+        <p className="krds-text-body-xsmall rb-repo-meta">{t.fn.updated(new Date(project.last_activity_at).toLocaleDateString('ko-KR'))}</p>
       ) : null}
       {reuseOpen && <ReuseAction id={id} onClose={() => setReuse(false)} />}
       {loginFor && <LoginRequiredModal action={loginFor} onClose={() => setLoginFor(null)} />}

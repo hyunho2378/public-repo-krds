@@ -102,7 +102,7 @@ export default function RepoSections({ section }) {
           <h2 className="krds-text-body-small-bold">
             {list ? t.fn.countLabel(conf.title(), t.fn.items(list.length)) : conf.title()}
           </h2>
-          <p className="krds-text-body-small rb-subtle">{conf.hint()}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{conf.hint()}</p>
         </div>
         {needsLogin ? (
           <EmptyState title={t.P22_loginNeeded} action={<Link className="krds-btn medium primary" to={`/login?returnTo=${encodeURIComponent(`/projects/${id}/${section}`)}`}>{t.Header_login}</Link>} />

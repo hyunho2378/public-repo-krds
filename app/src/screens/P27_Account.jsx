@@ -32,7 +32,7 @@ export function Notifications() {
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-small" data-figma="section-title">{t.TabBar_alerts}</h1>
-          <p className="krds-text-body-small rb-subtle">{t.Alerts_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.Alerts_hint}</p>
         </div>
         {!signedIn ? <NeedLogin title={t.TabBar_alerts} path="/notifications" /> : <EmptyState title={t.Alerts_none} />}
       </div>
@@ -86,7 +86,7 @@ export function ProjectSettings() {
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-body-small-bold">{t.PSet_title}</h2>
-          <p className="krds-text-body-small rb-subtle">{t.PSet_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.PSet_hint}</p>
         </div>
         <ul className="rb-plain-list">
           {rows.map(([k, v]) => (
@@ -125,7 +125,7 @@ export function RepoGraph() {
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-body-small-bold">{t.Graph_title}</h2>
-          <p className="krds-text-body-small rb-subtle">{t.fn.graphHint(weeks)}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.fn.graphHint(weeks)}</p>
         </div>
         {!series.length ? <Status {...body} /> : (
           <ul className="rb-bars">
@@ -150,13 +150,13 @@ export function Collaborate() {
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-small">{t.Collab_title}</h1>
-          <p className="krds-text-body-small rb-subtle">{t.Collab_hint}</p>
+          <p className="krds-text-body-xsmall rb-subtle">{t.Collab_hint}</p>
         </div>
         <EmptyState
           title={t.Collab_none}
           action={<Link className="krds-btn medium primary" to="/requests">{t.Collab_toRequests}</Link>}
         />
-        <p className="krds-text-body-small rb-subtle">{t.Collab_notice}</p>
+        <p className="krds-text-body-xsmall rb-subtle">{t.Collab_notice}</p>
       </div>
     </Page>
   );

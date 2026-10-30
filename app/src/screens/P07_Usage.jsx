@@ -64,8 +64,8 @@ export default function Usage() {
         <div className="rb-status" role="status" data-state="Result">
           <h3 className="krds-text-body-small-bold">{t.P07_13}</h3>
           {(result.reasons || []).map((r, i) => <p key={i}>{r}</p>)}
-          {result.evidence?.length > 0 && <p className="krds-text-body-small rb-subtle">{t.fn.evidence(result.evidence.map((e) => e.file || e).join(', '))}</p>}
-          <p className="krds-text-body-small rb-subtle">{t.P07_14}</p>
+          {result.evidence?.length > 0 && <p className="krds-text-body-xsmall rb-subtle">{t.fn.evidence(result.evidence.map((e) => e.file || e).join(', '))}</p>}
+          <p className="krds-text-body-xsmall rb-subtle">{t.P07_14}</p>
         </div>
       )}
       <h2 className="krds-text-body-small-bold">{t.P07_15}</h2>

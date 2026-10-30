@@ -22,12 +22,12 @@ export default function Fields() {
               <li className="structured-item" key={f.name}>
                 <Link className="rb-list-link rb-row" to={`/search?field=${encodeURIComponent(f.name)}`}>
                   <span className="krds-text-body-small-bold">{f.name}</span>
-                  <span className="krds-text-body-small rb-subtle">{t.fn.toolCount(f.count)}</span>
+                  <span className="krds-text-body-xsmall rb-subtle">{t.fn.toolCount(f.count)}</span>
                 </Link>
               </li>
             ))}
           </ul>
-          {map.data.data.notice ? <p className="krds-text-body-small rb-subtle">{map.data.data.notice}</p> : null}
+          {map.data.data.notice ? <p className="krds-text-body-xsmall rb-subtle">{map.data.data.notice}</p> : null}
         </>
       )}
     </Page>
