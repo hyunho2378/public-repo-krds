@@ -14,10 +14,10 @@ export function Footer() {
         <div className="f-cnt">
           <div className="f-link">
             <div className="link-go">
-              <Link className="krds-btn medium text" to="/help">
+              <Link className="krds-btn small text" to="/help">
                 {t.Footer_2} <i className="svg-icon ico-angle right" aria-hidden="true" />
               </Link>
-              <a className="krds-btn medium text" href="https://www.krds.go.kr/" target="_blank" rel="noreferrer" title={t.Footer_3}>
+              <a className="krds-btn small text" href="https://www.krds.go.kr/" target="_blank" rel="noreferrer" title={t.Footer_3}>
                 {t.Footer_5} <i className="svg-icon ico-go" aria-hidden="true" />
               </a>
             </div>

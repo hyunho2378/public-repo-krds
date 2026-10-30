@@ -22,6 +22,7 @@
    | 행간 | 13:20, 15:22, 17:26, 19:28, 24:32, 32:40, 40:48 | D-16 2장 | KRDS 150%를 짝수 px로 대체(퍼센트 금지) |
    | 왼쪽 메뉴 펼침 기준 폭 | 1920 | D-17 5장 | 단위 없는 숫자(자바스크립트가 읽는다) |
    | 로그인 공지 열 / 폼 열 | 360 / 400 | Figma G-08 | 96x3+72 / 96x4+16 |
+   | 바닥글 높이 | 168px | Figma(1920) | number-17(56) x 3 |
    | 왼쪽 메뉴 숨김 기준 폭 | 768 | D-17 5장 | KRDS 모바일 구간. 단위 없는 숫자 |
    | 정보 영역 옆 배치 기준 폭 | 1024 | D-17 2장 | KRDS 태블릿 구간. 단위 없는 숫자 |
 */
@@ -66,6 +67,7 @@
   /* G-08 로그인 2열: 왼쪽 공지 360(96x3+72), 오른쪽 폼 400(96x4+16). 768 이하는 1열 */
   --rb-login-notice-w: calc(var(--krds-number-21) * 3 + var(--krds-number-19));
   --rb-login-form-w: calc(var(--krds-number-21) * 4 + var(--krds-number-8));
+  --rb-footer-h: calc(var(--krds-number-17) * 3);
   --rb-fw-title: var(--krds-font-weight-bold);
   --rb-fw-current: 600;
 }

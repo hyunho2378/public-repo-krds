@@ -5,6 +5,7 @@
 import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { t } from '../copy/ko';
+import { u } from '../copy/ui';
 import { phrase } from '../components/Help/Phrase';
 import { auth, STATIC_MODE } from '../api/client';
 import { Page } from '../components/Layout/Page';
@@ -39,9 +40,13 @@ export default function Login() {
     <Page id="G-08" title={t.P10_2} state="Ideal">
       <div className="rb-login">
         {t.P12_notice ? (
-          <p className="rb-login-notice" role="status">
-            <span className="rb-status-text is-warning"><i className="rb-status-dot" aria-hidden="true" />{t.P12_notice}</span>
-          </p>
+          <section className="rb-login-notice" aria-labelledby="login-notice-title">
+            <h2 id="login-notice-title" className="krds-text-body-small-bold">{u.Login_noticeTitle}</h2>
+            <p role="status">
+              <span className="rb-status-text is-warning"><i className="rb-status-dot" aria-hidden="true" />{t.P12_notice}</span>
+            </p>
+            <Link className="krds-link" to="/register">{u.Login_noticeLink}</Link>
+          </section>
         ) : null}
         <h1 className="krds-text-heading-medium">{t.P10_2}</h1>
         <form className="rb-login-form" onSubmit={submit}>

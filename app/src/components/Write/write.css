@@ -31,9 +31,11 @@
 /* G-08 로그인 */
 .rb-login { display: flex; flex-direction: column; gap: var(--krds-gap-5); width: 100%; max-width: var(--rb-login-form-w); margin-inline: auto; }
 /* 공지가 있는 로그인은 Figma G-08처럼 2열(왼쪽 공지 360, 오른쪽 폼 400). 점검 안내는 면 없이 노랑 점+글자 */
-.rb-login:has(> .rb-login-notice) { display: grid; grid-template-columns: var(--rb-login-notice-w) var(--rb-login-form-w); column-gap: var(--rb-col-gap); row-gap: var(--krds-gap-5); max-width: none; justify-content: center; align-items: start; }
+.rb-login:has(> .rb-login-notice) { display: grid; grid-template-columns: var(--rb-login-notice-w) var(--rb-login-form-w); column-gap: var(--rb-col-gap); row-gap: var(--krds-gap-5); max-width: none; justify-content: center; align-items: start; align-content: center; min-height: 60dvh; }
+.rb-login-notice { display: flex; flex-direction: column; gap: var(--krds-gap-3); }
+.rb-login-notice h2 { margin: 0; }
 .rb-login:has(> .rb-login-notice) > :not(.rb-login-notice) { grid-column: 2; }
-.rb-login:has(> .rb-login-notice) > .rb-login-notice { grid-column: 1; grid-row: 1 / span 6; }
+.rb-login:has(> .rb-login-notice) > .rb-login-notice { grid-column: 1; grid-row: 1 / span 6; align-self: start; }
 .rb-login-notice { margin: 0; color: var(--krds-color-text-basic); }
 @media (max-width: 767px) {
   .rb-login:has(> .rb-login-notice) { display: flex; flex-direction: column; max-width: var(--rb-login-form-w); }

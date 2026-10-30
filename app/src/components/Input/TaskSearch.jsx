@@ -1,5 +1,6 @@
 // Figma: KRDS search(입력칸 + 버튼 한 줄). 업무 문장 검색(F-01).
 import { t } from '../../copy/ko';
+import { u } from '../../copy/ui';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -18,13 +19,10 @@ export function TaskSearch({ initial = '', keep }) {
 
   return (
     <form role="search" data-figma="search" className="rb-search" onSubmit={submit}>
-      <label className="krds-text-label-small" htmlFor="task-search">
-        {t.TaskSearch_2}
-      </label>
-      <p id="task-search-hint" className="krds-text-body-xsmall rb-subtle">{t.TaskSearch_hint}</p>
+      <label className="sr-only" htmlFor="task-search">{t.TaskSearch_2}</label>
       <div className="rb-search-row">
-        <input className="krds-input large" id="task-search" type="search" aria-describedby="task-search-hint" placeholder={t.TaskSearch_1} value={query} onChange={(e) => setQuery(e.target.value)} />
-        <button className="krds-btn large primary" type="submit">
+        <input className="krds-input small" id="task-search" type="search" placeholder={u.Task_placeholder} value={query} onChange={(e) => setQuery(e.target.value)} />
+        <button className="krds-btn small primary" type="submit">
           {t.TaskSearch_3}
         </button>
       </div>

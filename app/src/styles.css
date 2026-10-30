@@ -41,7 +41,12 @@ p, li, dd, dt, label { text-wrap: balance; }
 .rb-gnb-mode { flex-direction: column; align-items: flex-start; }
 
 .rb-notice { padding-block: var(--krds-padding-6); background: var(--krds-color-surface-information-subtler); }
-#krds-footer .f-logo.rb-f-logo { width: auto; height: auto; background-image: none; font-size: var(--krds-pc-font-size-heading-small); font-weight: var(--krds-font-weight-bold); }
+#krds-footer .f-logo.rb-f-logo { width: auto; height: auto; background-image: none; font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); }
+/* 바닥글 글자는 15(링크)와 13(출처 문장) 두 단계 */
+#krds-footer .inner .f-cnt .f-link .link-go .krds-btn { font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); }
+#krds-footer .inner .f-btm .f-btm-text .f-copy { font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
+/* 바닥글 높이 168(Figma) 유지: 글자를 줄여도 높이는 줄지 않는다 */
+#krds-footer { min-height: var(--rb-footer-h); }
 .rb-main { min-width: 0; padding: 0; }
 
 @media (max-width: 767px) {

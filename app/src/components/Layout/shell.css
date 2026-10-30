@@ -35,6 +35,7 @@
 .rb-gbar-btn {
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
   gap: var(--krds-gap-2);
   padding: var(--krds-padding-3);
   border: 0;
@@ -84,7 +85,7 @@
   color: var(--krds-color-text-subtle);
   font-size: var(--krds-font-size-detail-small);
 }
-.rb-gbar-right { display: flex; align-items: center; justify-content: flex-end; gap: var(--krds-gap-2); flex: none; width: var(--rb-gbar-right); }
+.rb-gbar-right { display: flex; align-items: center; justify-content: flex-end; gap: var(--krds-gap-2); flex: none; min-width: var(--rb-gbar-right); }
 .rb-gbar-drop { position: relative; }
 .rb-gbar-menu { position: absolute; right: 0; top: 100%; z-index: 70; min-width: var(--krds-size-width-menu, 24ch); }
 
@@ -92,7 +93,7 @@
 .rb-shell { display: grid; grid-template-columns: var(--rb-sidebar-w) minmax(0, 1fr); column-gap: var(--rb-col-gap); flex: 1; width: 100%; align-items: start; padding: var(--rb-page-pad); }
 .rb-shell.is-bare { grid-template-columns: minmax(0, 1fr); }
 .rb-shell.is-collapsed, .rb-shell.is-collapsed.has-project { grid-template-columns: var(--rb-sidebar-w-collapsed) minmax(0, 1fr); }
-.rb-side-wrap { min-width: 0; align-self: start; position: sticky; top: calc(var(--rb-header-h) + var(--rb-page-pad)); }
+.rb-side-wrap { min-width: 0; align-self: start; position: sticky; z-index: 20; top: calc(var(--rb-header-h) + var(--rb-page-pad)); }
 .rb-side {
   width: 100%;
   display: flex;
@@ -147,6 +148,17 @@
   border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-medium2);
   font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13);
 }
+/* 접힌 메뉴 묶음의 펼침 패널(옆으로 열림). 항목 높이 32, 글자 15 */
+.rb-flyout {
+  position: fixed; z-index: 100; margin-left: var(--krds-gap-3); min-width: var(--rb-sidebar-w);
+  padding: var(--krds-padding-3); box-sizing: border-box;
+  background: var(--krds-color-surface-white); color: var(--krds-color-text-basic);
+  border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-medium2);
+}
+.rb-flyout ul { list-style: none; margin: 0; padding: 0; }
+.rb-flyout-title { margin: 0; padding: 0 var(--krds-padding-3); min-height: var(--rb-side-item-h); display: flex; align-items: center; color: var(--krds-color-text-subtle); }
+.rb-side.is-collapsed .rb-flyout .rb-side-link { justify-content: flex-start; padding-inline: var(--krds-padding-3); }
+.rb-side-groupicon { border: 0; background: none; cursor: pointer; }
 .rb-tip-label { font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); white-space: nowrap; }
 .rb-tip-hint { color: var(--krds-color-text-subtle); }
 
@@ -164,7 +176,7 @@
 @media (max-width: 767px) {
   /* D-17 5장: 768 미만은 왼쪽 메뉴를 숨기고 머리글의 메뉴 버튼으로 연다 */
   .rb-shell, .rb-shell.has-project, .rb-shell.is-collapsed { grid-template-columns: minmax(0, 1fr); }
-  .rb-side-wrap { position: static; }
+  .rb-side-wrap { position: static; z-index: auto; }
   .rb-gbar-navtoggle { display: inline-flex; }
   .rb-side {
     position: fixed;

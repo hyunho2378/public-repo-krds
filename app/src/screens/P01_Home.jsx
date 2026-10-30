@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <Page id="A-01" title={t.Header_2} state={list.state}>
       {/* UX-007 2장: 큰 소개 문구와 이용법 설명 문장을 두지 않는다. 제목은 한 단계 작게(3장) */}
-      <h1 className="krds-text-heading-large" data-figma="section-title">{phrase(t.P01_8)}</h1>
+      <h1 className="krds-text-heading-small" data-figma="section-title">{phrase(t.P01_8)}</h1>
       <TaskSearch />
       <section className="rb-stack" aria-labelledby="fields-title">
         <h2 id="fields-title" className="krds-text-body-small-bold">{phrase(t.P01_10)}</h2>

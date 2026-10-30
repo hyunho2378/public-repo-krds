@@ -2,7 +2,7 @@
 // 프로젝트 안에서는 프로젝트 이름과 고정됨, 코드, 계획 묶음을. 그 밖에서는 탐색 메뉴를 보여 준다.
 // 어려운 개발 용어 옆에는 쉬운 설명을 함께 둔다(공무원 이용자).
 import { useEffect, useRef, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { Icon } from '../Code/Icon';
 import { Avatar } from '../Layout/Avatar';
@@ -128,9 +128,67 @@ function SideLink({ item, collapsed, tipApi }) {
   );
 }
 
+/** 접힌 메뉴의 묶음 하나. 대표 아이콘 하나만 보이고, 누르면 이름이 있는 항목 목록이 옆으로 열린다. */
+function CollapsedGroup({ group, items, tipApi }) {
+  const [open, setOpen] = useState(false);
+  const [pos, setPos] = useState(null);
+  const wrap = useRef(null);
+  const { pathname } = useLocation();
+  const active = items.some(([, to, , end]) => (end ? pathname === to : pathname === to || pathname.startsWith(to + '/')));
+  useEffect(() => {
+    if (!open) return undefined;
+    const onDown = (e) => { if (!wrap.current?.contains(e.target)) setOpen(false); };
+    const onKey = (e) => { if (e.key === 'Escape') setOpen(false); };
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => { document.removeEventListener('mousedown', onDown); document.removeEventListener('keydown', onKey); };
+  }, [open]);
+  const toggle = (e) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    setPos({ top: r.top, left: r.right });
+    tipApi.hide();
+    setOpen(!open);
+  };
+  const tip = (e) => !open && tipApi.show(e.currentTarget, group, null, 'rb-tip-g-' + group.length);
+  return (
+    <div className="rb-side-group" ref={wrap}>
+      <button
+        type="button"
+        className={'rb-side-link rb-side-groupicon' + (active ? ' active' : '')}
+        aria-haspopup="true"
+        aria-expanded={open}
+        aria-label={group}
+        onClick={toggle}
+        onMouseEnter={tip}
+        onFocus={tip}
+        onMouseLeave={tipApi.hide}
+        onBlur={tipApi.hide}
+      >
+        <Icon name={items[0][2]} />
+      </button>
+      {open ? (
+        <div className="rb-flyout" role="group" aria-label={group} style={{ top: pos.top, left: pos.left }}>
+          <p className="rb-flyout-title krds-text-body-xsmall-bold">{group}</p>
+          <ul>
+            {items.map(([label, to, icon, end]) => (
+              <li key={to + label}>
+                <NavLink end={!!end} to={to} className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`} onClick={() => setOpen(false)}>
+                  <Icon name={icon} />
+                  <span className="rb-side-text">{label}</span>
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 function Group({ group, items, collapsed, tipApi }) {
   const [open, setOpen] = useState(true);
-  // D-17 5장: 접힘(아이콘만)에서는 묶음 제목 글자를 접고 항목을 모두 보인다
+  // D-17 5장: 접힘에서는 이름 있는 묶음을 대표 아이콘 하나로 줄이고, 이름 없는 묶음(맨 위)만 항목을 그대로 둔다
+  if (collapsed && group) return <CollapsedGroup group={group} items={items} tipApi={tipApi} />;
   const showList = collapsed || open;
   return (
     <div className="rb-side-group">
