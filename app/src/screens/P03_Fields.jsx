@@ -6,14 +6,12 @@ import { product } from '../api/client';
 import { useData } from '../api/useData';
 import { hasData } from '../api/devState';
 import { Page } from '../components/Layout/Page';
-import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import { Status } from '../components/Feedback/Status';
 
 export default function Fields() {
   const map = useData(() => product.get('/coverage-map'), []);
   return (
     <Page id="P-03" title={t.P03_1} state={map.state}>
-      <Breadcrumb items={[[t.Header_2, '/'], [t.P03_1]]} />
       <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.P03_1)}</h1>
       <p className="rb-subtle">{phrase(t.P03_2)}</p>
       <Status {...map} />

@@ -4,10 +4,10 @@
  "breakpoint": 360,
  "auth": "Signed-in",
  "variant": "breakpoint=360, auth=Signed-in",
+ "data": "실제 kordoc 자료",
  "frame": {
   "w": 360,
-  "h": 1718,
-  "heightFromContent": true
+  "h": 2024
  },
  "boxes": {
   "masthead": {
@@ -30,24 +30,21 @@
   },
   "footer": {
    "x": 0,
-   "y": 1401,
+   "y": 1559,
    "w": 360,
-   "h": 224,
-   "heightFromContent": true
+   "h": 372
   },
   "body": {
    "x": 0,
    "y": 97,
    "w": 360,
-   "h": 1304,
-   "heightFromContent": true
+   "h": 1462
   },
   "main": {
    "x": 12,
    "y": 121,
    "w": 336,
-   "h": 1256,
-   "heightFromContent": true
+   "h": 1414
   },
   "breadcrumb": {
    "x": 12,
@@ -67,23 +64,27 @@
    "w": 336,
    "h": 108
   },
+  "tabs": {
+   "x": 200,
+   "y": 384,
+   "w": 130,
+   "h": 40
+  },
   "diff-area": {
    "x": 12,
-   "y": 470,
+   "y": 444,
    "w": 336,
-   "h": 907,
-   "heightFromContent": true
+   "h": 1091
   },
   "diff-file": {
    "x": 12,
-   "y": 470,
+   "y": 444,
    "w": 336,
-   "h": 367,
-   "heightFromContent": true
+   "h": 551
   },
   "tabbar": {
    "x": 0,
-   "y": 1625,
+   "y": 1931,
    "w": 360,
    "h": 93
   }

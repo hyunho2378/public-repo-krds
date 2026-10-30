@@ -73,12 +73,15 @@
 ## 5. 다시 만드는 방법
 - Figma 화면을 고친 뒤 이 폴더를 다시 내보낸다. 화면 세트가 늘면 파일도 늘어난다
 
-## 6. 높이 비교 규칙 (2026. 10. 30. 결정)
-- `heightFromContent: true`가 붙은 상자는 **높이를 비교하지 않는다**. x, y, w만 본다
-  - 대상: frame, body, main, readme, file-table, footer, info-panel, results, code-view, diff-area, diff-file, detail-area, sidebar-nav, checks, steps
-  - 이유: Figma는 README와 목록을 대표 길이로 줄여 그린다. 코드는 실제 자료를 모두 그린다. 높이 차이는 자료 길이 차이이지 배치 차이가 아니다
-- 높이까지 비교하는 상자: masthead, header, global-search, breadcrumb, repo-title, repo-actions, toolbar, commit-bar, about, decision-panel, tabs, section-title, filters, search, login-card, comment-editor, meta-panel, tabbar, sidebar
-- `clipped: true`가 붙은 상자(sidebar)는 화면 높이에 맞춰 잘린 패널이다. 안쪽 `sidebar-nav`는 잘리기 전 전체 높이라서 sidebar보다 클 수 있다. 코드에서는 사이드바에 자체 스크롤을 두고 sidebar의 x, y, w와 높이만 맞춘다
+## 6. 높이 비교 규칙 (2026. 10. 30. 사용자 결정으로 개정)
+- **모든 상자의 높이도 비교한다.** 앞서 둔 `heightFromContent` 표시는 없앴다
+- Figma 화면은 실제 자료를 줄이지 않고 그대로 그린다
+  - README: kordoc 실제 전문(`sample/kordoc/api/readme_raw.md` 171줄)을 마크다운으로 렌더. 제목, 문단, 목록, 인용, 링크, 코드 블록, 표, 이미지 자리, 구분선 포함
+  - 파일 표: 루트 항목 29개 전부. `src` 폴더 화면은 하위 20개 전부
+  - 코드 보기: `src/shared/numbering.ts` 전체 86줄
+  - 변경 비교: 커밋 `03f9484e`의 첫 파일 diff 전체 22줄, 파일 머리 10개
+  - 목록(이슈, 변경 제안, 태그, 릴리스, 참여자): 받아 둔 자료의 실제 개수
+- `clipped: true`가 붙은 상자(sidebar)는 화면 높이에 맞춰 잘린 패널이다. 안쪽 `sidebar-nav`는 잘리기 전 전체 높이라 더 클 수 있다
 
 ## 7. 요소 이름 추가
 | 이름 | 뜻 |
@@ -87,5 +90,7 @@
 | about | 정보 영역 안 "이 도구가 하는 일" 묶음 |
 
 ## 8. 확인된 기준값 (R-01 1920 Guest)
-- repo-title은 제목 줄 전체다(x 352, w 1192). 제목 글자만이 아니다. 오른쪽 버튼 묶음은 repo-actions(x 1256, w 288)로 따로 있다
+- 화면 높이 6,714 (README 전문과 파일 29개를 모두 그린 값)
+- repo-title은 제목 줄 전체다(x 352, w 1192). 오른쪽 버튼 묶음은 repo-actions(x 1256, w 288)
 - toolbar는 한 줄이다(h 48). 1024 이상에서는 줄바꿈하지 않는다
+- file-table h 1,411 / readme h 4,529

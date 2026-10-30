@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { t } from '../copy/ko';
 import { product, STATIC_MODE as isStatic } from '../api/client';
 import { Page } from '../components/Layout/Page';
-import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import { FormField } from '../components/Input/FormField';
 import { EmptyState } from '../components/Feedback/Status';
 import '../components/Write/write.css';
@@ -52,7 +51,6 @@ export default function NewProject() {
 
   return (
     <Page id="G-04" title={t.NewProject_title} state="Ideal">
-      <Breadcrumb items={[[t.Side_explore, '/'], [t.NewProject_title]]} />
       <div className="rb-write rb-narrow">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large" data-figma="section-title">{t.NewProject_title}</h1>

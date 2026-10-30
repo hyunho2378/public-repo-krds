@@ -8,7 +8,6 @@ import { product } from '../api/client';
 import { useData } from '../api/useData';
 import { hasData } from '../api/devState';
 import { Page } from '../components/Layout/Page';
-import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import { Pagination } from '../components/Navigation/Pagination';
 import { TaskSearch } from '../components/Input/TaskSearch';
 import { ProjectList } from '../components/Layout/StructuredList';
@@ -86,7 +85,6 @@ export default function Search() {
 
   return (
     <Page id="P-02" title={query ? t.fn.searchTitle(query) : t.P02_4} state={result.state}>
-      <Breadcrumb items={[[t.Header_2, '/'], [t.P02_5]]} />
       <h1 className="krds-text-heading-xlarge" data-figma="section-title">{query ? t.fn.searchTitle(query) : t.P02_6}</h1>
       <TaskSearch initial={query} keep={params} />
       <div className="rb-two-col">

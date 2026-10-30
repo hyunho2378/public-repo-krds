@@ -4,10 +4,10 @@
  "breakpoint": 360,
  "auth": "Guest",
  "variant": "breakpoint=360, auth=Guest",
+ "data": "실제 kordoc 자료",
  "frame": {
   "w": 360,
-  "h": 1632,
-  "heightFromContent": true
+  "h": 3151
  },
  "boxes": {
   "masthead": {
@@ -30,29 +30,26 @@
   },
   "footer": {
    "x": 0,
-   "y": 1315,
+   "y": 2686,
    "w": 360,
-   "h": 224,
-   "heightFromContent": true
+   "h": 372
   },
   "body": {
    "x": 0,
    "y": 97,
    "w": 360,
-   "h": 1218,
-   "heightFromContent": true
+   "h": 2589
   },
   "main": {
    "x": 12,
    "y": 121,
    "w": 336,
-   "h": 1170,
-   "heightFromContent": true
+   "h": 2541
   },
   "breadcrumb": {
    "x": 12,
    "y": 121,
-   "w": 367,
+   "w": 251,
    "h": 23
   },
   "repo-title": {
@@ -63,26 +60,25 @@
   },
   "toolbar": {
    "x": 12,
-   "y": 345,
+   "y": 256,
    "w": 336,
-   "h": 88
+   "h": 148
   },
   "commit-bar": {
    "x": 12,
-   "y": 499,
+   "y": 470,
    "w": 336,
    "h": 71
   },
   "file-table": {
    "x": 12,
-   "y": 590,
+   "y": 561,
    "w": 336,
-   "h": 701,
-   "heightFromContent": true
+   "h": 2101
   },
   "tabbar": {
    "x": 0,
-   "y": 1539,
+   "y": 3058,
    "w": 360,
    "h": 93
   }

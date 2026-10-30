@@ -4,10 +4,10 @@
  "breakpoint": 360,
  "auth": "Signed-in",
  "variant": "breakpoint=360, auth=Signed-in",
+ "data": "실제 kordoc 자료",
  "frame": {
   "w": 360,
-  "h": 847,
-  "heightFromContent": true
+  "h": 847
  },
  "boxes": {
   "masthead": {
@@ -32,22 +32,19 @@
    "x": 0,
    "y": 530,
    "w": 360,
-   "h": 224,
-   "heightFromContent": true
+   "h": 224
   },
   "body": {
    "x": 0,
    "y": 97,
    "w": 360,
-   "h": 433,
-   "heightFromContent": true
+   "h": 433
   },
   "main": {
    "x": 12,
    "y": 121,
    "w": 336,
-   "h": 385,
-   "heightFromContent": true
+   "h": 385
   },
   "breadcrumb": {
    "x": 12,

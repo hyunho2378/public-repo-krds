@@ -7,7 +7,6 @@ import { product } from '../api/client';
 import { useData } from '../api/useData';
 import { hasData } from '../api/devState';
 import { Page } from '../components/Layout/Page';
-import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import { Status, EmptyState } from '../components/Feedback/Status';
 
 export default function Organizations() {
@@ -16,7 +15,6 @@ export default function Organizations() {
   const items = hasData(orgs.state) ? orgs.data.data.items.filter((o) => o.name.includes(filter.trim())).sort((a, b) => b.projectCount - a.projectCount) : [];
   return (
     <Page id="P-11" title={t.P11_1} state={orgs.state}>
-      <Breadcrumb items={[[t.Header_2, '/'], [t.P11_1]]} />
       <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.P11_1)}</h1>
       <div className="rb-search">
         <label className="krds-text-label-medium" htmlFor="org-filter">{t.P11_2}</label>

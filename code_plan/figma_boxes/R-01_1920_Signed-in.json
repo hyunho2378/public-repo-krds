@@ -4,10 +4,10 @@
  "breakpoint": 1920,
  "auth": "Signed-in",
  "variant": "breakpoint=1920, auth=Signed-in",
+ "data": "실제 kordoc 자료",
  "frame": {
   "w": 1920,
-  "h": 1492,
-  "heightFromContent": true
+  "h": 6714
  },
  "boxes": {
   "masthead": {
@@ -25,48 +25,44 @@
   "global-search": {
    "x": 277,
    "y": 40,
-   "w": 1273,
+   "w": 1336,
    "h": 48
   },
   "footer": {
    "x": 0,
-   "y": 1340,
+   "y": 6508,
    "w": 1920,
-   "h": 152,
-   "heightFromContent": true
+   "h": 206
   },
   "body": {
    "x": 0,
    "y": 97,
    "w": 1920,
-   "h": 1243,
-   "heightFromContent": true
+   "h": 6411
   },
   "sidebar": {
    "x": 24,
    "y": 121,
    "w": 296,
-   "h": 1195,
+   "h": 1528,
    "clipped": true
   },
   "sidebar-nav": {
    "x": 24,
    "y": 166,
    "w": 296,
-   "h": 1483,
-   "heightFromContent": true
+   "h": 1483
   },
   "main": {
    "x": 352,
    "y": 121,
    "w": 1192,
-   "h": 1143,
-   "heightFromContent": true
+   "h": 6363
   },
   "breadcrumb": {
    "x": 352,
    "y": 121,
-   "w": 323,
+   "w": 212,
    "h": 23
   },
   "repo-title": {
@@ -85,34 +81,31 @@
    "x": 352,
    "y": 313,
    "w": 1192,
-   "h": 48
+   "h": 100
   },
   "commit-bar": {
    "x": 352,
-   "y": 381,
+   "y": 433,
    "w": 1192,
    "h": 71
   },
   "file-table": {
    "x": 352,
-   "y": 472,
+   "y": 524,
    "w": 1192,
-   "h": 612,
-   "heightFromContent": true
+   "h": 1411
   },
   "readme": {
    "x": 352,
-   "y": 1104,
+   "y": 1955,
    "w": 1192,
-   "h": 160,
-   "heightFromContent": true
+   "h": 4529
   },
   "info-panel": {
    "x": 1576,
    "y": 121,
    "w": 320,
-   "h": 668,
-   "heightFromContent": true
+   "h": 668
   },
   "about": {
    "x": 1576,

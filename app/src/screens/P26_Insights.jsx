@@ -7,7 +7,6 @@ import { t } from '../copy/ko';
 import { product } from '../api/client';
 import { useData } from '../api/useData';
 import { Page } from '../components/Layout/Page';
-import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import '../components/Write/write.css';
@@ -22,7 +21,6 @@ export function Insights() {
   const max = Math.max(1, ...rows.map((r) => r.count || 0));
   return (
     <Page id="A-04" title={t.Insights_title} state={rows.length ? 'Ideal' : map.state}>
-      <Breadcrumb items={[[t.Side_explore, '/'], [t.Insights_title]]} />
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large" data-figma="section-title">{t.Insights_title}</h1>
@@ -68,7 +66,6 @@ export function Checklist() {
   const [open, setOpen] = useState(0);
   return (
     <Page id="A-08" title={t.Checklist_title} state={steps.length ? 'Ideal' : guide.state}>
-      <Breadcrumb items={[[t.Side_explore, '/'], [t.Checklist_title]]} />
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large">{t.Checklist_title}</h1>
@@ -186,7 +183,6 @@ export function Mcp() {
   const d = info.data;
   return (
     <Page id="A-06" title={t.Mcp_title} state={d ? 'Ideal' : info.state}>
-      <Breadcrumb items={[[t.Side_explore, '/'], [t.Mcp_title]]} />
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large">{t.Mcp_title}</h1>

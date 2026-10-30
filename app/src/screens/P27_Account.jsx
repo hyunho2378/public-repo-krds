@@ -6,7 +6,6 @@ import { t } from '../copy/ko';
 import { gitlab, auth, STATIC_MODE as isStatic } from '../api/client';
 import { useData } from '../api/useData';
 import { Page } from '../components/Layout/Page';
-import { Breadcrumb } from '../components/Navigation/Breadcrumb';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { ScreenModeOptions, useScreenMode } from '../components/Identity/ScreenMode';
@@ -30,7 +29,6 @@ export function Notifications() {
   const signedIn = !!me.data?.user;
   return (
     <Page id="G-06" title={t.TabBar_alerts} state={signedIn ? 'Empty' : 'Empty'}>
-      <Breadcrumb items={[[t.Side_explore, '/'], [t.TabBar_alerts]]} />
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large" data-figma="section-title">{t.TabBar_alerts}</h1>
@@ -49,7 +47,6 @@ export function Settings() {
   const signedIn = !!me.data?.user;
   return (
     <Page id="G-11" title={t.Settings_title} state="Ideal">
-      <Breadcrumb items={[[t.Side_explore, '/'], [t.Settings_title]]} />
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large">{t.Settings_title}</h1>
@@ -150,7 +147,6 @@ export function RepoGraph() {
 export function Collaborate() {
   return (
     <Page id="A-03" title={t.Collab_title} state="Empty">
-      <Breadcrumb items={[[t.Side_explore, '/'], [t.Collab_title]]} />
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large">{t.Collab_title}</h1>
