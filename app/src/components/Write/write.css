@@ -55,8 +55,8 @@
 .rb-login-card { display: flex; flex-direction: column; gap: var(--krds-gap-4); width: 100%; }
 
 /* 로그인 왼쪽 열: 행정안전부 로고(판 없이 화면 바탕 그대로, 폭 160)와 공지를 같은 가운데 축에 두고, 블록 전체를 오른쪽 폼 열 높이 안에서 세로 가운데에 둔다. 열은 폼 열과 같은 높이로 늘고 세로선 한 줄 유지 */
-.rb-login-notice { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--krds-gap-5); text-align: center; }
-.rb-mois-logo { display: block; width: var(--rb-login-mark-w); height: auto; color: var(--krds-color-text-basic); }
+.rb-login-notice { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--krds-number-10); text-align: center; }
+.rb-mois-logo { display: block; width: var(--rb-login-mark-w); height: auto; color: var(--krds-color-text-subtle); }
 .rb-login-notice-item { display: flex; flex-direction: column; align-items: center; gap: var(--krds-gap-2); }
 .rb-login-notice-item h2, .rb-login-notice-item p { margin: 0; }
 @media (max-width: 1023px) {
