@@ -10,6 +10,8 @@ import { Icon } from '../Code/Icon';
 import { ScreenModeItems, useScreenMode } from './ScreenMode';
 import { Menu } from '../Navigation/Menu';
 import { Logo } from './Logo';
+import { Avatar } from '../Layout/Avatar';
+import { snapshotIndex } from '../../api/snapshot';
 import { useAuth } from './useAuth';
 
 export const SERVICE_NAME = t.Header_service;
@@ -36,6 +38,9 @@ function GlobalSearch() {
   const navigate = useNavigate();
   const input = useRef(null);
   const [value, setValue] = useState('');
+  const [open, setOpen] = useState(false);
+  const [hits, setHits] = useState([]);
+  const wrap = useDismiss(open, () => setOpen(false));
   // GitLab, GitHub와 같게 / 를 누르면 검색창으로 간다.
   useEffect(() => {
     const onKey = (e) => {
@@ -44,32 +49,70 @@ function GlobalSearch() {
       if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
       e.preventDefault();
       input.current?.focus();
+      setOpen(true);
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, []);
+  // 공공 깃랩 51b: 입력하면 '다음 위치에서 검색'과 프로젝트 제안(저장된 공개 목록, 점검 중에도 동작)
+  useEffect(() => {
+    const q = value.trim().toLowerCase();
+    if (q.length < 2) { setHits([]); return undefined; }
+    let live = true;
+    snapshotIndex().then((idx) => {
+      if (!live || !idx) return;
+      setHits((idx.projects || []).filter((p) => p.name.toLowerCase().includes(q) || (p.path_with_namespace || '').toLowerCase().includes(q)).slice(0, 5));
+    });
+    return () => { live = false; };
+  }, [value]);
+  const go = (to) => { setOpen(false); navigate(to); };
+  const q = value.trim();
   return (
-    <form
-      className="rb-gbar-search"
-      data-figma="global-search"
-      role="search"
-      onSubmit={(e) => {
-        e.preventDefault();
-        navigate(`/search?q=${encodeURIComponent(value.trim())}`);
-      }}
-    >
-      <label className="sr-only" htmlFor="global-search">{t.GlobalBar_searchLabel}</label>
-      <Icon name="search" />
-      <input
-        id="global-search"
-        ref={input}
-        type="search"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder={t.GlobalBar_searchPlaceholder}
-      />
-      <kbd className="rb-gbar-kbd" aria-hidden="true">/</kbd>
-    </form>
+    <div className="rb-gsearch" ref={wrap}>
+      <form
+        className="rb-gbar-search"
+        data-figma="global-search"
+        role="search"
+        onSubmit={(e) => {
+          e.preventDefault();
+          go(`/search?q=${encodeURIComponent(q)}`);
+        }}
+      >
+        <label className="sr-only" htmlFor="global-search">{t.GlobalBar_searchLabel}</label>
+        <Icon name="search" />
+        <input
+          id="global-search"
+          ref={input}
+          type="search"
+          value={value}
+          autoComplete="off"
+          aria-expanded={open && !!q}
+          aria-controls="rb-gsearch-panel"
+          onFocus={() => setOpen(true)}
+          onChange={(e) => { setValue(e.target.value); setOpen(true); }}
+          placeholder={t.GlobalBar_searchPlaceholder}
+        />
+        <kbd className="rb-gbar-kbd" aria-hidden="true">/</kbd>
+      </form>
+      {open && q ? (
+        <div id="rb-gsearch-panel" className="rb-menu rb-gsearch-panel" role="listbox" aria-label={t.GlobalBar_searchLabel}>
+          <p className="rb-menu-title">{u.Q_in(q)}</p>
+          <ul className="drop-list">
+            <li><button type="button" className="item-link" onClick={() => go(`/search?q=${encodeURIComponent(q)}`)}><Icon name="search" /><span>{u.Q_all}</span></button></li>
+          </ul>
+          {hits.length ? (
+            <>
+              <p className="rb-menu-title">{u.Q_projects}</p>
+              <ul className="drop-list">
+                {hits.map((p) => (
+                  <li key={p.id}><button type="button" className="item-link" onClick={() => go(`/projects/${p.id}`)}><Avatar src={p.avatar_url} name={p.name} /><span>{p.namespace?.name ? `${p.namespace.name} / ` : ''}{p.name}</span></button></li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
   );
 }
 

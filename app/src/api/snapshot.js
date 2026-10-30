@@ -75,6 +75,7 @@ export async function snapshotGet(sub, query) {
     return page(list, q);
   }
   if (sub === 'groups') {
+    if (q.get('archived') === 'true') return page([], q);
     const g = new Map();
     for (const p of all) { const n = p.namespace; if (!n?.id) continue; if (!g.has(n.id)) g.set(n.id, { id: n.id, name: n.name, full_name: n.name, path: n.path, full_path: n.full_path, avatar_url: n.avatar_url, web_url: `https://gitlab.aigov.go.kr/${n.full_path || n.path}`, created_at: p.created_at, description: '' }); }
     const s = (q.get('search') || '').toLowerCase();

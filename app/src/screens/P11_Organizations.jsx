@@ -76,6 +76,7 @@ export default function Organizations() {
   const sort = SORTS.some(([k]) => k === params.get('sort')) ? params.get('sort') : 'created_at';
   const dir = params.get('dir') === 'asc' ? 'asc' : 'desc';
   const page = Math.max(1, Number(params.get('page')) || 1);
+  const archived = params.get('archived') === 'true';
   const [text, setText] = useState(q);
   const set = (patch) => {
     const next = new URLSearchParams(params);
@@ -84,8 +85,8 @@ export default function Organizations() {
     setParams(next);
   };
   const list = useData(
-    () => request(`/api/gitlab/groups?order_by=${sort === 'updated_at' ? 'id' : sort}&sort=${dir}&per_page=${PER}&page=${page}${q ? `&search=${encodeURIComponent(q)}` : ''}`),
-    [q, sort, dir, page],
+    () => request(`/api/gitlab/groups?order_by=${sort === 'updated_at' ? 'id' : sort}&sort=${dir}&per_page=${PER}&page=${page}&archived=${archived}${q ? `&search=${encodeURIComponent(q)}` : ''}`),
+    [q, sort, dir, page, archived],
     (d) => !d.data?.length,
   );
   const items = list.data?.data || [];
@@ -94,6 +95,17 @@ export default function Organizations() {
     <Page id="G-04" title={u.Gr_title} state={list.state}>
       <h1 className="rb-x-title" data-figma="section-title">{u.Gr_title}</h1>
       <p className="krds-text-body-small rb-subtle">{u.Gr_desc}</p>
+      <div className="krds-tab-area rb-x-tabs" data-figma="tabs">
+        <div className="tab line" role="tablist" aria-label={u.X_tabs}>
+          <ul>
+            {[[false, u.X_active], [true, u.X_inactive]].map(([v, label]) => (
+              <li key={label} className={archived === v ? 'active' : undefined}>
+                <button type="button" role="tab" aria-selected={archived === v} className="btn-tab" onClick={() => set({ archived: v ? 'true' : '' })}>{label}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
       <div className="rb-x-filter" data-figma="filter-bar">
         <form className="rb-x-search" role="search" onSubmit={(e) => { e.preventDefault(); set({ q: text.trim() }); }}>
           <label className="sr-only" htmlFor="gr-q">{u.Gr_search}</label>
