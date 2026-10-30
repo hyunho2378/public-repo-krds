@@ -15,11 +15,14 @@ const limitArg = process.argv.indexOf('--limit');
 const LIMIT = limitArg > 0 ? Number(process.argv[limitArg + 1]) : Infinity;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let last = 0;
+let bad = 0;
 async function get(url) {
   const wait = last + GAP_MS - Date.now();
   if (wait > 0) await sleep(wait);
   last = Date.now();
   const r = await fetch(url, { headers: { Accept: 'application/json' }, signal: AbortSignal.timeout(15000) });
+  // 429 또는 5xx가 연속 3번이면 멈춘다(받은 값은 이미 저장됨, 다시 실행하면 이어서)
+  if (r.status === 429 || r.status >= 500) { if (++bad >= 3) { console.log(`연속 ${r.status} 3회: 중단`); process.exit(2); } } else bad = 0;
   if (r.status === 429) { await sleep(Number(r.headers.get('retry-after') || 30) * 1000); return get(url); }
   return r;
 }
@@ -31,8 +34,11 @@ async function total(url) {
   const d = await r.json().catch(() => []);
   return Array.isArray(d) ? d.length : null;
 }
+// 최근 커밋(해시, 제목, 작성자, 날짜): 공개 읽기 API 응답만 사용. 비어 있는 저장소는 false
+const pick = (c) => ({ id: c.id, short_id: c.short_id, title: c.title, author_name: c.author_name, committed_date: c.committed_date, authored_date: c.authored_date });
+let firstPageLatest;
 async function commitCount(id) {
-  const size = async (n) => { const r = await get(`${API}/projects/${id}/repository/commits?per_page=100&page=${n}`); if (!r.ok) throw new Error(String(r.status)); const d = await r.json(); return Array.isArray(d) ? d.length : 0; };
+  const size = async (n) => { const r = await get(`${API}/projects/${id}/repository/commits?per_page=100&page=${n}`); if (!r.ok) throw new Error(String(r.status)); const d = await r.json(); if (n === 1 && Array.isArray(d)) firstPageLatest = d[0] ? pick(d[0]) : false; return Array.isArray(d) ? d.length : 0; };
   const first = await size(1);
   if (first < 100) return first;
   let lo = 1, hi = 2;
@@ -49,13 +55,18 @@ for (const p of list) {
   if (done >= LIMIT) break;
   const file = path.join(RAW, String(p.id), 'counts.json');
   const prev = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
-  if (prev.commits != null && prev.branches != null && prev.tags != null) continue;
+  if (prev.commits != null && prev.branches != null && prev.tags != null && prev.lastCommit !== undefined) continue;
+  firstPageLatest = undefined;
   fs.mkdirSync(path.dirname(file), { recursive: true });
   const out = { ...prev };
   try {
     if (out.branches == null) out.branches = await total(`${API}/projects/${p.id}/repository/branches?per_page=1`);
     if (out.tags == null) out.tags = await total(`${API}/projects/${p.id}/repository/tags?per_page=1`);
     if (out.commits == null) out.commits = await commitCount(p.id);
+    if (out.lastCommit === undefined) {
+      if (firstPageLatest !== undefined) out.lastCommit = firstPageLatest;
+      else { const r = await get(`${API}/projects/${p.id}/repository/commits?per_page=1`); if (r.ok) { const d = await r.json().catch(() => null); if (Array.isArray(d)) out.lastCommit = d[0] ? pick(d[0]) : false; } }
+    }
   } catch (e) {
     console.log(p.id, '건너뜀', e.message);
   }

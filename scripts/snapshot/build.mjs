@@ -34,6 +34,7 @@ const index = list.filter((p) => p.visibility === 'public').map((p) => ({
   commit_count: p.id === 150 ? kTotals.commits ?? null : counts(p.id).commits ?? null,
   branch_count: p.id === 150 ? kTotals.branches ?? null : counts(p.id).branches ?? null,
   tag_count: p.id === 150 ? kTotals.tags ?? null : counts(p.id).tags ?? null,
+  last_commit: counts(p.id).lastCommit || null,
   open_issues_count: p.id === 150 ? kTotals.issues ?? null : p.open_issues_count ?? null,
   open_merge_requests_count: p.id === 150 ? kTotals.merge_requests ?? null : null,
   archived: !!p.archived,
