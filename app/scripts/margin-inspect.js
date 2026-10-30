@@ -19,7 +19,10 @@
   const ml = L - pr.left, mr = pr.right - R;
   if (Math.abs(ml - mr) > 2) bad.push(`좌우 여백 비대칭 ${r1(ml)} / ${r1(mr)}`);
   const left = [['경로', '.rb-panel-in .krds-breadcrumb-wrap'], ['제목', '#main h1'], ['바닥글', '#krds-footer']];
-  for (const [n, sel] of left) { const e = document.querySelector(sel); if (shown(e) && Math.abs(e.getBoundingClientRect().left - L) > 2) bad.push(`${n} 왼쪽 ${r1(e.getBoundingClientRect().left)} (기준 ${r1(L)})`); }
+  // 파일 트리가 있는 파일 보기의 제목, 2열 가운데 구성인 로그인 화면의 제목은 왼쪽 선 비교에서 뺀다
+  const skipTitle = shown(document.querySelector('.rb-filetree')) || /\/(login|register|password)/.test(location.pathname);
+  for (const [n, sel] of left) {
+    if (skipTitle && n === '제목') continue; const e = document.querySelector(sel); if (shown(e) && Math.abs(e.getBoundingClientRect().left - L) > 2) bad.push(`${n} 왼쪽 ${r1(e.getBoundingClientRect().left)} (기준 ${r1(L)})`); }
   const right = [['목록 행', '.rb-prow'], ['프로젝트 정보', '.rb-repo-info'], ['바닥글', '#krds-footer'], ['파일 표', '.rb-tree-wrap']];
   const hasInfo = shown(document.querySelector('.rb-repo-info'));
   for (const [n, sel] of right) {
