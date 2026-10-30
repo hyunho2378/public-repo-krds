@@ -255,13 +255,13 @@
 
 /* ---------- D-18 저장소 탭 줄(높이 48): 머리글 아래 전체 폭 ---------- */
 .rb-rtabs { background: var(--krds-color-surface-gray-subtler); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
-.rb-rtabs-in { display: flex; align-items: stretch; gap: var(--krds-gap-1); height: var(--rb-tabs-h); margin: 0; padding: 0 var(--rb-page-pad); list-style: none; overflow-x: auto; scrollbar-width: none; }
+.rb-rtabs { padding-inline: var(--rb-page-pad); }
+.rb-rtabs-in { display: flex; align-items: stretch; gap: var(--krds-gap-1); height: var(--rb-tabs-h); max-width: var(--rb-container-w); margin: 0 auto; padding: 0; list-style: none; overflow-x: auto; scrollbar-width: none; }
 .rb-rtabs-in::-webkit-scrollbar { display: none; }
 .rb-rtabs-in > li { display: flex; align-items: stretch; flex: none; }
-.rb-rtab-use { margin-inline-start: auto; }
 .rb-rtab {
   display: inline-flex; align-items: center; gap: var(--krds-gap-2); box-sizing: border-box;
-  padding: 0 var(--krds-padding-5); border: 0; background: none; cursor: pointer; white-space: nowrap;
+  padding: 0 var(--krds-padding-4); border: 0; background: none; cursor: pointer; white-space: nowrap;
   color: var(--krds-color-text-basic); text-decoration: none; text-align: center;
   font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-regular);
   border-bottom: var(--krds-border-width-static-medium) solid transparent;
@@ -306,3 +306,4 @@
   .rb-work { flex-direction: column; }
   .rb-dock { position: fixed; inset-inline: 0; bottom: 0; top: auto; width: auto; height: 70dvh; z-index: 95; border-inline-start: 0; border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium3) var(--krds-radius-medium3) 0 0; }
 }
+.rb-rtabs-in > li:first-child .rb-rtab { padding-inline-start: 0; }

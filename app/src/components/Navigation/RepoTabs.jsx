@@ -92,13 +92,13 @@ export function RepoTabs({ id, nav }) {
             </li>
           );
         })}
-        <MoreMenu id={id} groups={groups} active={moreActive} />
         <li className="rb-rtab-use">
           <Link className={'rb-rtab' + (useActive ? ' active' : '')} aria-current={useActive ? 'page' : undefined} to={p + '/use'}>
             <Icon name="play" />
             <span>{t.ProjectTabs_2}</span>
           </Link>
         </li>
+        <MoreMenu id={id} groups={groups} active={moreActive} />
       </ul>
     </nav>
   );

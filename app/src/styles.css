@@ -157,3 +157,15 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 .krds-table-wrap .tbl.data th.rb-num, .krds-table-wrap .tbl.data td.rb-num,
 .krds-table-wrap .rb-tree.tbl.data thead th.rb-col-date, .krds-table-wrap .rb-tree.tbl.data tbody td.rb-col-date { text-align: end; }
 .rb-one-col { display: flex; flex-direction: column; gap: var(--krds-gap-5); min-width: 0; }
+
+/* D-18: 머리글 안쪽도 컨테이너(1280) 기준으로 놓아 탭 줄, 제목 줄, 본문과 왼쪽 선을 하나로 맞춘다 */
+.rb-gbar { padding-inline: var(--rb-page-pad); }
+.rb-gbar-in { max-width: var(--rb-container-w); margin-inline: auto; padding-inline: 0; }
+
+/* 검색 화면(GitHub 방식): 필터 열 296, 체크 목록 행 32, 결과 카드는 간격 16과 테두리 */
+.rb-two-col > .rb-aside-col.rb-filter-pc { flex: 0 0 var(--rb-info-w); border-top: 0; }
+.rb-filter-pc > h2 { padding-top: 0; }
+.rb-filter-pc .krds-form-check { min-height: var(--rb-side-item-h); display: flex; align-items: center; }
+.rb-filter-pc fieldset { padding-block: var(--krds-padding-4); }
+.rb-cards { gap: var(--krds-gap-6); border-top: 0 !important; }
+.rb-cards .structured-item { border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light) !important; border-radius: var(--krds-radius-medium2); padding-inline: var(--krds-padding-7); }

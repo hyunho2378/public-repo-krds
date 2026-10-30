@@ -117,7 +117,7 @@ export default function Search() {
           )}
           {hasData(result.state) && (
             <>
-              <ProjectList items={result.data.data.items} />
+              <ProjectList items={result.data.data.items} cards />
               <Pagination
                 page={page}
                 total={result.data.data.total}

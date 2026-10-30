@@ -90,7 +90,7 @@ function RepoHeader({ project, id }) {
   );
 }
 
-export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false }) {
+export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false, hideCrumbs = false }) {
   // 프로젝트 알림: 머리글 경로(만든 사람 / 이름)와 탭 줄 이슈 수에 쓴다. 화면을 떠나면 지운다.
   const project0 = data.data?.project;
   const dock = useDock();
@@ -114,7 +114,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
     <Page id={screenId} title={docTitle} state={state} noFigma>
       <div className={'rb-repo-main' + (wide ? ' is-wide' : '')} data-figma="main">
         <div className="rb-repo-top">
-          {crumbs?.length ? (
+          {crumbs?.length && !hideCrumbs ? (
             <Breadcrumb home={false} items={[[organizationOf(project), `/search?q=${encodeURIComponent(organizationOf(project))}`], [project.name, `/projects/${data.id}`], ...crumbs]} />
           ) : null}
           <RepoHeader project={project} id={data.id} />

@@ -1,6 +1,6 @@
 /* D-04 저장소 공통 틀. KRDS 변수만. */
 .rb-icon { display: inline-block; flex: none; width: var(--krds-size-height-3); height: var(--krds-size-height-3); background: currentColor; -webkit-mask: no-repeat center / contain; mask: no-repeat center / contain; vertical-align: middle; }
-.rb-repo-top { display: flex; flex-direction: column; gap: var(--krds-gap-6); }
+.rb-repo-top { display: flex; flex-direction: column; gap: var(--krds-gap-3); }
 .rb-repo-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--krds-gap-4); }
 .rb-repo-title { display: flex; flex-direction: column; gap: var(--krds-gap-1); min-width: 0; flex: 1 1 var(--rb-actions-w); }
 /* D-14 끝줄: 저장소 제목은 19px(heading/small), 굳기 600, 한 줄 말줄임(민든사람 부분을 먼저 줄임) */
@@ -46,7 +46,7 @@
 .rb-avatar-img { object-fit: cover; }
 
 /* D-18 4장: 저장소 본문 열은 읽기 폭 960을 가운데에 두고, 파일 보기와 비교만 컨테이너 전체를 쓴다 */
-.rb-repo-main { display: flex; flex-direction: column; gap: var(--krds-gap-7); width: 100%; max-width: var(--rb-read-w); margin-inline: auto; min-width: 0; }
+.rb-repo-main { display: flex; flex-direction: column; gap: var(--krds-gap-7); width: 100%; max-width: var(--rb-read-w); margin-inline: 0 auto; min-width: 0; }
 .rb-repo-main.is-wide { max-width: none; }
 .rb-repo-title-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .rb-repo-name .rb-pill { flex: none; }

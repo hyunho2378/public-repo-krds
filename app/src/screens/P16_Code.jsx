@@ -210,7 +210,7 @@ export default function Code() {
 
 
   return (
-    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} stats={{ commits: b?.count ?? 0, more: b?.more }} wide={!!path}>
+    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} stats={{ commits: b?.count ?? 0, more: b?.more }} wide={!!path} hideCrumbs={!!path}>
       <div className={`rb-code-wrap${path && treeOpen ? ' has-tree' : ''}`}>
         {path && treeOpen ? <FileTreePanel id={frame.id} items={root} current={path} refQuery={refQuery} /> : null}
         <div className="rb-code-area">
@@ -242,7 +242,7 @@ export default function Code() {
           ) : b.kind === 'file' ? (
             <>
               <CommitBar id={frame.id} commit={b.last} count={1} path={path} owner={project.namespace} />
-              <CodeView path={path} text={b.text} rawUrl={rawUrl} size={b.meta?.size} historyTo onHistory={() => navigate(`/projects/${frame.id}/changes?path=${enc(path)}`)} {...blameApi} />
+              <CodeView path={path} base={{ id: frame.id, rawBase: `${project.web_url}/-/raw/${ref}/${path.includes('/') ? path.slice(0, path.lastIndexOf('/') + 1).split('/').map(enc).join('/') : ''}` }} text={b.text} rawUrl={rawUrl} size={b.meta?.size} historyTo onHistory={() => navigate(`/projects/${frame.id}/changes?path=${enc(path)}`)} {...blameApi} />
             </>
           ) : b.items.length ? (
             <>

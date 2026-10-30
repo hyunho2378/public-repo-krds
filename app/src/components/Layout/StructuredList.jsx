@@ -10,9 +10,9 @@ const EXECUTION = { web: t.StructuredList_1, download: t.StructuredList_2, insta
 
 export { cleanDescription };
 
-export function ProjectList({ items }) {
+export function ProjectList({ items, cards = false }) {
   return (
-    <ul className="krds-structured-list type-full rb-list" data-krds="structured_list">
+    <ul className={'krds-structured-list type-full rb-list' + (cards ? ' rb-cards' : '')} data-krds="structured_list">
       {items.map((p) => (
         <li className="structured-item" key={p.id}>
           <div className="in">

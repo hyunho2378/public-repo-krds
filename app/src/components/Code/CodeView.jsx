@@ -98,10 +98,12 @@ function CodeLines({ lines, lang, blame, wrap }) {
   );
 }
 
-export function CodeView({ path, text, rawUrl, size, historyTo, onHistory, blame, onBlame, blameState }) {
+export function CodeView({ path, base, text, rawUrl, size, historyTo, onHistory, blame, onBlame, blameState }) {
   const [copied, setCopied] = useState(false);
   const [wrap, setWrap] = useState(false);
-  const [view, setView] = useState('code');
+  const [view, setView] = useState(isMarkdown(path) ? 'preview' : 'code');
+  // GitHub처럼 마크다운 파일은 미리보기가 기본이다. 다른 파일로 옮기면 기본 보기로 돌아간다
+  useEffect(() => { setView(isMarkdown(path) ? 'preview' : 'code'); }, [path]);
   const lang = languageOf(path);
   const lines = useMemo(() => (text ?? '').replace(/\r\n/g, '\n').split('\n'), [text]);
   const binary = /\u0000/.test(text ?? '');
@@ -117,7 +119,7 @@ export function CodeView({ path, text, rawUrl, size, historyTo, onHistory, blame
     if (next === 'blame' && !blame && onBlame) onBlame();
   };
 
-  const views = [['code', t.P16_viewCode], canPreview ? ['preview', t.P16_viewPreview] : null, ['blame', t.P16_viewBlame]].filter(Boolean);
+  const views = [canPreview ? ['preview', t.P16_viewPreview] : null, ['code', t.P16_viewCode], ['blame', t.P16_viewBlame]].filter(Boolean);
 
   return (
     <section className="rb-code" aria-label={t.P16_codeLabel}>
@@ -155,7 +157,7 @@ export function CodeView({ path, text, rawUrl, size, historyTo, onHistory, blame
       {binary ? (
         <p className="krds-text-body-small rb-code-note">{t.P16_binary}</p>
       ) : view === 'preview' ? (
-        <div className="rb-code-preview"><Readme source={text} /></div>
+        <div className="rb-code-preview"><Readme source={text} base={base} /></div>
       ) : view === 'blame' && !blame ? (
         <p className="krds-text-body-small rb-code-note">{blameState === 'Error' ? t.P16_blameError : t.P16_blameLoading}</p>
       ) : (
