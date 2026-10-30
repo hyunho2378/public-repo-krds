@@ -124,6 +124,10 @@ export async function snapshotGet(sub, query) {
   if (rest === 'repository/tags') return listOf(d.tags, 'tags');
   if (rest === 'repository/contributors') return listOf(d.contributors, 'contributors');
   if (rest === 'releases') return listOf(d.releases, 'releases');
+  if (rest === 'members' || rest === 'members/all') return listOf(d.members, 'members');
+  if (rest === 'labels') return listOf(d.labels, 'labels');
+  if (rest === 'milestones') return listOf(d.milestones, 'milestones');
+  if (rest === 'events') return listOf(d.events, 'events');
   if (rest === 'issues') return listOf(d.issues, 'issues', true);
   if (rest === 'merge_requests') return listOf(d.merge_requests, 'merge_requests', true);
   if ((m = rest.match(/^issues\/(\d+)$/))) { const it = (d.issues || []).find((x) => x.iid === Number(m[1])) || (d.issue55?.iid === Number(m[1]) ? d.issue55 : null); if (!it) throw new SnapshotMissing(); return ok(it); }

@@ -49,8 +49,6 @@ for (const target of TARGETS) {
       if (/^\s*(\/\/|\/?\*)/.test(raw)) return;
       const line = raw.replace(/\/\*.*?\*\//g, '').replace(/\s\/\/.*$/, '');
       if (!/[가-힣]/.test(line)) return;
-      // 사용자가 문장을 정해 준 문구(공공 깃랩 점검 안내 띠, 2026. 10. 30. 지시)는 원문 그대로 둔다
-      if (/\bSnap_band:/.test(line)) return;
       for (const [label, re] of PATTERNS) {
         for (const m of line.matchAll(re)) {
           if (label === '와 ' || label === '과 ') {
