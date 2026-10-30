@@ -85,7 +85,7 @@ export default function Organizations() {
     setParams(next);
   };
   const list = useData(
-    () => request(`/api/gitlab/groups?order_by=${sort === 'updated_at' ? 'id' : sort}&sort=${dir}&per_page=${PER}&page=${page}&archived=${archived}${q ? `&search=${encodeURIComponent(q)}` : ''}`),
+    () => request(`/api/gitlab/groups?order_by=${sort === 'name' ? 'name' : 'id'}&sort=${dir}&per_page=${PER}&page=${page}&archived=${archived}${q ? `&search=${encodeURIComponent(q)}` : ''}`),
     [q, sort, dir, page, archived],
     (d) => !d.data?.length,
   );
