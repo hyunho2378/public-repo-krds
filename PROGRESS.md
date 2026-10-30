@@ -101,3 +101,4 @@
 - 사이드바 현재 항목 왼쪽 막대가 잘리던 것(스크롤 상자, 접기 상자) 보정. UX/16 5절에 클릭 튕김 측정 전후 기록
 - data-figma를 Figma 새 이름으로(topbar, gitlab-sidebar, content-panel, page-head, gl-tabs, gl-filter, intro-card, file-tree), code_plan/measured.json을 18경로 x 1920/360(Guest, 로컬 kordoc 자료)으로 다시 잼
 - 세로 바와 본문 판 사이 8 간격(D-21 7장, Figma content-panel x 248과 같게). measured.json을 스크롤바 뺀 상태로 다시 잼(R-01 1920: 판 248/1664, main 480/1200 = Figma)
+- 경로 줄 13/줄 높이 20, 경로 → 본문 24(layout/crumb-title-gap): main y 159 → 141(Figma 140, 판 테두리 1)
