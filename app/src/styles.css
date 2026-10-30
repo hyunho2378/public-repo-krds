@@ -45,8 +45,6 @@ p, li, dd, dt, label { text-wrap: balance; }
 /* 바닥글 글자는 15(링크)와 13(출처 문장) 두 단계 */
 #krds-footer .inner .f-cnt .f-link .link-go .krds-btn { font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); }
 #krds-footer .inner .f-btm .f-btm-text .f-copy { font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
-/* 바닥글 높이 168(Figma) 유지: 글자를 줄여도 높이는 줄지 않는다 */
-#krds-footer { min-height: var(--rb-footer-h); }
 .rb-main { min-width: 0; padding: 0; }
 
 @media (max-width: 767px) {
@@ -240,3 +238,27 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 .rb-gbar-brand { gap: var(--krds-gap-4); }
 .rb-gbar-brand-text { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
 .rb-logo { flex: none; }
+
+/* 바닥글(GitHub식 한 줄): 본문과 같은 컨테이너(1280, 좌우 --rb-page-pad)에 넣고 로고, 링크, 구분선, 문장이 한 왼쪽 선에서 시작한다.
+   첫 줄은 [로고 + 이름]과 링크(간격 24)를 가로로, 둘째 줄은 구분선과 13 글자 문장. 높이는 내용 + 위아래 24 */
+#krds-footer { min-height: 0; padding-inline: var(--rb-page-pad); box-sizing: border-box; }
+#krds-footer > .inner { flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: var(--rb-footer-pad); row-gap: var(--rb-footer-pad); max-width: var(--rb-container-w); margin-inline: auto; padding: var(--rb-footer-pad) 0; box-sizing: border-box; }
+#krds-footer .f-cnt, #krds-footer .f-cnt .f-link, #krds-footer .f-cnt .f-link .link-go { display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: var(--rb-footer-pad); margin: 0; padding: 0; width: auto; }
+#krds-footer .f-cnt .f-link .link-go .krds-btn { padding-inline: 0; min-height: var(--rb-lh-15); height: auto; }
+#krds-footer .f-btm { flex: 1 0 100%; margin: 0; padding: var(--rb-footer-pad) 0 0; border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+#krds-footer .f-btm .f-btm-text { margin: 0; padding: 0; }
+@media (max-width: 1023px) { #krds-footer > .inner { padding: var(--rb-footer-pad) 0; gap: var(--rb-footer-pad); } }
+
+/* 왼쪽 메뉴가 있는 화면도 머리글, 탭 줄, 바닥글과 같은 컨테이너(1280, 좌우 --rb-page-pad)에 넣어 왼쪽 선을 하나로 맞춘다 */
+.rb-shell { max-width: calc(var(--rb-container-w) + var(--rb-page-pad) * 2); margin-inline: auto; }
+/* 모바일 하단 탭바(고정 72)가 바닥글을 덮지 않게 바닥글 아래를 탭바 높이만큼 띄운다 */
+@media (max-width: 1023px) { #krds-footer { padding-bottom: var(--krds-size-height-10); } }
+
+/* 연속 폭(320~3840): 머리글 왼쪽 묶음은 남는 자리에 맞춰 줄어들고(경로는 말줄임), 좁은 폭에서는 하단 탭바가 찾기를 맡으므로 머리글 검색 아이콘을 뺀다 */
+.rb-gbar-left { flex: 0 1 auto; min-width: 0; }
+.rb-gbar-path { flex: 0 1 auto; overflow: hidden; }
+.rb-gbar-pathlink { flex: 0 1 auto; min-width: 0; white-space: nowrap; }
+@media (max-width: 479px) { .rb-gbar-searchlink { display: none; } }
+/* README 안 인라인 코드는 긴 경로도 줄바꿈해 화면 밖으로 나가지 않는다 */
+.rb-md code, .rb-md-code { overflow-wrap: anywhere; }
+.rb-commit-bar, .rb-commit-bar > * { min-width: 0; max-width: 100%; }
