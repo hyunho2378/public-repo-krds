@@ -6,7 +6,8 @@
  "variant": "breakpoint=360, auth=Signed-in",
  "frame": {
   "w": 360,
-  "h": 1130
+  "h": 1130,
+  "heightFromContent": true
  },
  "boxes": {
   "masthead": {
@@ -21,17 +22,25 @@
    "w": 360,
    "h": 65
   },
+  "global-search": {
+   "x": 265,
+   "y": 44,
+   "w": 1,
+   "h": 40
+  },
   "footer": {
    "x": 0,
    "y": 813,
    "w": 360,
-   "h": 224
+   "h": 224,
+   "heightFromContent": true
   },
   "body": {
    "x": 0,
    "y": 97,
    "w": 360,
-   "h": 716
+   "h": 716,
+   "heightFromContent": true
   },
   "login-card": {
    "x": 24,

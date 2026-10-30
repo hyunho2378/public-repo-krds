@@ -6,7 +6,8 @@
  "variant": "breakpoint=360, auth=Signed-in",
  "frame": {
   "w": 360,
-  "h": 1869
+  "h": 1718,
+  "heightFromContent": true
  },
  "boxes": {
   "masthead": {
@@ -21,23 +22,32 @@
    "w": 360,
    "h": 65
   },
+  "global-search": {
+   "x": 265,
+   "y": 44,
+   "w": 1,
+   "h": 40
+  },
   "footer": {
    "x": 0,
-   "y": 1552,
+   "y": 1401,
    "w": 360,
-   "h": 224
+   "h": 224,
+   "heightFromContent": true
   },
   "body": {
    "x": 0,
    "y": 97,
    "w": 360,
-   "h": 1455
+   "h": 1304,
+   "heightFromContent": true
   },
   "main": {
    "x": 12,
    "y": 121,
    "w": 336,
-   "h": 1407
+   "h": 1256,
+   "heightFromContent": true
   },
   "breadcrumb": {
    "x": 12,
@@ -55,23 +65,25 @@
    "x": 12,
    "y": 256,
    "w": 336,
-   "h": 185
+   "h": 108
   },
   "diff-area": {
    "x": 12,
-   "y": 621,
+   "y": 470,
    "w": 336,
-   "h": 907
+   "h": 907,
+   "heightFromContent": true
   },
   "diff-file": {
    "x": 12,
-   "y": 621,
+   "y": 470,
    "w": 336,
-   "h": 367
+   "h": 367,
+   "heightFromContent": true
   },
   "tabbar": {
    "x": 0,
-   "y": 1776,
+   "y": 1625,
    "w": 360,
    "h": 93
   }

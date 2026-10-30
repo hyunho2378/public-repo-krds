@@ -134,10 +134,11 @@ export function Sidebar({ project, open, onClose }) {
   return (
     <>
       {open ? <div className="rb-side-dim" onClick={onClose} /> : null}
+      <div className="rb-side-wrap" data-figma="sidebar">
       <nav
         id="rb-sidebar"
         ref={panel}
-        data-figma="sidebar"
+        data-figma="sidebar-nav"
         className={'rb-side' + (open ? ' is-open' : '')}
         aria-label={project ? t.Side_labelProject : t.Side_label}
       >
@@ -146,10 +147,8 @@ export function Sidebar({ project, open, onClose }) {
             <Avatar src={project.avatarUrl} name={project.name} />
             <span className="rb-ellipsis">{project.name}</span>
           </p>
-        ) : (
-          <p className="rb-side-project krds-text-body-medium-bold">{t.Side_explore}</p>
-        )}
-        <div className="rb-side-groups" data-figma="sidebar-nav">
+        ) : null}
+        <div className="rb-side-groups">
           {groups.map(([group, items], i) => (
             <Group key={group || `g${i}`} group={group} items={items} />
           ))}
@@ -167,6 +166,7 @@ export function Sidebar({ project, open, onClose }) {
           </NavLink>
         </div>
       </nav>
+      </div>
     </>
   );
 }

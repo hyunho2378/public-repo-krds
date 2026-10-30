@@ -6,7 +6,8 @@
  "variant": "breakpoint=360, auth=Signed-in",
  "frame": {
   "w": 360,
-  "h": 2092
+  "h": 2021,
+  "heightFromContent": true
  },
  "boxes": {
   "masthead": {
@@ -21,23 +22,32 @@
    "w": 360,
    "h": 65
   },
+  "global-search": {
+   "x": 265,
+   "y": 44,
+   "w": 1,
+   "h": 40
+  },
   "footer": {
    "x": 0,
-   "y": 1775,
+   "y": 1704,
    "w": 360,
-   "h": 224
+   "h": 224,
+   "heightFromContent": true
   },
   "body": {
    "x": 0,
    "y": 97,
    "w": 360,
-   "h": 1678
+   "h": 1607,
+   "heightFromContent": true
   },
   "main": {
    "x": 12,
    "y": 121,
    "w": 336,
-   "h": 1630
+   "h": 1559,
+   "heightFromContent": true
   },
   "breadcrumb": {
    "x": 12,
@@ -55,17 +65,18 @@
    "x": 12,
    "y": 256,
    "w": 336,
-   "h": 100
+   "h": 29
   },
   "checks": {
    "x": 12,
-   "y": 546,
+   "y": 475,
    "w": 336,
-   "h": 1138
+   "h": 1138,
+   "heightFromContent": true
   },
   "tabbar": {
    "x": 0,
-   "y": 1999,
+   "y": 1928,
    "w": 360,
    "h": 93
   }

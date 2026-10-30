@@ -3,12 +3,12 @@ import { plain } from '../Help/Phrase';
 import { t } from '../../copy/ko';
 import { useEffect } from 'react';
 
-export function Page({ id, title, state, children }) {
+export function Page({ id, title, state, children, noFigma = false }) {
   useEffect(() => {
     if (title) document.title = t.fn.docTitle(plain(title));
   }, [title]);
   return (
-    <div className="rb-page" data-screen-id={id} data-state={state}>
+    <div className="rb-page" data-figma={noFigma ? undefined : 'main'} data-screen-id={id} data-state={state}>
       {children}
     </div>
   );

@@ -55,7 +55,7 @@ export default function NewProject() {
       <Breadcrumb items={[[t.Side_explore, '/'], [t.NewProject_title]]} />
       <div className="rb-write rb-narrow">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-large">{t.NewProject_title}</h1>
+          <h1 className="krds-text-heading-large" data-figma="section-title">{t.NewProject_title}</h1>
           <p className="krds-text-body-medium rb-subtle">{t.NewProject_hint}</p>
         </div>
 

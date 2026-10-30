@@ -106,7 +106,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, data, children, state, a
   }
   const { project } = data.data;
   return (
-    <Page id={screenId} title={`${project.name} ${tabLabel || ''}`} state={state}>
+    <Page id={screenId} title={`${project.name} ${tabLabel || ''}`} state={state} noFigma>
       <div className={'rb-repo-layout' + (aside ? ' has-aside' : '')}>
         <div className="rb-repo-main" data-figma="main">
           <div className="rb-repo-top">

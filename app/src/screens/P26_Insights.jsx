@@ -25,7 +25,7 @@ export function Insights() {
       <Breadcrumb items={[[t.Side_explore, '/'], [t.Insights_title]]} />
       <div className="rb-write">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-large">{t.Insights_title}</h1>
+          <h1 className="krds-text-heading-large" data-figma="section-title">{t.Insights_title}</h1>
           <p className="krds-text-body-medium rb-subtle">{t.Insights_hint}</p>
         </div>
         {!rows.length ? <Status {...map} /> : (

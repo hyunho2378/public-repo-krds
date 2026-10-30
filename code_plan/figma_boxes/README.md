@@ -72,3 +72,20 @@
 
 ## 5. 다시 만드는 방법
 - Figma 화면을 고친 뒤 이 폴더를 다시 내보낸다. 화면 세트가 늘면 파일도 늘어난다
+
+## 6. 높이 비교 규칙 (2026. 10. 30. 결정)
+- `heightFromContent: true`가 붙은 상자는 **높이를 비교하지 않는다**. x, y, w만 본다
+  - 대상: frame, body, main, readme, file-table, footer, info-panel, results, code-view, diff-area, diff-file, detail-area, sidebar-nav, checks, steps
+  - 이유: Figma는 README와 목록을 대표 길이로 줄여 그린다. 코드는 실제 자료를 모두 그린다. 높이 차이는 자료 길이 차이이지 배치 차이가 아니다
+- 높이까지 비교하는 상자: masthead, header, global-search, breadcrumb, repo-title, repo-actions, toolbar, commit-bar, about, decision-panel, tabs, section-title, filters, search, login-card, comment-editor, meta-panel, tabbar, sidebar
+- `clipped: true`가 붙은 상자(sidebar)는 화면 높이에 맞춰 잘린 패널이다. 안쪽 `sidebar-nav`는 잘리기 전 전체 높이라서 sidebar보다 클 수 있다. 코드에서는 사이드바에 자체 스크롤을 두고 sidebar의 x, y, w와 높이만 맞춘다
+
+## 7. 요소 이름 추가
+| 이름 | 뜻 |
+|---|---|
+| global-search | 머리글 안 검색 입력칸 |
+| about | 정보 영역 안 "이 도구가 하는 일" 묶음 |
+
+## 8. 확인된 기준값 (R-01 1920 Guest)
+- repo-title은 제목 줄 전체다(x 352, w 1192). 제목 글자만이 아니다. 오른쪽 버튼 묶음은 repo-actions(x 1256, w 288)로 따로 있다
+- toolbar는 한 줄이다(h 48). 1024 이상에서는 줄바꿈하지 않는다

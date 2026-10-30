@@ -16,7 +16,7 @@ export default function Home() {
   const list = useData(() => product.get('/catalog?limit=5'), [], (d) => !d.data.items.length);
   return (
     <Page id="P-01" title={t.Header_2} state={list.state}>
-      <h1 className="krds-text-heading-xlarge">{phrase(t.P01_8)}</h1>
+      <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.P01_8)}</h1>
       <p className="krds-text-body-large rb-subtle">{phrase(t.P01_9)}</p>
       <TaskSearch />
       <section className="rb-stack" aria-labelledby="fields-title">

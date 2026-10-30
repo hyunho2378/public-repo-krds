@@ -1,17 +1,34 @@
-/* D-13 화면 뼈대 값. Figma 화면 상자(code_plan/figma_boxes)에서 가져온 숫자를 한곳에 모은다.
-   다른 파일은 이 변수만 쓴다. 값을 고칠 때는 Figma 상자 자료와 함께 고친다.
-   근거: R-01_1920_Guest.json — 좌우 여백 24, 왼쪽 메뉴 296, 칸 사이 32, 정보 영역 320, 머리 65 */
+/* D-13 화면 뼈대 값.
+   KRDS 변수에 있는 값은 그 변수를 그대로 참조한다. KRDS에 없는 값(칸 너비, 머리 높이)만 숫자로 두고
+   아래에 근거와 KRDS 대응을 적는다. 값을 고칠 때는 Figma 상자 자료(code_plan/figma_boxes)와 함께 고친다.
+
+   | 이름 | 값 | 근거 | KRDS 대응 |
+   |---|---|---|---|
+   | 좌우 여백 | 24px | R-01_1920_Guest.json sidebar.x | --krds-padding-8 (number-10, 2.4rem) |
+   | 칸 사이 | 32px | main.x - (sidebar.x + sidebar.w) | --krds-gap-8 (number-12, 3.2rem) |
+   | 왼쪽 메뉴 너비(프로젝트 안) | 296px | R-01 sidebar.w | KRDS에 없음. number-12(32) x 9 + number-5(8) |
+   | 왼쪽 메뉴 너비(전역) | 264px | G-01 sidebar.w | KRDS에 없음. number-12(32) x 8 + number-5(8) |
+   | 머리 검색칸 높이 | 48px | G-01 global-search.h | --krds-number-16 (4.8rem) |
+   | 머리 좌우 묶음 너비 | 252px | global-search.x - 좌우 여백 | KRDS에 없음. number-12(32) x 7 + number-11(28) |
+   | 정보 영역 너비 | 320px | info-panel.w | KRDS에 없음. number-12(32) x 10 |
+   | 머리 높이 | 65px | header.h | KRDS에 없음. KRDS 헤더 기본 높이를 Figma가 그대로 씀 |
+   | 공식 배너 높이 | 32px | masthead.h | --krds-number-12 (3.2rem) |
+*/
 :root {
-  --rb-page-pad: 2.4rem;
-  --rb-sidebar-w: 29.6rem;
-  --rb-col-gap: 3.2rem;
-  --rb-info-w: 32rem;
-  --rb-header-h: 6.5rem;
-  --rb-masthead-h: 3.2rem;
+  --rb-page-pad: var(--krds-padding-8);
+  --rb-col-gap: var(--krds-gap-8);
+  --rb-masthead-h: var(--krds-number-12);
+  /* KRDS에 없는 값. 위 표의 근거를 따른다 */
+  --rb-sidebar-w: calc(var(--krds-number-12) * 8 + var(--krds-number-5));
+  --rb-sidebar-w-project: calc(var(--krds-number-12) * 9 + var(--krds-number-5));
+  --rb-search-h: var(--krds-number-16);
+  --rb-gbar-side: calc(var(--krds-number-12) * 7 + var(--krds-number-11));
+  --rb-info-w: calc(var(--krds-number-12) * 10);
+  --rb-header-h: calc(var(--krds-number-12) * 2 + var(--krds-number-1));
 }
 @media (max-width: 1023px) {
   :root {
-    --rb-page-pad: 1.6rem;
-    --rb-col-gap: 2.4rem;
+    --rb-page-pad: var(--krds-padding-6);
+    --rb-col-gap: var(--krds-gap-7);
   }
 }

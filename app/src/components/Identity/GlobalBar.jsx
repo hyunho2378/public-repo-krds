@@ -86,13 +86,15 @@ export function GlobalBar({ onToggleNav, navOpen }) {
           <Icon name="menu" />
           <span className="sr-only">{t.GlobalBar_navToggle}</span>
         </button>
-        <Link className="rb-gbar-brand" to="/">
-          <span className="rb-gbar-brand-text">{SERVICE_NAME}</span>
-        </Link>
-        <NavLink end className="rb-gbar-btn rb-gbar-explore" to="/">
-          <Icon name="view_all" />
-          <span>{t.GlobalBar_explore}</span>
-        </NavLink>
+        <div className="rb-gbar-left">
+          <Link className="rb-gbar-brand" to="/">
+            <span className="rb-gbar-brand-text">{SERVICE_NAME}</span>
+          </Link>
+          <NavLink end className="rb-gbar-btn rb-gbar-explore" to="/">
+            <Icon name="view_all" />
+            <span>{t.GlobalBar_explore}</span>
+          </NavLink>
+        </div>
         <GlobalSearch />
         <Link className="rb-gbar-btn rb-gbar-searchlink" to="/search">
           <Icon name="search" />

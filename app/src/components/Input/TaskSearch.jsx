@@ -17,7 +17,7 @@ export function TaskSearch({ initial = '', keep }) {
   }
 
   return (
-    <form role="search" className="rb-search" onSubmit={submit}>
+    <form role="search" data-figma="search" className="rb-search" onSubmit={submit}>
       <label className="krds-text-label-medium" htmlFor="task-search">
         {t.TaskSearch_2}
       </label>

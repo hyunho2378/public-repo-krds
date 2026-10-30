@@ -32,5 +32,20 @@
  "G-01": "/",
  "G-02": "/search?q=kordoc",
  "G-03": "/organizations",
- "G-04": "/projects/new"
+ "G-04": "/projects/new",
+ "A-01": "/fields",
+ "A-02": "/requests",
+ "A-03": "/collaborate",
+ "A-04": "/insights",
+ "A-05": "/projects/150/law-alerts",
+ "A-06": "/mcp",
+ "A-07": "/projects/150/handover",
+ "A-08": "/checklist",
+ "G-05": "/my",
+ "G-06": "/notifications",
+ "G-07": "/organizations",
+ "G-08": "/login",
+ "G-09": "/error",
+ "G-10": "/help",
+ "G-11": "/settings"
 }

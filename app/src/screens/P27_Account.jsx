@@ -33,7 +33,7 @@ export function Notifications() {
       <Breadcrumb items={[[t.Side_explore, '/'], [t.TabBar_alerts]]} />
       <div className="rb-write">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-large">{t.TabBar_alerts}</h1>
+          <h1 className="krds-text-heading-large" data-figma="section-title">{t.TabBar_alerts}</h1>
           <p className="krds-text-body-medium rb-subtle">{t.Alerts_hint}</p>
         </div>
         {!signedIn ? <NeedLogin title={t.TabBar_alerts} path="/notifications" /> : <EmptyState title={t.Alerts_none} />}

@@ -6,7 +6,8 @@
  "variant": "breakpoint=1920, auth=Guest",
  "frame": {
   "w": 1920,
-  "h": 658
+  "h": 658,
+  "heightFromContent": true
  },
  "boxes": {
   "masthead": {
@@ -21,35 +22,52 @@
    "w": 1920,
    "h": 65
   },
+  "global-search": {
+   "x": 277,
+   "y": 40,
+   "w": 1367,
+   "h": 48
+  },
   "footer": {
    "x": 0,
    "y": 545,
    "w": 1920,
-   "h": 113
+   "h": 113,
+   "heightFromContent": true
   },
   "body": {
    "x": 0,
    "y": 97,
    "w": 1920,
-   "h": 448
+   "h": 448,
+   "heightFromContent": true
   },
   "sidebar": {
    "x": 24,
    "y": 121,
    "w": 264,
-   "h": 400
+   "h": 400,
+   "clipped": true
+  },
+  "sidebar-nav": {
+   "x": 24,
+   "y": 121,
+   "w": 264,
+   "h": 504,
+   "heightFromContent": true
   },
   "main": {
    "x": 320,
    "y": 121,
    "w": 1576,
-   "h": 324
+   "h": 253,
+   "heightFromContent": true
   },
   "section-title": {
    "x": 320,
    "y": 121,
    "w": 1576,
-   "h": 100
+   "h": 29
   }
  }
 }

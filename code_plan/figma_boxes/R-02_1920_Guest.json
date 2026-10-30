@@ -6,7 +6,8 @@
  "variant": "breakpoint=1920, auth=Guest",
  "frame": {
   "w": 1920,
-  "h": 1123
+  "h": 1123,
+  "heightFromContent": true
  },
  "boxes": {
   "masthead": {
@@ -21,35 +22,46 @@
    "w": 1920,
    "h": 65
   },
+  "global-search": {
+   "x": 277,
+   "y": 40,
+   "w": 1367,
+   "h": 48
+  },
   "footer": {
    "x": 0,
    "y": 971,
    "w": 1920,
-   "h": 152
+   "h": 152,
+   "heightFromContent": true
   },
   "body": {
    "x": 0,
    "y": 97,
    "w": 1920,
-   "h": 874
+   "h": 874,
+   "heightFromContent": true
   },
   "sidebar": {
    "x": 24,
    "y": 121,
    "w": 296,
-   "h": 826
+   "h": 826,
+   "clipped": true
   },
   "sidebar-nav": {
    "x": 24,
    "y": 166,
    "w": 296,
-   "h": 1340
+   "h": 1340,
+   "heightFromContent": true
   },
   "main": {
    "x": 352,
    "y": 121,
    "w": 1544,
-   "h": 826
+   "h": 774,
+   "heightFromContent": true
   },
   "breadcrumb": {
    "x": 352,
@@ -73,19 +85,20 @@
    "x": 352,
    "y": 313,
    "w": 1544,
-   "h": 100
+   "h": 48
   },
   "commit-bar": {
    "x": 352,
-   "y": 479,
+   "y": 427,
    "w": 1544,
    "h": 71
   },
   "file-table": {
    "x": 352,
-   "y": 570,
+   "y": 518,
    "w": 1544,
-   "h": 377
+   "h": 377,
+   "heightFromContent": true
   }
  }
 }

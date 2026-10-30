@@ -87,7 +87,7 @@ export default function Search() {
   return (
     <Page id="P-02" title={query ? t.fn.searchTitle(query) : t.P02_4} state={result.state}>
       <Breadcrumb items={[[t.Header_2, '/'], [t.P02_5]]} />
-      <h1 className="krds-text-heading-xlarge">{query ? t.fn.searchTitle(query) : t.P02_6}</h1>
+      <h1 className="krds-text-heading-xlarge" data-figma="section-title">{query ? t.fn.searchTitle(query) : t.P02_6}</h1>
       <TaskSearch initial={query} keep={params} />
       <div className="rb-two-col">
         <aside className="rb-side rb-filter-pc" aria-label={t.P02_7}>

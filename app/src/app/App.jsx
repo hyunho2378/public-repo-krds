@@ -37,7 +37,7 @@ function Shell() {
       <Masthead />
       <GlobalBar navOpen={navOpen} onToggleNav={() => setNavOpen((v) => !v)} />
       <NoticeBanner message={import.meta.env.VITE_NOTICE} />
-      <div className={'rb-shell' + (bare ? ' is-bare' : '')} data-figma="body">
+      <div className={'rb-shell' + (bare ? ' is-bare' : '') + (project ? ' has-project' : '')} data-figma="body">
         {bare ? null : <Sidebar project={project} open={navOpen} onClose={closeNav} />}
         <main id="main" tabIndex={-1} className="rb-main">
           <Routes>

@@ -17,7 +17,7 @@ export default function Organizations() {
   return (
     <Page id="P-11" title={t.P11_1} state={orgs.state}>
       <Breadcrumb items={[[t.Header_2, '/'], [t.P11_1]]} />
-      <h1 className="krds-text-heading-xlarge">{phrase(t.P11_1)}</h1>
+      <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.P11_1)}</h1>
       <div className="rb-search">
         <label className="krds-text-label-medium" htmlFor="org-filter">{t.P11_2}</label>
         <input className="krds-input medium" id="org-filter" type="search" placeholder={t.P11_3} value={filter} onChange={(e) => setFilter(e.target.value)} />
