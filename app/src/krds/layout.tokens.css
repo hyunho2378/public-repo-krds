@@ -5,7 +5,7 @@
    | 이름 | 값 | 근거 | KRDS 대응 |
    |---|---|---|---|
    | 좌우 여백 | 24px | R-01_1920_Guest.json sidebar.x | --krds-padding-8 (number-10, 2.4rem) |
-   | 왼쪽 메뉴 너비(D-17, 펼침) | 240px | D-17 1장 | KRDS에 없음. number-12(32) x 7 + number-5(8) |
+   | 왼쪽 메뉴 너비(D-17, 펼침) | 240px | D-17 1장 | KRDS에 없음. number-12(32) x 7 + number-8(16) |
    | 왼쪽 메뉴 너비(D-17, 접힘) | 56px | D-17 1장(아이콘만) | KRDS에 없음. size-height-9(64) - number-5(8) |
    | 머리 검색칸 높이 | 48px | G-01 global-search.h | --krds-number-16 (4.8rem) |
    | 머리 왼쪽 묶음 최소 너비 | 252px | 로고와 탐색이 들어가는 최소 폭 | KRDS에 없음. number-12(32) x 7 + number-11(28) |
@@ -22,12 +22,13 @@
    | 행간 | 13:20, 15:22, 17:26, 19:28, 24:32, 32:40, 40:48 | D-16 2장 | KRDS 150%를 짝수 px로 대체(퍼센트 금지) |
    | 왼쪽 메뉴 펼침 기준 폭 | 1920 | D-17 5장 | 단위 없는 숫자(자바스크립트가 읽는다) |
    | 왼쪽 메뉴 숨김 기준 폭 | 768 | D-17 5장 | KRDS 모바일 구간. 단위 없는 숫자 |
+   | 정보 영역 옆 배치 기준 폭 | 1024 | D-17 2장 | KRDS 태블릿 구간. 단위 없는 숫자 |
 */
 :root {
   --rb-page-pad: var(--krds-padding-8);
   --rb-col-gap: var(--krds-gap-9);
   --rb-masthead-h: var(--krds-number-12);
-  --rb-sidebar-w: calc(var(--krds-number-12) * 7 + var(--krds-number-5));
+  --rb-sidebar-w: calc(var(--krds-number-12) * 7 + var(--krds-number-8));
   --rb-sidebar-w-project: var(--rb-sidebar-w);
   --rb-sidebar-w-collapsed: calc(var(--krds-size-height-9) - var(--krds-number-5));
   --rb-search-h: var(--krds-number-16);
@@ -44,6 +45,8 @@
   --rb-bp-side-open: 1920;
   /* D-17 5장: 이 폭 미만은 왼쪽 메뉴를 숨기고 머리글 메뉴 버튼으로 연다(KRDS 모바일 구간 768) */
   --rb-bp-mobile: 768;
+  /* D-17 5장: 이 폭(단위 없음) 이상에서만 정보 영역이 본문 옆에 놓이고 홈에서 열림이 기본이다. 미만이면 본문 위로 올라가 닫힘이 기본이다 */
+  --rb-bp-info-side: 1024;
   /* 글자 크기 네 단계(KRDS 값 그대로). 행간은 짝수 px */
   --rb-step-13: 1.3rem;
   --rb-step-15: 1.5rem;

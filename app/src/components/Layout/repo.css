@@ -2,9 +2,9 @@
 .rb-icon { display: inline-block; flex: none; width: var(--krds-size-height-3); height: var(--krds-size-height-3); background: currentColor; -webkit-mask: no-repeat center / contain; mask: no-repeat center / contain; vertical-align: middle; }
 .rb-repo-top { display: flex; flex-direction: column; gap: var(--krds-gap-6); }
 .rb-repo-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--krds-gap-4); }
-.rb-repo-title { display: flex; flex-direction: column; gap: var(--krds-gap-1); min-width: 0; flex: 1 1 0; }
+.rb-repo-title { display: flex; flex-direction: column; gap: var(--krds-gap-1); min-width: 0; flex: 1 1 var(--rb-actions-w); }
 /* D-14 끝줄: 저장소 제목은 19px(heading/small), 굳기 600, 한 줄 말줄임(민든사람 부분을 먼저 줄임) */
-.rb-repo-name { display: flex; flex-wrap: nowrap; align-items: center; gap: var(--krds-gap-2); margin: 0; min-width: 0; font-weight: 600; }
+.rb-repo-name { display: flex; flex-wrap: nowrap; align-items: center; gap: var(--krds-gap-2); margin: 0; min-width: 0; font-weight: var(--rb-fw-title); }
 .rb-repo-name .rb-repo-org { color: var(--krds-color-text-subtle); font-weight: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: var(--krds-number-18); flex-shrink: 3; }
 .rb-repo-name > span:not(.rb-repo-org) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: var(--krds-number-15); flex-shrink: 1; }
 .rb-repo-name .krds-badge, .rb-repo-name .rb-pill { flex: none; }
@@ -33,6 +33,10 @@
 @media (min-width: 1024px) {
   /* Figma: 오른쪽 정보 영역이 맨 위(브레드크럼 줄)부터 시작한다 */
   .rb-repo-layout.has-aside { grid-template-columns: minmax(0, 1fr) var(--rb-info-w); column-gap: var(--rb-col-gap); }
+}
+@media (max-width: 1023px) {
+  /* D-17 2장: 1024 미만은 정보 영역이 본문 위로 올라온다 */
+  .rb-repo-aside { order: -1; }
 }
 @media (min-width: 1280px) {
   .rb-repo-top .rb-tabs { display: none; }

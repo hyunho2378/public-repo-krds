@@ -1,5 +1,6 @@
 // 화면 설정: 시스템 따르기, 밝은 화면, 어두운 화면(D-01), 선명한 화면 모드. 머리글 유틸리티와 모바일 메뉴 양쪽에서 쓴다.
 import { t } from '../../copy/ko';
+import { u } from '../../copy/ui';
 import { FieldsetTitle } from '../Input/FieldsetTitle';
 import { useEffect, useState } from 'react';
 
@@ -51,8 +52,44 @@ export function useScreenMode() {
   return [mode, setMode];
 }
 
+// D-14 끝절: 이용자 글자 크기(보통, 크게). 기본은 보통이고, 고른 값은 기억한다. 크게는 html 클래스로 layout.tokens.css가 받는다.
+const SIZE_KEY = 'rb-font-size';
+const SIZE_EVENT = 'rb-font-size-change';
+
+function applySize(size) {
+  document.documentElement.classList.toggle('rb-font-large', size === 'large');
+}
+
+function initialSize() {
+  try {
+    return localStorage.getItem(SIZE_KEY) === 'large' ? 'large' : 'normal';
+  } catch { return 'normal'; }
+}
+
+// 화면이 처음 그려지기 전에 저장된 크기를 적용한다
+if (typeof document !== 'undefined') applySize(initialSize());
+
+export function useFontSize() {
+  const [size, setSizeState] = useState(initialSize);
+  useEffect(() => {
+    const on = (e) => setSizeState(e.detail);
+    window.addEventListener(SIZE_EVENT, on);
+    return () => window.removeEventListener(SIZE_EVENT, on);
+  }, []);
+  const setSize = (next) => {
+    try { localStorage.setItem(SIZE_KEY, next); } catch { /* 무시 */ }
+    applySize(next);
+    window.dispatchEvent(new CustomEvent(SIZE_EVENT, { detail: next }));
+  };
+  return [size, setSize];
+}
+
+const SIZES = [['normal', u.Font_normal], ['large', u.Font_large]];
+
 export function ScreenModeOptions({ name, mode, setMode }) {
+  const [size, setSize] = useFontSize();
   return (
+    <>
     <fieldset className="rb-mode-options">
       <FieldsetTitle className="krds-text-body-small-bold">{t.Header_6}</FieldsetTitle>
       {MODES.map(([value, label]) => (
@@ -62,5 +99,15 @@ export function ScreenModeOptions({ name, mode, setMode }) {
         </div>
       ))}
     </fieldset>
+    <fieldset className="rb-mode-options">
+      <FieldsetTitle className="krds-text-body-small-bold">{u.Font_title}</FieldsetTitle>
+      {SIZES.map(([value, label]) => (
+        <div className="krds-form-check" key={value}>
+          <input type="radio" name={name + '-size'} id={`${name}-size-${value}`} checked={size === value} onChange={() => setSize(value)} />
+          <label htmlFor={`${name}-size-${value}`}>{label}</label>
+        </div>
+      ))}
+    </fieldset>
+    </>
   );
 }

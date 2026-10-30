@@ -3,6 +3,7 @@ import { App } from './app/App';
 import './krds/dark.generated.css';
 import './krds/syntax.generated.css';
 import './krds/layout.tokens.css';
+import './krds/status.tokens.css';
 import './styles.css';
 import './screens/screens.css';
 

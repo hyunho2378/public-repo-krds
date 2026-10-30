@@ -21,7 +21,7 @@ import { Drop } from '../Code/Drop';
 import { Link } from 'react-router-dom';
 import { DecisionBlock, loadDecision } from './DecisionPanel';
 import { infoMode } from '../../app/screenKind';
-import { useBoolPref } from '../../app/prefs';
+import { breakpoint, useBoolPref, useMinWidth } from '../../app/prefs';
 
 export function organizationOf(project) {
   // D-09 GitLab과 같게 공개된 이름을 그대로 쓴다. 기관만 쓰면 만든 사람이 지워진다.
@@ -106,7 +106,8 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
   // 열고 닫은 선택은 이용자별로 기억한다. 닫혀 있어도 머리 줄에 점검 요약(예: 7/8 통과)을 남긴다.
   const { pathname } = useLocation();
   const mode = infoMode(pathname);
-  const [open, setOpen] = useBoolPref('rb-info-open-' + mode, mode === 'home');
+  const side = useMinWidth(breakpoint('--rb-bp-info-side'));
+  const [open, setOpen] = useBoolPref('rb-info-open-' + mode, mode === 'home' && side);
   const decision = useData(() => (mode === 'none' ? Promise.resolve(null) : loadDecision(data.id)), [data.id, mode]);
   // 전역 왼쪽 메뉴를 이 프로젝트 메뉴로 바꾼다(공공 깃랩과 같은 구조). 화면을 떠나면 탐색 메뉴로 돌아간다.
   const project0 = data.data?.project;
