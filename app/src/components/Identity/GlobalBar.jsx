@@ -1,6 +1,7 @@
 // D-08 전역 틀. 공공 깃랩(gitlab.aigov.go.kr) 상단 바 배치를 그대로 따른다.
 // 왼쪽: 사이드바 여닫기, 로고와 서비스명, "탐색" / 가운데: 검색 또는 이동(단축키 /) / 오른쪽: 화면 설정, 등록, 로그인 또는 내 계정.
 // 부품과 값은 KRDS만 쓴다.
+import { IconButton, iconBtnClass } from '../Action/IconButton';
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { t } from '../../copy/ko';
@@ -84,16 +85,7 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true }) {
     <header className="rb-gbar" data-figma="header" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
       <div className="rb-gbar-in">
         {hasNav ? (
-          <button
-            type="button"
-            className="rb-gbar-btn rb-gbar-navtoggle"
-            aria-expanded={navOpen}
-            aria-controls="rb-sidebar"
-            onClick={onToggleNav}
-          >
-            <Icon name="menu" />
-            <span className="sr-only">{t.GlobalBar_navToggle}</span>
-          </button>
+          <IconButton icon="menu" label={t.GlobalBar_navToggle} size="medium" className="rb-gbar-navtoggle" aria-expanded={navOpen} aria-controls="rb-sidebar" onClick={onToggleNav} />
         ) : null}
         <div className="rb-gbar-left">
           <Link className="rb-gbar-brand" to="/" aria-label={u.Brand_home}>
@@ -115,21 +107,12 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true }) {
           )}
         </div>
         <GlobalSearch />
-        <Link className="rb-gbar-btn rb-gbar-searchlink" data-figma="global-search" to="/search">
-          <Icon name="search" />
-          <span className="sr-only">{t.GlobalBar_searchLabel}</span>
-        </Link>
+        <IconButton to="/search" icon="search" label={t.GlobalBar_searchLabel} size="medium" className="rb-gbar-searchlink" data-figma="global-search" />
         <div className="rb-gbar-right">
           {signedIn ? (
             <>
-              <Link className="rb-gbar-btn rb-gbar-icon" to="/notifications" title={t.TabBar_alerts}>
-                <Icon name="bell" />
-                <span className="sr-only">{t.TabBar_alerts}</span>
-              </Link>
-              <Link className="rb-gbar-btn rb-gbar-icon" to="/projects/new" title={t.GlobalBar_create}>
-                <Icon name="plus" />
-                <span className="sr-only">{t.GlobalBar_create}</span>
-              </Link>
+              <IconButton to="/notifications" icon="bell" label={t.TabBar_alerts} size="medium" title={t.TabBar_alerts} />
+              <IconButton to="/projects/new" icon="plus" label={t.GlobalBar_create} size="medium" title={t.GlobalBar_create} />
               <AccountMenu mode={mode} setMode={setMode} />
             </>
           ) : (
@@ -148,7 +131,7 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true }) {
 /** 게스트도 화면 설정을 바꿀 수 있다(로그인 전용 버그 고침). */
 function ScreenModeMenu({ mode, setMode }) {
   return (
-    <Menu label={t.Header_6} className="rb-gbar-drop" align="right" toggle={false} btnClass="rb-gbar-btn rb-gbar-icon" btnProps={{ title: t.Header_6 }} button={<Icon name="setting" />}>
+    <Menu label={t.Header_6} className="rb-gbar-drop" align="right" toggle={false} btnClass={iconBtnClass('medium')} btnProps={{ title: t.Header_6 }} button={<Icon name="setting" />}>
       <ScreenModeItems mode={mode} setMode={setMode} />
     </Menu>
   );
@@ -157,7 +140,7 @@ function ScreenModeMenu({ mode, setMode }) {
 /** 로그인 뒤 내 계정 메뉴. 화면 설정도 이 안에 둔다(Figma R-01 Signed-in). */
 function AccountMenu({ mode, setMode }) {
   return (
-    <Menu label={t.GlobalBar_account} className="rb-gbar-drop" align="right" toggle={false} btnClass="rb-gbar-btn rb-gbar-icon" btnProps={{ title: t.GlobalBar_account }} button={<Icon name="my" />}>
+    <Menu label={t.GlobalBar_account} className="rb-gbar-drop" align="right" toggle={false} btnClass={iconBtnClass('medium')} btnProps={{ title: t.GlobalBar_account }} button={<Icon name="my" />}>
       {(close) => (
         <>
           <div className="rb-menu-group">

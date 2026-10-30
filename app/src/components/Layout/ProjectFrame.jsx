@@ -1,4 +1,5 @@
 // 프로젝트 안 공통 머리: 브레드크럼, 이름, 기관, 탭. 프로젝트 자료를 한 번 불러와 하위 화면에 넘긴다.
+import { iconBtnClass } from '../Action/IconButton';
 import { newWindow } from './newWindow';
 import { t } from '../../copy/ko';
 import { useState } from 'react';
@@ -75,7 +76,7 @@ function RepoHeader({ project, id }) {
               <span className="rb-subtle">{project.forks_count}</span>
             </a>
           ) : null}
-          <Drop label={t.Home_more} btnClass="krds-btn small tertiary" toggle={false} button={<Icon name="ellipsis_horizontal" />}>
+          <Drop label={t.Home_more} btnClass={iconBtnClass('small', 'is-bordered')} toggle={false} button={<Icon name="ellipsis_horizontal" />}>
             {(close) => (
               <ul className="drop-list">
                 <li><a className="item-link" href={project.web_url} {...newWindow(t.Home_openOrigin)} onClick={close}>{t.Home_openOrigin}</a></li>

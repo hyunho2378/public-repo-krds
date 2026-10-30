@@ -1,4 +1,5 @@
 // Figma: Repo/Toolbar, Repo/CommitBar, Repo/FileTable, Repo/Readme, Repo/About. GitHub와 GitLab 저장소 첫 화면 배치(D-04 개정).
+import { IconButton } from '../Action/IconButton';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { t } from '../../copy/ko';
@@ -118,9 +119,7 @@ export function CommitBar({ id, commit, count, more, path, owner }) {
       </span>
       <p className="rb-commit-meta krds-text-body-xsmall rb-subtle">
         <code>{commit.short_id}</code>
-        <button type="button" className="krds-btn xsmall text rb-icon-btn" onClick={() => copy(commit.id)}>
-          <Icon name="copy" /><span className="sr-only">{t.Home_copySha}</span>
-        </button>
+        <IconButton icon="copy" label={t.Home_copySha} size="small" onClick={() => copy(commit.id)} />
         <Link className="krds-btn small tertiary rb-commit-count" to={`/projects/${id}/changes${path ? `?path=${enc(path)}` : ''}`}>
           {t.Home_history}
         </Link>

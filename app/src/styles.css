@@ -405,3 +405,17 @@ html[data-krds-mode="dark"] {
   --krds-dark-color-surface-secondary-subtler: var(--krds-color-high-contrast-gray-90);
   --krds-color-surface-secondary-subtler: var(--krds-color-high-contrast-gray-90);
 }
+
+/* 아이콘 단독 버튼(IconButton): 크기는 짝수 두 가지(32, 40), 아이콘 20/24는 display block, 안쪽 여백과 줄 높이 0이라 아이콘이 버튼 한가운데에 온다.
+   호버와 눌림은 회색 면(청록 금지), 초점은 바깥 outline만 */
+#root .rb-iconbtn, .rb-iconbtn { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 0; line-height: 0; min-width: 0; min-height: 0; flex: none; background: none; border: var(--krds-border-width-static-regular) solid transparent; border-radius: var(--krds-radius-medium2); color: var(--krds-color-text-basic); cursor: pointer; text-decoration: none; }
+#root .rb-iconbtn.is-small { width: var(--krds-number-12); height: var(--krds-number-12); }
+#root .rb-iconbtn.is-medium { width: var(--krds-number-14); height: var(--krds-number-14); }
+.rb-iconbtn .rb-icon { display: block; flex: none; }
+.rb-iconbtn.is-small .rb-icon { width: var(--krds-number-9); height: var(--krds-number-9); }
+.rb-iconbtn.is-medium .rb-icon { width: var(--krds-number-10); height: var(--krds-number-10); }
+.rb-iconbtn.is-bordered { border-color: var(--krds-color-border-gray); }
+#root .rb-iconbtn:hover { background: var(--krds-color-surface-gray-subtle); }
+#root .rb-iconbtn:active { background: var(--krds-color-border-gray-light); }
+#root .rb-iconbtn:focus-visible { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); outline-offset: var(--krds-number-2); background: none; }
+.rb-dock-close { margin-inline-end: calc(var(--krds-number-3) * -1); }

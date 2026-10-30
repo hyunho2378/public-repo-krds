@@ -1,5 +1,6 @@
 // R-30 따라 하기. README에 실제로 적힌 명령만 단계로 만든다.
 // 명령을 지어내지 않는다. 단계마다 README 몇 행에서 가져왔는지 밝힌다.
+import { IconButton } from '../Action/IconButton';
 import { useState } from 'react';
 import { t } from '../../copy/ko';
 import { readmeCommands } from './Readme';
@@ -32,14 +33,7 @@ export function buildSteps(readme, cloneUrl) {
 function Copy({ value }) {
   const [done, setDone] = useState(false);
   return (
-    <button
-      type="button"
-      className="rb-run-copy"
-      onClick={async () => { await navigator.clipboard.writeText(value); setDone(true); }}
-    >
-      <Icon name="copy" />
-      <span className="sr-only">{done ? t.P16_copied : t.P16_copy}</span>
-    </button>
+    <IconButton icon="copy" label={done ? t.P16_copied : t.P16_copy} size="small" className="rb-run-copy" onClick={async () => { await navigator.clipboard.writeText(value); setDone(true); }} />
   );
 }
 

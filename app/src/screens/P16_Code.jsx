@@ -1,5 +1,6 @@
 // P-16 저장소 첫 화면과 코드 둘러보기(D-04 개정: 공공 깃랩 + GitHub 배치, KRDS 부품).
 // 왼쪽 프로젝트 메뉴(ProjectFrame), 파일 트리 패널, 본문(도구 줄, 마지막 변경, 파일 표, README), 오른쪽 정보와 판단 정보.
+import { IconButton } from '../components/Action/IconButton';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { atLeast, useAuth } from '../components/Identity/useAuth';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
@@ -37,9 +38,7 @@ function PathCrumbs({ id, path, refQuery }) {
         </ol>
       </nav>
       {path ? (
-        <button type="button" className="krds-btn xsmall text rb-icon-btn" onClick={() => { navigator.clipboard.writeText(path); setCopied(true); }}>
-          <Icon name="copy" /><span className="sr-only">{t.P16_cloneCopy.replace('가져오기 주소(clone)', t.P16_path)}</span>
-        </button>
+        <IconButton icon="copy" label={u.Path_copy} size="small" onClick={() => { navigator.clipboard.writeText(path); setCopied(true); }} />
       ) : null}
       <span className="sr-only" role="status" aria-live="polite">{copied ? t.Home_copied : ''}</span>
     </div>

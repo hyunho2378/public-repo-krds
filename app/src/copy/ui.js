@@ -73,4 +73,5 @@ export const u = {
   Fold_more: "더보기",
   Fold_less: "접기",
   Dock_allUsage: "사용 방법 전체 보기",
+  Path_copy: "경로 복사",
 };
