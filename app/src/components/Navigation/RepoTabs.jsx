@@ -42,9 +42,9 @@ export function RepoTabs({ id, nav }) {
   const manage = signedIn && atLeast(role, 'developer');
   const TABS = [
     { to: p, label: t.Tab_code, icon: 'document', match: (s) => s === p || under(s, p, ['/code', '/changes', '/branches', '/tags', '/releases', '/compare', '/snippets']) },
-    { to: p + '/issues', label: t.Side_issues, tip: u.Tip_issues, icon: 'guide_check', count: nav?.issues, match: (s) => under(s, p, ['/issues']) },
-    { to: p + '/merge-requests', label: t.RepoSub_mr, tip: u.Tip_mr, icon: 'edit', match: (s) => under(s, p, ['/merge-requests']) },
-    { to: p + '/pipelines', label: t.P22_pipelines, icon: 'component', match: (s) => under(s, p, ['/pipelines', '/jobs']) },
+    { to: p + '/issues', label: t.Side_issues, tip: u.Tip_issues, icon: 'ext/issues', count: nav?.issues, match: (s) => under(s, p, ['/issues']) },
+    { to: p + '/merge-requests', label: t.RepoSub_mr, tip: u.Tip_mr, icon: 'ext/merge-request', match: (s) => under(s, p, ['/merge-requests']) },
+    { to: p + '/pipelines', label: t.P22_pipelines, icon: 'ext/pipeline', match: (s) => under(s, p, ['/pipelines', '/jobs']) },
     { to: p + '/wiki', label: t.P22_wiki, icon: 'document_fill', match: (s) => under(s, p, ['/wiki']) },
     { to: p + '/graph', label: t.Side_analyze, icon: 'analytics', match: (s) => under(s, p, ['/graph', '/contributors', '/law-alerts', '/handover']) },
     ...(manage ? [{ to: p + '/settings', label: t.PSet_title, icon: 'setting', match: (s) => under(s, p, ['/settings']) }] : []),

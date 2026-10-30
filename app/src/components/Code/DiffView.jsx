@@ -134,7 +134,7 @@ function TreeNode({ node }) {
       {[...node.dirs.entries()].map(([name, child]) => (
         <li key={name}>
           <details open>
-            <summary className="rb-dtree-dir"><Icon name="folder" /><span className="rb-break-any">{name}</span></summary>
+            <summary className="rb-dtree-dir"><Icon name="ext/folder" /><span className="rb-break-any">{name}</span></summary>
             <TreeNode node={child} />
           </details>
         </li>

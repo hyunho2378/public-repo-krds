@@ -50,3 +50,6 @@
 - 검색칸 240~640 flex, 경로(만든 사람 최대 320 말줄임, 저장소 이름 전체) 간격 24, 1023 이하 경로는 머리글 아래 한 줄. 다크 secondary 변수 회색화, teal-inspect.js, audit 청록 검사, check-dock-click.mjs
 
 [oJyp 종료] 마지막 커밋 78515bb. 남은 일: 정보 버튼 첫 클릭은 로컬에서 재현 안 됨(저장값 1이면 열린 채 로드라 첫 클릭이 닫기), scripts/check-dock-click.mjs로 시험; playwright 판 스크립트(check-fluid/menus/left-edges/icon-buttons/dock-click)는 샌드박스에서 못 돌려 Aside 브라우저로 같은 검사 함수 실행; 라이브(Pages) 반영 확인 필요; D-21 구조 이식은 새 작업자.
+
+### 21. D-21 시작: 공공 깃랩 대조표, 확장 아이콘
+- UX/13 대조표 초안(전역 틀, 탐색 목록, 프로젝트 홈, 아이콘 점검). 확장 아이콘 app/public/icons/ext(Pajamas MIT 모양을 KRDS 24 격자 선 1.6으로, 12개), KRDS globe/ellipsis_vertical/panel/sys mark 복사, share/time/edit/upload/component/scrap 돌려쓰기 정리

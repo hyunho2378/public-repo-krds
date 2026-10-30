@@ -150,7 +150,7 @@ export function FileTable({ id, path, items, log, pending, filter, refQuery }) {
           {path ? (
             <tr>
               <td colSpan={3}>
-                <Link className="rb-tree-name" to={`/projects/${id}${up ? '/code/' + up : ''}${refQuery}`}><Icon name="folder" /><span>{t.P16_up}</span></Link>
+                <Link className="rb-tree-name" to={`/projects/${id}${up ? '/code/' + up : ''}${refQuery}`}><Icon name="ext/folder" /><span>{t.P16_up}</span></Link>
               </td>
             </tr>
           ) : null}
@@ -161,7 +161,7 @@ export function FileTable({ id, path, items, log, pending, filter, refQuery }) {
               <tr key={f.path}>
                 <td>
                   <Link className="rb-tree-name" to={`/projects/${id}/code/${f.path}${refQuery}`}>
-                    <Icon name={f.type === 'tree' ? 'folder' : 'document'} label={f.type === 'tree' ? t.P16_folder : t.P16_file} />
+                    <Icon name={f.type === 'tree' ? 'ext/folder' : 'ext/file'} label={f.type === 'tree' ? t.P16_folder : t.P16_file} />
                     <span className="rb-ellipsis rb-break-any">{f.name}</span>
                   </Link>
                   <span className="rb-tree-mobile krds-text-body-xsmall rb-subtle">
@@ -244,12 +244,12 @@ export function About({ id, project, readme, languages, stats, summary }) {
         </div>
       ) : null}
       <ul className="rb-about-links krds-text-body-small">
-        {stats.commits === undefined ? <li><Icon name="time" /><Skeleton widths={['50%']} inline /></li> : stats.commits === null ? null : (
-          <li><Icon name="time" /><Link className="krds-link" to={`/projects/${id}/changes`}>{stats.sample ? t.fn.nCommitsSample(stats.commits) : t.fn.nCommits(stats.commits, stats.more)}</Link></li>
+        {stats.commits === undefined ? <li><Icon name="ext/commit" /><Skeleton widths={['50%']} inline /></li> : stats.commits === null ? null : (
+          <li><Icon name="ext/commit" /><Link className="krds-link" to={`/projects/${id}/changes`}>{stats.sample ? t.fn.nCommitsSample(stats.commits) : t.fn.nCommits(stats.commits, stats.more)}</Link></li>
         )}
-        {stats.branches != null ? <li><Icon name="share" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nBranches(stats.branches)}</Link></li> : null}
-        {stats.tags != null ? <li><Icon name="scrap" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nTags(stats.tags)}</Link></li> : null}
-        {stats.releases != null ? <li><Icon name="upload" /><Link className="krds-link" to={`/projects/${id}/releases`}>{t.fn.nReleases(stats.releases)}</Link></li> : null}
+        {stats.branches != null ? <li><Icon name="ext/branch" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nBranches(stats.branches)}</Link></li> : null}
+        {stats.tags != null ? <li><Icon name="ext/tag" /><Link className="krds-link" to={`/projects/${id}/tags`}>{t.fn.nTags(stats.tags)}</Link></li> : null}
+        {stats.releases != null ? <li><Icon name="ext/rocket" /><Link className="krds-link" to={`/projects/${id}/releases`}>{t.fn.nReleases(stats.releases)}</Link></li> : null}
       </ul>
 
     </section>
@@ -260,12 +260,12 @@ export function RepoMenuList({ id }) {
   const items = [
     ['document-check', t.ProjectTabs_1, `/projects/${id}/about`],
     ['guide_check', t.ProjectTabs_2, `/projects/${id}/use`],
-    ['time', t.ProjectTabs_4, `/projects/${id}/changes`],
+    ['ext/commit', t.ProjectTabs_4, `/projects/${id}/changes`],
     ['inquiry', t.ProjectTabs_5, `/projects/${id}/feedback`],
     ['round_check', t.Side_issues, `/projects/${id}/issues`],
-    ['edit', t.RepoSub_mr, `/projects/${id}/merge-requests`],
-    ['share', t.RepoSub_branches, `/projects/${id}/branches`],
-    ['upload', t.RepoSub_releases, `/projects/${id}/releases`],
+    ['ext/merge-request', t.RepoSub_mr, `/projects/${id}/merge-requests`],
+    ['ext/branch', t.RepoSub_branches, `/projects/${id}/branches`],
+    ['ext/rocket', t.RepoSub_releases, `/projects/${id}/releases`],
     ['myinfo', t.RepoSub_people, `/projects/${id}/contributors`],
   ];
   return (
