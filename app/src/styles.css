@@ -142,3 +142,13 @@ html[data-krds-mode="dark"] {
 .krds-structured-list .structured-item .c-txt { font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); }
 .krds-structured-list.type-full .structured-item > .in { padding-block: 0; }
 .krds-structured-list .structured-item .card-body .c-text { gap: var(--krds-gap-1); }
+
+/* 링크: KRDS 링크색(text/primary). 밑줄은 글 속 링크(README)와 마우스를 올릴 때 */
+a.krds-link, .krds-link { color: var(--krds-color-text-primary); text-decoration: none; }
+a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
+
+/* 체크박스와 라디오 이름은 15(KRDS 기본은 17이라 한 화면 글자 단계가 늘어난다). KRDS 부품 변수를 앱 층에서 body/small로 낮춘다 */
+.krds-form-check {
+  --krds-form-check--pc-font-size-medium: var(--krds-font-size-body-small);
+  --krds-form-check--mobile-font-size-medium: var(--krds-font-size-body-small);
+}

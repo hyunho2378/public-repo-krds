@@ -35,7 +35,7 @@ export default function Files() {
       <h2 className="krds-text-body-small-bold">{t.P05_6}</h2>
       {readme ? <Readme source={readme} /> : <EmptyState title={t.P05_8}>{t.P05_7}</EmptyState>}
       <details className="krds-disclosure rb-dev">
-        <summary className="krds-btn medium text">{t.P05_9}</summary>
+        <summary className="krds-btn small text">{t.P05_9}</summary>
         <dl className="rb-stack">
           <div><dt className="krds-text-body-small-bold">{t.P05_10}</dt><dd><code>{project.http_url_to_repo}</code></dd></div>
           <div><dt className="krds-text-body-small-bold">{t.P05_11}</dt><dd>{project.default_branch || t.P05_12}</dd></div>

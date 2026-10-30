@@ -112,13 +112,13 @@ export function MergeRequest() {
           )}
           {signedIn && atLeast(role, 'developer') && m.state === 'opened' ? (
             <div className="rb-write-actions">
-              <button type="button" className="krds-btn medium tertiary" onClick={() => setNotice(true)}>{t.P20_close}</button>
-              <button type="button" className="krds-btn medium primary" onClick={() => setNotice(true)}>{t.P20_merge}</button>
+              <button type="button" className="krds-btn small tertiary" onClick={() => setNotice(true)}>{t.P20_close}</button>
+              <button type="button" className="krds-btn small primary" onClick={() => setNotice(true)}>{t.P20_merge}</button>
             </div>
           ) : null}
           {signedIn && atLeast(role, 'developer') && m.state === 'closed' ? (
             <div className="rb-write-actions">
-              <button type="button" className="krds-btn medium tertiary" onClick={() => setNotice(true)}>{t.P20_reopen}</button>
+              <button type="button" className="krds-btn small tertiary" onClick={() => setNotice(true)}>{t.P20_reopen}</button>
             </div>
           ) : null}
           {notice ? (
@@ -127,7 +127,7 @@ export function MergeRequest() {
                 <h2 id="mr-notice" className="krds-text-body-small-bold">{t.Write_cannotTitle}</h2>
                 <p className="krds-text-body-small">{t.Write_cannotStatic}</p>
                 <div className="rb-modal-actions">
-                  <button type="button" className="krds-btn medium primary" onClick={() => setNotice(false)}>{t.Commit_cancel}</button>
+                  <button type="button" className="krds-btn small primary" onClick={() => setNotice(false)}>{t.Commit_cancel}</button>
                 </div>
               </div>
             </div>

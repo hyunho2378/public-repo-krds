@@ -101,7 +101,7 @@ export default function Compare() {
             ) : null}
             {diffs.length ? <DiffView files={diffs} /> : <EmptyState title={t.Compare_noDiff} />}
             <div className="rb-write-actions">
-              <Link className="krds-btn medium primary" to={`/projects/${id}/merge-requests/new?source=${encodeURIComponent(to)}`}>{t.Compare_propose}</Link>
+              <Link className="krds-btn small primary" to={`/projects/${id}/merge-requests/new?source=${encodeURIComponent(to)}`}>{t.Compare_propose}</Link>
             </div>
           </>
         )}

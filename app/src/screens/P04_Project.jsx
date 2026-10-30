@@ -54,7 +54,7 @@ export default function Project() {
           </div>
           <h2 className="krds-text-body-small-bold">{t.P04_22}</h2>
           {readme ? (
-            <Readme source={readme} />
+            <Readme source={readme} base={{ id, rawBase: `${project.web_url}/-/raw/${project.default_branch || 'main'}/` }} />
           ) : (
             <EmptyState
               title={t.P04_23}

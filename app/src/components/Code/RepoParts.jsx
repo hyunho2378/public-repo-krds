@@ -67,7 +67,7 @@ export function CodeMenu({ id, zipUrl, cloneUrl }) {
   const [note, copy] = useCopy();
   return (
     <>
-      <Drop label={t.Home_code} btnClass="krds-btn medium primary" button={<><span className="rb-drop-full">{t.Home_code}</span><span className="rb-drop-compact"><Icon name="download" /><span className="sr-only">{t.Home_code}</span></span></>}>
+      <Drop label={t.Home_code} btnClass="krds-btn small primary" button={<><span className="rb-drop-full">{t.Home_code}</span><span className="rb-drop-compact"><Icon name="download" /><span className="sr-only">{t.Home_code}</span></span></>}>
         {(close) => (
           <ul className="drop-list">
             <li><a className="item-link" href={zipUrl}><Icon name="download" /> {t.Home_zip}</a></li>
@@ -189,7 +189,7 @@ function headings(md) {
   return (md || '').split('\n').map((l) => /^(#{1,3})\s+(.+)/.exec(l)).filter(Boolean).map((m) => ({ level: m[1].length, text: m[2].replace(/[*`]/g, '').trim() }));
 }
 
-export function ReadmeBox({ source }) {
+export function ReadmeBox({ source, base }) {
   const [toc, setToc] = useState(false);
   const box = useRef(null);
   const list = headings(source);
@@ -218,7 +218,7 @@ export function ReadmeBox({ source }) {
           </ul>
         </nav>
       ) : null}
-      <div className="rb-readme-body"><Readme source={source} /></div>
+      <div className="rb-readme-body"><Readme source={source} base={base} /></div>
     </section>
   );
 }

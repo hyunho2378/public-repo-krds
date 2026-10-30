@@ -233,7 +233,7 @@ export default function Code() {
                 <FileTable id={frame.id} path={path} items={b.items} log={rowLog.log} pending={rowLog.pending} filter={filter} refQuery={refQuery} />
               </div>
               {b.partial ? <p className="krds-text-body-xsmall rb-subtle">{t.P16_partial}</p> : null}
-              {isHome && readme ? <div id="readme"><ReadmeBox source={readme} /></div> : null}
+              {isHome && readme ? <div id="readme"><ReadmeBox source={readme} base={{ id: frame.id, rawBase: `${project.web_url}/-/raw/${project.default_branch || ref}/` }} /></div> : null}
             </>
           ) : (
             <EmptyState title={t.P16_emptyRepo}>{t.P16_emptyRepoHelp}</EmptyState>

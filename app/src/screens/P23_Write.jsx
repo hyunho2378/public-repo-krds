@@ -22,8 +22,8 @@ function Result({ kind, onClose }) {
         <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
         <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeKind(t[`Write_kind_${kind}`])}</p>
         <div className="rb-modal-actions">
-          <button type="button" className="krds-btn medium tertiary" onClick={onClose}>{t.Commit_cancel}</button>
-          {!isStatic ? <Link className="krds-btn medium primary" to={`/login?returnTo=${encodeURIComponent(window.location.pathname)}`}>{t.Header_login}</Link> : null}
+          <button type="button" className="krds-btn small tertiary" onClick={onClose}>{t.Commit_cancel}</button>
+          {!isStatic ? <Link className="krds-btn small primary" to={`/login?returnTo=${encodeURIComponent(window.location.pathname)}`}>{t.Header_login}</Link> : null}
         </div>
       </div>
     </div>
@@ -151,8 +151,8 @@ export default function Write({ mode }) {
         ) : null}
 
         <div className="rb-write-actions">
-          <button type="button" className="krds-btn medium tertiary" onClick={() => navigate(-1)}>{t.Commit_cancel}</button>
-          <button type="button" className="krds-btn medium primary" disabled={!canCommit} onClick={() => setCommitOpen(true)}>
+          <button type="button" className="krds-btn small tertiary" onClick={() => navigate(-1)}>{t.Commit_cancel}</button>
+          <button type="button" className="krds-btn small primary" disabled={!canCommit} onClick={() => setCommitOpen(true)}>
             {mode === 'branch' ? t.Write_createBranch : t.Commit_open}
           </button>
         </div>

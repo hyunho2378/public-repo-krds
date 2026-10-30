@@ -5,5 +5,8 @@ export const u = {
   Font_large: "크게",
   Login_noticeTitle: "공지",
   Login_noticeLink: "등록 안내",
+  Md_copy: "복사",
+  Md_copied: "복사함",
+  Md_anchor: "제목 링크",
   Task_placeholder: "업무로 도구 찾기, 예: 출장비 계산, 회의록 정리",
 };

@@ -157,7 +157,7 @@ export function Handover() {
           <p className="krds-text-body-xsmall rb-subtle">{t.Handover_hint}</p>
         </div>
         <div className="rb-write-actions">
-          <button type="button" className="krds-btn medium primary" onClick={make} disabled={state === 'loading'}>
+          <button type="button" className="krds-btn small primary" onClick={make} disabled={state === 'loading'}>
             {state === 'loading' ? t.Handover_making : t.Handover_make}
           </button>
         </div>

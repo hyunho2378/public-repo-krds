@@ -1,7 +1,7 @@
 // Figma: KRDS dropdown(krds-drop-wrap). 바깥 누름, Esc로 닫힘. 열림 상태 aria-expanded.
 import { useEffect, useRef, useState } from 'react';
 
-export function Drop({ button, className = '', btnClass = 'krds-btn medium tertiary', label, children, align = 'right' }) {
+export function Drop({ button, className = '', btnClass = 'krds-btn small tertiary', label, children, align = 'right' }) {
   const [open, setOpen] = useState(false);
   const wrap = useRef(null);
   useEffect(() => {

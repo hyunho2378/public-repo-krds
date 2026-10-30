@@ -100,8 +100,8 @@ export default function NewProject() {
         <p id="np-readme-hint" className="rb-side-hint">{t.NewProject_readmeHint}</p>
 
         <div className="rb-write-actions">
-          <Link className="krds-btn medium tertiary" to="/">{t.Commit_cancel}</Link>
-          <button type="button" className="krds-btn medium primary" disabled={!name.trim() || !path.trim()} onClick={() => setDone(true)}>{t.NewProject_create}</button>
+          <Link className="krds-btn small tertiary" to="/">{t.Commit_cancel}</Link>
+          <button type="button" className="krds-btn small primary" disabled={!name.trim() || !path.trim()} onClick={() => setDone(true)}>{t.NewProject_create}</button>
         </div>
         <p className="krds-text-body-xsmall rb-subtle">
           <Link className="krds-link" to="/publish">{t.NewProject_toPublish}</Link>
@@ -115,8 +115,8 @@ export default function NewProject() {
             <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
             <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeKind(t.NewProject_title)}</p>
             <div className="rb-modal-actions">
-              <button type="button" className="krds-btn medium tertiary" onClick={() => setDone(false)}>{t.Commit_cancel}</button>
-              {!isStatic ? <Link className="krds-btn medium primary" to="/login?returnTo=%2Fprojects%2Fnew">{t.Header_login}</Link> : null}
+              <button type="button" className="krds-btn small tertiary" onClick={() => setDone(false)}>{t.Commit_cancel}</button>
+              {!isStatic ? <Link className="krds-btn small primary" to="/login?returnTo=%2Fprojects%2Fnew">{t.Header_login}</Link> : null}
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ export default function Jobs() {
         {needsLogin ? (
           <EmptyState
             title={t.P22_loginNeeded}
-            action={<Link className="krds-btn medium primary" to={`/login?returnTo=${encodeURIComponent(`/projects/${id}/jobs`)}`}>{t.Header_login}</Link>}
+            action={<Link className="krds-btn small primary" to={`/login?returnTo=${encodeURIComponent(`/projects/${id}/jobs`)}`}>{t.Header_login}</Link>}
           />
         ) : !list ? (
           <Status {...body} />

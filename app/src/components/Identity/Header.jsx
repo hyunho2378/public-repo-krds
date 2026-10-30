@@ -100,7 +100,7 @@ function MobileNav({ open, onClose, mode, setMode }) {
             <ScreenModeOptions name="mode-menu" mode={mode} setMode={setMode} />
           </div>
         </div>
-        <button type="button" className="krds-btn medium icon" id="close-nav" onClick={onClose}>
+        <button type="button" className="krds-btn small icon" id="close-nav" onClick={onClose}>
           <span className="sr-only">{t.Header_closeMenu}</span>
           <i className="svg-icon ico-popup-close" aria-hidden="true" />
         </button>

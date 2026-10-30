@@ -81,7 +81,7 @@ export default function Changes() {
                 </ul>
               </section>
             ))}
-            {next ? <button type="button" className="krds-btn medium tertiary" onClick={more}>{t.P06_more}</button> : null}
+            {next ? <button type="button" className="krds-btn small tertiary" onClick={more}>{t.P06_more}</button> : null}
           </div>
         )}
       </div>

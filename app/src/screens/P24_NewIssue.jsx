@@ -69,8 +69,8 @@ function Result({ kind, onClose }) {
         <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
         <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeKind(kind)}</p>
         <div className="rb-modal-actions">
-          <button type="button" className="krds-btn medium tertiary" onClick={onClose}>{t.Commit_cancel}</button>
-          {!isStatic ? <Link className="krds-btn medium primary" to={`/login?returnTo=${encodeURIComponent(window.location.pathname)}`}>{t.Header_login}</Link> : null}
+          <button type="button" className="krds-btn small tertiary" onClick={onClose}>{t.Commit_cancel}</button>
+          {!isStatic ? <Link className="krds-btn small primary" to={`/login?returnTo=${encodeURIComponent(window.location.pathname)}`}>{t.Header_login}</Link> : null}
         </div>
       </div>
     </div>
@@ -160,8 +160,8 @@ export default function NewIssue({ kind = 'issue' }) {
         <MarkdownField id="issue-body" label={t.Issue_bodyLabel} value={body} onChange={setBody} hint={t.Issue_bodyHint} />
 
         <div className="rb-write-actions">
-          <Link className="krds-btn medium tertiary" to={`/projects/${id}/${kind === 'merge' ? 'merge-requests' : 'issues'}`}>{t.Commit_cancel}</Link>
-          <button type="button" className="krds-btn medium primary" disabled={!title.trim()} onClick={() => setDone(true)}>
+          <Link className="krds-btn small tertiary" to={`/projects/${id}/${kind === 'merge' ? 'merge-requests' : 'issues'}`}>{t.Commit_cancel}</Link>
+          <button type="button" className="krds-btn small primary" disabled={!title.trim()} onClick={() => setDone(true)}>
             {kind === 'merge' ? t.Issue_submitMerge : t.Issue_submitIssue}
           </button>
         </div>

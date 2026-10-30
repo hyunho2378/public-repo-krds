@@ -77,10 +77,10 @@ export function CommitDialog({ open, onClose, defaultMessage, branch, onSubmit, 
           ) : null}
         </fieldset>
         <div className="rb-modal-actions">
-          <button type="button" className="krds-btn medium tertiary" onClick={onClose}>{t.Commit_cancel}</button>
+          <button type="button" className="krds-btn small tertiary" onClick={onClose}>{t.Commit_cancel}</button>
           <button
             type="button"
-            className="krds-btn medium primary"
+            className="krds-btn small primary"
             disabled={!message.trim() || (target === 'branch' && !newBranch.trim())}
             onClick={() => onSubmit({ message, detail, target, newBranch })}
           >

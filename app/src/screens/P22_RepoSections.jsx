@@ -105,7 +105,7 @@ export default function RepoSections({ section }) {
           <p className="krds-text-body-xsmall rb-subtle">{conf.hint()}</p>
         </div>
         {needsLogin ? (
-          <EmptyState title={t.P22_loginNeeded} action={<Link className="krds-btn medium primary" to={`/login?returnTo=${encodeURIComponent(`/projects/${id}/${section}`)}`}>{t.Header_login}</Link>} />
+          <EmptyState title={t.P22_loginNeeded} action={<Link className="krds-btn small primary" to={`/login?returnTo=${encodeURIComponent(`/projects/${id}/${section}`)}`}>{t.Header_login}</Link>} />
         ) : !list ? (
           <Status {...body} />
         ) : list.length ? (

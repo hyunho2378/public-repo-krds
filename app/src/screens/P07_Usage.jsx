@@ -78,7 +78,7 @@ export default function Usage() {
         </EmptyState>
       )}
       <div className="rb-actions">
-        <a className="krds-btn medium primary" href={project.web_url} target="_blank" rel="noreferrer">{t.P07_18}<span className="sr-only"> {t.Footer_3}</span></a>
+        <a className="krds-btn small primary" href={project.web_url} target="_blank" rel="noreferrer">{t.P07_18}<span className="sr-only"> {t.Footer_3}</span></a>
         <LinkButton Type="tertiary" to={`/projects/${data.id}`}>{t.P07_7}</LinkButton>
       </div>
     </ProjectFrame>

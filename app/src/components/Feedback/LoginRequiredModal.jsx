@@ -56,10 +56,10 @@ export function LoginRequiredModal({ action, onClose }) {
             </div>
           </div>
           <div className="modal-btn btn-wrap">
-            <button type="button" className="krds-btn medium tertiary" onClick={onClose}>
+            <button type="button" className="krds-btn small tertiary" onClick={onClose}>
               {t.P15_12}
             </button>
-            <a className="krds-btn medium primary" href={auth.loginUrl(returnTo)}>
+            <a className="krds-btn small primary" href={auth.loginUrl(returnTo)}>
               {t.P10_2}
             </a>
           </div>

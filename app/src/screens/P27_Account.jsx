@@ -18,7 +18,7 @@ function NeedLogin({ title, path }) {
   return (
     <EmptyState
       title={isStatic ? t.Write_cannotStatic : t.fn.needLogin(title)}
-      action={!isStatic ? <Link className="krds-btn medium primary" to={`/login?returnTo=${encodeURIComponent(path)}`}>{t.Header_login}</Link> : null}
+      action={!isStatic ? <Link className="krds-btn small primary" to={`/login?returnTo=${encodeURIComponent(path)}`}>{t.Header_login}</Link> : null}
     />
   );
 }
@@ -154,7 +154,7 @@ export function Collaborate() {
         </div>
         <EmptyState
           title={t.Collab_none}
-          action={<Link className="krds-btn medium primary" to="/requests">{t.Collab_toRequests}</Link>}
+          action={<Link className="krds-btn small primary" to="/requests">{t.Collab_toRequests}</Link>}
         />
         <p className="krds-text-body-xsmall rb-subtle">{t.Collab_notice}</p>
       </div>
