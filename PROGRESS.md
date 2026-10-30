@@ -48,3 +48,5 @@
 
 ### 20. 머리글 경로/검색 폭 배분, 청록 면 제거(다크 변수), 정보 버튼 열림 표시
 - 검색칸 240~640 flex, 경로(만든 사람 최대 320 말줄임, 저장소 이름 전체) 간격 24, 1023 이하 경로는 머리글 아래 한 줄. 다크 secondary 변수 회색화, teal-inspect.js, audit 청록 검사, check-dock-click.mjs
+
+[oJyp 종료] 마지막 커밋 78515bb. 남은 일: 정보 버튼 첫 클릭은 로컬에서 재현 안 됨(저장값 1이면 열린 채 로드라 첫 클릭이 닫기), scripts/check-dock-click.mjs로 시험; playwright 판 스크립트(check-fluid/menus/left-edges/icon-buttons/dock-click)는 샌드박스에서 못 돌려 Aside 브라우저로 같은 검사 함수 실행; 라이브(Pages) 반영 확인 필요; D-21 구조 이식은 새 작업자.
