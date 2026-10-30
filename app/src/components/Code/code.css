@@ -131,8 +131,9 @@
 .rb-muted-link:hover, .rb-muted-link:focus-visible { color: var(--krds-color-text-primary); text-decoration: underline; }
 .rb-code-wrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--krds-gap-5); }
 .rb-filetree { display: none; }
+/* D-21(Figma R-02, R-03): 파일 트리는 1440 이상에서만 그린다(P16_Code가 --rb-bp-tree로 판단) */
 @media (min-width: 1024px) {
-  .rb-code-wrap.has-tree { grid-template-columns: 16em minmax(0, 1fr); }
+  .rb-code-wrap.has-tree { grid-template-columns: var(--rb-dtree-w) minmax(0, 1fr); }
   .rb-filetree { display: flex; flex-direction: column; gap: var(--krds-gap-3); position: sticky; top: var(--krds-gap-5); align-self: start; max-height: calc(100vh - var(--krds-gap-9)); overflow: auto; }
 }
 .rb-ft, .rb-ft ul { list-style: none; margin: 0; padding: 0; }

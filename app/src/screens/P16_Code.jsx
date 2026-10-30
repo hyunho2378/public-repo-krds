@@ -6,7 +6,7 @@ import { atLeast, useAuth } from '../components/Identity/useAuth';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { t } from '../copy/ko';
 import { u } from '../copy/ui';
-import { useBoolPref } from '../app/prefs';
+import { breakpoint, useBoolPref, useMinWidth } from '../app/prefs';
 import { gitlab, request } from '../api/client';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
@@ -158,6 +158,7 @@ export default function Code() {
   const shaRef = useRef(null);
   // D-18: 파일 트리는 열고 닫는 버튼과 B 단축키(GitHub와 같다). 선택은 기억한다
   const [treeOpen, setTreeOpen] = useBoolPref('rb-tree-open', true);
+  const treeWide = useMinWidth(breakpoint('--rb-bp-tree'));
   useEffect(() => {
     if (!path) return undefined;
     const onB = (e) => {
@@ -212,13 +213,13 @@ export default function Code() {
 
 
   return (
-    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} stats={{ commits: b?.count ?? 0, more: b?.more }} wide={!!path} hideCrumbs={!!path} title={isHome} info={isHome}>
-      <div className={`rb-code-wrap${path && treeOpen ? ' has-tree' : ''}`}>
-        {path && treeOpen ? <FileTreePanel id={frame.id} items={root} current={path} refQuery={refQuery} /> : null}
+    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} stats={{ commits: commitInfo.data?.count ?? b?.count ?? 0, more: commitInfo.data?.count != null ? false : b?.more }} wide={!!path} hideCrumbs={!!path} title={isHome} info={isHome}>
+      <div className={`rb-code-wrap${path && treeOpen && treeWide ? ' has-tree' : ''}`}>
+        {path && treeOpen && treeWide ? <FileTreePanel id={frame.id} items={root} current={path} refQuery={refQuery} /> : null}
         <div className="rb-code-area">
           <div className="rb-toolbar" data-figma="toolbar">
             <div className="rb-toolbar-left">
-              {path ? (
+              {path && treeWide ? (
                 <button type="button" className="krds-btn small tertiary" title={`${u.Tree_toggle} (B)`} aria-expanded={treeOpen} aria-keyshortcuts="B" onClick={() => setTreeOpen(!treeOpen)}>
                   <Icon name="view_all" />
                   <span>{u.Tree_toggle}</span>
