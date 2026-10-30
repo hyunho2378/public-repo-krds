@@ -133,6 +133,7 @@ html[data-krds-mode="dark"] {
 /* 도구 카드(GitHub 검색 결과 수준): 제목 15 굵게 링크, 밑줄은 마우스를 올릴 때만, 설명 한 줄 말줄임, 메타 13 한 줄, 위아래 12, 항목 사이 구분선 한 줄 */
 .krds-structured-list .card-body .c-text, .krds-structured-list .card-body .c-text:hover, .krds-structured-list .card-body .c-text:visited { text-decoration: none; }
 .krds-structured-list .card-body .c-text .c-tit { font-weight: var(--rb-fw-title); line-height: var(--rb-lh-15); text-decoration: none; }
+.krds-structured-list .card-body .c-text .c-tit, .krds-structured-list .card-body .c-text .c-tit .span, .krds-structured-list .card-body .c-text:visited .c-tit { text-decoration: none; }
 .krds-structured-list .card-body .c-text:hover .c-tit .span, .krds-structured-list .card-body .c-text:focus-visible .c-tit .span { text-decoration: underline; }
 .krds-structured-list .card-body .c-text .c-tit::after { display: none; }
 .krds-structured-list .structured-item { padding-block: var(--krds-padding-5); }
