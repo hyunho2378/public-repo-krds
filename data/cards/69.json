@@ -1,0 +1,179 @@
+{
+ "id": 69,
+ "name": "외부 고객 대상 설문조사 플랫폼",
+ "path": "dotori/survey-platform",
+ "webUrl": "https://gitlab.aigov.go.kr/dotori/survey-platform",
+ "topics": [
+  "govtech",
+  "k-ai-champion",
+  "utility"
+ ],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "requirements.txt"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    70
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-07-22T08:55:03.210+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "수영 김",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "Python",
+   "HTML",
+   "CSS",
+   "Python(requirements.txt)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "requirements.txt"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "구글폼처럼 쓰는 기관 자체 설문조사 시스템, 응답이 기관 밖으로 나가지 않는다",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "기관 설문조사 운영",
+   "evidence": {
+    "lines": [
+     3,
+     4
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "데이터·통계·분석",
+    "개발·보안·인프라"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     15
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": false
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:38:40.913Z",
+ "rulesAt": "2026-10-30T12:42:16.043Z",
+ "sourceDate": "2026-10-30"
+}

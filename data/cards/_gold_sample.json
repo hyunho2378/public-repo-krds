@@ -1,0 +1,464 @@
+{
+ "note": "M-01 정확도 측정 표본. 분야별 비례 추출, 고정 시드 20261030, README 있는 카드만. 분야 열은 표본 추출용 구분이며 정답이 아님. 정답은 팀이 UX/15 양식으로 채운다",
+ "size": 45,
+ "population": 45,
+ "perField": [
+  {
+   "field": "문서·보고서",
+   "population": 16,
+   "sampled": 18
+  },
+  {
+   "field": "생성형 AI·챗봇·검색",
+   "population": 7,
+   "sampled": 8
+  },
+  {
+   "field": "민원·복지·상담",
+   "population": 6,
+   "sampled": 7
+  },
+  {
+   "field": "데이터·통계·분석",
+   "population": 4,
+   "sampled": 5
+  },
+  {
+   "field": "회계·예산·출장",
+   "population": 4,
+   "sampled": 4
+  },
+  {
+   "field": "시설·안전·재난",
+   "population": 3,
+   "sampled": 3
+  },
+  {
+   "field": "법령·규제·감사",
+   "population": 2,
+   "sampled": 2
+  },
+  {
+   "field": "인사·교육",
+   "population": 1,
+   "sampled": 1
+  },
+  {
+   "field": "엑셀·사무 자동화",
+   "population": 1,
+   "sampled": 1
+  },
+  {
+   "field": "기타",
+   "population": 1,
+   "sampled": 1
+  }
+ ],
+ "sample": [
+  {
+   "id": 9,
+   "name": "AI 정부 실험실 프로젝트 대시보드",
+   "path": "AILab_Manager/ailabdashboard",
+   "webUrl": "https://gitlab.aigov.go.kr/AILab_Manager/ailabdashboard",
+   "field": "데이터·통계·분석",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 13,
+   "name": "기획예산처 예산 데이터 다운로드 자동화",
+   "path": "AILab_Manager/budget",
+   "webUrl": "https://gitlab.aigov.go.kr/AILab_Manager/budget",
+   "field": "회계·예산·출장",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 19,
+   "name": "모두의 민원콜",
+   "path": "inchangpark/modu-minwon-call",
+   "webUrl": "https://gitlab.aigov.go.kr/inchangpark/modu-minwon-call",
+   "field": "민원·복지·상담",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 22,
+   "name": "행안부 예산 자료저장소",
+   "path": "AILab_Manager/moisbudget",
+   "webUrl": "https://gitlab.aigov.go.kr/AILab_Manager/moisbudget",
+   "field": "회계·예산·출장",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 23,
+   "name": "쨍하고해뜰날",
+   "path": "lx/dongdongs",
+   "webUrl": "https://gitlab.aigov.go.kr/lx/dongdongs",
+   "field": "민원·복지·상담",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 26,
+   "name": "rekian-comwriter-library 한글문서 재기안 에이전트 스킬셋",
+   "path": "publicpeasant/rekian-comwriter-library",
+   "webUrl": "https://gitlab.aigov.go.kr/publicpeasant/rekian-comwriter-library",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 29,
+   "name": "나라예산 한눈에",
+   "path": "AILab_Manager/central_budget",
+   "webUrl": "https://gitlab.aigov.go.kr/AILab_Manager/central_budget",
+   "field": "회계·예산·출장",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 31,
+   "name": "기안문 자간 줄이기",
+   "path": "dreamingw/draft_web_for_1row",
+   "webUrl": "https://gitlab.aigov.go.kr/dreamingw/draft_web_for_1row",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 34,
+   "name": "NumberToKorean",
+   "path": "lovepc/duseo-money",
+   "webUrl": "https://gitlab.aigov.go.kr/lovepc/duseo-money",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 35,
+   "name": "GIS 위경도 좌표 에디터",
+   "path": "levis7251/gis_editor",
+   "webUrl": "https://gitlab.aigov.go.kr/levis7251/gis_editor",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 39,
+   "name": "2026년 공공 AI 역량강화 캘린더",
+   "path": "kimkimkimkim/2026-ai-training-calendar",
+   "webUrl": "https://gitlab.aigov.go.kr/kimkimkimkim/2026-ai-training-calendar",
+   "field": "데이터·통계·분석",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 40,
+   "name": "policy-radar",
+   "path": "k8soon/policy-radar",
+   "webUrl": "https://gitlab.aigov.go.kr/k8soon/policy-radar",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 44,
+   "name": "gongedu",
+   "path": "anms0214/gongedu",
+   "webUrl": "https://gitlab.aigov.go.kr/anms0214/gongedu",
+   "field": "인사·교육",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 46,
+   "name": "민원·부패·공익신고 등 분류 스크리너",
+   "path": "jinn/screener",
+   "webUrl": "https://gitlab.aigov.go.kr/jinn/screener",
+   "field": "민원·복지·상담",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 47,
+   "name": "어문 규범 조언 도구",
+   "path": "sophie_kim/korean-norm-advisor",
+   "webUrl": "https://gitlab.aigov.go.kr/sophie_kim/korean-norm-advisor",
+   "field": "민원·복지·상담",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 48,
+   "name": "test",
+   "path": "nugunadata1/test",
+   "webUrl": "https://gitlab.aigov.go.kr/nugunadata1/test",
+   "field": "시설·안전·재난",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 49,
+   "name": "로컬 AI 기반 개인정보 비식별화 프로그램",
+   "path": "Ubermensch/safeDoc",
+   "webUrl": "https://gitlab.aigov.go.kr/Ubermensch/safeDoc",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 50,
+   "name": "onnara-remaster",
+   "path": "ptlkiki/onnara-remaster",
+   "webUrl": "https://gitlab.aigov.go.kr/ptlkiki/onnara-remaster",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 52,
+   "name": "minslab",
+   "path": "acesharp/minslab",
+   "webUrl": "https://gitlab.aigov.go.kr/acesharp/minslab",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 53,
+   "name": "개인정보 비식별화 프로그램",
+   "path": "dksrlrhkd/safeDoc",
+   "webUrl": "https://gitlab.aigov.go.kr/dksrlrhkd/safeDoc",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 54,
+   "name": "서울시 업무추진비 대시보드",
+   "path": "suyoung.kang/seoul-expense",
+   "webUrl": "https://gitlab.aigov.go.kr/suyoung.kang/seoul-expense",
+   "field": "데이터·통계·분석",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 57,
+   "name": "살아있는 업무지침 - 벼리",
+   "path": "layer/byeori",
+   "webUrl": "https://gitlab.aigov.go.kr/layer/byeori",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 58,
+   "name": "마음챙김 일기장_소방관 PTSD 극복하기",
+   "path": "pro9dan/diary-for-everyone",
+   "webUrl": "https://gitlab.aigov.go.kr/pro9dan/diary-for-everyone",
+   "field": "시설·안전·재난",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 61,
+   "name": "korea100_MOIS",
+   "path": "hosung.seo/korea100_MOIS",
+   "webUrl": "https://gitlab.aigov.go.kr/hosung.seo/korea100_MOIS",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 63,
+   "name": "온AI Work Legacy",
+   "path": "wavelen/govwork",
+   "webUrl": "https://gitlab.aigov.go.kr/wavelen/govwork",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 64,
+   "name": "대체텍스트_생성기",
+   "path": "dreamingw/make_alt_text",
+   "webUrl": "https://gitlab.aigov.go.kr/dreamingw/make_alt_text",
+   "field": "데이터·통계·분석",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 67,
+   "name": "jeongyeol-finder",
+   "path": "hanjjaem/jeongyeol-finder",
+   "webUrl": "https://gitlab.aigov.go.kr/hanjjaem/jeongyeol-finder",
+   "field": "법령·규제·감사",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 68,
+   "name": "어썸 메일 머지",
+   "path": "levis7251/test",
+   "webUrl": "https://gitlab.aigov.go.kr/levis7251/test",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 69,
+   "name": "외부 고객 대상 설문조사 플랫폼",
+   "path": "dotori/survey-platform",
+   "webUrl": "https://gitlab.aigov.go.kr/dotori/survey-platform",
+   "field": "민원·복지·상담",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 91,
+   "name": "경남소방 언론보도 모니터링 위젯 ",
+   "path": "gusdn1129/4000firestation_press_monitor",
+   "webUrl": "https://gitlab.aigov.go.kr/gusdn1129/4000firestation_press_monitor",
+   "field": "시설·안전·재난",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 92,
+   "name": "gov-guide-kit",
+   "path": "anms0214/gov-guide-kit",
+   "webUrl": "https://gitlab.aigov.go.kr/anms0214/gov-guide-kit",
+   "field": "민원·복지·상담",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 149,
+   "name": "korean-law-mcp",
+   "path": "chrisryugj/korean-law-mcp",
+   "webUrl": "https://gitlab.aigov.go.kr/chrisryugj/korean-law-mcp",
+   "field": "생성형 AI·챗봇·검색",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 150,
+   "name": "kordoc",
+   "path": "chrisryugj/kordoc",
+   "webUrl": "https://gitlab.aigov.go.kr/chrisryugj/kordoc",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 151,
+   "name": "Docufinder",
+   "path": "chrisryugj/Docufinder",
+   "webUrl": "https://gitlab.aigov.go.kr/chrisryugj/Docufinder",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 152,
+   "name": "korean-dart-mcp",
+   "path": "chrisryugj/korean-dart-mcp",
+   "webUrl": "https://gitlab.aigov.go.kr/chrisryugj/korean-dart-mcp",
+   "field": "생성형 AI·챗봇·검색",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 153,
+   "name": "korean-stats-mcp",
+   "path": "chrisryugj/korean-stats-mcp",
+   "webUrl": "https://gitlab.aigov.go.kr/chrisryugj/korean-stats-mcp",
+   "field": "생성형 AI·챗봇·검색",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 154,
+   "name": "archhub-mcp",
+   "path": "chrisryugj/archhub-mcp",
+   "webUrl": "https://gitlab.aigov.go.kr/chrisryugj/archhub-mcp",
+   "field": "생성형 AI·챗봇·검색",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 155,
+   "name": "schoolinfo-mcp",
+   "path": "chrisryugj/schoolinfo-mcp",
+   "webUrl": "https://gitlab.aigov.go.kr/chrisryugj/schoolinfo-mcp",
+   "field": "생성형 AI·챗봇·검색",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 156,
+   "name": "korean-patent-mcp",
+   "path": "chrisryugj/korean-patent-mcp",
+   "webUrl": "https://gitlab.aigov.go.kr/chrisryugj/korean-patent-mcp",
+   "field": "생성형 AI·챗봇·검색",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 159,
+   "name": "lexdiff",
+   "path": "chrisryugj/lexdiff",
+   "webUrl": "https://gitlab.aigov.go.kr/chrisryugj/lexdiff",
+   "field": "법령·규제·감사",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 160,
+   "name": "ollama-mcp-host",
+   "path": "chrisryugj/ollama-mcp-host",
+   "webUrl": "https://gitlab.aigov.go.kr/chrisryugj/ollama-mcp-host",
+   "field": "생성형 AI·챗봇·검색",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 166,
+   "name": "성남시 페북 크롤링 자동화 SN-SNS-Solution",
+   "path": "sajw1994/sn-sns-solution",
+   "webUrl": "https://gitlab.aigov.go.kr/sajw1994/sn-sns-solution",
+   "field": "엑셀·사무 자동화",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 168,
+   "name": "What-I-have-to-do",
+   "path": "rhamasel3/What-I-have-to-do",
+   "webUrl": "https://gitlab.aigov.go.kr/rhamasel3/What-I-have-to-do",
+   "field": "기타",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 171,
+   "name": "KODA",
+   "path": "y2kthr/koda",
+   "webUrl": "https://gitlab.aigov.go.kr/y2kthr/koda",
+   "field": "문서·보고서",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  },
+  {
+   "id": 177,
+   "name": "hwaseong-kb",
+   "path": "selfzone/hwaseong-kb",
+   "webUrl": "https://gitlab.aigov.go.kr/selfzone/hwaseong-kb",
+   "field": "회계·예산·출장",
+   "fieldBy": "rule-keyword",
+   "readmeStatus": "present"
+  }
+ ]
+}

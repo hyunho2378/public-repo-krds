@@ -1,0 +1,176 @@
+{
+ "id": 337,
+ "name": "범정부 내부망 AI 브라우저 사이드바 어시스턴트",
+ "path": "pilddong/clova-gov-page-assistant",
+ "webUrl": "https://gitlab.aigov.go.kr/pilddong/clova-gov-page-assistant",
+ "topics": [
+  "ai",
+  "hallucination",
+  "public-service",
+  "rag"
+ ],
+ "executionForm": {
+  "value": "check",
+  "evidence": [
+   "sidepanel.html"
+  ],
+  "source": "rule",
+  "label": "확인 필요",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": "MIT",
+  "evidence": {
+   "lines": [
+    214,
+    214
+   ]
+  },
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    255
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-10-07T10:57:47.989+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "병무청",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "현재 저장소에는 별도의 라이선스가 지정되어 있지 않습니다. 배포·복제·2차 사용 범위는 프로젝트 관리자에게 확인하세요.",
+    "line": 252,
+    "name": "현재",
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    252,
+    252
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "JavaScript",
+   "CSS",
+   "HTML"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": []
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:42:16.095Z",
+ "rulesAt": "2026-10-30T12:42:16.095Z",
+ "sourceDate": "2026-10-30"
+}

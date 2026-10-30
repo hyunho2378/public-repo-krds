@@ -1,0 +1,219 @@
+{
+ "id": 47,
+ "name": "어문 규범 조언 도구",
+ "path": "sophie_kim/korean-norm-advisor",
+ "webUrl": "https://gitlab.aigov.go.kr/sophie_kim/korean-norm-advisor",
+ "topics": [],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "pyproject.toml"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    1235
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": [
+   {
+    "quote": "로마자 표기와 표준 발음은 고시 조문을 그대로 구현한 코드가 계산하고, 모델은 그 결과를 뒤집을 수 없습니다.",
+    "lines": [
+     7,
+     7
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "로마자 표기('김소희'→Gim Sohui)나 표준 발음('국물'→[궁물])은 고시 조문을 그대로 구현한 코드가 계산하고, 모델은 그 결과를 뒤집을 수 없습니다.",
+    "lines": [
+     82,
+     82
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "채점을 위한 문제와 정답은 우리가 만들지 않고 **고시 조문에 실린 (보기)를 그대로** 씁니다(3.6절).",
+    "lines": [
+     95,
+     95
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "**고시 조문에 실린 (보기)를 그대로 시험 문제로 씁니다.**",
+    "lines": [
+     268,
+     268
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "| 로마자 변환 | 고시의 보기 73개 | 72개 일치 |",
+    "lines": [
+     272,
+     272
+    ],
+    "dates": [],
+    "identifiers": []
+   },
+   {
+    "quote": "romanize.py     로마자 변환 엔진(고시 12항 구현)",
+    "lines": [
+     1148,
+     1148
+    ],
+    "dates": [],
+    "identifiers": [
+     "고시 12"
+    ]
+   }
+  ],
+  "evidence": {
+   "lines": [
+    7,
+    1148
+   ]
+  },
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-09-06T14:04:50.876+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "국립국어원",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "Python",
+   "HTML",
+   "Shell",
+   "Python(pyproject.toml)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "pyproject.toml"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:38:40.890Z",
+ "rulesAt": "2026-10-30T12:42:16.032Z",
+ "sourceDate": "2026-10-30"
+}

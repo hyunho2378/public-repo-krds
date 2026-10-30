@@ -1,2 +1,342 @@
-[{"id":9,"oneLine":"공공 프로젝트의 현황과 최근 활동을 한눈에 보여 주는 대시보드","targetTask":"공공 AI 프로젝트 현황 파악","fields":["데이터·통계·분석"],"runSummary":"README의 '대시보드 둘러보기' 주소로 바로 열어 본다","rawCommands":null,"limitations":null,"lines":{"oneLine":[3,3],"targetTask":[11,17],"fields":[3,17],"runSummary":[5,5]}},
-{"id":13,"oneLine":"열린 재정 사이트의 예산 상세 자료를 자동으로 내려받는 도구","targetTask":"부처별 예산 자료 수집","fields":["회계·예산·출장","엑셀·사무 자동화"],"runSummary":"파이썬과 Selenium을 설치한 뒤 스크립트를 실행한다","rawCommands":null,"limitations":null,"lines":{"oneLine":[3,3],"targetTask":[9,12],"fields":[3,12],"runSummary":[22,25]}}]
+[
+ {
+  "id": 9,
+  "oneLine": "공공 프로젝트의 현황과 최근 활동을 한눈에 보여 주는 대시보드",
+  "targetTask": "공공 AI 프로젝트 현황 파악",
+  "fields": [
+   "데이터·통계·분석"
+  ],
+  "runSummary": "README의 '대시보드 둘러보기' 주소로 바로 열어 본다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    11,
+    17
+   ],
+   "fields": [
+    3,
+    17
+   ],
+   "runSummary": [
+    5,
+    5
+   ]
+  }
+ },
+ {
+  "id": 13,
+  "oneLine": "열린 재정 사이트의 예산 상세 자료를 자동으로 내려받는 도구",
+  "targetTask": "부처별 예산 자료 수집",
+  "fields": [
+   "회계·예산·출장",
+   "엑셀·사무 자동화"
+  ],
+  "runSummary": "파이썬과 Selenium을 설치한 뒤 스크립트를 실행한다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    9,
+    12
+   ],
+   "fields": [
+    3,
+    12
+   ],
+   "runSummary": [
+    22,
+    25
+   ]
+  }
+ },
+ {
+  "id": 19,
+  "oneLine": "민원 내용을 문장으로 쓰면 맞는 콜센터와 담당 부서 전화번호를 찾아 준다",
+  "targetTask": "어느 기관에 전화할지 모르는 민원 문의 안내",
+  "fields": [
+   "민원·복지·상담",
+   "생성형 AI·챗봇·검색"
+  ],
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    10,
+    10
+   ],
+   "targetTask": [
+    14,
+    14
+   ],
+   "fields": [
+    10,
+    14
+   ]
+  }
+ },
+ {
+  "id": 22,
+  "oneLine": "행정안전부 세출예산서를 웹에서 검색하고 한글 원본도 내려받는 예산 대시보드",
+  "targetTask": "사업명·부서명으로 예산 자료 찾기",
+  "fields": [
+   "회계·예산·출장",
+   "데이터·통계·분석"
+  ],
+  "runSummary": "컴퓨터에서 서버를 켠 뒤 브라우저로 localhost:8787 주소를 연다",
+  "rawCommands": "npm start",
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    5,
+    5
+   ],
+   "targetTask": [
+    18,
+    22
+   ],
+   "fields": [
+    5,
+    22
+   ],
+   "runSummary": [
+    26,
+    30
+   ]
+  }
+ },
+ {
+  "id": 23,
+  "oneLine": "토지 주소를 넣으면 태양광 설치 가능 여부와 인허가 절차, 예상 수익을 안내한다",
+  "targetTask": "토지 태양광 설치 검토와 인허가 안내",
+  "fields": [
+   "시설·안전·재난",
+   "법령·규제·감사"
+  ],
+  "runSummary": "README 첫 줄의 서비스 주소로 바로 열어 쓴다",
+  "rawCommands": null,
+  "limitations": null,
+  "lines": {
+   "oneLine": [
+    10,
+    10
+   ],
+   "targetTask": [
+    26,
+    40
+   ],
+   "fields": [
+    10,
+    36
+   ],
+   "runSummary": [
+    1,
+    1
+   ]
+  }
+ },
+ {
+  "id": 26,
+  "oneLine": "한글(HWPX) 공문서의 서식과 내용을 나눠 저장해 비슷한 문서를 다시 만들게 돕는 도구 모음",
+  "targetTask": "공문서 재기안과 서식 재사용",
+  "fields": [
+   "문서·보고서"
+  ],
+  "runSummary": "본인 참고 문서(.hwpx)를 준비해 구조를 추출한 뒤 내용을 써서 문서를 조립한다",
+  "rawCommands": null,
+  "limitations": "초기 버전이라 서식 연결은 수작업이 많고 복잡한 표와 고정 배치는 약하다고 적혀 있다",
+  "lines": {
+   "oneLine": [
+    3,
+    9
+   ],
+   "targetTask": [
+    3,
+    9
+   ],
+   "fields": [
+    3,
+    9
+   ],
+   "runSummary": [
+    28,
+    30
+   ],
+   "limitations": [
+    11,
+    11
+   ]
+  }
+ },
+ {
+  "id": 29,
+  "oneLine": "2026년 중앙관서 예산자료를 기관·부서·세부사업별로 검색하고 원본 한글파일도 받는 웹 화면",
+  "targetTask": "부처 예산자료 검색과 비교",
+  "fields": [
+   "회계·예산·출장",
+   "데이터·통계·분석"
+  ],
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": "2026년 중앙관서 예산자료만 대상이다",
+  "lines": {
+   "oneLine": [
+    7,
+    9
+   ],
+   "targetTask": [
+    13,
+    15
+   ],
+   "fields": [
+    7,
+    23
+   ],
+   "limitations": [
+    20,
+    20
+   ]
+  }
+ },
+ {
+  "id": 31,
+  "oneLine": "한글 웹 기안기에서 선택한 글의 자간을 단추로 줄이거나 늘려 주는 스크립트",
+  "targetTask": "기안문 줄 수 맞추기",
+  "fields": [
+   "문서·보고서",
+   "엑셀·사무 자동화"
+  ],
+  "runSummary": "크롬 확장 Tampermonkey에 스크립트 내용을 붙여넣어 저장한 뒤 기안기 페이지를 새로고침한다",
+  "rawCommands": null,
+  "limitations": "여러 기안기에서 확인하려고 모든 사이트에서 실행되게 해 둔 상태라고 적혀 있다",
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    7,
+    9
+   ],
+   "fields": [
+    3,
+    9
+   ],
+   "runSummary": [
+    25,
+    28
+   ],
+   "limitations": [
+    42,
+    42
+   ]
+  }
+ },
+ {
+  "id": 34,
+  "oneLine": "숫자 금액을 한글 금액과 문서용 표기로 바꿔 복사해 주는 윈도우 프로그램",
+  "targetTask": "공문서 금액 한글 표기 작성",
+  "fields": [
+   "회계·예산·출장",
+   "문서·보고서"
+  ],
+  "runSummary": "release 폴더의 exe 파일을 내려받아 바로 실행한다. 설치는 필요 없다",
+  "rawCommands": null,
+  "limitations": "윈도우 전용이고 구형 PC에서는 Visual C++ 재배포 패키지 설치가 필요할 수 있다",
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    3
+   ],
+   "runSummary": [
+    13,
+    18
+   ],
+   "limitations": [
+    22,
+    24
+   ]
+  }
+ },
+ {
+  "id": 35,
+  "oneLine": "위경도나 주소 엑셀을 올려 지도 위에서 고치고 다시 엑셀로 내려받는 웹 도구",
+  "targetTask": "지도 좌표 자료 점검과 수정",
+  "fields": [
+   "데이터·통계·분석",
+   "엑셀·사무 자동화"
+  ],
+  "runSummary": "static/index.html을 브라우저로 열면 대부분의 기능이 된다. 좌표 변환과 주소 변환은 파이썬 서버가 필요하다",
+  "rawCommands": null,
+  "limitations": "파이썬 서버 없이는 좌표계 변환과 주소 좌표 변환 기능이 꺼진다",
+  "lines": {
+   "oneLine": [
+    3,
+    4
+   ],
+   "targetTask": [
+    3,
+    3
+   ],
+   "fields": [
+    3,
+    11
+   ],
+   "runSummary": [
+    42,
+    45
+   ],
+   "limitations": [
+    43,
+    43
+   ]
+  }
+ },
+ {
+  "id": 40,
+  "oneLine": "정부 보도자료를 부처별로 모아 검색하고 주제별 동향을 보여 주는 정책 자료 대시보드",
+  "targetTask": "정책 담당자의 보도자료 검색과 동향 파악",
+  "fields": [
+   "데이터·통계·분석",
+   "법령·규제·감사"
+  ],
+  "runSummary": null,
+  "rawCommands": null,
+  "limitations": "현재 시험 단계로 정책 해석, 요약, 예측은 이후 버전에서 다룬다고 적혀 있다",
+  "lines": {
+   "oneLine": [
+    3,
+    3
+   ],
+   "targetTask": [
+    3,
+    9
+   ],
+   "fields": [
+    3,
+    17
+   ],
+   "limitations": [
+    5,
+    5
+   ]
+  }
+ }
+]

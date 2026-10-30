@@ -1,0 +1,162 @@
+{
+ "id": 229,
+ "name": "translatorcat_2026",
+ "path": "tyui22/translatorcat_2026",
+ "webUrl": "https://gitlab.aigov.go.kr/tyui22/translatorcat_2026",
+ "topics": [],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "package.json"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": "MIT",
+  "evidence": {
+   "lines": [
+    69,
+    69
+   ]
+  },
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    71
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-08-05T22:48:47.481+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "과학기술정보통신부",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "JavaScript",
+   "CSS",
+   "HTML",
+   "Node.js(package.json)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "package.json"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": true
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:40:54.688Z",
+ "rulesAt": "2026-10-30T12:42:16.074Z",
+ "sourceDate": "2026-10-30"
+}

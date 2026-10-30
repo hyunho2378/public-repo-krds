@@ -1,0 +1,196 @@
+{
+ "id": 244,
+ "name": "전북소방 구조 교육훈련 AI",
+ "path": "tenmoo/rescueAI",
+ "webUrl": "https://gitlab.aigov.go.kr/tenmoo/rescueAI",
+ "topics": [],
+ "executionForm": {
+  "value": "install",
+  "evidence": [
+   "package.json"
+  ],
+  "source": "rule",
+  "label": "설치 필요(파이썬 등)",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    859
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-09-10T07:48:00.822+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "완주소방서",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "등록·복구·연결 확인 순서는 [SETUP.md](SETUP.md)를 참고하세요.",
+    "line": 32,
+    "name": null,
+    "url": null
+   },
+   {
+    "quote": "자료제작 작업 제한은 유지합니다. 적용 방법과 한도 조정은 [SETUP.md](SETUP.md)를 참고하세요.",
+    "line": 62,
+    "name": null,
+    "url": null
+   },
+   {
+    "quote": "별도로 확인해야 합니다. 실행 방법과 외부 API 평가 범위는 [`eval/README.md`](eval/README.md)를 참고하세요.",
+    "line": 558,
+    "name": null,
+    "url": null
+   },
+   {
+    "quote": "| `/generate/shared` | 사용자가 공유한 생성물 열람 및 복제 |",
+    "line": 609,
+    "name": null,
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    32,
+    609
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": {
+   "aiWorkDocs": 2
+  },
+  "evidence": {
+   "paths": [
+    "AGENTS.md",
+    "CLAUDE.md"
+   ]
+  },
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "TypeScript",
+   "TSX",
+   "PLpgSQL",
+   "Python",
+   "JavaScript",
+   "Node.js(package.json)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "package.json"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "fields": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": null,
+   "evidence": null,
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": null,
+   "evidence": null,
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": true
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": true
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:40:54.692Z",
+ "rulesAt": "2026-10-30T12:42:16.080Z",
+ "sourceDate": "2026-10-30"
+}

@@ -1,0 +1,90 @@
+{
+ "note": "F-04 중복 묶음 초안. 사람 확인 전",
+ "computedAt": "2026-10-30T12:38:41.048Z",
+ "groupCount": 3,
+ "groups": [
+  {
+   "id": "g001",
+   "title": "Test",
+   "size": 6,
+   "organizations": 6,
+   "projects": [
+    {
+     "id": 30,
+     "name": "Test",
+     "organization": "국세청"
+    },
+    {
+     "id": 39,
+     "name": "2026년 공공 AI 역량강화 캘린더",
+     "organization": "행정안전부"
+    },
+    {
+     "id": 48,
+     "name": "test",
+     "organization": "nugunadata"
+    },
+    {
+     "id": 55,
+     "name": "AI 기반 감염병 조사사업 기획 지원도구개발",
+     "organization": "질병관리청 국립보건연구원"
+    },
+    {
+     "id": 62,
+     "name": "우편라벨 자동화",
+     "organization": "욱현 김"
+    },
+    {
+     "id": 178,
+     "name": "test",
+     "organization": "IBK기업은행 이상훈"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.30, 기관 6곳)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g002",
+   "title": "gongedu",
+   "size": 2,
+   "organizations": 1,
+   "projects": [
+    {
+     "id": 44,
+     "name": "gongedu",
+     "organization": "전북특별자치도 군산시"
+    },
+    {
+     "id": 92,
+     "name": "gov-guide-kit",
+     "organization": "전북특별자치도 군산시"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.08, 기관 1곳, 공통 낱말 조각: go)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  },
+  {
+   "id": "g003",
+   "title": "개인정보 비식별화 프로그램",
+   "size": 2,
+   "organizations": 2,
+   "projects": [
+    {
+     "id": 49,
+     "name": "로컬 AI 기반 개인정보 비식별화 프로그램",
+     "organization": "김명진"
+    },
+    {
+     "id": 53,
+     "name": "개인정보 비식별화 프로그램",
+     "organization": "기광 안"
+    }
+   ],
+   "reason": "이름·소개 글이 비슷함(이름 유사도 평균 0.75, 기관 2곳, 공통 낱말 조각: 개인 인정 정보 비식 식별 별화)",
+   "method": "규칙(n-gram 유사도, 임계값 이름 0.6 / 전체 0.45)",
+   "needsReview": true
+  }
+ ]
+}

@@ -1,0 +1,203 @@
+{
+ "id": 53,
+ "name": "개인정보 비식별화 프로그램",
+ "path": "dksrlrhkd/safeDoc",
+ "webUrl": "https://gitlab.aigov.go.kr/dksrlrhkd/safeDoc",
+ "topics": [],
+ "executionForm": {
+  "value": "open",
+  "evidence": [
+   "package.json"
+  ],
+  "source": "rule",
+  "label": "바로 열림",
+  "note": "파일 구성 기준. 안전성, 운영체제, 망 정책은 확인 필요"
+ },
+ "license": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "readmeStatus": {
+  "value": "present",
+  "evidence": {
+   "lines": [
+    1,
+    88
+   ]
+  },
+  "source": "rule",
+  "label": "있음"
+ },
+ "referenceDates": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "README 추출 후보, 현행 여부 미확인"
+ },
+ "updatedAt": {
+  "value": "2026-07-22T18:03:27.962+09:00",
+  "evidence": "API last_activity_at",
+  "source": "rule"
+ },
+ "organization": {
+  "value": "기광 안",
+  "evidence": "API name_with_namespace",
+  "source": "rule"
+ },
+ "openUrl": {
+  "value": "https://mozilla.github.io/pdf.js/",
+  "evidence": {
+   "lines": [
+    30,
+    30
+   ]
+  },
+  "source": "rule",
+  "note": "README 안 배포 주소. 프로젝트 web_url이 아님"
+ },
+ "startupNote": {
+  "value": null,
+  "evidence": null,
+  "source": "rule"
+ },
+ "contentRights": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "코드 라이선스(license)와 별도"
+ },
+ "baseProjects": {
+  "value": [
+   {
+    "quote": "현재 개발 진행 상황, 미완성 항목, 알려진 기술 위험은 [DEVELOPMENT_STATUS.md](DEVELOPMENT_STATUS.md)를 참고하십시오.",
+    "line": 82,
+    "name": null,
+    "url": null
+   }
+  ],
+  "evidence": {
+   "lines": [
+    82,
+    82
+   ]
+  },
+  "source": "rule",
+  "note": "README 문구 기반 재사용 계보 후보. 사람 확인 필요"
+ },
+ "docComposition": {
+  "value": null,
+  "evidence": null,
+  "source": "rule",
+  "note": "AI 작업 문서는 카드 근거에서 제외, 개수만 표시"
+ },
+ "techStack": {
+  "value": [
+   "JavaScript",
+   "Python",
+   "HTML",
+   "CSS",
+   "Node.js(package.json)"
+  ],
+  "evidence": {
+   "api": "languages",
+   "paths": [
+    "package.json"
+   ]
+  },
+  "source": "rule"
+ },
+ "ai": {
+  "oneLine": {
+   "value": "문서 속 개인정보를 브라우저 안에서 찾아 가리는 프로그램, 파일이 밖으로 나가지 않는다",
+   "evidence": {
+    "lines": [
+     3,
+     7
+    ]
+   },
+   "source": "ai"
+  },
+  "targetTask": {
+   "value": "문서 공개 전 개인정보 비식별 처리",
+   "evidence": {
+    "lines": [
+     3,
+     3
+    ]
+   },
+   "source": "ai"
+  },
+  "fields": {
+   "value": [
+    "문서·보고서",
+    "개발·보안·인프라"
+   ],
+   "evidence": {
+    "lines": [
+     3,
+     25
+    ]
+   },
+   "source": "ai"
+  },
+  "runSummary": {
+   "value": "설치 없이 하나의 HTML 파일을 브라우저에서 연다",
+   "evidence": {
+    "lines": [
+     8,
+     8
+    ]
+   },
+   "source": "ai",
+   "rawCommands": null
+  },
+  "limitations": {
+   "value": "PDF는 글자가 들어 있는 PDF만 되고 스캔 이미지 PDF는 안 된다",
+   "evidence": {
+    "lines": [
+     21,
+     21
+    ]
+   },
+   "source": "ai"
+  }
+ },
+ "checks": [
+  {
+   "id": "gitignore",
+   "pass": false
+  },
+  {
+   "id": "readme",
+   "pass": true
+  },
+  {
+   "id": "purpose",
+   "pass": true
+  },
+  {
+   "id": "usage",
+   "pass": true
+  },
+  {
+   "id": "environment",
+   "pass": false
+  },
+  {
+   "id": "license",
+   "pass": false
+  },
+  {
+   "id": "tests",
+   "pass": false
+  },
+  {
+   "id": "ci",
+   "pass": false
+  }
+ ],
+ "generatedAt": "2026-10-30T12:38:40.896Z",
+ "rulesAt": "2026-10-30T12:42:16.035Z",
+ "sourceDate": "2026-10-30"
+}

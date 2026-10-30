@@ -13,6 +13,7 @@ export const FORM_LABEL={open:'바로 열림',download:'내려받아 실행(exe)
 export function readmeStatus(text){
   if(text==null||!text.trim())return'none';
   if(/To make it easy for you to get started with GitLab|Getting started\s*\n/i.test(text)&&/Add your files|Integrate with your tools/i.test(text))return'template';
+  if(/^\s*Example plain HTML site using GitLab Pages|^\s*#?\s*(Plain HTML|Hugo|Jekyll|Gatsby|Hexo|Pelican|Nuxt|Hugo) .*GitLab Pages/i.test(text))return'template';
   if(text.replace(/\s/g,'').length<40)return'template';
   return'present';
 }
@@ -62,6 +63,7 @@ export function ruleFields(p,tree,languages,readme,done){
       techStack:field(techVals.length?techVals:null,techVals.length?{api:'languages',paths:mk.map(m=>m.path)}:null,'rule')
     },
     publicChecks:pub.publicResult.checks,
+    credentialInReadme:lines.some(l=>/(비밀번호|password|passwd)\s*[|:：=]?\s*\|?\s*`[^`]{4,}`/i.test(l)),
     privateItems:[...new Set(pub.privateResult.items.filter(i=>i.type==='sensitive-filename').map(i=>i.path).concat((done?.markers?.envLike||[]).filter(x=>!/\.(example|sample|template)$/.test(x))))]
   };
 }
@@ -81,7 +83,7 @@ async function main(){
     const card={id:p.id,name:p.name,path:p.path_with_namespace,webUrl:p.web_url,topics:p.topics||[],
       ...r.rule,ai,checks:r.publicChecks,generatedAt:old?.generatedAt||new Date().toISOString(),rulesAt:new Date().toISOString(),sourceDate:meta?.fetchedDate};
     await fs.writeFile(cp,JSON.stringify(card,null,1));made++;
-    if(r.privateItems.length)alerts.push({id:p.id,path:p.path_with_namespace,items:[...new Set(r.privateItems)].map(x=>({path:x,type:'sensitive-filename'}))});
+    const it=[...new Set(r.privateItems)].map(x=>({path:x,type:'sensitive-filename'}));if(r.credentialInReadme)it.push({path:'README',type:'readme-credential-pattern'});if(it.length)alerts.push({id:p.id,path:p.path_with_namespace,items:it});
   }
   await fs.writeFile(path.join(CARDS,'_private_alerts.json'),JSON.stringify({note:'경로 존재만. 값 없음. 제작자 전용, 커밋 제외',count:alerts.length,items:alerts},null,1));
   console.log('rule cards',made,'alerts',alerts.length);
