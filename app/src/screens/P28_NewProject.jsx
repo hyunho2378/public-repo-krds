@@ -62,7 +62,7 @@ export default function NewProject() {
     <Page id="G-05" title={t.NewProject_title} state="Ideal">
       <div className="rb-write rb-narrow">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-small" data-figma="section-title">{t.NewProject_title}</h1>
+          <h1 className="krds-text-heading-small" data-figma="page-head">{t.NewProject_title}</h1>
           <p className="krds-text-body-xsmall rb-subtle">{t.NewProject_hint}</p>
         </div>
 

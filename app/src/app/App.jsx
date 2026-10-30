@@ -12,6 +12,7 @@ import ErrorScreen from '../screens/P13_Error';
 import { routes } from './routes';
 import { useProjectNav } from './projectNav';
 import { u } from '../copy/ui';
+import { t } from '../copy/ko';
 import { breakpoint, useBoolPref, useMinWidth } from './prefs';
 import '../components/Layout/shell.css';
 
@@ -54,6 +55,8 @@ function FocusOnNavigate({ onNavigate }) {
 /** 로그인처럼 혼자 서는 화면은 왼쪽 바를 두지 않는다(공공 깃랩 46). */
 const NO_SIDEBAR = ['/login', '/login/failed', '/login/otp', '/register', '/password'];
 /** 탐색 목록 화면의 판 안 경로(공공 깃랩 '탐색 / 프로젝트') */
+/** 탐색 밖 단독 화면의 판 안 경로(공공 깃랩 44 '검색'처럼 한 칸) */
+const SOLO_PATH = { '/search': u.S_title, '/projects/new': t.NewProject_title, '/help': t.Header_5 };
 const EXPLORE_PATH = { '/': u.G_projects, '/explore': u.G_projects, '/organizations': u.G_groups, '/explore/topics': u.G_topics, '/explore/snippets': u.G_snippets };
 
 /** D-22 단축키: ? 목록, g c / g i / g p 이동, b 사이드바(파일 보기에서는 파일 트리가 b를 쓴다) */
@@ -117,7 +120,7 @@ function Shell() {
         )}
         <div className="rb-panel" data-figma="content-panel">
           <div className="rb-panel-in">
-            {explore ? <Breadcrumb home={false} items={[[u.G_explore, '/'], [explore, null]]} /> : null}
+            {explore ? <Breadcrumb home={false} items={[[u.G_explore, '/'], [explore, null]]} /> : SOLO_PATH[pathname] ? <Breadcrumb home={false} items={[[SOLO_PATH[pathname], null]]} /> : null}
             <main id="main" tabIndex={-1} className="rb-main">
               <Routes>
                 {routes.map(({ id, path, Screen }) => (

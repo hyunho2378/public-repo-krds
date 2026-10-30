@@ -26,7 +26,7 @@ export default function Help() {
   const tpl = useData(() => product.get('/templates/readme'), []);
   return (
     <Page id="G-10" title={t.Header_5}>
-      <h1 className="krds-text-heading-small" data-figma="section-title">{phrase(t.Header_5)}</h1>
+      <h1 className="krds-text-heading-small" data-figma="page-head">{phrase(t.Header_5)}</h1>
       {/* UX-007 2장: 시제품 고지는 이곳과 README에만 둔다 */}
       <section className="rb-stack" aria-labelledby="about-title">
         <h2 id="about-title" className="krds-text-body-small-bold">{phrase(t.P14_about_title)}</h2>
