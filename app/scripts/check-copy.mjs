@@ -51,7 +51,13 @@ for (const target of TARGETS) {
   }
 }
 
-const counts = Object.fromEntries(PATTERNS.map(([l]) => [l, hits.filter((h) => h.label === l).length]));
+// UX/07 10장: 프로젝트 설명 정리 함수를 실제 공개 자료 전체에 돌려 ' | ' 가 남는지 센다(README 본문은 대상이 아니다)
+const { cleanDescription } = await import('../src/components/Layout/description.js');
+const snap = JSON.parse(await fs.readFile('../server/data/gitlab-public-snapshot.json', 'utf8'));
+const pipeLeft = (snap.items || []).filter((p) => cleanDescription(p.description).includes(' | '));
+for (const p of pipeLeft) hits.push({ file: 'gitlab-public-snapshot.json', line: p.id, label: ' | ', ctx: cleanDescription(p.description).slice(0, 40) });
+
+const counts = Object.fromEntries([...PATTERNS.map(([l]) => l), ' | '].map((l) => [l, hits.filter((h) => h.label === l).length]));
 if (process.argv.includes('--list') || hits.length) {
   for (const h of hits) console.log(`${h.file}:${h.line}: [${h.label}] ${h.ctx}`);
 }

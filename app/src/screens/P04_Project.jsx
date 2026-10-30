@@ -27,7 +27,7 @@ export default function Project() {
   const { project, readme, card, dates, check, reuses } = data.data;
   const id = data.id;
   const passed = check.checks.filter((c) => c.pass).length;
-  const summary = card.summary || cleanDescription(project.description);
+  const summary = cleanDescription(card.summary) || cleanDescription(project.description);
 
   const decision = [
     [t.P04_1, findLine(readme, /실행 환경|별도 설치|브라우저/) || t.P04_2, [t.P04_3, `/projects/${id}/use`]],

@@ -2,6 +2,7 @@
 // 이름, 주소 경로, 설명, 공개 범위, 처음 파일(README, .gitignore, 라이선스).
 // 만들기 전에 비슷한 도구가 있는지 먼저 보여 준다(F-04). 시험판에서는 마지막 단계에서 사실대로 알린다.
 import { useEffect, useState } from 'react';
+import { cleanDescription } from '../components/Layout/description';
 import { Link } from 'react-router-dom';
 import { t } from '../copy/ko';
 import { product, STATIC_MODE as isStatic } from '../api/client';
@@ -67,7 +68,7 @@ export default function NewProject() {
               {similar.map((p) => (
                 <li className="rb-plain-row" key={p.id}>
                   <Link className="rb-plain-main krds-link" to={`/projects/${p.id}`}>{p.name}</Link>
-                  <span className="rb-plain-sub rb-subtle rb-ellipsis">{p.description || ''}</span>
+                  <span className="rb-plain-sub rb-subtle rb-ellipsis">{cleanDescription(p.description)}</span>
                   <span className="rb-plain-meta rb-subtle">{p.organization || ''}</span>
                 </li>
               ))}

@@ -3,13 +3,12 @@
 import { Link } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { orgLabel } from './orgLabel';
+import { cleanDescription } from './description';
 
 const EXECUTION = { web: t.StructuredList_1, download: t.StructuredList_2, install: t.StructuredList_3 };
 // KRDS에는 언어별 색이 없다(GitHub 고유 색은 직접 색이라 D-15 위반). 언어가 있을 때만 KRDS 아이콘 회색 점으로 표시한다.
 
-export function cleanDescription(text) {
-  return (text || '').replace(/^\s*\[[^\]]+\]\s*/, '').split(/\r?\n/)[0];
-}
+export { cleanDescription };
 
 export function ProjectList({ items }) {
   return (

@@ -35,10 +35,11 @@
 .rb-login-notice { display: flex; flex-direction: column; gap: var(--krds-gap-3); }
 .rb-login-notice h2 { margin: 0; }
 .rb-login:has(> .rb-login-notice) > :not(.rb-login-notice) { grid-column: 2; }
-.rb-login:has(> .rb-login-notice) > .rb-login-notice { grid-column: 1; grid-row: 1 / span 6; align-self: start; }
+.rb-login:has(> .rb-login-notice) > .rb-login-notice { grid-column: 1; grid-row: 1 / span 6; align-self: stretch; box-sizing: border-box; padding-inline-end: var(--rb-col-gap); border-inline-end: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
 .rb-login-notice { margin: 0; color: var(--krds-color-text-basic); }
 @media (max-width: 767px) {
   .rb-login:has(> .rb-login-notice) { display: flex; flex-direction: column; max-width: var(--rb-login-form-w); }
+  .rb-login:has(> .rb-login-notice) > .rb-login-notice { padding-inline-end: 0; border-inline-end: 0; }
 }
 .rb-login-form { display: flex; flex-direction: column; gap: var(--krds-gap-4); }
 .rb-login-row { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-3); flex-wrap: wrap; }

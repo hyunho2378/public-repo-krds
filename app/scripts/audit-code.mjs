@@ -39,6 +39,12 @@ async function walk(dir) {
     // D-15: 연한 채움(subtler, lighter, -light)은 회색 계열 외에는 금지. KRDS secondary 버튼도 금지
     for (const m of source.matchAll(/\bbg-light-(?!gray\b)[a-z]+\b/g)) issues.push(`${file}: D-15 연한 채움 배지 ${m[0]}`);
     for (const m of source.matchAll(/krds-btn[^"'`]*\bsecondary\b/g)) issues.push(`${file}: D-15 KRDS secondary 버튼 금지 ${m[0]}`);
+    if (file.endsWith('.jsx') && !file.endsWith('StructuredList.jsx')) {
+      // UX/07 10장: 프로젝트 설명은 ' | ' 영어 병기를 지운 cleanDescription으로만 그린다(README 원문은 Readme 부품이 그린다)
+      noComments.split('\n').forEach((line, i) => {
+        if (/\{[^}]*\b(?:p|project)\.description\b[^}]*\}|\{card\.summary\}/.test(line) && !/cleanDescription\(/.test(line)) issues.push(`${file}:${i + 1}: 프로젝트 설명 직접 표시(cleanDescription 사용) ${line.trim().slice(0, 50)}`);
+      });
+    }
     if (file.endsWith('.jsx')) {
       noComments.split('\n').forEach((line, i) => {
         if (/^\s*(\/\/|\/?\*)/.test(line) || !line.trim()) return;
