@@ -187,3 +187,13 @@
   color: var(--krds-color-text-subtle);
 }
 .krds-breadcrumb-wrap.is-path .breadcrumb { gap: 0; }
+/* 프로젝트 경로는 모바일에서도 접지 않고 전체를 보인다(KRDS 모바일 규칙은 마지막 칸만 남긴다). Figma 360 경로 상자가 전체 폭이다 */
+@media (max-width: 767px) {
+  .krds-breadcrumb-wrap.is-path .breadcrumb li:not(.home):not(:last-child) {
+    position: static !important; width: auto !important; height: auto !important; padding: 0 !important;
+    margin: 0 !important; overflow: visible !important; clip: auto !important; white-space: normal !important; border: 0 !important;
+  }
+  .krds-breadcrumb-wrap.is-path .breadcrumb li:not(.home):not(:nth-child(2)):last-child::before,
+  .krds-breadcrumb-wrap.is-path .breadcrumb li:not(.home):not(:nth-child(2)):last-child::after { display: none !important; content: none !important; }
+  .krds-breadcrumb-wrap.is-path .breadcrumb li:not(.home):not(:nth-child(2)):last-child .txt { order: 0 !important; }
+}

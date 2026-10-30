@@ -96,7 +96,7 @@ export function GlobalBar({ onToggleNav, navOpen }) {
           </NavLink>
         </div>
         <GlobalSearch />
-        <Link className="rb-gbar-btn rb-gbar-searchlink" to="/search">
+        <Link className="rb-gbar-btn rb-gbar-searchlink" data-figma="global-search" to="/search">
           <Icon name="search" />
           <span className="sr-only">{t.GlobalBar_searchLabel}</span>
         </Link>
