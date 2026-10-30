@@ -101,14 +101,14 @@ export default function Changes() {
           </Menu>
           <span className="gl-histproject">{project.path || project.name}</span>
         </div>
-        <div className="gl-head">
+        <div className="gl-head" data-figma="page-head">
           <h1 className="gl-title">{g.histTitle}</h1>
           <div className="gl-head-actions"><Menu label={g.moreOpts} align="right" toggle={false} btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="ellipsis_vertical" />}>{(close) => (<ul className="drop-list"><li><a className="item-link" href={`${project.web_url}/-/commits/${encodeURIComponent(cur)}?format=atom`} {...newWindow(g.rss)} onClick={close}>{g.rss}</a></li></ul>)}</Menu></div>
         </div>
         {path ? (
           <p className="gl-ref-meta"><code className="rb-break-any">{path}</code><Link className="krds-link" to={`/projects/${frame.id}/changes`}>{t.P06_clearFilter}</Link></p>
         ) : null}
-        <div className="gl-bar is-alone">
+        <div className="gl-bar is-alone" data-figma="gl-filter">
           <Menu label={g.histRecent} align="left" btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="time" label={g.histRecent} />}>
             {(close) => (
               <ul className="drop-list" aria-label={g.histRecent}>

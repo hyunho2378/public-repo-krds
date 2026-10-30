@@ -77,7 +77,7 @@ export function Branches() {
   return (
     <ProjectFrame screenId="R-07" tab="" tabLabel={g.brTitle} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
       <div className="gl-page">
-        <div className="gl-tabs" role="tablist" aria-label={g.brTitle}>
+        <div className="gl-tabs" data-figma="gl-tabs" role="tablist" aria-label={g.brTitle}>
           {tabs.map(([k, name, n]) => (
             <button key={k} type="button" role="tab" aria-selected={tab === k} className="gl-tab" onClick={() => setTab(k)}>
               <span>{name}</span>{n != null ? <span className="gl-tab-count">{n}</span> : null}
@@ -86,7 +86,7 @@ export function Branches() {
         </div>
         {!list ? <Status {...body} /> : (
           <div>
-            <div className="gl-bar"><FilterField value={query} onChange={setQuery} placeholder={g.brFilter} /></div>
+            <div className="gl-bar" data-figma="gl-filter"><FilterField value={query} onChange={setQuery} placeholder={g.brFilter} /></div>
             <section className="gl-box is-attached" aria-labelledby="gl-br-title">
               <h2 id="gl-br-title" className="gl-box-title">{tab === 'stale' ? g.brStale : g.brActive}</h2>
               {shown.length ? <ul className="gl-rows">{rows(shown)}</ul> : <p className="gl-empty">{g.brNone}</p>}
@@ -116,7 +116,7 @@ export function Tags() {
   return (
     <ProjectFrame screenId="R-08" tab="" tabLabel={t.P18_tags} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="gl-page">
-        <div className="gl-head">
+        <div className="gl-head" data-figma="page-head">
           <div className="gl-head-text">
             <h1 className="gl-title">{g.tagTitle}</h1>
             <p className="gl-intro">{g.tagIntro}</p>
@@ -125,7 +125,7 @@ export function Tags() {
         </div>
         {!list ? <Status {...body} /> : (
           <div>
-            <div className="gl-bar">
+            <div className="gl-bar" data-figma="gl-filter">
               <FilterField value={query} onChange={setQuery} placeholder={g.tagFilter} />
               <SortControl options={[['updated', g.sortUpdated], ['name', g.sortName]]} value={sort} onChange={setSort} desc={desc} onDir={() => setDesc(!desc)} />
             </div>
@@ -153,7 +153,7 @@ export function Releases() {
   return (
     <ProjectFrame screenId="R-09" tab="" tabLabel={t.RepoSub_releases} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="gl-page">
-        <div className="gl-head">
+        <div className="gl-head" data-figma="page-head">
           <h1 className="gl-title">{g.relTitle}</h1>
           <div className="gl-head-actions">
             <SortControl options={[['date', g.sortRelease]]} value="date" onChange={() => {}} desc={desc} onDir={() => setDesc(!desc)} />
