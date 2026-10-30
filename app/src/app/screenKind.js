@@ -18,3 +18,16 @@ export function infoMode(pathname) {
   if (kind === 'detail' || OWN_INFO.test(pathname)) return 'none';
   return kind;
 }
+
+// D-18: 왼쪽 메뉴는 전역 개인 목록(내 작업, 알림)에서만 펼쳐 둔다. 그 밖의 화면은 768 미만 서랍으로만 쓴다.
+const PERSONAL = /^\/(my|notifications|requests|collaborate)\/?$/;
+export function sidebarMode(pathname, bare) {
+  if (bare) return 'none';
+  return PERSONAL.test(pathname) ? 'full' : 'drawer';
+}
+
+/** 저장소 화면의 프로젝트 번호. 저장소가 아니면 null. */
+export function projectIdOf(pathname) {
+  const m = /^\/projects\/(\d+)(?:\/|$)/.exec(pathname);
+  return m ? m[1] : null;
+}

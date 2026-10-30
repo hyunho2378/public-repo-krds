@@ -6,7 +6,7 @@ let current = null;
 const listeners = new Set();
 
 export function setProjectNav(next) {
-  const same = current?.id === next?.id && current?.name === next?.name;
+  const same = current?.id === next?.id && current?.name === next?.name && current?.issues === next?.issues;
   if (same) return;
   current = next;
   listeners.forEach((fn) => fn());

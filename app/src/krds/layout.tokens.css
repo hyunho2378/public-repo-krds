@@ -5,7 +5,7 @@
    | 이름 | 값 | 근거 | KRDS 대응 |
    |---|---|---|---|
    | 좌우 여백 | 24px | R-01_1920_Guest.json sidebar.x | --krds-padding-8 (number-10, 2.4rem) |
-   | 왼쪽 메뉴 너비(D-17, 펼침) | 240px | D-17 1장 | KRDS에 없음. number-12(32) x 7 + number-8(16) |
+   | 왼쪽 메뉴 너비(D-18, 펼침) | 264px | D-18(GitHub 266에 가장 가까운 4의 배수) | number-12(32) x 8 + number-5(8) |
    | 왼쪽 메뉴 너비(D-17, 접힘) | 56px | D-17 1장(아이콘만) | KRDS에 없음. size-height-9(64) - number-5(8) |
    | 머리 검색칸 높이 | 48px | G-01 global-search.h | --krds-number-16 (4.8rem) |
    | 머리 왼쪽 묶음 최소 너비 | 252px | 로고와 탐색이 들어가는 최소 폭 | KRDS에 없음. number-12(32) x 7 + number-11(28) |
@@ -20,7 +20,11 @@
    | 사이드바 항목 높이 | 32px | D-14 끝절(GitHub 28~32) | --krds-number-12 |
    | 글자 크기 | 13, 15, 19 (17은 모달 제목과 문서 읽기) | D-14 끝절, D-16 2장 개정 | KRDS 13/15/17/19 그대로(body/xsmall, body/small, heading/small) |
    | 행간 | 13:20, 15:22, 17:26, 19:28, 24:32, 32:40, 40:48 | D-16 2장 | KRDS 150%를 짝수 px로 대체(퍼센트 금지) |
-   | 왼쪽 메뉴 펼침 기준 폭 | 1920 | D-17 5장 | 단위 없는 숫자(자바스크립트가 읽는다) |
+   | 왼쪽 메뉴 펼침 기준 폭 | 1280 | D-18(전역 개인 목록만) | 단위 없는 숫자(자바스크립트가 읽는다) |
+   | 가운데 컨테이너 | 1280 | D-18 2장 | number-12(32) x 40 |
+   | 저장소 본문 읽기 폭 | 960 | D-18 4장 | number-12(32) x 30 |
+   | 도킹 패널 폭 | 360 | D-18 4장 | number-12(32) x 11 + number-5(8) |
+   | 탭 줄 높이 | 48 | D-18 2장 | --krds-number-16 |
    | 로그인 공지 열 / 폼 열 | 360 / 400 | Figma G-08 | 96x3+72 / 96x4+16 |
    | 바닥글 높이 | 168px | Figma(1920) | number-17(56) x 3 |
    | 왼쪽 메뉴 숨김 기준 폭 | 768 | D-17 5장 | KRDS 모바일 구간. 단위 없는 숫자 |
@@ -30,7 +34,7 @@
   --rb-page-pad: var(--krds-padding-8);
   --rb-col-gap: var(--krds-gap-9);
   --rb-masthead-h: var(--krds-number-12);
-  --rb-sidebar-w: calc(var(--krds-number-12) * 7 + var(--krds-number-8));
+  --rb-sidebar-w: calc(var(--krds-number-12) * 8 + var(--krds-number-5));
   --rb-sidebar-w-project: var(--rb-sidebar-w);
   --rb-sidebar-w-collapsed: calc(var(--krds-size-height-9) - var(--krds-number-5));
   --rb-search-h: var(--krds-number-16);
@@ -44,7 +48,7 @@
   --rb-row-h: var(--krds-number-14);
   --rb-side-item-h: var(--krds-number-12);
   /* D-17 5장: 이 폭(단위 없음) 이상이면 왼쪽 메뉴가 펼쳐진 채 시작한다 */
-  --rb-bp-side-open: 1920;
+  --rb-bp-side-open: 1280;
   /* D-17 5장: 이 폭 미만은 왼쪽 메뉴를 숨기고 머리글 메뉴 버튼으로 연다(KRDS 모바일 구간 768) */
   --rb-bp-mobile: 768;
   /* D-17 5장: 이 폭(단위 없음) 이상에서만 정보 영역이 본문 옆에 놓이고 홈에서 열림이 기본이다. 미만이면 본문 위로 올라가 닫힘이 기본이다 */
@@ -67,6 +71,11 @@
   /* G-08 로그인 2열: 왼쪽 공지 360(96x3+72), 오른쪽 폼 400(96x4+16). 768 이하는 1열 */
   --rb-login-notice-w: calc(var(--krds-number-21) * 3 + var(--krds-number-19));
   --rb-login-form-w: calc(var(--krds-number-21) * 4 + var(--krds-number-8));
+  /* D-18: 가운데 컨테이너 1280, 저장소 홈/목록 읽기 폭 960, 도킹 패널 360, 탭 줄 48 */
+  --rb-container-w: calc(var(--krds-number-12) * 40);
+  --rb-read-w: calc(var(--krds-number-12) * 30);
+  --rb-dock-w: calc(var(--krds-number-12) * 11 + var(--krds-number-5));
+  --rb-tabs-h: var(--krds-number-16);
   --rb-footer-h: calc(var(--krds-number-17) * 3);
   --rb-fw-title: var(--krds-font-weight-bold);
   --rb-fw-current: 600;

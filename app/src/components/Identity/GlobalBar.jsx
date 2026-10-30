@@ -4,6 +4,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { t } from '../../copy/ko';
+import { u } from '../../copy/ui';
+import { useProjectNav } from '../../app/projectNav';
 import { Icon } from '../Code/Icon';
 import { ScreenModeOptions, useScreenMode } from './ScreenMode';
 import { useAuth } from './useAuth';
@@ -69,7 +71,8 @@ function GlobalSearch() {
   );
 }
 
-export function GlobalBar({ onToggleNav, navOpen }) {
+export function GlobalBar({ onToggleNav, navOpen, hasNav = true }) {
+  const nav = useProjectNav();
   const location = useLocation();
   const { signedIn } = useAuth();
   // UX-007 1장: 기본은 어두운 화면. 로그인 여부와 상관없이 항상 적용되어야 하므로 여기서 한 번 불러 쓴다(전에는 로그인 후에만 불리는 버그가 있었다)
@@ -78,24 +81,35 @@ export function GlobalBar({ onToggleNav, navOpen }) {
   return (
     <header className="rb-gbar" data-figma="header" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
       <div className="rb-gbar-in">
-        <button
-          type="button"
-          className="rb-gbar-btn rb-gbar-navtoggle"
-          aria-expanded={navOpen}
-          aria-controls="rb-sidebar"
-          onClick={onToggleNav}
-        >
-          <Icon name="menu" />
-          <span className="sr-only">{t.GlobalBar_navToggle}</span>
-        </button>
+        {hasNav ? (
+          <button
+            type="button"
+            className="rb-gbar-btn rb-gbar-navtoggle"
+            aria-expanded={navOpen}
+            aria-controls="rb-sidebar"
+            onClick={onToggleNav}
+          >
+            <Icon name="menu" />
+            <span className="sr-only">{t.GlobalBar_navToggle}</span>
+          </button>
+        ) : null}
         <div className="rb-gbar-left">
           <Link className="rb-gbar-brand" to="/">
             <span className="rb-gbar-brand-text">{SERVICE_NAME}</span>
           </Link>
-          <NavLink end className="rb-gbar-btn rb-gbar-explore" to="/">
-            <Icon name="view_all" />
-            <span>{t.GlobalBar_explore}</span>
-          </NavLink>
+          {nav ? (
+            <span className="rb-gbar-path">
+              <Link className="rb-gbar-pathlink" to={`/search?q=${encodeURIComponent(nav.owner || '')}`}>{nav.owner}</Link>
+              <span aria-hidden="true">/</span>
+              <Link className="rb-gbar-pathlink is-name" to={`/projects/${nav.id}`}>{nav.name}</Link>
+            </span>
+          ) : null}
+          {nav ? null : (
+            <NavLink end className="rb-gbar-btn rb-gbar-explore" to="/">
+              <Icon name="view_all" />
+              <span>{t.GlobalBar_explore}</span>
+            </NavLink>
+          )}
         </div>
         <GlobalSearch />
         <Link className="rb-gbar-btn rb-gbar-searchlink" data-figma="global-search" to="/search">
@@ -105,27 +119,21 @@ export function GlobalBar({ onToggleNav, navOpen }) {
         <div className="rb-gbar-right">
           {signedIn ? (
             <>
-              <Link className="rb-gbar-btn" to="/notifications">
+              <Link className="rb-gbar-btn rb-gbar-icon" to="/notifications" title={t.TabBar_alerts}>
                 <Icon name="bell" />
-                <span className="rb-gbar-btn-text">{t.TabBar_alerts}</span>
+                <span className="sr-only">{t.TabBar_alerts}</span>
               </Link>
-              <Link className="rb-gbar-btn" to="/projects/new">
+              <Link className="rb-gbar-btn rb-gbar-icon" to="/projects/new" title={t.GlobalBar_create}>
                 <Icon name="plus" />
-                <span className="rb-gbar-btn-text">{t.GlobalBar_create}</span>
+                <span className="sr-only">{t.GlobalBar_create}</span>
               </Link>
               <AccountMenu mode={mode} setMode={setMode} />
             </>
           ) : (
             <>
               <ScreenModeMenu mode={mode} setMode={setMode} />
-              <Link className="rb-gbar-btn" to="/login">
-                <Icon name="my" />
-                <span className="rb-gbar-btn-text">{t.GlobalBar_signup}</span>
-              </Link>
-              <Link className="rb-gbar-btn" to={loginTo}>
-                <Icon name="login" />
-                <span className="rb-gbar-btn-text">{t.Header_login}</span>
-              </Link>
+              <Link className="krds-btn small tertiary rb-gbar-cta" to={loginTo}>{t.Header_login}</Link>
+              <Link className="krds-btn small primary rb-gbar-cta" to="/register">{u.Hdr_signup}</Link>
             </>
           )}
         </div>
@@ -140,9 +148,9 @@ function ScreenModeMenu({ mode, setMode }) {
   const wrap = useDismiss(open, () => setOpen(false));
   return (
     <div className="krds-drop-wrap rb-gbar-drop" ref={wrap}>
-      <button type="button" className={'rb-gbar-btn' + (open ? ' active' : '')} aria-expanded={open} aria-controls="gbar-mode-guest" onClick={() => setOpen(!open)}>
+      <button type="button" className={'rb-gbar-btn rb-gbar-icon' + (open ? ' active' : '')} aria-expanded={open} aria-controls="gbar-mode-guest" title={t.Header_6} onClick={() => setOpen(!open)}>
         <Icon name="setting" />
-        <span className="rb-gbar-btn-text">{t.Header_6}</span>
+        <span className="sr-only">{t.Header_6}</span>
       </button>
       <div id="gbar-mode-guest" className="drop-menu rb-gbar-menu" style={{ display: open ? 'block' : 'none' }}>
         <div className="drop-in">
@@ -159,9 +167,9 @@ function AccountMenu({ mode, setMode }) {
   const wrap = useDismiss(open, () => setOpen(false));
   return (
     <div className="krds-drop-wrap rb-gbar-drop" ref={wrap}>
-      <button type="button" className={'rb-gbar-btn' + (open ? ' active' : '')} aria-expanded={open} aria-controls="gbar-account" onClick={() => setOpen(!open)}>
+      <button type="button" className={'rb-gbar-btn rb-gbar-icon' + (open ? ' active' : '')} aria-expanded={open} aria-controls="gbar-account" title={t.GlobalBar_account} onClick={() => setOpen(!open)}>
         <Icon name="my" />
-        <span className="rb-gbar-btn-text">{t.GlobalBar_account}</span>
+        <span className="sr-only">{t.GlobalBar_account}</span>
       </button>
       <div id="gbar-account" className="drop-menu rb-gbar-menu" style={{ display: open ? 'block' : 'none' }}>
         <div className="drop-in">

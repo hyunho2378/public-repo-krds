@@ -4,13 +4,15 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { atLeast, useAuth } from '../components/Identity/useAuth';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { t } from '../copy/ko';
+import { u } from '../copy/ui';
+import { useBoolPref } from '../app/prefs';
 import { gitlab, request } from '../api/client';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { CodeView } from '../components/Code/CodeView';
 import { Icon } from '../components/Code/Icon';
-import { About, AddFileMenu, BranchSelect, CodeMenu, CommitBar, FileFind, FileTable, ReadmeBox, RepoMenuList, enc } from '../components/Code/RepoParts';
+import { AddFileMenu, BranchSelect, CodeMenu, CommitBar, FileFind, FileTable, ReadmeBox, enc } from '../components/Code/RepoParts';
 import { FileTreePanel } from '../components/Code/FileTreePanel';
 import '../components/Code/code.css';
 
@@ -152,6 +154,20 @@ export default function Code() {
   const { signedIn, role } = useAuth();
   // y: 지금 보는 지점을 커밋 번호로 고정한 영구 링크로 바꾼다(GitLab, GitHub와 같은 단축키).
   const shaRef = useRef(null);
+  // D-18: 파일 트리는 열고 닫는 버튼과 B 단축키(GitHub와 같다). 선택은 기억한다
+  const [treeOpen, setTreeOpen] = useBoolPref('rb-tree-open', true);
+  useEffect(() => {
+    if (!path) return undefined;
+    const onB = (e) => {
+      if (e.key !== 'b' || e.metaKey || e.ctrlKey || e.altKey) return;
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
+      e.preventDefault();
+      setTreeOpen(!treeOpen);
+    };
+    document.addEventListener('keydown', onB);
+    return () => document.removeEventListener('keydown', onB);
+  }, [path, treeOpen, setTreeOpen]);
   useEffect(() => {
     const onKey = (e) => {
       if (e.key !== 'y' || e.metaKey || e.ctrlKey || e.altKey || !shaRef.current) return;
@@ -192,19 +208,21 @@ export default function Code() {
   const state = b ? (b.kind === 'tree' ? (!b.items.length ? 'Empty' : b.items.length === 1 ? 'Min' : 'Ideal') : 'Ideal') : body.state;
   const isHome = !path;
 
-  const about = <About id={frame.id} project={project} readme={readme} languages={languages} stats={{ commits: commitInfo.state === 'Loading' ? undefined : commitInfo.data?.count ?? null, sample: commitInfo.data?.sample, branches: totals.branches, tags: totals.tags, releases: totals.releases }} />;
-  // 판단 정보(사용 전 확인)는 저장소 틀이 정보 영역에 함께 그린다
-  const aside = isHome ? <div className="rb-only-wide">{about}</div> : null;
 
   return (
-    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} aside={aside}>
-      <div className={`rb-code-wrap${path ? ' has-tree' : ''}`}>
-        {path ? <FileTreePanel id={frame.id} items={root} current={path} refQuery={refQuery} /> : null}
+    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} stats={{ commits: b?.count ?? 0, more: b?.more }} wide={!!path}>
+      <div className={`rb-code-wrap${path && treeOpen ? ' has-tree' : ''}`}>
+        {path && treeOpen ? <FileTreePanel id={frame.id} items={root} current={path} refQuery={refQuery} /> : null}
         <div className="rb-code-area">
-          {isHome ? <div className="rb-only-narrow">{about}</div> : null}
-          {isHome ? <RepoMenuList id={frame.id} /> : null}
           <div className="rb-toolbar" data-figma="toolbar">
             <div className="rb-toolbar-left">
+              {path ? (
+                <button type="button" className="krds-btn small tertiary" aria-expanded={treeOpen} aria-keyshortcuts="B" onClick={() => setTreeOpen(!treeOpen)}>
+                  <Icon name="view_all" />
+                  <span>{u.Tree_toggle}</span>
+                  <kbd className="rb-kbd-inline">B</kbd>
+                </button>
+              ) : null}
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />
               {isHome ? (
                 <p className="rb-toolbar-counts krds-text-body-small">

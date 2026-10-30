@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { GlobalBar } from '../components/Identity/GlobalBar';
 import { Sidebar } from '../components/Navigation/Sidebar';
@@ -9,7 +9,11 @@ import ErrorScreen from '../screens/P13_Error';
 import { routes } from './routes';
 import { TabBar } from '../components/Navigation/TabBar';
 import { useProjectNav } from './projectNav';
-import { screenKind } from './screenKind';
+import { projectIdOf, sidebarMode } from './screenKind';
+import { DockContext } from './dock';
+import { DockPanel } from '../components/Layout/DockPanel';
+import { RepoTabs } from '../components/Navigation/RepoTabs';
+import { u } from '../copy/ui';
 import { breakpoint, useBoolPref, useMinWidth } from './prefs';
 import '../components/Layout/shell.css';
 
@@ -33,23 +37,30 @@ function Shell() {
   const project = useProjectNav();
   const { pathname } = useLocation();
   const bare = NO_SIDEBAR.includes(pathname);
+  const mode = sidebarMode(pathname, bare);
+  const pid = projectIdOf(pathname);
   const closeNav = useCallback(() => setNavOpen(false), []);
-  // D-17 5장: 이용자가 고른 값이 있으면 그것, 없으면 화면 종류와 폭으로 기본값(1920 미만 접힘, 상세 화면은 모든 폭에서 접힘)
-  // 홈과 목록, 상세는 따로 기억한다(상세에서 펼친 선택이 목록의 기본값을 바꾸지 않게)
-  const kind = screenKind(pathname);
+  // D-18: 왼쪽 메뉴는 전역 개인 목록(full)에서만 펼쳐 둔다. 이용자 선택은 기억하고, 기본은 1280 미만 접힘
   const wide = useMinWidth(breakpoint('--rb-bp-side-open'));
   const mobile = !useMinWidth(breakpoint('--rb-bp-mobile'));
-  const [pref, setPref] = useBoolPref(SIDEBAR_KEY + (kind === 'detail' ? 'detail' : 'list'), kind === 'detail' ? true : !wide);
-  const collapsed = !bare && !mobile && pref;
+  const [pref, setPref] = useBoolPref(SIDEBAR_KEY + 'list', !wide);
+  const collapsed = mode === 'full' && !mobile && pref;
   const toggleCollapsed = useCallback(() => setPref(!pref), [pref, setPref]);
+  // D-18 4장: 도킹 패널. 저장소 화면에서만 있고 기본 닫힘, 열림 여부 기억
+  const [dockOpen, setDockOpen] = useBoolPref('rb-dock-open', false);
+  const [slot, setSlot] = useState(null);
+  const dockAvailable = !!pid && !bare;
+  const dock = useMemo(() => ({ open: dockAvailable && dockOpen, setOpen: setDockOpen, slot, available: dockAvailable }), [dockAvailable, dockOpen, setDockOpen, slot]);
   return (
-    <>
+    <DockContext.Provider value={dock}>
       <FocusOnNavigate onNavigate={closeNav} />
       <Masthead />
-      <GlobalBar navOpen={navOpen} onToggleNav={() => setNavOpen((v) => !v)} />
+      <GlobalBar navOpen={navOpen} onToggleNav={() => setNavOpen((v) => !v)} hasNav={mode !== 'none'} />
+      {pid && !bare ? <RepoTabs id={pid} nav={project} /> : null}
       <NoticeBanner message={import.meta.env.VITE_NOTICE} />
-      <div className={'rb-shell' + (bare ? ' is-bare' : '') + (project ? ' has-project' : '') + (collapsed ? ' is-collapsed' : '')} data-figma="body">
-        {bare ? null : <Sidebar project={project} open={navOpen} onClose={closeNav} collapsed={collapsed} onToggleCollapsed={toggleCollapsed} />}
+      <div className="rb-work">
+      <div className={'rb-shell is-' + mode + (collapsed ? ' is-collapsed' : '')} data-figma="body">
+        {mode === 'none' ? null : <Sidebar project={null} open={navOpen} onClose={closeNav} collapsed={collapsed} onToggleCollapsed={toggleCollapsed} />}
         <main id="main" tabIndex={-1} className="rb-main">
           <Routes>
             {routes.map(({ id, path, Screen }) => (
@@ -59,9 +70,11 @@ function Shell() {
           </Routes>
         </main>
       </div>
+      <DockPanel open={dock.open} onClose={() => setDockOpen(false)} title={u.Dock_info} slotRef={setSlot} />
+      </div>
       <Footer />
       <TabBar />
-    </>
+    </DockContext.Provider>
   );
 }
 

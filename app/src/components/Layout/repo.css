@@ -4,15 +4,12 @@
 .rb-repo-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--krds-gap-4); }
 .rb-repo-title { display: flex; flex-direction: column; gap: var(--krds-gap-1); min-width: 0; flex: 1 1 var(--rb-actions-w); }
 /* D-14 끝줄: 저장소 제목은 19px(heading/small), 굳기 600, 한 줄 말줄임(민든사람 부분을 먼저 줄임) */
-.rb-repo-name { display: flex; flex-wrap: nowrap; align-items: center; gap: var(--krds-gap-2); margin: 0; min-width: 0; font-weight: var(--rb-fw-title); }
-.rb-repo-name .rb-repo-org { color: var(--krds-color-text-subtle); font-weight: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: var(--krds-number-18); flex-shrink: 3; }
-.rb-repo-name > span:not(.rb-repo-org) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: var(--krds-number-15); flex-shrink: 1; }
+.rb-repo-name { display: flex; flex-wrap: nowrap; align-items: center; gap: var(--krds-gap-2); margin: 0; min-width: 0; flex: 1 1 var(--krds-number-21); font-weight: var(--rb-fw-title); }
 .rb-repo-name .krds-badge, .rb-repo-name .rb-pill { flex: none; }
 /* D-17 5장: 머리 줄의 정보 버튼과 점검 요약(7/8 통과). 영역이 닫혀 있어도 요약은 남는다 */
-.rb-repo-info-toggle { display: flex; flex: none; align-items: center; gap: var(--krds-gap-3); }
 .rb-repo-desc { color: var(--krds-color-text-subtle); word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .rb-repo-meta { color: var(--krds-color-text-subtle); }
-.rb-repo-actions { display: flex; flex: none; flex-wrap: wrap; gap: var(--krds-gap-2); align-items: center; justify-content: flex-end; width: var(--rb-actions-w); }
+.rb-repo-actions { display: flex; flex: none; flex-wrap: wrap; gap: var(--krds-gap-2); align-items: center; justify-content: flex-end; }
 .rb-repo-actions .krds-btn { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
 @media (max-width: 767px) {
   .rb-repo-title { flex-basis: 100%; }
@@ -25,19 +22,14 @@
 .rb-repo-top .rb-tabs::-webkit-scrollbar-thumb { background: var(--krds-color-border-gray); border-radius: var(--krds-radius-max); }
 .rb-repo-top .rb-tabs .tab ul { overflow: visible; }
 /* GitLab 배치: 왼쪽 프로젝트 메뉴 + 본문. 1280 이상에서 메뉴 표시, 그 아래는 탭 줄 */
-.rb-repo-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--krds-gap-7); align-items: start; }
-.rb-repo-main { display: flex; flex-direction: column; gap: var(--krds-gap-7); min-width: 0; }
 .rb-repo-cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--krds-gap-7); }
 .rb-repo-content { display: flex; flex-direction: column; gap: var(--krds-gap-5); min-width: 0; }
-.rb-repo-aside { display: flex; flex-direction: column; gap: var(--krds-gap-7); min-width: 0; }
 @media (min-width: 1024px) {
   /* Figma: 오른쪽 정보 영역이 맨 위(브레드크럼 줄)부터 시작한다 */
-  .rb-repo-layout.has-aside { grid-template-columns: minmax(0, 1fr) var(--rb-info-w); column-gap: var(--rb-col-gap); }
-}
+  }
 @media (max-width: 1023px) {
   /* D-17 2장: 1024 미만은 정보 영역이 본문 위로 올라온다 */
-  .rb-repo-aside { order: -1; }
-}
+  }
 @media (min-width: 1280px) {
   .rb-repo-top .rb-tabs { display: none; }
 }
@@ -52,3 +44,10 @@
 .rb-icon-only { padding-inline: var(--krds-padding-3); }
 .rb-icon-only .ico-toggle { display: none; }
 .rb-avatar-img { object-fit: cover; }
+
+/* D-18 4장: 저장소 본문 열은 읽기 폭 960을 가운데에 두고, 파일 보기와 비교만 컨테이너 전체를 쓴다 */
+.rb-repo-main { display: flex; flex-direction: column; gap: var(--krds-gap-7); width: 100%; max-width: var(--rb-read-w); margin-inline: auto; min-width: 0; }
+.rb-repo-main.is-wide { max-width: none; }
+.rb-repo-title-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rb-repo-name .rb-pill { flex: none; }
+.rb-kbd-inline { font-family: 'D2Coding', ui-monospace, monospace; font-size: var(--krds-font-size-body-xsmall); padding: 0 var(--krds-padding-2); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-small2); }

@@ -70,7 +70,7 @@ export default function Compare() {
   const same = from === to;
 
   return (
-    <ProjectFrame screenId="R-06" tab="" tabLabel={t.Compare_title} data={frame} state={same ? 'Empty' : result.state}>
+    <ProjectFrame screenId="R-06" tab="" tabLabel={t.Compare_title} wide data={frame} state={same ? 'Empty' : result.state}>
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-body-small-bold">{t.Compare_title}</h2>

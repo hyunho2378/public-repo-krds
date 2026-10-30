@@ -89,10 +89,14 @@
 .rb-gbar-drop { position: relative; }
 .rb-gbar-menu { position: absolute; right: 0; top: 100%; z-index: 70; min-width: var(--krds-size-width-menu, 24ch); }
 
-/* 본문 틀: 왼쪽 메뉴 + 본문 (D-17 5장). 펼침 240, 접힘 56, 간격 40, 바깥 24 */
-.rb-shell { display: grid; grid-template-columns: var(--rb-sidebar-w) minmax(0, 1fr); column-gap: var(--rb-col-gap); flex: 1; width: 100%; align-items: start; padding: var(--rb-page-pad); }
-.rb-shell.is-bare { grid-template-columns: minmax(0, 1fr); }
-.rb-shell.is-collapsed, .rb-shell.is-collapsed.has-project { grid-template-columns: var(--rb-sidebar-w-collapsed) minmax(0, 1fr); }
+/* D-18 본문 틀: 가운데 컨테이너(최대 1280, 좌우 24). 왼쪽 메뉴는 전역 개인 목록(is-full)에서만, 도킹 패널은 본문 옆에서 본문을 밀어낸다 */
+.rb-work { display: flex; align-items: flex-start; flex: 1; width: 100%; }
+.rb-work > .rb-shell { flex: 1 1 0; min-width: 0; }
+.rb-shell { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: var(--rb-col-gap); width: 100%; align-items: start; padding: var(--rb-page-pad); box-sizing: border-box; }
+.rb-shell.is-full { grid-template-columns: var(--rb-sidebar-w) minmax(0, 1fr); }
+.rb-shell.is-full.is-collapsed { grid-template-columns: var(--rb-sidebar-w-collapsed) minmax(0, 1fr); }
+.rb-shell.is-drawer .rb-side-wrap { display: none; }
+.rb-main { width: 100%; max-width: var(--rb-container-w); margin-inline: auto; min-width: 0; padding: 0; }
 .rb-side-wrap { min-width: 0; align-self: start; position: sticky; z-index: 20; top: calc(var(--rb-header-h) + var(--rb-page-pad)); }
 .rb-side {
   width: 100%;
@@ -175,7 +179,8 @@
 
 @media (max-width: 767px) {
   /* D-17 5장: 768 미만은 왼쪽 메뉴를 숨기고 머리글의 메뉴 버튼으로 연다 */
-  .rb-shell, .rb-shell.has-project, .rb-shell.is-collapsed { grid-template-columns: minmax(0, 1fr); }
+  .rb-shell, .rb-shell.is-full, .rb-shell.is-full.is-collapsed { grid-template-columns: minmax(0, 1fr); }
+  .rb-shell.is-drawer .rb-side-wrap { display: block; }
   .rb-side-wrap { position: static; z-index: auto; }
   .rb-gbar-navtoggle { display: inline-flex; }
   .rb-side {
@@ -246,4 +251,58 @@
   .rb-gbar-right { margin-left: 0; }
   /* Figma 상자 기준: 검색 아이콘 버튼 44×40(아이콘 20 + 좌우 padding-5 12, 위아래 padding-4 10) */
   .rb-gbar-searchlink { padding: var(--krds-padding-4) var(--krds-padding-5); gap: 0; }
+}
+
+/* ---------- D-18 저장소 탭 줄(높이 48): 머리글 아래 전체 폭 ---------- */
+.rb-rtabs { background: var(--krds-color-surface-gray-subtler); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-rtabs-in { display: flex; align-items: stretch; gap: var(--krds-gap-1); height: var(--rb-tabs-h); margin: 0; padding: 0 var(--rb-page-pad); list-style: none; overflow-x: auto; scrollbar-width: none; }
+.rb-rtabs-in::-webkit-scrollbar { display: none; }
+.rb-rtabs-in > li { display: flex; align-items: stretch; flex: none; }
+.rb-rtab-use { margin-inline-start: auto; }
+.rb-rtab {
+  display: inline-flex; align-items: center; gap: var(--krds-gap-2); box-sizing: border-box;
+  padding: 0 var(--krds-padding-5); border: 0; background: none; cursor: pointer; white-space: nowrap;
+  color: var(--krds-color-text-basic); text-decoration: none; text-align: center;
+  font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-regular);
+  border-bottom: var(--krds-border-width-static-medium) solid transparent;
+}
+.rb-rtab:hover { background: var(--krds-color-action-secondary-hover); }
+.rb-rtab.active { font-weight: var(--rb-fw-current); border-bottom-color: var(--krds-color-border-primary); }
+.rb-rtab-count { display: inline-flex; align-items: center; justify-content: center; min-width: var(--krds-size-height-3); padding: 0 var(--krds-padding-2); border-radius: var(--krds-radius-max); background: var(--krds-color-surface-gray-subtle); font-size: var(--krds-font-size-body-xsmall); line-height: var(--krds-size-height-3); }
+.rb-more-menu { min-width: var(--rb-sidebar-w); max-height: calc(100dvh - var(--rb-header-h) - var(--rb-tabs-h) - var(--rb-masthead-h)); overflow-y: auto; margin-left: 0; margin-top: 0; }
+.rb-more-group + .rb-more-group { border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); margin-top: var(--krds-gap-2); padding-top: var(--krds-gap-2); }
+.rb-more-menu .rb-side-link { justify-content: flex-start; }
+
+/* 머리글 경로(만든 사람 / 이름)와 오른쪽 묶음 */
+.rb-gbar-path { display: inline-flex; align-items: center; gap: var(--krds-gap-2); min-width: 0; white-space: nowrap; color: var(--krds-color-text-subtle); }
+.rb-gbar-pathlink { color: var(--krds-color-text-subtle); text-decoration: none; overflow: hidden; text-overflow: ellipsis; max-width: calc(var(--krds-number-21) * 2); }
+.rb-gbar-pathlink.is-name { color: var(--krds-color-text-basic); font-weight: var(--rb-fw-title); }
+.rb-gbar-pathlink:hover { text-decoration: underline; }
+.rb-gbar-icon { padding-inline: var(--krds-padding-4); }
+.rb-gbar-cta { white-space: nowrap; flex: none; }
+.rb-gbar-right { min-width: 0; flex: none; }
+
+/* ---------- D-18 4장 도킹 패널: 화면 오른쪽 끝, 본문을 밀어냄, 덮개 없음 ---------- */
+.rb-dock {
+  position: sticky; top: var(--rb-header-h); flex: none; box-sizing: border-box;
+  width: var(--rb-dock-w); height: calc(100dvh - var(--rb-header-h));
+  display: flex; flex-direction: column;
+  background: var(--krds-color-surface-white); border-inline-start: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light);
+}
+.rb-dock-head { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-3); min-height: var(--rb-tabs-h); padding: 0 var(--krds-padding-5) 0 var(--krds-padding-7); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-dock-head h2 { margin: 0; }
+.rb-dock-body { flex: 1; overflow-y: auto; padding: var(--krds-padding-7); }
+.rb-dock-info { display: flex; flex-direction: column; gap: var(--krds-gap-6); }
+.rb-dock-intro { margin: 0; overflow-wrap: anywhere; }
+.rb-dock-counts { display: flex; flex-wrap: wrap; gap: var(--krds-gap-2) var(--krds-gap-6); list-style: none; margin: 0; padding: 0; }
+.rb-dock-list { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; margin: 0; }
+.rb-dock-row > dd.rb-dock-value, .rb-dock-row > dd.rb-dock-link { padding-inline-start: var(--krds-padding-6); }
+.rb-dock-row { display: contents; }
+.rb-dock-row > dt, .rb-dock-row > dd { display: flex; align-items: center; min-height: var(--rb-row-h); margin: 0; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); text-align: start; }
+.rb-dock-row > dt { color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); white-space: nowrap; }
+.rb-dock-value { overflow-wrap: anywhere; }
+.rb-dock-link { white-space: nowrap; font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
+@media (max-width: 767px) {
+  .rb-work { flex-direction: column; }
+  .rb-dock { position: fixed; inset-inline: 0; bottom: 0; top: auto; width: auto; height: 70dvh; z-index: 95; border-inline-start: 0; border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium3) var(--krds-radius-medium3) 0 0; }
 }
