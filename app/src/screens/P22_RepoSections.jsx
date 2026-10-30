@@ -2,7 +2,9 @@
 // 원래 GitLab에 있는 메뉴를 빼지 않는다(PRD 0장). 읽기는 공개 API로 실제 자료를 쓰고,
 // 로그인해야 볼 수 있는 메뉴는 GitLab과 같게 로그인 안내를 보여 준다(가짜 자료를 만들지 않는다).
 import { newWindow } from '../components/Layout/newWindow';
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { Icon } from '../components/Code/Icon';
 import { t } from '../copy/ko';
 import { gitlab } from '../api/client';
 import { useData } from '../api/useData';
@@ -11,7 +13,84 @@ import { EmptyState, Status } from '../components/Feedback/Status';
 import { u } from '../copy/ui';
 import { orgLabel } from '../components/Layout/orgLabel';
 import { day } from './parts/repoCommon';
+import { rp } from '../copy/work';
+import { IconButton } from '../components/Action/IconButton';
+import { Avatar } from '../components/Layout/Avatar';
+import './parts/glRepo.css';
 import '../components/Code/code.css';
+
+
+function MembersView({ list }) {
+  const [q, setQ] = useState('');
+  const rows = list.filter((m) => `${m.name} ${m.username}`.toLowerCase().includes(q.trim().toLowerCase()));
+  return (
+    <>
+      <h2 className="gl-page-title">{rp.membersTitle}</h2>
+      <p className="gl-page-help">{rp.membersHelp}</p>
+      <div className="gl-tabs" role="tablist">
+        <span className="gl-tab active" role="tab" aria-selected="true">{rp.tabMembers} <span className="rb-pill">{list.length}</span></span>
+        <span className="gl-tab" role="tab" aria-selected="false">{rp.tabDirect} <span className="rb-pill">{list.length}</span></span>
+      </div>
+      <div className="gl-work-filter">
+        <div className="gl-work-bar" role="search">
+          <IconButton icon="ext/history" label={rp.recent} onClick={() => setQ('')} />
+          <input type="search" value={q} placeholder={rp.filterMembers} aria-label={rp.filterMembers} onChange={(e) => setQ(e.target.value)} />
+          <Icon name="search" />
+        </div>
+      </div>
+      <div className="gl-table-wrap">
+        <table className="gl-table">
+          <thead><tr><th scope="col">{rp.colAccount}</th><th scope="col">{rp.colRole}</th><th scope="col">{rp.colActivity}</th></tr></thead>
+          <tbody>
+            {rows.map((m) => (
+              <tr key={m.id}>
+                <td><div className="gl-acct"><Avatar src={m.avatar_url} name={m.name} /><div><strong>{orgLabel(m.name)}</strong><small>@{m.username}</small></div></div></td>
+                <td>{rp.roles[m.access_level] || m.access_level}</td>
+                <td>{m.created_at ? `${rp.joined} ${day(m.created_at)}` : ''}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+}
+
+function LabelsView({ list, id }) {
+  const [q, setQ] = useState('');
+  const rows = list.filter((l) => l.name.toLowerCase().includes(q.trim().toLowerCase())).sort((a, b) => a.name.localeCompare(b.name));
+  const prio = rows.filter((l) => l.priority != null);
+  const other = rows.filter((l) => l.priority == null);
+  const row = (l) => (
+    <li className="gl-label-row" key={l.id || l.name}>
+      <span className="gl-label-name" style={{ background: l.color, color: l.text_color }}>{l.name}</span>
+      <span className="gl-label-links">
+        <Link className="krds-link" to={`/projects/${id}/issues`}>{rp.toIssues}</Link>
+        <Link className="krds-link" to={`/projects/${id}/merge-requests`}>{rp.toMrs}</Link>
+      </span>
+    </li>
+  );
+  return (
+    <>
+      <div className="gl-tabs">
+        <span className="gl-tab active">{rp.tabActive}</span>
+        <span className="gl-tab">{rp.tabArchived}</span>
+        <span className="gl-tools">
+          <span className="gl-work-bar"><input type="search" value={q} placeholder={rp.search} aria-label={rp.search} onChange={(e) => setQ(e.target.value)} /><Icon name="search" /></span>
+        </span>
+      </div>
+      <section className="gl-box">
+        <h2 className="gl-box-head">{rp.prio} <span className="rb-subtle">{prio.length}</span></h2>
+        <p className="gl-box-help">{rp.prioHelp}</p>
+        {prio.length ? <ul>{prio.map(row)}</ul> : null}
+      </section>
+      <section className="gl-box">
+        <h2 className="gl-box-head">{rp.others} <span className="rb-subtle">{other.length}</span></h2>
+        {other.length ? <ul>{other.map(row)}</ul> : <p className="gl-box-empty">{rp.items} 0</p>}
+      </section>
+    </>
+  );
+}
 
 /** 메뉴별 설정: 자료 부르는 함수, 제목, 쉬운 설명, 빈 상태 문구, 줄 그리기. */
 const SECTIONS = {
@@ -105,6 +184,16 @@ export default function RepoSections({ section }) {
           <h2 className="krds-text-heading-small">{u.Wiki_emptyTitle}</h2>
           <p className="krds-text-body-medium rb-subtle">{u.Wiki_emptyBody}</p>
           <a className="krds-btn medium primary" href={`${url}/-/wikis/home?view=create`} {...newWindow(String(u.Wiki_create))}>{u.Wiki_create}</a>
+        </div>
+      </ProjectFrame>
+    );
+  }
+  if (list && (section === 'members' || section === 'labels')) {
+    const tab = section;
+    return (
+      <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state={list.length ? 'Ideal' : 'Empty'}>
+        <div className="rb-code-area">
+          {section === 'members' ? <MembersView list={list} /> : <LabelsView list={list} id={id} />}
         </div>
       </ProjectFrame>
     );
