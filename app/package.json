@@ -7,7 +7,7 @@
     "sync:krds": "node scripts/sync-krds.mjs",
     "dev": "vite --port 5731 --host 127.0.0.1",
     "build": "vite build",
-    "audit:code": "node scripts/audit-code.mjs",
+    "audit:code": "node scripts/audit-code.mjs && node scripts/check-copy.mjs",
     "check:responsive": "node scripts/check-responsive.mjs",
     "build:pages": "VITE_STATIC=1 VITE_BASE=/public-repo-krds/ vite build",
     "compare:boxes": "node scripts/compare-boxes.mjs"

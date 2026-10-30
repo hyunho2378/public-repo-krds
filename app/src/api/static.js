@@ -7,7 +7,7 @@ import { repository } from '@server/repository.js';
 
 const UPSTREAM = 'https://gitlab.aigov.go.kr';
 const DATA = import.meta.env.BASE_URL + 'data/';
-export const STATIC_NOTICE = '시험판에서는 로그인과 저장을 할 수 없습니다. 조회 기능만 쓸 수 있습니다.';
+export const STATIC_NOTICE = '시험판 조회 전용';
 
 export class StaticError extends Error {
   constructor(message, status, code) {
@@ -35,7 +35,7 @@ const allowed = /^projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|compare|commits(
 
 async function gitlabGet(rest) {
   const [sub, query = ''] = rest.split('?');
-  if (!allowed.test(sub)) throw new StaticError('허용되지 않은 경로입니다.', 400, 'NOT_ALLOWED');
+  if (!allowed.test(sub)) throw new StaticError('허용 안 된 경로', 400, 'NOT_ALLOWED');
   const r = await fetch(`${UPSTREAM}/api/v4/${sub}${query ? '?' + query : ''}`, { headers: { Accept: 'application/json' } });
   if (!r.ok) throw new StaticError(r.status === 404 ? '자료를 찾을 수 없습니다.' : '공개 저장소 조회에 실패했습니다.', r.status);
   const raw = sub.endsWith('/raw');
@@ -67,11 +67,11 @@ const routes = [
     const p = (await catalog()).projects.find((x) => x.id === Number(body.projectId));
     return classify((p?.name || '') + ' ' + (p?.description || '') + ' ' + (body.readme || ''));
   }],
-  ['POST', /^\/duplicates$/, 'F-04', async ({ body }) => ({ ...(await catalog()).search((body.name || '') + ' ' + (body.description || ''), {}, 5), notice: '문자·업무말 유사도 후보입니다. 중복 확정이 아닙니다.' })],
+  ['POST', /^\/duplicates$/, 'F-04', async ({ body }) => ({ ...(await catalog()).search((body.name || '') + ' ' + (body.description || ''), {}, 5), notice: '유사도 후보, 중복 확정 아님' })],
   ['GET', /^\/projects\/(\d+)\/connections$/, 'F-05', async ({ m }) => {
     const c = await catalog();
     const p = c.projects.find((x) => x.id === Number(m[1]));
-    return { items: p ? c.search(p.name, {}, 6).items.filter((x) => x.id !== p.id) : [], notice: '공개 프로젝트의 유사 후보입니다. 사람에게 알림을 전송하지 않았습니다.' };
+    return { items: p ? c.search(p.name, {}, 6).items.filter((x) => x.id !== p.id) : [], notice: '공개 프로젝트 유사 후보, 알림 미전송' };
   }],
   ['GET', /^\/projects\/(\d+)\/card$/, 'F-11', async ({ m }) => {
     const d = await repo.detail(m[1]);
@@ -88,7 +88,7 @@ const routes = [
     return publication(d.files, d.readme, d.complete).publicResult;
   }],
   ['GET', /^\/projects\/(\d+)\/security-alerts$/, 'F-22', readOnly],
-  ['GET', /^\/templates\/readme$/, 'F-24', async () => ({ markdown: template, status: 'service-draft', notice: '공공 저장소용 서비스 제안 양식입니다. 행안부 공식 승인 양식이 아닙니다.' })],
+  ['GET', /^\/templates\/readme$/, 'F-24', async () => ({ markdown: template, status: 'service-draft', notice: '서비스 제안 양식, 행안부 승인 양식 아님' })],
   ['POST', /^\/projects\/(\d+)\/readme-proposals$/, 'F-23', async ({ m }) => {
     const d = await repo.detail(m[1]);
     const c = card(d.project, d.readme, d.files);
@@ -103,27 +103,27 @@ const routes = [
       const name = p.organization || '기관 확인 필요';
       groups.set(name, (groups.get(name) || 0) + 1);
     }
-    return { items: [...groups].map(([name, projectCount]) => ({ name, projectCount })), notice: '공개 스냅샷 기관명 추정 집계입니다. 기관 인증 통계가 아닙니다.' };
+    return { items: [...groups].map(([name, projectCount]) => ({ name, projectCount })), notice: '기관명 추정 집계, 인증 통계 아님' };
   }],
   ['GET', /^\/requests$/, 'F-35', async () => ({ items: [], total: 0, staticMode: true, notice: STATIC_NOTICE })],
   ['POST', /^\/requests$/, 'F-35', readOnly],
   ['POST', /^\/requests\/[^/]+\/votes$/, 'F-35', readOnly],
-  ['GET', /^\/projects\/(\d+)\/law-alerts$/, 'F-13', async () => ({ status: 'not-connected', items: [], checkedAt: null, notice: '법제처 현행법령 연동 키와 변경 추적 설정이 필요합니다.' })],
-  ['GET', /^\/projects\/(\d+)\/related-resources$/, 'F-34', async () => ({ status: 'not-connected', items: [], notice: '공공데이터 연결 검증 전입니다. 관련 자료를 임의로 추천하지 않습니다.' })],
+  ['GET', /^\/projects\/(\d+)\/law-alerts$/, 'F-13', async () => ({ status: 'not-connected', items: [], checkedAt: null, notice: '법제처 연동 키/변경 추적 설정 필요' })],
+  ['GET', /^\/projects\/(\d+)\/related-resources$/, 'F-34', async () => ({ status: 'not-connected', items: [], notice: '공공데이터 연결 검증 전, 임의 추천 없음' })],
   ['GET', /^\/projects\/(\d+)\/version-guide$/, 'F-36', async ({ m }) => {
     const d = await repo.detail(m[1]);
     const items = await repo.get(`projects/${d.project.id}/repository/commits?per_page=10`);
-    return { items: items.map((c) => ({ id: c.id, title: c.title, committedAt: c.committed_date, url: c.web_url })), method: '원문 변경 기록', notice: '오류 원인 자동 진단과 자연어 변환은 미연결입니다.' };
+    return { items: items.map((c) => ({ id: c.id, title: c.title, committedAt: c.committed_date, url: c.web_url })), method: '원문 변경 기록', notice: '오류 원인 진단/자연어 변환 미연결' };
   }],
   ['POST', /^\/projects\/(\d+)\/handover$/, 'F-37', async ({ m }) => {
     const d = await repo.detail(m[1]);
     const c = card(d.project, d.readme, d.files);
     return { markdown: '# ' + c.title + ' 인수인계 초안\n\n## 하는 일\n' + (c.summary || '작성 필요') + '\n\n## 실행 환경\n제작자 확인 필요\n\n## 원문 설명\n' + d.readme, status: 'draft', method: '원문 조립', needsReview: true };
   }],
-  ['GET', /^\/development-guide$/, 'F-38', async () => ({ status: 'service-draft', steps: [{ id: 1, title: '비슷한 도구부터 찾기' }, { id: 2, title: '사용할 자료와 개인정보 확인' }, { id: 3, title: '작은 기능부터 만들고 시험' }, { id: 4, title: '공개 준비 점검과 제작자 확인' }, { id: 5, title: '설명과 인수인계 기록' }], notice: '서비스 제안 점검표이며 기관의 공식 승인 절차를 대체하지 않습니다.' })],
+  ['GET', /^\/development-guide$/, 'F-38', async () => ({ status: 'service-draft', steps: [{ id: 1, title: '비슷한 도구부터 찾기' }, { id: 2, title: '사용 자료/개인정보 확인' }, { id: 3, title: '작은 기능부터 만들고 시험' }, { id: 4, title: '공개 준비 점검/제작자 확인' }, { id: 5, title: '설명/인수인계 기록' }], notice: '서비스 제안 점검표, 기관 승인 절차 대체 불가' })],
   ['GET', /^\/coverage-map$/, 'F-39', async () => {
     const { projects } = await catalog();
-    return { fields: taxonomy.map(([name]) => ({ name, count: projects.filter((p) => p.classification.fields.some((f) => f.name === name)).length })), source: '공개 목록 스냅샷 규칙 분류', needsReview: true, notice: '분류 중복 가능. 실제 수요나 미개발 분야를 확정하지 않습니다.' };
+    return { fields: taxonomy.map(([name]) => ({ name, count: projects.filter((p) => p.classification.fields.some((f) => f.name === name)).length })), source: '공개 목록 스냅샷 규칙 분류', needsReview: true };
   }],
 ];
 
@@ -147,5 +147,5 @@ export async function staticRequest(path, options = {}) {
       }
     }
   }
-  throw new StaticError('찾을 수 없는 요청입니다.', 404);
+  throw new StaticError('요청 없음', 404);
 }

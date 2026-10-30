@@ -27,7 +27,7 @@ export default function Fields() {
               </li>
             ))}
           </ul>
-          <p className="krds-text-body-small rb-subtle">{map.data.data.notice}</p>
+          {map.data.data.notice ? <p className="krds-text-body-small rb-subtle">{map.data.data.notice}</p> : null}
         </>
       )}
     </Page>

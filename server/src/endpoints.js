@@ -32,7 +32,7 @@ export const endpoints=[
     "F-03",
     "GET",
     "/catalog",
-    "분야와 조건 필터",
+    "분야/조건 필터",
     null,
     {
       "items": [],
@@ -236,7 +236,7 @@ export const endpoints=[
     "F-34",
     "GET",
     "/projects/{id}/related-resources",
-    "공공데이터와 기존 도구",
+    "공공데이터/기존 도구",
     null,
     {
       "items": []
@@ -282,7 +282,7 @@ export const endpoints=[
     "F-36",
     "GET",
     "/projects/{id}/version-guide",
-    "버전과 오류 안내",
+    "버전/오류 안내",
     null,
     {
       "items": [],
@@ -317,7 +317,7 @@ export const endpoints=[
     "F-39",
     "GET",
     "/coverage-map",
-    "중복과 미개발 분야 지도",
+    "중복/미개발 분야 지도",
     null,
     {
       "fields": [],

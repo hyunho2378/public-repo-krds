@@ -9,7 +9,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "mcp",
@@ -17,7 +17,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "public-service",
@@ -25,7 +25,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "startup",
@@ -33,7 +33,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "ai",
@@ -41,7 +41,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "alio",
@@ -49,7 +49,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "korean",
@@ -57,7 +57,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "opendata",
@@ -65,7 +65,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "rag",
@@ -73,7 +73,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "utility",
@@ -81,7 +81,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "web-service",
@@ -89,7 +89,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "game",
@@ -97,7 +97,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "mobile-app",
@@ -105,7 +105,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "offline",
@@ -113,7 +113,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "desktop",
@@ -121,7 +121,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "map",
@@ -129,7 +129,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "exe",
@@ -137,7 +137,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "calendar",
@@ -145,7 +145,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "general-administration",
@@ -153,7 +153,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "template",
@@ -161,7 +161,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "automation",
@@ -169,14 +169,14 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "open-api",
       "count": 2,
       "fields": [
         {
-          "name": "데이터와 정보화",
+          "name": "데이터/정보화",
           "evidence": [
             "api"
           ]
@@ -184,7 +184,7 @@
       ],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "archive",
@@ -192,7 +192,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "defense",
@@ -200,7 +200,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "govtech",
@@ -208,7 +208,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "military-manpower",
@@ -216,7 +216,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "national-assembly",
@@ -224,7 +224,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "parliamentary-audit",
@@ -232,7 +232,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "public-administration",
@@ -240,7 +240,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "windows",
@@ -248,7 +248,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "social policy",
@@ -256,7 +256,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "document",
@@ -264,7 +264,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "embedding",
@@ -272,7 +272,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "handover",
@@ -280,7 +280,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "local-first",
@@ -288,7 +288,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "local-llm",
@@ -296,7 +296,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "ocr",
@@ -304,7 +304,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "python",
@@ -312,14 +312,14 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "no-ai-api",
       "count": 4,
       "fields": [
         {
-          "name": "데이터와 정보화",
+          "name": "데이터/정보화",
           "evidence": [
             "api"
           ]
@@ -327,14 +327,14 @@
       ],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "pdf",
       "count": 6,
       "fields": [
         {
-          "name": "문서와 자료",
+          "name": "문서/자료",
           "evidence": [
             "pdf"
           ]
@@ -342,7 +342,7 @@
       ],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "civil-engineering",
@@ -350,7 +350,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "construction-estimate",
@@ -358,7 +358,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "design-automation",
@@ -366,7 +366,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "dxf",
@@ -374,7 +374,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "local-government",
@@ -382,7 +382,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "quantity-takeoff",
@@ -390,7 +390,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "road-pavement",
@@ -398,7 +398,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "fisheries",
@@ -406,7 +406,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "flutter",
@@ -414,7 +414,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "gis",
@@ -422,7 +422,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "incheon",
@@ -430,7 +430,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "marine",
@@ -438,7 +438,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "mobile",
@@ -446,7 +446,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "ocean",
@@ -454,7 +454,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "tide",
@@ -462,7 +462,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "weather",
@@ -470,7 +470,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "public-finance",
@@ -478,7 +478,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "government-support",
@@ -486,7 +486,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "korea",
@@ -494,7 +494,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "public-data",
@@ -502,7 +502,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "static-site",
@@ -510,7 +510,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "STT",
@@ -518,7 +518,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "TTS",
@@ -526,7 +526,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "edu",
@@ -534,7 +534,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "ai-skill",
@@ -542,7 +542,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "chatgpt",
@@ -550,7 +550,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "claude",
@@ -558,7 +558,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "codex",
@@ -566,7 +566,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "design",
@@ -574,7 +574,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "gemini",
@@ -582,7 +582,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "infographic",
@@ -590,7 +590,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "poster",
@@ -598,7 +598,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "public-sector",
@@ -606,7 +606,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "code-generator",
@@ -614,7 +614,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "llama.cpp",
@@ -622,7 +622,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "on-premis",
@@ -630,7 +630,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "security",
@@ -638,7 +638,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "vworld",
@@ -646,7 +646,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "coordinates",
@@ -654,7 +654,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "excel",
@@ -662,7 +662,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "kml",
@@ -670,7 +670,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "polygon",
@@ -678,7 +678,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "inchoen",
@@ -686,7 +686,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "tm",
@@ -694,7 +694,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "utiliity",
@@ -702,7 +702,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "industrial-safety",
@@ -710,7 +710,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "aquaculture",
@@ -718,7 +718,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "artificial-reef",
@@ -726,7 +726,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "geospatial",
@@ -734,7 +734,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "marine-reseources",
@@ -742,7 +742,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "reef",
@@ -750,7 +750,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "fisheries-license",
@@ -758,7 +758,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "geojson",
@@ -766,7 +766,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "goespatial",
@@ -774,7 +774,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "license",
@@ -782,7 +782,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "json",
@@ -790,7 +790,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "statistics",
@@ -798,14 +798,14 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "hwpx",
       "count": 6,
       "fields": [
         {
-          "name": "문서와 자료",
+          "name": "문서/자료",
           "evidence": [
             "hwp"
           ]
@@ -813,7 +813,7 @@
       ],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "table",
@@ -821,7 +821,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "table-extraction",
@@ -829,7 +829,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "html",
@@ -837,7 +837,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "risk-assessment",
@@ -845,7 +845,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "small-business",
@@ -853,7 +853,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "island",
@@ -861,7 +861,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "kml-generator",
@@ -869,7 +869,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "fishing-harbor",
@@ -877,7 +877,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "harbor",
@@ -885,7 +885,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "openpyxl",
@@ -893,7 +893,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "scaffolding",
@@ -901,7 +901,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "xlsx",
@@ -909,7 +909,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "budget",
@@ -917,7 +917,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "onnara",
@@ -925,7 +925,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "blender",
@@ -933,7 +933,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "coco17",
@@ -941,7 +941,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "computer-vision",
@@ -949,7 +949,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "open-data",
@@ -957,7 +957,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "pose-classification",
@@ -965,7 +965,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "synthetic-data",
@@ -973,7 +973,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "koda",
@@ -981,7 +981,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "pesticide",
@@ -989,7 +989,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "trade",
@@ -997,7 +997,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "agriculture",
@@ -1005,7 +1005,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "postit",
@@ -1013,7 +1013,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "orchestrator",
@@ -1021,7 +1021,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "search enging",
@@ -1029,7 +1029,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "rpa",
@@ -1037,7 +1037,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "search engine",
@@ -1045,7 +1045,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "backup",
@@ -1053,7 +1053,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "dotnet",
@@ -1061,7 +1061,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "tray-app",
@@ -1069,7 +1069,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "wpf",
@@ -1077,7 +1077,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "hallucination",
@@ -1085,7 +1085,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "nextjs",
@@ -1093,7 +1093,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "k-ai-champion",
@@ -1101,7 +1101,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "contact-finder",
@@ -1109,7 +1109,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     },
     {
       "topic": "sqlite",
@@ -1117,7 +1117,7 @@
       "fields": [],
       "needsReview": true,
       "method": "규칙 분류 초안",
-      "notice": "기존 39종 원문값 미확보. 승인된 통합 체계가 아닙니다."
+      "notice": "기존 39종 원문값 미확보, 승인된 통합 체계 아님"
     }
   ]
 }
