@@ -6,6 +6,8 @@ import { Icon } from '../../components/Code/Icon';
 import { IconButton } from '../../components/Action/IconButton';
 import { Menu } from '../../components/Navigation/Menu';
 import { parseHunks, diffStat } from '../../components/Code/DiffView';
+import { Link } from 'react-router-dom';
+import { gitlab } from '../../api/client';
 import { CopyButton } from './parts';
 
 const nameOf = (f) => f.new_path || f.old_path || '';
@@ -37,8 +39,47 @@ function Stat({ add, del }) {
   );
 }
 
-function FileBlock({ file, index, mode, open, onToggle }) {
-  const rows = useMemo(() => parseHunks(file.diff), [file.diff]);
+const CTX = 20;
+
+function FileBlock({ file, index, mode, open, onToggle, id, refName, webUrl }) {
+  const base = useMemo(() => parseHunks(file.diff), [file.diff]);
+  const [lines, setLines] = useState(null);
+  const [above, setAbove] = useState(0);
+  const [below, setBelow] = useState(0);
+  const [failed, setFailed] = useState(false);
+  const canExpand = id && refName && file.new_path && !file.deleted_file && !file.new_file && base.length > 0 && !failed;
+  const load = async () => {
+    if (lines) return lines;
+    try {
+      const txt = (await gitlab.fileRaw(id, file.new_path, refName)).data;
+      const l = String(txt ?? '').replace(/\r\n/g, '\n').split('\n');
+      setLines(l);
+      return l;
+    } catch { setFailed(true); return null; }
+  };
+  const rows = useMemo(() => {
+    if (!lines || (!above && !below)) return base;
+    const body = base.filter((r) => r.kind !== 'hunk');
+    if (!body.length) return base;
+    const first = body[0];
+    const n0 = first.b ?? first.a;
+    const up = [];
+    for (let n = Math.max(1, n0 - above); n < n0; n += 1) up.push({ kind: 'ctx', a: n, b: n, text: lines[n - 1] ?? '' });
+    const lastA = [...body].reverse().find((r) => r.a !== undefined);
+    const lastB = [...body].reverse().find((r) => r.b !== undefined);
+    const nextA = (lastA?.a ?? 0) + 1;
+    const nextB = (lastB?.b ?? 0) + 1;
+    const down = [];
+    for (let k = 0; k < below && nextB + k <= lines.length; k += 1) down.push({ kind: 'ctx', a: nextA + k, b: nextB + k, text: lines[nextB + k - 1] ?? '' });
+    const h0 = base[0]?.kind === 'hunk';
+    return [...(h0 ? [base[0]] : []), ...up, ...(h0 ? base.slice(1) : base), ...down];
+  }, [base, lines, above, below]);
+  const firstN = (base.find((r) => r.kind !== 'hunk') || {});
+  const startN = (firstN.b ?? firstN.a ?? 1) - above;
+  const moreAbove = canExpand && startN > 1;
+  const lastB0 = [...base].reverse().find((r) => r.b !== undefined);
+  const moreBelow = canExpand && (!lines || ((lastB0?.b ?? 0) + below) < lines.length);
+  const expand = async (dir) => { const l = await load(); if (!l) return; if (dir === 'up') setAbove((v) => v + CTX); else setBelow((v) => v + CTX); };
   const st = useMemo(() => diffStat([file]), [file]);
   const name = nameOf(file);
   return (
@@ -51,13 +92,22 @@ function FileBlock({ file, index, mode, open, onToggle }) {
         <CopyButton text={name} label={g.copyPath} />
         <span className="gl-file-side">
           <Stat add={st.add} del={st.del} />
-          <IconButton icon="ellipsis_vertical" label={g.moreOpts} size="small" />
+          <Menu label={g.moreOpts} align="right" toggle={false} btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="ellipsis_vertical" />}>
+            {(close) => (
+              <ul className="drop-list">
+                {id && refName ? <li><Link className="item-link" to={`/projects/${id}/code/${(file.new_path || name).split('/').map(encodeURIComponent).join('/')}?ref=${encodeURIComponent(refName)}`} onClick={close}>{g.viewAtCommit}</Link></li> : null}
+                {webUrl && refName ? <li><a className="item-link" href={`${webUrl}/-/raw/${encodeURIComponent(refName)}/${(file.new_path || name).split('/').map(encodeURIComponent).join('/')}`} onClick={close}>{g.openRawAtCommit}</a></li> : null}
+                <li><button type="button" className="item-link" onClick={() => { navigator.clipboard.writeText(name); close(); }}>{g.copyPath}</button></li>
+              </ul>
+            )}
+          </Menu>
         </span>
       </header>
       {open && file.diff ? (
         <div className="gl-code-scroll rb-table-scroll" tabIndex={0} aria-label={name}>
           <table className="gl-diff-table">
             <tbody>
+              {moreAbove ? <tr className="is-hunk"><td colSpan={mode === 'parallel' ? 4 : 3}><button type="button" className="gl-expand" aria-label={g.showAbove} title={g.showAbove} onClick={() => expand('up')}><Icon name="upload" /></button></td></tr> : null}
               {mode === 'parallel'
                 ? pair(rows).map(([l, r], i) => (l?.kind === 'hunk' ? (
                   <tr key={i} className="is-hunk"><td colSpan={4}><code>{l.text}</code></td></tr>
@@ -78,6 +128,7 @@ function FileBlock({ file, index, mode, open, onToggle }) {
                     <td className="gl-ln"><code>{(r.kind === 'add' ? '+' : r.kind === 'del' ? '-' : ' ') + r.text}</code></td>
                   </tr>
                 )))}
+              {moreBelow ? <tr className="is-hunk"><td colSpan={mode === 'parallel' ? 4 : 3}><button type="button" className="gl-expand" aria-label={g.showBelow} title={g.showBelow} onClick={() => expand('down')}><Icon name="download" /></button></td></tr> : null}
             </tbody>
           </table>
         </div>
@@ -129,7 +180,7 @@ function TreeNode({ node, stats }) {
   );
 }
 
-export function GlDiff({ files }) {
+export function GlDiff({ files, id, refName, webUrl }) {
   const [mode, setMode] = useState('inline');
   const [panel, setPanel] = useState(true);
   const [view, setView] = useState('tree');
@@ -178,7 +229,7 @@ export function GlDiff({ files }) {
           </aside>
         ) : null}
         <div className="gl-files">
-          {files.map((f, i) => <FileBlock key={i} file={f} index={i} mode={mode} open={!closed[i]} onToggle={() => setClosed({ ...closed, [i]: !closed[i] })} />)}
+          {files.map((f, i) => <FileBlock key={i} file={f} index={i} id={id} refName={refName} webUrl={webUrl} mode={mode} open={!closed[i]} onToggle={() => setClosed({ ...closed, [i]: !closed[i] })} />)}
         </div>
       </div>
     </div>

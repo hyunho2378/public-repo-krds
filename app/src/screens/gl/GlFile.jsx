@@ -12,6 +12,7 @@ import { day } from './format';
 import { CopyButton } from './parts';
 
 const CHUNK = 1500;
+const PKG = { 'package.json': 'npm', 'package-lock.json': 'npm', 'yarn.lock': 'Yarn', 'Gemfile': 'Bundler', 'Gemfile.lock': 'Bundler', 'requirements.txt': 'pip', 'go.mod': 'Go modules', 'pom.xml': 'Maven', 'composer.json': 'Composer', 'Cargo.toml': 'Cargo' };
 const isMd = (p) => /\.(md|markdown)$/i.test(p || '');
 
 function sizeLabel(bytes) {
@@ -23,8 +24,17 @@ function sizeLabel(bytes) {
 
 function Lines({ lines, lang, blame }) {
   const [shown, setShown] = useState(CHUNK);
-  const hash = typeof window !== 'undefined' ? window.location.hash : '';
-  const target = Number((hash.match(/^#L(\d+)/) || [])[1]) || 0;
+  const [hash, setHash] = useState(typeof window !== 'undefined' ? window.location.hash : '');
+  useEffect(() => { const on = () => setHash(window.location.hash); window.addEventListener('hashchange', on); return () => window.removeEventListener('hashchange', on); }, []);
+  const m = hash.match(/^#L(\d+)(?:-(\d+))?/) || [];
+  const target = Number(m[1]) || 0;
+  const end = Number(m[2]) || target;
+  const onNo = (e, n) => {
+    if (!e.shiftKey || !target) return;
+    e.preventDefault();
+    const a = Math.min(target, n); const b = Math.max(target, n);
+    window.location.hash = `L${a}-${b}`;
+  };
   useEffect(() => { if (target > shown) setShown(Math.min(lines.length, target + 50)); }, [target]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!target) return undefined;
@@ -40,9 +50,9 @@ function Lines({ lines, lang, blame }) {
             const n = i + 1;
             const info = blame ? blame.get(n) : null;
             return (
-              <tr key={n} id={`L${n}`} className={target === n ? 'is-target' : undefined}>
-                {blame ? <td className="gl-blame"><span className="gl-trunc">{info?.author}</span><span>{info ? day(info.date) : ''}</span></td> : null}
-                <td className="gl-no"><a href={`#L${n}`} aria-label={g.lineLink(n)}>{n}</a></td>
+              <tr key={n} id={`L${n}`} className={target && n >= target && n <= end ? 'is-target' : undefined}>
+                {blame ? <td className={"gl-blame" + (info?.first ? " is-first" : "")} title={info?.title}>{info?.first ? <><span className="gl-trunc gl-blame-title">{info.title}</span><span className="gl-blame-meta">{info.author} {day(info.date)}</span></> : null}</td> : null}
+                <td className="gl-no"><a href={`#L${n}`} aria-label={g.lineLink(n)} onClick={(e) => onNo(e, n)}>{n}</a></td>
                 <td className="gl-ln"><code>{tokenize(line, lang).map(([role, s], k) => <span key={k} className={role === 'plain' ? undefined : `tok-${role}`}>{s}</span>)}</code></td>
               </tr>
             );
@@ -61,7 +71,7 @@ function headingsOf(md) {
 }
 
 /** 파일 제목 줄: 큰 파일 이름, 파일 찾기, 편집(비활성), 더보기 */
-export function FileTitle({ path, project, refName, onFind }) {
+export function FileTitle({ path, project, refName, onFind, permalink }) {
   const name = path.split('/').pop();
   const web = `${project.web_url}/-/blob/${encodeURIComponent(refName)}/${path.split('/').map(encodeURIComponent).join('/')}`;
   return (
@@ -69,10 +79,11 @@ export function FileTitle({ path, project, refName, onFind }) {
       <h2 className="gl-title gl-filetitle-name"><Icon name={isMd(path) ? 'ext/file-text' : 'ext/file'} /><span>{name}</span></h2>
       <div className="gl-head-actions">
         <button type="button" className="krds-btn small tertiary" onClick={onFind}>{g.findFile}</button>
-        <button type="button" className="krds-btn small tertiary" disabled title={g.editDisabled}>{g.edit}</button>
+        <button type="button" className="krds-btn small tertiary" disabled title={g.editDisabled} aria-label={g.editMenu}><span>{g.edit}</span><Icon name="arrow-down" /></button>
         <Menu label={g.moreOpts} align="right" toggle={false} btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="ellipsis_vertical" />}>
           {(close) => (
             <ul className="drop-list">
+              <li><button type="button" className="item-link" onClick={() => { navigator.clipboard.writeText(permalink || window.location.href); close(); }}>{g.permalink}<kbd className="rb-kbd" aria-hidden="true">y</kbd></button></li>
               <li><a className="item-link" href={web} {...newWindow(g.openOrigin)} onClick={close}>{g.openOrigin}</a></li>
               <li><button type="button" className="item-link" onClick={() => { navigator.clipboard.writeText(path); close(); }}>{g.copyPath}</button></li>
             </ul>
@@ -80,6 +91,14 @@ export function FileTitle({ path, project, refName, onFind }) {
         </Menu>
       </div>
     </div>
+  );
+}
+
+export function PackageNote({ path }) {
+  const m = PKG[path.split('/').pop()];
+  if (!m) return null;
+  return (
+    <p className="gl-pkgnote"><Icon name="document-check" /><span>{g.pkgNote(m)}</span> <a className="krds-link" href="https://docs.gitlab.com/user/project/repository/files/" {...newWindow(g.learnMore)}>{g.learnMore}</a></p>
   );
 }
 

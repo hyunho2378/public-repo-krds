@@ -11,7 +11,8 @@ import { gitlab, request } from '../api/client';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
-import { GlFile, FileTitle } from './gl/GlFile';
+import { GlFile, FileTitle, PackageNote } from './gl/GlFile';
+import { GlCommitBar } from './gl/parts';
 import { IconButton as GlIconButton } from '../components/Action/IconButton';
 import { g } from '../copy/gl';
 import './gl/gl.css';
@@ -133,7 +134,7 @@ function useBlame(id, path, ref) {
       let n = 1;
       for (const chunk of res.data || []) {
         for (let i = 0; i < (chunk.lines || []).length; i++) {
-          map.set(n++, { author: chunk.commit?.author_name || '', date: chunk.commit?.authored_date });
+          map.set(n++, { author: chunk.commit?.author_name || '', date: chunk.commit?.authored_date, title: chunk.commit?.title || '', sha: chunk.commit?.id || '', first: i === 0 });
         }
       }
       setBlame(map);
@@ -200,7 +201,14 @@ export default function Code() {
         /* 파일이 아니면 폴더로 읽는다 */
       }
     }
-    return loadTree(id, path, ref);
+    try {
+      const r = await loadTree(id, path, ref);
+      if (path && !r.items.length) return { ...(await loadTree(id, '', ref)), missing: path };
+      return r;
+    } catch (e) {
+      if (!path) throw e;
+      return { ...(await loadTree(id, '', ref)), missing: path };
+    }
   }, [params.id, path, ref]);
 
   const rowLog = useRowLog(params.id, ref, body.data?.kind === 'tree' ? body.data.items : null);
@@ -249,15 +257,17 @@ export default function Code() {
             <Status {...body} />
           ) : b.kind === 'file' ? (
             <>
-              <FileTitle path={path} project={project} refName={ref} onFind={() => navigate(`/projects/${frame.id}/code${refQuery}`)} />
-              <CommitBar id={frame.id} commit={b.last} count={1} path={path} owner={project.namespace} />
+              <FileTitle path={path} project={project} refName={ref} permalink={b.last ? `${window.location.origin}${window.location.pathname}?ref=${b.last.id}` : undefined} onFind={() => navigate(`/projects/${frame.id}/code${refQuery}`)} />
+              <GlCommitBar id={frame.id} commit={b.last} owner={project.namespace} path={path} />
+              <PackageNote path={path} />
               <GlFile path={path} base={{ id: frame.id, rawBase: `${project.web_url}/-/raw/${ref}/${path.includes('/') ? path.slice(0, path.lastIndexOf('/') + 1).split('/').map(enc).join('/') : ''}` }} text={b.text} rawUrl={rawUrl} size={b.meta?.size} {...blameApi} />
             </>
           ) : b.items.length ? (
             <>
+              {b.missing ? <p role="alert" className="gl-notice"><Icon name="sys_danger_mark" /><span>{g.notFound(b.missing, ref)}</span></p> : null}
               <div className="rb-tree-block">
                 <CommitBar id={frame.id} commit={b.last} count={b.count} more={b.more} path={path} owner={project.namespace} pipeline={isHome && frame.data.pipeline?.sha === b.last?.id ? frame.data.pipeline : null} />
-                <FileTable id={frame.id} path={path} items={b.items} log={rowLog.log} pending={rowLog.pending} filter={filter} refQuery={refQuery} />
+                <FileTable id={frame.id} path={b.missing ? '' : path} items={b.items} log={rowLog.log} pending={rowLog.pending} filter={filter} refQuery={refQuery} />
               </div>
               {b.partial ? <p className="krds-text-body-xsmall rb-subtle">{t.P16_partial}</p> : null}
               {isHome && readme ? <div id="readme"><ReadmeBox source={readme} base={{ id: frame.id, rawBase: `${project.web_url}/-/raw/${project.default_branch || ref}/` }} /></div> : null}

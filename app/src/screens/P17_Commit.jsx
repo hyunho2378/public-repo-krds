@@ -73,7 +73,7 @@ export default function Commit() {
             {b.mrs && !b.mrs.length ? <li><Icon name="ext/merge-request" /><span>{g.noMr}</span></li> : null}
             {b.mrs?.map((m) => <li key={m.iid}><Icon name="ext/merge-request" /><Link className="krds-link" to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link></li>)}
           </ul>
-          {b.files.length ? <GlDiff files={b.files} /> : <EmptyState title={t.P17_noDiff} />}
+          {b.files.length ? <GlDiff files={b.files} id={frame.id} refName={c.id} webUrl={project.web_url} /> : <EmptyState title={t.P17_noDiff} />}
         </div>
       )}
     </ProjectFrame>

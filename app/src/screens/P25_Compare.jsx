@@ -20,11 +20,11 @@ import '../components/Code/code.css';
 
 const enc = encodeURIComponent;
 
-function RefPicker({ label, value, list, onChange }) {
+function RefPicker({ label, value, list, onChange, loading }) {
   const [q, setQ] = useState('');
   const shown = list.filter((n) => !q || n.toLowerCase().includes(q.toLowerCase()));
   return (
-    <Menu label={label} align="left" btnClass="krds-btn small tertiary gl-select" button={<span className="gl-select-text">{value || g.pickRef}</span>}>
+    <Menu label={label} align="left" btnClass="krds-btn small tertiary gl-select" button={<span className="gl-select-text">{loading ? g.loadingRef : (value || g.pickRef)}</span>}>
       {(close) => (
         <div className="gl-pick">
           <input type="search" className="gl-pick-input" value={q} placeholder={g.search} aria-label={g.search} onChange={(e) => setQ(e.target.value)} />
@@ -39,13 +39,13 @@ function RefPicker({ label, value, list, onChange }) {
   );
 }
 
-function Side({ title, name, value, list, onChange, fixedProject }) {
+function Side({ title, name, value, list, onChange, fixedProject, loading }) {
   return (
     <div className="gl-side">
       <span className="gl-side-title">{title}</span>
       <div className="gl-side-row">
         <span className="gl-select is-fixed"><span className="gl-select-text">{fixedProject}</span></span>
-        <RefPicker label={`${title} ${g.pickRef}`} value={value} list={list} onChange={onChange} />
+        <RefPicker label={`${title} ${g.pickRef}`} value={value} list={list} onChange={onChange} loading={loading} />
       </div>
     </div>
   );
@@ -57,6 +57,8 @@ export default function Compare() {
   const frame = useProject();
   const [from, setFrom] = useState(search.get('from') || '');
   const [to, setTo] = useState(search.get('to') || '');
+  const [boxOpen, setBoxOpen] = useState(true);
+  const [bodyOpen, setBodyOpen] = useState({});
   const [straight, setStraight] = useState(search.get('straight') === '1');
   const [applied, setApplied] = useState(search.get('from') && search.get('to') ? { from: search.get('from'), to: search.get('to'), straight: search.get('straight') === '1' } : null);
 
@@ -104,7 +106,7 @@ export default function Compare() {
           <div className="gl-compare-pick">
             <Side title={g.source} value={to} list={list} onChange={setTo} fixedProject={projectName} />
             <IconButton icon="arrow-right" label={g.swap} size="medium" className="gl-swap" onClick={() => { setFrom(to); setTo(from); }} />
-            <Side title={g.target} value={from} list={list} onChange={setFrom} fixedProject={projectName} />
+            <Side title={g.target} value={from} list={list} onChange={setFrom} fixedProject={projectName} loading={!!applied && result.state === 'Loading'} />
           </div>
           <fieldset className="gl-radios">
             <legend className="gl-side-title">{g.showChanges}</legend>
@@ -116,23 +118,24 @@ export default function Compare() {
         {!applied ? null : same ? <EmptyState title={t.Issue_sameBranch} /> : !result.data ? <Status {...result} /> : (
           <>
             <section className="gl-box" aria-labelledby="gl-src-commits">
-              <h2 id="gl-src-commits" className="gl-box-title">{g.sourceCommits} <span className="gl-tab-count">{commits.length}</span></h2>
-              <ul className="gl-rows">
+              <h2 id="gl-src-commits" className="gl-box-title gl-box-titlebar"><span>{g.sourceCommits} <span className="gl-tab-count">{commits.length}</span></span><button type="button" className={'gl-fold' + (boxOpen ? ' is-open' : '')} aria-expanded={boxOpen} aria-label={boxOpen ? g.collapseBox : g.expandBox} onClick={() => setBoxOpen(!boxOpen)}><Icon name="arrow-down" /></button></h2>
+              {boxOpen ? <ul className="gl-rows">
                 {commits.map((c) => (
                   <li key={c.id}>
                     <div className="gl-ref-row">
                       <Avatar className="is-24" src={project.namespace?.avatar_url} name={orgLabel(c.author_name)} />
                       <div className="gl-ref-main gl-grow">
-                        <p className="gl-ref-name"><Link to={`/projects/${id}/changes/${c.id}`}>{c.title}</Link></p>
+                        <p className="gl-ref-name"><Link to={`/projects/${id}/changes/${c.id}`}>{c.title}</Link>{(c.message || '').replace(c.title, '').trim() ? <button type="button" className="gl-dots" aria-expanded={!!bodyOpen[c.id]} aria-label={bodyOpen[c.id] ? g.collapseBody : g.expandBody} onClick={() => setBodyOpen({ ...bodyOpen, [c.id]: !bodyOpen[c.id] })}><Icon name="ellipsis_horizontal" /></button> : null}</p>
+                        {bodyOpen[c.id] ? <pre className="gl-commit-body">{(c.message || '').replace(c.title, '').trim()}</pre> : null}
                         <p className="gl-ref-meta"><time dateTime={c.created_at}>{t.fn.ago(c.created_at)}</time><span>{c.author_name}{g.commitedBy}</span></p>
                       </div>
                       <div className="gl-ref-side"><code className="gl-sha">{c.short_id}</code><CopyButton text={c.id} label={g.copySha} /></div>
                     </div>
                   </li>
                 ))}
-              </ul>
+              </ul> : null}
             </section>
-            {diffs.length ? <GlDiff files={diffs} /> : <EmptyState title={g.noDiffHere} />}
+            {diffs.length ? <GlDiff files={diffs} id={id} refName={applied.to} webUrl={project.web_url} /> : <EmptyState title={g.noDiffHere} />}
             <div><Link className="krds-btn small primary" to={`/projects/${id}/merge-requests/new?source=${enc(applied.to)}`}>{g.toMr}</Link></div>
           </>
         )}

@@ -155,3 +155,37 @@
 .gl-files, .gl-file, .gl-diff, .gl-diff-main > * { min-width: 0; }
 .gl-fold { flex: none; }
 .gl-release-text a, .gl-assets a { overflow-wrap: anywhere; min-width: 0; }
+
+/* 커밋 목록 */
+.gl-histtop { display: flex; align-items: center; gap: var(--krds-gap-3); }
+.gl-histproject { font-size: var(--rb-step-15); font-weight: var(--rb-fw-title); }
+.gl-commit-groups { display: flex; flex-direction: column; gap: var(--rb-section-gap); }
+.gl-dayhead { display: flex; align-items: center; gap: var(--krds-gap-3); margin: 0 0 var(--krds-gap-4); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--rb-fw-title); }
+.gl-crows { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--krds-gap-2); }
+.gl-crow { border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-gray-subtler); transition: background var(--rb-motion-fast) var(--rb-motion-ease); }
+.gl-crow:hover { background: var(--krds-color-surface-gray-subtle); }
+.gl-crow-line { display: flex; align-items: center; gap: var(--krds-gap-4); padding: var(--krds-padding-3) var(--krds-padding-4); }
+.gl-crow .gl-commit-body { margin: 0 var(--krds-padding-4) var(--krds-padding-4); }
+.gl-crow .gl-ref-side { flex-wrap: wrap; justify-content: flex-end; }
+.rb-avatar.is-32 { width: var(--krds-number-12); height: var(--krds-number-12); border-radius: var(--krds-radius-max); font-size: var(--rb-step-13); }
+@media (max-width: 767px) { .gl-crow-line { flex-wrap: wrap; } }
+
+/* 파일 보기 보강: 안내 줄, 커밋 막대, 없는 파일 알림 */
+.gl-pkgnote { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin: 0; padding: var(--krds-padding-3) var(--krds-padding-4); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.gl-notice { display: flex; align-items: center; gap: var(--krds-gap-3); margin: 0; padding: var(--krds-padding-4); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-medium2); font-size: var(--rb-step-15); }
+.gl-cbar { border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-gray-subtler); }
+.gl-cbar-line { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-4); padding: var(--krds-padding-3) var(--krds-padding-4); }
+.gl-cbar .gl-commit-body { margin: 0 var(--krds-padding-4) var(--krds-padding-4); }
+.gl-dots { display: inline-flex; align-items: center; justify-content: center; min-width: var(--rb-side-item-h); height: var(--krds-number-10); border: 0; border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-gray-subtle); color: inherit; cursor: pointer; }
+.gl-dots:hover { background: var(--krds-color-border-gray-light); }
+.gl-code-table tr.is-target { background: var(--krds-color-surface-warning-subtler); }
+.gl-blame { display: table-cell; width: 24em; max-width: 24em; vertical-align: top; }
+.gl-blame.is-first { border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.gl-blame-title { display: block; color: var(--krds-color-text-basic); }
+.gl-blame-meta { display: block; font-size: var(--rb-step-13); }
+.gl-blame-title { display: inline-block; max-width: 14em; vertical-align: bottom; }
+.gl-blame-meta { display: inline; margin-inline-start: var(--krds-gap-3); }
+.gl-blame { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.gl-expand { display: inline-flex; align-items: center; justify-content: center; width: var(--rb-side-item-h); height: var(--krds-number-10); border: 0; background: none; color: var(--krds-color-text-subtle); cursor: pointer; }
+.gl-expand:hover { color: var(--krds-color-text-basic); }
+.gl-box-titlebar { display: flex; align-items: center; justify-content: space-between; }

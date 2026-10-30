@@ -1,5 +1,7 @@
 // C1 공통 조각: 복사 단추, 소스 코드 내려받기 메뉴, 필터 줄. 공공 깃랩 15~19 캡처 구성.
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Avatar } from '../../components/Layout/Avatar';
 import { IconButton } from '../../components/Action/IconButton';
 import { Menu } from '../../components/Navigation/Menu';
 import { Icon } from '../../components/Code/Icon';
@@ -57,6 +59,34 @@ export function SortControl({ options, value, onChange, desc, onDir }) {
         )}
       </Menu>
       <IconButton icon={desc ? 'ext/sort-desc' : 'ext/sort-asc'} label={g.sortDir} size="small" className="gl-sort-dir" onClick={onDir} />
+    </div>
+  );
+}
+
+/** 파일 보기 최근 커밋 막대(공공 깃랩 08): 아바타, 제목 굵게 + 본문 펼침 점 세 개, 작성자와 시간, 해시, 복사, 이력 */
+export function GlCommitBar({ id, commit, owner, path }) {
+  const [open, setOpen] = useState(false);
+  if (!commit) return null;
+  const who = owner && owner.path === commit.author_name ? owner.name : commit.author_name;
+  const body = (commit.message || '').replace(commit.title, '').trim();
+  return (
+    <div className="gl-cbar">
+      <div className="gl-cbar-line">
+        <Avatar className="is-32" src={owner?.avatar_url} name={who} />
+        <div className="gl-ref-main gl-grow">
+          <p className="gl-ref-name">
+            <Link to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>
+            {body ? <button type="button" className="gl-dots" aria-expanded={open} aria-label={open ? g.collapseBody : g.expandBody} onClick={() => setOpen(!open)}><Icon name="ellipsis_horizontal" /></button> : null}
+          </p>
+          <p className="gl-ref-meta"><span>{t.fn.wroteAt(who)} <time dateTime={commit.committed_date}>{t.fn.ago(commit.committed_date)}</time>{t.fn.wroteSuffix}</span></p>
+        </div>
+        <div className="gl-ref-side">
+          <code className="gl-sha">{commit.short_id}</code>
+          <CopyButton text={commit.id} label={g.copySha} />
+          <Link className="krds-btn small tertiary" to={`/projects/${id}/changes${path ? `?path=${encodeURIComponent(path)}` : ''}`}>{g.history}</Link>
+        </div>
+      </div>
+      {open ? <pre className="gl-commit-body">{body}</pre> : null}
     </div>
   );
 }
