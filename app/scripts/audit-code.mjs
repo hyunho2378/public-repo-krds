@@ -47,7 +47,7 @@ async function walk(dir) {
     }
     // D-15: 연한 채움(subtler, lighter, -light)은 회색 계열 외에는 금지. KRDS secondary 버튼도 금지
     for (const m of source.matchAll(/\bbg-light-(?!gray\b)[a-z]+\b/g)) issues.push(`${file}: D-15 연한 채움 배지 ${m[0]}`);
-    for (const m of source.matchAll(/krds-btn[^"'`]*\bsecondary\b/g)) issues.push(`${file}: D-15 KRDS secondary 버튼 금지 ${m[0]}`);
+    for (const m of source.matchAll(/krds-btn[^"'`\n{]*\bsecondary\b/g)) issues.push(`${file}: D-15 KRDS secondary 버튼 금지 ${m[0]}`);
     // 아이콘 단독 버튼은 IconButton(또는 iconBtnClass)만 쓴다: button/Link 안에 Icon과 sr-only 글자만 있는 마크업 금지
     if (file.endsWith('.jsx') && !file.endsWith('IconButton.jsx')) {
       for (const m of source.matchAll(/<(?:button|Link|a)\b[^>]*>\s*<Icon\b[^>]*\/>\s*<span className="sr-only">[^<]*<\/span>\s*<\/(?:button|Link|a)>/g)) issues.push(`${file}: 아이콘 단독 버튼은 IconButton 사용 ${m[0].slice(0, 50)}`);

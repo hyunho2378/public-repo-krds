@@ -45,6 +45,24 @@ function useMrCounts(items) {
   return counts;
 }
 
+/** 공공 깃랩 정렬 드롭다운과 같은 단추 + 메뉴(KRDS 메뉴 부품, 네이티브 select 금지 UX-007 12장) */
+function PickMenu({ label, value, options, onPick, className }) {
+  const current = options.find(([k]) => k === value)?.[1] || options[0][1];
+  return (
+    <Menu label={label} align="right" btnClass={className} btnProps={{ 'aria-label': `${label}: ${current}` }} button={<span>{current}</span>}>
+      {(close) => (
+        <ul className="drop-list" role="menu">
+          {options.map(([k, text]) => (
+            <li key={k || 'all'}>
+              <button type="button" role="menuitemradio" aria-checked={k === value} className="item-link" onClick={() => { onPick(k); close(); }}>{text}</button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </Menu>
+  );
+}
+
 export default function Home() {
   const [params, setParams] = useSearchParams();
   const navigate = useNavigate();
@@ -111,10 +129,7 @@ export default function Home() {
           <button type="submit" className="rb-x-searchbtn" aria-label={u.X_search} title={u.X_search}><Icon name="search" /></button>
         </form>
         <div className="rb-x-sort" role="group" aria-label={u.X_sortBy}>
-          <label className="sr-only" htmlFor="x-sort">{u.X_sortBy}</label>
-          <select id="x-sort" className="krds-form-select small" value={sort} onChange={(e) => set({ sort: e.target.value })}>
-            {SORTS.map(([k, label]) => <option key={k} value={k}>{label}</option>)}
-          </select>
+          <PickMenu label={u.X_sortBy} value={sort} options={SORTS} onPick={(k) => set({ sort: k })} className="rb-x-sortbtn" />
           <button type="button" className="rb-x-dir" onClick={() => set({ dir: dir === 'asc' ? 'desc' : 'asc' })} aria-label={dir === 'asc' ? u.X_sortDesc : u.X_sortAsc} title={dir === 'asc' ? u.X_sortDesc : u.X_sortAsc}>
             <Icon name={dir === 'asc' ? 'ext/sort-asc' : 'ext/sort-desc'} />
           </button>
@@ -123,11 +138,8 @@ export default function Home() {
       {warn ? <p id="x-filter-warn" className="krds-text-body-xsmall rb-subtle" role="status">{u.X_min3}</p> : null}
       {/* 덧붙임(D-21 4장, UX/14 2): 업무 분야 선택 한 줄. 고르면 업무 분야 검색 결과로 간다 */}
       <div className="rb-x-extra" data-figma="extra-field-filter">
-        <label htmlFor="x-field" className="krds-text-body-xsmall rb-subtle">{u.X_field}</label>
-        <select id="x-field" className="krds-form-select small" defaultValue="" onChange={(e) => e.target.value && navigate(`/search?field=${encodeURIComponent(e.target.value)}`)}>
-          <option value="">{u.X_fieldAll}</option>
-          {FIELDS.map((f) => <option key={f} value={f}>{f}</option>)}
-        </select>
+        <span className="krds-text-body-xsmall rb-subtle">{u.X_field}</span>
+        <PickMenu label={u.X_field} value="" options={[['', u.X_fieldAll], ...FIELDS.map((f) => [f, f])]} onPick={(f) => f && navigate(`/search?field=${encodeURIComponent(f)}`)} className="rb-x-sortbtn" />
       </div>
       <Status {...list} />
       {list.state === 'Empty' ? <p className="krds-text-body-small rb-subtle">{u.X_none}</p> : null}

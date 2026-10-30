@@ -176,5 +176,5 @@ export const u = {
   X_field: "업무 분야",
   X_fieldAll: "전체 분야",
   X_none: "프로젝트 없음",
-  X_min3: "검색어는 최소 3자 이상이어야 합니다.",
+  X_min3: "검색어 최소 3자",
 };
