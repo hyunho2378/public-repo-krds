@@ -23,6 +23,7 @@ import NewIssue from '../screens/P24_NewIssue';
 import Compare from '../screens/P25_Compare';
 import NewProject from '../screens/P28_NewProject';
 import Explore from '../screens/P29_Explore';
+import { Topics as ExploreTopics, Snippets as ExploreSnippets } from '../screens/P29_Explore';
 import Jobs from '../screens/P30_Jobs';
 import { LoginFailed, LoginOtp, LoginSignup, LoginReset } from '../screens/P12b_LoginStates';
 import { Insights, Checklist, LawAlerts, Handover, Mcp } from '../screens/P26_Insights';
@@ -88,6 +89,8 @@ export const routes = [
   { id: 'R-25', path: '/projects/:id/graph', Screen: RepoGraph },
   { id: 'G-05', path: '/projects/new', Screen: NewProject },
   { id: 'G-01', path: '/explore', Screen: Explore },
+  { id: 'G-01t', path: '/explore/topics', Screen: ExploreTopics },
+  { id: 'G-01s', path: '/explore/snippets', Screen: ExploreSnippets },
   { id: 'R-19', path: '/projects/:id/jobs', Screen: Jobs },
   { id: 'G-08b', path: '/login/failed', Screen: LoginFailed },
   { id: 'G-08c', path: '/login/otp', Screen: LoginOtp },

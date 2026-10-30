@@ -31,7 +31,7 @@ function catalog() {
 const repo = repository({ upstream: UPSTREAM, fetchImpl: (...a) => fetch(...a) });
 
 // 서버 app.js와 같은 허용 경로
-const allowed = /^projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|compare|commits(?:\/[0-9a-f]{7,40}(?:\/diff)?)?|files\/[^/]+(?:\/(?:raw|blame))?|branches|tags|contributors)|languages|releases|events|wikis|pipelines|jobs|packages|labels|milestones|members(?:\/all)?|boards|snippets|issues(?:\/\d+(?:\/notes)?)?|merge_requests(?:\/\d+(?:\/(?:changes|notes|commits))?)?))?)?$/;
+const allowed = /^(?:groups(?:\/[^/]+(?:\/(?:subgroups|projects|members(?:\/all)?))?)?|topics|projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|compare|commits(?:\/[0-9a-f]{7,40}(?:\/diff)?)?|files\/[^/]+(?:\/(?:raw|blame))?|branches|tags|contributors)|languages|releases|events|wikis|pipelines|jobs|packages|labels|milestones|members(?:\/all)?|boards|snippets|issues(?:\/\d+(?:\/notes)?)?|merge_requests(?:\/\d+(?:\/(?:changes|notes|commits))?)?))?)?)$/;
 
 // 요청마다 시간 제한을 두고, 시간 초과/네트워크 오류/429/5xx는 두 번까지 다시 부른다(속도 제한이면 Retry-After를 따른다).
 const FETCH_TIMEOUT_MS = 12000;

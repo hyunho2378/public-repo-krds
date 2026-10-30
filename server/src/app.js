@@ -13,7 +13,7 @@ export function createApp({upstream=process.env.GITLAB_BASE_URL||'https://gitlab
  app.get('/api/health',(_,res)=>res.json({status:'ok',mock:false,notice:'규칙 분석/스냅샷 검색/로컬 저장 API, 외부 연동 상태는 응답별 확인'}));
  app.get('/api/gitlab/*',async(req,res)=>{
   const sub=req.path.replace(/^\/api\/gitlab\//,'');
-  const allowed=/^projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|compare|commits(?:\/[0-9a-f]{7,40}(?:\/diff)?)?|files\/[^/]+(?:\/(?:raw|blame))?|branches|tags|contributors)|languages|releases|events|wikis|pipelines|jobs|packages|labels|milestones|members(?:\/all)?|boards|snippets|issues(?:\/\d+(?:\/notes)?)?|merge_requests(?:\/\d+(?:\/(?:changes|notes|commits))?)?))?)?$/;
+  const allowed=/^(?:groups(?:\/[^/]+(?:\/(?:subgroups|projects|members(?:\/all)?))?)?|topics|projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|compare|commits(?:\/[0-9a-f]{7,40}(?:\/diff)?)?|files\/[^/]+(?:\/(?:raw|blame))?|branches|tags|contributors)|languages|releases|events|wikis|pipelines|jobs|packages|labels|milestones|members(?:\/all)?|boards|snippets|issues(?:\/\d+(?:\/notes)?)?|merge_requests(?:\/\d+(?:\/(?:changes|notes|commits))?)?))?)?)$/;
   if(!allowed.test(sub))return res.status(400).json({error:{code:'PATH_NOT_ALLOWED',message:'공개 프로젝트 읽기 전용'}});
   const u=new URL('/api/v4/'+sub,upstream);for(const k of ['search','page','per_page','ref','ref_name','path','order_by','sort','updated_after','state','archived','license','topic'])if(req.query[k]!==undefined)u.searchParams.set(k,String(req.query[k]));u.searchParams.set('per_page',String(Math.min(100,Math.max(1,Number(req.query.per_page)||20))));
   if(sub==='projects')u.searchParams.set('visibility','public');

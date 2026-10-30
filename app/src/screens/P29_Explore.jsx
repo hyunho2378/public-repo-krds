@@ -1,57 +1,59 @@
-// G-01 탐색. 공공 깃랩 탐색(Explore) 화면처럼 공개 프로젝트를 탭으로 나눠 본다.
-// 탭은 주소에 남아 뒤로 가기와 공유가 된다. 자료는 서버 검색 색인(공개 목록 스냅샷)을 쓴다.
-import { Link, useSearchParams } from 'react-router-dom';
-import { t } from '../copy/ko';
-import { product } from '../api/client';
+// G-01 탐색 하위 화면(공공 깃랩 41 주제, 42 스니펫). /explore는 탐색 > 프로젝트(첫 화면)로 보낸다.
+// CI/CD 카탈로그(43), AI 카탈로그(73)는 공공 깃랩 GraphQL 전용이라 사이드바에서 원본을 새 창으로 연다.
+import { useState } from 'react';
+import { Link, Navigate } from 'react-router-dom';
+import { u } from '../copy/ui';
+import { request } from '../api/client';
 import { useData } from '../api/useData';
 import { Page } from '../components/Layout/Page';
 import { Status } from '../components/Feedback/Status';
-import { ProjectList } from '../components/Layout/StructuredList';
-
-// 탭마다 정렬 기준이 다르다. 서버 검색은 점수 순으로 주므로 받은 뒤 다시 늘어놓는다.
-const TABS = [
-  ['recent', (x) => x.Explore_recent, (a, b) => String(b.last || '').localeCompare(String(a.last || ''))],
-  ['name', (x) => x.Explore_name, (a, b) => String(a.name).localeCompare(String(b.name), 'ko')],
-  ['org', (x) => x.Explore_org, (a, b) => String(a.organization || '').localeCompare(String(b.organization || ''), 'ko')],
-];
+import { Icon } from '../components/Code/Icon';
+import { Avatar } from '../components/Layout/Avatar';
 
 export default function Explore() {
-  const [params, setParams] = useSearchParams();
-  const tab = TABS.some(([k]) => k === params.get('tab')) ? params.get('tab') : 'recent';
-  const body = useData(
-    async () => (await product.post('/search', { query: '', limit: 20 })).data,
-    [tab],
-    (d) => !d?.items?.length,
-  );
-  const items = [...(body.data?.items || [])].sort(TABS.find(([k]) => k === tab)[2]);
+  return <Navigate to="/" replace />;
+}
+
+/** 공공 깃랩 /explore/projects/topics: 제목, '이름으로 필터링', '주제 n' 상자 안 행(머리글자, 이름, 프로젝트 수) */
+export function Topics() {
+  const [q, setQ] = useState('');
+  const list = useData(() => request(`/api/gitlab/topics?per_page=100${q.length >= 1 ? `&search=${encodeURIComponent(q)}` : ''}`), [q], (d) => !d.data?.length);
+  const items = list.data?.data || [];
   return (
-    <Page id="G-01" title={t.Explore_title} state={body.state}>
-      <h1 className="krds-text-heading-small" data-figma="section-title">{t.Explore_title}</h1>
-      <div className="rb-code-views" role="tablist" aria-label={t.Explore_tabsLabel} data-figma="tabs">
-        {TABS.map(([key, label]) => (
-          <button
-            key={key}
-            type="button"
-            role="tab"
-            aria-selected={tab === key}
-            className={'rb-code-view' + (tab === key ? ' active' : '')}
-            onClick={() => {
-              const next = new URLSearchParams(params);
-              next.set('tab', key);
-              setParams(next);
-            }}
-          >
-            {label(t)}
-          </button>
-        ))}
-      </div>
-      {items.length ? <ProjectList items={items} /> : <Status {...body} />}
-      {body.data?.total ? (
-        <p className="krds-text-body-xsmall rb-subtle">{t.fn.exploreTotal(body.data.total)}</p>
+    <Page id="G-01t" title={u.T_title} state={list.state}>
+      <h1 className="rb-x-title" data-figma="section-title">{u.T_title}</h1>
+      <label className="sr-only" htmlFor="tp-q">{u.T_filter}</label>
+      <div className="rb-s-input"><input id="tp-q" type="search" value={q} placeholder={u.T_filter} onChange={(e) => setQ(e.target.value)} /></div>
+      <Status {...list} />
+      {items.length ? (
+        <section className="rb-box" aria-labelledby="tp-box">
+          <h2 id="tp-box" className="rb-box-head krds-text-body-small-bold">{u.T_box} <span className="rb-subtle"><Icon name="view_all" /> {list.data?.pagination?.total ?? items.length}</span></h2>
+          <ul className="rb-box-list">
+            {items.map((tp) => (
+              <li key={tp.id}>
+                <Link className="rb-box-row" to={`/search?topic=${encodeURIComponent(tp.name)}`}>
+                  <Avatar src={tp.avatar_url} name={tp.title || tp.name} className="is-32" />
+                  <span className="krds-text-body-small-bold">{tp.title || tp.name}</span>
+                  <span className="rb-box-n rb-subtle" title={u.T_projects}><Icon name="analytics" />{tp.total_projects_count}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
       ) : null}
-      <p className="krds-text-body-xsmall rb-subtle">
-        <Link className="krds-link" to="/search">{t.Explore_toSearch}</Link>
-      </p>
+    </Page>
+  );
+}
+
+/** 공공 깃랩 /explore/snippets: 비로그인에는 공개 스니펫이 보이지 않는다(공공 깃랩도 같은 빈 상태) */
+export function Snippets() {
+  return (
+    <Page id="G-01s" title={u.Sn_title} state="Empty">
+      <h1 className="rb-x-title" data-figma="section-title">{u.Sn_title}</h1>
+      <div className="rb-empty-center">
+        <Icon name="ext/snippet" />
+        <p className="krds-text-body-medium-bold">{u.Sn_none}</p>
+      </div>
     </Page>
   );
 }

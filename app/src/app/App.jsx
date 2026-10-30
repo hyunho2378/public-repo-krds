@@ -28,7 +28,7 @@ function FocusOnNavigate({ onNavigate }) {
 /** 로그인처럼 혼자 서는 화면은 왼쪽 바를 두지 않는다(공공 깃랩 46). */
 const NO_SIDEBAR = ['/login', '/login/failed', '/login/otp', '/register', '/password'];
 /** 탐색 목록 화면의 판 안 경로(공공 깃랩 '탐색 / 프로젝트') */
-const EXPLORE_PATH = { '/': u.G_projects, '/explore': u.G_projects, '/organizations': u.G_groups };
+const EXPLORE_PATH = { '/': u.G_projects, '/explore': u.G_projects, '/organizations': u.G_groups, '/explore/topics': u.G_topics, '/explore/snippets': u.G_snippets };
 
 /** D-22 단축키: ? 목록, g c / g i / g p 이동, b 사이드바(파일 보기에서는 파일 트리가 b를 쓴다) */
 function useShortcuts({ toggleSide, openKeys, project }) {

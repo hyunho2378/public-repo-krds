@@ -170,3 +170,17 @@ a.rb-s-scope:hover { background: var(--krds-color-action-secondary-hover); }
 .rb-taskfind-list li { display: flex; flex-direction: column; gap: var(--krds-gap-1); }
 .rb-taskfind .rb-fold-btn { align-self: flex-start; color: var(--krds-color-text-basic); }
 @media (max-width: 1023px) { .rb-s-body { grid-template-columns: minmax(0, 1fr); } .rb-s-side { flex-direction: row; flex-wrap: wrap; align-items: center; } }
+.rb-prow-plain li { display: inline-flex; align-items: center; gap: var(--krds-gap-1); color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
+.rb-prow-plain .rb-icon { width: var(--krds-number-8); height: var(--krds-number-8); }
+/* 공공 깃랩 41 주제: 머리 있는 상자 안 행 */
+.rb-box { border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); overflow: hidden; }
+.rb-box-head { margin: 0; display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-4) var(--krds-padding-5); background: var(--krds-color-surface-gray-subtler); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-box-head .rb-subtle { display: inline-flex; align-items: center; gap: var(--krds-gap-1); font-weight: var(--krds-font-weight-regular); }
+.rb-box-head .rb-icon, .rb-box-n .rb-icon { width: var(--krds-number-8); height: var(--krds-number-8); }
+.rb-box-list { list-style: none; margin: 0; padding: 0; }
+.rb-box-list li + li { border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.rb-box-row { display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--rb-row-pad-y) var(--krds-padding-5); color: var(--krds-color-text-basic); text-decoration: none; transition: background-color var(--rb-motion-fast) var(--rb-motion-ease); }
+.rb-box-row:hover { background: var(--krds-color-surface-gray-subtler); }
+.rb-box-n { margin-inline-start: auto; display: inline-flex; align-items: center; gap: var(--krds-gap-1); font-size: var(--krds-font-size-body-xsmall); }
+.rb-empty-center { display: flex; flex-direction: column; align-items: center; gap: var(--krds-gap-5); padding: var(--krds-padding-10) 0; text-align: center; }
+.rb-empty-center > .rb-icon { width: var(--krds-number-18); height: var(--krds-number-18); color: var(--krds-color-text-subtle); }

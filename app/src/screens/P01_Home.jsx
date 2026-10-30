@@ -47,7 +47,7 @@ function useMrCounts(items) {
 }
 
 /** 공공 깃랩 정렬 드롭다운과 같은 단추 + 메뉴(KRDS 메뉴 부품, 네이티브 select 금지 UX-007 12장) */
-function PickMenu({ label, value, options, onPick, className }) {
+export function PickMenu({ label, value, options, onPick, className }) {
   const current = options.find(([k]) => k === value)?.[1] || options[0][1];
   return (
     <Menu label={label} align="right" btnClass={className} btnProps={{ 'aria-label': `${label}: ${current}` }} button={<span>{current}</span>}>
