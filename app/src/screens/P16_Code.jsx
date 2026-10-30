@@ -47,7 +47,12 @@ function PathCrumbs({ id, path, refQuery }) {
 async function loadTree(id, path, ref) {
   // 파일 목록은 폴더 응답과 이 폴더의 최근 커밋 하나만 기다린다. 행마다 최근 커밋은 useRowLog가 나중에 채운다(목록이 멈춰 보이지 않게).
   const items = (await gitlab.tree(id, path, ref)).data;
-  const head = await gitlab.commits(id, { path, ref }).catch(() => ({ data: [], pagination: {} }));
+  // 폴더의 최근 커밋은 5초만 기다린다. 늦으면 없이 목록부터 보여 준다.
+  const none = { data: [], pagination: {} };
+  const head = await Promise.race([
+    gitlab.commits(id, { path, ref }).catch(() => none),
+    new Promise((resolve) => setTimeout(() => resolve(none), 5000)),
+  ]);
   const log = {};
   // 전체 커밋 수는 응답의 total을 쓴다. 없으면 받은 만큼만 세고 "이상"을 붙인다(없는 수를 만들지 않는다).
   const total = head.pagination?.total ?? null;

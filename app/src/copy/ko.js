@@ -784,6 +784,7 @@ export const t = {
     moreTopics: (n) => `+${n}`,
     nBranches: (n) => `브랜치 ${Number(n).toLocaleString('ko-KR')}`,
     nTags: (n) => `태그 ${Number(n).toLocaleString('ko-KR')}`,
+    nCommitsSample: (n) => `커밋 ${Number(n).toLocaleString('ko-KR')} (예시 자료)`,
     nCommits: (n, more) => `커밋 ${Number(n).toLocaleString('ko-KR')}${more ? '+' : ''}`,
     diffStat: (a, d) => `+${a} -${d}`,
     filesChanged: (n) => `바뀐 파일 ${n}`,

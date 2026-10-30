@@ -2,13 +2,21 @@
 import { phrase } from '../Help/Phrase';
 import { t } from '../../copy/ko';
 import { Button, LinkButton } from '../Action/Button';
+import './skeleton.css';
+
+const SKEL_WIDTHS = ['100%', '92%', '84%', '96%', '72%'];
+
+/** 회색 막대 줄 스켈레톤. 글자 대신 막대를 보이고, 스크린리더에는 상태 글자만 읽힌다. */
+export function Skeleton({ widths = SKEL_WIDTHS, inline = false }) {
+  return widths.map((w, i) => <span key={i} className={`rb-skel${inline ? ' rb-skel-inline' : ''}`} style={{ width: w }} aria-hidden="true" />);
+}
 
 export function Status({ state, error, retry, status }) {
   if (state === 'Loading') {
     return (
-      <div role="status" className="rb-status" data-state="Loading">
-        <span className="krds-spinner" aria-hidden="true" />
-        <p>{phrase(t.Status_1)}</p>
+      <div role="status" aria-busy="true" className="rb-skel-group" data-state="Loading">
+        <span className="sr-only">{t.Status_1}</span>
+        <Skeleton />
       </div>
     );
   }

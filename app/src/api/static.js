@@ -33,13 +33,40 @@ const repo = repository({ upstream: UPSTREAM, fetchImpl: (...a) => fetch(...a) }
 // 서버 app.js와 같은 허용 경로
 const allowed = /^projects(?:\/[^/]+(?:\/(?:repository\/(?:tree|compare|commits(?:\/[0-9a-f]{7,40}(?:\/diff)?)?|files\/[^/]+(?:\/(?:raw|blame))?|branches|tags|contributors)|languages|releases|events|wikis|pipelines|jobs|packages|labels|milestones|members(?:\/all)?|boards|snippets|issues(?:\/\d+(?:\/notes)?)?|merge_requests(?:\/\d+(?:\/(?:changes|notes|commits))?)?))?)?$/;
 
+// 요청마다 시간 제한을 두고, 시간 초과/네트워크 오류/429/5xx는 두 번까지 다시 부른다(속도 제한이면 Retry-After를 따른다).
+const FETCH_TIMEOUT_MS = 12000;
+const FETCH_RETRIES = 2;
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function fetchWithRetry(url, raw) {
+  let last;
+  for (let n = 0; n <= FETCH_RETRIES; n++) {
+    const ctl = new AbortController();
+    const timer = setTimeout(() => ctl.abort(), FETCH_TIMEOUT_MS);
+    let delay = 500 * (n + 1);
+    try {
+      const r = await fetch(url, { headers: { Accept: 'application/json' }, signal: ctl.signal });
+      if (r.ok) return { r, data: raw ? await r.text() : await r.json() };
+      if (r.status !== 429 && r.status < 500) throw new StaticError(r.status === 404 ? '자료를 찾을 수 없습니다.' : '공개 저장소 조회 실패', r.status);
+      last = new StaticError(r.status === 429 ? '조회 한도 초과' : '공개 저장소 조회 실패', r.status);
+      const after = Number(r.headers.get('retry-after'));
+      if (after > 0) delay = Math.min(after * 1000, 5000);
+    } catch (e) {
+      if (e instanceof StaticError) throw e;
+      last = new StaticError(e.name === 'AbortError' ? '응답 시간 초과' : '네트워크 오류', e.name === 'AbortError' ? 408 : 0);
+    } finally {
+      clearTimeout(timer);
+    }
+    if (n < FETCH_RETRIES) await wait(delay);
+  }
+  throw last;
+}
+
 async function gitlabGet(rest) {
   const [sub, query = ''] = rest.split('?');
   if (!allowed.test(sub)) throw new StaticError('허용 안 된 경로', 400, 'NOT_ALLOWED');
-  const r = await fetch(`${UPSTREAM}/api/v4/${sub}${query ? '?' + query : ''}`, { headers: { Accept: 'application/json' } });
-  if (!r.ok) throw new StaticError(r.status === 404 ? '자료를 찾을 수 없습니다.' : '공개 저장소 조회에 실패했습니다.', r.status);
   const raw = sub.endsWith('/raw');
-  const data = raw ? await r.text() : await r.json();
+  const { r, data } = await fetchWithRetry(`${UPSTREAM}/api/v4/${sub}${query ? '?' + query : ''}`, raw);
   if (data?.visibility && data.visibility !== 'public') throw new StaticError('공개 자료만 볼 수 있습니다.', 403, 'NOT_PUBLIC');
   return {
     mock: false,

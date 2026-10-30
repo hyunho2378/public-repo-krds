@@ -5,6 +5,7 @@ import { t } from '../../copy/ko';
 import { Icon } from './Icon';
 import { Avatar } from '../Layout/Avatar';
 import { Drop } from './Drop';
+import { Skeleton } from '../Feedback/Status';
 import { Readme } from '../Help/Readme';
 import { orgLabel } from '../Layout/orgLabel';
 import { cleanDescription } from '../Layout/StructuredList';
@@ -129,7 +130,7 @@ export function CommitBar({ id, commit, count, more, path, owner }) {
   );
 }
 
-export function FileTable({ id, path, items, log, filter, refQuery }) {
+export function FileTable({ id, path, items, log, pending, filter, refQuery }) {
   const sorted = useMemo(
     () => items.filter((f) => !filter || f.name.toLowerCase().includes(filter.toLowerCase())),
     [items, filter],
@@ -156,6 +157,7 @@ export function FileTable({ id, path, items, log, filter, refQuery }) {
           ) : null}
           {sorted.length ? sorted.map((f) => {
             const c = log?.[f.path];
+            const wait = !c && pending?.has(f.path);
             return (
               <tr key={f.path}>
                 <td>
@@ -164,14 +166,14 @@ export function FileTable({ id, path, items, log, filter, refQuery }) {
                     <span className="rb-ellipsis rb-break-any">{f.name}</span>
                   </Link>
                   <span className="rb-tree-mobile krds-text-body-small rb-subtle">
-                    <span className="rb-ellipsis">{c ? c.title : t.P16_noLog}</span>
+                    {wait ? <Skeleton widths={['60%']} inline /> : <span className="rb-ellipsis">{c ? c.title : ''}</span>}
                     <span>{c ? <Ago iso={c.committed_date} /> : ''}</span>
                   </span>
                 </td>
                 <td className="rb-col-msg">
-                  {c ? <Link className="krds-link rb-ellipsis rb-muted-link" to={`/projects/${id}/changes/${c.id}`}>{c.title}</Link> : <span className="rb-subtle">{t.P16_noLog}</span>}
+                  {c ? <Link className="krds-link rb-ellipsis rb-muted-link" to={`/projects/${id}/changes/${c.id}`}>{c.title}</Link> : wait ? <Skeleton widths={['70%']} inline /> : null}
                 </td>
-                <td className="rb-col-date rb-subtle">{c ? <Ago iso={c.committed_date} /> : ''}</td>
+                <td className="rb-col-date rb-subtle">{c ? <Ago iso={c.committed_date} /> : wait ? <Skeleton widths={['50%']} inline /> : ''}</td>
               </tr>
             );
           }) : (
@@ -243,7 +245,9 @@ export function About({ id, project, readme, languages, stats, summary }) {
         </div>
       ) : null}
       <ul className="rb-about-links krds-text-body-small">
-        <li><Icon name="time" /><Link className="krds-link" to={`/projects/${id}/changes`}>{t.fn.nCommits(stats.commits, stats.more)}</Link></li>
+        {stats.commits === undefined ? <li><Icon name="time" /><Skeleton widths={['50%']} inline /></li> : stats.commits === null ? null : (
+          <li><Icon name="time" /><Link className="krds-link" to={`/projects/${id}/changes`}>{stats.sample ? t.fn.nCommitsSample(stats.commits) : t.fn.nCommits(stats.commits, stats.more)}</Link></li>
+        )}
         {stats.branches != null ? <li><Icon name="share" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nBranches(stats.branches)}</Link></li> : null}
         {stats.tags != null ? <li><Icon name="scrap" /><Link className="krds-link" to={`/projects/${id}/branches`}>{t.fn.nTags(stats.tags)}</Link></li> : null}
         {stats.releases != null ? <li><Icon name="upload" /><Link className="krds-link" to={`/projects/${id}/releases`}>{t.fn.nReleases(stats.releases)}</Link></li> : null}

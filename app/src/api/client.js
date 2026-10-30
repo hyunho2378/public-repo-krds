@@ -1,3 +1,6 @@
+import sampleTotals from '../../../sample/kordoc/api/totals.json';
+import sampleProject from '../../../sample/kordoc/api/project.json';
+
 // 화면이 부르는 자료 창구. GitLab 원본 자료는 /api/gitlab, 우리 기능은 /api/v1 (api/openapi.yaml)
 const base = import.meta.env.VITE_API_BASE || '';
 
@@ -26,13 +29,51 @@ export async function request(path, { signal, ...options } = {}) {
       throw new ApiError(e.message || '자료를 불러오지 못했습니다.', e.status || 500);
     }
   }
-  const response = await fetch(base + path, { credentials: 'same-origin', ...options, signal });
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), 20000);
+  signal?.addEventListener('abort', () => ctl.abort());
+  let response;
+  try {
+    response = await fetch(base + path, { credentials: 'same-origin', ...options, signal: ctl.signal });
+  } catch (e) {
+    throw new ApiError(e.name === 'AbortError' ? '응답 시간 초과' : '네트워크 오류', e.name === 'AbortError' ? 408 : 0);
+  } finally {
+    clearTimeout(timer);
+  }
   const data = await response.json().catch(() => null);
   if (!response.ok) throw new ApiError(data?.error?.message || '자료를 불러오지 못했습니다.', response.status);
   return data;
 }
 
 const enc = encodeURIComponent;
+
+// 커밋 전체 수: 공공 깃랩 커밋 목록 응답에는 X-Total 헤더가 없다(태그/브랜치와 달리 legacy 쪽 나누기).
+// 그래서 100개씩 쪽을 두 배씩 건너뛰어 끝을 찾고, 이분 탐색으로 마지막 쪽을 정해 (마지막 쪽 번호 - 1) x 100 + 마지막 쪽 개수로 센다.
+// 그래도 못 세면 받아 둔 예시 자료(sample/kordoc/api/totals.json)의 값을 쓰고 sample 표시를 단다.
+const commitCounts = new Map();
+async function countCommits(id, ref) {
+  const pages = new Map();
+  const size = (n) => {
+    if (!pages.has(n)) pages.set(n, gitlabCommitsPage(id, ref, n).then((r) => (Array.isArray(r.data) ? r.data.length : 0)));
+    return pages.get(n);
+  };
+  if ((await size(1)) < 100) return size(1);
+  let lo = 1;
+  let hi = 2;
+  while ((await size(hi)) > 0) {
+    lo = hi;
+    hi *= 2;
+    if (hi > 2048) throw new ApiError('커밋 수 확인 실패', 500);
+  }
+  while (hi - lo > 1) {
+    const mid = (lo + hi) >> 1;
+    if ((await size(mid)) > 0) lo = mid;
+    else hi = mid;
+  }
+  return (lo - 1) * 100 + (await size(lo));
+}
+const gitlabCommitsPage = (id, ref, page) =>
+  request(`/api/gitlab/projects/${enc(id)}/repository/commits?per_page=100&page=${page}${ref ? `&ref_name=${enc(ref)}` : ''}`);
 
 export const gitlab = {
   project: (id) => request(`/api/gitlab/projects/${enc(id)}`),
@@ -44,6 +85,20 @@ export const gitlab = {
   fileRaw: (id, path, ref = 'HEAD') => request(`/api/gitlab/projects/${enc(id)}/repository/files/${enc(path)}/raw?ref=${enc(ref)}`),
   commits: (id, { ref = '', path = '', page = 1 } = {}) =>
     request(`/api/gitlab/projects/${enc(id)}/repository/commits?per_page=20&page=${page}${ref ? `&ref_name=${enc(ref)}` : ''}${path ? `&path=${enc(path)}` : ''}`),
+  /** { count, sample }. count가 null이면 알 수 없음. sample이 true면 예시 자료 값. */
+  commitCount: (id, ref = '') => {
+    const key = `${id}@${ref}`;
+    if (!commitCounts.has(key)) {
+      commitCounts.set(
+        key,
+        countCommits(id, ref).then(
+          (count) => ({ count, sample: false }),
+          () => (String(id) === String(sampleProject.id) ? { count: sampleTotals.commits, sample: true } : { count: null, sample: false }),
+        ),
+      );
+    }
+    return commitCounts.get(key);
+  },
   commit: (id, sha) => request(`/api/gitlab/projects/${enc(id)}/repository/commits/${enc(sha)}`),
   diff: (id, sha) => request(`/api/gitlab/projects/${enc(id)}/repository/commits/${enc(sha)}/diff`),
   branches: (id) => request(`/api/gitlab/projects/${enc(id)}/repository/branches`),
