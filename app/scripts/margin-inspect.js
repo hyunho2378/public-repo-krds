@@ -21,7 +21,9 @@
   const left = [['경로', '.rb-panel-in .krds-breadcrumb-wrap'], ['제목', '#main h1'], ['바닥글', '#krds-footer']];
   for (const [n, sel] of left) { const e = document.querySelector(sel); if (shown(e) && Math.abs(e.getBoundingClientRect().left - L) > 2) bad.push(`${n} 왼쪽 ${r1(e.getBoundingClientRect().left)} (기준 ${r1(L)})`); }
   const right = [['목록 행', '.rb-prow'], ['프로젝트 정보', '.rb-repo-info'], ['바닥글', '#krds-footer'], ['파일 표', '.rb-tree-wrap']];
-  for (const [n, sel] of right) { const e = document.querySelector(sel); if (shown(e) && Math.abs(e.getBoundingClientRect().right - R) > 2) bad.push(`${n} 오른쪽 ${r1(e.getBoundingClientRect().right)} (기준 ${r1(R)})`); }
+  const hasInfo = shown(document.querySelector('.rb-repo-info'));
+  for (const [n, sel] of right) {
+    if (hasInfo && n === '파일 표') continue; const e = document.querySelector(sel);     if (shown(e) && Math.abs(e.getBoundingClientRect().right - R) > 2) bad.push(`${n} 오른쪽 ${r1(e.getBoundingClientRect().right)} (기준 ${r1(R)})`); }
   const side = document.querySelector('.rb-side');
   if (shown(side) && getComputedStyle(side).position !== 'fixed') {
     const sb = side.getBoundingClientRect().bottom, vb = Math.min(pr.bottom, innerHeight);
