@@ -32,14 +32,14 @@ export function ReuseAction({ id, onClose }) {
   }
   return (
     <form className="rb-stack rb-form" onSubmit={submit} noValidate>
-      <h3 className="krds-text-heading-small">{t.P07_7}</h3>
+      <h3 className="krds-text-body-small-bold">{t.P07_7}</h3>
       <FormField id="reuse-org" label={t.ReuseAction_3} required value={org} error={errors.org} onChange={(e) => setOrg(e.target.value)} />
       <FormField id="reuse-date" label={t.ReuseAction_4} required placeholder={t.ReuseAction_5} value={date} error={errors.date} onChange={(e) => setDate(e.target.value)} />
       <div className="rb-actions">
         <Button type="submit">{t.ReuseAction_6}</Button>
         <Button Type="text" onClick={onClose}>{t.ReuseAction_7}</Button>
       </div>
-      <p role="status" className={message ? 'krds-text-body-medium' : 'sr-only'}>{message}</p>
+      <p role="status" className={message ? 'krds-text-body-small' : 'sr-only'}>{message}</p>
     </form>
   );
 }

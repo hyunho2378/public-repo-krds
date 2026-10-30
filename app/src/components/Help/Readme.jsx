@@ -84,7 +84,7 @@ export function Readme({ source }) {
       {text
         .filter((l) => l.trim())
         .map((line, i) => {
-          if (/^#{1,4}\s/.test(line)) return <h3 key={i} className="krds-text-heading-small">{inline(line.replace(/^#+\s*/, ''), `h${i}`)}</h3>;
+          if (/^#{1,4}\s/.test(line)) return <h3 key={i} className="krds-text-body-small-bold">{inline(line.replace(/^#+\s*/, ''), `h${i}`)}</h3>;
           if (/^\s*>\s/.test(line)) return <blockquote key={i} className="rb-md-quote">{inline(line.replace(/^\s*>\s*/, ''), `q${i}`)}</blockquote>;
           const bullet = /^\s*([-*]|\d+\.)\s+/.test(line);
           const body = line.replace(/^\s*([-*]|\d+\.)\s+/, '');

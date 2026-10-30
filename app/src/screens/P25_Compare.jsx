@@ -73,8 +73,8 @@ export default function Compare() {
     <ProjectFrame screenId="R-06" tab="" tabLabel={t.Compare_title} data={frame} state={same ? 'Empty' : result.state}>
       <div className="rb-write">
         <div className="rb-write-head">
-          <h2 className="krds-text-heading-medium">{t.Compare_title}</h2>
-          <p className="krds-text-body-medium rb-subtle">{t.Compare_hint}</p>
+          <h2 className="krds-text-body-small-bold">{t.Compare_title}</h2>
+          <p className="krds-text-body-small rb-subtle">{t.Compare_hint}</p>
         </div>
         <section className="rb-compare-pick" aria-label={t.Issue_comparePick}>
           <Picker label={t.Compare_from} id="cmp-from" list={list} value={from} onChange={setFrom} />
@@ -87,7 +87,7 @@ export default function Compare() {
           <Status {...result} />
         ) : (
           <>
-            <p className="krds-text-body-medium">{t.fn.compareSummary(commits.length, diffs.length)}</p>
+            <p className="krds-text-body-small">{t.fn.compareSummary(commits.length, diffs.length)}</p>
             {commits.length ? (
               <ul className="rb-plain-list">
                 {commits.map((c) => (

@@ -60,9 +60,9 @@ export default function Requests() {
 
   return (
     <Page id="A-05" title={t.Header_3} state={writing ? 'Write' : list.state}>
-      <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.Header_3)}</h1>
+      <h1 className="krds-text-heading-small" data-figma="section-title">{phrase(t.Header_3)}</h1>
       <p className="rb-subtle">{phrase(t.P15_10)}</p>
-      {message && <p role="status" className="krds-text-body-medium">{message}</p>}
+      {message && <p role="status" className="krds-text-body-small">{message}</p>}
       {writing ? (
         <form className="rb-stack rb-form" onSubmit={submit} noValidate>
           {FIELDS.map(([k, label, ph]) => (
@@ -82,8 +82,8 @@ export default function Requests() {
             <ul className="krds-structured-list rb-list">
               {list.data.data.items.map((r) => (
                 <li className="structured-item rb-list-link" key={r.id}>
-                  <span className="krds-text-heading-small">{r.task}</span>
-                  <span className="krds-text-body-medium rb-subtle">{r.currentProcess}</span>
+                  <span className="krds-text-body-small-bold">{r.task}</span>
+                  <span className="krds-text-body-small rb-subtle">{r.currentProcess}</span>
                   <Button Type="tertiary" Size="small" onClick={() => vote(r.id)}>{t.fn.votes(r.votes)}</Button>
                 </li>
               ))}

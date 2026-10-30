@@ -48,7 +48,7 @@ export function DecisionPanel({ id, readme, headingId = 'decision-title' }) {
   const d = useData(() => loadDecision(id), [id]);
   return (
     <section data-figma="decision-panel" className="rb-about-block" aria-labelledby={headingId}>
-      <h2 id={headingId} className="krds-text-heading-small">{t.P04_25}</h2>
+      <h2 id={headingId} className="krds-text-body-small-bold">{t.P04_25}</h2>
       {d.data ? <DecisionList rows={decisionRows(id, readme, d.data)} /> : <p className="krds-text-body-small rb-subtle" role="status">{d.state === 'Error' ? d.error : t.P10_1}</p>}
     </section>
   );

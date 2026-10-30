@@ -55,7 +55,7 @@ function RepoHeader({ project, id }) {
     <>
       <div className="rb-repo-head" data-figma="repo-title">
         <div className="rb-repo-title">
-          <h1 className="krds-text-heading-large rb-repo-name">
+          <h1 className="krds-text-heading-small rb-repo-name">
             <Avatar src={project.avatar_url || project.namespace?.avatar_url} name={project.name} />
             <span className="rb-repo-org">{organizationOf(project)} /</span>
             <span>{project.name}</span>
@@ -80,7 +80,7 @@ function RepoHeader({ project, id }) {
           </Drop>
         </div>
       </div>
-      <p className="krds-text-body-medium rb-repo-desc" title={desc || undefined}>{desc || t.RepoHead_noDesc}</p>
+      <p className="krds-text-body-small rb-repo-desc" title={desc || undefined}>{desc || t.RepoHead_noDesc}</p>
       {project.last_activity_at ? (
         <p className="krds-text-body-small rb-repo-meta">{t.fn.updated(new Date(project.last_activity_at).toLocaleDateString('ko-KR'))}</p>
       ) : null}

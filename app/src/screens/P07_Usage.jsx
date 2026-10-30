@@ -41,10 +41,10 @@ export default function Usage() {
   return (
     <ProjectFrame screenId="R-30" tab="/use" tabLabel={t.ProjectTabs_2} data={data} state={guide ? 'Ideal' : 'Empty'}>
       <Steps label={t.P07_4} labels={[t.P07_5, t.P07_6, t.P07_7]} current={result ? 1 : 0} />
-      <h2 className="krds-text-heading-medium">{t.P07_8}</h2>
+      <h2 className="krds-text-body-small-bold">{t.P07_8}</h2>
       <form className="rb-stack" onSubmit={check}>
         <fieldset className="rb-stack">
-          <FieldsetTitle className="krds-text-body-medium-bold">{t.P07_9}</FieldsetTitle>
+          <FieldsetTitle className="krds-text-body-small-bold">{t.P07_9}</FieldsetTitle>
           <div className="rb-choices">
             {NETWORKS.map(([v, label]) => (
               <div className="krds-form-check" key={v}>
@@ -62,13 +62,13 @@ export default function Usage() {
       </form>
       {result && (
         <div className="rb-status" role="status" data-state="Result">
-          <h3 className="krds-text-heading-small">{t.P07_13}</h3>
+          <h3 className="krds-text-body-small-bold">{t.P07_13}</h3>
           {(result.reasons || []).map((r, i) => <p key={i}>{r}</p>)}
           {result.evidence?.length > 0 && <p className="krds-text-body-small rb-subtle">{t.fn.evidence(result.evidence.map((e) => e.file || e).join(', '))}</p>}
           <p className="krds-text-body-small rb-subtle">{t.P07_14}</p>
         </div>
       )}
-      <h2 className="krds-text-heading-medium">{t.P07_15}</h2>
+      <h2 className="krds-text-body-small-bold">{t.P07_15}</h2>
       <RunSteps readme={readme} cloneUrl={cloneUrl} />
       {guide ? (
         <Readme source={guide} />

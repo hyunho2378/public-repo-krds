@@ -200,7 +200,7 @@ export function ReadmeBox({ source }) {
   return (
     <section className="rb-readme-box" data-figma="readme" aria-label={t.Readme_label} ref={box}>
       <header className="rb-readme-head">
-        <p className="krds-text-body-medium-bold"><Icon name="document" /> {t.Readme_label}</p>
+        <p className="krds-text-body-small-bold"><Icon name="document" /> {t.Readme_label}</p>
         {list.length > 1 ? (
           <button type="button" className="krds-btn small tertiary" aria-expanded={toc} onClick={() => setToc(!toc)}>{t.Readme_toc}</button>
         ) : null}
@@ -231,10 +231,10 @@ export function About({ id, project, readme, languages, stats, summary }) {
   const langs = Object.entries(languages || {}).sort((a, b) => b[1] - a[1]);
   return (
     <section className="rb-about-block" data-figma="about" aria-labelledby="about-title">
-      <h2 id="about-title" className="krds-text-heading-small">{t.About_title}</h2>
+      <h2 id="about-title" className="krds-text-body-small-bold">{t.About_title}</h2>
       <div className="rb-about-does">
         <p className="krds-text-body-small-bold">{t.About_does}</p>
-        <p className="krds-text-body-medium rb-clamp-3">{summary || desc || t.About_noDesc}</p>
+        <p className="krds-text-body-small rb-clamp-3">{summary || desc || t.About_noDesc}</p>
       </div>
       {topics.length ? (
         <div className="rb-labels" aria-label={t.About_topics}>

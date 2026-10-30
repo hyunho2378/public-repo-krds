@@ -87,11 +87,13 @@ export function projectGroups(id, { signedIn, role } = {}) {
   return groups;
 }
 
-function Group({ group, items }) {
+function Group({ group, items, collapsed }) {
   const [open, setOpen] = useState(true);
+  // D-17 1장: 접힘(아이콘만) 상태에서는 묶음을 펼친 것처럼 전부 보여 주고, 묶음 제목 글자는 접는다(공간이 없다)
+  const showList = collapsed || open;
   return (
     <div className="rb-side-group">
-      {group ? (
+      {group && !collapsed ? (
         <button
           type="button"
           className="rb-side-group-btn krds-text-body-small-bold"
@@ -102,16 +104,18 @@ function Group({ group, items }) {
           <i className="svg-icon ico-toggle" aria-hidden="true" />
         </button>
       ) : null}
-      {open ? (
+      {showList ? (
         <ul>
           {items.map(([label, to, icon, end, hint]) => (
             <li key={to + label}>
-              <NavLink end={!!end} to={to} className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`}>
+              <NavLink end={!!end} to={to} className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`} title={collapsed ? label : undefined}>
                 <Icon name={icon} />
-                <span className="rb-side-text">
-                  <span>{label}</span>
-                  {hint ? <span className="rb-side-hint">{hint}</span> : null}
-                </span>
+                {collapsed ? <span className="sr-only">{label}</span> : (
+                  <span className="rb-side-text">
+                    <span>{label}</span>
+                    {hint ? <span className="rb-side-hint">{hint}</span> : null}
+                  </span>
+                )}
               </NavLink>
             </li>
           ))}
@@ -121,7 +125,7 @@ function Group({ group, items }) {
   );
 }
 
-export function Sidebar({ project, open, onClose }) {
+export function Sidebar({ project, open, onClose, collapsed, onToggleCollapsed }) {
   const { signedIn, role } = useAuth();
   const groups = project ? projectGroups(project.id, { signedIn, role }) : globalGroups();
   const panel = useRef(null);
@@ -139,18 +143,23 @@ export function Sidebar({ project, open, onClose }) {
       <nav
         id="rb-sidebar"
         ref={panel}
-        className={'rb-side' + (open ? ' is-open' : '')}
+        className={'rb-side' + (open ? ' is-open' : '') + (collapsed ? ' is-collapsed' : '')}
         aria-label={project ? t.Side_labelProject : t.Side_label}
       >
-        {project ? (
-          <p className="rb-side-project krds-text-body-medium-bold">
+        {/* D-17 1장: 접기 버튼은 메뉴 맨 위(GitLab처럼) */}
+        <button type="button" className="rb-side-collapse" onClick={onToggleCollapsed} aria-expanded={!collapsed} title={collapsed ? t.Side_expand : t.Side_collapse}>
+          <Icon name="arrow-right" />
+          {collapsed ? null : <span>{t.Side_collapse}</span>}
+        </button>
+        {project && !collapsed ? (
+          <p className="rb-side-project krds-text-body-small-bold">
             <Avatar src={project.avatarUrl} name={project.name} />
             <span className="rb-ellipsis">{project.name}</span>
           </p>
         ) : null}
         <div className="rb-side-groups" data-figma="sidebar-nav">
           {groups.map(([group, items], i) => (
-            <Group key={group || `g${i}`} group={group} items={items} />
+            <Group key={group || `g${i}`} group={group} items={items} collapsed={collapsed} />
           ))}
         </div>
         <div className="rb-side-foot">

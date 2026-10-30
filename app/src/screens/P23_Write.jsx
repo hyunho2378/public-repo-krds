@@ -18,8 +18,8 @@ function Result({ kind, onClose }) {
   return (
     <div className="rb-modal-dim" role="presentation">
       <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="write-result">
-        <h2 id="write-result" className="krds-text-heading-small">{t.Write_cannotTitle}</h2>
-        <p className="krds-text-body-medium">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
+        <h2 id="write-result" className="krds-text-body-small-bold">{t.Write_cannotTitle}</h2>
+        <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
         <p className="krds-text-body-small rb-subtle">{t.fn.writeKind(t[`Write_kind_${kind}`])}</p>
         <div className="rb-modal-actions">
           <button type="button" className="krds-btn medium tertiary" onClick={onClose}>{t.Commit_cancel}</button>
@@ -89,8 +89,8 @@ export default function Write({ mode }) {
     <ProjectFrame screenId={SCREEN[mode]} tab="" tabLabel={title} data={frame} state="Ideal">
       <div className="rb-write">
         <div className="rb-write-head">
-          <h2 className="krds-text-heading-medium">{title}</h2>
-          <p className="krds-text-body-medium rb-subtle">{t.fn.writeTarget(project.name, branch)}</p>
+          <h2 className="krds-text-body-small-bold">{title}</h2>
+          <p className="krds-text-body-small rb-subtle">{t.fn.writeTarget(project.name, branch)}</p>
         </div>
 
         {mode === 'branch' ? (
@@ -126,7 +126,7 @@ export default function Write({ mode }) {
           <div className="rb-upload">
             <label className="rb-upload-drop" htmlFor="upload-input">
               <Icon name="upload" />
-              <span className="krds-text-body-medium">{t.Write_uploadDrop}</span>
+              <span className="krds-text-body-small">{t.Write_uploadDrop}</span>
               <span className="krds-text-body-small rb-subtle">{t.Write_uploadHint}</span>
               <input
                 id="upload-input"

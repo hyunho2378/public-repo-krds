@@ -53,15 +53,15 @@ export default function NewProject() {
     <Page id="G-05" title={t.NewProject_title} state="Ideal">
       <div className="rb-write rb-narrow">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-large" data-figma="section-title">{t.NewProject_title}</h1>
-          <p className="krds-text-body-medium rb-subtle">{t.NewProject_hint}</p>
+          <h1 className="krds-text-heading-small" data-figma="section-title">{t.NewProject_title}</h1>
+          <p className="krds-text-body-small rb-subtle">{t.NewProject_hint}</p>
         </div>
 
         <FormField id="np-name" label={t.NewProject_name} required value={name} onChange={(e) => setName(e.target.value)} hint={t.NewProject_nameHint} />
 
         {similar.length ? (
           <section className="rb-compare-pick" aria-labelledby="np-similar">
-            <h2 id="np-similar" className="krds-text-body-medium-bold">{t.NewProject_similar}</h2>
+            <h2 id="np-similar" className="krds-text-body-small-bold">{t.NewProject_similar}</h2>
             <p className="krds-text-body-small rb-subtle">{t.NewProject_similarHint}</p>
             <ul className="rb-plain-list">
               {similar.map((p) => (
@@ -110,8 +110,8 @@ export default function NewProject() {
       {done ? (
         <div className="rb-modal-dim" role="presentation">
           <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="np-result">
-            <h2 id="np-result" className="krds-text-heading-small">{t.Write_cannotTitle}</h2>
-            <p className="krds-text-body-medium">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
+            <h2 id="np-result" className="krds-text-body-small-bold">{t.Write_cannotTitle}</h2>
+            <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
             <p className="krds-text-body-small rb-subtle">{t.fn.writeKind(t.NewProject_title)}</p>
             <div className="rb-modal-actions">
               <button type="button" className="krds-btn medium tertiary" onClick={() => setDone(false)}>{t.Commit_cancel}</button>

@@ -13,7 +13,7 @@ export default function Files() {
   const { project, readme, tree } = data.data;
   return (
     <ProjectFrame screenId="R-02" tab="/files" tabLabel={t.ProjectTabs_3} data={data} state={tree.length ? 'Ideal' : 'Empty'}>
-      <h2 className="krds-text-heading-medium">{t.P05_2}</h2>
+      <h2 className="krds-text-body-small-bold">{t.P05_2}</h2>
       {tree.length ? (
         <div className="krds-table-wrap rb-table-scroll">
           <table className="tbl data">
@@ -32,7 +32,7 @@ export default function Files() {
       ) : (
         <EmptyState title={t.P05_5} />
       )}
-      <h2 className="krds-text-heading-medium">{t.P05_6}</h2>
+      <h2 className="krds-text-body-small-bold">{t.P05_6}</h2>
       {readme ? <Readme source={readme} /> : <EmptyState title={t.P05_8}>{t.P05_7}</EmptyState>}
       <details className="krds-disclosure rb-dev">
         <summary className="krds-btn medium text">{t.P05_9}</summary>

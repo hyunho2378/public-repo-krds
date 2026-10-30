@@ -15,9 +15,9 @@ export default function Organizations() {
   const items = hasData(orgs.state) ? orgs.data.data.items.filter((o) => o.name.includes(filter.trim())).sort((a, b) => b.projectCount - a.projectCount) : [];
   return (
     <Page id="G-04" title={t.P11_1} state={orgs.state}>
-      <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.P11_1)}</h1>
+      <h1 className="krds-text-heading-small" data-figma="section-title">{phrase(t.P11_1)}</h1>
       <div className="rb-search">
-        <label className="krds-text-label-medium" htmlFor="org-filter">{t.P11_2}</label>
+        <label className="krds-text-label-small" htmlFor="org-filter">{t.P11_2}</label>
         <input className="krds-input medium" id="org-filter" type="search" placeholder={t.P11_3} value={filter} onChange={(e) => setFilter(e.target.value)} />
       </div>
       <Status {...orgs} />
@@ -26,8 +26,8 @@ export default function Organizations() {
           {items.map((o) => (
             <li className="structured-item" key={o.name}>
               <Link className="rb-list-link rb-row" to={`/search?q=${encodeURIComponent(o.name)}`}>
-                <span className="krds-text-heading-small">{o.name}</span>
-                <span className="krds-text-body-medium rb-subtle">{t.fn.orgCount(o.projectCount)}</span>
+                <span className="krds-text-body-small-bold">{o.name}</span>
+                <span className="krds-text-body-small rb-subtle">{t.fn.orgCount(o.projectCount)}</span>
               </Link>
             </li>
           ))}

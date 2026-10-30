@@ -153,11 +153,11 @@ export function CodeView({ path, text, rawUrl, size, historyTo, onHistory, blame
       </div>
       <p className="sr-only" role="status" aria-live="polite">{copied ? t.P16_copied : ''}</p>
       {binary ? (
-        <p className="krds-text-body-medium rb-code-note">{t.P16_binary}</p>
+        <p className="krds-text-body-small rb-code-note">{t.P16_binary}</p>
       ) : view === 'preview' ? (
         <div className="rb-code-preview"><Readme source={text} /></div>
       ) : view === 'blame' && !blame ? (
-        <p className="krds-text-body-medium rb-code-note">{blameState === 'Error' ? t.P16_blameError : t.P16_blameLoading}</p>
+        <p className="krds-text-body-small rb-code-note">{blameState === 'Error' ? t.P16_blameError : t.P16_blameLoading}</p>
       ) : (
         <CodeLines lines={lines} lang={lang} blame={view === 'blame' ? blame : null} wrap={wrap} />
       )}

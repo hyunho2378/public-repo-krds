@@ -65,8 +65,8 @@ function Result({ kind, onClose }) {
   return (
     <div className="rb-modal-dim" role="presentation">
       <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="issue-result">
-        <h2 id="issue-result" className="krds-text-heading-small">{t.Write_cannotTitle}</h2>
-        <p className="krds-text-body-medium">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
+        <h2 id="issue-result" className="krds-text-body-small-bold">{t.Write_cannotTitle}</h2>
+        <p className="krds-text-body-small">{isStatic ? t.Write_cannotStatic : t.Write_cannotLogin}</p>
         <p className="krds-text-body-small rb-subtle">{t.fn.writeKind(kind)}</p>
         <div className="rb-modal-actions">
           <button type="button" className="krds-btn medium tertiary" onClick={onClose}>{t.Commit_cancel}</button>
@@ -112,7 +112,7 @@ export default function NewIssue({ kind = 'issue' }) {
   return (
     <ProjectFrame screenId={kind === 'merge' ? 'R-16' : 'R-11'} tab="" tabLabel={screenTitle} data={frame} state="Ideal">
       <div className="rb-write">
-        <h2 className="krds-text-heading-medium">{screenTitle}</h2>
+        <h2 className="krds-text-body-small-bold">{screenTitle}</h2>
 
         {kind === 'merge' ? (
           <section className="rb-compare-pick" aria-label={t.Issue_comparePick}>

@@ -30,7 +30,7 @@ export function LoginFailed() {
   return (
     <Card id="G-08b" title={t.P10_2}>
       <p className="krds-alert rb-login-notice" role="alert">
-        <strong className="krds-text-body-medium-bold">{t.Login_failTitle}</strong>
+        <strong className="krds-text-body-small-bold">{t.Login_failTitle}</strong>
         <span className="krds-text-body-small">{t.Login_failBody}</span>
       </p>
       <FormField id="fail-id" label={t.P12_idLabel} required value="" readOnly />
@@ -44,7 +44,7 @@ export function LoginOtp() {
   const [code, setCode] = useState('');
   return (
     <Card id="G-08c" title={t.Login_otpTitle}>
-      <p className="krds-text-body-medium">{phrase(t.Login_otpBody)}</p>
+      <p className="krds-text-body-small">{phrase(t.Login_otpBody)}</p>
       <FormField
         id="otp-code"
         label={t.Login_otpLabel}
@@ -64,7 +64,7 @@ export function LoginOtp() {
 export function LoginSignup() {
   return (
     <Card id="G-08d" title={t.Login_signupTitle}>
-      <p className="krds-text-body-medium">{phrase(t.Login_signupBody)}</p>
+      <p className="krds-text-body-small">{phrase(t.Login_signupBody)}</p>
       <a className="krds-btn medium primary rb-login-submit" href={`${GITLAB}/users/sign_up`} target="_blank" rel="noreferrer">
         {t.Login_signupGo}<span className="sr-only"> {t.Footer_3}</span>
       </a>
@@ -76,7 +76,7 @@ export function LoginReset() {
   const [mail, setMail] = useState('');
   return (
     <Card id="G-08e" title={t.Login_resetTitle}>
-      <p className="krds-text-body-medium">{phrase(t.Login_resetBody)}</p>
+      <p className="krds-text-body-small">{phrase(t.Login_resetBody)}</p>
       <FormField id="reset-mail" label={t.Login_resetLabel} required type="email" autoComplete="off" value={mail} onChange={(e) => setMail(e.target.value)} />
       <a className="krds-btn medium primary rb-login-submit" href={`${GITLAB}/users/password/new`} target="_blank" rel="noreferrer">
         {t.Login_resetGo}<span className="sr-only"> {t.Footer_3}</span>

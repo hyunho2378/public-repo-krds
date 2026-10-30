@@ -6,6 +6,9 @@ html[data-krds-mode="dark"], html[data-krds-mode="high-contrast"] { color-scheme
 body {
   background: var(--krds-color-background-white);
   color: var(--krds-color-text-basic);
+  /* D-14 끝절: 본문, 목록, 파일 이름 15(body/small). 행간은 layout.tokens.css의 짝수 px */
+  font-size: var(--krds-font-size-body-small);
+  line-height: var(--rb-lh-15);
 }
 #root { display: flex; flex-direction: column; min-height: 100dvh; }
 
@@ -108,7 +111,7 @@ html[data-krds-mode="dark"] {
 
 /* UX-007 4장: 목록 설명은 한 줄 말줄임, 메타 라인은 작은 글자와 연한 색 */
 .rb-clamp-1 { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; text-overflow: ellipsis; }
-.rb-meta { font-size: var(--krds-pc-font-size-label-small); color: var(--krds-color-text-subtle); align-items: center; }
+.rb-meta { font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); color: var(--krds-color-text-subtle); align-items: center; }
 .rb-meta .value { color: var(--krds-color-text-subtle); }
 .rb-lang { display: inline-flex; align-items: center; gap: var(--krds-gap-2); }
 .rb-lang-dot { display: inline-block; width: var(--krds-number-5); height: var(--krds-number-5); border-radius: 50%; background: var(--krds-color-icon-gray); }

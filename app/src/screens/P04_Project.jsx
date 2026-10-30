@@ -42,8 +42,8 @@ export default function Project() {
     <ProjectFrame screenId="A-02" tab="/about" tabLabel={t.ProjectTabs_1} data={data} state={readme ? 'Ideal' : 'Min'}>
       <div className="rb-two-col rb-two-col-end">
         <article className="rb-stack rb-grow">
-          <h2 className="krds-text-heading-medium">{t.P04_18}</h2>
-          <p className="krds-text-body-large">{summary || t.StructuredList_5}</p>
+          <h2 className="krds-text-body-small-bold">{t.P04_18}</h2>
+          <p className="krds-text-body-small">{summary || t.StructuredList_5}</p>
           {card.summary && (
             <p className="krds-text-body-small rb-subtle">
               {t.P04_autoSummary} <a className="krds-link" href={`${project.web_url}/-/blob/${project.default_branch || 'main'}/README.md`} target="_blank" rel="noreferrer">{t.P04_19}<span className="sr-only"> {t.Footer_3}</span></a>
@@ -52,7 +52,7 @@ export default function Project() {
           <div className="rb-actions">
             <LinkButton to={`/projects/${id}/use`}>{t.P04_20}</LinkButton>
           </div>
-          <h2 className="krds-text-heading-medium">{t.P04_22}</h2>
+          <h2 className="krds-text-body-small-bold">{t.P04_22}</h2>
           {readme ? (
             <Readme source={readme} />
           ) : (
@@ -68,7 +68,7 @@ export default function Project() {
           </a>
         </article>
         <aside className="rb-aside-col rb-decision" aria-labelledby="decision-title">
-          <h2 id="decision-title" className="krds-text-heading-small">{t.P04_25}</h2>
+          <h2 id="decision-title" className="krds-text-body-small-bold">{t.P04_25}</h2>
           <dl className="rb-stack">
             {decision.map(([title, value, [action, to]]) => (
               <div className="rb-decision-item" key={title}>

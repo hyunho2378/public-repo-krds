@@ -26,7 +26,7 @@ export function MergeRequests() {
     <ProjectFrame screenId="R-16" tab="" tabLabel={t.P20_title} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
         <RepoSubNav id={frame.id} active="mr" />
-        <p className="krds-text-body-medium rb-subtle">{t.P20_help}</p>
+        <p className="krds-text-body-small rb-subtle">{t.P20_help}</p>
         <StateTabs value={st} onChange={setSt} label={t.P20_title} items={[['opened', t.P20_opened], ['merged', t.P20_merged], ['closed', t.P20_closed]]} />
         {!list ? <Status {...body} /> : list.length ? (
           <ul className="rb-row-list">
@@ -35,7 +35,7 @@ export function MergeRequests() {
                 <div className="rb-row-main">
                   <p className="rb-row-title">
                     <span className="rb-pill">{LABEL[m.state] || m.state}</span>
-                    <Link className="krds-link krds-text-body-large rb-ellipsis" to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link>
+                    <Link className="krds-link krds-text-body-small rb-ellipsis" to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link>
                   </p>
                   <p className="krds-text-body-small rb-row-meta"><span>{t.fn.issueNo(m.iid)}</span><span>{day(m.created_at)}</span><span className="rb-break-any">{m.source_branch} → {m.target_branch}</span></p>
                 </div>
@@ -80,7 +80,7 @@ export function MergeRequest() {
           <RepoSubNav id={frame.id} active="mr" />
           <Link className="krds-link" to={`/projects/${frame.id}/merge-requests`}>{t.P20_back}</Link>
           <div className="rb-detail-head">
-            <h2 className="krds-text-heading-medium">{m.title} <span className="rb-subtle">{t.fn.issueNo(m.iid)}</span></h2>
+            <h2 className="krds-text-heading-small">{m.title} <span className="rb-subtle">{t.fn.issueNo(m.iid)}</span></h2>
             <p className="krds-text-body-small rb-row-meta">
               <span className="rb-pill">{LABEL[m.state] || m.state}</span>
               <span>{day(m.created_at)}</span>
@@ -124,8 +124,8 @@ export function MergeRequest() {
           {notice ? (
             <div className="rb-modal-dim" role="presentation">
               <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="mr-notice">
-                <h2 id="mr-notice" className="krds-text-heading-small">{t.Write_cannotTitle}</h2>
-                <p className="krds-text-body-medium">{t.Write_cannotStatic}</p>
+                <h2 id="mr-notice" className="krds-text-body-small-bold">{t.Write_cannotTitle}</h2>
+                <p className="krds-text-body-small">{t.Write_cannotStatic}</p>
                 <div className="rb-modal-actions">
                   <button type="button" className="krds-btn medium primary" onClick={() => setNotice(false)}>{t.Commit_cancel}</button>
                 </div>

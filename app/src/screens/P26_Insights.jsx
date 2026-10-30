@@ -23,12 +23,12 @@ export function Insights() {
     <Page id="A-06" title={t.Insights_title} state={rows.length ? 'Ideal' : map.state}>
       <div className="rb-write">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-large" data-figma="section-title">{t.Insights_title}</h1>
-          <p className="krds-text-body-medium rb-subtle">{t.Insights_hint}</p>
+          <h1 className="krds-text-heading-small" data-figma="section-title">{t.Insights_title}</h1>
+          <p className="krds-text-body-small rb-subtle">{t.Insights_hint}</p>
         </div>
         {!rows.length ? <Status {...map} /> : (
           <section aria-labelledby="field-dist">
-            <h2 id="field-dist" className="krds-text-heading-small">{t.Insights_byField}</h2>
+            <h2 id="field-dist" className="krds-text-body-small-bold">{t.Insights_byField}</h2>
             <ul className="rb-bars">
               {rows.map((r) => (
                 <li key={r.name}>
@@ -43,7 +43,7 @@ export function Insights() {
         )}
         {orgRows.length ? (
           <section aria-labelledby="org-dist">
-            <h2 id="org-dist" className="krds-text-heading-small">{t.Insights_byOrg}</h2>
+            <h2 id="org-dist" className="krds-text-body-small-bold">{t.Insights_byOrg}</h2>
             <ul className="rb-plain-list">
               {orgRows.slice(0, 30).map((o) => (
                 <li className="rb-plain-row" key={o.name || o.organization}>
@@ -68,8 +68,8 @@ export function Checklist() {
     <Page id="A-11" title={t.Checklist_title} state={steps.length ? 'Ideal' : guide.state}>
       <div className="rb-write">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-large">{t.Checklist_title}</h1>
-          <p className="krds-text-body-medium rb-subtle">{t.Checklist_hint}</p>
+          <h1 className="krds-text-heading-small">{t.Checklist_title}</h1>
+          <p className="krds-text-body-small rb-subtle">{t.Checklist_hint}</p>
         </div>
         {!steps.length ? <Status {...guide} /> : (
           <ul className="krds-accordion rb-steps">
@@ -77,11 +77,11 @@ export function Checklist() {
               <li key={s.id || s.title}>
                 <button type="button" className="rb-step-head" aria-expanded={open === i} onClick={() => setOpen(open === i ? -1 : i)}>
                   <span className="rb-step-no">{i + 1}</span>
-                  <span className="krds-text-body-medium-bold">{s.title}</span>
+                  <span className="krds-text-body-small-bold">{s.title}</span>
                 </button>
                 {open === i ? (
                   <div className="rb-step-body">
-                    {s.summary ? <p className="krds-text-body-medium">{s.summary}</p> : null}
+                    {s.summary ? <p className="krds-text-body-small">{s.summary}</p> : null}
                     <ul className="rb-check-list">
                       {(s.checks || s.items || []).map((c) => (
                         <li key={c.text || c}>{c.text || c}</li>
@@ -110,8 +110,8 @@ export function LawAlerts() {
     <ProjectFrame screenId="A-10" tab="" tabLabel={t.Law_title} data={frame} state={items.length ? 'Ideal' : 'Empty'}>
       <div className="rb-write">
         <div className="rb-write-head">
-          <h2 className="krds-text-heading-medium">{t.Law_title}</h2>
-          <p className="krds-text-body-medium rb-subtle">{t.Law_hint}</p>
+          <h2 className="krds-text-body-small-bold">{t.Law_title}</h2>
+          <p className="krds-text-body-small rb-subtle">{t.Law_hint}</p>
         </div>
         {notConnected ? (
           <EmptyState title={t.Law_notConnected} />
@@ -153,8 +153,8 @@ export function Handover() {
     <ProjectFrame screenId="A-08" tab="" tabLabel={t.Handover_title} data={frame} state={state === 'done' ? 'Ideal' : 'Empty'}>
       <div className="rb-write">
         <div className="rb-write-head">
-          <h2 className="krds-text-heading-medium">{t.Handover_title}</h2>
-          <p className="krds-text-body-medium rb-subtle">{t.Handover_hint}</p>
+          <h2 className="krds-text-body-small-bold">{t.Handover_title}</h2>
+          <p className="krds-text-body-small rb-subtle">{t.Handover_hint}</p>
         </div>
         <div className="rb-write-actions">
           <button type="button" className="krds-btn medium primary" onClick={make} disabled={state === 'loading'}>
@@ -185,18 +185,18 @@ export function Mcp() {
     <Page id="A-07" title={t.Mcp_title} state={d ? 'Ideal' : info.state}>
       <div className="rb-write">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-large">{t.Mcp_title}</h1>
-          <p className="krds-text-body-medium rb-subtle">{t.Mcp_hint}</p>
+          <h1 className="krds-text-heading-small">{t.Mcp_title}</h1>
+          <p className="krds-text-body-small rb-subtle">{t.Mcp_hint}</p>
         </div>
         {!d ? <Status {...info} /> : (
           <>
-            <h2 className="krds-text-heading-small">{t.Mcp_how}</h2>
+            <h2 className="krds-text-body-small-bold">{t.Mcp_how}</h2>
             <ol className="rb-check-list">
               {(d.steps || []).map((s) => <li key={s}>{s}</li>)}
             </ol>
             {d.tools?.length ? (
               <>
-                <h2 className="krds-text-heading-small">{t.Mcp_tools}</h2>
+                <h2 className="krds-text-body-small-bold">{t.Mcp_tools}</h2>
                 <ul className="rb-plain-list">
                   {d.tools.map((tool) => (
                     <li className="rb-plain-row" key={tool.name}>

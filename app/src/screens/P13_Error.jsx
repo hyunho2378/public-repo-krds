@@ -19,8 +19,8 @@ export default function ErrorScreen({ kind: fixed }) {
   return (
     <Page id="G-09" title={title} state={kind}>
       <div className="rb-narrow rb-stack">
-        <h1 className="krds-text-heading-xlarge" data-figma="section-title">{title}</h1>
-        <p className="krds-text-body-large">{phrase(text)}</p>
+        <h1 className="krds-text-heading-small" data-figma="section-title">{title}</h1>
+        <p className="krds-text-body-small">{phrase(text)}</p>
         {kind === 'not-found' && <TaskSearch />}
         <div className="rb-actions">
           <LinkButton to="/">{t.P13_7}</LinkButton>

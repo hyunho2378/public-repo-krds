@@ -20,7 +20,7 @@ export default function Home() {
       <h1 className="krds-text-heading-large" data-figma="section-title">{phrase(t.P01_8)}</h1>
       <TaskSearch />
       <section className="rb-stack" aria-labelledby="fields-title">
-        <h2 id="fields-title" className="krds-text-heading-medium">{phrase(t.P01_10)}</h2>
+        <h2 id="fields-title" className="krds-text-heading-small">{phrase(t.P01_10)}</h2>
         <ul className="rb-links">
           {FIELDS.map((f) => (
             <li key={f}>
@@ -32,7 +32,7 @@ export default function Home() {
         </ul>
       </section>
       <section className="rb-stack" aria-labelledby="recent-title">
-        <h2 id="recent-title" className="krds-text-heading-medium">{phrase(t.P01_13)}</h2>
+        <h2 id="recent-title" className="krds-text-heading-small">{phrase(t.P01_13)}</h2>
         <Status {...list} />
         {list.state === 'Empty' && <EmptyState title={t.P01_14} />}
         {hasData(list.state) && <ProjectList items={list.data.data.items} />}

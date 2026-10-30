@@ -92,6 +92,20 @@
 .rb-shell { display: grid; grid-template-columns: var(--rb-sidebar-w) minmax(0, 1fr); column-gap: var(--rb-col-gap); flex: 1; width: 100%; align-items: start; padding: var(--rb-page-pad); }
 .rb-shell.is-bare { grid-template-columns: minmax(0, 1fr); }
 .rb-shell.has-project { grid-template-columns: var(--rb-sidebar-w-project) minmax(0, 1fr); }
+/* D-17: 접히면 폭이 56으로 줄어들고 본문이 더 넓어진다(어느 폭에서도 본문이 가장 넓다) */
+.rb-shell.is-collapsed, .rb-shell.is-collapsed.has-project { grid-template-columns: var(--rb-sidebar-w-collapsed) minmax(0, 1fr); }
+.rb-side-collapse {
+  display: flex; align-items: center; gap: var(--krds-gap-2);
+  width: 100%; padding: var(--krds-padding-3);
+  border: 0; background: none; cursor: pointer;
+  color: var(--krds-color-text-subtle);
+  font-size: var(--krds-pc-font-size-body-small);
+}
+.rb-side-collapse:hover { background: var(--krds-color-action-secondary-hover); }
+.rb-side.is-collapsed .rb-side-collapse .rb-icon { transform: none; }
+.rb-side:not(.is-collapsed) .rb-side-collapse .rb-icon { transform: scaleX(-1); }
+.rb-side.is-collapsed .rb-side-link { justify-content: center; }
+.rb-side.is-collapsed .rb-side-group-btn { display: none; }
 .rb-side {
   width: 100%;
   display: flex;

@@ -36,8 +36,8 @@ export function Issues() {
     <ProjectFrame screenId="R-11" tab="/feedback" tabLabel={t.P19_title} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
         <div className="rb-detail-head">
-          <h2 className="krds-text-heading-medium">{t.P19_title}</h2>
-          <p className="krds-text-body-medium rb-subtle">{t.P19_help}</p>
+          <h2 className="krds-text-body-small-bold">{t.P19_title}</h2>
+          <p className="krds-text-body-small rb-subtle">{t.P19_help}</p>
         </div>
         <StateTabs value={st} onChange={setSt} label={t.P19_title} items={[['opened', t.P19_open], ['closed', t.P19_closed]]} />
         {!list ? <Status {...body} /> : list.length ? (
@@ -47,7 +47,7 @@ export function Issues() {
                 <div className="rb-row-main">
                   <p className="rb-row-title">
                     <span className="rb-pill">{i.state === 'opened' ? t.P19_open : t.P19_closed}</span>
-                    <Link className="krds-link krds-text-body-large rb-ellipsis" to={`/projects/${frame.id}/issues/${i.iid}`}>{i.title}</Link>
+                    <Link className="krds-link krds-text-body-small rb-ellipsis" to={`/projects/${frame.id}/issues/${i.iid}`}>{i.title}</Link>
                   </p>
                   <p className="krds-text-body-small rb-row-meta"><span>{t.fn.issueNo(i.iid)}</span><span>{day(i.created_at)}</span></p>
                   {i.labels?.length ? <p className="rb-labels">{i.labels.map((l) => <span key={l} className="rb-pill">{l}</span>)}</p> : null}
@@ -74,7 +74,7 @@ export function Issue() {
         <div className="rb-code-area">
           <Link className="krds-link" to={`/projects/${frame.id}/issues`}>{t.P19_back}</Link>
           <div className="rb-detail-head">
-            <h2 className="krds-text-heading-medium">{i.title} <span className="rb-subtle">{t.fn.issueNo(i.iid)}</span></h2>
+            <h2 className="krds-text-heading-small">{i.title} <span className="rb-subtle">{t.fn.issueNo(i.iid)}</span></h2>
             <p className="krds-text-body-small rb-row-meta">
               <span className="rb-pill">{i.state === 'opened' ? t.P19_open : t.P19_closed}</span>
               <span>{day(i.created_at)}</span>

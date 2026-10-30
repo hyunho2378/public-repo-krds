@@ -51,14 +51,14 @@ export default function Feedback() {
     <ProjectFrame screenId="A-04" tab="/feedback" tabLabel={t.ProjectTabs_5} data={data} state={done ? 'Done' : type ? 'Write' : 'Ideal'}>
       {done ? (
         <div className="krds-alert rb-status" role="status" data-state="Done">
-          <h2 className="krds-text-heading-medium">{t.P08_8}</h2>
+          <h2 className="krds-text-body-small-bold">{t.P08_8}</h2>
           <p>{done.notice}</p>
           <Button Type="tertiary" onClick={() => { setDone(null); setBody(''); setTitle(''); }}>{t.P08_9}</Button>
         </div>
       ) : (
         <form className="rb-stack rb-form" onSubmit={submit} noValidate>
           <fieldset className="rb-stack">
-            <FieldsetTitle className="krds-text-heading-medium">{t.P08_10}</FieldsetTitle>
+            <FieldsetTitle className="krds-text-body-small-bold">{t.P08_10}</FieldsetTitle>
             {TYPES.map(([v, label, hint]) => (
               <div className="krds-form-check" key={v}>
                 <input id={`type-${v}`} type="radio" name="type" checked={type === v} onChange={() => setType(v)} aria-describedby={`type-${v}-hint`} />

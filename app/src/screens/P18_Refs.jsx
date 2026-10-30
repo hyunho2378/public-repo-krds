@@ -16,7 +16,7 @@ function RefRow({ id, name, commit, badges }) {
     <li className="rb-row">
       <div className="rb-row-main">
         <p className="rb-row-title">
-          <Link className="krds-link krds-text-body-large rb-ellipsis rb-break-any" to={`/projects/${id}/code`}>{name}</Link>
+          <Link className="krds-link krds-text-body-small rb-ellipsis rb-break-any" to={`/projects/${id}/code`}>{name}</Link>
           {badges}
         </p>
         {commit ? (
@@ -43,7 +43,7 @@ export function Branches() {
         {!b ? <Status {...body} /> : (
           <>
             <section className="rb-stack-tight" aria-labelledby="br-title">
-              <h2 id="br-title" className="krds-text-heading-small">{t.fn.countLabel(t.P18_branches, b.branches.length)}</h2>
+              <h2 id="br-title" className="krds-text-body-small-bold">{t.fn.countLabel(t.P18_branches, b.branches.length)}</h2>
               {b.branches.length ? (
                 <ul className="rb-row-list">
                   {b.branches.map((x) => (
@@ -56,7 +56,7 @@ export function Branches() {
               ) : <EmptyState title={t.P18_noBranch} />}
             </section>
             <section className="rb-stack-tight" aria-labelledby="tag-title">
-              <h2 id="tag-title" className="krds-text-heading-small">{t.fn.countLabel(t.P18_tags, b.tags.length)}</h2>
+              <h2 id="tag-title" className="krds-text-body-small-bold">{t.fn.countLabel(t.P18_tags, b.tags.length)}</h2>
               {b.tags.length ? (
                 <ul className="rb-row-list">{b.tags.map((x) => <RefRow key={x.name} id={frame.id} name={x.name} commit={x.commit} />)}</ul>
               ) : <EmptyState title={t.P18_noTag} />}
@@ -83,7 +83,7 @@ export function Releases() {
               <li className="rb-row" key={r.tag_name}>
                 <div className="rb-row-main">
                   <p className="rb-row-title">
-                    <span className="krds-text-heading-small rb-break-any">{r.name || r.tag_name}</span>
+                    <span className="krds-text-body-small-bold rb-break-any">{r.name || r.tag_name}</span>
                     {i === 0 ? <span className="rb-pill">{t.P18_latest}</span> : null}
                   </p>
                   <p className="krds-text-body-small rb-row-meta"><span>{r.tag_name}</span><span>{day(r.released_at || r.created_at)}</span></p>

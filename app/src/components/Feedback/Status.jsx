@@ -16,7 +16,7 @@ export function Status({ state, error, retry, status }) {
     const notFound = status === 404;
     return (
       <div role="alert" className="rb-status" data-state="Error">
-        <h2 className="krds-text-heading-medium">{notFound ? t.Status_2 : t.Status_3}</h2>
+        <h2 className="krds-text-heading-small">{notFound ? t.Status_2 : t.Status_3}</h2>
         <p>{phrase(notFound ? t.Status_4 : error || t.Status_5)}</p>
         <div className="rb-actions">
           {!notFound && retry && (

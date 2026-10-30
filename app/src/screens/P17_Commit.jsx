@@ -28,9 +28,9 @@ export default function Commit() {
       ) : (
         <div className="rb-code-area">
           <div className="rb-detail-head">
-            <h2 className="krds-text-heading-medium rb-break-any">{b.commit.title}</h2>
+            <h2 className="krds-text-heading-small rb-break-any">{b.commit.title}</h2>
             {b.commit.message && b.commit.message.trim() !== b.commit.title ? (
-              <pre className="rb-detail-body krds-text-body-medium rb-pre">{b.commit.message.trim()}</pre>
+              <pre className="rb-detail-body krds-text-body-small rb-pre">{b.commit.message.trim()}</pre>
             ) : null}
             <p className="krds-text-body-small rb-row-meta">
               <span>{t.P17_author} {orgLabel(b.commit.author_name)}</span>

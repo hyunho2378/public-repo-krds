@@ -3,8 +3,11 @@
 .rb-repo-top { display: flex; flex-direction: column; gap: var(--krds-gap-6); }
 .rb-repo-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: var(--krds-gap-4); }
 .rb-repo-title { display: flex; flex-direction: column; gap: var(--krds-gap-1); min-width: 0; flex: 1 1 0; }
-.rb-repo-name { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin: 0; font-size: var(--krds-font-size-heading-medium); }
-.rb-repo-name .rb-repo-org { color: var(--krds-color-text-subtle); font-weight: inherit; }
+/* D-14 끝줄: 저장소 제목은 19px(heading/small), 굳기 600, 한 줄 말줄임(민든사람 부분을 먼저 줄임) */
+.rb-repo-name { display: flex; flex-wrap: nowrap; align-items: center; gap: var(--krds-gap-2); margin: 0; min-width: 0; font-weight: 600; }
+.rb-repo-name .rb-repo-org { color: var(--krds-color-text-subtle); font-weight: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: var(--krds-number-18); flex-shrink: 3; }
+.rb-repo-name > span:not(.rb-repo-org) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: var(--krds-number-15); flex-shrink: 1; }
+.rb-repo-name .krds-badge, .rb-repo-name .rb-pill { flex: none; }
 .rb-repo-desc { color: var(--krds-color-text-subtle); word-break: keep-all; overflow-wrap: break-word; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .rb-repo-meta { color: var(--krds-color-text-subtle); }
 .rb-repo-actions { display: flex; flex: none; flex-wrap: wrap; gap: var(--krds-gap-2); align-items: center; justify-content: flex-end; width: var(--rb-actions-w); }

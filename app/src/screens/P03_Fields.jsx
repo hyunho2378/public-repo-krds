@@ -12,7 +12,7 @@ export default function Fields() {
   const map = useData(() => product.get('/coverage-map'), []);
   return (
     <Page id="G-03" title={t.P03_1} state={map.state}>
-      <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.P03_1)}</h1>
+      <h1 className="krds-text-heading-small" data-figma="section-title">{phrase(t.P03_1)}</h1>
       <p className="rb-subtle">{phrase(t.P03_2)}</p>
       <Status {...map} />
       {hasData(map.state) && (
@@ -21,8 +21,8 @@ export default function Fields() {
             {map.data.data.fields.map((f) => (
               <li className="structured-item" key={f.name}>
                 <Link className="rb-list-link rb-row" to={`/search?field=${encodeURIComponent(f.name)}`}>
-                  <span className="krds-text-heading-small">{f.name}</span>
-                  <span className="krds-text-body-medium rb-subtle">{t.fn.toolCount(f.count)}</span>
+                  <span className="krds-text-body-small-bold">{f.name}</span>
+                  <span className="krds-text-body-small rb-subtle">{t.fn.toolCount(f.count)}</span>
                 </Link>
               </li>
             ))}

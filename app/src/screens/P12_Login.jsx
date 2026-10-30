@@ -87,7 +87,7 @@ export default function Login() {
           <div className="rb-modal-dim" role="presentation">
             <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="login-static">
               <h2 id="login-static" className="krds-text-heading-small">{t.Write_cannotTitle}</h2>
-              <p className="krds-text-body-medium">{phrase(t.P12_static)}</p>
+              <p className="krds-text-body-small">{phrase(t.P12_static)}</p>
               <div className="rb-modal-actions">
                 <button type="button" className="krds-btn medium tertiary" onClick={() => setShowStatic(false)}>{t.Commit_cancel}</button>
                 <Link className="krds-btn medium primary" to={returnTo}>{t.P12_6}</Link>

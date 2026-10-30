@@ -31,8 +31,8 @@ export function Notifications() {
     <Page id="G-07" title={t.TabBar_alerts} state={signedIn ? 'Empty' : 'Empty'}>
       <div className="rb-write">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-large" data-figma="section-title">{t.TabBar_alerts}</h1>
-          <p className="krds-text-body-medium rb-subtle">{t.Alerts_hint}</p>
+          <h1 className="krds-text-heading-small" data-figma="section-title">{t.TabBar_alerts}</h1>
+          <p className="krds-text-body-small rb-subtle">{t.Alerts_hint}</p>
         </div>
         {!signedIn ? <NeedLogin title={t.TabBar_alerts} path="/notifications" /> : <EmptyState title={t.Alerts_none} />}
       </div>
@@ -49,15 +49,15 @@ export function Settings() {
     <Page id="G-11" title={t.Settings_title} state="Ideal">
       <div className="rb-write">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-large">{t.Settings_title}</h1>
+          <h1 className="krds-text-heading-small">{t.Settings_title}</h1>
         </div>
         <section aria-label={t.Header_mode}>
           <ScreenModeOptions name="settings-mode" mode={mode} setMode={setMode} />
         </section>
         <section aria-labelledby="set-account">
-          <h2 id="set-account" className="krds-text-heading-small">{t.Settings_account}</h2>
+          <h2 id="set-account" className="krds-text-body-small-bold">{t.Settings_account}</h2>
           {signedIn ? (
-            <p className="krds-text-body-medium">{t.fn.signedInAs(me.data.user.name)}</p>
+            <p className="krds-text-body-small">{t.fn.signedInAs(me.data.user.name)}</p>
           ) : (
             <NeedLogin title={t.Settings_account} path="/settings" />
           )}
@@ -85,8 +85,8 @@ export function ProjectSettings() {
     <ProjectFrame screenId="R-26" tab="" tabLabel={t.PSet_title} data={frame} state="Ideal">
       <div className="rb-write">
         <div className="rb-write-head">
-          <h2 className="krds-text-heading-medium">{t.PSet_title}</h2>
-          <p className="krds-text-body-medium rb-subtle">{t.PSet_hint}</p>
+          <h2 className="krds-text-body-small-bold">{t.PSet_title}</h2>
+          <p className="krds-text-body-small rb-subtle">{t.PSet_hint}</p>
         </div>
         <ul className="rb-plain-list">
           {rows.map(([k, v]) => (
@@ -124,8 +124,8 @@ export function RepoGraph() {
     <ProjectFrame screenId="R-25" tab="" tabLabel={t.Graph_title} data={frame} state={series.length ? 'Ideal' : body.state}>
       <div className="rb-write">
         <div className="rb-write-head">
-          <h2 className="krds-text-heading-medium">{t.Graph_title}</h2>
-          <p className="krds-text-body-medium rb-subtle">{t.fn.graphHint(weeks)}</p>
+          <h2 className="krds-text-body-small-bold">{t.Graph_title}</h2>
+          <p className="krds-text-body-small rb-subtle">{t.fn.graphHint(weeks)}</p>
         </div>
         {!series.length ? <Status {...body} /> : (
           <ul className="rb-bars">
@@ -149,8 +149,8 @@ export function Collaborate() {
     <Page id="A-09" title={t.Collab_title} state="Empty">
       <div className="rb-write">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-large">{t.Collab_title}</h1>
-          <p className="krds-text-body-medium rb-subtle">{t.Collab_hint}</p>
+          <h1 className="krds-text-heading-small">{t.Collab_title}</h1>
+          <p className="krds-text-body-small rb-subtle">{t.Collab_hint}</p>
         </div>
         <EmptyState
           title={t.Collab_none}

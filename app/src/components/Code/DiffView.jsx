@@ -115,7 +115,7 @@ export function DiffView({ files }) {
   return (
     <div className="rb-diffs">
       <div className="rb-diff-bar">
-        <p className="krds-text-body-medium-bold">{t.fn.filesChanged(files.length)}</p>
+        <p className="krds-text-body-small-bold">{t.fn.filesChanged(files.length)}</p>
         <div className="krds-form-chip rb-diff-mode" role="radiogroup" aria-label={t.P17_view}>
           {[['unified', t.P17_unified], ['split', t.P17_split]].map(([v, label]) => (
             <button key={v} type="button" role="radio" aria-checked={mode === v} className={`krds-btn small ${mode === v ? 'primary' : 'tertiary'} rb-mode-${v}`} onClick={() => setMode(v)}>{label}</button>

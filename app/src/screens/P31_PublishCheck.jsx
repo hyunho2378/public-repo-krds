@@ -32,15 +32,15 @@ export default function PublishCheck() {
     <ProjectFrame screenId="A-03" tab="" tabLabel={t.PubCheck_title} data={frame} state={check ? (allPass ? 'Pass' : 'NeedsWork') : body.state}>
       <div className="rb-code-area">
         <div className="rb-detail-head">
-          <h2 className="krds-text-heading-medium" data-figma="section-title">{t.PubCheck_title}</h2>
-          <p className="krds-text-body-medium rb-subtle">{t.PubCheck_hint}</p>
+          <h2 className="krds-text-body-small-bold" data-figma="section-title">{t.PubCheck_title}</h2>
+          <p className="krds-text-body-small rb-subtle">{t.PubCheck_hint}</p>
         </div>
         {!check ? (
           <Status {...body} />
         ) : (
           <section className="rb-stack" aria-live="polite" data-figma="checks">
-            <h3 className="krds-text-heading-small">{allPass ? t.P09_24 : t.fn.checkCount(check.checks.length, passed)}</h3>
-            <p className="krds-text-body-medium">{phrase(t.P09_25)}</p>
+            <h3 className="krds-text-body-small-bold">{allPass ? t.P09_24 : t.fn.checkCount(check.checks.length, passed)}</h3>
+            <p className="krds-text-body-small">{phrase(t.P09_25)}</p>
             <ul className="rb-checklist">
               {check.checks.map((c) => (
                 <li key={c.id} className={c.pass ? 'is-pass' : 'is-fail'}>

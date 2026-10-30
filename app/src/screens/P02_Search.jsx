@@ -26,7 +26,7 @@ function Filters({ params, toggle, clear, facets }) {
   return (
     <div className="rb-stack">
       <fieldset className="rb-stack">
-        <FieldsetTitle className="krds-text-body-medium-bold">{t.P02_1}</FieldsetTitle>
+        <FieldsetTitle className="krds-text-body-small-bold">{t.P02_1}</FieldsetTitle>
         {FIELDS.map((f) => (
           <div className="krds-form-check" key={f}>
             <input id={`field-${f}`} type="checkbox" checked={params.get('field') === f} onChange={() => toggle('field', f)} />
@@ -36,7 +36,7 @@ function Filters({ params, toggle, clear, facets }) {
       </fieldset>
       {(!facets || ENVIRONMENTS.some(([v]) => facets.execution[v] > 0)) && (
         <fieldset className="rb-stack">
-          <FieldsetTitle className="krds-text-body-medium-bold">{t.P02_2}</FieldsetTitle>
+          <FieldsetTitle className="krds-text-body-small-bold">{t.P02_2}</FieldsetTitle>
           {ENVIRONMENTS.map(([v, label]) => (
             <div className="krds-form-check" key={v}>
               <input id={`env-${v}`} type="checkbox" checked={params.get('environment') === v} onChange={() => toggle('environment', v)} />
@@ -85,16 +85,16 @@ export default function Search() {
 
   return (
     <Page id="G-02" title={query ? t.fn.searchTitle(query) : t.P02_4} state={result.state}>
-      <h1 className="krds-text-heading-xlarge" data-figma="section-title">{query ? t.fn.searchTitle(query) : t.P02_6}</h1>
+      <h1 className="krds-text-heading-small" data-figma="section-title">{query ? t.fn.searchTitle(query) : t.P02_6}</h1>
       <TaskSearch initial={query} keep={params} />
       <div className="rb-two-col">
         <aside className="rb-aside-col rb-filter-pc" aria-label={t.P02_7}>
-          <h2 className="krds-text-heading-small">{phrase(t.P02_8)}</h2>
+          <h2 className="krds-text-body-small-bold">{phrase(t.P02_8)}</h2>
           <Filters params={params} toggle={toggle} clear={clear} facets={result.data?.data.facets} />
         </aside>
         <section className="rb-stack rb-grow" aria-label={t.P02_5}>
           <div className="rb-result-bar">
-            <p role="status" className="krds-text-heading-small">
+            <p role="status" className="krds-text-body-small-bold">
               {hasData(result.state) ? t.fn.resultCount(result.data.data.total) : result.state === 'Empty' ? t.P02_9 : ''}
             </p>
             <Button Type="tertiary" Size="small" className="krds-btn small tertiary rb-filter-mobile" aria-expanded={sheet} onClick={() => setSheet(true)}>
@@ -140,7 +140,7 @@ export default function Search() {
         <div className="krds-bottom-sheet rb-sheet is-open" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
           <div className="modal-back" onClick={() => setSheet(false)} />
           <div className="rb-sheet-body">
-            <h2 id="sheet-title" className="krds-text-heading-small">{phrase(t.P02_8)}</h2>
+            <h2 id="sheet-title" className="krds-text-body-small-bold">{phrase(t.P02_8)}</h2>
             <Filters params={params} toggle={toggle} clear={clear} facets={result.data?.data.facets} />
             <Button onClick={() => setSheet(false)}>{t.P02_13}</Button>
           </div>

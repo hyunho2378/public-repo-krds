@@ -43,7 +43,7 @@ export function CommitDialog({ open, onClose, defaultMessage, branch, onSubmit, 
   return (
     <div className="rb-modal-dim" role="presentation" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
       <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="commit-title" ref={panel}>
-        <h2 id="commit-title" className="krds-text-heading-small">{t.Commit_title}</h2>
+        <h2 id="commit-title" className="krds-text-heading-xsmall">{t.Commit_title}</h2>
         <FormField
           id="commit-message"
           label={t.Commit_message}

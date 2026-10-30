@@ -26,7 +26,7 @@ export default function Explore() {
   const items = [...(body.data?.items || [])].sort(TABS.find(([k]) => k === tab)[2]);
   return (
     <Page id="G-01" title={t.Explore_title} state={body.state}>
-      <h1 className="krds-text-heading-large" data-figma="section-title">{t.Explore_title}</h1>
+      <h1 className="krds-text-heading-small" data-figma="section-title">{t.Explore_title}</h1>
       <div className="rb-code-views" role="tablist" aria-label={t.Explore_tabsLabel} data-figma="tabs">
         {TABS.map(([key, label]) => (
           <button

@@ -23,14 +23,14 @@ export default function Help() {
   const tpl = useData(() => product.get('/templates/readme'), []);
   return (
     <Page id="G-10" title={t.Header_5}>
-      <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.Header_5)}</h1>
+      <h1 className="krds-text-heading-small" data-figma="section-title">{phrase(t.Header_5)}</h1>
       {/* UX-007 2장: 시제품 고지는 이곳과 README에만 둔다 */}
       <section className="rb-stack" aria-labelledby="about-title">
-        <h2 id="about-title" className="krds-text-heading-medium">{phrase(t.P14_about_title)}</h2>
+        <h2 id="about-title" className="krds-text-body-small-bold">{phrase(t.P14_about_title)}</h2>
         <p>{phrase(t.P14_about_body)}</p>
       </section>
       <section className="rb-stack" aria-labelledby="start-title">
-        <h2 id="start-title" className="krds-text-heading-medium">{phrase(t.P14_15)}</h2>
+        <h2 id="start-title" className="krds-text-body-small-bold">{phrase(t.P14_15)}</h2>
         <ol className="rb-ordered">
           <li>{t.P14_16}</li>
           <li>{t.P14_17}</li>
@@ -39,26 +39,26 @@ export default function Help() {
         </ol>
       </section>
       <section className="rb-stack" aria-labelledby="faq-title">
-        <h2 id="faq-title" className="krds-text-heading-medium">{phrase(t.P14_20)}</h2>
+        <h2 id="faq-title" className="krds-text-body-small-bold">{phrase(t.P14_20)}</h2>
         <div className="krds-accordion">
           {FAQ.map(([q, a]) => (
             <details className="accordion-item" key={q}>
-              <summary className="btn-accordion krds-text-body-large-bold">{q}</summary>
+              <summary className="btn-accordion krds-text-body-small-bold">{q}</summary>
               <div className="accordion-body"><p>{a}</p></div>
             </details>
           ))}
         </div>
       </section>
       <section className="rb-stack" aria-labelledby="terms-title">
-        <h2 id="terms-title" className="krds-text-heading-medium">{phrase(t.P14_21)}</h2>
+        <h2 id="terms-title" className="krds-text-body-small-bold">{phrase(t.P14_21)}</h2>
         <dl className="rb-terms">
           {TERMS.map(([t, d]) => (
-            <div key={t}><dt className="krds-text-body-medium-bold">{t}</dt><dd>{d}</dd></div>
+            <div key={t}><dt className="krds-text-body-small-bold">{t}</dt><dd>{d}</dd></div>
           ))}
         </dl>
       </section>
       <section className="rb-stack" id="readme" aria-labelledby="tpl-title">
-        <h2 id="tpl-title" className="krds-text-heading-medium">{phrase(t.P14_22)}</h2>
+        <h2 id="tpl-title" className="krds-text-body-small-bold">{phrase(t.P14_22)}</h2>
         {tpl.state === 'Ideal' && (
           <>
             <pre className="rb-code">{tpl.data.data.markdown}</pre>
