@@ -1,65 +1,59 @@
-// P-18 브랜치, 태그, 릴리스. GitHub Branches(개요/활성/오래됨/전체 탭과 표), Tags, Releases 구성.
-// 코드 탭 아래 세 화면은 위쪽 전환 링크(브랜치, 태그, 릴리스)로 오간다.
-import { useEffect, useState } from 'react';
+// P-18 브랜치, 태그, 릴리스. 공공 깃랩 캡처 15(브랜치), 16(태그), 17(릴리스) 구성을 그대로 옮긴다(D-21).
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { t } from '../copy/ko';
-import { u } from '../copy/ui';
+import { g } from '../copy/gl';
 import { gitlab } from '../api/client';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
-import { SearchBox } from '../components/Code/ListTools';
 import { Readme } from '../components/Help/Readme';
 import { Icon } from '../components/Code/Icon';
-import { orgLabel } from '../components/Layout/orgLabel';
-import { day } from './parts/repoCommon';
+import { IconButton } from '../components/Action/IconButton';
+import { Avatar } from '../components/Layout/Avatar';
+import { CopyButton, FilterField, SortControl, SourceMenu } from './gl/parts';
+import './gl/gl.css';
 import '../components/Code/code.css';
 
 const STALE_MS = 90 * 24 * 3600 * 1000;
 const when = (c) => new Date(c?.committed_date || c?.created_at || 0).getTime();
+const ago = (iso) => (iso ? t.fn.ago(iso) : '');
 
-function RefNav({ id, active }) {
-  const items = [['branches', u.Ref_branches], ['tags', u.Ref_tags], ['releases', u.Ref_releases]];
+function Rss({ href }) {
+  return <IconButton icon="ext/rss" label={g.rss} size="medium" onClick={() => window.open(href, '_blank', 'noopener,noreferrer')} />;
+}
+
+function RefRow({ id, project, name, commit, isBranch, flags }) {
   return (
-    <nav className="rb-refnav" aria-label={u.Ref_nav}>
-      {items.map(([k, label]) => (
-        <Link key={k} className={'rb-refnav-link' + (k === active ? ' active' : '')} aria-current={k === active ? 'page' : undefined} to={`/projects/${id}/${k}`}>{label}</Link>
-      ))}
-    </nav>
+    <li>
+      <div className="gl-ref-row">
+        <div className="gl-ref-main">
+          <p className="gl-ref-name">
+            {isBranch ? null : <Icon name="ext/tag" />}
+            <Link to={`/projects/${id}/code?ref=${encodeURIComponent(name)}`}>{name}</Link>
+            <CopyButton text={name} label={g.copyName} />
+            {flags}
+          </p>
+          {commit ? (
+            <p className="gl-ref-meta">
+              <Link to={`/projects/${id}/changes/${commit.id}`}><code>{commit.short_id || String(commit.id).slice(0, 8)}</code></Link>
+              <span className="gl-trunc">{commit.title}</span>
+              <time dateTime={commit.committed_date || commit.created_at}>{ago(commit.committed_date || commit.created_at)}</time>
+            </p>
+          ) : null}
+        </div>
+        <div className="gl-ref-side"><SourceMenu project={project} refName={name} /></div>
+      </div>
+    </li>
   );
 }
 
-function BranchTable({ id, rows, base, ahead }) {
+function Flags({ x }) {
   return (
-    <div className="rb-reftable-wrap">
-      <table className="rb-reftable">
-        <thead>
-          <tr>
-            <th scope="col">{u.Br_name}</th>
-            <th scope="col">{u.Br_updated}</th>
-            <th scope="col">{u.Br_compare}</th>
-            <th scope="col">{u.Br_author}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((x) => {
-            const c = ahead[x.name];
-            return (
-              <tr key={x.name}>
-                <td>
-                  <Link className="krds-link rb-break-any" to={`/projects/${id}/code?ref=${encodeURIComponent(x.name)}`}>{x.name}</Link>
-                  {x.default ? <span className="rb-pill">{t.P18_default}</span> : null}
-                  {x.protected ? <span className="rb-pill">{t.P18_protected}</span> : null}
-                </td>
-                <td className="rb-num">{day(x.commit?.committed_date || x.commit?.created_at)}</td>
-                <td className="rb-num">{x.default ? '' : c ? `${u.Br_behind} ${c.behind} / ${u.Br_ahead} ${c.ahead}` : ''}</td>
-                <td>{orgLabel(x.commit?.author_name)}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+    <>
+      {x.default ? <span className="rb-pill">{g.defaultBadge}</span> : null}
+      {x.protected ? <span className="rb-pill">{g.protectedBadge}</span> : null}
+    </>
   );
 }
 
@@ -67,60 +61,37 @@ export function Branches() {
   const frame = useProject();
   const [tab, setTab] = useState('overview');
   const [query, setQuery] = useState('');
-  const [cmp, setCmp] = useState({});
   const body = useData(async () => (await gitlab.branches(frame.id)).data, [frame.id]);
   const list = body.data;
-  const baseName = list?.find((x) => x.default)?.name;
-  // 커밋 비교(뒤/앞): 기본 브랜치와 견줘 앞뒤 커밋 수를 센다. 20개까지만 불러온다
-  useEffect(() => {
-    if (!list || !baseName) return undefined;
-    let live = true;
-    const others = list.filter((x) => !x.default).slice(0, 20);
-    Promise.all(others.map(async (x) => {
-      try {
-        const [a, b] = await Promise.all([gitlab.compare(frame.id, baseName, x.name), gitlab.compare(frame.id, x.name, baseName)]);
-        return [x.name, { ahead: a.data?.commits?.length ?? 0, behind: b.data?.commits?.length ?? 0 }];
-      } catch { return null; }
-    })).then((r) => { if (live) setCmp(Object.fromEntries(r.filter(Boolean))); });
-    return () => { live = false; };
-  }, [frame.id, baseName, list]);
   if (!frame.data) return <ProjectFrame screenId="R-07" data={frame} />;
+  const project = frame.data.project;
   const now = Date.now();
   const q = query.trim().toLowerCase();
   const sorted = list ? [...list].sort((a, b) => when(b.commit) - when(a.commit)) : [];
-  const defaults = sorted.filter((x) => x.default);
-  const fresh = sorted.filter((x) => !x.default && now - when(x.commit) <= STALE_MS);
+  const fresh = sorted.filter((x) => x.default || now - when(x.commit) <= STALE_MS);
   const stale = sorted.filter((x) => !x.default && now - when(x.commit) > STALE_MS);
-  const byTab = { active: [...defaults, ...fresh], stale, all: sorted };
+  const byTab = { overview: fresh, active: fresh, stale, all: sorted };
   const shown = (byTab[tab] || []).filter((x) => !q || x.name.toLowerCase().includes(q));
-  const tabs = [['overview', u.Br_overview, null], ['active', u.Br_active, byTab.active.length], ['stale', u.Br_stale, stale.length], ['all', u.Br_all, sorted.length]];
+  const tabs = [['overview', g.tabOverview, null], ['active', g.tabActive, fresh.length], ['stale', g.tabStale, stale.length], ['all', g.tabAll, sorted.length]];
+  const rows = (arr) => arr.map((x) => <RefRow key={x.name} id={frame.id} project={project} name={x.name} commit={x.commit} isBranch flags={<Flags x={x} />} />);
   return (
     <ProjectFrame screenId="R-07" tab="" tabLabel={t.RepoSub_branches} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
-      <div className="rb-code-area">
-        <RefNav id={frame.id} active="branches" />
+      <div className="gl-page">
+        <div className="gl-tabs" role="tablist" aria-label={t.RepoSub_branches}>
+          {tabs.map(([k, name, n]) => (
+            <button key={k} type="button" role="tab" aria-selected={tab === k} className="gl-tab" onClick={() => setTab(k)}>
+              <span>{name}</span>{n != null ? <span className="gl-tab-count">{n}</span> : null}
+            </button>
+          ))}
+        </div>
         {!list ? <Status {...body} /> : (
-          <>
-            <div className="rb-statetabs rb-brtabs" role="tablist" aria-label={u.Ref_branches}>
-              {tabs.map(([k, name, n]) => (
-                <button key={k} type="button" role="tab" aria-selected={tab === k} className={'rb-statetab' + (tab === k ? ' active' : '')} onClick={() => setTab(k)}>
-                  <span>{name}</span>{n != null ? <span className="rb-statetab-count">{n}</span> : null}
-                </button>
-              ))}
-            </div>
-            <SearchBox value={query} onChange={setQuery} label={u.Br_search} placeholder={u.Br_search} />
-            {tab === 'overview' ? (
-              <>
-                <section className="rb-stack-tight" aria-labelledby="br-def">
-                  <h2 id="br-def" className="krds-text-body-small-bold">{u.Br_default}</h2>
-                  <BranchTable id={frame.id} rows={defaults.filter((x) => !q || x.name.toLowerCase().includes(q))} ahead={cmp} />
-                </section>
-                <section className="rb-stack-tight" aria-labelledby="br-act">
-                  <h2 id="br-act" className="krds-text-body-small-bold">{u.Br_activeList}</h2>
-                  {fresh.length ? <BranchTable id={frame.id} rows={fresh.filter((x) => !q || x.name.toLowerCase().includes(q))} ahead={cmp} /> : <EmptyState title={u.Br_none} />}
-                </section>
-              </>
-            ) : shown.length ? <BranchTable id={frame.id} rows={shown} ahead={cmp} /> : <EmptyState title={u.Br_none} />}
-          </>
+          <div>
+            <div className="gl-bar"><FilterField value={query} onChange={setQuery} placeholder={g.brFilter} /></div>
+            <section className="gl-box is-attached" aria-labelledby="gl-br-title">
+              <h2 id="gl-br-title" className="gl-box-title">{tab === 'stale' ? g.brStale : g.brActive}</h2>
+              {shown.length ? <ul className="gl-rows">{rows(shown)}</ul> : <p className="gl-empty">{g.brNone}</p>}
+            </section>
+          </div>
         )}
       </div>
     </ProjectFrame>
@@ -130,33 +101,43 @@ export function Branches() {
 export function Tags() {
   const frame = useProject();
   const [query, setQuery] = useState('');
+  const [sort, setSort] = useState('updated');
+  const [desc, setDesc] = useState(true);
   const body = useData(async () => (await gitlab.tags(frame.id)).data, [frame.id]);
-  if (!frame.data) return <ProjectFrame screenId="R-08" data={frame} />;
   const list = body.data;
-  const q = query.trim().toLowerCase();
-  const shown = list ? list.filter((x) => !q || x.name.toLowerCase().includes(q)) : [];
+  const shown = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const rows = (list || []).filter((x) => !q || x.name.toLowerCase().includes(q));
+    rows.sort((a, b) => (sort === 'name' ? a.name.localeCompare(b.name, 'ko', { numeric: true }) : when(a.commit) - when(b.commit)));
+    return desc ? rows.reverse() : rows;
+  }, [list, query, sort, desc]);
+  if (!frame.data) return <ProjectFrame screenId="R-08" data={frame} />;
+  const project = frame.data.project;
   return (
     <ProjectFrame screenId="R-08" tab="" tabLabel={t.P18_tags} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
-      <div className="rb-code-area">
-        <RefNav id={frame.id} active="tags" />
-        <SearchBox value={query} onChange={setQuery} label={u.Tag_search} placeholder={u.Tag_search} />
-        {!list ? <Status {...body} /> : shown.length ? (
-          <ul className="rb-row-list">
-            {shown.map((x) => (
-              <li className="rb-row" key={x.name}>
-                <div className="rb-row-main">
-                  <p className="rb-row-title"><Link className="krds-link krds-text-body-small rb-break-any" to={`/projects/${frame.id}/code?ref=${encodeURIComponent(x.name)}`}>{x.name}</Link></p>
-                  {x.commit ? (
-                    <p className="krds-text-body-xsmall rb-row-meta">
-                      <Link className="krds-link rb-ellipsis" to={`/projects/${frame.id}/changes/${x.commit.id}`}>{x.commit.title}</Link>
-                      <span>{day(x.commit.committed_date || x.commit.created_at)}</span>
-                    </p>
-                  ) : null}
-                </div>
-              </li>
-            ))}
-          </ul>
-        ) : <EmptyState title={query ? u.List_none : t.P18_noTag} />}
+      <div className="gl-page">
+        <div className="gl-head">
+          <div className="gl-head-text">
+            <h1 className="gl-title">{g.tagTitle}</h1>
+            <p className="gl-intro">{g.tagIntro}</p>
+          </div>
+          <div className="gl-head-actions"><Rss href={`${project.web_url}/-/tags?format=atom`} /></div>
+        </div>
+        {!list ? <Status {...body} /> : (
+          <div>
+            <div className="gl-bar">
+              <FilterField value={query} onChange={setQuery} placeholder={g.tagFilter} />
+              <SortControl options={[['updated', g.sortUpdated], ['name', g.sortName]]} value={sort} onChange={setSort} desc={desc} onDir={() => setDesc(!desc)} />
+            </div>
+            <section className="gl-box is-attached" aria-label={g.tagTitle}>
+              {shown.length ? (
+                <ul className="gl-rows">
+                  {shown.map((x) => <RefRow key={x.name} id={frame.id} project={project} name={x.name} commit={x.commit} />)}
+                </ul>
+              ) : <p className="gl-empty">{g.tagNone}</p>}
+            </section>
+          </div>
+        )}
       </div>
     </ProjectFrame>
   );
@@ -164,36 +145,51 @@ export function Tags() {
 
 export function Releases() {
   const frame = useProject();
+  const [desc, setDesc] = useState(true);
   const body = useData(async () => (await gitlab.releases(frame.id)).data, [frame.id]);
   if (!frame.data) return <ProjectFrame screenId="R-09" data={frame} />;
-  const list = body.data;
+  const project = frame.data.project;
+  const list = body.data ? [...body.data].sort((a, b) => { const d = new Date(a.released_at || a.created_at) - new Date(b.released_at || b.created_at); return desc ? -d : d; }) : null;
   return (
     <ProjectFrame screenId="R-09" tab="" tabLabel={t.RepoSub_releases} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
-      <div className="rb-code-area">
-        <RefNav id={frame.id} active="releases" />
+      <div className="gl-page">
+        <div className="gl-head">
+          <h1 className="gl-title">{g.relTitle}</h1>
+          <div className="gl-head-actions">
+            <SortControl options={[['date', g.sortRelease]]} value="date" onChange={() => {}} desc={desc} onDir={() => setDesc(!desc)} />
+            <Rss href={`${project.web_url}/-/releases.atom`} />
+          </div>
+        </div>
         {!list ? <Status {...body} /> : list.length ? (
-          <ol className="rb-row-list">
-            {list.map((r, i) => (
-              <li className="rb-row" key={r.tag_name}>
-                <div className="rb-row-main">
-                  <p className="rb-row-title">
-                    <span className="krds-text-body-small-bold rb-break-any">{r.name || r.tag_name}</span>
-                    {i === 0 ? <span className="rb-pill">{t.P18_latest}</span> : null}
-                  </p>
-                  <p className="krds-text-body-xsmall rb-row-meta"><span>{r.tag_name}</span><span>{day(r.released_at || r.created_at)}</span></p>
-                  {r.description ? <Readme source={r.description} /> : null}
-                  {r.assets?.sources?.length ? (
-                    <div className="rb-labels" aria-label={t.P18_assets}>
-                      {r.assets.sources.map((s) => (
-                        <a key={s.url} className="krds-btn small tertiary" href={s.url}><Icon name="download" />{s.format}</a>
-                      ))}
-                    </div>
-                  ) : null}
+          <div className="gl-page">
+            {list.map((r) => (
+              <article className="gl-release" key={r.tag_name}>
+                <h2 className="gl-release-head">{r.name || r.tag_name}</h2>
+                <div className="gl-release-body">
+                  <div className="gl-release-meta">
+                    <p><Avatar className="is-16" src={r.author?.avatar_url || project.namespace?.avatar_url} name={project.namespace?.name} /><span>{project.namespace?.name}</span></p>
+                    <p><Icon name="calendar" /><span>{g.relAt} {ago(r.released_at || r.created_at)}</span></p>
+                    <p><Icon name="ext/tag" /><Link to={`/projects/${frame.id}/code?ref=${encodeURIComponent(r.tag_name)}`}>{r.tag_name}</Link></p>
+                  </div>
+                  <div className="gl-release-text">
+                    <h3>{g.relNotes}</h3>
+                    {r.description ? <Readme source={r.description} /> : null}
+                    {r.assets?.sources?.length ? (
+                      <details className="gl-assets" open>
+                        <summary>{g.relAssets} <span className="gl-tab-count">{r.assets.sources.length}</span></summary>
+                        <ul>
+                          {r.assets.sources.map((s) => (
+                            <li key={s.url}><a className="krds-link" href={s.url}><Icon name="document" /><span>{g.srcAsset(s.format)}</span><Icon name="download" /></a></li>
+                          ))}
+                        </ul>
+                      </details>
+                    ) : null}
+                  </div>
                 </div>
-              </li>
+              </article>
             ))}
-          </ol>
-        ) : <EmptyState title={t.P18_noRelease}>{t.P18_noReleaseHelp}</EmptyState>}
+          </div>
+        ) : <EmptyState title={g.relNone} />}
       </div>
     </ProjectFrame>
   );

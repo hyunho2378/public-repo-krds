@@ -1,0 +1,58 @@
+/* C1 담당 화면 공통 스타일. 값은 KRDS 변수와 layout.tokens.css 변수만(D-16, D-21 7장). 이름은 gl- 로 시작한다. */
+.gl-page { display: flex; flex-direction: column; gap: var(--rb-section-gap); min-width: 0; }
+.gl-head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--krds-gap-5); }
+.gl-head-text { display: flex; flex-direction: column; gap: var(--krds-gap-3); min-width: 0; }
+.gl-title { margin: 0; font-size: var(--rb-step-19); line-height: var(--rb-lh-19); font-weight: var(--rb-fw-title); color: var(--krds-color-text-basic); }
+.gl-intro { margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); color: var(--krds-color-text-basic); }
+.gl-head-actions { display: flex; align-items: center; gap: var(--krds-gap-3); flex: none; }
+
+/* 탭 줄: 개요/활성/오래됨/모두 */
+.gl-tabs { display: flex; gap: var(--krds-gap-6); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.gl-tab { display: inline-flex; align-items: center; gap: var(--krds-gap-2); height: var(--rb-row-h); padding: 0 var(--krds-padding-2); margin-bottom: calc(var(--krds-border-width-static-regular) * -1); border: 0; border-bottom: var(--krds-border-width-static-medium) solid transparent; background: none; color: var(--krds-color-text-basic); font: inherit; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); cursor: pointer; transition: color var(--rb-motion-fast) var(--rb-motion-ease); }
+.gl-tab:hover { color: var(--krds-color-text-subtle); }
+.gl-tab[aria-selected='true'] { font-weight: var(--rb-fw-current); border-bottom-color: var(--krds-color-border-primary); }
+.gl-tab-count { font-size: var(--rb-step-13); color: var(--krds-color-text-subtle); }
+
+/* 필터 막대: 입력 + 돋보기, 오른쪽에 정렬 */
+.gl-bar { display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-4); background: var(--krds-color-surface-gray-subtler); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2) var(--krds-radius-medium2) 0 0; }
+.gl-bar.is-alone { border-radius: var(--krds-radius-medium2); }
+.gl-filter-field { display: flex; align-items: center; flex: 1 1 auto; min-width: 0; height: var(--rb-side-item-h); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-white); }
+.gl-filter-field:focus-within { outline: var(--krds-number-2) solid var(--krds-color-border-focus, currentColor); outline-offset: var(--krds-number-1); }
+.gl-filter-input { flex: 1; min-width: 0; height: 100%; padding: 0 var(--krds-padding-4); border: 0; background: none; color: var(--krds-color-text-basic); font: inherit; font-size: var(--rb-step-15); outline: 0; }
+.gl-filter-go { display: inline-flex; align-items: center; justify-content: center; height: 100%; padding: 0 var(--krds-padding-4); border-inline-start: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); color: var(--krds-color-text-subtle); }
+.gl-sort { display: inline-flex; align-items: center; flex: none; }
+
+/* 목록 판: 구획 제목 + 행 */
+.gl-box { border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); overflow: hidden; }
+.gl-box.is-attached { border-top: 0; border-radius: 0 0 var(--krds-radius-medium2) var(--krds-radius-medium2); }
+.gl-box-title { margin: 0; padding: var(--krds-padding-4); background: var(--krds-color-surface-gray-subtler); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--rb-fw-title); }
+.gl-rows { margin: 0; padding: 0; list-style: none; }
+.gl-ref-row { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); padding: var(--rb-row-pad-y) var(--krds-padding-4); border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); transition: background var(--rb-motion-fast) var(--rb-motion-ease); }
+.gl-rows > li:first-child > .gl-ref-row, .gl-box-title + .gl-rows > li:first-child > .gl-ref-row { border-top: 0; }
+.gl-ref-row:hover { background: var(--krds-color-surface-gray-subtler); }
+.gl-ref-main { display: flex; flex-direction: column; gap: var(--krds-gap-1); min-width: 0; }
+.gl-ref-name { display: flex; align-items: center; gap: var(--krds-gap-2); min-width: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--rb-fw-title); }
+.gl-ref-name a { color: var(--krds-color-text-basic); text-decoration: none; overflow-wrap: anywhere; }
+.gl-ref-name a:hover { text-decoration: underline; }
+.gl-ref-name .rb-icon { color: var(--krds-color-text-subtle); }
+.gl-ref-meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin: 0; font-size: var(--rb-step-13); line-height: var(--rb-lh-13); color: var(--krds-color-text-subtle); }
+.gl-ref-meta code { font-family: 'D2Coding', ui-monospace, Menlo, Consolas, monospace; font-size: var(--rb-step-13); }
+.gl-ref-meta a { color: var(--krds-color-text-subtle); text-decoration: none; }
+.gl-ref-meta a:hover { text-decoration: underline; }
+.gl-ref-meta .gl-trunc { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gl-ref-side { display: flex; align-items: center; gap: var(--krds-gap-3); flex: none; }
+.gl-empty { padding: var(--krds-padding-8) var(--krds-padding-4); text-align: center; color: var(--krds-color-text-subtle); }
+
+/* 릴리스 카드 */
+.gl-release { border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); overflow: hidden; }
+.gl-release-head { margin: 0; padding: var(--krds-padding-4); background: var(--krds-color-surface-gray-subtler); font-size: var(--rb-step-19); line-height: var(--rb-lh-19); font-weight: var(--rb-fw-title); overflow-wrap: anywhere; }
+.gl-release-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: var(--rb-gutter); padding: var(--krds-padding-5) var(--krds-padding-4); }
+.gl-release-meta { display: flex; flex-direction: column; gap: var(--krds-gap-3); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); color: var(--krds-color-text-subtle); }
+.gl-release-meta p { display: flex; align-items: center; gap: var(--krds-gap-3); margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.gl-release-text { min-width: 0; display: flex; flex-direction: column; gap: var(--krds-gap-4); }
+.gl-release-text h3 { margin: 0; font-size: var(--rb-step-17); line-height: var(--rb-lh-17); font-weight: var(--rb-fw-title); }
+.gl-assets { margin: 0; padding: var(--krds-padding-4) 0 0; border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+.gl-assets summary { display: inline-flex; align-items: center; gap: var(--krds-gap-3); font-size: var(--rb-step-15); font-weight: var(--rb-fw-title); cursor: pointer; }
+.gl-assets ul { margin: var(--krds-gap-3) 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: var(--krds-gap-2); }
+.gl-assets a { display: inline-flex; align-items: center; gap: var(--krds-gap-3); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+@media (max-width: 767px) { .gl-release-body { grid-template-columns: minmax(0, 1fr); } .gl-head { flex-wrap: wrap; } .gl-ref-row { flex-wrap: wrap; } }
