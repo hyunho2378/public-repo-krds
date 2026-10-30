@@ -50,7 +50,7 @@
   --rb-gbar-owner-max: calc(var(--krds-number-12) * 10);
   /* D-21 상단 검색 480(1440 기준) = 96x5 */
   --rb-gbar-search-w: calc(var(--krds-number-21) * 5);
-  --rb-info-w: calc(var(--krds-number-12) * 9 + var(--krds-number-5));
+  --rb-info-w: var(--layout-info-col);
   /* 커밋 상세 왼쪽 파일 트리 폭(296): GitHub 비교 화면 기준 */
   --rb-dtree-w: calc(var(--krds-number-12) * 9 + var(--krds-number-5));
   /* D-21 상단 바 48 */
@@ -99,8 +99,8 @@
   --rb-login-mark-w: calc(var(--krds-number-9) * 6);
   --rb-login-form-w: calc(var(--krds-number-21) * 4 + var(--krds-number-8));
   /* D-21: 본문 판 안 컨테이너 최대 1280 가운데(D-18의 960 읽기 폭, 도킹 360, 탭 줄 48은 폐기). 판 모서리 8, 판 바깥 여백 8 */
-  --rb-panel-radius: var(--krds-radius-medium3);
-  --rb-panel-gap: var(--krds-number-5);
+  --rb-panel-radius: var(--layout-panel-radius);
+  --rb-panel-gap: var(--layout-panel-gap);
   /* D-22 1장 모션(Figma 프로토타입과 같은 값). 움직임 줄이기(설정 또는 OS)면 0 */
   --rb-motion-fast: 120ms;
   --rb-motion-base: 200ms;
@@ -110,17 +110,37 @@
   --rb-motion-exit-base: calc(var(--rb-motion-base) * 0.75);
   --rb-tip-delay: 400ms;
   --rb-menu-rise: var(--krds-number-5);
-  /* D-21 7장 여백(KRDS 레이아웃: 최대 콘텐츠 1200, 스크린 마진 24/16, 가터 24). 값은 이 한 곳에서만 */
-  --rb-container-w: calc(var(--krds-number-21) * 12 + var(--krds-number-16));
-  --rb-gbar-pad-x: var(--krds-number-8);
-  --rb-side-pad-x: var(--krds-number-5);
-  --rb-side-item-pad-x: var(--krds-number-7);
-  --rb-panel-pad-x: var(--krds-number-10);
-  --rb-panel-pad-y: var(--krds-number-10);
-  --rb-section-gap: var(--krds-number-10);
-  --rb-filter-gap: var(--krds-number-8);
-  --rb-row-pad-y: var(--krds-number-8);
-  --rb-gutter: var(--krds-number-10);
+  /* D-21 7장 여백: Figma 변수 모음 'layout'과 같은 이름(layout/* → --layout-*)과 값. 값은 이 한 곳에서만 */
+  --layout-topbar-pad-x: var(--krds-number-8);
+  --layout-sidebar-inset: var(--krds-number-5);
+  --layout-sidebar-item-pad-y: var(--krds-number-5);
+  --layout-sidebar-item-pad-x: var(--krds-number-7);
+  --layout-panel-gap: var(--krds-number-5);
+  --layout-panel-radius: var(--krds-radius-medium3);
+  --layout-container-max: calc(var(--krds-number-21) * 12 + var(--krds-number-16));
+  /* 판 안 컨테이너 좌우 여백(폭별): lg 48(1280 이상), md 32(1024~1279), 기본 24(768~1023), sm 16(768 미만). 공공 깃랩 01, 02 비율(판 폭의 약 4%) */
+  --layout-container-pad-x-lg: var(--krds-number-16);
+  --layout-container-pad-x-md: var(--krds-number-12);
+  --layout-container-pad-x: var(--krds-number-10);
+  --layout-container-pad-x-sm: var(--krds-number-8);
+  --layout-container-pad-y: var(--krds-number-10);
+  --layout-crumb-title-gap: var(--krds-number-10);
+  --layout-filter-list-gap: var(--krds-number-8);
+  --layout-row-pad-y: var(--krds-number-7);
+  --layout-gutter: var(--krds-number-10);
+  --layout-section-gap: var(--krds-number-10);
+  --layout-info-col: calc(var(--krds-number-12) * 9 + var(--krds-number-5));
+  /* 앱 안 이름(위 값을 그대로 가리킨다) */
+  --rb-container-w: var(--layout-container-max);
+  --rb-gbar-pad-x: var(--layout-topbar-pad-x);
+  --rb-side-pad-x: var(--layout-sidebar-inset);
+  --rb-side-item-pad-x: var(--layout-sidebar-item-pad-x);
+  --rb-panel-pad-x: var(--layout-container-pad-x-lg);
+  --rb-panel-pad-y: var(--layout-container-pad-y);
+  --rb-section-gap: var(--layout-section-gap);
+  --rb-filter-gap: var(--layout-filter-list-gap);
+  --rb-row-pad-y: var(--layout-row-pad-y);
+  --rb-gutter: var(--layout-gutter);
   /* 바닥글 위아래 여백과 줄 사이 간격(24). 높이는 내용에 맡긴다 */
   --rb-footer-pad: var(--krds-number-10);
   --rb-fw-title: var(--krds-font-weight-bold);
@@ -177,9 +197,9 @@ html.rb-font-large {
   --rb-lh-17: 2.8rem;
 }
 
-@media (max-width: 767px) {
-  :root { --rb-panel-pad-x: var(--krds-number-8); --rb-gutter: var(--krds-number-8); }
-}
+@media (max-width: 1279px) { :root { --rb-panel-pad-x: var(--layout-container-pad-x-md); } }
+@media (max-width: 1023px) { :root { --rb-panel-pad-x: var(--layout-container-pad-x); } }
+@media (max-width: 767px) { :root { --rb-panel-pad-x: var(--layout-container-pad-x-sm); --rb-gutter: var(--layout-container-pad-x-sm); } }
 @media (max-width: 1023px) {
   :root {
     --rb-page-pad: var(--krds-padding-5);
