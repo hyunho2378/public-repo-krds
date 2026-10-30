@@ -122,8 +122,9 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
     <Page id={screenId} title={docTitle} state={state} noFigma>
       <Breadcrumb home={false} items={path} />
       <div className={'rb-repo-main' + (wide ? ' is-wide' : '') + (info ? ' has-info' : '')} data-figma="main">
+        {/* 공공 깃랩 02, 52: 제목 줄은 본문과 정보 열 위 전체 폭(모바일에서는 정보 열이 제목 바로 아래로) */}
+        {title ? <div className="rb-repo-title-row"><RepoHeader project={project} id={data.id} /></div> : null}
         <div className="rb-repo-body">
-          {title ? <RepoHeader project={project} id={data.id} /> : null}
           {children}
         </div>
         {info ? (

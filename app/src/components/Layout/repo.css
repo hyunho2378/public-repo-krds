@@ -185,3 +185,10 @@ a.rb-s-scope:hover { background: var(--krds-color-action-secondary-hover); }
 .rb-box-n { margin-inline-start: auto; display: inline-flex; align-items: center; gap: var(--krds-gap-1); font-size: var(--krds-font-size-body-xsmall); }
 .rb-empty-center { display: flex; flex-direction: column; align-items: center; gap: var(--krds-gap-5); padding: var(--krds-padding-10) 0; text-align: center; }
 .rb-empty-center > .rb-icon { width: var(--krds-number-18); height: var(--krds-number-18); color: var(--krds-color-text-subtle); }
+/* 공공 깃랩 02: 제목 줄은 두 열 위. 52(모바일): 정보 열이 제목 아래, 도구 줄 위. 개수와 문서 링크는 가로로 줄바꿈 */
+.rb-repo-main.has-info > .rb-repo-title-row { grid-column: 1 / -1; }
+@media (max-width: 1023px) {
+  .rb-repo-main.has-info > .rb-repo-info { order: -1; position: static; }
+  .rb-repo-main.has-info > .rb-repo-title-row { order: -2; }
+  .rb-repo-main.has-info .rb-info-list { flex-direction: row; flex-wrap: wrap; gap: var(--krds-gap-2) var(--krds-gap-5); }
+}
