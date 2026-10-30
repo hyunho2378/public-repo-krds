@@ -7,7 +7,7 @@ const { chromium } = await import('playwright');
 const BASE = process.env.BASE || 'http://127.0.0.1:5731';
 const SHOTS = process.env.SHOTS || path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'UX', 'menu_check');
 export const WIDTHS = [360, 768, 1440];
-export const PATHS = ['/', '/search?q=kordoc', '/fields', '/projects/150', '/projects/150/code/README.md', '/projects/1115/issues', '/projects/1115/merge-requests', '/projects/150/changes'];
+export const PATHS = ['/', '/search?q=kordoc', '/fields', '/projects/150', '/projects/150/code/README.md', '/projects/1115/issues', '/projects/1115/merge-requests', '/projects/150/changes', '/my'];
 const inspect = await fs.readFile(path.join(path.dirname(fileURLToPath(import.meta.url)), 'menu-inspect.js'), 'utf8');
 
 await fs.mkdir(SHOTS, { recursive: true });
@@ -20,6 +20,8 @@ for (const width of WIDTHS) {
   for (const p of PATHS) {
     await page.goto(BASE + p);
     await page.waitForFunction(() => !document.querySelector('[data-state="Loading"]'), null, { timeout: 15000 }).catch(() => {});
+    // 왼쪽 메뉴는 접어야 묶음별 메뉴가 열린다
+    if (p === '/my' && !(await page.locator('.rb-side [aria-haspopup="menu"]').count()) && (await page.locator('.rb-side-collapse').count())) await page.locator('.rb-side-collapse').first().click().catch(() => {});
     const n = await page.locator('[aria-haspopup="menu"]').count();
     for (let i = 0; i < n; i += 1) {
       const trigger = page.locator('[aria-haspopup="menu"]').nth(i);

@@ -54,8 +54,8 @@ export function Menu({ label, button, btnClass = 'krds-btn small tertiary', btnP
         aria-expanded={open}
         aria-haspopup="menu"
         aria-label={label}
-        onClick={() => setOpen(!open)}
         {...btnProps}
+        onClick={(e) => { btnProps.onClick?.(e); setOpen(!open); }}
       >
         {button}
         {toggle ? <i className="svg-icon ico-toggle" aria-hidden="true" /> : null}
