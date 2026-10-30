@@ -1,59 +1,36 @@
 // D-18: GitHub처럼 머리글 아래 탭 줄(높이 48). 코드, 이슈, 변경 제안, 파이프라인, 위키, 분석, 설정, 더보기(나머지 공공 깃랩 메뉴 전부), 맨 끝에 사용 방법.
-import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { u } from '../../copy/ui';
 import { Icon } from '../Code/Icon';
 import { atLeast, useAuth } from '../Identity/useAuth';
 import { projectGroups } from './Sidebar';
+import { Menu } from './Menu';
 import { useDock } from '../../app/dock';
 import { DOCK_ID } from '../Layout/DockPanel';
 
 const under = (path, base, list) => list.some((s) => path === base + s || path.startsWith(base + s + '/'));
 
-function MoreMenu({ id, groups, active }) {
-  const [open, setOpen] = useState(false);
-  const [pos, setPos] = useState(null);
-  const wrap = useRef(null);
-  useEffect(() => {
-    if (!open) return undefined;
-    const onDown = (e) => { if (!wrap.current?.contains(e.target)) setOpen(false); };
-    const onKey = (e) => { if (e.key === 'Escape') setOpen(false); };
-    document.addEventListener('mousedown', onDown);
-    document.addEventListener('keydown', onKey);
-    return () => { document.removeEventListener('mousedown', onDown); document.removeEventListener('keydown', onKey); };
-  }, [open]);
-  const toggle = (e) => {
-    const r = e.currentTarget.getBoundingClientRect();
-    setPos({ top: r.bottom, right: document.documentElement.clientWidth - r.right });
-    setOpen(!open);
-  };
+function MoreMenu({ groups, active }) {
   return (
-    <li className="rb-rtab-more" ref={wrap}>
-      <button type="button" className={'rb-rtab' + (active ? ' active' : '')} aria-haspopup="true" aria-expanded={open} onClick={toggle}>
-        <Icon name="ellipsis_horizontal" />
-        <span>{u.More_menu}</span>
-        <i className="svg-icon ico-toggle" aria-hidden="true" />
-      </button>
-      {open ? (
-        <div className="rb-flyout rb-more-menu" role="menu" aria-label={u.More_menu} style={{ top: pos.top, right: pos.right, left: 'auto' }}>
-          {groups.map(([group, items]) => (
-            <div key={group || 'g'} className="rb-more-group">
-              {group ? <p className="rb-flyout-title krds-text-body-xsmall-bold">{group}</p> : null}
-              <ul>
-                {items.map(([label, to, icon]) => (
-                  <li key={to + label}>
-                    <Link role="menuitem" className="rb-side-link" to={to} onClick={() => setOpen(false)}>
-                      <Icon name={icon} />
-                      <span className="rb-side-text">{label}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      ) : null}
+    <li className="rb-rtab-more">
+      <Menu label={u.More_menu} align="left" btnClass={'rb-rtab' + (active ? ' active' : '')} button={<><Icon name="ellipsis_horizontal" /><span>{u.More_menu}</span></>}>
+        {(close) => groups.map(([group, items]) => (
+          <div key={group || 'g'} className="rb-menu-group">
+            {group ? <p className="rb-menu-title">{group}</p> : null}
+            <ul>
+              {items.map(([label, to, icon]) => (
+                <li key={to + label}>
+                  <Link role="menuitem" className="item-link" to={to} onClick={close}>
+                    <Icon name={icon} />
+                    <span>{label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </Menu>
     </li>
   );
 }
@@ -101,7 +78,7 @@ export function RepoTabs({ id, nav }) {
             <span>{t.ProjectTabs_2}</span>
           </Link>
         </li>
-        <MoreMenu id={id} groups={groups} active={moreActive} />
+        <MoreMenu groups={groups} active={moreActive} />
         <li className="rb-rtab-info">
           <button type="button" className={'rb-rtab' + (dock.open ? ' active' : '')} aria-expanded={dock.open} aria-controls={DOCK_ID} onClick={() => dock.setOpen(!dock.open)}>
             <Icon name="help" />

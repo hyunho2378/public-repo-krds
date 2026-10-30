@@ -1,4 +1,5 @@
 // P-05 파일과 README. 파일 목록은 표, 개발자용 정보는 접음(U4).
+import { newWindow } from '../components/Layout/newWindow';
 import { t } from '../copy/ko';
 import { gitlab } from '../api/client';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
@@ -22,7 +23,7 @@ export default function Files() {
             <tbody>
               {tree.map((f) => (
                 <tr key={f.id + f.path}>
-                  <td><a className="krds-link" href={`${project.web_url}/-/${f.type === 'tree' ? 'tree' : 'blob'}/${project.default_branch || 'main'}/${f.path}`} target="_blank" rel="noreferrer">{f.name}<span className="sr-only"> {t.Footer_3}</span></a></td>
+                  <td><a className="krds-link" href={`${project.web_url}/-/${f.type === 'tree' ? 'tree' : 'blob'}/${project.default_branch || 'main'}/${f.path}`} {...newWindow(String(f.name))}>{f.name}</a></td>
                   <td>{KIND[f.type] || f.type}</td>
                 </tr>
               ))}
@@ -39,7 +40,7 @@ export default function Files() {
         <dl className="rb-stack">
           <div><dt className="krds-text-body-small-bold">{t.P05_10}</dt><dd><code>{project.http_url_to_repo}</code></dd></div>
           <div><dt className="krds-text-body-small-bold">{t.P05_11}</dt><dd>{project.default_branch || t.P05_12}</dd></div>
-          <div><dt className="krds-text-body-small-bold">{t.P05_13}</dt><dd><a className="krds-link" href={project.web_url} target="_blank" rel="noreferrer">{project.web_url}<span className="sr-only"> {t.Footer_3}</span></a></dd></div>
+          <div><dt className="krds-text-body-small-bold">{t.P05_13}</dt><dd><a className="krds-link" href={project.web_url} {...newWindow(String(project.web_url))}>{project.web_url}</a></dd></div>
         </dl>
       </details>
     </ProjectFrame>

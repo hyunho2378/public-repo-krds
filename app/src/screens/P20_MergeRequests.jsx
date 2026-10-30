@@ -44,7 +44,7 @@ export function MergeRequests() {
                       <p className="rb-row-title">
                         <Link className="krds-link krds-text-body-small rb-ellipsis" to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link>
                       </p>
-                      <p className="krds-text-body-xsmall rb-row-meta"><span>{t.fn.issueNo(m.iid)}</span><span>{day(m.created_at)}</span><span className="rb-break-any">{m.source_branch} → {m.target_branch}</span></p>
+                      <p className="krds-text-body-xsmall rb-row-meta"><span>{t.fn.issueNo(m.iid)}</span><span>{day(m.created_at)}</span><span className="rb-break-any">{u.MR_from} {m.source_branch} {u.MR_to} {m.target_branch}</span></p>
                     </div>
                     <div className="rb-row-side krds-text-body-xsmall rb-subtle">{t.fn.commentCount(m.user_notes_count || 0)}</div>
                   </li>

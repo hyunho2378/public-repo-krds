@@ -57,7 +57,7 @@ function FileDiff({ file, mode, index }) {
   const rows = parseHunks(file.diff);
   const [open, setOpen] = useState(rows.length <= BIG);
   const stat = diffStat([file]);
-  const name = file.renamed_file ? `${file.old_path} → ${file.new_path}` : file.new_path;
+  const name = file.renamed_file ? `${file.new_path} (${u.Diff_prev} ${file.old_path})` : file.new_path;
   const badge = file.new_file ? t.P17_new : file.deleted_file ? t.P17_deleted : file.renamed_file ? t.P17_renamed : null;
   return (
     <section className="rb-diff-file" id={`file-${index}`} aria-label={name}>

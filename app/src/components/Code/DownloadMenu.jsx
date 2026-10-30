@@ -1,43 +1,27 @@
-// Figma: KRDS dropdown(krds-drop-wrap). GitHub Code 버튼과 같은 자리의 내려받기 메뉴.
-import { useEffect, useRef, useState } from 'react';
+// 내려받기 메뉴. GitHub Code 버튼과 같은 자리. 공통 Menu 부품을 쓴다(UX-007 12장).
+import { useState } from 'react';
 import { t } from '../../copy/ko';
 import { Icon } from './Icon';
+import { Menu } from '../Navigation/Menu';
 
 export function DownloadMenu({ zipUrl, cloneUrl }) {
-  const [open, setOpen] = useState(false);
   const [note, setNote] = useState('');
-  const wrap = useRef(null);
-  useEffect(() => {
-    if (!open) return undefined;
-    const onDoc = (e) => !wrap.current?.contains(e.target) && setOpen(false);
-    const onKey = (e) => e.key === 'Escape' && setOpen(false);
-    document.addEventListener('mousedown', onDoc);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('mousedown', onDoc);
-      document.removeEventListener('keydown', onKey);
-    };
-  }, [open]);
-  const copy = async () => {
+  const copy = async (close) => {
     await navigator.clipboard.writeText(cloneUrl);
     setNote(t.P16_cloneCopied);
-    setOpen(false);
+    close();
   };
   return (
-    <div ref={wrap} className={`krds-drop-wrap rb-drop${open ? ' rb-drop-open' : ''}`}>
-      <button type="button" className="krds-btn small primary drop-btn rb-drop-btn" aria-expanded={open} aria-haspopup="true" onClick={() => setOpen(!open)}>
-        <span className="rb-drop-full"><Icon name="download" />{t.P16_menu}<i className="svg-icon ico-toggle" aria-hidden="true" /></span>
-        <span className="rb-drop-compact"><Icon name="download" /><span className="sr-only">{t.P16_menu}</span></span>
-      </button>
-      <div className="drop-menu">
-        <div className="drop-in">
-          <ul className="drop-list">
-            <li><a className="item-link" href={zipUrl}>{t.P16_download}</a></li>
-            {cloneUrl ? <li><button type="button" className="item-link" onClick={copy}>{t.P16_cloneCopy}</button></li> : null}
+    <>
+      <Menu label={t.P16_menu} btnClass="krds-btn small primary rb-drop-btn" button={<><Icon name="download" /><span className="rb-drop-full">{t.P16_menu}</span></>}>
+        {(close) => (
+          <ul>
+            <li><a className="item-link" href={zipUrl}><span>{t.P16_download}</span></a></li>
+            {cloneUrl ? <li><button type="button" className="item-link" onClick={() => copy(close)}><span>{t.P16_cloneCopy}</span></button></li> : null}
           </ul>
-        </div>
-      </div>
+        )}
+      </Menu>
       <p className="sr-only" role="status" aria-live="polite">{note}</p>
-    </div>
+    </>
   );
 }

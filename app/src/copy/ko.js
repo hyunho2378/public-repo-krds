@@ -8,7 +8,7 @@ export const t = {
   TabBar_alerts: "알림",
   TabBar_my: "내 프로젝트",
   // Header(공식 머리글)
-  Header_service: "서비스명(미정)",
+  Header_service: "공공 깃랩",
   Header_masthead: "공공 저장소 개선 시제품 | 공식 누리집 아님",
   Header_menuFind: "도구 찾기",
   Header_menuRequests: "요청 보드",
@@ -37,7 +37,7 @@ export const t = {
   Footer_3: "새 창 열림",
   Footer_4: "본 화면은 행정안전부 범정부 UI/UX 디자인 시스템(KRDS, 공공누리 제1유형)을 이용하였습니다.",
   // Header
-  Header_1: "서비스명(미정)",
+  Header_1: "공공 깃랩",
   Header_2: "도구 찾기",
   Header_3: "요청 보드",
   Header_4: "도구 올리기",

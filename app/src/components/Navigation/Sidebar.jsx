@@ -2,6 +2,7 @@
 // 프로젝트 안에서는 프로젝트 이름과 고정됨, 코드, 계획 묶음을. 그 밖에서는 탐색 메뉴를 보여 준다.
 // 어려운 개발 용어 옆에는 쉬운 설명을 함께 둔다(공무원 이용자).
 import { useEffect, useRef, useState } from 'react';
+import { Menu } from './Menu';
 import { NavLink, useLocation } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { Icon } from '../Code/Icon';
@@ -130,57 +131,35 @@ function SideLink({ item, collapsed, tipApi }) {
 
 /** 접힌 메뉴의 묶음 하나. 대표 아이콘 하나만 보이고, 누르면 이름이 있는 항목 목록이 옆으로 열린다. */
 function CollapsedGroup({ group, items, tipApi }) {
-  const [open, setOpen] = useState(false);
-  const [pos, setPos] = useState(null);
-  const wrap = useRef(null);
   const { pathname } = useLocation();
   const active = items.some(([, to, , end]) => (end ? pathname === to : pathname === to || pathname.startsWith(to + '/')));
-  useEffect(() => {
-    if (!open) return undefined;
-    const onDown = (e) => { if (!wrap.current?.contains(e.target)) setOpen(false); };
-    const onKey = (e) => { if (e.key === 'Escape') setOpen(false); };
-    document.addEventListener('mousedown', onDown);
-    document.addEventListener('keydown', onKey);
-    return () => { document.removeEventListener('mousedown', onDown); document.removeEventListener('keydown', onKey); };
-  }, [open]);
-  const toggle = (e) => {
-    const r = e.currentTarget.getBoundingClientRect();
-    setPos({ top: r.top, left: r.right });
-    tipApi.hide();
-    setOpen(!open);
-  };
-  const tip = (e) => !open && tipApi.show(e.currentTarget, group, null, 'rb-tip-g-' + group.length);
+  const tip = (e) => tipApi.show(e.currentTarget, group, null, 'rb-tip-g-' + group.length);
   return (
-    <div className="rb-side-group" ref={wrap}>
-      <button
-        type="button"
-        className={'rb-side-link rb-side-groupicon' + (active ? ' active' : '')}
-        aria-haspopup="true"
-        aria-expanded={open}
-        aria-label={group}
-        onClick={toggle}
-        onMouseEnter={tip}
-        onFocus={tip}
-        onMouseLeave={tipApi.hide}
-        onBlur={tipApi.hide}
+    <div className="rb-side-group">
+      <Menu
+        label={group}
+        side
+        toggle={false}
+        btnClass={'rb-side-link rb-side-groupicon' + (active ? ' active' : '')}
+        btnProps={{ onMouseEnter: tip, onFocus: tip, onMouseLeave: tipApi.hide, onBlur: tipApi.hide, onClick: tipApi.hide }}
+        button={<Icon name={items[0][2]} />}
       >
-        <Icon name={items[0][2]} />
-      </button>
-      {open ? (
-        <div className="rb-flyout" role="group" aria-label={group} style={{ top: pos.top, left: pos.left }}>
-          <p className="rb-flyout-title krds-text-body-xsmall-bold">{group}</p>
-          <ul>
-            {items.map(([label, to, icon, end]) => (
-              <li key={to + label}>
-                <NavLink end={!!end} to={to} className={({ isActive }) => `rb-side-link${isActive ? ' active' : ''}`} onClick={() => setOpen(false)}>
-                  <Icon name={icon} />
-                  <span className="rb-side-text">{label}</span>
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
+        {(close) => (
+          <div className="rb-menu-group">
+            <p className="rb-menu-title">{group}</p>
+            <ul>
+              {items.map(([label, to, icon, end]) => (
+                <li key={to + label}>
+                  <NavLink role="menuitem" end={!!end} to={to} className={({ isActive }) => `item-link${isActive ? ' active' : ''}`} onClick={close}>
+                    <Icon name={icon} />
+                    <span>{label}</span>
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </Menu>
     </div>
   );
 }

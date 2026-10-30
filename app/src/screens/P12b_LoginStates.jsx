@@ -1,6 +1,7 @@
 // G-08b 로그인 실패, G-08c 2단계 인증, G-08d 계정 등록, G-08e 비밀번호 찾기.
 // 모두 로그인 화면과 같은 카드 틀을 쓴다. 이 시제품은 아이디와 비밀번호를 받지 않으므로
 // 실제 처리는 공공 저장소 화면으로 넘긴다(D-12).
+import { newWindow } from '../components/Layout/newWindow';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { t } from '../copy/ko';
@@ -54,8 +55,7 @@ export function LoginOtp() {
         value={code}
         onChange={(e) => setCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
       />
-      <a className="krds-btn medium primary rb-login-submit" href={`${GITLAB}/users/sign_in`} target="_blank" rel="noreferrer">
-        {t.Login_otpSubmit}<span className="sr-only"> {t.Footer_3}</span>
+      <a className="krds-btn medium primary rb-login-submit" href={`${GITLAB}/users/sign_in`} {...newWindow(String(t.Login_otpSubmit))}>{t.Login_otpSubmit}
       </a>
     </Card>
   );
@@ -65,8 +65,7 @@ export function LoginSignup() {
   return (
     <Card id="G-08d" title={t.Login_signupTitle}>
       <p className="krds-text-body-small">{phrase(t.Login_signupBody)}</p>
-      <a className="krds-btn medium primary rb-login-submit" href={`${GITLAB}/users/sign_up`} target="_blank" rel="noreferrer">
-        {t.Login_signupGo}<span className="sr-only"> {t.Footer_3}</span>
+      <a className="krds-btn medium primary rb-login-submit" href={`${GITLAB}/users/sign_up`} {...newWindow(String(t.Login_signupGo))}>{t.Login_signupGo}
       </a>
     </Card>
   );
@@ -78,8 +77,7 @@ export function LoginReset() {
     <Card id="G-08e" title={t.Login_resetTitle}>
       <p className="krds-text-body-small">{phrase(t.Login_resetBody)}</p>
       <FormField id="reset-mail" label={t.Login_resetLabel} required type="email" autoComplete="off" value={mail} onChange={(e) => setMail(e.target.value)} />
-      <a className="krds-btn medium primary rb-login-submit" href={`${GITLAB}/users/password/new`} target="_blank" rel="noreferrer">
-        {t.Login_resetGo}<span className="sr-only"> {t.Footer_3}</span>
+      <a className="krds-btn medium primary rb-login-submit" href={`${GITLAB}/users/password/new`} {...newWindow(String(t.Login_resetGo))}>{t.Login_resetGo}
       </a>
     </Card>
   );

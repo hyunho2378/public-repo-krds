@@ -49,6 +49,12 @@
   /* D-14 끝절: 줄 높이 */
   --rb-row-h: var(--krds-number-14);
   --rb-side-item-h: var(--krds-number-12);
+  /* UX-007 12장 메뉴: 항목 높이 32, 폭 160~320(가장 긴 항목 + 좌우 12), 화면 가장자리 12 */
+  --rb-menu-item-h: var(--krds-number-12);
+  --rb-menu-min-w: calc(var(--krds-number-12) * 5);
+  --rb-menu-max-w: calc(var(--krds-number-12) * 10);
+  --rb-menu-edge: var(--krds-number-7);
+  --rb-menu-pad: var(--krds-number-7);
   /* D-17 5장: 이 폭(단위 없음) 이상이면 왼쪽 메뉴가 펼쳐진 채 시작한다 */
   --rb-bp-side-open: 1280;
   /* D-17 5장: 이 폭 미만은 왼쪽 메뉴를 숨기고 머리글 메뉴 버튼으로 연다(KRDS 모바일 구간 768) */

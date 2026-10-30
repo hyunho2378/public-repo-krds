@@ -7,7 +7,9 @@ import { t } from '../../copy/ko';
 import { u } from '../../copy/ui';
 import { useProjectNav } from '../../app/projectNav';
 import { Icon } from '../Code/Icon';
-import { ScreenModeOptions, useScreenMode } from './ScreenMode';
+import { ScreenModeItems, useScreenMode } from './ScreenMode';
+import { Menu } from '../Navigation/Menu';
+import { Logo } from './Logo';
 import { useAuth } from './useAuth';
 
 export const SERVICE_NAME = t.Header_service;
@@ -94,8 +96,9 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true }) {
           </button>
         ) : null}
         <div className="rb-gbar-left">
-          <Link className="rb-gbar-brand" to="/">
-            <span className="rb-gbar-brand-text">{SERVICE_NAME}</span>
+          <Link className="rb-gbar-brand" to="/" aria-label={u.Brand_home}>
+            <Logo size={24} />
+            <span className="rb-gbar-brand-text" aria-hidden="true">{SERVICE_NAME}</span>
           </Link>
           {nav ? (
             <span className="rb-gbar-path" data-figma="repo-path">
@@ -144,42 +147,28 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true }) {
 
 /** 게스트도 화면 설정을 바꿀 수 있다(로그인 전용 버그 고침). */
 function ScreenModeMenu({ mode, setMode }) {
-  const [open, setOpen] = useState(false);
-  const wrap = useDismiss(open, () => setOpen(false));
   return (
-    <div className="krds-drop-wrap rb-gbar-drop" ref={wrap}>
-      <button type="button" className={'rb-gbar-btn rb-gbar-icon' + (open ? ' active' : '')} aria-expanded={open} aria-controls="gbar-mode-guest" title={t.Header_6} onClick={() => setOpen(!open)}>
-        <Icon name="setting" />
-        <span className="sr-only">{t.Header_6}</span>
-      </button>
-      <div id="gbar-mode-guest" className="drop-menu rb-gbar-menu" style={{ display: open ? 'block' : 'none' }}>
-        <div className="drop-in">
-          <ScreenModeOptions name="mode-guest" mode={mode} setMode={setMode} />
-        </div>
-      </div>
-    </div>
+    <Menu label={t.Header_6} className="rb-gbar-drop" align="right" toggle={false} btnClass="rb-gbar-btn rb-gbar-icon" btnProps={{ title: t.Header_6 }} button={<Icon name="setting" />}>
+      <ScreenModeItems mode={mode} setMode={setMode} />
+    </Menu>
   );
 }
 
 /** 로그인 뒤 내 계정 메뉴. 화면 설정도 이 안에 둔다(Figma R-01 Signed-in). */
 function AccountMenu({ mode, setMode }) {
-  const [open, setOpen] = useState(false);
-  const wrap = useDismiss(open, () => setOpen(false));
   return (
-    <div className="krds-drop-wrap rb-gbar-drop" ref={wrap}>
-      <button type="button" className={'rb-gbar-btn rb-gbar-icon' + (open ? ' active' : '')} aria-expanded={open} aria-controls="gbar-account" title={t.GlobalBar_account} onClick={() => setOpen(!open)}>
-        <Icon name="my" />
-        <span className="sr-only">{t.GlobalBar_account}</span>
-      </button>
-      <div id="gbar-account" className="drop-menu rb-gbar-menu" style={{ display: open ? 'block' : 'none' }}>
-        <div className="drop-in">
-          <ul className="drop-list">
-            <li><Link className="item-link" to="/my" onClick={() => setOpen(false)}>{t.Header_my}</Link></li>
-            <li><Link className="item-link" to="/settings" onClick={() => setOpen(false)}>{t.Settings_title}</Link></li>
-          </ul>
-          <ScreenModeOptions name="mode-account" mode={mode} setMode={setMode} />
-        </div>
-      </div>
-    </div>
+    <Menu label={t.GlobalBar_account} className="rb-gbar-drop" align="right" toggle={false} btnClass="rb-gbar-btn rb-gbar-icon" btnProps={{ title: t.GlobalBar_account }} button={<Icon name="my" />}>
+      {(close) => (
+        <>
+          <div className="rb-menu-group">
+            <ul>
+              <li><Link className="item-link" to="/my" onClick={close}><span>{t.Header_my}</span></Link></li>
+              <li><Link className="item-link" to="/settings" onClick={close}><span>{t.Settings_title}</span></Link></li>
+            </ul>
+          </div>
+          <ScreenModeItems mode={mode} setMode={setMode} />
+        </>
+      )}
+    </Menu>
   );
 }

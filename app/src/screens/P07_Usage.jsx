@@ -1,4 +1,5 @@
 // P-07 사용 방법. 내 PC 환경 선택 → 가능 여부와 근거(F-14), 제작자 실행 안내. Figma 11038:2822
+import { newWindow } from '../components/Layout/newWindow';
 import { t } from '../copy/ko';
 import { FieldsetTitle } from '../components/Input/FieldsetTitle';
 import { useState } from 'react';
@@ -78,7 +79,7 @@ export default function Usage() {
         </EmptyState>
       )}
       <div className="rb-actions">
-        <a className="krds-btn small primary" href={project.web_url} target="_blank" rel="noreferrer">{t.P07_18}<span className="sr-only"> {t.Footer_3}</span></a>
+        <a className="krds-btn small primary" href={project.web_url} {...newWindow(String(t.P07_18))}>{t.P07_18}</a>
         <LinkButton Type="tertiary" to={`/projects/${data.id}`}>{t.P07_7}</LinkButton>
       </div>
     </ProjectFrame>

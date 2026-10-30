@@ -1,6 +1,7 @@
 // Figma: Code/CodeView (R-03 파일 보기). 공공 깃랩 파일 보기와 같은 구성.
 // 보기 전환(코드, 미리보기, Blame), 줄 번호와 줄 주소, 줄바꿈 토글, 파일 크기, 원본 보기, 복사, 이력.
 // 큰 파일은 보이는 범위만 그린다(가상 스크롤). 코드 영역 안에는 쉬운 설명을 넣지 않는다(UX-001 2.4).
+import { newWindow } from '../Layout/newWindow';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { t } from '../../copy/ko';
 import { languageOf, tokenize } from './highlight';
@@ -148,7 +149,7 @@ export function CodeView({ path, base, text, rawUrl, size, historyTo, onHistory,
           {!binary && view === 'code' ? (
             <button type="button" className="krds-btn small tertiary" aria-pressed={wrap} onClick={() => setWrap(!wrap)}>{t.P16_wrap}</button>
           ) : null}
-          {rawUrl ? <a className="krds-btn small tertiary" href={rawUrl} target="_blank" rel="noreferrer">{t.P16_raw}<span className="sr-only"> {t.Footer_3}</span></a> : null}
+          {rawUrl ? <a className="krds-btn small tertiary" href={rawUrl} {...newWindow(String(t.P16_raw))}>{t.P16_raw}</a> : null}
           {!binary ? <button type="button" className="krds-btn small tertiary" onClick={copy}>{t.P16_copy}</button> : null}
           {historyTo ? <button type="button" className="krds-btn small tertiary" onClick={onHistory}>{t.P16_history}</button> : null}
         </div>

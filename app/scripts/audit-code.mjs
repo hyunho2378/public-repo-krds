@@ -13,6 +13,9 @@ const RULES = [
   ['네이티브 선택 UI', /<select\b|type=["']date["']/g],
   ['이모지', /\p{Extended_Pictographic}/gu],
   ['hover 확대', /:hover[^}]*scale\(/g],
+  // UX-007 12장: 외부 링크 아이콘과 장식 화살표 글자 금지. 새 창 링크는 newWindow()만 쓴다
+  ['외부 링크 아이콘', /\bico-go\b|ico-external|ico-blank|open-new-window|open_new_window|external[-_]?link|launch\.svg|[↗↘↖↙➚➜›»]|\u2192/g],
+  ['새 창 링크는 newWindow() 사용', /target=["']_blank["']/g],
 ];
 const issues = [];
 
@@ -31,10 +34,16 @@ async function walk(dir) {
     const source = noComments.replace(KRDS_MEDIA, '@media(KRDS_BREAKPOINT)');
     // UX-007 1장: 화면 모드 선택은 저장해 기억해야 하므로 ScreenMode.jsx만 localStorage 허용
     // D-17 5장: 사이드바와 정보 영역 열림 선택도 기억해야 하므로 app/prefs.js도 허용(저장은 이 파일 한 곳)
+    // 로고(Logo.jsx)는 로고 고유색(#E24329 #FC6D26 #FCA326)이라 직접 색 검사에서 뺀다. 새 창 속성은 newWindow.js 한 곳
+    const isLogo = file.endsWith('Logo.jsx');
+    const isNewWindow = file.endsWith('newWindow.js');
     const isScreenMode = file.endsWith('ScreenMode.jsx') || file.endsWith('app/prefs.js');
     for (const [label, re] of RULES) {
       if (label === '브라우저 저장소' && isScreenMode) continue;
-      for (const m of source.matchAll(re)) issues.push(`${file}: ${label} ${m[0]}`);
+      if (label === '직접 색' && isLogo) continue;
+      if (label === '새 창 링크는 newWindow() 사용' && isNewWindow) continue;
+      const target = label === '외부 링크 아이콘' ? source.replace(/^\s*\/\/.*$/gm, '') : source;
+      for (const m of target.matchAll(re)) issues.push(`${file}: ${label} ${m[0]}`);
     }
     // D-15: 연한 채움(subtler, lighter, -light)은 회색 계열 외에는 금지. KRDS secondary 버튼도 금지
     for (const m of source.matchAll(/\bbg-light-(?!gray\b)[a-z]+\b/g)) issues.push(`${file}: D-15 연한 채움 배지 ${m[0]}`);

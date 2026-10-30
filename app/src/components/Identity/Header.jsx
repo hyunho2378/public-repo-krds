@@ -5,7 +5,8 @@ import { createPortal } from 'react-dom';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { phrase } from '../Help/Phrase';
-import { ScreenModeOptions, useScreenMode } from './ScreenMode';
+import { ScreenModeOptions, ScreenModeItems, useScreenMode } from './ScreenMode';
+import { Menu } from '../Navigation/Menu';
 
 export const SERVICE_NAME = t.Header_service;
 
@@ -22,31 +23,10 @@ function useLoginTo() {
 }
 
 function ModeDropdown({ mode, setMode }) {
-  const [open, setOpen] = useState(false);
-  const wrap = useRef(null);
-  useEffect(() => {
-    if (!open) return undefined;
-    const close = (e) => {
-      if (e.type === 'keydown' ? e.key === 'Escape' : !wrap.current.contains(e.target)) setOpen(false);
-    };
-    document.addEventListener('mousedown', close);
-    document.addEventListener('keydown', close);
-    return () => {
-      document.removeEventListener('mousedown', close);
-      document.removeEventListener('keydown', close);
-    };
-  }, [open]);
   return (
-    <div className="krds-drop-wrap" ref={wrap}>
-      <button type="button" className={'krds-btn small text drop-btn' + (open ? ' active' : '')} aria-expanded={open} aria-controls="mode-menu" onClick={() => setOpen(!open)}>
-        {t.Header_mode} <i className="svg-icon ico-toggle" aria-hidden="true" />
-      </button>
-      <div id="mode-menu" className="drop-menu" style={{ display: open ? 'block' : 'none' }}>
-        <div className="drop-in">
-          <ScreenModeOptions name="mode-utility" mode={mode} setMode={setMode} />
-        </div>
-      </div>
-    </div>
+    <Menu label={t.Header_mode} align="right" btnClass="krds-btn small text" button={t.Header_mode}>
+      <ScreenModeItems mode={mode} setMode={setMode} />
+    </Menu>
   );
 }
 

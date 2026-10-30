@@ -1,4 +1,5 @@
 // P-04 프로젝트 홈. 하는 일 먼저(U2), 오른쪽 판단 정보 영역(U3). 칸마다 이유와 다음 행동(U6). Figma 11038:1945
+import { newWindow } from '../components/Layout/newWindow';
 import { t } from '../copy/ko';
 import { Link } from 'react-router-dom';
 import { product } from '../api/client';
@@ -37,7 +38,7 @@ export default function Project() {
           <p className="krds-text-body-small">{summary || t.StructuredList_5}</p>
           {card.summary && (
             <p className="krds-text-body-xsmall rb-subtle">
-              {t.P04_autoSummary} <a className="krds-link" href={`${project.web_url}/-/blob/${project.default_branch || 'main'}/README.md`} target="_blank" rel="noreferrer">{t.P04_19}<span className="sr-only"> {t.Footer_3}</span></a>
+              {t.P04_autoSummary} <a className="krds-link" href={`${project.web_url}/-/blob/${project.default_branch || 'main'}/README.md`} {...newWindow(String(t.P04_19))}>{t.P04_19}</a>
             </p>
           )}
           <div className="rb-actions">
@@ -54,8 +55,7 @@ export default function Project() {
               {t.P04_noReadme}
             </EmptyState>
           )}
-          <a className="krds-link" href={project.web_url} target="_blank" rel="noreferrer">
-            {t.P04_openOrigin}<span className="sr-only"> {t.Footer_3}</span>
+          <a className="krds-link" href={project.web_url} {...newWindow(String(t.P04_openOrigin))}>{t.P04_openOrigin}
           </a>
         </article>
       </div>

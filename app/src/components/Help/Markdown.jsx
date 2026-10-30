@@ -1,5 +1,6 @@
 // 마크다운 그리기(해석은 markdown.js). README, 이슈 본문, 미리보기가 모두 이 부품을 거친다.
 // 그림은 저장소 자신의 파일(상대 경로)과 같은 서버 그림만 불러온다. 바깥 서버 그림(배지 등)은 설명 글자로 대신한다(외부 요청 차단).
+import { newWindow } from '../Layout/newWindow';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { t } from '../../copy/ko';
@@ -64,7 +65,7 @@ function LinkNode({ node, base }) {
     return <a className="krds-link" href={'#' + id} title={node.title || undefined} onClick={(e) => { e.preventDefault(); jump(id); }}>{body}</a>;
   }
   if (kind === 'external') {
-    return <a className="krds-link" href={node.href} title={node.title || undefined} target="_blank" rel="noreferrer">{body}<span className="sr-only"> {t.Footer_3}</span></a>;
+    return <a className="krds-link" href={node.href} title={node.title || undefined} {...newWindow(plainText(node.c) || node.href)}>{body}</a>;
   }
   if (kind === 'repo' && base?.id) {
     const p = repoPath(node.href);

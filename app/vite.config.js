@@ -17,7 +17,7 @@ function versionFile() {
     name: 'version-file',
     apply: 'build',
     // KRDS 글꼴/CSS 링크에 빌드 번호를 붙여 브라우저가 옛 파일을 쓰지 않게 한다
-    transformIndexHtml(html) { return html.replace(/(href="[^"]*krds[^"]*\.css)"/g, `$1?v=${BUILD_ID}"`); },
+    transformIndexHtml(html) { return html.replace(/(href="[^"]*(?:krds[^"]*\.css|favicon[^"]*\.(?:svg|png)|apple-touch-icon\.png))"/g, `$1?v=${BUILD_ID}"`); },
     closeBundle() {
       const out = fileURLToPath(new URL('./dist', import.meta.url));
       const dir = process.env.VITE_OUT_DIR || out;

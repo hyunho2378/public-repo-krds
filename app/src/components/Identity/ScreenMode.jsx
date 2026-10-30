@@ -111,3 +111,24 @@ export function ScreenModeOptions({ name, mode, setMode }) {
     </>
   );
 }
+
+/** 화면 설정을 메뉴 항목으로 보여 준다(UX-007 12장 공통 메뉴 안). 고르면 값이 바뀌고 메뉴는 열린 채 선택 표시만 바뀐다. */
+export function ScreenModeItems({ mode, setMode }) {
+  const [size, setSize] = useFontSize();
+  return (
+    <>
+      <div className="rb-menu-group" role="group" aria-label={t.Header_6}>
+        <p className="rb-menu-title">{t.Header_6}</p>
+        {MODES.map(([value, label]) => (
+          <button key={value} type="button" role="menuitemradio" aria-checked={mode === value} className="rb-menu-item" onClick={() => setMode(value)}><span>{label}</span></button>
+        ))}
+      </div>
+      <div className="rb-menu-group" role="group" aria-label={u.Font_title}>
+        <p className="rb-menu-title">{u.Font_title}</p>
+        {SIZES.map(([value, label]) => (
+          <button key={value} type="button" role="menuitemradio" aria-checked={size === value} className="rb-menu-item" onClick={() => setSize(value)}><span>{label}</span></button>
+        ))}
+      </div>
+    </>
+  );
+}

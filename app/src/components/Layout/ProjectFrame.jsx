@@ -1,4 +1,5 @@
 // 프로젝트 안 공통 머리: 브레드크럼, 이름, 기관, 탭. 프로젝트 자료를 한 번 불러와 하위 화면에 넘긴다.
+import { newWindow } from './newWindow';
 import { t } from '../../copy/ko';
 import { useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
@@ -74,7 +75,7 @@ function RepoHeader({ project, id }) {
           <Drop label={t.Home_more} btnClass="krds-btn small text" button={<><Icon name="ellipsis_horizontal" /><span>{t.Home_more}</span></>}>
             {(close) => (
               <ul className="drop-list">
-                <li><a className="item-link" href={project.web_url} target="_blank" rel="noreferrer" onClick={close}>{t.Home_openOrigin}<span className="sr-only"> {t.Footer_3}</span></a></li>
+                <li><a className="item-link" href={project.web_url} {...newWindow(String(t.Home_openOrigin))} onClick={close}>{t.Home_openOrigin}</a></li>
                 <li><Link className="item-link" to={`/projects/${id}/feedback?type=bug`} onClick={close}>{t.Home_reportIssue}</Link></li>
               </ul>
             )}
@@ -86,6 +87,9 @@ function RepoHeader({ project, id }) {
     </>
   );
 }
+
+// 탭 제목이 너무 길어지지 않게 설명은 80자에서 말줄임
+const clip = (s) => (s.length > 80 ? `${s.slice(0, 79)}…` : s);
 
 export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false, hideCrumbs = false, title = false }) {
   // 프로젝트 알림: 머리글 경로(만든 사람 / 이름)와 탭 줄 이슈 수에 쓴다. 화면을 떠나면 지운다.
@@ -106,7 +110,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
   // UX-007 10장: 제목에 서비스명 접미, 세로선 구분 기호를 쓰지 않는다.
   const ownerProject = `${organizationOf(project)}/${project.name}`;
   const deepLabel = crumbs?.length ? crumbs[crumbs.length - 1][0] : tabLabel;
-  const docTitle = deepLabel ? `${deepLabel}: ${ownerProject}` : `${ownerProject}: ${cleanDescription(project.description) || ''}`.replace(/: $/, '');
+  const docTitle = deepLabel ? `${deepLabel}: ${ownerProject}` : `${ownerProject}: ${clip(cleanDescription(project.description) || '')}`.replace(/: $/, '');
   return (
     <Page id={screenId} title={docTitle} state={state} noFigma>
       <div className={'rb-repo-main' + (wide ? ' is-wide' : '')} data-figma="main">

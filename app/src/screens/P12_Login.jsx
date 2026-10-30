@@ -2,6 +2,7 @@
 // 비밀번호 찾기, 로그인, 패스키로 로그인, 등록 안내).
 // 중요: 이 시제품은 아이디와 비밀번호를 받지 않는다. 적은 값은 어디에도 보내지 않고,
 // 로그인은 공공 저장소(GitLab) 계정 위임으로만 처리한다(D-12).
+import { newWindow } from '../components/Layout/newWindow';
 import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { t } from '../copy/ko';
@@ -74,20 +75,17 @@ export default function Login() {
               <input id="login-keep" type="checkbox" checked={keep} onChange={(e) => setKeep(e.target.checked)} />
               <label htmlFor="login-keep">{t.P12_keep}</label>
             </div>
-            <a className="krds-link" href={`${GITLAB}/users/password/new`} target="_blank" rel="noreferrer">
-              {t.P12_5}<span className="sr-only"> {t.Footer_3}</span>
+            <a className="krds-link" href={`${GITLAB}/users/password/new`} {...newWindow(String(t.P12_5))}>{t.P12_5}
             </a>
           </div>
           <p className="krds-text-body-xsmall rb-subtle">{phrase(t.P12_noStore)}</p>
           <button type="submit" className="krds-btn medium primary rb-login-submit">{t.P12_loginButton}</button>
         </form>
-        <a className="krds-btn medium tertiary rb-login-submit" href={`${GITLAB}/users/sign_in`} target="_blank" rel="noreferrer">
-          {t.P12_passkeyButton2}<span className="sr-only"> {t.Footer_3}</span>
+        <a className="krds-btn medium tertiary rb-login-submit" href={`${GITLAB}/users/sign_in`} {...newWindow(String(t.P12_passkeyButton2))}>{t.P12_passkeyButton2}
         </a>
         <p className="krds-text-body-xsmall rb-login-signup">
           {t.P12_signupAsk}{' '}
-          <a className="krds-link" href={`${GITLAB}/users/sign_up`} target="_blank" rel="noreferrer">
-            {t.P12_signupNow}<span className="sr-only"> {t.Footer_3}</span>
+          <a className="krds-link" href={`${GITLAB}/users/sign_up`} {...newWindow(String(t.P12_signupNow))}>{t.P12_signupNow}
           </a>
         </p>
         {showStatic ? (

@@ -41,7 +41,7 @@ p, li, dd, dt, label { text-wrap: balance; }
 .rb-gnb-mode { flex-direction: column; align-items: flex-start; }
 
 .rb-notice { padding-block: var(--krds-padding-6); background: var(--krds-color-surface-information-subtler); }
-#krds-footer .f-logo.rb-f-logo { width: auto; height: auto; background-image: none; font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); }
+#krds-footer .f-logo.rb-f-logo { display: flex; align-items: center; gap: var(--krds-gap-4); width: auto; height: auto; background-image: none; font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); }
 /* 바닥글 글자는 15(링크)와 13(출처 문장) 두 단계 */
 #krds-footer .inner .f-cnt .f-link .link-go .krds-btn { font-size: var(--krds-font-size-body-small); line-height: var(--rb-lh-15); }
 #krds-footer .inner .f-btm .f-btm-text .f-copy { font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
@@ -223,3 +223,20 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 .rb-diff-bar-left { display: flex; align-items: center; gap: var(--krds-gap-5); }
 .rb-dtree-dir, .rb-dtree-file { box-sizing: border-box; }
 .rb-dtree { overflow-x: hidden; }
+
+/* 공통 메뉴(UX-007 12장) */
+.rb-drop { position: relative; display: inline-flex; }
+.rb-menu { position: fixed; z-index: 90; box-sizing: border-box; width: max-content; min-width: var(--rb-menu-min-w); max-width: min(var(--rb-menu-max-w), calc(100vw - var(--rb-menu-edge) * 2)); scroll-margin: var(--rb-menu-edge); overflow-x: hidden; overflow-y: auto; padding: 0; margin: 0; background: var(--krds-color-surface-white, var(--krds-color-surface-gray-subtler)); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); box-shadow: 0 var(--krds-number-5) var(--krds-number-9) var(--krds-color-alpha-shadow3); }
+.rb-menu ul { list-style: none; margin: 0; padding: 0; }
+.rb-menu li { margin: 0; padding: 0; }
+.rb-menu .item-link, .rb-menu .rb-side-link, .rb-menu .rb-menu-item { display: flex; align-items: center; gap: var(--krds-gap-3); box-sizing: border-box; width: 100%; height: var(--rb-menu-item-h); min-height: var(--rb-menu-item-h); margin: 0; padding: 0 var(--rb-menu-pad); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--rb-fw-regular, 400); color: var(--krds-color-text-basic); text-align: left; text-decoration: none; background: none; border: 0; border-radius: 0; cursor: pointer; }
+.rb-menu .item-link > span, .rb-menu .rb-side-text, .rb-menu .rb-menu-item > span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rb-menu .item-link:hover, .rb-menu .rb-side-link:hover, .rb-menu .rb-menu-item:hover, .rb-menu .item-link:focus-visible, .rb-menu .rb-side-link:focus-visible, .rb-menu .rb-menu-item:focus-visible { background: var(--krds-color-surface-gray-subtle); }
+.rb-menu .item-link.active, .rb-menu .rb-side-link.active, .rb-menu .rb-menu-item[aria-checked="true"] { background: var(--krds-color-action-secondary-selected, var(--krds-color-surface-gray-subtle)); font-weight: var(--rb-fw-current); }
+.rb-menu-title { display: flex; align-items: center; height: var(--rb-menu-item-h); margin: 0; padding: 0 var(--rb-menu-pad); white-space: nowrap; color: var(--krds-color-text-subtle); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
+.rb-menu-group + .rb-menu-group { border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+
+/* 머리글 로고와 이름 한 덩어리(UX-007 브랜드). 로고 24, 간격 8, 이름 15 굵게 */
+.rb-gbar-brand { gap: var(--krds-gap-4); }
+.rb-gbar-brand-text { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.rb-logo { flex: none; }

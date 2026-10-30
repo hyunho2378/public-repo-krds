@@ -57,4 +57,9 @@ export const u = {
   Wiki_create: "첫 문서 만들기",
   Diff_tree: "변경 파일 트리",
   Diff_treeToggle: "파일 트리",
+  Ext_newWindow: "새 창",
+  MR_from: "원본",
+  MR_to: "대상",
+  Diff_prev: "이전",
+  Brand_home: "공공 깃랩 홈",
 };

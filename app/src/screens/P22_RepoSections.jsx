@@ -1,6 +1,7 @@
 // P-22 공공 깃랩 프로젝트 메뉴 나머지. 활동, 위키, 파이프라인, 패키지, 라벨, 마일스톤, 멤버, 보드, 스니펫.
 // 원래 GitLab에 있는 메뉴를 빼지 않는다(PRD 0장). 읽기는 공개 API로 실제 자료를 쓰고,
 // 로그인해야 볼 수 있는 메뉴는 GitLab과 같게 로그인 안내를 보여 준다(가짜 자료를 만들지 않는다).
+import { newWindow } from '../components/Layout/newWindow';
 import { Link, useParams } from 'react-router-dom';
 import { t } from '../copy/ko';
 import { gitlab } from '../api/client';
@@ -103,7 +104,7 @@ export default function RepoSections({ section }) {
         <div className="rb-wiki-empty">
           <h2 className="krds-text-heading-small">{u.Wiki_emptyTitle}</h2>
           <p className="krds-text-body-medium rb-subtle">{u.Wiki_emptyBody}</p>
-          <a className="krds-btn medium primary" href={`${url}/-/wikis/home?view=create`} target="_blank" rel="noreferrer">{u.Wiki_create}<span className="sr-only"> {t.Footer_3}</span></a>
+          <a className="krds-btn medium primary" href={`${url}/-/wikis/home?view=create`} {...newWindow(String(u.Wiki_create))}>{u.Wiki_create}</a>
         </div>
       </ProjectFrame>
     );
