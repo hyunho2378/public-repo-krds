@@ -296,3 +296,6 @@ a.krds-link:hover, .krds-link:hover { text-decoration: underline; }
 .rb-gbar-brand { align-items: center; }
 .rb-gbar-brand .rb-logo { display: block; }
 .rb-gbar-brand-text { display: block; line-height: var(--krds-number-10); height: var(--krds-number-10); }
+
+/* UX/12 장식 점검: 상태 전환의 개수는 GitHub처럼 알약 없이 숫자만, 이미지 대체 글자는 알약 없이 글자만 */
+.rb-statetab-count { padding: 0; background: none; border-radius: 0; color: var(--krds-color-text-subtle); }

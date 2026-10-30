@@ -175,10 +175,9 @@ export function DiffView({ files }) {
       <div className="rb-diffs">
         <div className="rb-diff-bar">
           <div className="rb-diff-bar-left">
-            <button type="button" className="krds-btn small tertiary" aria-expanded={treeOpen} aria-keyshortcuts="B" onClick={() => setTreeOpen(!treeOpen)}>
+            <button type="button" className="krds-btn small tertiary" title={`${u.Tree_toggle} (B)`} aria-expanded={treeOpen} aria-keyshortcuts="B" onClick={() => setTreeOpen(!treeOpen)}>
               <Icon name="view_all" />
               <span>{u.Diff_treeToggle}</span>
-              <kbd className="rb-kbd-inline">B</kbd>
             </button>
             <p className="krds-text-body-small-bold">{t.fn.filesChanged(files.length)}</p>
           </div>

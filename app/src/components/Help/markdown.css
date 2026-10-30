@@ -20,7 +20,7 @@ ol.rb-md-list { list-style: decimal; }
 .rb-md-code, .rb-md kbd { font-family: 'D2Coding', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
 .rb-md-code { padding: 0 var(--krds-padding-2); border-radius: var(--krds-radius-small2); background: var(--krds-color-surface-gray-subtle); overflow-wrap: anywhere; }
 .rb-md kbd { padding: 0 var(--krds-padding-2); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-radius-small2); }
-.rb-md-img { display: inline-flex; align-items: center; padding: 0 var(--krds-padding-3); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-max); color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); vertical-align: middle; }
+.rb-md-img { display: inline; color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }
 .rb-md-block { margin: 0; border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-gray-subtler); overflow: hidden; }
 .rb-md-block-head { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-3); padding: 0 var(--krds-padding-3) 0 var(--krds-padding-5); min-height: var(--rb-side-item-h); }
 .rb-md-pre { margin: 0; padding: var(--krds-padding-3) var(--krds-padding-5) var(--krds-padding-5); overflow-x: auto; font-family: 'D2Coding', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); white-space: pre; word-break: normal; }

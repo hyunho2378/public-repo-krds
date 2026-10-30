@@ -217,10 +217,9 @@ export default function Code() {
           <div className="rb-toolbar" data-figma="toolbar">
             <div className="rb-toolbar-left">
               {path ? (
-                <button type="button" className="krds-btn small tertiary" aria-expanded={treeOpen} aria-keyshortcuts="B" onClick={() => setTreeOpen(!treeOpen)}>
+                <button type="button" className="krds-btn small tertiary" title={`${u.Tree_toggle} (B)`} aria-expanded={treeOpen} aria-keyshortcuts="B" onClick={() => setTreeOpen(!treeOpen)}>
                   <Icon name="view_all" />
                   <span>{u.Tree_toggle}</span>
-                  <kbd className="rb-kbd-inline">B</kbd>
                 </button>
               ) : null}
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />
