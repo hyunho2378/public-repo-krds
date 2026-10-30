@@ -11,10 +11,10 @@ import '../components/Code/code.css';
 export default function Contributors() {
   const frame = useProject();
   const body = useData(async () => (await gitlab.contributors(frame.id)).data, [frame.id]);
-  if (!frame.data) return <ProjectFrame screenId="P-21" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-10" data={frame} />;
   const list = body.data ? [...body.data].sort((a, b) => b.commits - a.commits) : null;
   return (
-    <ProjectFrame screenId="P-21" tab="" tabLabel={t.P21_title} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-10" tab="" tabLabel={t.P21_title} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
       <div className="rb-code-area">
         <RepoSubNav id={frame.id} active="people" />
         <div className="rb-detail-head">

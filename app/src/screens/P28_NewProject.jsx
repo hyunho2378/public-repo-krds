@@ -50,7 +50,7 @@ export default function NewProject() {
   }, [name, desc]);
 
   return (
-    <Page id="G-04" title={t.NewProject_title} state="Ideal">
+    <Page id="G-05" title={t.NewProject_title} state="Ideal">
       <div className="rb-write rb-narrow">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large" data-figma="section-title">{t.NewProject_title}</h1>

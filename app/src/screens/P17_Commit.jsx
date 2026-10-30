@@ -18,11 +18,11 @@ export default function Commit() {
     const files = (await gitlab.diff(frame.id, sha)).data;
     return { commit, files };
   }, [frame.id, sha]);
-  if (!frame.data) return <ProjectFrame screenId="P-17" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-05" data={frame} />;
   const b = body.data;
   const stat = b ? diffStat(b.files) : null;
   return (
-    <ProjectFrame screenId="P-17" tab="/changes" tabLabel={t.P17_title} data={frame} state={b ? (b.files.length ? 'Ideal' : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-05" tab="/changes" tabLabel={t.P17_title} data={frame} state={b ? (b.files.length ? 'Ideal' : 'Empty') : body.state}>
       {!b ? (
         <Status {...body} />
       ) : (

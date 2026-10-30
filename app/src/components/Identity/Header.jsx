@@ -12,7 +12,7 @@ export const SERVICE_NAME = t.Header_service;
 export const MAIN_MENU = [
   ['/', t.Header_menuFind],
   ['/requests', t.Header_menuRequests],
-  ['/publish', t.Header_menuPublish],
+  ['/projects/new', t.Header_menuPublish],
   ['/help', t.Header_menuHelp],
 ];
 

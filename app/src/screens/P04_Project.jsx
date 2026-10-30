@@ -23,7 +23,7 @@ function findLine(readme, pattern) {
 
 export default function Project() {
   const data = useProject(loadDecision);
-  if (!data.data) return <ProjectFrame screenId="P-04" data={data} />;
+  if (!data.data) return <ProjectFrame screenId="A-02" data={data} />;
   const { project, readme, card, dates, check, reuses } = data.data;
   const id = data.id;
   const passed = check.checks.filter((c) => c.pass).length;
@@ -39,7 +39,7 @@ export default function Project() {
   ];
 
   return (
-    <ProjectFrame screenId="P-04" tab="/about" tabLabel={t.ProjectTabs_1} data={data} state={readme ? 'Ideal' : 'Min'}>
+    <ProjectFrame screenId="A-02" tab="/about" tabLabel={t.ProjectTabs_1} data={data} state={readme ? 'Ideal' : 'Min'}>
       <div className="rb-two-col rb-two-col-end">
         <article className="rb-stack rb-grow">
           <h2 className="krds-text-heading-medium">{t.P04_18}</h2>
@@ -67,7 +67,7 @@ export default function Project() {
             {t.P04_openOrigin}<span className="sr-only"> {t.Footer_3}</span>
           </a>
         </article>
-        <aside className="rb-side rb-decision" aria-labelledby="decision-title">
+        <aside className="rb-aside-col rb-decision" aria-labelledby="decision-title">
           <h2 id="decision-title" className="krds-text-heading-small">{t.P04_25}</h2>
           <dl className="rb-stack">
             {decision.map(([title, value, [action, to]]) => (

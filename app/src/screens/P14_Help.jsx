@@ -22,7 +22,7 @@ const TERMS = [
 export default function Help() {
   const tpl = useData(() => product.get('/templates/readme'), []);
   return (
-    <Page id="P-14" title={t.Header_5}>
+    <Page id="G-10" title={t.Header_5}>
       <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.Header_5)}</h1>
       <section className="rb-stack" aria-labelledby="start-title">
         <h2 id="start-title" className="krds-text-heading-medium">{phrase(t.P14_15)}</h2>

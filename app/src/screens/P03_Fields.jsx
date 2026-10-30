@@ -11,7 +11,7 @@ import { Status } from '../components/Feedback/Status';
 export default function Fields() {
   const map = useData(() => product.get('/coverage-map'), []);
   return (
-    <Page id="P-03" title={t.P03_1} state={map.state}>
+    <Page id="G-03" title={t.P03_1} state={map.state}>
       <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.P03_1)}</h1>
       <p className="rb-subtle">{phrase(t.P03_2)}</p>
       <Status {...map} />

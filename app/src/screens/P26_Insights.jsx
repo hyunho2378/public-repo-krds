@@ -20,7 +20,7 @@ export function Insights() {
   const orgRows = orgs.data?.items || orgs.data || [];
   const max = Math.max(1, ...rows.map((r) => r.count || 0));
   return (
-    <Page id="A-04" title={t.Insights_title} state={rows.length ? 'Ideal' : map.state}>
+    <Page id="A-06" title={t.Insights_title} state={rows.length ? 'Ideal' : map.state}>
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large" data-figma="section-title">{t.Insights_title}</h1>
@@ -65,7 +65,7 @@ export function Checklist() {
   const steps = guide.data?.steps || [];
   const [open, setOpen] = useState(0);
   return (
-    <Page id="A-08" title={t.Checklist_title} state={steps.length ? 'Ideal' : guide.state}>
+    <Page id="A-11" title={t.Checklist_title} state={steps.length ? 'Ideal' : guide.state}>
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large">{t.Checklist_title}</h1>
@@ -103,11 +103,11 @@ export function LawAlerts() {
   const { id } = useParams();
   const frame = useProject();
   const body = useData(async () => (await product.get(`/projects/${id}/law-alerts`)).data, [id]);
-  if (!frame.data) return <ProjectFrame screenId="A-05" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="A-10" data={frame} />;
   const items = body.data?.items || [];
   const notConnected = body.data?.status === 'not-connected';
   return (
-    <ProjectFrame screenId="A-05" tab="" tabLabel={t.Law_title} data={frame} state={items.length ? 'Ideal' : 'Empty'}>
+    <ProjectFrame screenId="A-10" tab="" tabLabel={t.Law_title} data={frame} state={items.length ? 'Ideal' : 'Empty'}>
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-heading-medium">{t.Law_title}</h2>
@@ -148,9 +148,9 @@ export function Handover() {
       setState('error');
     }
   };
-  if (!frame.data) return <ProjectFrame screenId="A-07" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="A-08" data={frame} />;
   return (
-    <ProjectFrame screenId="A-07" tab="" tabLabel={t.Handover_title} data={frame} state={state === 'done' ? 'Ideal' : 'Empty'}>
+    <ProjectFrame screenId="A-08" tab="" tabLabel={t.Handover_title} data={frame} state={state === 'done' ? 'Ideal' : 'Empty'}>
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-heading-medium">{t.Handover_title}</h2>
@@ -182,7 +182,7 @@ export function Mcp() {
   }, []);
   const d = info.data;
   return (
-    <Page id="A-06" title={t.Mcp_title} state={d ? 'Ideal' : info.state}>
+    <Page id="A-07" title={t.Mcp_title} state={d ? 'Ideal' : info.state}>
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large">{t.Mcp_title}</h1>

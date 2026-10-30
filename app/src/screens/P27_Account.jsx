@@ -28,7 +28,7 @@ export function Notifications() {
   const me = useData(async () => (await auth.session()), []);
   const signedIn = !!me.data?.user;
   return (
-    <Page id="G-06" title={t.TabBar_alerts} state={signedIn ? 'Empty' : 'Empty'}>
+    <Page id="G-07" title={t.TabBar_alerts} state={signedIn ? 'Empty' : 'Empty'}>
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large" data-figma="section-title">{t.TabBar_alerts}</h1>
@@ -118,10 +118,10 @@ export function RepoGraph() {
     }
     return [...buckets.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   }, [body.data]);
-  if (!frame.data) return <ProjectFrame screenId="R-11" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-25" data={frame} />;
   const max = Math.max(1, ...series.map(([, n]) => n));
   return (
-    <ProjectFrame screenId="R-11" tab="" tabLabel={t.Graph_title} data={frame} state={series.length ? 'Ideal' : body.state}>
+    <ProjectFrame screenId="R-25" tab="" tabLabel={t.Graph_title} data={frame} state={series.length ? 'Ideal' : body.state}>
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-heading-medium">{t.Graph_title}</h2>
@@ -146,7 +146,7 @@ export function RepoGraph() {
 /** A-03 협업과 팀원 모집. 비슷한 도구를 만드는 사람을 잇는다(F-05). */
 export function Collaborate() {
   return (
-    <Page id="A-03" title={t.Collab_title} state="Empty">
+    <Page id="A-09" title={t.Collab_title} state="Empty">
       <div className="rb-write">
         <div className="rb-write-head">
           <h1 className="krds-text-heading-large">{t.Collab_title}</h1>

@@ -14,7 +14,7 @@ export default function Organizations() {
   const orgs = useData(() => product.get('/organizations'), []);
   const items = hasData(orgs.state) ? orgs.data.data.items.filter((o) => o.name.includes(filter.trim())).sort((a, b) => b.projectCount - a.projectCount) : [];
   return (
-    <Page id="P-11" title={t.P11_1} state={orgs.state}>
+    <Page id="G-04" title={t.P11_1} state={orgs.state}>
       <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.P11_1)}</h1>
       <div className="rb-search">
         <label className="krds-text-label-medium" htmlFor="org-filter">{t.P11_2}</label>

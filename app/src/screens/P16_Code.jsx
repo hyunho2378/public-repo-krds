@@ -156,7 +156,7 @@ export default function Code() {
     return loadTree(id, path, ref);
   }, [params.id, path, ref]);
 
-  if (!frame.data) return <ProjectFrame screenId="P-16" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId={path ? "R-02" : "R-01"} data={frame} />;
   const { project, readme, branches, tags, releases, totals, root, languages } = frame.data;
   const rawUrl = path ? `${project.web_url}/-/raw/${ref}/${path.split('/').map(enc).join('/')}` : null;
   const zipUrl = `${project.web_url}/-/archive/${ref}/${project.path}-${ref}.zip`;
@@ -174,7 +174,7 @@ export default function Code() {
   ) : null;
 
   return (
-    <ProjectFrame screenId="P-16" tab="" tabLabel={path ? t.Tab_code : ''} data={frame} state={state} aside={aside}>
+    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} data={frame} state={state} aside={aside}>
       <div className={`rb-code-wrap${path ? ' has-tree' : ''}`}>
         {path ? <FileTreePanel id={frame.id} items={root} current={path} refQuery={refQuery} /> : null}
         <div className="rb-code-area">

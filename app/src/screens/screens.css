@@ -36,8 +36,8 @@
 /* 두 단: 본문 + 옆 영역(필터, 판단 정보) */
 .rb-two-col { display: flex; gap: var(--krds-gap-9); align-items: flex-start; }
 .rb-grow { flex: 1; min-width: 0; }
-.rb-side { flex: 0 0 calc(var(--krds-size-height-11) * 4); display: flex; flex-direction: column; gap: var(--krds-gap-5); padding: var(--krds-padding-8); background: var(--krds-color-surface-gray-subtler); border-radius: var(--krds-radius-medium1); }
-.rb-two-col-end .rb-side { order: 2; }
+.rb-aside-col { flex: 0 0 calc(var(--krds-size-height-11) * 4); display: flex; flex-direction: column; gap: var(--krds-gap-5); padding: var(--krds-padding-8); background: var(--krds-color-surface-gray-subtler); border-radius: var(--krds-radius-medium1); }
+.rb-two-col-end .rb-aside-col { order: 2; }
 .rb-decision dl { margin: 0; }
 .rb-decision-item { display: flex; flex-direction: column; gap: var(--krds-gap-1); }
 .rb-decision-item dd { margin: 0; }
@@ -82,8 +82,8 @@
 /* 1023 이하: 두 단을 한 단으로, 판단 정보는 소개 바로 아래(불편 18) */
 @media (max-width: 1023px) {
   .rb-two-col { flex-direction: column; }
-  .rb-side { flex-basis: auto; width: 100%; box-sizing: border-box; }
-  .rb-two-col-end .rb-side { order: -1; }
+  .rb-aside-col { flex-basis: auto; width: 100%; box-sizing: border-box; }
+  .rb-two-col-end .rb-aside-col { order: -1; }
   .rb-filter-pc { display: none; }
   .rb-filter-mobile { display: inline-flex; }
 }
@@ -127,6 +127,6 @@
 #root .krds-structured-list.rb-list .c-text:hover .c-tit .span { color: var(--krds-color-link-hover, var(--krds-color-link-default)); }
 
 /* 검색 조건: 회색 면 상자 대신 제목과 구분선(정부24 검색 결과 필터) */
-.rb-side.rb-filter-pc { background: none; padding: 0; border-radius: 0; border-top: var(--krds-border-width-static-medium) solid var(--krds-color-divider-gray-dark); }
+.rb-aside-col.rb-filter-pc { background: none; padding: 0; border-radius: 0; border-top: var(--krds-border-width-static-medium) solid var(--krds-color-divider-gray-dark); }
 .rb-filter-pc fieldset { padding-block: var(--krds-padding-6); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
 .rb-filter-pc > h2 { padding-top: var(--krds-padding-6); }

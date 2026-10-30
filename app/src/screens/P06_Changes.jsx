@@ -33,11 +33,11 @@ export default function Changes() {
   };
   const copy = (sha) => navigator.clipboard.writeText(sha);
 
-  if (!frame.data) return <ProjectFrame screenId="P-06" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-04" data={frame} />;
   const items = list.data ? [...list.data, ...extra] : [];
   const state = list.data ? (items.length ? (items.length === 1 ? 'Min' : 'Ideal') : 'Empty') : list.state;
   return (
-    <ProjectFrame screenId="P-06" tab="/changes" tabLabel={t.ProjectTabs_4} data={frame} state={state}>
+    <ProjectFrame screenId="R-04" tab="/changes" tabLabel={t.ProjectTabs_4} data={frame} state={state}>
       <div className="rb-code-area">
         <div className="rb-diff-bar">
           <h2 className="krds-text-heading-medium">{path ? t.P06_filter : t.P06_title}</h2>

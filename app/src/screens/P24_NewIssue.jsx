@@ -104,13 +104,13 @@ export default function NewIssue({ kind = 'issue' }) {
     [kind, id, source, target],
   );
 
-  if (!frame.data) return <ProjectFrame screenId={kind === 'merge' ? 'R-17' : 'R-12'} data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId={kind === 'merge' ? 'R-16' : 'R-11'} data={frame} />;
   const list = branches.data || [];
   const screenTitle = kind === 'merge' ? t.Issue_newMerge : t.Issue_newIssue;
   const diffs = compare.data?.diffs || [];
 
   return (
-    <ProjectFrame screenId={kind === 'merge' ? 'R-17' : 'R-12'} tab="" tabLabel={screenTitle} data={frame} state="Ideal">
+    <ProjectFrame screenId={kind === 'merge' ? 'R-16' : 'R-11'} tab="" tabLabel={screenTitle} data={frame} state="Ideal">
       <div className="rb-write">
         <h2 className="krds-text-heading-medium">{screenTitle}</h2>
 

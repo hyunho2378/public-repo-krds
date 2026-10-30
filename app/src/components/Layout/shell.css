@@ -170,6 +170,6 @@
 /* Figma 상자 기준: 브레드크럼은 내용 폭만 차지한다 */
 .krds-breadcrumb-wrap { width: fit-content; max-width: 100%; }
 /* KRDS 기본 위 여백은 화면 틀에서 이미 주므로 뺀다(Figma 상자 기준) */
-.krds-breadcrumb-wrap { padding-top: 0; }
+.krds-breadcrumb-wrap { padding-top: 0; margin: 0; }
 /* 사이드바 바깥 상자와 안쪽 메뉴는 같은 크기다(Figma 상자 기준) */
 .rb-side-wrap { min-width: 0; }

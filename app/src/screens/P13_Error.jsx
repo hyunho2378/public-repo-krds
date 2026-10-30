@@ -17,7 +17,7 @@ export default function ErrorScreen({ kind: fixed }) {
   const kind = fixed || params.get('kind') || 'not-found';
   const [title, text] = KINDS[kind] || KINDS['not-found'];
   return (
-    <Page id="P-13" title={title} state={kind}>
+    <Page id="G-09" title={title} state={kind}>
       <div className="rb-narrow rb-stack">
         <h1 className="krds-text-heading-xlarge" data-figma="section-title">{title}</h1>
         <p className="krds-text-body-large">{phrase(text)}</p>

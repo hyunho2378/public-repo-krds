@@ -63,14 +63,14 @@ export default function Compare() {
     [id, from, to],
   );
 
-  if (!frame.data) return <ProjectFrame screenId="R-07" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-06" data={frame} />;
   const list = refs.data || [];
   const diffs = result.data?.diffs || [];
   const commits = result.data?.commits || [];
   const same = from === to;
 
   return (
-    <ProjectFrame screenId="R-07" tab="" tabLabel={t.Compare_title} data={frame} state={same ? 'Empty' : result.state}>
+    <ProjectFrame screenId="R-06" tab="" tabLabel={t.Compare_title} data={frame} state={same ? 'Empty' : result.state}>
       <div className="rb-write">
         <div className="rb-write-head">
           <h2 className="krds-text-heading-medium">{t.Compare_title}</h2>

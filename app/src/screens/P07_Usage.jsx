@@ -22,7 +22,7 @@ export default function Usage() {
   const [canInstall, setCanInstall] = useState(false);
   const [result, setResult] = useState(null);
   const [checking, setChecking] = useState(false);
-  if (!data.data) return <ProjectFrame screenId="P-07" data={data} />;
+  if (!data.data) return <ProjectFrame screenId="R-30" data={data} />;
   const { project, readme } = data.data;
   const guide = sectionLines(readme, /사용 방법|사용법|실행|설치|시작/);
   const cloneUrl = project.http_url_to_repo;
@@ -39,7 +39,7 @@ export default function Usage() {
   }
 
   return (
-    <ProjectFrame screenId="P-07" tab="/use" tabLabel={t.ProjectTabs_2} data={data} state={guide ? 'Ideal' : 'Empty'}>
+    <ProjectFrame screenId="R-30" tab="/use" tabLabel={t.ProjectTabs_2} data={data} state={guide ? 'Ideal' : 'Empty'}>
       <Steps label={t.P07_4} labels={[t.P07_5, t.P07_6, t.P07_7]} current={result ? 1 : 0} />
       <h2 className="krds-text-heading-medium">{t.P07_8}</h2>
       <form className="rb-stack" onSubmit={check}>

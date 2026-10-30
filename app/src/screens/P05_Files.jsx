@@ -9,10 +9,10 @@ const KIND = { tree: t.P05_1, blob: t.ProjectTabs_3 };
 
 export default function Files() {
   const data = useProject(async (id) => ({ tree: (await gitlab.tree(id)).data }));
-  if (!data.data) return <ProjectFrame screenId="P-05" data={data} />;
+  if (!data.data) return <ProjectFrame screenId="R-02" data={data} />;
   const { project, readme, tree } = data.data;
   return (
-    <ProjectFrame screenId="P-05" tab="/files" tabLabel={t.ProjectTabs_3} data={data} state={tree.length ? 'Ideal' : 'Empty'}>
+    <ProjectFrame screenId="R-02" tab="/files" tabLabel={t.ProjectTabs_3} data={data} state={tree.length ? 'Ideal' : 'Empty'}>
       <h2 className="krds-text-heading-medium">{t.P05_2}</h2>
       {tree.length ? (
         <div className="krds-table-wrap rb-table-scroll">

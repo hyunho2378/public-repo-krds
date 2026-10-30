@@ -1,4 +1,4 @@
-// 화면 목록(PRD 5장, UX-002). P-번호 = Figma Screens 페이지 이름.
+// 화면 목록. 번호는 Figma 화면 세트 이름(R 저장소, G 전역, A 덧붙임)과 같다. 기준: UX/05_화면_전수목록.md
 import Home from '../screens/P01_Home';
 import Search from '../screens/P02_Search';
 import Fields from '../screens/P03_Fields';
@@ -8,6 +8,7 @@ import Changes from '../screens/P06_Changes';
 import Usage from '../screens/P07_Usage';
 import Feedback from '../screens/P08_Feedback';
 import Publish from '../screens/P09_Publish';
+import PublishCheck from '../screens/P31_PublishCheck';
 import MyProjects from '../screens/P10_MyProjects';
 import Organizations from '../screens/P11_Organizations';
 import Login from '../screens/P12_Login';
@@ -32,36 +33,38 @@ import { Issues, Issue } from '../screens/P19_Issues';
 import { MergeRequests, MergeRequest } from '../screens/P20_MergeRequests';
 import Contributors from '../screens/P21_Contributors';
 
+const SECTION_ID = { boards: 'R-13', labels: 'R-14', milestones: 'R-15', pipelines: 'R-18', packages: 'R-20', wiki: 'R-21', snippets: 'R-22', members: 'R-23', activity: 'R-24' };
+
 export const routes = [
-  { id: 'P-01', path: '/', Screen: Home },
-  { id: 'P-02', path: '/search', Screen: Search },
-  { id: 'P-03', path: '/fields', Screen: Fields },
-  { id: 'P-16', path: '/projects/:id', Screen: Code },
-  { id: 'P-04', path: '/projects/:id/about', Screen: Project },
-  { id: 'P-05', path: '/projects/:id/files', Screen: Files },
-  { id: 'P-06', path: '/projects/:id/changes', Screen: Changes },
-  { id: 'P-07', path: '/projects/:id/use', Screen: Usage },
-  { id: 'P-08', path: '/projects/:id/feedback', Screen: Feedback },
-  { id: 'A-03', path: '/projects/:id/publish-check', Screen: Publish },
-  { id: 'G-05', path: '/publish', Screen: Publish },
-  { id: 'P-10', path: '/my', Screen: MyProjects },
-  { id: 'P-11', path: '/organizations', Screen: Organizations },
-  { id: 'P-12', path: '/login', Screen: Login },
-  { id: 'P-13', path: '/error', Screen: ErrorScreen },
-  { id: 'P-14', path: '/help', Screen: Help },
-  { id: 'P-15', path: '/requests', Screen: Requests },
-  { id: 'P-16', path: '/projects/:id/code', Screen: Code },
-  { id: 'P-16', path: '/projects/:id/code/*', Screen: Code },
-  { id: 'P-17', path: '/projects/:id/changes/:sha', Screen: Commit },
-  { id: 'P-18', path: '/projects/:id/branches', Screen: Branches },
-  { id: 'P-18', path: '/projects/:id/releases', Screen: Releases },
-  { id: 'P-19', path: '/projects/:id/issues', Screen: Issues },
-  { id: 'P-19', path: '/projects/:id/issues/:iid', Screen: Issue },
-  { id: 'P-20', path: '/projects/:id/merge-requests', Screen: MergeRequests },
-  { id: 'P-20', path: '/projects/:id/merge-requests/:iid', Screen: MergeRequest },
-  { id: 'P-21', path: '/projects/:id/contributors', Screen: Contributors },
+  { id: 'A-01', path: '/', Screen: Home },
+  { id: 'G-02', path: '/search', Screen: Search },
+  { id: 'G-03', path: '/fields', Screen: Fields },
+  { id: 'R-01', path: '/projects/:id', Screen: Code },
+  { id: 'A-02', path: '/projects/:id/about', Screen: Project },
+  { id: 'R-02', path: '/projects/:id/files', Screen: Files },
+  { id: 'R-04', path: '/projects/:id/changes', Screen: Changes },
+  { id: 'R-30', path: '/projects/:id/use', Screen: Usage },
+  { id: 'A-04', path: '/projects/:id/feedback', Screen: Feedback },
+  { id: 'A-03', path: '/projects/:id/publish-check', Screen: PublishCheck },
+  { id: 'G-05c', path: '/publish', Screen: Publish },
+  { id: 'G-06', path: '/my', Screen: MyProjects },
+  { id: 'G-04', path: '/organizations', Screen: Organizations },
+  { id: 'G-08', path: '/login', Screen: Login },
+  { id: 'G-09', path: '/error', Screen: ErrorScreen },
+  { id: 'G-10', path: '/help', Screen: Help },
+  { id: 'A-05', path: '/requests', Screen: Requests },
+  { id: 'R-02', path: '/projects/:id/code', Screen: Code },
+  { id: 'R-03', path: '/projects/:id/code/*', Screen: Code },
+  { id: 'R-05', path: '/projects/:id/changes/:sha', Screen: Commit },
+  { id: 'R-07', path: '/projects/:id/branches', Screen: Branches },
+  { id: 'R-09', path: '/projects/:id/releases', Screen: Releases },
+  { id: 'R-11', path: '/projects/:id/issues', Screen: Issues },
+  { id: 'R-12', path: '/projects/:id/issues/:iid', Screen: Issue },
+  { id: 'R-16', path: '/projects/:id/merge-requests', Screen: MergeRequests },
+  { id: 'R-17', path: '/projects/:id/merge-requests/:iid', Screen: MergeRequest },
+  { id: 'R-10', path: '/projects/:id/contributors', Screen: Contributors },
   ...SECTION_KEYS.map((key) => ({
-    id: `P-22-${key}`,
+    id: SECTION_ID[key],
     path: `/projects/:id/${key}`,
     Screen: () => createElement(RepoSections, { section: key }),
   })),
@@ -69,20 +72,20 @@ export const routes = [
   { id: 'R-27', path: '/projects/:id/edit/*', Screen: () => createElement(Write, { mode: 'edit' }) },
   { id: 'R-28', path: '/projects/:id/upload', Screen: () => createElement(Write, { mode: 'upload' }) },
   { id: 'R-29', path: '/projects/:id/branches/new', Screen: () => createElement(Write, { mode: 'branch' }) },
-  { id: 'R-12', path: '/projects/:id/issues/new', Screen: () => createElement(NewIssue, { kind: 'issue' }) },
-  { id: 'R-17', path: '/projects/:id/merge-requests/new', Screen: () => createElement(NewIssue, { kind: 'merge' }) },
-  { id: 'R-07', path: '/projects/:id/compare', Screen: Compare },
-  { id: 'A-04', path: '/insights', Screen: Insights },
-  { id: 'A-08', path: '/checklist', Screen: Checklist },
-  { id: 'A-06', path: '/mcp', Screen: Mcp },
-  { id: 'A-05', path: '/projects/:id/law-alerts', Screen: LawAlerts },
-  { id: 'A-07', path: '/projects/:id/handover', Screen: Handover },
-  { id: 'G-06', path: '/notifications', Screen: Notifications },
+  { id: 'R-11', path: '/projects/:id/issues/new', Screen: () => createElement(NewIssue, { kind: 'issue' }) },
+  { id: 'R-16', path: '/projects/:id/merge-requests/new', Screen: () => createElement(NewIssue, { kind: 'merge' }) },
+  { id: 'R-06', path: '/projects/:id/compare', Screen: Compare },
+  { id: 'A-06', path: '/insights', Screen: Insights },
+  { id: 'A-11', path: '/checklist', Screen: Checklist },
+  { id: 'A-07', path: '/mcp', Screen: Mcp },
+  { id: 'A-10', path: '/projects/:id/law-alerts', Screen: LawAlerts },
+  { id: 'A-08', path: '/projects/:id/handover', Screen: Handover },
+  { id: 'G-07', path: '/notifications', Screen: Notifications },
   { id: 'G-11', path: '/settings', Screen: Settings },
-  { id: 'A-03', path: '/collaborate', Screen: Collaborate },
+  { id: 'A-09', path: '/collaborate', Screen: Collaborate },
   { id: 'R-26', path: '/projects/:id/settings', Screen: ProjectSettings },
-  { id: 'R-11', path: '/projects/:id/graph', Screen: RepoGraph },
-  { id: 'G-04', path: '/projects/new', Screen: NewProject },
+  { id: 'R-25', path: '/projects/:id/graph', Screen: RepoGraph },
+  { id: 'G-05', path: '/projects/new', Screen: NewProject },
   { id: 'G-01', path: '/explore', Screen: Explore },
   { id: 'R-19', path: '/projects/:id/jobs', Screen: Jobs },
   { id: 'G-08b', path: '/login/failed', Screen: LoginFailed },

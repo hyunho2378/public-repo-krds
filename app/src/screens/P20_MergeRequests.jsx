@@ -21,10 +21,10 @@ export function MergeRequests() {
   const frame = useProject();
   const [st, setSt] = useState('opened');
   const body = useData(async () => (await gitlab.mergeRequests(frame.id, st)).data, [frame.id, st]);
-  if (!frame.data) return <ProjectFrame screenId="P-20" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-16" data={frame} />;
   const list = body.data;
   return (
-    <ProjectFrame screenId="P-20" tab="" tabLabel={t.P20_title} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-16" tab="" tabLabel={t.P20_title} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
         <RepoSubNav id={frame.id} active="mr" />
         <p className="krds-text-body-medium rb-subtle">{t.P20_help}</p>
@@ -72,10 +72,10 @@ export function MergeRequest() {
       return [];
     }
   }, [frame.id, iid]);
-  if (!frame.data) return <ProjectFrame screenId="P-20" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-17" data={frame} />;
   const m = body.data;
   return (
-    <ProjectFrame screenId="P-20" tab="" tabLabel={t.P20_title} data={frame} state={m ? 'Ideal' : body.state}>
+    <ProjectFrame screenId="R-17" tab="" tabLabel={t.P20_title} data={frame} state={m ? 'Ideal' : body.state}>
       {!m ? <Status {...body} /> : (
         <div className="rb-code-area">
           <RepoSubNav id={frame.id} active="mr" />

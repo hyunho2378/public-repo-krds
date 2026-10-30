@@ -34,10 +34,10 @@ function RefRow({ id, name, commit, badges }) {
 export function Branches() {
   const frame = useProject();
   const body = useData(async () => ({ branches: (await gitlab.branches(frame.id)).data, tags: (await gitlab.tags(frame.id)).data }), [frame.id]);
-  if (!frame.data) return <ProjectFrame screenId="P-18" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-07" data={frame} />;
   const b = body.data;
   return (
-    <ProjectFrame screenId="P-18" tab="" tabLabel={t.RepoSub_branches} data={frame} state={b ? (b.branches.length ? (b.branches.length === 1 && !b.tags.length ? 'Min' : 'Ideal') : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-07" tab="" tabLabel={t.RepoSub_branches} data={frame} state={b ? (b.branches.length ? (b.branches.length === 1 && !b.tags.length ? 'Min' : 'Ideal') : 'Empty') : body.state}>
       <div className="rb-code-area">
         <RepoSubNav id={frame.id} active="branches" />
         {!b ? <Status {...body} /> : (
@@ -71,10 +71,10 @@ export function Branches() {
 export function Releases() {
   const frame = useProject();
   const body = useData(async () => (await gitlab.releases(frame.id)).data, [frame.id]);
-  if (!frame.data) return <ProjectFrame screenId="P-18" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-09" data={frame} />;
   const list = body.data;
   return (
-    <ProjectFrame screenId="P-18" tab="" tabLabel={t.RepoSub_releases} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-09" tab="" tabLabel={t.RepoSub_releases} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
         <RepoSubNav id={frame.id} active="releases" />
         {!list ? <Status {...body} /> : list.length ? (

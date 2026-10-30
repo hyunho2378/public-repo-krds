@@ -84,18 +84,19 @@ const SECTIONS = {
 };
 
 export const SECTION_KEYS = Object.keys(SECTIONS);
+const SECTION_SCREEN = { boards: 'R-13', labels: 'R-14', milestones: 'R-15', pipelines: 'R-18', packages: 'R-20', wiki: 'R-21', snippets: 'R-22', members: 'R-23', activity: 'R-24' };
 
 export default function RepoSections({ section }) {
   const { id } = useParams();
   const conf = SECTIONS[section];
   const frame = useProject();
   const body = useData(async () => (await conf.load(id)).data, [id, section]);
-  if (!frame.data) return <ProjectFrame screenId="P-22" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId={SECTION_SCREEN[section]} data={frame} />;
   const list = Array.isArray(body.data) ? body.data : null;
   const needsLogin = body.state === 'Error' && body.status === 401;
   const state = list ? (list.length ? 'Ideal' : 'Empty') : body.state;
   return (
-    <ProjectFrame screenId="P-22" tab="" tabLabel={conf.title()} data={frame} state={state}>
+    <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state={state}>
       <div className="rb-code-area">
         <div className="rb-detail-head">
           <h2 className="krds-text-heading-medium">

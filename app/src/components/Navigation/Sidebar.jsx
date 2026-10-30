@@ -24,7 +24,7 @@ export function globalGroups() {
     ]],
     [t.Side_make, [
       [t.NewProject_title, '/projects/new', 'plus'],
-      [t.Header_menuPublish, '/publish', 'document-check'],
+      [t.Header_menuPublish, '/projects/new', 'document-check'],
       [t.Checklist_title, '/checklist', 'check_circle'],
       [t.Mcp_title, '/mcp', 'component'],
     ]],
@@ -139,7 +139,6 @@ export function Sidebar({ project, open, onClose }) {
       <nav
         id="rb-sidebar"
         ref={panel}
-        data-figma="sidebar-nav"
         className={'rb-side' + (open ? ' is-open' : '')}
         aria-label={project ? t.Side_labelProject : t.Side_label}
       >
@@ -149,7 +148,7 @@ export function Sidebar({ project, open, onClose }) {
             <span className="rb-ellipsis">{project.name}</span>
           </p>
         ) : null}
-        <div className="rb-side-groups">
+        <div className="rb-side-groups" data-figma="sidebar-nav">
           {groups.map(([group, items], i) => (
             <Group key={group || `g${i}`} group={group} items={items} />
           ))}

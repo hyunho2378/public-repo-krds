@@ -84,11 +84,11 @@ export default function Search() {
   const active = ['field', 'environment'].filter((k) => params.get(k));
 
   return (
-    <Page id="P-02" title={query ? t.fn.searchTitle(query) : t.P02_4} state={result.state}>
+    <Page id="G-02" title={query ? t.fn.searchTitle(query) : t.P02_4} state={result.state}>
       <h1 className="krds-text-heading-xlarge" data-figma="section-title">{query ? t.fn.searchTitle(query) : t.P02_6}</h1>
       <TaskSearch initial={query} keep={params} />
       <div className="rb-two-col">
-        <aside className="rb-side rb-filter-pc" aria-label={t.P02_7}>
+        <aside className="rb-aside-col rb-filter-pc" aria-label={t.P02_7}>
           <h2 className="krds-text-heading-small">{phrase(t.P02_8)}</h2>
           <Filters params={params} toggle={toggle} clear={clear} facets={result.data?.data.facets} />
         </aside>

@@ -72,7 +72,7 @@ export default function Publish() {
   const allPass = check && passed === check.checks.length;
 
   return (
-    <Page id="P-09" title={t.Header_4} state={check ? (allPass ? 'Pass' : 'NeedsWork') : step === 0 && similar ? 'Similar' : 'Ideal'}>
+    <Page id="G-05c" title={t.Header_4} state={check ? (allPass ? 'Pass' : 'NeedsWork') : step === 0 && similar ? 'Similar' : 'Ideal'}>
       <h1 className="krds-text-heading-xlarge" data-figma="section-title">{phrase(t.Header_4)}</h1>
       <p className="rb-subtle">{phrase(t.P09_11)}</p>
       <Steps label={t.P09_12} labels={STEPS} current={step} />

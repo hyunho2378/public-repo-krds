@@ -30,10 +30,10 @@ export function Issues() {
   const frame = useProject();
   const [st, setSt] = useState('opened');
   const body = useData(async () => (await gitlab.issues(frame.id, st)).data, [frame.id, st]);
-  if (!frame.data) return <ProjectFrame screenId="P-19" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-11" data={frame} />;
   const list = body.data;
   return (
-    <ProjectFrame screenId="P-19" tab="/feedback" tabLabel={t.P19_title} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-11" tab="/feedback" tabLabel={t.P19_title} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
         <div className="rb-detail-head">
           <h2 className="krds-text-heading-medium">{t.P19_title}</h2>
@@ -66,10 +66,10 @@ export function Issue() {
   const { iid } = useParams();
   const frame = useProject();
   const body = useData(async () => (await gitlab.issue(frame.id, iid)).data, [frame.id, iid]);
-  if (!frame.data) return <ProjectFrame screenId="P-19" data={frame} />;
+  if (!frame.data) return <ProjectFrame screenId="R-12" data={frame} />;
   const i = body.data;
   return (
-    <ProjectFrame screenId="P-19" tab="/feedback" tabLabel={t.P19_title} data={frame} state={i ? 'Ideal' : body.state}>
+    <ProjectFrame screenId="R-12" tab="/feedback" tabLabel={t.P19_title} data={frame} state={i ? 'Ideal' : body.state}>
       {!i ? <Status {...body} /> : (
         <div className="rb-code-area">
           <Link className="krds-link" to={`/projects/${frame.id}/issues`}>{t.P19_back}</Link>
