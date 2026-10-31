@@ -20,7 +20,7 @@ import { IconButton } from '../components/Action/IconButton';
 import { ago } from './parts/glTime';
 import { Readme } from '../components/Help/Readme';
 import { DiffView } from '../components/Code/DiffView';
-import { day } from './parts/repoCommon';
+import { day, groupByDay } from './parts/repoCommon';
 import '../components/Code/code.css';
 import './parts/glMr.css';
 import './parts/glMrDetail.css';
@@ -255,15 +255,21 @@ export function MergeRequest() {
             </div>
           ) : view === 'commits' ? (
             commits.data?.length ? (
-              <ul className="rb-plain-list">
-                {commits.data.map((c) => (
-                  <li className="rb-plain-row" key={c.id}>
-                    <span className="rb-plain-main rb-ellipsis">{c.title}</span>
-                    <span className="rb-plain-sub rb-subtle">{c.author_name}</span>
-                    <span className="rb-plain-meta rb-subtle">{ago(c.created_at)}</span>
-                  </li>
+              <div className="gl-commits">
+                {groupByDay(commits.data, 'created_at').map((g) => (
+                  <section key={g.day}>
+                    <h3 className="gl-commit-day">{g.day}</h3>
+                    <ul className="gl-commit-box">
+                      {g.items.map((c) => (
+                        <li className="gl-commit-row" key={c.id}>
+                          <div><strong>{c.title}</strong><p className="gl-mr-meta">{au.committedBy(ago(c.created_at), c.author_name)}</p></div>
+                          <code className="gl-chip">{(c.short_id || c.id || '').slice(0, 8)}</code>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
                 ))}
-              </ul>
+              </div>
             ) : <EmptyState title={t.P20_noCommits} />
           ) : view === 'pipelines' ? (
             pipes.data?.length ? (
@@ -274,7 +280,7 @@ export function MergeRequest() {
                   </li>
                 ))}
               </ul>
-            ) : <EmptyState title={mr.noPipelines} />
+            ) : <div className="gl-empty-big"><EmptyArt kind="doc" /><h2>{mr.noRunning}</h2></div>
           ) : (
             changes.data?.length ? <DiffView files={changes.data} /> : <EmptyState title={t.P17_noDiff} />
           )}

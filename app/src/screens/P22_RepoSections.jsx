@@ -322,7 +322,6 @@ export default function RepoSections({ section }) {
     return (
       <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state="Ideal">
         <div className="rb-code-area">
-          <h2 className="gl-page-title">{au.boardTitle}</h2>
           <div className="gl-tabs" data-figma="gl-tabs"><span className="gl-tab active">{list.boards[0]?.name || 'Development'}</span></div>
           <div className="gl-board">
             {[[au.colOpen, list.open], [au.colClosed, list.closed]].map(([name, col]) => (
@@ -341,10 +340,13 @@ export default function RepoSections({ section }) {
     return (
       <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state={empty ? 'Empty' : 'Ideal'}>
         <div className="rb-code-area">
-          <h2 className="gl-page-title">{conf.title()}</h2>
-          {section === 'milestones' ? <div className="gl-tabs" data-figma="gl-tabs"><span className="gl-tab active">{au.tabOpen}</span><span className="gl-tab">{au.tabClosed}</span><span className="gl-tab">{au.tabAll}</span></div> : null}
+          {!empty && section === 'milestones' ? <div className="gl-tabs" data-figma="gl-tabs"><span className="gl-tab active">{au.tabOpen}</span><span className="gl-tab">{au.tabClosed}</span><span className="gl-tab">{au.tabAll}</span></div> : null}
           {empty ? (
-            <div className="gl-empty-big"><EmptyArt kind="doc" /><p>{section === 'milestones' ? au.milestoneEmpty : au.snippetEmpty}</p></div>
+            <div className="gl-empty-big">
+              <EmptyArt kind="doc" />
+              <h2>{section === 'milestones' ? au.milestoneEmpty : au.snippetEmpty}</h2>
+              {section === 'milestones' ? <p>{au.milestoneBody}</p> : null}
+            </div>
           ) : (
             <ul className="rb-plain-list">{list.map((m) => <li className="rb-plain-row" key={m.title}><span className="rb-plain-main">{m.title}</span><span className="rb-plain-meta rb-subtle">{m.dueDate || m.fileName || ''}</span></li>)}</ul>
           )}
