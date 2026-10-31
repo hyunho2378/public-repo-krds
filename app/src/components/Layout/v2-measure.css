@@ -244,3 +244,8 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 }
 /* 검색 결과: 사이드바 없는 셸은 판 왼쪽 8(바깥 여백) */
 #root .rb-shell:not(.has-side):not(.is-drawer):not(.is-bare) { padding: 0 var(--rb-panel-gap) var(--rb-panel-gap); }
+
+/* 20. 탭 줄(gl-tabs) 높이 48 모든 폭(공공 깃랩 50 → KRDS 탭 48), 묶음 상자 머리 40(공공 깃랩 branches header 40, 안쪽 8 0) — Figma 대조 2026. 10. 31. */
+#root .gl-tabs .gl-tab, #root .gl-tabs > button, #root .gl-tabs > a { min-height: var(--krds-number-16); height: var(--krds-number-16); }
+#root .gl-box-head { min-height: var(--krds-number-14); height: var(--krds-number-14); padding-block: 0; box-sizing: border-box; }
+#root .gl-box-title { display: flex; align-items: center; min-height: var(--krds-number-14); padding-block: 0; box-sizing: border-box; }
