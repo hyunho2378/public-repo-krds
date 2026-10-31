@@ -119,3 +119,4 @@
 - 화면을 고치면 개발 서버에서 `npm run measure:full`(playwright) 또는 Aside 탭에서 app/scripts/export-code-boxes.js로 code_plan/measured_full.json을 다시 만들고 `npm run check:parity`를 돌린다. 결과는 UX/audit_v3/parity_ledger.md(화면별 분류별 건수, 세부)와 audits/parity_ledger.json
 - 해소 규칙과 허용 목록: 원장 0절, code_plan/parity_allow.json(근거 필수). 이름표 규칙: UX/audit_v3/parity_names.md
 - 측정 창 높이는 Figma 변형 프레임 높이(최대 1400), 판 안 스크롤바는 숨기고 잰다. Signed-in은 개발 서버 ?auth=Signed-in 스위치
+- [C2] 원장 대조 R-16(MR 목록): 1920 Guest 23건에서 18건, 1440 Guest 24건에서 19건(gl-tabs 높이, 간격, 선색, gl-filter 면, 안쪽, 시계 아이콘). 남은 R-16: page-head(실제에 제목 줄 없음, Figma 쪽), gl-tabs 문구 '열림' 대 실제 '열기', gl-filter 높이 +8(KRDS small 단추 40). 다음: R-11, R-23, R-10, R-12~15, R-17~24, R-26
