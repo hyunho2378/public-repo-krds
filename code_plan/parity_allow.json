@@ -148,6 +148,20 @@
    "name": "main",
    "kind": "shape",
    "reason": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "main",
+   "kind": "icon",
+   "reason": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "content-panel",
+   "kind": "icon",
+   "reason": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
   }
  ]
 }

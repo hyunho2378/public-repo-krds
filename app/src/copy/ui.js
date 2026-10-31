@@ -20,6 +20,8 @@ export const u = {
   More_menu: "더보기",
   Hdr_signup: "등록",
   Hdr_menu: "메뉴",
+  Hdr_myIssues: "내 작업 항목(새 창)",
+  Hdr_myMrs: "내 머지 리퀘스트(새 창)",
   Hdr_settings: "화면 설정",
   Alert_note: "참고",
   Alert_tip: "팁",

@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { t } from '../../copy/ko';
 import { u } from '../../copy/ui';
 import { Icon } from '../Code/Icon';
+import { newWindow } from '../Layout/newWindow';
 import { ScreenModeItems, useScreenMode } from './ScreenMode';
 import { Menu } from '../Navigation/Menu';
 import { Logo } from './Logo';
@@ -140,7 +141,7 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true, drawer = false,
       <div className="rb-gbar-in">
         <div className="rb-gbar-left">
           {hasNav ? (
-            <button type="button" className="rb-gbar-icon rb-gbar-navtoggle" aria-label={t.GlobalBar_navToggle} title={t.GlobalBar_navToggle} aria-expanded={navOpen} aria-controls="rb-sidebar" onClick={onToggleNav}><Icon name="menu" /></button>
+            <button type="button" className="rb-gbar-icon rb-gbar-navtoggle" aria-label={t.GlobalBar_navToggle} title={t.GlobalBar_navToggle} aria-expanded={navOpen} aria-controls="rb-sidebar" onClick={onToggleNav}><Icon name="panel_open" /></button>
           ) : null}
           {/* D-21: 사이드바를 접으면 상단 바 맨 왼쪽에 펼침 단추(공공 깃랩 방식) */}
           {sideHidden ? (
@@ -156,14 +157,16 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true, drawer = false,
         <div className="rb-gbar-right">
           {signedIn ? (
             <>
-              <IconButton to="/notifications" icon="bell" label={t.TabBar_alerts} size="medium" title={t.TabBar_alerts} />
-              <IconButton to="/projects/new" icon="plus" label={t.GlobalBar_create} size="medium" title={t.GlobalBar_create} />
+              {/* 공공 깃랩 로그인 상단 바 순서: 만들기, 작업 항목, 머지 리퀘스트, 알림(할 일), 계정 */}
+              <Link className="rb-gbar-icon" to="/projects/new" aria-label={t.GlobalBar_create} title={t.GlobalBar_create}><Icon name="plus" /></Link>
+              <a className="rb-gbar-icon" href="https://gitlab.aigov.go.kr/dashboard/issues" {...newWindow(u.Hdr_myIssues)} title={u.Hdr_myIssues}><Icon name="ext/issues" /></a>
+              <a className="rb-gbar-icon" href="https://gitlab.aigov.go.kr/dashboard/merge_requests" {...newWindow(u.Hdr_myMrs)} title={u.Hdr_myMrs}><Icon name="ext/merge-request" /></a>
+              <Link className="rb-gbar-icon" to="/notifications" aria-label={t.TabBar_alerts} title={t.TabBar_alerts}><Icon name="bell" /></Link>
               <AccountMenu mode={mode} setMode={setMode} />
             </>
           ) : (
             <>
-              {/* 화면 설정은 KRDS 머리글 도구(화면 크기)라 남긴다. 1024 미만은 '메뉴' 하나로 접는다 */}
-              <ScreenModeMenu mode={mode} setMode={setMode} />
+              {/* 화면 설정 톱니는 공공 깃랩과 Figma 모두 없어 뺀다(대조 원장). 화면 설정은 '메뉴'(1024 미만), 계정 메뉴, /settings에 있다 */}
               {/* 공공 깃랩 순서와 역할: 등록(밝은 회색 채움), 로그인(어두운 회색 채움), 높이 32(audit_v3 G-03) */}
               <Link className="rb-gbar-cta is-signup" to="/register">{u.Hdr_signup}</Link>
               <Link className="rb-gbar-cta is-login" to={loginTo}>{t.Header_login}</Link>

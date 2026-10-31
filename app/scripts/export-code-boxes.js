@@ -27,7 +27,11 @@
   for (const e of els) {
     const key = keyOf.get(e); const b = e.getBoundingClientRect(); const c = getComputedStyle(e);
     const dy = panelScroll && panelScroll.contains(e) && e !== panelScroll ? panelScroll.scrollTop : scrollY;
-    const t = (e.innerText || '').replace(/\s+/g, ' ').trim();
+    // 글: 화면 낭독 전용(.sr-only)은 뺀다(Figma에 없는 보이지 않는 글)
+    const clone = e.cloneNode(true); clone.querySelectorAll('.sr-only, [aria-hidden="true"] .sr-only').forEach((x) => x.remove());
+    const srs = [...e.querySelectorAll('.sr-only')].map((x) => (x.innerText || x.textContent || '').trim()).filter(Boolean);
+    let t = (e.innerText || '').replace(/\s+/g, ' ').trim(); for (const x of srs) t = t.replace(x.replace(/\s+/g, ' '), ' ');
+    t = t.replace(/\s+/g, ' ').trim();
     const textEl = [e, ...e.querySelectorAll('*')].find((k) => [...k.childNodes].some((x) => x.nodeType === 3 && x.textContent.trim())) || e;
     const tc = getComputedStyle(textEl);
     const bw = px(c.borderTopWidth) || px(c.borderBottomWidth) || px(c.borderLeftWidth);
@@ -41,7 +45,7 @@
       border: bw || 0, borderColor: bcol, borderTok: tok(bcol), radius: px(c.borderTopLeftRadius),
       pad: [px(c.paddingTop), px(c.paddingRight), px(c.paddingBottom), px(c.paddingLeft)], gap: [px(c.rowGap), px(c.columnGap)],
       icons: [...e.querySelectorAll('[data-icon]')].filter(shown).slice(0, 20).map((i) => (i.tagName === 'IMG' ? 'file/' : '') + i.getAttribute('data-icon')),
-      kids,
+      kids, nchild: e.children.length,
     };
   }
   return { screen: document.querySelector('[data-screen-id]')?.getAttribute('data-screen-id') || null, url: location.pathname + location.search, frame: { w: innerWidth, h: Math.max(document.documentElement.scrollHeight, panelScroll ? panelScroll.scrollHeight + (panelScroll.getBoundingClientRect().top) : 0) }, elements: out, order };

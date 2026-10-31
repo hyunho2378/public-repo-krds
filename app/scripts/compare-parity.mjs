@@ -19,6 +19,8 @@ const TOL = 1;
 const W = { Thin: 100, Light: 300, Regular: 400, Medium: 500, SemiBold: 600, 'Semi Bold': 600, Bold: 700, ExtraBold: 800 };
 const DEF = { Drawer: 'Closed', Sidebar: 'Expanded', Info: 'Short', Dialog: 'Closed', Kind: 'NotFound', State: 'List', Panel: 'Closed' };
 const norm = (s) => String(s || '').replace(/\s+/g, ' ').trim();
+// 경로 줄 구분자('/', '>')는 코드에서 CSS로 그려 글에 없으므로 문구 비교에서 뺀다
+const normCrumb = (s) => norm(String(s || '').replace(/\s[/>›]\s/g, ' '));
 const hex6 = (h) => (h ? String(h).toLowerCase().slice(0, 7) : null);
 const iconName = (s) => String(s).replace(/^icon(-ext)?\//, '').replace(/^ext\//, '').replace(/^file\//, 'file:').replace(/[_\s]/g, '-').toLowerCase();
 const allowed = (screen, bp, name, kind, field, fy) => allow.find((r) => (r.screen === '*' || r.screen === screen) && (r.bp === '*' || String(r.bp) === String(bp)) && (r.name === '*' || r.name === name.replace(/#\d+$/, '')) && r.kind === kind && (!r.field || r.field === field) && (r.minY == null || (fy ?? 0) >= r.minY));
@@ -47,8 +49,8 @@ function cmp(screen, bp, auth, fv, cv) {
     const ce = cEls[k];
     if (!ce) { add('only-figma', k, { want: fe.box }); continue; }
     for (const f of ['x', 'y', 'w', 'h']) { const d = Math.round(ce[f] - fe.box[f]); if (Math.abs(d) > TOL) add('box', k, { field: f, figma: fe.box[f], code: ce[f], diff: d }, fe.box.y); }
-    const ftexts = (fe.type === 'TEXT' ? [fe] : fe.texts || []).map((t) => norm(t.text)).filter(Boolean);
-    const ctext = norm(ce.text);
+    const ftexts = (fe.type === 'TEXT' ? [fe] : fe.texts || []).map((t) => normCrumb(t.text)).filter(Boolean);
+    const ctext = normCrumb(ce.text);
     const missing = ftexts.filter((t) => !ctext.includes(t.replace(/…$/, '')));
     if (missing.length && ce.textLen <= 200) add('text', k, { figma: missing.slice(0, 4), code: ctext.slice(0, 120) });
     // 글자 속성과 글자색은 글자 하나짜리 요소(TEXT 또는 글자 1개를 가진 틀)에서만 비교(큰 틀의 '첫 글자'는 뜻이 없다)
@@ -66,7 +68,7 @@ function cmp(screen, bp, auth, fv, cv) {
     const fs_ = hex6(fe.stroke?.hex); if (fs_ && ce.border && fs_ !== hex6(ce.borderColor)) add('color', k, { field: 'stroke', figma: `${fs_} ${fe.stroke.var || ''}`, code: `${ce.borderColor} ${ce.borderTok || ''}` });
     const fr = Array.isArray(fe.radius) ? fe.radius[0] : fe.radius; if (fr != null && Math.abs(fr - ce.radius) > TOL) add('shape', k, { detail: `모서리 ${fr}→${ce.radius}` });
     if (Array.isArray(fe.padding) && fe.padding.some((v, i) => Math.abs(v - ce.pad[i]) > TOL)) add('shape', k, { detail: `안쪽 ${fe.padding.join(' ')}→${ce.pad.join(' ')}` });
-    if (fe.gap != null && fe.layout && fe.layout !== 'NONE') { const cg = fe.layout === 'HORIZONTAL' ? ce.gap[1] : ce.gap[0]; if (Math.abs(fe.gap - cg) > TOL) add('shape', k, { detail: `간격 ${fe.gap}→${cg}` }); }
+    if (fe.gap != null && fe.layout && fe.layout !== 'NONE' && (ce.nchild ?? 2) >= 2) { const cg = fe.layout === 'HORIZONTAL' ? ce.gap[1] : ce.gap[0]; if (Math.abs(fe.gap - cg) > TOL) add('shape', k, { detail: `간격 ${fe.gap}→${cg}` }); }
     const fi = [...new Set((fe.icons || []).map(iconName))].sort(); const ci = [...new Set((ce.icons || []).map(iconName))].sort();
     if (fi.length && fi.join() !== ci.join()) add('icon', k, { figma: fi, code: ci });
   }
@@ -94,6 +96,11 @@ for (const [key, fv] of Object.entries(base).sort()) {
   result.screens[key] = { owner: owner(screen), counts, allowed: rows.filter((r) => r.allowed).length, rows };
 }
 await fs.mkdir(path.join(ROOT, 'audits'), { recursive: true });
+// --screen/--bp로 일부만 돌리면 기존 원장에 그 부분만 바꿔 넣는다(다른 작업자 화면 결과를 지우지 않게)
+if (onlyScreen || onlyBp) {
+  const prev = await fs.readFile(path.join(ROOT, 'audits', 'parity_ledger.json'), 'utf8').then(JSON.parse).catch(() => null);
+  if (prev?.screens) { for (const [k, v] of Object.entries(result.screens)) prev.screens[k] = v; result.screens = Object.fromEntries(Object.entries(prev.screens).sort()); }
+}
 await fs.writeFile(path.join(ROOT, 'audits', 'parity_ledger.json'), JSON.stringify(result, null, 1));
 // 원장(md): 0절 해소 규칙, 1절 화면별 건수 표, 2절 화면별 세부(허용 아님만)
 const L = [];
