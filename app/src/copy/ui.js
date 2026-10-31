@@ -9,6 +9,9 @@ export const u = {
   Login_noticeTitle: "공지",
   Login_noticeLink: "등록 안내",
   Login_service: "공공 GitLab 저장소",
+  // 로그인 공지(Figma G-08 구조, 문구는 공공 깃랩 로그인 공지 원문. 2026. 10. 31. 19:50 실제 화면에 남아 있음 확인). 공지가 없어지면 빈 배열로
+  Login_noticeHead: "공지",
+  Login_notice: ["[공지] 공공 GitLab 시스템 점검 안내", "2026. 10. 30.(금) 22:00 ~ 10. 31.(토) 04:00 (6시간)", "점검 중 로그인 불가", "계정 등록: 기관 이메일로 등록"],
   Login_needAuth: "로그인하거나 등록한 뒤 계속",
   Login_links: "바로가기",
   Dock_close: "닫기",

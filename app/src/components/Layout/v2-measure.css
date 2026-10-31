@@ -95,7 +95,7 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 }
 
 /* 10. 제목 세 단계(D-16 개정): 화면 h1은 --layout-title-page, 프로젝트 이름은 --layout-title-project. 문서 읽기 영역(README 등 .rb-md-h1)은 제외 */
-#root .rb-main h1:not(.rb-repo-name):not(.sr-only):not(.rb-md-h1):not(.rb-login2-title) { font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--krds-font-weight-bold); }
+#root .rb-main h1:not(.rb-repo-name):not(.sr-only):not(.rb-md-h1):not(.rb-login2-title):not(.rb-login3-title) { font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--krds-font-weight-bold); }
 #root .rb-repo-name { font-size: var(--layout-title-project); line-height: var(--layout-title-project-lh); }
 
 /* 11. 상단 바(공공 깃랩 실측 1440): 검색 단추 폭 24vw(240~440) 높이 32 모서리 12, 등록 = 밝은 회색 채움(220 → gray-10), 로그인 = 어두운 회색 채움(rgba(137,136,141,.4) 위 합성 55 → gray-80) */
@@ -240,7 +240,7 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
   #root .rb-shell.is-drawer .rb-side-link, #root .rb-shell.is-drawer .rb-side-group-btn { min-height: var(--krds-number-15); height: auto; }
 }
 @media (max-width: 767px) {
-  #root .rb-main h1:not(.rb-repo-name):not(.sr-only):not(.rb-md-h1):not(.rb-login2-title), #root .rb-repo-name { font-size: var(--layout-title-page-sm); line-height: var(--layout-title-page-sm-lh); }
+  #root .rb-main h1:not(.rb-repo-name):not(.sr-only):not(.rb-md-h1):not(.rb-login2-title):not(.rb-login3-title), #root .rb-repo-name { font-size: var(--layout-title-page-sm); line-height: var(--layout-title-page-sm-lh); }
 }
 /* 검색 결과: 사이드바 없는 셸은 판 왼쪽 8(바깥 여백) */
 #root .rb-shell:not(.has-side):not(.is-drawer):not(.is-bare) { padding: 0 var(--rb-panel-gap) var(--rb-panel-gap); }
@@ -249,3 +249,29 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .gl-tabs .gl-tab, #root .gl-tabs > button, #root .gl-tabs > a { min-height: var(--krds-number-16); height: var(--krds-number-16); }
 #root .gl-box-head { min-height: var(--krds-number-14); height: var(--krds-number-14); padding-block: 0; box-sizing: border-box; }
 #root .gl-box-title { display: flex; align-items: center; min-height: var(--krds-number-14); padding-block: 0; box-sizing: border-box; }
+
+/* 21. 로그인(Figma G-08, D-12): 두 열(왼쪽 공지 400 = 내용 360 + 세로선 앞 40, 오른쪽 카드 440 = 세로선 뒤 40 + 폼 400). 두 열은 같은 높이, 왼쪽 내용은 위아래 가운데.
+   세로선은 두 영역을 나누는 구분선(D-15 장식 테두리가 아니라 내용 구획선, Figma에 있음). 판은 화면 높이를 채우고 2열 묶음은 띠와 바닥글 사이 가운데 */
+#root .rb-shell.is-bare > .rb-panel { display: flex; flex-direction: column; }
+#root .rb-shell.is-bare > .rb-panel > .rb-panel-in { flex: 1; justify-content: center; }
+.rb-login3 { display: grid; grid-template-columns: var(--layout-login-col) calc(var(--layout-login-col) + var(--krds-number-10)); justify-content: center; align-items: stretch; padding-block: var(--krds-number-10); }
+.rb-login3-side { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--krds-number-10); padding-inline-end: var(--krds-number-14); border-inline-end: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
+.rb-login3-side > .rb-mois-logo { width: var(--rb-login-mark-w); height: auto; color: var(--krds-color-text-basic); }
+.rb-login3-notice { align-self: stretch; display: flex; flex-direction: column; gap: var(--krds-number-3); padding-inline-start: var(--krds-number-5); }
+.rb-login3-notice p, .rb-login3-notice h2 { margin: 0; }
+.rb-login3-notice-head { font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--krds-font-weight-bold); }
+.rb-login3-notice-title { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); }
+.rb-login3-notice p:not(.rb-login3-notice-title) { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.rb-login3-notice .rb-login3-notice-date { font-size: var(--rb-step-13); line-height: var(--rb-lh-13); color: var(--krds-color-text-subtle); }
+.rb-login3-main { display: flex; flex-direction: column; gap: var(--krds-number-5); padding-inline-start: var(--krds-number-14); }
+#root .rb-login3-title { margin: 0; font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--krds-font-weight-bold); }
+.rb-login3 .rb-login-submit { width: 100%; justify-content: center; }
+/* 필수 표시: KRDS 오류 글자색 토큰 */
+.rb-required.is-req { color: var(--krds-color-text-danger); }
+/* 판 아래 전체 폭 바닥글(Figma G-08): 면 gray-90 */
+#root .rb-shell.is-bare > .rb-panel > #krds-footer { background: var(--layout-raised-bg); border-top: 0; padding-inline: var(--rb-panel-pad-x); }
+@media (max-width: 1023px) {
+  .rb-login3 { grid-template-columns: minmax(0, var(--rb-login-form-w)); row-gap: var(--krds-number-10); }
+  .rb-login3-side { padding-inline-end: 0; border-inline-end: 0; padding-bottom: var(--krds-number-10); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
+  .rb-login3-main { padding-inline-start: 0; }
+}

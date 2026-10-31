@@ -98,7 +98,8 @@
   --rb-login-notice-w: calc(var(--krds-number-21) * 3 + var(--krds-number-19));
   /* 로그인: 2열 묶음 최소 높이 = 화면 - 머리글 - 바닥글(내용 약 145) - 위아래 여백. 행정안전부 로고 폭 120 */
   --rb-login-min-h: calc(100dvh - var(--rb-header-h) - var(--krds-number-18) * 3);
-  --rb-login-mark-w: calc(var(--krds-number-9) * 6);
+  /* Figma G-08: 왼쪽 열 행정안전부 로고 폭 160(공공 깃랩 46 캡처와 Figma 1440 대조) */
+  --rb-login-mark-w: calc(var(--krds-number-20) * 2);
   --rb-login-form-w: calc(var(--krds-number-21) * 4 + var(--krds-number-8));
   /* D-21: 본문 판 안 컨테이너 최대 1280 가운데(D-18의 960 읽기 폭, 도킹 360, 탭 줄 48은 폐기). 판 모서리 8, 판 바깥 여백 8 */
   --rb-panel-radius: var(--layout-panel-radius);

@@ -8,7 +8,7 @@ export function FormField({ id, label, required = false, hint, error, multiline 
     <div className="form-group">
       <div className="form-tit">
         <label htmlFor={id}>
-          {label} <span className="rb-required">{required ? t.req : t.opt}</span>
+          {label} <span className={'rb-required' + (required ? ' is-req' : '')}>{required ? t.req : t.opt}</span>
         </label>
       </div>
       <div className={'form-conts' + (error ? ' is-error' : '')}>

@@ -175,6 +175,8 @@ function Shell() {
             {/* D-21 7장: 바닥글은 본문과 같은 컨테이너 안, 판 맨 아래 */}
             {bare ? null : <Footer />}
           </div>
+          {/* Figma G-08: 로그인처럼 혼자 서는 화면은 바닥글을 판 아래 전체 폭 띠로 둔다(D-20) */}
+          {bare ? <Footer /> : null}
         </div>
       </div>
       {keys ? <ShortcutsDialog onClose={() => setKeys(false)} /> : null}
