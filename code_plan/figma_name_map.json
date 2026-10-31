@@ -3061,5 +3061,10 @@
   "code": "app/src/krds/layout.tokens.css --layout-*"
  },
  "structure": "D-21 공공 깃랩 구조: system_band + gitlab_topbar + Body[gitlab_sidebar(Scope/State/Current) + Content panel[Breadcrumb, Main content(최대 1200 가운데), footer]]",
- "codeNote": "screens[].code: 코드 대조 경로(개발 서버 http://127.0.0.1:5731 + path + query). 측정은 app/scripts/export-code-boxes.js, 대조는 app/scripts/compare-parity.mjs(UX/audit_v3/parity_ledger.md)"
+ "codeNote": "screens[].code: 코드 대조 경로(개발 서버 http://127.0.0.1:5731 + path + query). 측정은 app/scripts/export-code-boxes.js, 대조는 app/scripts/compare-parity.mjs(UX/audit_v3/parity_ledger.md)",
+ "prototypeLinks": {
+  "count": 833,
+  "since": "2026-10-31 Figma 33차",
+  "note": "823 + A-01 본문 교체로 생긴 explore_row 마우스 올림 상태 10(화면 이동 연결 아님). 사용자 확인으로 기준 갱신"
+ }
 }

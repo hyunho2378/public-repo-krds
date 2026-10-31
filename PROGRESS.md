@@ -194,3 +194,19 @@
   - 100 10 {'D21': 20, 'C1': 30, 'C2': 50} ('box', 'gl-filter', 'y') G-01_1024_Guest {'field': 'y', 'figma': 217, 'code': 220, 'diff': 3}
   - 96 48 {'D21': 42, 'C1': 24, 'C2': 30} ('icon', 'topbar') A-02_1024_Guest {'figma': ['search'], 'code': ['panel-open', 'search']}
   - 90 9 {'D21': 30, 'C2': 20, 'C1': 40} ('text', 'breadcrumb') A-03_1024_Guest {'figma': ['서울특별시 광진구 류승인 kordoc 설정 �
+
+## Figma 대조(2026. 10. 31. 22:50, D21): 합 3,529(허용 뺀 값), 새 허용 0건, 연결 기준 833(figma_name_map prototypeLinks, 원장 0절 4-2)
+- 위치/크기 1,487, 문구 380, 글자 75, 색 57, 모서리·간격 315, 아이콘 425, Figma에만 466, 코드에만 308, 순서 16 / D21 2,288 · C1 627 · C2 614
+- 실측(실제 사이트 10. 31. 22:40): 프로젝트 세로 바 기본 = 고정됨만 펼침(멤버~파이프라인 5), '추가 기능'은 펼침 없는 한 줄, 묶음 8 접힘, 피치 30. 탐색 행 = 안쪽 12 16, 아래 선 1, 행 사이 0, 아이콘→아바타→글 사이 8(코드 8 맞음, Figma 12 틀림), 높이는 내용 따라(57/77/105)
+- 경로 줄 판정: 실제 화면은 실제 경로(R-10 기여자 분석, R-20 패키지 레지스트리, R-27 리포지토리 / 새 파일, R-29 브랜치 / 새 브랜치 → 코드가 고침: C1 R-27·29, C2 R-10·20), 덧붙임은 Figma(A-03·A-10 코드 고침 완료, R-28 C1). R-25는 Figma가 '리포지토리 분석'(캡처 30) 화면인데 코드 측정 경로가 /graph(리포지토리 그래프, 캡처 22) → name_map R-25 경로 확인 필요(C1)
+- 남은 원인 상위 10
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('box', 'sidebar-nav', 'h') A-02_1440_Guest {'field': 'h', 'figma': 565, 'code': 656, 'diff': 91}
+  - 140 3 {'D21': 140} ('box', 'project-row', 'h') A-01_1024_Guest {'field': 'h', 'figma': 49, 'code': 69, 'diff': 20}
+  - 140 3 {'D21': 140} ('shape', 'project-row', '간격 #→#') A-01_1024_Guest {'detail': '간격 12→8'}
+  - 120 1 {'D21': 120} ('only-code', 'project-row') G-01_1024_Guest {}
+  - 112 3 {'D21': 112} ('icon', 'project-row') A-01_1024_Guest {'figma': ['ellipsis-vertical', 'fork', 'globe', 'issues', 'merge-request', 'star
+  - 100 10 {'D21': 20, 'C1': 30, 'C2': 50} ('box', 'gl-filter', 'y') G-01_1024_Guest {'field': 'y', 'figma': 217, 'code': 220, 'diff': 3}
+  - 75 3 {'D21': 75} ('only-figma', 'project-row') A-01_1024_Guest {'want': {'x': 40, 'y': 843, 'w': 944, 'h': 123}}
+  - 72 26 {'D21': 46, 'C1': 22, 'C2': 4} ('box', 'page-head', 'h') A-03_360_Guest {'field': 'h', 'figma': 40, 'code': 32, 'diff': -8}
+  - 60 15 {'D21': 56, 'C1': 4} ('icon', 'gitlab-sidebar') A-05_1440_Guest {'figma': ['analytics', 'attach', 'bookmarks', 'component', 'document'
+  - 60 15 {'D21': 56, 'C1': 4} ('icon', 'sidebar-nav') A-05_1440_Guest {'figma': ['analytics', 'attach', 'bookmarks', 'component', 'document', '
