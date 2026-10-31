@@ -229,7 +229,7 @@ export default function Code() {
 
   return (
     <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? g.repoLabel : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} stats={{ commits: commitInfo.data?.count ?? b?.count ?? 0, more: commitInfo.data?.count != null ? false : b?.more }} wide={!!path} hideCrumbs={!!path} title={isHome} info={isHome}>
-      {path ? <h1 className="sr-only">{path.split('/').pop()}</h1> : null}
+      {path ? <p role="heading" aria-level={1} className="sr-only">{path.split('/').pop()}</p> : null}
       <div className={`rb-code-wrap${path && treeOpen && treeWide ? ' has-tree' : ''}`}>
         {path && treeOpen && treeWide ? (
           <div className="gl-treewrap">
@@ -238,7 +238,7 @@ export default function Code() {
           </div>
         ) : null}
         <div className="rb-code-area">
-          <div className="rb-toolbar" data-figma="toolbar">
+          <div className="rb-toolbar" data-figma={isHome ? 'toolbar' : undefined}>
             <div className="rb-toolbar-left">
               {path && treeWide && !treeOpen ? <GlIconButton icon="panel_open" label={g.treeShow} size="medium" title={`${g.treeShow} (Shift+F)`} aria-keyshortcuts="Shift+F" onClick={() => setTreeOpen(true)} /> : null}
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />

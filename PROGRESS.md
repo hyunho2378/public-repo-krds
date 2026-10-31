@@ -127,3 +127,5 @@
 - 다음 차례(D21): 360 global-search x/h(240·42 대 248·44), A 화면 page-head·tabs 이름표와 구조(A-03~A-11), 검색 행(project-row 80 높이, 간격 8), G-01 page-head 코드에만(Figma 이름표 없음 확인), 로그인 G-08 login-field y +9(1024), gl-filter 아이콘 이름 대응(history↔time, sort-desc↔arrow-sort-both)
 - 대기: Figma(상단 바 texts, 768/360 panel-open, sidebar-nav 이름표, global-search 344, A-01 경로), C1·C2 화면 항목(원장 2절)
 - 측정은 개발 서버 + Figma 프레임 높이, Signed-in은 개발 서버만(원장 0-2)
+
+- [C1] 원장 대조 전/후(허용 뺀 합, 5폭 x 2 auth): R-02 223→135, R-03 155→121, R-04 255→145, R-05 163→94, R-06 142→77, R-07 255→103, R-08 197→116, R-09 139→72, R-27 130→87, R-28 122→68, R-29 125→71 (전역 틀 변경 포함 값이라 내 변경분만의 효과는 아님). 이번: diff-file/diff-area/page-head 이름표 위치 정정, R-03 경로 README.md, R-05 경로 전체 해시, 파일 보기 toolbar는 홈에서만, 숨은 제목은 role=heading. 허용 목록(parity_allow.json)은 추가하지 않음. 남은 것: R-05 측정은 fixture에 커밋 상세 추가 필요(코드 작업자 요청함), Figma 쪽 요청 6건 전달(R-04 gl-filter 32 한 상자, R-07 section-title 안쪽, R-03 commit-bar 점 세 개), commit-bar y +7/h +6, R-02 file-table h(Figma 926 대 코드 1841, 표 길이 차이).

@@ -84,7 +84,7 @@ function FileBlock({ file, index, mode, open, onToggle, id, refName, webUrl }) {
   const st = useMemo(() => diffStat([file]), [file]);
   const name = nameOf(file);
   return (
-    <section className="gl-file" id={`file-${index}`} aria-label={name} data-figma={index === 0 ? 'diff-file' : undefined}>
+    <section className="gl-file" id={`file-${index}`} aria-label={name} data-figma="diff-file">
       <header className="gl-file-head">
         <button type="button" className={'gl-fold' + (open ? ' is-open' : '')} aria-expanded={open} aria-label={open ? g.hideFile : g.showFile} onClick={onToggle}>
           <Icon name="arrow-down" />
@@ -105,7 +105,7 @@ function FileBlock({ file, index, mode, open, onToggle, id, refName, webUrl }) {
         </span>
       </header>
       {open && file.diff ? (
-        <div className="gl-code-scroll rb-table-scroll" tabIndex={0} aria-label={name} data-figma={index === 0 ? 'diff-area' : undefined}>
+        <div className="gl-code-scroll rb-table-scroll" tabIndex={0} aria-label={name}>
           <table className="gl-diff-table">
             <tbody>
               {moreAbove ? <tr className="is-hunk"><td colSpan={mode === 'parallel' ? 4 : 3}><button type="button" className="gl-expand" aria-label={g.showAbove} title={g.showAbove} onClick={() => expand('up')}><Icon name="upload" /></button></td></tr> : null}
@@ -205,7 +205,7 @@ export function GlDiff({ files, id, refName, webUrl }) {
           <IconButton icon="ext/code" label={g.parallel} size="small" aria-pressed={mode === 'parallel'} className={mode === 'parallel' ? 'is-on' : ''} onClick={() => setMode('parallel')} />
         </div>
       </div>
-      <div className={'gl-diff-main' + (panel ? ' has-panel' : '')}>
+      <div className={'gl-diff-main' + (panel ? ' has-panel' : '')} data-figma="diff-area">
         {panel ? (
           <aside className="gl-panel" aria-label={g.files}>
             <div className="gl-panel-head">

@@ -171,7 +171,7 @@
    "figmaSet": "R-03 File view",
    "oldName": "R-03 파일 보기",
    "nodeId": "11067:994407",
-   "route": "/projects/150/code/src/shared/numbering.ts",
+   "route": "/projects/150/code/README.md",
    "figmaBoxes": [
     "R-03_1920_Guest.json",
     "R-03_1920_Signed-in.json",
@@ -190,7 +190,7 @@
     "Project/리포지토리"
    ],
    "code": {
-    "path": "/projects/150/code/src/shared/numbering.ts",
+    "path": "/projects/150/code/README.md",
     "query": {
      "fixture": "kordoc"
     },
@@ -262,7 +262,7 @@
    "figmaSet": "R-05 Commit detail",
    "oldName": "R-05 커밋 상세",
    "nodeId": "11067:1013693",
-   "route": "/projects/150/changes/03f9484e",
+   "route": "/projects/150/changes/03f9484ed200a2b3e8ba824de7d0b651ef7bd528",
    "figmaBoxes": [
     "R-05_1920_Guest.json",
     "R-05_1920_Signed-in.json",
@@ -280,7 +280,7 @@
     "Project/커밋"
    ],
    "code": {
-    "path": "/projects/150/changes/03f9484e",
+    "path": "/projects/150/changes/03f9484ed200a2b3e8ba824de7d0b651ef7bd528",
     "query": {
      "fixture": "kordoc"
     },
