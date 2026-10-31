@@ -45,5 +45,6 @@
 
 .gl-mr-titlerow { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--krds-gap-5); }
 
-.gl-mr-titlerow { min-height: var(--krds-number-16); padding-bottom: var(--krds-gap-5); box-sizing: content-box; }
-.gl-tabs-gap { gap: var(--krds-gap-3); }
+.gl-mr-titlerow { box-sizing: border-box; min-height: var(--krds-number-16); padding-bottom: var(--krds-gap-3); }
+.gl-tabs.gl-tabs-gap { gap: var(--krds-gap-2); }
+.gl-code-btn { height: var(--layout-filter-control-h); min-height: var(--layout-filter-control-h); padding: 0 var(--krds-gap-3); border-radius: var(--krds-gap-2); gap: var(--krds-gap-2); display: inline-flex; align-items: center; }

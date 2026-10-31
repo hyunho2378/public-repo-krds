@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T14:48:50.548Z",
+ "generated": "2026-10-31T14:49:30.724Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
@@ -67387,11 +67387,11 @@
   "R-17_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 6,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 5,
+    "shape": 4,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -67473,8 +67473,8 @@
      "name": "main",
      "field": "h",
      "figma": 1021,
-     "code": 911,
-     "diff": -110,
+     "code": 895,
+     "diff": -126,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -67499,21 +67499,6 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 48,
-     "code": 64,
-     "diff": 16,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 16 0",
-     "allowed": null
-    },
-    {
      "kind": "shape",
      "name": "page-head",
      "detail": "간격 8→16",
@@ -67524,8 +67509,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 221,
-     "code": 246,
-     "diff": 25,
+     "code": 230,
+     "diff": 9,
      "allowed": null
     },
     {
@@ -67592,11 +67577,11 @@
   "R-17_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 6,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 5,
+    "shape": 4,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -67678,8 +67663,8 @@
      "name": "main",
      "field": "h",
      "figma": 1127,
-     "code": 911,
-     "diff": -216,
+     "code": 895,
+     "diff": -232,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -67713,21 +67698,6 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 48,
-     "code": 64,
-     "diff": 16,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 16 0",
-     "allowed": null
-    },
-    {
      "kind": "shape",
      "name": "page-head",
      "detail": "간격 8→16",
@@ -67738,8 +67708,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 221,
-     "code": 246,
-     "diff": 25,
+     "code": 230,
+     "diff": 9,
      "allowed": null
     },
     {
@@ -67806,11 +67776,11 @@
   "R-17_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 6,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 5,
+    "shape": 4,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -67877,8 +67847,8 @@
      "name": "main",
      "field": "h",
      "figma": 991,
-     "code": 867,
-     "diff": -124,
+     "code": 851,
+     "diff": -140,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -67903,21 +67873,6 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 48,
-     "code": 64,
-     "diff": 16,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 16 0",
-     "allowed": null
-    },
-    {
      "kind": "shape",
      "name": "page-head",
      "detail": "간격 8→16",
@@ -67928,8 +67883,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 221,
-     "code": 246,
-     "diff": 25,
+     "code": 230,
+     "diff": 9,
      "allowed": null
     },
     {
@@ -67996,11 +67951,11 @@
   "R-17_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 6,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 5,
+    "shape": 4,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -68094,8 +68049,8 @@
      "name": "main",
      "field": "h",
      "figma": 1097,
-     "code": 867,
-     "diff": -230,
+     "code": 851,
+     "diff": -246,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -68129,21 +68084,6 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 48,
-     "code": 64,
-     "diff": 16,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 16 0",
-     "allowed": null
-    },
-    {
      "kind": "shape",
      "name": "page-head",
      "detail": "간격 8→16",
@@ -68154,8 +68094,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 221,
-     "code": 246,
-     "diff": 25,
+     "code": 230,
+     "diff": 9,
      "allowed": null
     },
     {
@@ -68222,11 +68162,11 @@
   "R-17_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 6,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 5,
+    "shape": 4,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -68293,8 +68233,8 @@
      "name": "main",
      "field": "h",
      "figma": 991,
-     "code": 845,
-     "diff": -146,
+     "code": 829,
+     "diff": -162,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -68319,21 +68259,6 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 48,
-     "code": 64,
-     "diff": 16,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 16 0",
-     "allowed": null
-    },
-    {
      "kind": "shape",
      "name": "page-head",
      "detail": "간격 8→16",
@@ -68344,8 +68269,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 221,
-     "code": 246,
-     "diff": 25,
+     "code": 230,
+     "diff": 9,
      "allowed": null
     },
     {
@@ -68412,11 +68337,11 @@
   "R-17_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 6,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 5,
+    "shape": 4,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -68510,8 +68435,8 @@
      "name": "main",
      "field": "h",
      "figma": 1097,
-     "code": 845,
-     "diff": -252,
+     "code": 829,
+     "diff": -268,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -68545,21 +68470,6 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 48,
-     "code": 64,
-     "diff": 16,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 16 0",
-     "allowed": null
-    },
-    {
      "kind": "shape",
      "name": "page-head",
      "detail": "간격 8→16",
@@ -68570,8 +68480,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 221,
-     "code": 246,
-     "diff": 25,
+     "code": 230,
+     "diff": 9,
      "allowed": null
     },
     {
@@ -68638,11 +68548,11 @@
   "R-17_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 7,
+    "box": 6,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 5,
+    "shape": 4,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -68730,8 +68640,8 @@
      "name": "main",
      "field": "h",
      "figma": 1363,
-     "code": 1693,
-     "diff": 330,
+     "code": 1677,
+     "diff": 314,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -68754,8 +68664,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1525,
-     "code": 1837,
-     "diff": 312,
+     "code": 1821,
+     "diff": 296,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -68769,29 +68679,14 @@
      "name": "page-head",
      "field": "h",
      "figma": 72,
-     "code": 64,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 16 0",
+     "code": 48,
+     "diff": -24,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
      "detail": "간격 8→16",
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "tabs",
-     "field": "y",
-     "figma": 305,
-     "code": 320,
-     "diff": 15,
      "allowed": null
     },
     {
@@ -68867,11 +68762,11 @@
   "R-17_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 7,
+    "box": 6,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 5,
+    "shape": 4,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -68959,8 +68854,8 @@
      "name": "main",
      "field": "h",
      "figma": 1469,
-     "code": 1693,
-     "diff": 224,
+     "code": 1677,
+     "diff": 208,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -68983,8 +68878,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1631,
-     "code": 1837,
-     "diff": 206,
+     "code": 1821,
+     "diff": 190,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -68998,29 +68893,14 @@
      "name": "page-head",
      "field": "h",
      "figma": 72,
-     "code": 64,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 16 0",
+     "code": 48,
+     "diff": -24,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
      "detail": "간격 8→16",
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "tabs",
-     "field": "y",
-     "figma": 305,
-     "code": 320,
-     "diff": 15,
      "allowed": null
     },
     {
@@ -69096,11 +68976,11 @@
   "R-17_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 6,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 5,
+    "shape": 4,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -69188,8 +69068,8 @@
      "name": "main",
      "field": "h",
      "figma": 1073,
-     "code": 1537,
-     "diff": 464,
+     "code": 1521,
+     "diff": 448,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -69212,8 +69092,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1235,
-     "code": 1681,
-     "diff": 446,
+     "code": 1665,
+     "diff": 430,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -69221,21 +69101,6 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 48,
-     "code": 64,
-     "diff": 16,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 16 0",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -69248,8 +69113,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 243,
-     "code": 274,
-     "diff": 31,
+     "code": 258,
+     "diff": 15,
      "allowed": null
     },
     {
@@ -69316,11 +69181,11 @@
   "R-17_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 6,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 5,
+    "shape": 4,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -69408,8 +69273,8 @@
      "name": "main",
      "field": "h",
      "figma": 1179,
-     "code": 1537,
-     "diff": 358,
+     "code": 1521,
+     "diff": 342,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -69432,8 +69297,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1341,
-     "code": 1681,
-     "diff": 340,
+     "code": 1665,
+     "diff": 324,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -69441,21 +69306,6 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 48,
-     "code": 64,
-     "diff": 16,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 16 0",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -69468,8 +69318,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 243,
-     "code": 274,
-     "diff": 31,
+     "code": 258,
+     "diff": 15,
      "allowed": null
     },
     {
