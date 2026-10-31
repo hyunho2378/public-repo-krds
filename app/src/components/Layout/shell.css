@@ -147,7 +147,7 @@
 .rb-side-link.active { background: var(--krds-color-action-secondary-selected); font-weight: var(--rb-fw-current); }
 .rb-side-text { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .rb-side-count { flex: none; font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); color: var(--krds-color-text-subtle); }
-.rb-side-group-btn > .rb-icon:last-child { width: var(--krds-number-8); height: var(--krds-number-8); color: var(--krds-color-text-subtle); transition: transform var(--rb-motion-fast) var(--rb-motion-ease); transform: rotate(-90deg); }
+.rb-side-group-btn > .rb-icon:last-child { width: var(--krds-number-8); height: var(--krds-number-8); color: var(--krds-color-text-subtle); }
 .rb-side-group-btn[aria-expanded="true"] > .rb-icon:last-child { transform: none; }
 .rb-side-project { font-weight: var(--krds-font-weight-bold); }
 .rb-side-foot { flex: none; padding-top: var(--krds-padding-3); border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }

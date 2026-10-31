@@ -157,7 +157,8 @@ function Group({ group, tipApi, rail, onShow }) {
       <button type="button" className="rb-side-group-btn" aria-expanded={open} aria-controls={listId} title={rail ? group.name : undefined} onClick={() => { if (rail) { onShow(); setOpen(true); } else setOpen(!open); }}>
         <Icon name={group.icon} />
         <span className="rb-side-text">{group.name}</span>
-        <Icon name="arrow-down" />
+        {/* 공공 깃랩: 접힌 묶음은 오른쪽 꺾쇠, 펼친 묶음은 아래 꺾쇠(Figma 아이콘 이름과 같게) */}
+        <Icon name={open && !rail ? 'arrow-down' : 'arrow-right'} />
       </button>
       {/* D-22: 목록은 늘 그려 두고 grid-template-rows 0fr↔1fr로 접는다(조건부 렌더링은 끊김 원인) */}
       <div className={'rb-side-fold' + (open ? ' is-open' : '')}>

@@ -178,3 +178,19 @@
   - 110 2 {'D21': 110} ('box', 'project-row', 'h') G-01_1024_Guest {'field': 'h', 'figma': 80, 'code': 91, 'diff': 11}
   - 110 2 {'D21': 110} ('shape', 'project-row', '간격 #→#') G-01_1024_Guest {'detail': '간격 12→8'}
 - [C2] 한도 중단 후 재개: R-20 PackagesView를 제목 h1+개수 한 상자로 복구(PAGE_HEAD에서 R-20 빠짐 확인, h1 1개). 위 줄의 (합, 전역 제외) 표는 R-10~R-24 최신. 남음: R-11 gl-tabs 폭, R-17 tabs 간격, R-23 gl-filter y
+
+## Figma 대조(2026. 11. 1. 00:10, D21): 합 3,831(허용 뺀 값), 새 허용 0건
+- 위치/크기 1,411, 문구 420, 글자 75, 색 57, 모서리·간격 285, 아이콘 763, Figma에만 496, 코드에만 308, 순서 16. 담당 D21 2,328 · C2 764 · C1 739
+- 이후 코드(미측정): 세로 바 묶음 꺾쇠 접힘 arrow-right·펼침 arrow-down(Figma와 같은 이름, 실제 공공 깃랩 모양)
+- R-20 판정: 실제 캡처 59는 제목과 '0 패키지' 줄이 한 머리 묶음 → Figma 74 상자가 정답, C2 PackagesView 구조 유지, PAGE_HEAD에 R-20 없음
+- 남은 원인 상위 10
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('icon', 'gitlab-sidebar') A-02_1440_Guest {'figma': ['analytics', 'arrow-down', 'arrow-right', 'cale
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('box', 'sidebar-nav', 'h') A-02_1440_Guest {'field': 'h', 'figma': 565, 'code': 656, 'diff': 91}
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('icon', 'sidebar-nav') A-02_1440_Guest {'figma': ['analytics', 'arrow-down', 'arrow-right', 'calenda
+  - 120 1 {'D21': 120} ('only-code', 'project-row') G-01_1024_Guest {}
+  - 110 2 {'D21': 110} ('box', 'project-row', 'h') G-01_1024_Guest {'field': 'h', 'figma': 80, 'code': 91, 'diff': 11}
+  - 110 2 {'D21': 110} ('shape', 'project-row', '간격 #→#') G-01_1024_Guest {'detail': '간격 12→8'}
+  - 105 3 {'D21': 105} ('only-figma', 'project-row') A-01_1024_Guest {'want': {'x': 40, 'y': 577, 'w': 944, 'h': 49}}
+  - 100 10 {'D21': 20, 'C1': 30, 'C2': 50} ('box', 'gl-filter', 'y') G-01_1024_Guest {'field': 'y', 'figma': 217, 'code': 220, 'diff': 3}
+  - 96 48 {'D21': 42, 'C1': 24, 'C2': 30} ('icon', 'topbar') A-02_1024_Guest {'figma': ['search'], 'code': ['panel-open', 'search']}
+  - 90 9 {'D21': 30, 'C2': 20, 'C1': 40} ('text', 'breadcrumb') A-03_1024_Guest {'figma': ['서울특별시 광진구 류승인 kordoc 설정 �
