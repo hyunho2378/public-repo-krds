@@ -73,7 +73,7 @@ function BoardView({ list }) {
   return (
     <>
       <div className="gl-work-filter" data-figma="gl-filter">
-        <span className="krds-btn small tertiary">{list.boards[0]?.name || 'Development'}</span>
+        <span className="krds-btn small tertiary">{list.boards[0]?.name || 'Development'}<Icon name="arrow-down" /></span>
         <div className="gl-work-bar" role="search">
           <input type="search" value={q} placeholder={rp.search} aria-label={rp.search} onChange={(e) => setQ(e.target.value)} />
           <FilterSearch label={u.List_searchLabel} />
