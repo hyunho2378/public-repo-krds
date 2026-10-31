@@ -19,7 +19,7 @@ import { IconButton } from '../components/Action/IconButton';
 import { Avatar } from '../components/Layout/Avatar';
 import './parts/glRepo.css';
 import { gql, Q } from './parts/glGraphql';
-import { au, p1 } from '../copy/work';
+import { au, p1, bd } from '../copy/work';
 import { ago } from './parts/glTime';
 import { EmptyArt } from './parts/EmptyArt';
 import { HistoryButton } from './parts/HistoryButton';
@@ -78,6 +78,11 @@ function BoardView({ list }) {
           <input type="search" value={q} placeholder={rp.search} aria-label={rp.search} onChange={(e) => setQ(e.target.value)} />
           <FilterSearch label={u.List_searchLabel} />
         </div>
+        <span className="gl-filter-tools">
+          <IconButton icon="ext/sliders" data-figma="filter-display" label={bd.display} />
+          <IconButton icon="setting" data-figma="filter-settings" label={bd.settings} />
+          <IconButton icon="ext/expand" data-figma="filter-expand" label={bd.expand} />
+        </span>
       </div>
       <div className="gl-board">
         {[[au.colOpen, list.open], [au.colClosed, list.closed]].map(([name, col]) => (

@@ -31,3 +31,6 @@
 
 @media (max-width: 767px) { .gl-work-filter .gl-work-bar { flex: 1 1 100%; } }
 .gl-work-filter .gl-work-bar .rb-iconbtn { width: var(--layout-filter-control-h); height: var(--layout-filter-control-h); min-height: var(--layout-filter-control-h); }
+.gl-filter-tools { display: inline-flex; align-items: center; gap: var(--krds-gap-2); flex: none; }
+.gl-filter-tools .rb-iconbtn { width: var(--layout-filter-control-h); height: var(--layout-filter-control-h); min-height: var(--layout-filter-control-h); }
+#root .gl-work-filter .krds-btn.rb-iconbtn { width: var(--layout-filter-control-h); height: var(--layout-filter-control-h); min-height: var(--layout-filter-control-h); }

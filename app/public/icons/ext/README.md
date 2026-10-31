@@ -50,3 +50,5 @@
 - 일부러 다른 것: sparkle(AI 카탈로그)은 Pajamas tanuki-ai의 GitLab 로고(상표)를 빼고 반짝임만
 - folder와 project 구분: 공공 깃랩은 folder(folder-o)를 파일 표와 파일 트리의 폴더에만 쓰고(캡처 02 파일 표, 08 파일 트리), 탐색 사이드바 '프로젝트'와 목록 행 맨 왼쪽은 project 아이콘을 쓴다(캡처 01). 우리도 같게 둔다
 - KRDS를 쓰는 사이드바 묶음 아이콘(같은 뜻의 KRDS 아이콘이 있어 KRDS 우선, D-11): 추가 기능 view_all(공공 깃랩 grid), 계획 calendar(공공 깃랩 planning, 달력 + 체크), 분석 analytics(공공 깃랩 chart, 틀 없는 막대), 도움말 help(공공 깃랩 question-o), 사이드바 접음 panel_open(공공 깃랩 sidebar 접음 화살표). 모양이 똑같지 않다
+| sliders.svg | 보드 표시 옵션(슬라이더) | adjust |
+| expand.svg | 보드 확대(전체 화면) | expand |

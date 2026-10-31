@@ -324,3 +324,4 @@
 - 이전 질의: '출장비를 계산하고 싶어요'(개발 서버 결과 행 0, 업무로 찾기 3행만). 새 질의: '회의록 자동 작성'(업무로 찾기 행 3 + 일반 결과 행 6). 반영: code_plan/figma_name_map.json A-01 code.path
 - 이유: 결과 행이 없어 Figma에만 project-row 75건이 측정 한계였음. 허용 목록에는 넣지 않음(자료 선택)
 - A-01만 5폭 x Guest·Signed-in 재측정. 공식 합 2,306 → 2,358(+52). 담당 D21 1,443 · C2 486 · C1 429. A-01 상위: project-row h 56, y 44, x 16, w 16, 아이콘 16, results Figma에만 10, task-search h 10
+- [C2] 원장 14차: R-13 필터 막대 뒤 아이콘 단추 3개(캡처 54 확대 실측: 막대 오른쪽 8 뒤, 단추 32x32, 간격 4, 막대와 같은 y, 순서 표시 옵션(sliders) 설정(setting) 확대(expand)), 새 ext 아이콘 sliders, expand. 이름표 filter-display, filter-settings, filter-expand(캡처에 새로고침은 없고 확대 아이콘이 있음)
