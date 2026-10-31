@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-31T16:58:39.174Z",
+ "generated": "2026-10-31T17:22:14.120Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 4,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -31,6 +31,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -82,6 +83,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -121,8 +123,8 @@
      "name": "main",
      "field": "h",
      "figma": 1271,
-     "code": 822,
-     "diff": -449,
+     "code": 826,
+     "diff": -445,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -136,6 +138,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -181,7 +184,7 @@
      "name": "filters",
      "want": {
       "x": 40,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -192,7 +195,7 @@
      "name": "results",
      "want": {
       "x": 320,
-      "y": 161,
+      "y": 177,
       "w": 664,
       "h": 695
      },
@@ -200,11 +203,11 @@
     },
     {
      "kind": "box",
-     "name": "task-search",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 883,
+     "code": 955,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -233,38 +236,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 191,
-     "code": 203,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 256,
-     "code": 268,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 321,
-     "code": 333,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "project-row#4",
      "field": "y",
-     "figma": 421,
-     "code": 437,
-     "diff": 16,
+     "figma": 437,
+     "code": 441,
+     "diff": 4,
      "allowed": null
     },
     {
@@ -281,9 +257,9 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 512,
-     "code": 528,
-     "diff": 16,
+     "figma": 528,
+     "code": 532,
+     "diff": 4,
      "allowed": null
     },
     {
@@ -299,9 +275,9 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 603,
-     "code": 619,
-     "diff": 16,
+     "figma": 619,
+     "code": 623,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -317,9 +293,9 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 694,
-     "code": 710,
-     "diff": 16,
+     "figma": 710,
+     "code": 714,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -335,9 +311,9 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 785,
-     "code": 801,
-     "diff": 16,
+     "figma": 801,
+     "code": 805,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -360,7 +336,7 @@
   "A-01_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 4,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -386,6 +362,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -437,6 +414,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -476,8 +454,8 @@
      "name": "main",
      "field": "h",
      "figma": 1271,
-     "code": 822,
-     "diff": -449,
+     "code": 826,
+     "diff": -445,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -491,6 +469,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -536,7 +515,7 @@
      "name": "filters",
      "want": {
       "x": 40,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -547,7 +526,7 @@
      "name": "results",
      "want": {
       "x": 320,
-      "y": 161,
+      "y": 177,
       "w": 664,
       "h": 695
      },
@@ -555,11 +534,11 @@
     },
     {
      "kind": "box",
-     "name": "task-search",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 883,
+     "code": 955,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -588,38 +567,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 191,
-     "code": 203,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 256,
-     "code": 268,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 321,
-     "code": 333,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "project-row#4",
      "field": "y",
-     "figma": 421,
-     "code": 437,
-     "diff": 16,
+     "figma": 437,
+     "code": 441,
+     "diff": 4,
      "allowed": null
     },
     {
@@ -636,9 +588,9 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 512,
-     "code": 528,
-     "diff": 16,
+     "figma": 528,
+     "code": 532,
+     "diff": 4,
      "allowed": null
     },
     {
@@ -654,9 +606,9 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 603,
-     "code": 619,
-     "diff": 16,
+     "figma": 619,
+     "code": 623,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -672,9 +624,9 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 694,
-     "code": 710,
-     "diff": 16,
+     "figma": 710,
+     "code": 714,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -690,9 +642,9 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 785,
-     "code": 801,
-     "diff": 16,
+     "figma": 801,
+     "code": 805,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -715,7 +667,7 @@
   "A-01_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 6,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -732,6 +684,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -774,6 +727,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -812,9 +766,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 675,
-     "code": 742,
-     "diff": 67,
+     "figma": 691,
+     "code": 746,
+     "diff": 55,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -828,6 +782,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -857,9 +812,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 837,
-     "code": 887,
-     "diff": 50,
+     "figma": 853,
+     "code": 891,
+     "diff": 38,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -873,7 +828,7 @@
      "name": "filters",
      "want": {
       "x": 120,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -884,7 +839,7 @@
      "name": "results",
      "want": {
       "x": 400,
-      "y": 161,
+      "y": 177,
       "w": 920,
       "h": 635
      },
@@ -892,11 +847,11 @@
     },
     {
      "kind": "box",
-     "name": "task-search",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 1219,
+     "code": 1291,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -925,38 +880,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 191,
-     "code": 203,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 256,
-     "code": 268,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 321,
-     "code": 333,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "project-row#4",
      "field": "y",
-     "figma": 421,
-     "code": 437,
-     "diff": 16,
+     "figma": 437,
+     "code": 441,
+     "diff": 4,
      "allowed": null
     },
     {
@@ -982,9 +910,9 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 512,
-     "code": 508,
-     "diff": -4,
+     "figma": 528,
+     "code": 512,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -1000,9 +928,9 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 583,
-     "code": 579,
-     "diff": -4,
+     "figma": 599,
+     "code": 583,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -1018,9 +946,9 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 654,
-     "code": 650,
-     "diff": -4,
+     "figma": 670,
+     "code": 654,
+     "diff": -16,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -1036,9 +964,9 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 725,
-     "code": 721,
-     "diff": -4,
+     "figma": 741,
+     "code": 725,
+     "diff": -16,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -1061,7 +989,7 @@
   "A-01_1440_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 6,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -1078,6 +1006,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -1120,6 +1049,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -1158,9 +1088,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 675,
-     "code": 742,
-     "diff": 67,
+     "figma": 691,
+     "code": 746,
+     "diff": 55,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -1174,6 +1104,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -1203,9 +1134,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 837,
-     "code": 887,
-     "diff": 50,
+     "figma": 853,
+     "code": 891,
+     "diff": 38,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -1219,7 +1150,7 @@
      "name": "filters",
      "want": {
       "x": 120,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -1230,7 +1161,7 @@
      "name": "results",
      "want": {
       "x": 400,
-      "y": 161,
+      "y": 177,
       "w": 920,
       "h": 635
      },
@@ -1238,11 +1169,11 @@
     },
     {
      "kind": "box",
-     "name": "task-search",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 1219,
+     "code": 1291,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -1271,38 +1202,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 191,
-     "code": 203,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 256,
-     "code": 268,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 321,
-     "code": 333,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "project-row#4",
      "field": "y",
-     "figma": 421,
-     "code": 437,
-     "diff": 16,
+     "figma": 437,
+     "code": 441,
+     "diff": 4,
      "allowed": null
     },
     {
@@ -1328,9 +1232,9 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 512,
-     "code": 508,
-     "diff": -4,
+     "figma": 528,
+     "code": 512,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -1346,9 +1250,9 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 583,
-     "code": 579,
-     "diff": -4,
+     "figma": 599,
+     "code": 583,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -1364,9 +1268,9 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 654,
-     "code": 650,
-     "diff": -4,
+     "figma": 670,
+     "code": 654,
+     "diff": -16,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -1382,9 +1286,9 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 725,
-     "code": 721,
-     "diff": -4,
+     "figma": 741,
+     "code": 725,
+     "diff": -16,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -1407,7 +1311,7 @@
   "A-01_1920_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 6,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -1424,6 +1328,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -1466,6 +1371,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -1504,9 +1410,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 675,
-     "code": 742,
-     "diff": 67,
+     "figma": 691,
+     "code": 746,
+     "diff": 55,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -1520,6 +1426,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -1549,9 +1456,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 837,
-     "code": 887,
-     "diff": 50,
+     "figma": 853,
+     "code": 891,
+     "diff": 38,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -1565,7 +1472,7 @@
      "name": "filters",
      "want": {
       "x": 360,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -1576,7 +1483,7 @@
      "name": "results",
      "want": {
       "x": 640,
-      "y": 161,
+      "y": 177,
       "w": 920,
       "h": 635
      },
@@ -1584,11 +1491,11 @@
     },
     {
      "kind": "box",
-     "name": "task-search",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 1459,
+     "code": 1531,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -1617,38 +1524,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 191,
-     "code": 203,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 256,
-     "code": 268,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 321,
-     "code": 333,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "project-row#4",
      "field": "y",
-     "figma": 421,
-     "code": 437,
-     "diff": 16,
+     "figma": 437,
+     "code": 441,
+     "diff": 4,
      "allowed": null
     },
     {
@@ -1674,9 +1554,9 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 512,
-     "code": 508,
-     "diff": -4,
+     "figma": 528,
+     "code": 512,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -1692,9 +1572,9 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 583,
-     "code": 579,
-     "diff": -4,
+     "figma": 599,
+     "code": 583,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -1710,9 +1590,9 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 654,
-     "code": 650,
-     "diff": -4,
+     "figma": 670,
+     "code": 654,
+     "diff": -16,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -1728,9 +1608,9 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 725,
-     "code": 721,
-     "diff": -4,
+     "figma": 741,
+     "code": 725,
+     "diff": -16,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -1753,7 +1633,7 @@
   "A-01_1920_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 6,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -1770,6 +1650,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -1812,6 +1693,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -1850,9 +1732,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 675,
-     "code": 742,
-     "diff": 67,
+     "figma": 691,
+     "code": 746,
+     "diff": 55,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -1866,6 +1748,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -1895,9 +1778,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 837,
-     "code": 887,
-     "diff": 50,
+     "figma": 853,
+     "code": 891,
+     "diff": 38,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -1911,7 +1794,7 @@
      "name": "filters",
      "want": {
       "x": 360,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -1922,7 +1805,7 @@
      "name": "results",
      "want": {
       "x": 640,
-      "y": 161,
+      "y": 177,
       "w": 920,
       "h": 635
      },
@@ -1930,11 +1813,11 @@
     },
     {
      "kind": "box",
-     "name": "task-search",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 1459,
+     "code": 1531,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -1963,38 +1846,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 191,
-     "code": 203,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 256,
-     "code": 268,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 321,
-     "code": 333,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "project-row#4",
      "field": "y",
-     "figma": 421,
-     "code": 437,
-     "diff": 16,
+     "figma": 437,
+     "code": 441,
+     "diff": 4,
      "allowed": null
     },
     {
@@ -2020,9 +1876,9 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 512,
-     "code": 508,
-     "diff": -4,
+     "figma": 528,
+     "code": 512,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -2038,9 +1894,9 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 583,
-     "code": 579,
-     "diff": -4,
+     "figma": 599,
+     "code": 583,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -2056,9 +1912,9 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 654,
-     "code": 650,
-     "diff": -4,
+     "figma": 670,
+     "code": 654,
+     "diff": -16,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -2074,9 +1930,9 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 725,
-     "code": 721,
-     "diff": -4,
+     "figma": 741,
+     "code": 725,
+     "diff": -16,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -2099,7 +1955,7 @@
   "A-01_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 4,
     "text": 1,
     "font": 0,
     "color": 1,
@@ -2115,15 +1971,16 @@
      "kind": "box",
      "name": "body",
      "field": "h",
-     "figma": 1356,
+     "figma": 1542,
      "code": 1328,
-     "diff": -28,
+     "diff": -214,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
      "kind": "icon",
      "name": "body",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -2156,9 +2013,9 @@
      "kind": "box",
      "name": "content-panel",
      "field": "h",
-     "figma": 1356,
+     "figma": 1542,
      "code": 1328,
-     "diff": -28,
+     "diff": -214,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -2177,6 +2034,7 @@
      "kind": "icon",
      "name": "content-panel",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -2212,9 +2070,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 963,
-     "code": 1364,
-     "diff": 401,
+     "figma": 1149,
+     "code": 1292,
+     "diff": 143,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -2227,6 +2085,7 @@
      "kind": "icon",
      "name": "main",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -2253,9 +2112,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1125,
-     "code": 1509,
-     "diff": 384,
+     "figma": 1311,
+     "code": 1437,
+     "diff": 126,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -2271,8 +2130,17 @@
       "x": 16,
       "y": 213,
       "w": 328,
-      "h": 871
+      "h": 1057
      },
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "search-clear",
+     "field": "x",
+     "figma": 243,
+     "code": 315,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -2404,15 +2272,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "h",
-     "figma": 115,
-     "code": 139,
-     "diff": 24,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
@@ -2448,19 +2307,10 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 624,
+     "figma": 648,
      "code": 652,
-     "diff": 28,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#5",
-     "field": "h",
-     "figma": 115,
-     "code": 163,
-     "diff": 48,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -2468,7 +2318,7 @@
      "figma": [
       "업데이트됨 2026. 10. 12."
      ],
-     "code": "통 통일부 유제풍 / Uni-Eum 로컬 AI 기반 업무 문서 음성 변환, 브리핑, 음성 인식 및 결과 보고서 작성 도구 더보기 0 0 - - 업데이트됨 2주 전",
+     "code": "통 통일부 유제풍 / Uni-Eum 로컬 AI 기반 업무 문서 음성 변환, 브리핑, 음성 인식 및 결과 보고서 작성 도구 0 0 - - 업데이트됨 2주 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -2497,19 +2347,10 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 739,
-     "code": 815,
-     "diff": 76,
+     "figma": 787,
+     "code": 791,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 115,
-     "code": 185,
-     "diff": 70,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -2517,7 +2358,7 @@
      "figma": [
       "업데이트됨 2026. 8. 27."
      ],
-     "code": "서 서울시교육청 김보선 / one-pager-report-skill 공무원 원페이퍼 보고서 작성 Agent Skill — A4 1쪽 압축, 개조식, 개념 라벨 배제, DOCX 출력·PDF 렌더링 검증 더보기 1 0 ",
+     "code": "서 서울시교육청 김보선 / one-pager-report-skill 공무원 원페이퍼 보고서 작성 Agent Skill — A4 1쪽 압축, 개조식, 개념 라벨 배제, DOCX 출력·PDF 렌더링 검증 1 0 - - ",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -2546,19 +2387,10 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 854,
-     "code": 1000,
-     "diff": 146,
+     "figma": 948,
+     "code": 952,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#7",
-     "field": "h",
-     "figma": 115,
-     "code": 185,
-     "diff": 70,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -2566,7 +2398,7 @@
      "figma": [
       "업데이트됨 2026. 8. 27."
      ],
-     "code": "서 서울시교육청 김보선 / gov-report-skill 공무원 기획보고서 작성 Agent Skill — 7대 항목 구조, 대통령 비서실 보고서 작성법 반영, 마크다운·DOCX 출력 더보기 4 0 - - 업데이트됨 ",
+     "code": "서 서울시교육청 김보선 / gov-report-skill 공무원 기획보고서 작성 Agent Skill — 7대 항목 구조, 대통령 비서실 보고서 작성법 반영, 마크다운·DOCX 출력 4 0 - - 업데이트됨 2개월 ",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -2595,18 +2427,18 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 969,
-     "code": 1185,
-     "diff": 216,
+     "figma": 1109,
+     "code": 1113,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "box",
      "name": "project-row#8",
      "field": "h",
-     "figma": 115,
+     "figma": 161,
      "code": 139,
-     "diff": 24,
+     "diff": -22,
      "allowed": null
     },
     {
@@ -2651,7 +2483,7 @@
   "A-01_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 4,
     "text": 1,
     "font": 0,
     "color": 1,
@@ -2667,15 +2499,16 @@
      "kind": "box",
      "name": "body",
      "field": "h",
-     "figma": 1356,
+     "figma": 1542,
      "code": 1328,
-     "diff": -28,
+     "diff": -214,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
      "kind": "icon",
      "name": "body",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -2708,9 +2541,9 @@
      "kind": "box",
      "name": "content-panel",
      "field": "h",
-     "figma": 1356,
+     "figma": 1542,
      "code": 1328,
-     "diff": -28,
+     "diff": -214,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -2729,6 +2562,7 @@
      "kind": "icon",
      "name": "content-panel",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -2764,9 +2598,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 963,
-     "code": 1364,
-     "diff": 401,
+     "figma": 1149,
+     "code": 1292,
+     "diff": 143,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -2779,6 +2613,7 @@
      "kind": "icon",
      "name": "main",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -2805,9 +2640,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1125,
-     "code": 1509,
-     "diff": 384,
+     "figma": 1311,
+     "code": 1437,
+     "diff": 126,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -2823,8 +2658,17 @@
       "x": 16,
       "y": 213,
       "w": 328,
-      "h": 871
+      "h": 1057
      },
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "search-clear",
+     "field": "x",
+     "figma": 243,
+     "code": 315,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -2956,15 +2800,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "h",
-     "figma": 115,
-     "code": 139,
-     "diff": 24,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
@@ -3000,19 +2835,10 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 624,
+     "figma": 648,
      "code": 652,
-     "diff": 28,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#5",
-     "field": "h",
-     "figma": 115,
-     "code": 163,
-     "diff": 48,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -3020,7 +2846,7 @@
      "figma": [
       "업데이트됨 2026. 10. 12."
      ],
-     "code": "통 통일부 유제풍 / Uni-Eum 로컬 AI 기반 업무 문서 음성 변환, 브리핑, 음성 인식 및 결과 보고서 작성 도구 더보기 0 0 - - 업데이트됨 2주 전",
+     "code": "통 통일부 유제풍 / Uni-Eum 로컬 AI 기반 업무 문서 음성 변환, 브리핑, 음성 인식 및 결과 보고서 작성 도구 0 0 - - 업데이트됨 2주 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -3049,19 +2875,10 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 739,
-     "code": 815,
-     "diff": 76,
+     "figma": 787,
+     "code": 791,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 115,
-     "code": 185,
-     "diff": 70,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -3069,7 +2886,7 @@
      "figma": [
       "업데이트됨 2026. 8. 27."
      ],
-     "code": "서 서울시교육청 김보선 / one-pager-report-skill 공무원 원페이퍼 보고서 작성 Agent Skill — A4 1쪽 압축, 개조식, 개념 라벨 배제, DOCX 출력·PDF 렌더링 검증 더보기 1 0 ",
+     "code": "서 서울시교육청 김보선 / one-pager-report-skill 공무원 원페이퍼 보고서 작성 Agent Skill — A4 1쪽 압축, 개조식, 개념 라벨 배제, DOCX 출력·PDF 렌더링 검증 1 0 - - ",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -3098,19 +2915,10 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 854,
-     "code": 1000,
-     "diff": 146,
+     "figma": 948,
+     "code": 952,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#7",
-     "field": "h",
-     "figma": 115,
-     "code": 185,
-     "diff": 70,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -3118,7 +2926,7 @@
      "figma": [
       "업데이트됨 2026. 8. 27."
      ],
-     "code": "서 서울시교육청 김보선 / gov-report-skill 공무원 기획보고서 작성 Agent Skill — 7대 항목 구조, 대통령 비서실 보고서 작성법 반영, 마크다운·DOCX 출력 더보기 4 0 - - 업데이트됨 ",
+     "code": "서 서울시교육청 김보선 / gov-report-skill 공무원 기획보고서 작성 Agent Skill — 7대 항목 구조, 대통령 비서실 보고서 작성법 반영, 마크다운·DOCX 출력 4 0 - - 업데이트됨 2개월 ",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -3147,18 +2955,18 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 969,
-     "code": 1185,
-     "diff": 216,
+     "figma": 1109,
+     "code": 1113,
+     "diff": 4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "box",
      "name": "project-row#8",
      "field": "h",
-     "figma": 115,
+     "figma": 161,
      "code": 139,
-     "diff": 24,
+     "diff": -22,
      "allowed": null
     },
     {
@@ -3203,7 +3011,7 @@
   "A-01_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 8,
+    "box": 9,
     "text": 1,
     "font": 0,
     "color": 1,
@@ -3219,6 +3027,7 @@
      "kind": "icon",
      "name": "body",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -3264,6 +3073,7 @@
      "kind": "icon",
      "name": "content-panel",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -3315,6 +3125,7 @@
      "kind": "icon",
      "name": "main",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -3362,6 +3173,15 @@
       "w": 704,
       "h": 711
      },
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "search-clear",
+     "field": "x",
+     "figma": 635,
+     "code": 707,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -3552,7 +3372,7 @@
   "A-01_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 8,
+    "box": 9,
     "text": 1,
     "font": 0,
     "color": 1,
@@ -3568,6 +3388,7 @@
      "kind": "icon",
      "name": "body",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -3613,6 +3434,7 @@
      "kind": "icon",
      "name": "content-panel",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -3664,6 +3486,7 @@
      "kind": "icon",
      "name": "main",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -3711,6 +3534,15 @@
       "w": 704,
       "h": 711
      },
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "search-clear",
+     "field": "x",
+     "figma": 635,
+     "code": 707,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -10547,7 +10379,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 8,
+   "allowed": 7,
    "rows": [
     {
      "kind": "shape",
@@ -10597,11 +10429,6 @@
     {
      "kind": "only-code",
      "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title#2",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
@@ -10704,7 +10531,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -10772,11 +10599,6 @@
     {
      "kind": "only-code",
      "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title#2",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
@@ -10879,7 +10701,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -10947,11 +10769,6 @@
     {
      "kind": "only-code",
      "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title#2",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
@@ -11060,7 +10877,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "box",
@@ -11134,11 +10951,6 @@
     {
      "kind": "only-code",
      "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title#2",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
@@ -11229,7 +11041,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 9,
+   "allowed": 8,
    "rows": [
     {
      "kind": "shape",
@@ -11285,11 +11097,6 @@
     {
      "kind": "only-code",
      "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title#2",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
@@ -15917,7 +15724,7 @@
   "G-01_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 2,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -15954,9 +15761,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 849,
-     "code": 2127,
-     "diff": 1278,
+     "figma": 869,
+     "code": 2079,
+     "diff": 1210,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -15969,9 +15776,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1011,
-     "code": 2272,
-     "diff": 1261,
+     "figma": 1031,
+     "code": 2224,
+     "diff": 1193,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -15985,19 +15792,10 @@
      "name": "tabs",
      "want": {
       "x": 40,
-      "y": 169,
+      "y": 173,
       "w": 160,
       "h": 48
      },
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 217,
-     "code": 221,
-     "diff": 4,
      "allowed": null
     },
     {
@@ -16010,31 +15808,15 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 290,
-     "code": 294,
-     "diff": 4,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row",
      "figma": [
+      "-",
+      "-",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "국 국가기술표준원 이승훈 / 해외규제변경체크AI 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 359,
-     "code": 363,
-     "diff": 4,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -16047,48 +15829,20 @@
     },
     {
      "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 428,
-     "code": 432,
-     "diff": 4,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
+     "name": "project-row#4",
      "field": "h",
      "figma": 119,
-     "code": 143,
-     "diff": 24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "y",
-     "figma": 547,
-     "code": 575,
-     "diff": 28,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "h",
-     "figma": 71,
      "code": 99,
-     "diff": 28,
+     "diff": -20,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
-      "광",
-      "광양시 정솔현 / 온나라 업무통신 자동 발송기",
-      "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 한글 문서 편집 자동화 툴입니다. 단어 자간과 내어쓰기를 자동으로 맞추고, 다양한 서식을 한번에 적용하여 자동으로 편집해 줍니다.",
+      "-",
+      "-"
      ],
      "code": "마 마포구청 공혁준 / HWP_AutoDocFit 한글 문서 편집 자동화 툴입니다. 주제: ai document hwpx + 2개 더보기 9 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16097,19 +15851,28 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 618,
-     "code": 674,
-     "diff": 56,
+     "figma": 670,
+     "code": 650,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 91,
+     "code": 71,
+     "diff": -20,
+     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
-      "광",
-      "광양시 정솔현 / 공공깃랩 디스커버",
-      "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 법령·판례·결정문 등을 검색해 출처 기반 답변과 보고서 작성까지 지원함.",
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16118,28 +15881,18 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 689,
-     "code": 745,
-     "diff": 56,
+     "figma": 761,
+     "code": 721,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 71,
-     "code": 69,
-     "diff": -2,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#6",
      "figma": [
-      "경",
-      "경주시 이기영 / korean-law-mcp",
-      "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증",
-      "업데이트됨 2026. 10. 27."
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "전 전남광주통합특별시동구 김민성 / AI 기반 온나라 미분류 문서 자동배부 시스템 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16148,19 +15901,17 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 760,
-     "code": 814,
-     "diff": 54,
+     "figma": 830,
+     "code": 790,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
-      "경",
-      "경상남도 창원시 김우람 / cw-jennifer",
-      "API를 활용하여 JENNIFER 5 APM 데이터를 Claude Code로 분석해 느린 트랜잭션의 원인을 찾고, 조치 가이드를 받는 프로젝트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 31 24 업데이트",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16169,28 +15920,18 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 851,
-     "code": 905,
-     "diff": 54,
+     "figma": 921,
+     "code": 881,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "h",
-     "figma": 119,
-     "code": 69,
-     "diff": -50,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#8",
      "figma": [
-      "K",
-      "KISED / K-Startup MCP",
-      "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
-      "주제:"
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "남 남양주시 정현빈 / hyunbin 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16200,7 +15941,7 @@
      "name": "filter-search",
      "want": {
       "x": 603,
-      "y": 234,
+      "y": 238,
       "w": 32,
       "h": 32
      },
@@ -16226,7 +15967,7 @@
   "G-01_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 2,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -16263,9 +16004,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 849,
-     "code": 2127,
-     "diff": 1278,
+     "figma": 869,
+     "code": 2079,
+     "diff": 1210,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -16278,9 +16019,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1011,
-     "code": 2272,
-     "diff": 1261,
+     "figma": 1031,
+     "code": 2224,
+     "diff": 1193,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -16294,19 +16035,10 @@
      "name": "tabs",
      "want": {
       "x": 40,
-      "y": 169,
+      "y": 173,
       "w": 160,
       "h": 48
      },
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 217,
-     "code": 221,
-     "diff": 4,
      "allowed": null
     },
     {
@@ -16319,31 +16051,15 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 290,
-     "code": 294,
-     "diff": 4,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row",
      "figma": [
+      "-",
+      "-",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "국 국가기술표준원 이승훈 / 해외규제변경체크AI 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 359,
-     "code": 363,
-     "diff": 4,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -16356,48 +16072,20 @@
     },
     {
      "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 428,
-     "code": 432,
-     "diff": 4,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
+     "name": "project-row#4",
      "field": "h",
      "figma": 119,
-     "code": 143,
-     "diff": 24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "y",
-     "figma": 547,
-     "code": 575,
-     "diff": 28,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "h",
-     "figma": 71,
      "code": 99,
-     "diff": 28,
+     "diff": -20,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
-      "광",
-      "광양시 정솔현 / 온나라 업무통신 자동 발송기",
-      "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 한글 문서 편집 자동화 툴입니다. 단어 자간과 내어쓰기를 자동으로 맞추고, 다양한 서식을 한번에 적용하여 자동으로 편집해 줍니다.",
+      "-",
+      "-"
      ],
      "code": "마 마포구청 공혁준 / HWP_AutoDocFit 한글 문서 편집 자동화 툴입니다. 주제: ai document hwpx + 2개 더보기 9 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16406,19 +16094,28 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 618,
-     "code": 674,
-     "diff": 56,
+     "figma": 670,
+     "code": 650,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 91,
+     "code": 71,
+     "diff": -20,
+     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
-      "광",
-      "광양시 정솔현 / 공공깃랩 디스커버",
-      "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 법령·판례·결정문 등을 검색해 출처 기반 답변과 보고서 작성까지 지원함.",
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16427,28 +16124,18 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 689,
-     "code": 745,
-     "diff": 56,
+     "figma": 761,
+     "code": 721,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 71,
-     "code": 69,
-     "diff": -2,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#6",
      "figma": [
-      "경",
-      "경주시 이기영 / korean-law-mcp",
-      "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증",
-      "업데이트됨 2026. 10. 27."
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "전 전남광주통합특별시동구 김민성 / AI 기반 온나라 미분류 문서 자동배부 시스템 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16457,19 +16144,17 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 760,
-     "code": 814,
-     "diff": 54,
+     "figma": 830,
+     "code": 790,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
-      "경",
-      "경상남도 창원시 김우람 / cw-jennifer",
-      "API를 활용하여 JENNIFER 5 APM 데이터를 Claude Code로 분석해 느린 트랜잭션의 원인을 찾고, 조치 가이드를 받는 프로젝트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 31 24 업데이트",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16478,28 +16163,18 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 851,
-     "code": 905,
-     "diff": 54,
+     "figma": 921,
+     "code": 881,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "h",
-     "figma": 119,
-     "code": 69,
-     "diff": -50,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#8",
      "figma": [
-      "K",
-      "KISED / K-Startup MCP",
-      "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
-      "주제:"
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "남 남양주시 정현빈 / hyunbin 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16509,7 +16184,7 @@
      "name": "filter-search",
      "want": {
       "x": 603,
-      "y": 234,
+      "y": 238,
       "w": 32,
       "h": 32
      },
@@ -16535,7 +16210,7 @@
   "G-01_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -16590,9 +16265,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 829,
-     "code": 2083,
-     "diff": 1254,
+     "figma": 869,
+     "code": 2059,
+     "diff": 1190,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -16605,9 +16280,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 991,
-     "code": 2228,
-     "diff": 1237,
+     "figma": 1031,
+     "code": 2204,
+     "diff": 1173,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -16621,19 +16296,10 @@
      "name": "tabs",
      "want": {
       "x": 296,
-      "y": 169,
+      "y": 173,
       "w": 160,
       "h": 48
      },
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 217,
-     "code": 221,
-     "diff": 4,
      "allowed": null
     },
     {
@@ -16646,31 +16312,15 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 290,
-     "code": 294,
-     "diff": 4,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row",
      "figma": [
+      "-",
+      "-",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "국 국가기술표준원 이승훈 / 해외규제변경체크AI 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 359,
-     "code": 363,
-     "diff": 4,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -16683,48 +16333,20 @@
     },
     {
      "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 428,
-     "code": 432,
-     "diff": 4,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
+     "name": "project-row#4",
      "field": "h",
      "figma": 119,
-     "code": 143,
-     "diff": 24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "y",
-     "figma": 547,
-     "code": 575,
-     "diff": 28,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "h",
-     "figma": 71,
      "code": 99,
-     "diff": 28,
+     "diff": -20,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
-      "광",
-      "광양시 정솔현 / 온나라 업무통신 자동 발송기",
-      "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 한글 문서 편집 자동화 툴입니다. 단어 자간과 내어쓰기를 자동으로 맞추고, 다양한 서식을 한번에 적용하여 자동으로 편집해 줍니다.",
+      "-",
+      "-"
      ],
      "code": "마 마포구청 공혁준 / HWP_AutoDocFit 한글 문서 편집 자동화 툴입니다. 주제: ai document hwpx + 2개 더보기 9 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16733,19 +16355,28 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 618,
-     "code": 674,
-     "diff": 56,
+     "figma": 670,
+     "code": 650,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 91,
+     "code": 71,
+     "diff": -20,
+     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
-      "광",
-      "광양시 정솔현 / 공공깃랩 디스커버",
-      "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 법령·판례·결정문 등을 검색해 출처 기반 답변과 보고서 작성까지 지원함.",
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16754,28 +16385,18 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 689,
-     "code": 745,
-     "diff": 56,
+     "figma": 761,
+     "code": 721,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 71,
-     "code": 69,
-     "diff": -2,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#6",
      "figma": [
-      "경",
-      "경주시 이기영 / korean-law-mcp",
-      "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증",
-      "업데이트됨 2026. 10. 27."
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "전 전남광주통합특별시동구 김민성 / AI 기반 온나라 미분류 문서 자동배부 시스템 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16784,19 +16405,26 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 760,
-     "code": 814,
-     "diff": 54,
+     "figma": 830,
+     "code": 790,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 91,
+     "code": 71,
+     "diff": -20,
+     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
-      "경",
-      "경상남도 창원시 김우람 / cw-jennifer",
-      "API를 활용하여 JENNIFER 5 APM 데이터를 Claude Code로 분석해 느린 트랜잭션의 원인을 찾고, 조치 가이드를 받는 프로젝트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 31 24 업데이트",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16805,28 +16433,18 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 831,
-     "code": 885,
-     "diff": 54,
+     "figma": 921,
+     "code": 861,
+     "diff": -60,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "h",
-     "figma": 119,
-     "code": 69,
-     "diff": -50,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#8",
      "figma": [
-      "K",
-      "KISED / K-Startup MCP",
-      "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
-      "주제:"
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "남 남양주시 정현빈 / hyunbin 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -16836,7 +16454,7 @@
      "name": "filter-search",
      "want": {
       "x": 1003,
-      "y": 234,
+      "y": 238,
       "w": 32,
       "h": 32
      },
@@ -16862,7 +16480,7 @@
   "G-01_1440_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -16917,9 +16535,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 829,
-     "code": 2083,
-     "diff": 1254,
+     "figma": 869,
+     "code": 2059,
+     "diff": 1190,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -16932,9 +16550,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 991,
-     "code": 2228,
-     "diff": 1237,
+     "figma": 1031,
+     "code": 2204,
+     "diff": 1173,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -16948,19 +16566,10 @@
      "name": "tabs",
      "want": {
       "x": 296,
-      "y": 169,
+      "y": 173,
       "w": 160,
       "h": 48
      },
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 217,
-     "code": 221,
-     "diff": 4,
      "allowed": null
     },
     {
@@ -16973,31 +16582,15 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 290,
-     "code": 294,
-     "diff": 4,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row",
      "figma": [
+      "-",
+      "-",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "국 국가기술표준원 이승훈 / 해외규제변경체크AI 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 359,
-     "code": 363,
-     "diff": 4,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -17010,48 +16603,20 @@
     },
     {
      "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 428,
-     "code": 432,
-     "diff": 4,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
+     "name": "project-row#4",
      "field": "h",
      "figma": 119,
-     "code": 143,
-     "diff": 24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "y",
-     "figma": 547,
-     "code": 575,
-     "diff": 28,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "h",
-     "figma": 71,
      "code": 99,
-     "diff": 28,
+     "diff": -20,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
-      "광",
-      "광양시 정솔현 / 온나라 업무통신 자동 발송기",
-      "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 한글 문서 편집 자동화 툴입니다. 단어 자간과 내어쓰기를 자동으로 맞추고, 다양한 서식을 한번에 적용하여 자동으로 편집해 줍니다.",
+      "-",
+      "-"
      ],
      "code": "마 마포구청 공혁준 / HWP_AutoDocFit 한글 문서 편집 자동화 툴입니다. 주제: ai document hwpx + 2개 더보기 9 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17060,19 +16625,28 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 618,
-     "code": 674,
-     "diff": 56,
+     "figma": 670,
+     "code": 650,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 91,
+     "code": 71,
+     "diff": -20,
+     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
-      "광",
-      "광양시 정솔현 / 공공깃랩 디스커버",
-      "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 법령·판례·결정문 등을 검색해 출처 기반 답변과 보고서 작성까지 지원함.",
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17081,28 +16655,18 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 689,
-     "code": 745,
-     "diff": 56,
+     "figma": 761,
+     "code": 721,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 71,
-     "code": 69,
-     "diff": -2,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#6",
      "figma": [
-      "경",
-      "경주시 이기영 / korean-law-mcp",
-      "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증",
-      "업데이트됨 2026. 10. 27."
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "전 전남광주통합특별시동구 김민성 / AI 기반 온나라 미분류 문서 자동배부 시스템 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17111,19 +16675,26 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 760,
-     "code": 814,
-     "diff": 54,
+     "figma": 830,
+     "code": 790,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 91,
+     "code": 71,
+     "diff": -20,
+     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
-      "경",
-      "경상남도 창원시 김우람 / cw-jennifer",
-      "API를 활용하여 JENNIFER 5 APM 데이터를 Claude Code로 분석해 느린 트랜잭션의 원인을 찾고, 조치 가이드를 받는 프로젝트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 31 24 업데이트",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17132,28 +16703,18 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 831,
-     "code": 885,
-     "diff": 54,
+     "figma": 921,
+     "code": 861,
+     "diff": -60,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "h",
-     "figma": 119,
-     "code": 69,
-     "diff": -50,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#8",
      "figma": [
-      "K",
-      "KISED / K-Startup MCP",
-      "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
-      "주제:"
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "남 남양주시 정현빈 / hyunbin 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17163,7 +16724,7 @@
      "name": "filter-search",
      "want": {
       "x": 1003,
-      "y": 234,
+      "y": 238,
       "w": 32,
       "h": 32
      },
@@ -17189,7 +16750,7 @@
   "G-01_1920_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -17244,9 +16805,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 809,
-     "code": 2083,
-     "diff": 1274,
+     "figma": 869,
+     "code": 2059,
+     "diff": 1190,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -17259,9 +16820,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 971,
-     "code": 2228,
-     "diff": 1257,
+     "figma": 1031,
+     "code": 2204,
+     "diff": 1173,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -17275,19 +16836,10 @@
      "name": "tabs",
      "want": {
       "x": 480,
-      "y": 169,
+      "y": 173,
       "w": 160,
       "h": 48
      },
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 217,
-     "code": 221,
-     "diff": 4,
      "allowed": null
     },
     {
@@ -17300,31 +16852,15 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 290,
-     "code": 294,
-     "diff": 4,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row",
      "figma": [
+      "-",
+      "-",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "국 국가기술표준원 이승훈 / 해외규제변경체크AI 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 359,
-     "code": 363,
-     "diff": 4,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -17337,48 +16873,20 @@
     },
     {
      "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 428,
-     "code": 432,
-     "diff": 4,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
+     "name": "project-row#4",
      "field": "h",
      "figma": 119,
-     "code": 143,
-     "diff": 24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "y",
-     "figma": 547,
-     "code": 575,
-     "diff": 28,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "h",
-     "figma": 71,
      "code": 99,
-     "diff": 28,
+     "diff": -20,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
-      "광",
-      "광양시 정솔현 / 온나라 업무통신 자동 발송기",
-      "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 한글 문서 편집 자동화 툴입니다. 단어 자간과 내어쓰기를 자동으로 맞추고, 다양한 서식을 한번에 적용하여 자동으로 편집해 줍니다.",
+      "-",
+      "-"
      ],
      "code": "마 마포구청 공혁준 / HWP_AutoDocFit 한글 문서 편집 자동화 툴입니다. 주제: ai document hwpx + 2개 더보기 9 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17387,19 +16895,28 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 618,
-     "code": 674,
-     "diff": 56,
+     "figma": 670,
+     "code": 650,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 91,
+     "code": 71,
+     "diff": -20,
+     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
-      "광",
-      "광양시 정솔현 / 공공깃랩 디스커버",
-      "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 법령·판례·결정문 등을 검색해 출처 기반 답변과 보고서 작성까지 지원함.",
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17408,28 +16925,18 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 689,
-     "code": 745,
-     "diff": 56,
+     "figma": 761,
+     "code": 721,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 71,
-     "code": 69,
-     "diff": -2,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#6",
      "figma": [
-      "경",
-      "경주시 이기영 / korean-law-mcp",
-      "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증",
-      "업데이트됨 2026. 10. 27."
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "전 전남광주통합특별시동구 김민성 / AI 기반 온나라 미분류 문서 자동배부 시스템 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17438,19 +16945,26 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 760,
-     "code": 814,
-     "diff": 54,
+     "figma": 830,
+     "code": 790,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 91,
+     "code": 71,
+     "diff": -20,
+     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
-      "경",
-      "경상남도 창원시 김우람 / cw-jennifer",
-      "API를 활용하여 JENNIFER 5 APM 데이터를 Claude Code로 분석해 느린 트랜잭션의 원인을 찾고, 조치 가이드를 받는 프로젝트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 31 24 업데이트",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17459,28 +16973,18 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 831,
-     "code": 885,
-     "diff": 54,
+     "figma": 921,
+     "code": 861,
+     "diff": -60,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "h",
-     "figma": 99,
-     "code": 69,
-     "diff": -30,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#8",
      "figma": [
-      "K",
-      "KISED / K-Startup MCP",
-      "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
-      "주제:"
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "남 남양주시 정현빈 / hyunbin 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17490,7 +16994,7 @@
      "name": "filter-search",
      "want": {
       "x": 1299,
-      "y": 234,
+      "y": 238,
       "w": 32,
       "h": 32
      },
@@ -17516,7 +17020,7 @@
   "G-01_1920_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -17571,9 +17075,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 809,
-     "code": 2083,
-     "diff": 1274,
+     "figma": 869,
+     "code": 2059,
+     "diff": 1190,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -17586,9 +17090,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 971,
-     "code": 2228,
-     "diff": 1257,
+     "figma": 1031,
+     "code": 2204,
+     "diff": 1173,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -17602,19 +17106,10 @@
      "name": "tabs",
      "want": {
       "x": 480,
-      "y": 169,
+      "y": 173,
       "w": 160,
       "h": 48
      },
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 217,
-     "code": 221,
-     "diff": 4,
      "allowed": null
     },
     {
@@ -17627,31 +17122,15 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 290,
-     "code": 294,
-     "diff": 4,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row",
      "figma": [
+      "-",
+      "-",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "국 국가기술표준원 이승훈 / 해외규제변경체크AI 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 359,
-     "code": 363,
-     "diff": 4,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -17664,48 +17143,20 @@
     },
     {
      "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 428,
-     "code": 432,
-     "diff": 4,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
+     "name": "project-row#4",
      "field": "h",
      "figma": 119,
-     "code": 143,
-     "diff": 24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "y",
-     "figma": 547,
-     "code": 575,
-     "diff": 28,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "h",
-     "figma": 71,
      "code": 99,
-     "diff": 28,
+     "diff": -20,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
-      "광",
-      "광양시 정솔현 / 온나라 업무통신 자동 발송기",
-      "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 한글 문서 편집 자동화 툴입니다. 단어 자간과 내어쓰기를 자동으로 맞추고, 다양한 서식을 한번에 적용하여 자동으로 편집해 줍니다.",
+      "-",
+      "-"
      ],
      "code": "마 마포구청 공혁준 / HWP_AutoDocFit 한글 문서 편집 자동화 툴입니다. 주제: ai document hwpx + 2개 더보기 9 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17714,19 +17165,28 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 618,
-     "code": 674,
-     "diff": 56,
+     "figma": 670,
+     "code": 650,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 91,
+     "code": 71,
+     "diff": -20,
+     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
-      "광",
-      "광양시 정솔현 / 공공깃랩 디스커버",
-      "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 법령·판례·결정문 등을 검색해 출처 기반 답변과 보고서 작성까지 지원함.",
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17735,28 +17195,18 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 689,
-     "code": 745,
-     "diff": 56,
+     "figma": 761,
+     "code": 721,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 71,
-     "code": 69,
-     "diff": -2,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#6",
      "figma": [
-      "경",
-      "경주시 이기영 / korean-law-mcp",
-      "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증",
-      "업데이트됨 2026. 10. 27."
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "전 전남광주통합특별시동구 김민성 / AI 기반 온나라 미분류 문서 자동배부 시스템 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17765,19 +17215,26 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 760,
-     "code": 814,
-     "diff": 54,
+     "figma": 830,
+     "code": 790,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 91,
+     "code": 71,
+     "diff": -20,
+     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
-      "경",
-      "경상남도 창원시 김우람 / cw-jennifer",
-      "API를 활용하여 JENNIFER 5 APM 데이터를 Claude Code로 분석해 느린 트랜잭션의 원인을 찾고, 조치 가이드를 받는 프로젝트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 31 24 업데이트",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17786,28 +17243,18 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 831,
-     "code": 885,
-     "diff": 54,
+     "figma": 921,
+     "code": 861,
+     "diff": -60,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "h",
-     "figma": 99,
-     "code": 69,
-     "diff": -30,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#8",
      "figma": [
-      "K",
-      "KISED / K-Startup MCP",
-      "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
-      "주제:"
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "남 남양주시 정현빈 / hyunbin 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -17817,7 +17264,7 @@
      "name": "filter-search",
      "want": {
       "x": 1299,
-      "y": 234,
+      "y": 238,
       "w": 32,
       "h": 32
      },
@@ -17843,7 +17290,7 @@
   "G-01_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 8,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -17859,9 +17306,9 @@
      "kind": "box",
      "name": "body",
      "field": "h",
-     "figma": 1816,
+     "figma": 1874,
      "code": 1328,
-     "diff": -488,
+     "diff": -546,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -17904,9 +17351,9 @@
      "kind": "box",
      "name": "content-panel",
      "field": "h",
-     "figma": 1816,
+     "figma": 1874,
      "code": 1328,
-     "diff": -488,
+     "diff": -546,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -17964,9 +17411,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 1423,
-     "code": 4033,
-     "diff": 2610,
+     "figma": 1481,
+     "code": 3825,
+     "diff": 2344,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -18009,9 +17456,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1585,
-     "code": 4178,
-     "diff": 2593,
+     "figma": 1643,
+     "code": 3970,
+     "diff": 2327,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -18025,7 +17472,7 @@
      "name": "tabs",
      "want": {
       "x": 16,
-      "y": 193,
+      "y": 197,
       "w": 160,
       "h": 48
      },
@@ -18035,9 +17482,9 @@
      "kind": "box",
      "name": "gl-filter",
      "field": "y",
-     "figma": 241,
+     "figma": 245,
      "code": 213,
-     "diff": -28,
+     "diff": -32,
      "allowed": null
     },
     {
@@ -18062,24 +17509,17 @@
      "kind": "box",
      "name": "project-row",
      "field": "y",
-     "figma": 408,
+     "figma": 412,
      "code": 366,
-     "diff": -42,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row",
-     "field": "h",
-     "figma": 123,
-     "code": 117,
-     "diff": -6,
+     "diff": -46,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row",
      "figma": [
+      "-",
+      "-",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "국 국가기술표준원 이승훈 / 해외규제변경체크AI 0 0 31 24 업데이트됨 1일 전",
@@ -18111,18 +17551,18 @@
      "kind": "box",
      "name": "project-row#2",
      "field": "y",
-     "figma": 531,
+     "figma": 529,
      "code": 483,
-     "diff": -48,
+     "diff": -46,
      "allowed": null
     },
     {
      "kind": "box",
      "name": "project-row#2",
      "field": "h",
-     "figma": 99,
+     "figma": 161,
      "code": 139,
-     "diff": 40,
+     "diff": -22,
      "allowed": null
     },
     {
@@ -18160,18 +17600,18 @@
      "kind": "box",
      "name": "project-row#3",
      "field": "y",
-     "figma": 630,
+     "figma": 690,
      "code": 622,
-     "diff": -8,
+     "diff": -68,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "box",
      "name": "project-row#3",
      "field": "h",
-     "figma": 171,
-     "code": 241,
-     "diff": 70,
+     "figma": 189,
+     "code": 217,
+     "diff": 28,
      "allowed": null
     },
     {
@@ -18200,28 +17640,27 @@
      "kind": "box",
      "name": "project-row#4",
      "field": "y",
-     "figma": 801,
-     "code": 863,
-     "diff": 62,
+     "figma": 879,
+     "code": 839,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "box",
      "name": "project-row#4",
      "field": "h",
-     "figma": 143,
+     "figma": 189,
      "code": 197,
-     "diff": 54,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
-      "광",
-      "광양시 정솔현 / 온나라 업무통신 자동 발송기",
-      "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 한글 문서 편집 자동화 툴입니다. 단어 자간과 내어쓰기를 자동으로 맞추고, 다양한 서식을 한번에 적용하여 자동으로 편집해 줍니다.",
+      "-",
+      "-"
      ],
      "code": "마 마포구청 공혁준 / HWP_AutoDocFit 한글 문서 편집 자동화 툴입니다. 주제: ai document hwpx + 2개 더보기 9 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -18252,28 +17691,19 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 944,
-     "code": 1060,
-     "diff": 116,
+     "figma": 1068,
+     "code": 1036,
+     "diff": -32,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#5",
-     "field": "h",
-     "figma": 143,
-     "code": 139,
-     "diff": -4,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
-      "광",
-      "광양시 정솔현 / 공공깃랩 디스커버",
-      "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 법령·판례·결정문 등을 검색해 출처 기반 답변과 보고서 작성까지 지원함.",
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -18304,28 +17734,18 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 1087,
-     "code": 1199,
-     "diff": 112,
+     "figma": 1207,
+     "code": 1175,
+     "diff": -32,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 143,
-     "code": 139,
-     "diff": -4,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#6",
      "figma": [
-      "경",
-      "경주시 이기영 / korean-law-mcp",
-      "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증",
-      "업데이트됨 2026. 10. 27."
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "전 전남광주통합특별시동구 김민성 / AI 기반 온나라 미분류 문서 자동배부 시스템 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -18356,30 +17776,19 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 1230,
-     "code": 1338,
-     "diff": 108,
+     "figma": 1346,
+     "code": 1314,
+     "diff": -32,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#7",
-     "field": "h",
-     "figma": 143,
-     "code": 185,
-     "diff": 42,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
-      "경",
-      "경상남도 창원시 김우람 / cw-jennifer",
-      "API를 활용하여 JENNIFER 5 APM 데이터를 Claude Code로 분석해 느린 트랜잭션의 원인을 찾고, 조치 가이드를 받는 프로젝트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "업데이트됨 2026. 10. 30."
      ],
-     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 더보기 24 0 31 24 ",
+     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 31 24 업데이트",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18408,28 +17817,27 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 1373,
-     "code": 1523,
-     "diff": 150,
+     "figma": 1507,
+     "code": 1475,
+     "diff": -32,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "box",
      "name": "project-row#8",
      "field": "h",
-     "figma": 171,
+     "figma": 95,
      "code": 105,
-     "diff": -66,
+     "diff": 10,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#8",
      "figma": [
-      "K",
-      "KISED / K-Startup MCP",
-      "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
-      "주제:"
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "남 남양주시 정현빈 / hyunbin 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -18461,7 +17869,7 @@
      "name": "filter-search",
      "want": {
       "x": 295,
-      "y": 265,
+      "y": 269,
       "w": 32,
       "h": 32
      },
@@ -18487,7 +17895,7 @@
   "G-01_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 8,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -18503,9 +17911,9 @@
      "kind": "box",
      "name": "body",
      "field": "h",
-     "figma": 1816,
+     "figma": 1874,
      "code": 1328,
-     "diff": -488,
+     "diff": -546,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -18548,9 +17956,9 @@
      "kind": "box",
      "name": "content-panel",
      "field": "h",
-     "figma": 1816,
+     "figma": 1874,
      "code": 1328,
-     "diff": -488,
+     "diff": -546,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -18608,9 +18016,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 1423,
-     "code": 4033,
-     "diff": 2610,
+     "figma": 1481,
+     "code": 3825,
+     "diff": 2344,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -18653,9 +18061,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1585,
-     "code": 4178,
-     "diff": 2593,
+     "figma": 1643,
+     "code": 3970,
+     "diff": 2327,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -18669,7 +18077,7 @@
      "name": "tabs",
      "want": {
       "x": 16,
-      "y": 193,
+      "y": 197,
       "w": 160,
       "h": 48
      },
@@ -18679,9 +18087,9 @@
      "kind": "box",
      "name": "gl-filter",
      "field": "y",
-     "figma": 241,
+     "figma": 245,
      "code": 213,
-     "diff": -28,
+     "diff": -32,
      "allowed": null
     },
     {
@@ -18706,24 +18114,17 @@
      "kind": "box",
      "name": "project-row",
      "field": "y",
-     "figma": 408,
+     "figma": 412,
      "code": 366,
-     "diff": -42,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row",
-     "field": "h",
-     "figma": 123,
-     "code": 117,
-     "diff": -6,
+     "diff": -46,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row",
      "figma": [
+      "-",
+      "-",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "국 국가기술표준원 이승훈 / 해외규제변경체크AI 0 0 31 24 업데이트됨 1일 전",
@@ -18755,18 +18156,18 @@
      "kind": "box",
      "name": "project-row#2",
      "field": "y",
-     "figma": 531,
+     "figma": 529,
      "code": 483,
-     "diff": -48,
+     "diff": -46,
      "allowed": null
     },
     {
      "kind": "box",
      "name": "project-row#2",
      "field": "h",
-     "figma": 99,
+     "figma": 161,
      "code": 139,
-     "diff": 40,
+     "diff": -22,
      "allowed": null
     },
     {
@@ -18804,18 +18205,18 @@
      "kind": "box",
      "name": "project-row#3",
      "field": "y",
-     "figma": 630,
+     "figma": 690,
      "code": 622,
-     "diff": -8,
+     "diff": -68,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "box",
      "name": "project-row#3",
      "field": "h",
-     "figma": 171,
-     "code": 241,
-     "diff": 70,
+     "figma": 189,
+     "code": 217,
+     "diff": 28,
      "allowed": null
     },
     {
@@ -18844,28 +18245,27 @@
      "kind": "box",
      "name": "project-row#4",
      "field": "y",
-     "figma": 801,
-     "code": 863,
-     "diff": 62,
+     "figma": 879,
+     "code": 839,
+     "diff": -40,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "box",
      "name": "project-row#4",
      "field": "h",
-     "figma": 143,
+     "figma": 189,
      "code": 197,
-     "diff": 54,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
-      "광",
-      "광양시 정솔현 / 온나라 업무통신 자동 발송기",
-      "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 한글 문서 편집 자동화 툴입니다. 단어 자간과 내어쓰기를 자동으로 맞추고, 다양한 서식을 한번에 적용하여 자동으로 편집해 줍니다.",
+      "-",
+      "-"
      ],
      "code": "마 마포구청 공혁준 / HWP_AutoDocFit 한글 문서 편집 자동화 툴입니다. 주제: ai document hwpx + 2개 더보기 9 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -18896,28 +18296,19 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 944,
-     "code": 1060,
-     "diff": 116,
+     "figma": 1068,
+     "code": 1036,
+     "diff": -32,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#5",
-     "field": "h",
-     "figma": 143,
-     "code": 139,
-     "diff": -4,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
-      "광",
-      "광양시 정솔현 / 공공깃랩 디스커버",
-      "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 법령·판례·결정문 등을 검색해 출처 기반 답변과 보고서 작성까지 지원함.",
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -18948,28 +18339,18 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 1087,
-     "code": 1199,
-     "diff": 112,
+     "figma": 1207,
+     "code": 1175,
+     "diff": -32,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 143,
-     "code": 139,
-     "diff": -4,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#6",
      "figma": [
-      "경",
-      "경주시 이기영 / korean-law-mcp",
-      "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증",
-      "업데이트됨 2026. 10. 27."
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "전 전남광주통합특별시동구 김민성 / AI 기반 온나라 미분류 문서 자동배부 시스템 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19000,30 +18381,19 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 1230,
-     "code": 1338,
-     "diff": 108,
+     "figma": 1346,
+     "code": 1314,
+     "diff": -32,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#7",
-     "field": "h",
-     "figma": 143,
-     "code": 185,
-     "diff": 42,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
-      "경",
-      "경상남도 창원시 김우람 / cw-jennifer",
-      "API를 활용하여 JENNIFER 5 APM 데이터를 Claude Code로 분석해 느린 트랜잭션의 원인을 찾고, 조치 가이드를 받는 프로젝트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "업데이트됨 2026. 10. 30."
      ],
-     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 더보기 24 0 31 24 ",
+     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 31 24 업데이트",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -19052,28 +18422,27 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 1373,
-     "code": 1523,
-     "diff": 150,
+     "figma": 1507,
+     "code": 1475,
+     "diff": -32,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "box",
      "name": "project-row#8",
      "field": "h",
-     "figma": 171,
+     "figma": 95,
      "code": 105,
-     "diff": -66,
+     "diff": 10,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#8",
      "figma": [
-      "K",
-      "KISED / K-Startup MCP",
-      "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
-      "주제:"
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "남 남양주시 정현빈 / hyunbin 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19105,7 +18474,7 @@
      "name": "filter-search",
      "want": {
       "x": 295,
-      "y": 265,
+      "y": 269,
       "w": 32,
       "h": 32
      },
@@ -19131,7 +18500,7 @@
   "G-01_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 1,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -19174,9 +18543,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 909,
-     "code": 2351,
-     "diff": 1442,
+     "figma": 869,
+     "code": 2183,
+     "diff": 1314,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -19189,9 +18558,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1071,
-     "code": 2496,
-     "diff": 1425,
+     "figma": 1031,
+     "code": 2328,
+     "diff": 1297,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19205,19 +18574,10 @@
      "name": "tabs",
      "want": {
       "x": 32,
-      "y": 169,
+      "y": 173,
       "w": 160,
       "h": 48
      },
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 217,
-     "code": 221,
-     "diff": 4,
      "allowed": null
     },
     {
@@ -19230,31 +18590,15 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 290,
-     "code": 294,
-     "diff": 4,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row",
      "figma": [
+      "-",
+      "-",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "국 국가기술표준원 이승훈 / 해외규제변경체크AI 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 359,
-     "code": 363,
-     "diff": 4,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -19267,48 +18611,20 @@
     },
     {
      "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 428,
-     "code": 432,
-     "diff": 4,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
+     "name": "project-row#4",
      "field": "h",
      "figma": 119,
-     "code": 143,
-     "diff": 24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "y",
-     "figma": 547,
-     "code": 575,
-     "diff": 28,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "h",
-     "figma": 91,
      "code": 99,
-     "diff": 8,
+     "diff": -20,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
-      "광",
-      "광양시 정솔현 / 온나라 업무통신 자동 발송기",
-      "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 한글 문서 편집 자동화 툴입니다. 단어 자간과 내어쓰기를 자동으로 맞추고, 다양한 서식을 한번에 적용하여 자동으로 편집해 줍니다.",
+      "-",
+      "-"
      ],
      "code": "마 마포구청 공혁준 / HWP_AutoDocFit 한글 문서 편집 자동화 툴입니다. 주제: ai document hwpx + 2개 더보기 9 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19317,19 +18633,19 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 638,
-     "code": 674,
-     "diff": 36,
+     "figma": 670,
+     "code": 650,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
-      "광",
-      "광양시 정솔현 / 공공깃랩 디스커버",
-      "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 법령·판례·결정문 등을 검색해 출처 기반 답변과 보고서 작성까지 지원함.",
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19338,28 +18654,18 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 729,
-     "code": 765,
-     "diff": 36,
+     "figma": 761,
+     "code": 741,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 91,
-     "code": 69,
-     "diff": -22,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#6",
      "figma": [
-      "경",
-      "경주시 이기영 / korean-law-mcp",
-      "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증",
-      "업데이트됨 2026. 10. 27."
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "전 전남광주통합특별시동구 김민성 / AI 기반 온나라 미분류 문서 자동배부 시스템 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19368,19 +18674,17 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 820,
-     "code": 834,
-     "diff": 14,
+     "figma": 830,
+     "code": 810,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
-      "경",
-      "경상남도 창원시 김우람 / cw-jennifer",
-      "API를 활용하여 JENNIFER 5 APM 데이터를 Claude Code로 분석해 느린 트랜잭션의 원인을 찾고, 조치 가이드를 받는 프로젝트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 31 24 업데이트",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19389,28 +18693,18 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 911,
-     "code": 925,
-     "diff": 14,
+     "figma": 921,
+     "code": 901,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "h",
-     "figma": 119,
-     "code": 69,
-     "diff": -50,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#8",
      "figma": [
-      "K",
-      "KISED / K-Startup MCP",
-      "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
-      "주제:"
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "남 남양주시 정현빈 / hyunbin 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19420,7 +18714,7 @@
      "name": "filter-search",
      "want": {
       "x": 355,
-      "y": 234,
+      "y": 238,
       "w": 32,
       "h": 32
      },
@@ -19446,7 +18740,7 @@
   "G-01_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 1,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -19489,9 +18783,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 909,
-     "code": 2351,
-     "diff": 1442,
+     "figma": 869,
+     "code": 2183,
+     "diff": 1314,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -19504,9 +18798,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1071,
-     "code": 2496,
-     "diff": 1425,
+     "figma": 1031,
+     "code": 2328,
+     "diff": 1297,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19520,19 +18814,10 @@
      "name": "tabs",
      "want": {
       "x": 32,
-      "y": 169,
+      "y": 173,
       "w": 160,
       "h": 48
      },
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 217,
-     "code": 221,
-     "diff": 4,
      "allowed": null
     },
     {
@@ -19545,31 +18830,15 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 290,
-     "code": 294,
-     "diff": 4,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row",
      "figma": [
+      "-",
+      "-",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "국 국가기술표준원 이승훈 / 해외규제변경체크AI 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 359,
-     "code": 363,
-     "diff": 4,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -19582,48 +18851,20 @@
     },
     {
      "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 428,
-     "code": 432,
-     "diff": 4,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
+     "name": "project-row#4",
      "field": "h",
      "figma": 119,
-     "code": 143,
-     "diff": 24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "y",
-     "figma": 547,
-     "code": 575,
-     "diff": 28,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "h",
-     "figma": 91,
      "code": 99,
-     "diff": 8,
+     "diff": -20,
      "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#4",
      "figma": [
-      "광",
-      "광양시 정솔현 / 온나라 업무통신 자동 발송기",
-      "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 한글 문서 편집 자동화 툴입니다. 단어 자간과 내어쓰기를 자동으로 맞추고, 다양한 서식을 한번에 적용하여 자동으로 편집해 줍니다.",
+      "-",
+      "-"
      ],
      "code": "마 마포구청 공혁준 / HWP_AutoDocFit 한글 문서 편집 자동화 툴입니다. 주제: ai document hwpx + 2개 더보기 9 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19632,19 +18873,19 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 638,
-     "code": 674,
-     "diff": 36,
+     "figma": 670,
+     "code": 650,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
-      "광",
-      "광양시 정솔현 / 공공깃랩 디스커버",
-      "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "[공공행정] 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 법령·판례·결정문 등을 검색해 출처 기반 답변과 보고서 작성까지 지원함.",
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19653,28 +18894,18 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 729,
-     "code": 765,
-     "diff": 36,
+     "figma": 761,
+     "code": 741,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "h",
-     "figma": 91,
-     "code": 69,
-     "diff": -22,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#6",
      "figma": [
-      "경",
-      "경주시 이기영 / korean-law-mcp",
-      "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버. 법령·판례·조례 검색과 인용 검증",
-      "업데이트됨 2026. 10. 27."
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "전 전남광주통합특별시동구 김민성 / AI 기반 온나라 미분류 문서 자동배부 시스템 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19683,19 +18914,17 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 820,
-     "code": 834,
-     "diff": 14,
+     "figma": 830,
+     "code": 810,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
-      "경",
-      "경상남도 창원시 김우람 / cw-jennifer",
-      "API를 활용하여 JENNIFER 5 APM 데이터를 Claude Code로 분석해 느린 트랜잭션의 원인을 찾고, 조치 가이드를 받는 프로젝트입니다.",
-      "업데이트됨 2026. 10. 27."
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 31 24 업데이트",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19704,28 +18933,18 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 911,
-     "code": 925,
-     "diff": 14,
+     "figma": 921,
+     "code": 901,
+     "diff": -20,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "h",
-     "figma": 119,
-     "code": 69,
-     "diff": -50,
-     "allowed": null
     },
     {
      "kind": "text",
      "name": "project-row#8",
      "figma": [
-      "K",
-      "KISED / K-Startup MCP",
-      "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
-      "주제:"
+      "-",
+      "-",
+      "업데이트됨 2026. 10. 30."
      ],
      "code": "남 남양주시 정현빈 / hyunbin 0 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
@@ -19735,7 +18954,7 @@
      "name": "filter-search",
      "want": {
       "x": 355,
-      "y": 234,
+      "y": 238,
       "w": 32,
       "h": 32
      },
@@ -19761,7 +18980,7 @@
   "G-02_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 5,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -19778,6 +18997,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -19820,6 +19040,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -19859,8 +19080,8 @@
      "name": "main",
      "field": "h",
      "figma": 1011,
-     "code": 373,
-     "diff": -638,
+     "code": 329,
+     "diff": -682,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -19874,6 +19095,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -19910,7 +19132,7 @@
      "name": "filters",
      "want": {
       "x": 40,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -19921,7 +19143,7 @@
      "name": "results",
      "want": {
       "x": 320,
-      "y": 161,
+      "y": 177,
       "w": 664,
       "h": 273
      },
@@ -19929,20 +19151,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row",
-     "field": "h",
-     "figma": 91,
-     "code": 115,
-     "diff": 24,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 883,
+     "code": 955,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -19950,19 +19163,11 @@
      "name": "project-row",
      "figma": [
       "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "31",
       "업데이트됨 2026. 10. 30."
      ],
-     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 더보기 24 0 - 24 업",
+     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 - 24 업데이트됨",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 252,
-     "code": 288,
-     "diff": 36,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -19972,24 +19177,6 @@
      ],
      "code": "서 서울특별시 광진구 류승인 / schoolinfo-mcp 학교알리미 공시정보 MCP 서버 + CLI — 학부모가 내 아이 학교의 급식·학생수·수행평가 계획을 쉽게 확인 (OpenAPI + kordoc hwp 파싱)",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 343,
-     "code": 379,
-     "diff": 36,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "h",
-     "figma": 91,
-     "code": 115,
-     "diff": 24,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -20005,7 +19192,7 @@
   "G-02_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 5,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -20022,6 +19209,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20064,6 +19252,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20103,8 +19292,8 @@
      "name": "main",
      "field": "h",
      "figma": 1011,
-     "code": 373,
-     "diff": -638,
+     "code": 329,
+     "diff": -682,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -20118,6 +19307,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20154,7 +19344,7 @@
      "name": "filters",
      "want": {
       "x": 40,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -20165,7 +19355,7 @@
      "name": "results",
      "want": {
       "x": 320,
-      "y": 161,
+      "y": 177,
       "w": 664,
       "h": 273
      },
@@ -20173,20 +19363,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row",
-     "field": "h",
-     "figma": 91,
-     "code": 115,
-     "diff": 24,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 883,
+     "code": 955,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -20194,19 +19375,11 @@
      "name": "project-row",
      "figma": [
       "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "31",
       "업데이트됨 2026. 10. 30."
      ],
-     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 더보기 24 0 - 24 업",
+     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 - 24 업데이트됨",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 252,
-     "code": 288,
-     "diff": 36,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -20216,24 +19389,6 @@
      ],
      "code": "서 서울특별시 광진구 류승인 / schoolinfo-mcp 학교알리미 공시정보 MCP 서버 + CLI — 학부모가 내 아이 학교의 급식·학생수·수행평가 계획을 쉽게 확인 (OpenAPI + kordoc hwp 파싱)",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 343,
-     "code": 379,
-     "diff": 36,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "h",
-     "figma": 91,
-     "code": 115,
-     "diff": 24,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -20249,7 +19404,7 @@
   "G-02_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 3,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -20266,6 +19421,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20308,6 +19464,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20346,9 +19503,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 398,
-     "code": 325,
-     "diff": -73,
+     "figma": 414,
+     "code": 329,
+     "diff": -85,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -20362,6 +19519,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20398,7 +19556,7 @@
      "name": "filters",
      "want": {
       "x": 120,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -20409,7 +19567,7 @@
      "name": "results",
      "want": {
       "x": 400,
-      "y": 161,
+      "y": 177,
       "w": 920,
       "h": 273
      },
@@ -20417,11 +19575,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 1219,
+     "code": 1291,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -20429,19 +19587,11 @@
      "name": "project-row",
      "figma": [
       "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "31",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 - 24 업데이트됨",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 252,
-     "code": 264,
-     "diff": 12,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -20451,15 +19601,6 @@
      ],
      "code": "서 서울특별시 광진구 류승인 / schoolinfo-mcp 학교알리미 공시정보 MCP 서버 + CLI — 학부모가 내 아이 학교의 급식·학생수·수행평가 계획을 쉽게 확인 (OpenAPI + kordoc hwp 파싱)",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 343,
-     "code": 355,
-     "diff": 12,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -20475,7 +19616,7 @@
   "G-02_1440_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 3,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -20492,6 +19633,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20534,6 +19676,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20572,9 +19715,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 398,
-     "code": 325,
-     "diff": -73,
+     "figma": 414,
+     "code": 329,
+     "diff": -85,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -20588,6 +19731,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20624,7 +19768,7 @@
      "name": "filters",
      "want": {
       "x": 120,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -20635,7 +19779,7 @@
      "name": "results",
      "want": {
       "x": 400,
-      "y": 161,
+      "y": 177,
       "w": 920,
       "h": 273
      },
@@ -20643,11 +19787,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 1219,
+     "code": 1291,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -20655,19 +19799,11 @@
      "name": "project-row",
      "figma": [
       "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "31",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 - 24 업데이트됨",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 252,
-     "code": 264,
-     "diff": 12,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -20677,15 +19813,6 @@
      ],
      "code": "서 서울특별시 광진구 류승인 / schoolinfo-mcp 학교알리미 공시정보 MCP 서버 + CLI — 학부모가 내 아이 학교의 급식·학생수·수행평가 계획을 쉽게 확인 (OpenAPI + kordoc hwp 파싱)",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 343,
-     "code": 355,
-     "diff": 12,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -20701,7 +19828,7 @@
   "G-02_1920_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 3,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -20718,6 +19845,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20760,6 +19888,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20798,9 +19927,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 398,
-     "code": 325,
-     "diff": -73,
+     "figma": 414,
+     "code": 329,
+     "diff": -85,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -20814,6 +19943,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20850,7 +19980,7 @@
      "name": "filters",
      "want": {
       "x": 360,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -20861,7 +19991,7 @@
      "name": "results",
      "want": {
       "x": 640,
-      "y": 161,
+      "y": 177,
       "w": 920,
       "h": 273
      },
@@ -20869,11 +19999,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 1459,
+     "code": 1531,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -20881,19 +20011,11 @@
      "name": "project-row",
      "figma": [
       "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "31",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 - 24 업데이트됨",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 252,
-     "code": 264,
-     "diff": 12,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -20903,15 +20025,6 @@
      ],
      "code": "서 서울특별시 광진구 류승인 / schoolinfo-mcp 학교알리미 공시정보 MCP 서버 + CLI — 학부모가 내 아이 학교의 급식·학생수·수행평가 계획을 쉽게 확인 (OpenAPI + kordoc hwp 파싱)",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 343,
-     "code": 355,
-     "diff": 12,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -20927,7 +20040,7 @@
   "G-02_1920_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 3,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -20944,6 +20057,7 @@
      "name": "body",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -20986,6 +20100,7 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -21024,9 +20139,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 398,
-     "code": 325,
-     "diff": -73,
+     "figma": 414,
+     "code": 329,
+     "diff": -85,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -21040,6 +20155,7 @@
      "name": "main",
      "figma": [
       "arrow-down",
+      "close",
       "ellipsis-vertical",
       "folder",
       "fork",
@@ -21076,7 +20192,7 @@
      "name": "filters",
      "want": {
       "x": 360,
-      "y": 161,
+      "y": 177,
       "w": 264,
       "h": 358
      },
@@ -21087,7 +20203,7 @@
      "name": "results",
      "want": {
       "x": 640,
-      "y": 161,
+      "y": 177,
       "w": 920,
       "h": 273
      },
@@ -21095,11 +20211,11 @@
     },
     {
      "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 161,
-     "code": 173,
-     "diff": 12,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 1459,
+     "code": 1531,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -21107,19 +20223,11 @@
      "name": "project-row",
      "figma": [
       "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "31",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 - 24 업데이트됨",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 252,
-     "code": 264,
-     "diff": 12,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -21129,15 +20237,6 @@
      ],
      "code": "서 서울특별시 광진구 류승인 / schoolinfo-mcp 학교알리미 공시정보 MCP 서버 + CLI — 학부모가 내 아이 학교의 급식·학생수·수행평가 계획을 쉽게 확인 (OpenAPI + kordoc hwp 파싱)",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 343,
-     "code": 355,
-     "diff": 12,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -21153,7 +20252,7 @@
   "G-02_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 11,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 1,
@@ -21163,30 +20262,13 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 16,
+   "allowed": 12,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "y",
-     "figma": 144,
-     "code": 72,
-     "diff": -72,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 830,
-     "code": 973,
-     "diff": 143,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -21214,24 +20296,6 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "y",
-     "figma": 144,
-     "code": 72,
-     "diff": -72,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 830,
-     "code": 973,
-     "diff": 143,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -21249,6 +20313,7 @@
      "kind": "icon",
      "name": "content-panel",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -21270,15 +20335,6 @@
       "star"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
-    },
-    {
-     "kind": "box",
-     "name": "breadcrumb",
-     "field": "y",
-     "figma": 153,
-     "code": 81,
-     "diff": -72,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -21290,24 +20346,6 @@
      "allowed": "코드 경로 줄은 글자 폭, Figma는 컨테이너 폭(FILL)"
     },
     {
-     "kind": "box",
-     "name": "main",
-     "field": "y",
-     "figma": 193,
-     "code": 121,
-     "diff": -72,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "main",
-     "field": "h",
-     "figma": 437,
-     "code": 647,
-     "diff": 210,
-     "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
      "kind": "shape",
      "name": "main",
      "detail": "간격 8→16",
@@ -21317,6 +20355,7 @@
      "kind": "icon",
      "name": "main",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -21338,15 +20377,6 @@
       "star"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 671,
-     "code": 792,
-     "diff": 121,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -21359,19 +20389,19 @@
      "name": "results",
      "want": {
       "x": 16,
-      "y": 285,
+      "y": 213,
       "w": 328,
-      "h": 345
+      "h": 483
      },
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "search-filter",
-     "field": "y",
-     "figma": 237,
-     "code": 165,
-     "diff": -72,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 243,
+     "code": 315,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -21383,31 +20413,14 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 285,
-     "code": 213,
-     "diff": -72,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row",
-     "field": "h",
-     "figma": 115,
-     "code": 185,
-     "diff": 70,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row",
      "figma": [
       "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "31",
       "업데이트됨 2026. 10. 30."
      ],
-     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 더보기 24 0 - 24 업",
+     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 - 24 업데이트됨",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -21430,24 +20443,6 @@
       "merge-request",
       "star"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 400,
-     "code": 398,
-     "diff": -2,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "h",
-     "figma": 115,
-     "code": 185,
-     "diff": 70,
      "allowed": null
     },
     {
@@ -21479,24 +20474,6 @@
       "merge-request",
       "star"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 515,
-     "code": 583,
-     "diff": 68,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "h",
-     "figma": 115,
-     "code": 185,
-     "diff": 70,
      "allowed": null
     },
     {
@@ -21535,7 +20512,7 @@
   "G-02_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 11,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 1,
@@ -21545,30 +20522,13 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 16,
+   "allowed": 12,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "y",
-     "figma": 144,
-     "code": 72,
-     "diff": -72,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 830,
-     "code": 973,
-     "diff": 143,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -21598,24 +20558,6 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "y",
-     "figma": 144,
-     "code": 72,
-     "diff": -72,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 830,
-     "code": 973,
-     "diff": 143,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
-    },
-    {
      "kind": "shape",
      "name": "content-panel",
      "detail": "모서리 0→12",
@@ -21631,6 +20573,7 @@
      "kind": "icon",
      "name": "content-panel",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -21652,15 +20595,6 @@
       "star"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
-    },
-    {
-     "kind": "box",
-     "name": "breadcrumb",
-     "field": "y",
-     "figma": 153,
-     "code": 81,
-     "diff": -72,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -21672,24 +20606,6 @@
      "allowed": "코드 경로 줄은 글자 폭, Figma는 컨테이너 폭(FILL)"
     },
     {
-     "kind": "box",
-     "name": "main",
-     "field": "y",
-     "figma": 193,
-     "code": 121,
-     "diff": -72,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "main",
-     "field": "h",
-     "figma": 437,
-     "code": 647,
-     "diff": 210,
-     "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
      "kind": "shape",
      "name": "main",
      "detail": "간격 8→16",
@@ -21699,6 +20615,7 @@
      "kind": "icon",
      "name": "main",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -21720,15 +20637,6 @@
       "star"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 671,
-     "code": 792,
-     "diff": 121,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -21741,19 +20649,19 @@
      "name": "results",
      "want": {
       "x": 16,
-      "y": 285,
+      "y": 213,
       "w": 328,
-      "h": 345
+      "h": 483
      },
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "search-filter",
-     "field": "y",
-     "figma": 237,
-     "code": 165,
-     "diff": -72,
+     "name": "search-clear",
+     "field": "x",
+     "figma": 243,
+     "code": 315,
+     "diff": 72,
      "allowed": null
     },
     {
@@ -21765,31 +20673,14 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "project-row",
-     "field": "y",
-     "figma": 285,
-     "code": 213,
-     "diff": -72,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row",
-     "field": "h",
-     "figma": 115,
-     "code": 185,
-     "diff": 70,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row",
      "figma": [
       "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "31",
       "업데이트됨 2026. 10. 30."
      ],
-     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 더보기 24 0 - 24 업",
+     "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 - 24 업데이트됨",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -21812,24 +20703,6 @@
       "merge-request",
       "star"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "y",
-     "figma": 400,
-     "code": 398,
-     "diff": -2,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
-     "field": "h",
-     "figma": 115,
-     "code": 185,
-     "diff": 70,
      "allowed": null
     },
     {
@@ -21861,24 +20734,6 @@
       "merge-request",
       "star"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 515,
-     "code": 583,
-     "diff": 68,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "h",
-     "figma": 115,
-     "code": 185,
-     "diff": 70,
      "allowed": null
     },
     {
@@ -21917,7 +20772,7 @@
   "G-02_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 1,
@@ -21933,6 +20788,7 @@
      "kind": "icon",
      "name": "body",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -21978,6 +20834,7 @@
      "kind": "icon",
      "name": "content-panel",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -22020,6 +20877,7 @@
      "kind": "icon",
      "name": "main",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -22061,6 +20919,15 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "search-clear",
+     "field": "x",
+     "figma": 635,
+     "code": 707,
+     "diff": 72,
+     "allowed": null
+    },
+    {
      "kind": "color",
      "name": "search-filter",
      "field": "fill",
@@ -22073,6 +20940,7 @@
      "name": "project-row",
      "figma": [
       "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "31",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 - 24 업데이트됨",
@@ -22101,7 +20969,7 @@
   "G-02_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 1,
@@ -22117,6 +20985,7 @@
      "kind": "icon",
      "name": "body",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -22162,6 +21031,7 @@
      "kind": "icon",
      "name": "content-panel",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -22204,6 +21074,7 @@
      "kind": "icon",
      "name": "main",
      "figma": [
+      "close",
       "ellipsis-vertical",
       "filter",
       "fork",
@@ -22245,6 +21116,15 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "search-clear",
+     "field": "x",
+     "figma": 635,
+     "code": 707,
+     "diff": 72,
+     "allowed": null
+    },
+    {
      "kind": "color",
      "name": "search-filter",
      "field": "fill",
@@ -22257,6 +21137,7 @@
      "name": "project-row",
      "figma": [
       "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "31",
       "업데이트됨 2026. 10. 30."
      ],
      "code": "서 서울특별시 광진구 류승인 / kordoc 모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 24 0 - 24 업데이트됨",
@@ -60659,8 +59540,17 @@
     "only-code": 1,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 15,
    "rows": [
+    {
+     "kind": "box",
+     "name": "body",
+     "field": "h",
+     "figma": 1396,
+     "code": 1328,
+     "diff": -68,
+     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
+    },
     {
      "kind": "shape",
      "name": "body",
@@ -60680,10 +59570,28 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
+     "kind": "box",
+     "name": "gitlab-sidebar",
+     "field": "h",
+     "figma": 1388,
+     "code": 1320,
+     "diff": -68,
+     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
+    },
+    {
      "kind": "shape",
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+    },
+    {
+     "kind": "box",
+     "name": "content-panel",
+     "field": "h",
+     "figma": 1388,
+     "code": 1320,
+     "diff": -68,
+     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -60696,7 +59604,9 @@
      "name": "content-panel",
      "figma": [
       "arrow-down",
-      "search"
+      "project",
+      "search",
+      "tag"
      ],
      "code": [
       "arrow-down",
@@ -60718,9 +59628,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 365,
+     "figma": 1087,
      "code": 1109,
-     "diff": 744,
+     "diff": 22,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -60728,7 +59638,9 @@
      "name": "main",
      "figma": [
       "arrow-down",
-      "search"
+      "project",
+      "search",
+      "tag"
      ],
      "code": [
       "arrow-down",
@@ -60741,9 +59653,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 681,
+     "figma": 1249,
      "code": 1254,
-     "diff": 573,
+     "diff": 5,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -60756,9 +59668,9 @@
      "kind": "box",
      "name": "gl-tabs",
      "field": "w",
-     "figma": 381,
+     "figma": 385,
      "code": 785,
-     "diff": 404,
+     "diff": 400,
      "allowed": null
     },
     {
