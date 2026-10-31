@@ -2,6 +2,7 @@
 // 항목은 한 줄(nowrap) 높이 32, 간격 0, 폭은 가장 긴 항목 + 좌우 12(160~320). 버튼 아래 왼쪽/오른쪽 끝 정렬이고 화면 가장자리 12 안으로 들어온다.
 // 항목 마크업: <ul className="drop-list"><li><a|button className="item-link">글자</a></li></ul>, 묶음 이름은 <p className="rb-menu-title">
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { Icon } from '../Code/Icon';
 
 export function Menu({ label, button, btnClass = 'krds-btn small tertiary', btnProps = {}, className = '', align = 'right', side = false, toggle = true, panelClass = '', children }) {
   const [open, setOpen] = useState(false);
@@ -71,7 +72,8 @@ export function Menu({ label, button, btnClass = 'krds-btn small tertiary', btnP
         onClick={(e) => { btnProps.onClick?.(e); setOpen(!open); }}
       >
         {button}
-        {toggle ? <i className="svg-icon ico-toggle" aria-hidden="true" /> : null}
+        {/* 공공 깃랩 드롭다운 꺾쇠 = chevron-down(Figma arrow-down). 아이콘 부품으로 그려 대조 이름이 같게 */}
+        {toggle ? <span className="ico-toggle rb-toggle-ico" aria-hidden="true"><Icon name="arrow-down" /></span> : null}
       </button>
       {open || leaving ? (
         <div ref={panel} className={`rb-menu ${panelClass}${leaving && !open ? ' is-leaving' : ''}`} aria-hidden={leaving && !open ? true : undefined} role="menu" aria-label={label} style={pos ? { left: pos.left, top: pos.top, maxHeight: pos.maxHeight } : { left: 0, top: 0, visibility: 'hidden' }}>

@@ -1,6 +1,6 @@
 # Figma 대 코드 전수 대조 원장(parity ledger)
 
-- 생성: 2026-10-31T14:29:35.541Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
+- 생성: 2026-10-31T14:32:23.783Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
 - 다시 만들기: 개발 서버에서 측정(app/scripts/export-code-boxes.mjs 또는 Aside 탭에서 export-code-boxes.js) 뒤 `npm run check:parity`
 
 ## 0. 해소 규칙
@@ -12,6 +12,7 @@
 5. 의도한 차이는 code_plan/parity_allow.json에 근거와 함께 올린다. 원장 건수는 허용을 뺀 값
 4-1. 적용 중인 사용자 결정: 판 안 바닥글 = 판과 같은 면 + 위 구분선만, 채움 없음(D-20 개정 10. 31.) · 로그인 바닥글 = 바깥색 위 전체 폭 gray-90(G-08) · A-01 = G-02 실제 검색 구조 + 덧붙임 업무로 찾기 한 묶음(맨 위 3개 + 더보기, UX/14 3장) · 상단 바와 아이콘 단추 1024 미만 44(터치) · 판 안 여백 48/32/24/16, 바깥 8(D-21) · 4의 배수(D-16). 바닥글 면 색 차이는 이 결정에 맞춰 양쪽을 고쳐 해소한다(허용 목록에 올리지 않음)
 4-3. 반복 목록 규칙(부모 판정 10. 31.): 반복 행·카드는 Figma 표본 수 N만큼 앞의 N개만 대조하고, 코드의 나머지 반복 행은 같은 행 부품이라 세지 않는다. 근거: 목록 길이는 자료 길이, 행 구조는 앞 N개에서 검사(Figma 내보내기도 같은 이름 최대 3개). 허용 목록 아님. 적용 이름표: project-row, diff-file, group-row
+4-4. 판정 보류(건수 포함): G-06 page-head text — 사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요) = 10건
 4-2. Figma 기준 숫자: 세트 56, 변형 592, 프로토타입 연결 833(823 + A-01 탐색 행 마우스 올림 상태 10, 2026. 10. 31. 사용자 인정)
 6. 담당: 코드 C1(R-02~09, 25, 27~29) · C2(R-10~24, 26) · D21(전역 틀, R-01, R-30, G, A, 로그인), Figma는 Figma 작업자
 

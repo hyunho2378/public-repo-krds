@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T14:29:35.541Z",
+ "generated": "2026-10-31T14:32:23.783Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
@@ -29470,7 +29470,8 @@
       "내 작업"
      ],
      "code": "내 프로젝트",
-     "allowed": null
+     "allowed": null,
+     "pending": "사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요)"
     },
     {
      "kind": "box",
@@ -29613,7 +29614,8 @@
       "내 작업"
      ],
      "code": "내 프로젝트",
-     "allowed": null
+     "allowed": null,
+     "pending": "사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요)"
     },
     {
      "kind": "box",
@@ -29791,7 +29793,8 @@
       "내 작업"
      ],
      "code": "내 프로젝트",
-     "allowed": null
+     "allowed": null,
+     "pending": "사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요)"
     },
     {
      "kind": "box",
@@ -29986,7 +29989,8 @@
       "내 작업"
      ],
      "code": "내 프로젝트",
-     "allowed": null
+     "allowed": null,
+     "pending": "사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요)"
     },
     {
      "kind": "box",
@@ -30173,7 +30177,8 @@
       "내 작업"
      ],
      "code": "내 프로젝트",
-     "allowed": null
+     "allowed": null,
+     "pending": "사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요)"
     },
     {
      "kind": "box",
@@ -30368,7 +30373,8 @@
       "내 작업"
      ],
      "code": "내 프로젝트",
-     "allowed": null
+     "allowed": null,
+     "pending": "사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요)"
     },
     {
      "kind": "box",
@@ -30543,7 +30549,8 @@
       "내 작업"
      ],
      "code": "내 프로젝트",
-     "allowed": null
+     "allowed": null,
+     "pending": "사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요)"
     },
     {
      "kind": "box",
@@ -30683,7 +30690,8 @@
       "내 작업"
      ],
      "code": "내 프로젝트",
-     "allowed": null
+     "allowed": null,
+     "pending": "사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요)"
     },
     {
      "kind": "box",
@@ -30817,7 +30825,8 @@
       "내 작업"
      ],
      "code": "내 프로젝트",
-     "allowed": null
+     "allowed": null,
+     "pending": "사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요)"
     },
     {
      "kind": "box",
@@ -30957,7 +30966,8 @@
       "내 작업"
      ],
      "code": "내 프로젝트",
-     "allowed": null
+     "allowed": null,
+     "pending": "사용자 캡처 대기(실제 /dashboard/projects 제목, 로그인 필요)"
     },
     {
      "kind": "box",
