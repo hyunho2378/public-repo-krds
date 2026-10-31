@@ -14,7 +14,7 @@
 .gl-mr-head { display: flex; flex-direction: column; gap: var(--krds-gap-3); margin-bottom: var(--layout-filter-list-gap); }
 .gl-mr-head h2 { margin: 0; font-size: var(--rb-step-19); line-height: var(--rb-lh-19); font-weight: var(--krds-font-weight-bold); overflow-wrap: anywhere; }
 .gl-mr-pipe { display: flex; align-items: center; gap: var(--krds-gap-5); padding: var(--layout-row-pad-y) 0; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); flex-wrap: wrap; }
-@media (max-width: 767px) { .gl-mr-row { flex-direction: column; } .gl-mr-side { align-items: flex-start; text-align: left; } }
+@media (max-width: 767px) { .gl-mr-side { align-items: flex-end; } .gl-mr-side .gl-mr-meta { display: none; } }
 .gl-mr-side .gl-badge { line-height: var(--rb-lh-13); }
 
 .gl-mr-task { font-weight: var(--krds-font-weight-regular); font-size: var(--rb-step-13); color: var(--layout-text-subtle); }

@@ -14,6 +14,8 @@ import { Icon } from '../components/Code/Icon';
 import { mr, au, p1 } from '../copy/work';
 import { gql, Q } from './parts/glGraphql';
 import { Avatar } from '../components/Layout/Avatar';
+import { EmptyArt } from './parts/EmptyArt';
+import './parts/glRepo.css';
 import { IconButton } from '../components/Action/IconButton';
 import { ago } from './parts/glTime';
 import { Readme } from '../components/Help/Readme';
@@ -52,7 +54,7 @@ const PILL = { merged: mr.tabMerged, closed: mr.tabClosed };
 
 export function MergeRequests() {
   const frame = useProject();
-  const [st, setSt] = useState('all');
+  const [st, setSt] = useState('opened');
   const [sortKey, setSortKey] = useState('created_at');
   const [dir, setDir] = useState('desc');
   const [query, setQuery] = useState('');
@@ -119,7 +121,9 @@ export function MergeRequests() {
                 </li>
               ))}
             </ul>
-          ) : <EmptyState title={query ? u.List_none : mr.none} />
+          ) : (
+            <div className="gl-empty-big"><EmptyArt kind="doc" /><h2>{query ? u.List_none : st === 'opened' ? mr.noneOpen : mr.none}</h2></div>
+          )
         )}
       </div>
     </ProjectFrame>

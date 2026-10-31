@@ -18,7 +18,7 @@ export const mr = {
   sortCreated: '만든 날짜', sortUpdated: '업데이트 날짜', asc: '오름차순', desc: '내림차순',
   createdBy: (who) => `${who}에 의해 생성됨`, updated: (ago) => `${ago} 업데이트 됨`,
   overview: '개요', commits: '커밋', pipelines: '파이프라인', changes: '변경사항',
-  none: '표시할 머지 리퀘스트가 없습니다', noPipelines: '이 머지 리퀘스트에 파이프라인이 없습니다',
+  none: '표시할 머지 리퀘스트가 없습니다', noneOpen: '열려 있는 머지 리퀘스트 없음', noPipelines: '이 머지 리퀘스트에 파이프라인이 없습니다',
   source: '소스 브랜치', target: '대상 브랜치', author: '작성자', more: '더보기', menu: '머지 리퀘스트 작업',
 };
 
