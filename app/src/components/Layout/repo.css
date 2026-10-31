@@ -167,7 +167,7 @@ a.rb-s-scope:hover { background: var(--krds-color-action-secondary-hover); }
 .rb-taskfind { display: flex; flex-direction: column; gap: var(--krds-gap-3); padding-bottom: var(--rb-filter-gap); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
 .rb-taskfind h2 { margin: 0; }
 .rb-taskfind-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--krds-gap-3); }
-.rb-taskfind-list li { display: flex; flex-direction: column; gap: var(--krds-gap-1); }
+.rb-taskfind-list li:not(.rb-prow) { display: flex; flex-direction: column; gap: var(--krds-gap-1); }
 .rb-taskfind .rb-fold-btn { align-self: flex-start; color: var(--krds-color-text-basic); }
 @media (max-width: 1023px) { .rb-s-body { grid-template-columns: minmax(0, 1fr); } .rb-s-side { flex-direction: row; flex-wrap: wrap; align-items: center; } }
 .rb-prow-plain li { display: inline-flex; align-items: center; gap: var(--krds-gap-1); color: var(--krds-color-text-subtle); font-size: var(--krds-font-size-body-xsmall); line-height: var(--rb-lh-13); }

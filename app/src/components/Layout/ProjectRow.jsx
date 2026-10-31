@@ -22,7 +22,7 @@ function Stat({ icon, label, n, href }) {
   );
 }
 
-export function ProjectRow({ p, mrs, issues }) {
+export function ProjectRow({ p, mrs, issues, compact = false }) {
   const owner = p.namespace?.name || '';
   const topics = p.topics || p.tag_list || [];
   const { rel, full } = t.fn.relativeDate(p.last_activity_at);
@@ -37,8 +37,8 @@ export function ProjectRow({ p, mrs, issues }) {
           <Link to={`/projects/${p.id}`} state={{ project: p }}>{owner ? `${owner} / ` : ''}{p.name}</Link>
           <Icon name="globe" label={u.X_public} />
         </p>
-        {desc ? <FoldText lines={2} className="rb-prow-desc">{desc}</FoldText> : null}
-        {topics.length ? (
+        {desc && !compact ? <FoldText lines={2} className="rb-prow-desc">{desc}</FoldText> : null}
+        {topics.length && !compact ? (
           <p className="rb-prow-topics">
             <span className="rb-subtle">{u.X_topics}</span>
             <span className="krds-tag-wrap small">
@@ -55,7 +55,7 @@ export function ProjectRow({ p, mrs, issues }) {
           <Stat icon="ext/merge-request" label={u.X_mrs} n={mrs} href={`${p.web_url}/-/merge_requests`} />
           <Stat icon="ext/issues" label={u.X_issues} n={p.open_issues_count ?? issues} href={`${p.web_url}/-/work_items`} />
         </ul>
-        <p className="rb-prow-time" title={full}>{u.X_updated(rel)}</p>
+        {compact ? null : <p className="rb-prow-time" title={full}>{u.X_updated(rel)}</p>}
       </div>
       <Menu label={u.X_actions} align="right" toggle={false} btnClass={iconBtnClass('small')} button={<Icon name="ellipsis_vertical" />}>
         {(close) => (

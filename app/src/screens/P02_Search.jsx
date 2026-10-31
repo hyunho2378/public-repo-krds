@@ -24,13 +24,14 @@ function TaskFind({ q }) {
   return (
     <section className="rb-taskfind" data-figma="task-search" aria-labelledby="rb-taskfind">
       <h2 id="rb-taskfind" className="krds-text-body-small-bold">{u.C_task}</h2>
-      <ul className="rb-taskfind-list">
-        {hits.map((c) => (
+      {/* Figma A-01: 업무로 찾기 안 행은 탐색 행(project-row) 간단형(설명·주제 없음) 3개 + 더보기 */}
+      <ul className="rb-taskfind-list rb-prow-list">
+        {hits.map((c) => (c.p ? <ProjectRow key={c.id} p={c.p} compact /> : (
           <li key={c.id}>
             <Link className="rb-plain-link krds-text-body-small-bold" to={`/projects/${c.id}`}>{c.name}</Link>
             <span className="krds-text-body-xsmall rb-subtle">{c.sub}</span>
           </li>
-        ))}
+        )))}
       </ul>
       {!more ? <button type="button" className="rb-fold-btn krds-text-body-xsmall" onClick={() => setMore(true)}>{u.C_taskMore}</button> : null}
     </section>

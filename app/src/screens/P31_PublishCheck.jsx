@@ -20,7 +20,7 @@ export default function PublishCheck() {
   const passed = check ? check.checks.filter((c) => c.pass).length : 0;
   const allPass = check && passed === check.checks.length;
   return (
-    <ProjectFrame screenId="A-03" tab="" tabLabel={t.PubCheck_title} data={frame} state={check ? (allPass ? 'Pass' : 'NeedsWork') : body.state}>
+    <ProjectFrame screenId="A-03" tab="" tabLabel={t.PubCheck_title} crumbs={[[t.Settings_title, `/projects/${frame.id}/settings`], [t.PubCheck_title, null]]} data={frame} state={check ? (allPass ? 'Pass' : 'NeedsWork') : body.state}>
       <div className="rb-code-area">
         <div className="rb-detail-head">
           <p className="krds-text-body-xsmall rb-subtle">{t.PubCheck_hint}</p>

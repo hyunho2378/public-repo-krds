@@ -86,5 +86,5 @@ export async function taskSearch(q, limit = 3) {
     const s = 2 * hit(p.name) + 3 * hit(p.description) + 1 * hit((p.topics || []).join(' ')) + (c ? score(g, c) : 0);
     return { p, c, s };
   }).filter((x) => x.s > 0.5).sort((a, b) => b.s - a.s).slice(0, limit);
-  return scored.map(({ p, c }) => ({ id: p.id, name: p.name, sub: [val(c?.oneLine) || (p.description || '').slice(0, 80), p.namespace?.name].filter(Boolean).join(' · ') }));
+  return scored.map(({ p, c }) => ({ p, id: p.id, name: p.name, sub: [val(c?.oneLine) || (p.description || '').slice(0, 80), p.namespace?.name].filter(Boolean).join(' · ') }));
 }
