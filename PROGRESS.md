@@ -130,3 +130,20 @@
 
 - [C1] 원장 대조 전/후(허용 뺀 합, 5폭 x 2 auth): R-02 223→135, R-03 155→121, R-04 255→145, R-05 163→94, R-06 142→77, R-07 255→103, R-08 197→116, R-09 139→72, R-27 130→87, R-28 122→68, R-29 125→71 (전역 틀 변경 포함 값이라 내 변경분만의 효과는 아님). 이번: diff-file/diff-area/page-head 이름표 위치 정정, R-03 경로 README.md, R-05 경로 전체 해시, 파일 보기 toolbar는 홈에서만, 숨은 제목은 role=heading. 허용 목록(parity_allow.json)은 추가하지 않음. 남은 것: R-05 측정은 fixture에 커밋 상세 추가 필요(코드 작업자 요청함), Figma 쪽 요청 6건 전달(R-04 gl-filter 32 한 상자, R-07 section-title 안쪽, R-03 commit-bar 점 세 개), commit-bar y +7/h +6, R-02 file-table h(Figma 926 대 코드 1841, 표 길이 차이).
 - [C2] 원장 대조 2차: 이름표 일괄(R-10 page-head, R-13 gl-filter 막대 신설, R-14 gl-tabs, R-17 tabs로 이름 변경과 page-head 제거, R-19 gl-filter 신설, R-20 page-head에 개수 줄 포함, R-11 gl-tabs 왼쪽 묶음, 작업 항목 토큰 '열기'와 시계 아이콘, R-23 계정 정렬). 전역 제외 내 화면 몫(1440 포함 10변형 합): R-10 34, R-11 84, R-12 9, R-13 26, R-14 14, R-15 4, R-16 48, R-17 54, R-18 24, R-19 64, R-20 24, R-21 4, R-22 4, R-23 63, R-24 14. 전체합은 전역 값이 움직이는 중이라 전후 비교 불가(R-16 1920 Signed-in 26은 재측정 결과 해소). R-18/20/21/24는 dev fixture에 자료가 없어 오류 화면으로 측정됨, 배포본 Guest 측정 필요
+
+## Figma 대조 진행(2026. 10. 31. 22:25, 코드 갈래 D21) — 목표 0건 미달
+- 현재 합(허용 뺀 값) 5,107: 위치/크기 2,266, 문구 562, 글자 65, 색 53, 모서리·안쪽·간격 448, 아이콘 721, Figma에만 526, 코드에만 388, 순서 78
+- 추이: 15,870 → 9,406 → 7,104 → 6,137 → 6,728(Figma sidebar-nav 이름표 위치 오류) → 5,324 → 5,107
+- 새 허용 0건(parity_allow 그대로)
+- 남은 원인 상위 10(건수, 화면 수, 담당 분포, 원인)
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('icon', 'gitlab-sidebar') A-02_1440_Guest {'figma': ['analytics', 'arrow-down', 'arrow-right', 'calendar', 'cl
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('box', 'sidebar-nav', 'x') A-02_1440_Guest {'field': 'x', 'figma': 16, 'code': 8, 'diff': -8}
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('box', 'sidebar-nav', 'y') A-02_1440_Guest {'field': 'y', 'figma': 168, 'code': 154, 'diff': -14}
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('box', 'sidebar-nav', 'w') A-02_1440_Guest {'field': 'w', 'figma': 208, 'code': 224, 'diff': 16}
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('box', 'sidebar-nav', 'h') A-02_1440_Guest {'field': 'h', 'figma': 565, 'code': 656, 'diff': 91}
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('icon', 'sidebar-nav') A-02_1440_Guest {'figma': ['analytics', 'arrow-down', 'arrow-right', 'calendar', 'cloud
+  - 150 2 {'D21': 150} ('only-code', 'project-row') A-01_1024_Guest {}
+  - 150 50 {'D21': 69, 'C1': 36, 'C2': 45} ('text', 'topbar') A-01_1024_Signed-in {'figma': ['류'], 'code': '탐색 검색 또는 이동… / 내'}
+  - 140 3 {'D21': 140} ('box', 'project-row', 'h') A-01_1024_Guest {'field': 'h', 'figma': 80, 'code': 99, 'diff': 19}
+  - 140 3 {'D21': 140} ('shape', 'project-row', '간격 #→#') A-01_1024_Guest {'detail': '간격 12→8'}
+- 다음: sidebar-nav x/y/w/h(코드 x8 y154 w224 대 Figma x16 y168 w208 — UX/17 실측으로 판정), gitlab-sidebar 아이콘(arrow-right 펼침 표시), A-01 구조(부모 결정: Figma AI 검색 대 실제 검색), A 화면·C1·C2 page-head 이름표, 로그인 08b~e 카드 안 세로 간격, gl-filter 한 상자(C1·C2)

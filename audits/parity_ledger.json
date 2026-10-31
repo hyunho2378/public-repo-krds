@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T12:36:10.449Z",
+ "generated": "2026-10-31T12:38:53.340Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
@@ -44874,14 +44874,14 @@
   "G-08_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 0,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -44908,33 +44908,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 113,
-     "code": 122,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "login-card",
      "figma": [
@@ -44944,75 +44917,12 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 113,
-     "code": 122,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 321,
-     "code": 330,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-field",
-     "field": "y",
-     "figma": 96,
-     "code": 105,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-field#2",
-     "field": "y",
-     "figma": 186,
-     "code": 195,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-options",
-     "field": "y",
-     "figma": 276,
-     "code": 285,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-fact",
-     "field": "y",
-     "figma": 314,
-     "code": 323,
-     "diff": 9,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "login-fact",
      "figma": [
       "비밀번호는 수집하지 않습니다. 로그인은 공공 저장소에서 처리합니다."
      ],
      "code": "비밀번호 미수집, 로그인은 공공 저장소에서 처리",
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-join",
-     "field": "y",
-     "figma": 494,
-     "code": 503,
-     "diff": 9,
      "allowed": null
     },
     {
@@ -45029,25 +44939,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 0,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -45074,33 +44979,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 113,
-     "code": 122,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "login-card",
      "figma": [
@@ -45110,75 +44988,12 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 113,
-     "code": 122,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 321,
-     "code": 330,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-field",
-     "field": "y",
-     "figma": 96,
-     "code": 105,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-field#2",
-     "field": "y",
-     "figma": 186,
-     "code": 195,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-options",
-     "field": "y",
-     "figma": 276,
-     "code": 285,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-fact",
-     "field": "y",
-     "figma": 314,
-     "code": 323,
-     "diff": 9,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "login-fact",
      "figma": [
       "비밀번호는 수집하지 않습니다. 로그인은 공공 저장소에서 처리합니다."
      ],
      "code": "비밀번호 미수집, 로그인은 공공 저장소에서 처리",
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-join",
-     "field": "y",
-     "figma": 494,
-     "code": 503,
-     "diff": 9,
      "allowed": null
     },
     {
@@ -45195,25 +45010,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 0,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -45240,33 +45050,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 113,
-     "code": 122,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "login-card",
      "figma": [
@@ -45276,75 +45059,12 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 113,
-     "code": 122,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 321,
-     "code": 330,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-field",
-     "field": "y",
-     "figma": 96,
-     "code": 105,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-field#2",
-     "field": "y",
-     "figma": 186,
-     "code": 195,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-options",
-     "field": "y",
-     "figma": 276,
-     "code": 285,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-fact",
-     "field": "y",
-     "figma": 314,
-     "code": 323,
-     "diff": 9,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "login-fact",
      "figma": [
       "비밀번호는 수집하지 않습니다. 로그인은 공공 저장소에서 처리합니다."
      ],
      "code": "비밀번호 미수집, 로그인은 공공 저장소에서 처리",
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-join",
-     "field": "y",
-     "figma": 494,
-     "code": 503,
-     "diff": 9,
      "allowed": null
     },
     {
@@ -45361,25 +45081,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08_1440_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 0,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -45406,33 +45121,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 113,
-     "code": 122,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "login-card",
      "figma": [
@@ -45442,75 +45130,12 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 113,
-     "code": 122,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 321,
-     "code": 330,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-field",
-     "field": "y",
-     "figma": 96,
-     "code": 105,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-field#2",
-     "field": "y",
-     "figma": 186,
-     "code": 195,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-options",
-     "field": "y",
-     "figma": 276,
-     "code": 285,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-fact",
-     "field": "y",
-     "figma": 314,
-     "code": 323,
-     "diff": 9,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "login-fact",
      "figma": [
       "비밀번호는 수집하지 않습니다. 로그인은 공공 저장소에서 처리합니다."
      ],
      "code": "비밀번호 미수집, 로그인은 공공 저장소에서 처리",
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-join",
-     "field": "y",
-     "figma": 494,
-     "code": 503,
-     "diff": 9,
      "allowed": null
     },
     {
@@ -45527,11 +45152,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
@@ -45545,7 +45165,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -45603,25 +45223,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08_1920_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 0,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -45648,33 +45263,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 113,
-     "code": 122,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "login-card",
      "figma": [
@@ -45684,75 +45272,12 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 113,
-     "code": 122,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 321,
-     "code": 330,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-field",
-     "field": "y",
-     "figma": 96,
-     "code": 105,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-field#2",
-     "field": "y",
-     "figma": 186,
-     "code": 195,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-options",
-     "field": "y",
-     "figma": 276,
-     "code": 285,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-fact",
-     "field": "y",
-     "figma": 314,
-     "code": 323,
-     "diff": 9,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "login-fact",
      "figma": [
       "비밀번호는 수집하지 않습니다. 로그인은 공공 저장소에서 처리합니다."
      ],
      "code": "비밀번호 미수집, 로그인은 공공 저장소에서 처리",
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-join",
-     "field": "y",
-     "figma": 494,
-     "code": 503,
-     "diff": 9,
      "allowed": null
     },
     {
@@ -45769,38 +45294,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 10,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 893,
-     "code": 911,
-     "diff": 18,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -45812,8 +45323,8 @@
      "name": "body",
      "field": "h",
      "figma": 869,
-     "code": 1180,
-     "diff": 311,
+     "code": 1163,
+     "diff": 294,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -45833,20 +45344,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -45870,15 +45372,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 132,
-     "code": 100,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -45887,20 +45380,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 36,
+     "code": 16,
+     "diff": -20,
      "allowed": null
     },
     {
@@ -45908,8 +45392,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 328,
+     "diff": 39,
      "allowed": null
     },
     {
@@ -45917,8 +45410,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 421,
-     "code": 483,
-     "diff": 62,
+     "code": 412,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -45926,8 +45419,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 511,
-     "code": 573,
-     "diff": 62,
+     "code": 502,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -45935,8 +45428,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 601,
-     "code": 663,
-     "diff": 62,
+     "code": 592,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -45944,8 +45437,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 639,
-     "code": 701,
-     "diff": 62,
+     "code": 630,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -45971,8 +45464,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 839,
-     "code": 881,
-     "diff": 42,
+     "code": 810,
+     "diff": -29,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -45989,43 +45482,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 10,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 893,
-     "code": 911,
-     "diff": 18,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -46037,8 +45511,8 @@
      "name": "body",
      "field": "h",
      "figma": 869,
-     "code": 1180,
-     "diff": 311,
+     "code": 1163,
+     "diff": 294,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -46058,20 +45532,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -46095,15 +45560,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 132,
-     "code": 100,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -46112,20 +45568,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 36,
+     "code": 16,
+     "diff": -20,
      "allowed": null
     },
     {
@@ -46133,8 +45580,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 328,
+     "diff": 39,
      "allowed": null
     },
     {
@@ -46142,8 +45598,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 421,
-     "code": 483,
-     "diff": 62,
+     "code": 412,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -46151,8 +45607,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 511,
-     "code": 573,
-     "diff": 62,
+     "code": 502,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -46160,8 +45616,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 601,
-     "code": 663,
-     "diff": 62,
+     "code": 592,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -46169,8 +45625,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 639,
-     "code": 701,
-     "diff": 62,
+     "code": 630,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -46196,8 +45652,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 839,
-     "code": 881,
-     "diff": 42,
+     "code": 810,
+     "diff": -29,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -46214,43 +45670,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 24,
+    "box": 22,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 873,
-     "code": 911,
-     "diff": 38,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -46262,8 +45699,8 @@
      "name": "body",
      "field": "h",
      "figma": 849,
-     "code": 1160,
-     "diff": 311,
+     "code": 1123,
+     "diff": 274,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -46277,8 +45714,8 @@
      "name": "login-notice",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46295,17 +45732,8 @@
      "name": "login-notice",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46313,8 +45741,8 @@
      "name": "login-card",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46322,8 +45750,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -46331,8 +45759,8 @@
      "name": "login-card",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46347,15 +45775,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 336,
-     "code": 304,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -46364,20 +45783,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 240,
+     "code": 24,
+     "diff": -216,
      "allowed": null
     },
     {
@@ -46385,8 +45795,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 720,
+     "diff": 431,
      "allowed": null
     },
     {
@@ -46394,8 +45813,8 @@
      "name": "login-field",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46403,8 +45822,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 421,
-     "code": 483,
-     "diff": 62,
+     "code": 412,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -46412,8 +45831,8 @@
      "name": "login-field",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46421,8 +45840,8 @@
      "name": "login-field#2",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46430,8 +45849,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 511,
-     "code": 573,
-     "diff": 62,
+     "code": 502,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -46439,8 +45858,8 @@
      "name": "login-field#2",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46448,8 +45867,8 @@
      "name": "login-options",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46457,8 +45876,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 601,
-     "code": 663,
-     "diff": 62,
+     "code": 592,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -46466,8 +45885,8 @@
      "name": "login-options",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46475,8 +45894,8 @@
      "name": "login-fact",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46484,8 +45903,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 639,
-     "code": 701,
-     "diff": 62,
+     "code": 630,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -46493,8 +45912,8 @@
      "name": "login-fact",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46511,8 +45930,8 @@
      "name": "login-join",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46520,8 +45939,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 819,
-     "code": 881,
-     "diff": 62,
+     "code": 810,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -46529,8 +45948,8 @@
      "name": "login-join",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46547,43 +45966,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 24,
+    "box": 22,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 873,
-     "code": 911,
-     "diff": 38,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -46595,8 +45995,8 @@
      "name": "body",
      "field": "h",
      "figma": 849,
-     "code": 1160,
-     "diff": 311,
+     "code": 1123,
+     "diff": 274,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -46610,8 +46010,8 @@
      "name": "login-notice",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46628,17 +46028,8 @@
      "name": "login-notice",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46646,8 +46037,8 @@
      "name": "login-card",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46655,8 +46046,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -46664,8 +46055,8 @@
      "name": "login-card",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46680,15 +46071,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 336,
-     "code": 304,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -46697,20 +46079,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 240,
+     "code": 24,
+     "diff": -216,
      "allowed": null
     },
     {
@@ -46718,8 +46091,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 720,
+     "diff": 431,
      "allowed": null
     },
     {
@@ -46727,8 +46109,8 @@
      "name": "login-field",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46736,8 +46118,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 421,
-     "code": 483,
-     "diff": 62,
+     "code": 412,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -46745,8 +46127,8 @@
      "name": "login-field",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46754,8 +46136,8 @@
      "name": "login-field#2",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46763,8 +46145,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 511,
-     "code": 573,
-     "diff": 62,
+     "code": 502,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -46772,8 +46154,8 @@
      "name": "login-field#2",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46781,8 +46163,8 @@
      "name": "login-options",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46790,8 +46172,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 601,
-     "code": 663,
-     "diff": 62,
+     "code": 592,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -46799,8 +46181,8 @@
      "name": "login-options",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46808,8 +46190,8 @@
      "name": "login-fact",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46817,8 +46199,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 639,
-     "code": 701,
-     "diff": 62,
+     "code": 630,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -46826,8 +46208,8 @@
      "name": "login-fact",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46844,8 +46226,8 @@
      "name": "login-join",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -46853,8 +46235,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 819,
-     "code": 881,
-     "diff": 62,
+     "code": 810,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -46862,8 +46244,8 @@
      "name": "login-join",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -46880,30 +46262,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08b_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 10,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -46934,17 +46306,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 144,
-     "code": 153,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 69,
-     "diff": 21,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -46954,15 +46317,6 @@
      "figma": 530,
      "code": 506,
      "diff": -24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 69,
-     "diff": 21,
      "allowed": null
     },
     {
@@ -46989,8 +46343,8 @@
      "name": "login-logo",
      "field": "y",
      "figma": 144,
-     "code": 153,
-     "diff": 9,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -46998,8 +46352,8 @@
      "name": "notice-block",
      "field": "y",
      "figma": 352,
-     "code": 361,
-     "diff": 9,
+     "code": 340,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47007,8 +46361,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 158,
-     "code": 155,
-     "diff": -3,
+     "code": 134,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47016,8 +46370,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 248,
-     "code": 245,
-     "diff": -3,
+     "code": 224,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47025,8 +46379,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 338,
-     "code": 335,
-     "diff": -3,
+     "code": 314,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47034,8 +46388,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 376,
-     "code": 373,
-     "diff": -3,
+     "code": 352,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47052,8 +46406,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 556,
-     "code": 553,
-     "diff": -3,
+     "code": 532,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47070,25 +46424,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08b_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 10,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -47119,17 +46468,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 144,
-     "code": 153,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 69,
-     "diff": 21,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47139,15 +46479,6 @@
      "figma": 530,
      "code": 506,
      "diff": -24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 69,
-     "diff": 21,
      "allowed": null
     },
     {
@@ -47174,8 +46505,8 @@
      "name": "login-logo",
      "field": "y",
      "figma": 144,
-     "code": 153,
-     "diff": 9,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47183,8 +46514,8 @@
      "name": "notice-block",
      "field": "y",
      "figma": 352,
-     "code": 361,
-     "diff": 9,
+     "code": 340,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47192,8 +46523,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 158,
-     "code": 155,
-     "diff": -3,
+     "code": 134,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47201,8 +46532,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 248,
-     "code": 245,
-     "diff": -3,
+     "code": 224,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47210,8 +46541,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 338,
-     "code": 335,
-     "diff": -3,
+     "code": 314,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47219,8 +46550,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 376,
-     "code": 373,
-     "diff": -3,
+     "code": 352,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47237,8 +46568,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 556,
-     "code": 553,
-     "diff": -3,
+     "code": 532,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47255,25 +46586,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08b_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 10,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -47304,17 +46630,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 144,
-     "code": 153,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 69,
-     "diff": 21,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47324,15 +46641,6 @@
      "figma": 530,
      "code": 506,
      "diff": -24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 69,
-     "diff": 21,
      "allowed": null
     },
     {
@@ -47359,8 +46667,8 @@
      "name": "login-logo",
      "field": "y",
      "figma": 144,
-     "code": 153,
-     "diff": 9,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47368,8 +46676,8 @@
      "name": "notice-block",
      "field": "y",
      "figma": 352,
-     "code": 361,
-     "diff": 9,
+     "code": 340,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47377,8 +46685,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 158,
-     "code": 155,
-     "diff": -3,
+     "code": 134,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47386,8 +46694,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 248,
-     "code": 245,
-     "diff": -3,
+     "code": 224,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47395,8 +46703,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 338,
-     "code": 335,
-     "diff": -3,
+     "code": 314,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47404,8 +46712,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 376,
-     "code": 373,
-     "diff": -3,
+     "code": 352,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47422,8 +46730,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 556,
-     "code": 553,
-     "diff": -3,
+     "code": 532,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47440,25 +46748,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08b_1440_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 10,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -47489,17 +46792,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 144,
-     "code": 153,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 69,
-     "diff": 21,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47509,15 +46803,6 @@
      "figma": 530,
      "code": 506,
      "diff": -24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 69,
-     "diff": 21,
      "allowed": null
     },
     {
@@ -47544,8 +46829,8 @@
      "name": "login-logo",
      "field": "y",
      "figma": 144,
-     "code": 153,
-     "diff": 9,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47553,8 +46838,8 @@
      "name": "notice-block",
      "field": "y",
      "figma": 352,
-     "code": 361,
-     "diff": 9,
+     "code": 340,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47562,8 +46847,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 158,
-     "code": 155,
-     "diff": -3,
+     "code": 134,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47571,8 +46856,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 248,
-     "code": 245,
-     "diff": -3,
+     "code": 224,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47580,8 +46865,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 338,
-     "code": 335,
-     "diff": -3,
+     "code": 314,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47589,8 +46874,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 376,
-     "code": 373,
-     "diff": -3,
+     "code": 352,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47607,8 +46892,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 556,
-     "code": 553,
-     "diff": -3,
+     "code": 532,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47625,25 +46910,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08b_1920_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 9,
+    "box": 10,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -47671,11 +46951,11 @@
     },
     {
      "kind": "box",
-     "name": "login-divider",
+     "name": "login-notice",
      "field": "y",
-     "figma": 48,
-     "code": 61,
-     "diff": 13,
+     "figma": 144,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47685,15 +46965,6 @@
      "figma": 530,
      "code": 506,
      "diff": -24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 61,
-     "diff": 13,
      "allowed": null
     },
     {
@@ -47717,11 +46988,29 @@
     },
     {
      "kind": "box",
+     "name": "login-logo",
+     "field": "y",
+     "figma": 144,
+     "code": 132,
+     "diff": -12,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "y",
+     "figma": 352,
+     "code": 340,
+     "diff": -12,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 158,
-     "code": 147,
-     "diff": -11,
+     "code": 134,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47729,8 +47018,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 248,
-     "code": 237,
-     "diff": -11,
+     "code": 224,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47738,8 +47027,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 338,
-     "code": 327,
-     "diff": -11,
+     "code": 314,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47747,8 +47036,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 376,
-     "code": 365,
-     "diff": -11,
+     "code": 352,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47765,8 +47054,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 556,
-     "code": 545,
-     "diff": -11,
+     "code": 532,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47783,25 +47072,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08b_1920_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 10,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -47832,17 +47116,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 144,
-     "code": 153,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 69,
-     "diff": 21,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47852,15 +47127,6 @@
      "figma": 530,
      "code": 506,
      "diff": -24,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 69,
-     "diff": 21,
      "allowed": null
     },
     {
@@ -47887,8 +47153,8 @@
      "name": "login-logo",
      "field": "y",
      "figma": 144,
-     "code": 153,
-     "diff": 9,
+     "code": 132,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47896,8 +47162,8 @@
      "name": "notice-block",
      "field": "y",
      "figma": 352,
-     "code": 361,
-     "diff": 9,
+     "code": 340,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -47905,8 +47171,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 158,
-     "code": 155,
-     "diff": -3,
+     "code": 134,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47914,8 +47180,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 248,
-     "code": 245,
-     "diff": -3,
+     "code": 224,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47923,8 +47189,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 338,
-     "code": 335,
-     "diff": -3,
+     "code": 314,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47932,8 +47198,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 376,
-     "code": 373,
-     "diff": -3,
+     "code": 352,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47950,8 +47216,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 556,
-     "code": 553,
-     "diff": -3,
+     "code": 532,
+     "diff": -24,
      "allowed": null
     },
     {
@@ -47968,25 +47234,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08b_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 10,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 9,
@@ -48017,17 +47278,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 56,
-     "code": 63,
-     "diff": 7,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
@@ -48035,8 +47287,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 450,
-     "diff": 77,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -48061,37 +47313,19 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 132,
-     "code": 100,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
-     "code": 63,
-     "diff": 7,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 36,
+     "code": 16,
+     "diff": -20,
      "allowed": null
     },
     {
@@ -48099,8 +47333,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 271,
-     "diff": 77,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 328,
+     "diff": 39,
      "allowed": null
     },
     {
@@ -48108,8 +47351,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 505,
-     "code": 536,
-     "diff": 31,
+     "code": 450,
+     "diff": -55,
      "allowed": null
     },
     {
@@ -48117,8 +47360,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 595,
-     "code": 626,
-     "diff": 31,
+     "code": 540,
+     "diff": -55,
      "allowed": null
     },
     {
@@ -48126,8 +47369,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 685,
-     "code": 716,
-     "diff": 31,
+     "code": 630,
+     "diff": -55,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -48135,8 +47378,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 723,
-     "code": 754,
-     "diff": 31,
+     "code": 668,
+     "diff": -55,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -48162,8 +47405,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 923,
-     "code": 934,
-     "diff": 11,
+     "code": 848,
+     "diff": -75,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -48180,30 +47423,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08b_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 12,
+    "box": 10,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 9,
@@ -48234,17 +47467,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 56,
-     "code": 63,
-     "diff": 7,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
@@ -48252,8 +47476,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 450,
-     "diff": 77,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -48278,37 +47502,19 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 132,
-     "code": 100,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
-     "code": 63,
-     "diff": 7,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 36,
+     "code": 16,
+     "diff": -20,
      "allowed": null
     },
     {
@@ -48316,8 +47522,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 271,
-     "diff": 77,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 328,
+     "diff": 39,
      "allowed": null
     },
     {
@@ -48325,8 +47540,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 505,
-     "code": 536,
-     "diff": 31,
+     "code": 450,
+     "diff": -55,
      "allowed": null
     },
     {
@@ -48334,8 +47549,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 595,
-     "code": 626,
-     "diff": 31,
+     "code": 540,
+     "diff": -55,
      "allowed": null
     },
     {
@@ -48343,8 +47558,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 685,
-     "code": 716,
-     "diff": 31,
+     "code": 630,
+     "diff": -55,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -48352,8 +47567,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 723,
-     "code": 754,
-     "diff": 31,
+     "code": 668,
+     "diff": -55,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -48379,8 +47594,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 923,
-     "code": 934,
-     "diff": 11,
+     "code": 848,
+     "diff": -75,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -48397,43 +47612,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08b_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 25,
+    "box": 23,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 935,
-     "code": 949,
-     "diff": 14,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -48445,8 +47641,8 @@
      "name": "body",
      "field": "h",
      "figma": 911,
-     "code": 1198,
-     "diff": 287,
+     "code": 1185,
+     "diff": 274,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -48460,8 +47656,8 @@
      "name": "login-notice",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48478,17 +47674,8 @@
      "name": "login-notice",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48496,8 +47683,8 @@
      "name": "login-card",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48505,8 +47692,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -48514,8 +47701,8 @@
      "name": "login-card",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48540,15 +47727,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 336,
-     "code": 304,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -48557,20 +47735,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 240,
+     "code": 24,
+     "diff": -216,
      "allowed": null
     },
     {
@@ -48578,8 +47747,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 720,
+     "diff": 431,
      "allowed": null
     },
     {
@@ -48587,8 +47765,8 @@
      "name": "login-field",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48596,8 +47774,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 483,
-     "code": 521,
-     "diff": 38,
+     "code": 450,
+     "diff": -33,
      "allowed": null
     },
     {
@@ -48605,8 +47783,8 @@
      "name": "login-field",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48614,8 +47792,8 @@
      "name": "login-field#2",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48623,8 +47801,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 573,
-     "code": 611,
-     "diff": 38,
+     "code": 540,
+     "diff": -33,
      "allowed": null
     },
     {
@@ -48632,8 +47810,8 @@
      "name": "login-field#2",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48641,8 +47819,8 @@
      "name": "login-options",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48650,8 +47828,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 663,
-     "code": 701,
-     "diff": 38,
+     "code": 630,
+     "diff": -33,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -48659,8 +47837,8 @@
      "name": "login-options",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48668,8 +47846,8 @@
      "name": "login-fact",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48677,8 +47855,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 701,
-     "code": 739,
-     "diff": 38,
+     "code": 668,
+     "diff": -33,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -48686,8 +47864,8 @@
      "name": "login-fact",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48704,8 +47882,8 @@
      "name": "login-join",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48713,8 +47891,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 881,
-     "code": 919,
-     "diff": 38,
+     "code": 848,
+     "diff": -33,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -48722,8 +47900,8 @@
      "name": "login-join",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48740,43 +47918,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08b_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 25,
+    "box": 23,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 935,
-     "code": 949,
-     "diff": 14,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -48788,8 +47947,8 @@
      "name": "body",
      "field": "h",
      "figma": 911,
-     "code": 1198,
-     "diff": 287,
+     "code": 1185,
+     "diff": 274,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -48803,8 +47962,8 @@
      "name": "login-notice",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48821,17 +47980,8 @@
      "name": "login-notice",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48839,8 +47989,8 @@
      "name": "login-card",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48848,8 +47998,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -48857,8 +48007,8 @@
      "name": "login-card",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48883,15 +48033,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 336,
-     "code": 304,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -48900,20 +48041,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 240,
+     "code": 24,
+     "diff": -216,
      "allowed": null
     },
     {
@@ -48921,8 +48053,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 720,
+     "diff": 431,
      "allowed": null
     },
     {
@@ -48930,8 +48071,8 @@
      "name": "login-field",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48939,8 +48080,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 483,
-     "code": 521,
-     "diff": 38,
+     "code": 450,
+     "diff": -33,
      "allowed": null
     },
     {
@@ -48948,8 +48089,8 @@
      "name": "login-field",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48957,8 +48098,8 @@
      "name": "login-field#2",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48966,8 +48107,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 573,
-     "code": 611,
-     "diff": 38,
+     "code": 540,
+     "diff": -33,
      "allowed": null
     },
     {
@@ -48975,8 +48116,8 @@
      "name": "login-field#2",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -48984,8 +48125,8 @@
      "name": "login-options",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -48993,8 +48134,8 @@
      "name": "login-options",
      "field": "y",
      "figma": 663,
-     "code": 701,
-     "diff": 38,
+     "code": 630,
+     "diff": -33,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -49002,8 +48143,8 @@
      "name": "login-options",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -49011,8 +48152,8 @@
      "name": "login-fact",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -49020,8 +48161,8 @@
      "name": "login-fact",
      "field": "y",
      "figma": 701,
-     "code": 739,
-     "diff": 38,
+     "code": 668,
+     "diff": -33,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -49029,8 +48170,8 @@
      "name": "login-fact",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -49047,8 +48188,8 @@
      "name": "login-join",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -49056,8 +48197,8 @@
      "name": "login-join",
      "field": "y",
      "figma": 881,
-     "code": 919,
-     "diff": 38,
+     "code": 848,
+     "diff": -33,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -49065,8 +48206,8 @@
      "name": "login-join",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -49083,30 +48224,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08c_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 3,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -49134,29 +48265,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 54,
-     "code": 57,
-     "diff": 3,
+     "code": 48,
+     "diff": -6,
      "allowed": null
     },
     {
@@ -49180,29 +48293,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 256,
-     "code": 265,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 137,
-     "code": 143,
-     "diff": 6,
+     "code": 134,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -49228,25 +48323,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08c_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 3,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -49274,29 +48364,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 54,
-     "code": 57,
-     "diff": 3,
+     "code": 48,
+     "diff": -6,
      "allowed": null
     },
     {
@@ -49320,29 +48392,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 256,
-     "code": 265,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 137,
-     "code": 143,
-     "diff": 6,
+     "code": 134,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -49368,25 +48422,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08c_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 3,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -49414,29 +48463,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 54,
-     "code": 57,
-     "diff": 3,
+     "code": 48,
+     "diff": -6,
      "allowed": null
     },
     {
@@ -49460,29 +48491,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 256,
-     "code": 265,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 137,
-     "code": 143,
-     "diff": 6,
+     "code": 134,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -49508,25 +48521,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08c_1440_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 3,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -49554,29 +48562,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 54,
-     "code": 57,
-     "diff": 3,
+     "code": 48,
+     "diff": -6,
      "allowed": null
     },
     {
@@ -49600,29 +48590,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 256,
-     "code": 265,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 137,
-     "code": 143,
-     "diff": 6,
+     "code": 134,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -49648,25 +48620,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08c_1920_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 5,
+    "box": 6,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 1,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 1
    },
    "allowed": 6,
@@ -49694,11 +48661,11 @@
     },
     {
      "kind": "box",
-     "name": "login-divider",
+     "name": "login-notice",
      "field": "y",
-     "figma": 48,
-     "code": 59,
-     "diff": 11,
+     "figma": 59,
+     "code": 48,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -49708,15 +48675,6 @@
      "figma": 359,
      "code": 338,
      "diff": -21,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 59,
-     "diff": 11,
      "allowed": null
     },
     {
@@ -49746,11 +48704,29 @@
     },
     {
      "kind": "box",
+     "name": "login-logo",
+     "field": "y",
+     "figma": 59,
+     "code": 48,
+     "diff": -11,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "y",
+     "figma": 267,
+     "code": 256,
+     "diff": -11,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 147,
-     "code": 145,
-     "diff": -2,
+     "code": 134,
+     "diff": -13,
      "allowed": null
     },
     {
@@ -49778,11 +48754,6 @@
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     },
     {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
-    },
-    {
      "kind": "order",
      "name": "(화면)",
      "figma": "system-band > body > login-divider > login-card > login-notice > login-logo > login-field > notice-block > footer",
@@ -49794,14 +48765,14 @@
   "G-08c_1920_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 3,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -49829,29 +48800,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 54,
-     "code": 57,
-     "diff": 3,
+     "code": 48,
+     "diff": -6,
      "allowed": null
     },
     {
@@ -49875,29 +48828,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 256,
-     "code": 265,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 137,
-     "code": 143,
-     "diff": 6,
+     "code": 134,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -49923,38 +48858,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08c_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 8,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 7,
+   "allowed": 6,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 757,
-     "code": 773,
-     "diff": 16,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -49966,8 +48887,8 @@
      "name": "body",
      "field": "h",
      "figma": 733,
-     "code": 1042,
-     "diff": 309,
+     "code": 1027,
+     "diff": 294,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -49987,20 +48908,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -50025,15 +48937,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 132,
-     "code": 100,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -50042,20 +48945,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 36,
+     "code": 16,
+     "diff": -20,
      "allowed": null
     },
     {
@@ -50063,8 +48957,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 328,
+     "diff": 39,
      "allowed": null
     },
     {
@@ -50072,8 +48975,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 481,
-     "code": 521,
-     "diff": 40,
+     "code": 450,
+     "diff": -31,
      "allowed": null
     },
     {
@@ -50099,43 +49002,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08c_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 8,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 7,
+   "allowed": 6,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 757,
-     "code": 773,
-     "diff": 16,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -50147,8 +49031,8 @@
      "name": "body",
      "field": "h",
      "figma": 733,
-     "code": 1042,
-     "diff": 309,
+     "code": 1027,
+     "diff": 294,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -50168,20 +49052,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -50206,15 +49081,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 132,
-     "code": 100,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -50223,20 +49089,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 36,
+     "code": 16,
+     "diff": -20,
      "allowed": null
     },
     {
@@ -50244,8 +49101,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 328,
+     "diff": 39,
      "allowed": null
     },
     {
@@ -50253,8 +49119,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 481,
-     "code": 521,
-     "diff": 40,
+     "code": 450,
+     "diff": -31,
      "allowed": null
     },
     {
@@ -50280,43 +49146,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08c_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 15,
+    "box": 13,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 7,
+   "allowed": 6,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 735,
-     "code": 773,
-     "diff": 38,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -50328,8 +49175,8 @@
      "name": "body",
      "field": "h",
      "figma": 711,
-     "code": 1022,
-     "diff": 311,
+     "code": 985,
+     "diff": 274,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -50343,8 +49190,8 @@
      "name": "login-notice",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -50361,17 +49208,8 @@
      "name": "login-notice",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -50379,8 +49217,8 @@
      "name": "login-card",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -50388,8 +49226,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -50397,8 +49235,8 @@
      "name": "login-card",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -50414,15 +49252,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 336,
-     "code": 304,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -50431,20 +49260,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 240,
+     "code": 24,
+     "diff": -216,
      "allowed": null
     },
     {
@@ -50452,8 +49272,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 720,
+     "diff": 431,
      "allowed": null
     },
     {
@@ -50461,8 +49290,8 @@
      "name": "login-field",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -50470,8 +49299,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 459,
-     "code": 521,
-     "diff": 62,
+     "code": 450,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -50479,8 +49308,8 @@
      "name": "login-field",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -50506,43 +49335,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08c_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 15,
+    "box": 13,
     "text": 2,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 7,
+   "allowed": 6,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 735,
-     "code": 773,
-     "diff": 38,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -50554,8 +49364,8 @@
      "name": "body",
      "field": "h",
      "figma": 711,
-     "code": 1022,
-     "diff": 311,
+     "code": 985,
+     "diff": 274,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -50569,8 +49379,8 @@
      "name": "login-notice",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -50587,17 +49397,8 @@
      "name": "login-notice",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -50605,8 +49406,8 @@
      "name": "login-card",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -50614,8 +49415,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -50623,8 +49424,8 @@
      "name": "login-card",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -50640,15 +49441,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 336,
-     "code": 304,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -50657,20 +49449,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 240,
+     "code": 24,
+     "diff": -216,
      "allowed": null
     },
     {
@@ -50678,8 +49461,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 720,
+     "diff": 431,
      "allowed": null
     },
     {
@@ -50687,8 +49479,8 @@
      "name": "login-field",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -50696,8 +49488,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 459,
-     "code": 521,
-     "diff": 62,
+     "code": 450,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -50705,8 +49497,8 @@
      "name": "login-field",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -50732,30 +49524,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08d_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 8,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 6,
@@ -50786,17 +49568,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 161,
-     "code": 169,
-     "diff": 8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 75,
-     "diff": 27,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -50806,15 +49579,6 @@
      "figma": 563,
      "code": 526,
      "diff": -37,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 75,
-     "diff": 27,
      "allowed": null
     },
     {
@@ -50831,8 +49595,8 @@
      "name": "login-logo",
      "field": "y",
      "figma": 161,
-     "code": 169,
-     "diff": 8,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -50840,8 +49604,8 @@
      "name": "notice-block",
      "field": "y",
      "figma": 369,
-     "code": 377,
-     "diff": 8,
+     "code": 350,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -50849,8 +49613,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 93,
-     "code": 123,
-     "diff": 30,
+     "code": 96,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -50858,8 +49622,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 209,
-     "code": 239,
-     "diff": 30,
+     "code": 212,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -50867,8 +49631,8 @@
      "name": "login-field#3",
      "field": "y",
      "figma": 299,
-     "code": 329,
-     "diff": 30,
+     "code": 302,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -50885,11 +49649,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     },
     {
      "kind": "only-code",
@@ -50901,14 +49660,14 @@
   "G-08d_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 8,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 6,
@@ -50939,17 +49698,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 161,
-     "code": 169,
-     "diff": 8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 75,
-     "diff": 27,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -50959,15 +49709,6 @@
      "figma": 563,
      "code": 526,
      "diff": -37,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 75,
-     "diff": 27,
      "allowed": null
     },
     {
@@ -50984,8 +49725,8 @@
      "name": "login-logo",
      "field": "y",
      "figma": 161,
-     "code": 169,
-     "diff": 8,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -50993,8 +49734,8 @@
      "name": "notice-block",
      "field": "y",
      "figma": 369,
-     "code": 377,
-     "diff": 8,
+     "code": 350,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51002,8 +49743,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 93,
-     "code": 123,
-     "diff": 30,
+     "code": 96,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51011,8 +49752,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 209,
-     "code": 239,
-     "diff": 30,
+     "code": 212,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51020,8 +49761,8 @@
      "name": "login-field#3",
      "field": "y",
      "figma": 299,
-     "code": 329,
-     "diff": 30,
+     "code": 302,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51038,11 +49779,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     },
     {
      "kind": "only-code",
@@ -51054,14 +49790,14 @@
   "G-08d_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 8,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 6,
@@ -51092,17 +49828,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 161,
-     "code": 169,
-     "diff": 8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 75,
-     "diff": 27,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51112,15 +49839,6 @@
      "figma": 563,
      "code": 526,
      "diff": -37,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 75,
-     "diff": 27,
      "allowed": null
     },
     {
@@ -51137,8 +49855,8 @@
      "name": "login-logo",
      "field": "y",
      "figma": 161,
-     "code": 169,
-     "diff": 8,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51146,8 +49864,8 @@
      "name": "notice-block",
      "field": "y",
      "figma": 369,
-     "code": 377,
-     "diff": 8,
+     "code": 350,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51155,8 +49873,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 93,
-     "code": 123,
-     "diff": 30,
+     "code": 96,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51164,8 +49882,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 209,
-     "code": 239,
-     "diff": 30,
+     "code": 212,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51173,8 +49891,8 @@
      "name": "login-field#3",
      "field": "y",
      "figma": 299,
-     "code": 329,
-     "diff": 30,
+     "code": 302,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51191,11 +49909,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     },
     {
      "kind": "only-code",
@@ -51207,14 +49920,14 @@
   "G-08d_1440_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 8,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 6,
@@ -51245,17 +49958,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 161,
-     "code": 169,
-     "diff": 8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 75,
-     "diff": 27,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51265,15 +49969,6 @@
      "figma": 563,
      "code": 526,
      "diff": -37,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 75,
-     "diff": 27,
      "allowed": null
     },
     {
@@ -51290,8 +49985,8 @@
      "name": "login-logo",
      "field": "y",
      "figma": 161,
-     "code": 169,
-     "diff": 8,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51299,8 +49994,8 @@
      "name": "notice-block",
      "field": "y",
      "figma": 369,
-     "code": 377,
-     "diff": 8,
+     "code": 350,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51308,8 +50003,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 93,
-     "code": 123,
-     "diff": 30,
+     "code": 96,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51317,8 +50012,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 209,
-     "code": 239,
-     "diff": 30,
+     "code": 212,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51326,8 +50021,8 @@
      "name": "login-field#3",
      "field": "y",
      "figma": 299,
-     "code": 329,
-     "diff": 30,
+     "code": 302,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51347,11 +50042,6 @@
     },
     {
      "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
      "name": "login-field#4",
      "allowed": null
     }
@@ -51360,14 +50050,14 @@
   "G-08d_1920_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 8,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 6,
@@ -51395,11 +50085,11 @@
     },
     {
      "kind": "box",
-     "name": "login-divider",
+     "name": "login-notice",
      "field": "y",
-     "figma": 48,
-     "code": 67,
-     "diff": 19,
+     "figma": 161,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51414,19 +50104,28 @@
     {
      "kind": "box",
      "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 67,
-     "diff": 19,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
      "field": "h",
      "figma": 563,
      "code": 526,
      "diff": -37,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "login-logo",
+     "field": "y",
+     "figma": 161,
+     "code": 142,
+     "diff": -19,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "y",
+     "figma": 369,
+     "code": 350,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51434,8 +50133,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 93,
-     "code": 115,
-     "diff": 22,
+     "code": 96,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51443,8 +50142,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 209,
-     "code": 231,
-     "diff": 22,
+     "code": 212,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51452,8 +50151,8 @@
      "name": "login-field#3",
      "field": "y",
      "figma": 299,
-     "code": 321,
-     "diff": 22,
+     "code": 302,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51473,11 +50172,6 @@
     },
     {
      "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
      "name": "login-field#4",
      "allowed": null
     }
@@ -51486,14 +50180,14 @@
   "G-08d_1920_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 8,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 6,
@@ -51524,17 +50218,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 161,
-     "code": 169,
-     "diff": 8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 75,
-     "diff": 27,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51544,15 +50229,6 @@
      "figma": 563,
      "code": 526,
      "diff": -37,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-card",
-     "field": "y",
-     "figma": 48,
-     "code": 75,
-     "diff": 27,
      "allowed": null
     },
     {
@@ -51569,8 +50245,8 @@
      "name": "login-logo",
      "field": "y",
      "figma": 161,
-     "code": 169,
-     "diff": 8,
+     "code": 142,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51578,8 +50254,8 @@
      "name": "notice-block",
      "field": "y",
      "figma": 369,
-     "code": 377,
-     "diff": 8,
+     "code": 350,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -51587,8 +50263,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 93,
-     "code": 123,
-     "diff": 30,
+     "code": 96,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51596,8 +50272,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 209,
-     "code": 239,
-     "diff": 30,
+     "code": 212,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51605,8 +50281,8 @@
      "name": "login-field#3",
      "field": "y",
      "figma": 299,
-     "code": 329,
-     "diff": 30,
+     "code": 302,
+     "diff": 3,
      "allowed": null
     },
     {
@@ -51623,11 +50299,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     },
     {
      "kind": "only-code",
@@ -51639,14 +50310,14 @@
   "G-08d_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 11,
+    "box": 9,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 3,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 7,
@@ -51677,17 +50348,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 56,
-     "code": 50,
-     "diff": -6,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
@@ -51695,8 +50357,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 437,
-     "diff": 64,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -51711,37 +50373,19 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 132,
-     "code": 100,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
-     "code": 50,
-     "diff": -6,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 36,
+     "code": 16,
+     "diff": -20,
      "allowed": null
     },
     {
@@ -51749,8 +50393,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 258,
-     "diff": 64,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 328,
+     "diff": 39,
      "allowed": null
     },
     {
@@ -51758,8 +50411,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 421,
-     "code": 485,
-     "diff": 64,
+     "code": 412,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -51767,8 +50420,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 537,
-     "code": 601,
-     "diff": 64,
+     "code": 528,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -51776,8 +50429,8 @@
      "name": "login-field#3",
      "field": "y",
      "figma": 627,
-     "code": 691,
-     "diff": 64,
+     "code": 618,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -51794,16 +50447,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     },
     {
      "kind": "only-code",
@@ -51815,14 +50458,14 @@
   "G-08d_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 11,
+    "box": 9,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 3,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 7,
@@ -51853,17 +50496,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 56,
-     "code": 50,
-     "diff": -6,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
@@ -51871,8 +50505,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 437,
-     "diff": 64,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -51887,37 +50521,19 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 132,
-     "code": 100,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
-     "code": 50,
-     "diff": -6,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 36,
+     "code": 16,
+     "diff": -20,
      "allowed": null
     },
     {
@@ -51925,8 +50541,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 258,
-     "diff": 64,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 328,
+     "diff": 39,
      "allowed": null
     },
     {
@@ -51934,8 +50559,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 421,
-     "code": 485,
-     "diff": 64,
+     "code": 412,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -51943,8 +50568,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 537,
-     "code": 601,
-     "diff": 64,
+     "code": 528,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -51952,8 +50577,8 @@
      "name": "login-field#3",
      "field": "y",
      "figma": 627,
-     "code": 691,
-     "diff": 64,
+     "code": 618,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -51970,16 +50595,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     },
     {
      "kind": "only-code",
@@ -51991,14 +50606,14 @@
   "G-08d_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 21,
+    "box": 19,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 3,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 7,
@@ -52029,8 +50644,8 @@
      "name": "login-notice",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -52038,8 +50653,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 56,
-     "code": 50,
-     "diff": -6,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
@@ -52047,17 +50662,8 @@
      "name": "login-notice",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52065,8 +50671,8 @@
      "name": "login-card",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -52074,8 +50680,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 437,
-     "diff": 64,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -52083,8 +50689,8 @@
      "name": "login-card",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52099,37 +50705,19 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 336,
-     "code": 304,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
-     "code": 50,
-     "diff": -6,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 240,
+     "code": 24,
+     "diff": -216,
      "allowed": null
     },
     {
@@ -52137,8 +50725,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 258,
-     "diff": 64,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 720,
+     "diff": 431,
      "allowed": null
     },
     {
@@ -52146,8 +50743,8 @@
      "name": "login-field",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -52155,8 +50752,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 421,
-     "code": 485,
-     "diff": 64,
+     "code": 412,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -52164,8 +50761,8 @@
      "name": "login-field",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52173,8 +50770,8 @@
      "name": "login-field#2",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -52182,8 +50779,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 537,
-     "code": 601,
-     "diff": 64,
+     "code": 528,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -52191,8 +50788,8 @@
      "name": "login-field#2",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52200,8 +50797,8 @@
      "name": "login-field#3",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -52209,8 +50806,8 @@
      "name": "login-field#3",
      "field": "y",
      "figma": 627,
-     "code": 691,
-     "diff": 64,
+     "code": 618,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -52218,8 +50815,8 @@
      "name": "login-field#3",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52236,16 +50833,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     },
     {
      "kind": "only-code",
@@ -52257,14 +50844,14 @@
   "G-08d_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 21,
+    "box": 19,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 3,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 7,
@@ -52295,8 +50882,8 @@
      "name": "login-notice",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -52304,8 +50891,8 @@
      "name": "login-notice",
      "field": "y",
      "figma": 56,
-     "code": 50,
-     "diff": -6,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
@@ -52313,17 +50900,8 @@
      "name": "login-notice",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52331,8 +50909,8 @@
      "name": "login-card",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -52340,8 +50918,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 437,
-     "diff": 64,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -52349,8 +50927,8 @@
      "name": "login-card",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52365,37 +50943,19 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 336,
-     "code": 304,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
-     "code": 50,
-     "diff": -6,
+     "code": 48,
+     "diff": -8,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 240,
+     "code": 24,
+     "diff": -216,
      "allowed": null
     },
     {
@@ -52403,8 +50963,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 258,
-     "diff": 64,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 720,
+     "diff": 431,
      "allowed": null
     },
     {
@@ -52412,8 +50981,8 @@
      "name": "login-field",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -52421,8 +50990,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 421,
-     "code": 485,
-     "diff": 64,
+     "code": 412,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -52430,8 +50999,8 @@
      "name": "login-field",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52439,8 +51008,8 @@
      "name": "login-field#2",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -52448,8 +51017,8 @@
      "name": "login-field#2",
      "field": "y",
      "figma": 537,
-     "code": 601,
-     "diff": 64,
+     "code": 528,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -52457,8 +51026,8 @@
      "name": "login-field#2",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52466,8 +51035,8 @@
      "name": "login-field#3",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -52475,8 +51044,8 @@
      "name": "login-field#3",
      "field": "y",
      "figma": 627,
-     "code": 691,
-     "diff": 64,
+     "code": 618,
+     "diff": -9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -52484,8 +51053,8 @@
      "name": "login-field#3",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52502,16 +51071,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     },
     {
      "kind": "only-code",
@@ -52523,14 +51082,14 @@
   "G-08e_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -52558,29 +51117,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 67,
-     "code": 57,
-     "diff": -10,
+     "code": 48,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -52604,29 +51145,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 256,
-     "code": 265,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 150,
-     "code": 143,
-     "diff": -7,
+     "code": 134,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52643,25 +51166,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08e_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -52689,29 +51207,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 67,
-     "code": 57,
-     "diff": -10,
+     "code": 48,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -52735,29 +51235,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 256,
-     "code": 265,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 150,
-     "code": 143,
-     "diff": -7,
+     "code": 134,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52774,25 +51256,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08e_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -52820,29 +51297,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 67,
-     "code": 57,
-     "diff": -10,
+     "code": 48,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -52866,29 +51325,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 256,
-     "code": 265,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 150,
-     "code": 143,
-     "diff": -7,
+     "code": 134,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -52905,25 +51346,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08e_1440_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -52951,29 +51387,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 67,
-     "code": 57,
-     "diff": -10,
+     "code": 48,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -52997,29 +51415,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 256,
-     "code": 265,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 150,
-     "code": 143,
-     "diff": -7,
+     "code": 134,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -53036,11 +51436,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
@@ -53054,7 +51449,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -53085,8 +51480,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 67,
-     "code": 49,
-     "diff": -18,
+     "code": 48,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -53113,8 +51508,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 150,
-     "code": 135,
-     "diff": -15,
+     "code": 134,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -53131,25 +51526,20 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08e_1920_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 7,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -53177,29 +51567,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-divider",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 67,
-     "code": 57,
-     "diff": -10,
+     "code": 48,
+     "diff": -19,
      "allowed": null
     },
     {
@@ -53223,29 +51595,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "y",
-     "figma": 48,
-     "code": 57,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "notice-block",
-     "field": "y",
-     "figma": 256,
-     "code": 265,
-     "diff": 9,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-field",
      "field": "y",
      "figma": 150,
-     "code": 143,
-     "diff": -7,
+     "code": 134,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -53262,38 +51616,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08e_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 8,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 7,
+   "allowed": 6,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 731,
-     "code": 747,
-     "diff": 16,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -53305,8 +51645,8 @@
      "name": "body",
      "field": "h",
      "figma": 707,
-     "code": 1016,
-     "diff": 309,
+     "code": 1001,
+     "diff": 294,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -53326,20 +51666,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -53364,15 +51695,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 132,
-     "code": 100,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -53381,20 +51703,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 36,
+     "code": 16,
+     "diff": -20,
      "allowed": null
     },
     {
@@ -53402,8 +51715,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 328,
+     "diff": 39,
      "allowed": null
     },
     {
@@ -53411,8 +51733,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 481,
-     "code": 521,
-     "diff": 40,
+     "code": 450,
+     "diff": -31,
      "allowed": null
     },
     {
@@ -53429,43 +51751,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08e_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 8,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 7,
+   "allowed": 6,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 731,
-     "code": 747,
-     "diff": 16,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -53477,8 +51780,8 @@
      "name": "body",
      "field": "h",
      "figma": 707,
-     "code": 1016,
-     "diff": 309,
+     "code": 1001,
+     "diff": 294,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -53498,20 +51801,11 @@
     },
     {
      "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -53536,15 +51830,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 132,
-     "code": 100,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -53553,20 +51838,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 36,
+     "code": 16,
+     "diff": -20,
      "allowed": null
     },
     {
@@ -53574,8 +51850,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 328,
+     "diff": 39,
      "allowed": null
     },
     {
@@ -53583,8 +51868,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 481,
-     "code": 521,
-     "diff": 40,
+     "code": 450,
+     "diff": -31,
      "allowed": null
     },
     {
@@ -53601,43 +51886,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08e_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 15,
+    "box": 13,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 7,
+   "allowed": 6,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 709,
-     "code": 747,
-     "diff": 38,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -53649,8 +51915,8 @@
      "name": "body",
      "field": "h",
      "figma": 685,
-     "code": 996,
-     "diff": 311,
+     "code": 959,
+     "diff": 274,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -53664,8 +51930,8 @@
      "name": "login-notice",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -53682,17 +51948,8 @@
      "name": "login-notice",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -53700,8 +51957,8 @@
      "name": "login-card",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -53709,8 +51966,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -53718,8 +51975,8 @@
      "name": "login-card",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -53735,15 +51992,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 336,
-     "code": 304,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -53752,20 +52000,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 240,
+     "code": 24,
+     "diff": -216,
      "allowed": null
     },
     {
@@ -53773,8 +52012,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 720,
+     "diff": 431,
      "allowed": null
     },
     {
@@ -53782,8 +52030,8 @@
      "name": "login-field",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -53791,8 +52039,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 459,
-     "code": 521,
-     "diff": 62,
+     "code": 450,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -53800,8 +52048,8 @@
      "name": "login-field",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -53818,43 +52066,24 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
   "G-08e_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 15,
+    "box": 13,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
-   "allowed": 7,
+   "allowed": 6,
    "rows": [
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 709,
-     "code": 747,
-     "diff": 38,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
     {
      "kind": "shape",
      "name": "footer",
@@ -53866,8 +52095,8 @@
      "name": "body",
      "field": "h",
      "figma": 685,
-     "code": 996,
-     "diff": 311,
+     "code": 959,
+     "diff": 274,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -53881,8 +52110,8 @@
      "name": "login-notice",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -53899,17 +52128,8 @@
      "name": "login-notice",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-notice",
-     "field": "h",
-     "figma": 268,
-     "code": 338,
-     "diff": 70,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -53917,8 +52137,8 @@
      "name": "login-card",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -53926,8 +52146,8 @@
      "name": "login-card",
      "field": "y",
      "figma": 373,
-     "code": 435,
-     "diff": 62,
+     "code": 364,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -53935,8 +52155,8 @@
      "name": "login-card",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -53952,15 +52172,6 @@
     {
      "kind": "box",
      "name": "login-logo",
-     "field": "x",
-     "figma": 336,
-     "code": 304,
-     "diff": -32,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
      "field": "y",
      "figma": 56,
      "code": 48,
@@ -53969,20 +52180,11 @@
     },
     {
      "kind": "box",
-     "name": "login-logo",
-     "field": "w",
-     "figma": 96,
-     "code": 160,
-     "diff": 64,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "login-logo",
-     "field": "h",
-     "figma": 106,
-     "code": 176,
-     "diff": 70,
+     "name": "notice-block",
+     "field": "x",
+     "figma": 240,
+     "code": 24,
+     "diff": -216,
      "allowed": null
     },
     {
@@ -53990,8 +52192,17 @@
      "name": "notice-block",
      "field": "y",
      "figma": 194,
-     "code": 256,
-     "diff": 62,
+     "code": 186,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "notice-block",
+     "field": "w",
+     "figma": 289,
+     "code": 720,
+     "diff": 431,
      "allowed": null
     },
     {
@@ -53999,8 +52210,8 @@
      "name": "login-field",
      "field": "x",
      "figma": 16,
-     "code": 184,
-     "diff": 168,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
@@ -54008,8 +52219,8 @@
      "name": "login-field",
      "field": "y",
      "figma": 459,
-     "code": 521,
-     "diff": 62,
+     "code": 450,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -54017,8 +52228,8 @@
      "name": "login-field",
      "field": "w",
      "figma": 736,
-     "code": 400,
-     "diff": -336,
+     "code": 720,
+     "diff": -16,
      "allowed": null
     },
     {
@@ -54035,16 +52246,6 @@
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "login-divider",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
