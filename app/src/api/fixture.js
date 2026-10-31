@@ -5,6 +5,19 @@ const FILES = import.meta.glob('../../../sample/kordoc/api/*.json', { eager: tru
 // README와 파일 원문은 글이라 글자 그대로 읽는다.
 const TEXTS = import.meta.glob('../../../sample/kordoc/api/*.{md,ts}', { eager: true, query: '?raw', import: 'default' });
 
+// 프로젝트 목록(탐색 G-01, 검색 G-02·A-01): 저장된 공개 스냅숏(public/data/snapshot/index.json, 실제 응답을 받아 둔 것)으로 고정한다. Figma 표본 행과 같은 자료로 대조하기 위해서다
+const SNAP = import.meta.glob('../../public/data/snapshot/index.json', { eager: true, import: 'default' });
+const SNAP_PROJECTS = Object.values(SNAP)[0]?.projects || [];
+function snapshotList(query) {
+  const q = new URLSearchParams(query);
+  const search = (q.get('search') || '').toLowerCase();
+  const order = q.get('order_by') || 'last_activity_at';
+  const dir = q.get('sort') === 'asc' ? 1 : -1;
+  const per = Number(q.get('per_page')) || 20; const page = Number(q.get('page')) || 1;
+  let rows = SNAP_PROJECTS.filter((x) => !search || `${x.name} ${x.description || ''} ${x.path_with_namespace}`.toLowerCase().includes(search));
+  rows = [...rows].sort((a, b) => (a[order] > b[order] ? 1 : a[order] < b[order] ? -1 : 0) * dir);
+  return { data: rows.slice((page - 1) * per, page * per), total: rows.length, next: page * per < rows.length ? page + 1 : null };
+}
 const pick = (name) => FILES[`../../../sample/kordoc/api/${name}.json`];
 const TOTALS = pick('totals');
 // 목록 파일은 첫 100개만 담겨 있다. 화면에 보이는 총계는 totals.json 값을 쓴다.
@@ -22,6 +35,7 @@ export function fixtureFor(path) {
   if (!fixtureName()) return null;
   const p = path.replace(/^\/api\/gitlab\//, '').split('?')[0];
   const ok = (data) => ({ mock: false, source: 'sample/kordoc', fixture: 'kordoc', state: 'Ideal', data, pagination: { nextPage: null, total: null } });
+  if (p === 'projects') { const r = snapshotList(path.split('?')[1] || ''); return { mock: false, source: 'snapshot', fixture: 'kordoc', state: r.data.length ? 'Ideal' : 'Empty', data: r.data, pagination: { nextPage: r.next, total: r.total } }; }
   if (/^projects\/[^/]+\/repository\/commits\/[0-9a-f]{7,40}\/refs$/.test(p)) return ok([{ type: 'branch', name: 'main' }, { type: 'tag', name: 'v4.24.21' }]);
   if (/^projects\/[^/]+\/repository\/commits\/[0-9a-f]{7,40}\/merge_requests$/.test(p)) return ok([]);
   const map = [
