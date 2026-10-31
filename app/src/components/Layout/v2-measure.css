@@ -54,3 +54,34 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-panel-in > .krds-breadcrumb-wrap.is-path { margin-bottom: calc(var(--layout-crumb-title-gap) - var(--rb-section-gap)); }
 #root .rb-side-groups ul, #root .rb-side-scroll > ul { display: flex; flex-direction: column; gap: var(--krds-gap-1); }
 #root .rb-avatar-img { background: none; }
+
+/* 7. 사이드바 실측 명세(UX/17_사이드바_실측.md). 이 절의 값은 그 표만 따른다 */
+#root .rb-side-list { display: flex; flex-direction: column; gap: var(--layout-sidebar-item-gap); }
+#root .rb-side-fold.is-open > .rb-side-list { padding-top: var(--layout-sidebar-item-gap); }
+#root .rb-side-link, #root .rb-side-group-btn { font-weight: var(--layout-sidebar-text-weight); }
+#root .rb-side-link.active { font-weight: var(--krds-font-weight-bold); }
+#root .rb-side-project { margin-bottom: calc(var(--layout-sidebar-project-gap) - var(--layout-sidebar-item-gap)); padding-left: var(--krds-number-3); }
+#root .rb-side-project .rb-avatar { width: var(--layout-sidebar-avatar); height: var(--layout-sidebar-avatar); font-size: var(--rb-step-13); }
+#root .rb-side-group.has-sep { padding-bottom: var(--layout-sidebar-sep-gap); margin-bottom: calc(var(--layout-sidebar-sep-gap) - var(--layout-sidebar-item-gap)); border-bottom: 0; position: relative; }
+#root .rb-side-group.has-sep::after { content: ""; position: absolute; left: var(--krds-number-5); right: var(--krds-number-5); bottom: 0; height: var(--krds-border-width-static-regular); background: var(--layout-raised-bg); }
+#root .rb-side-group.is-extra { margin-top: calc(var(--layout-sidebar-sep-gap) - var(--layout-sidebar-item-gap)); padding-top: var(--layout-sidebar-sep-gap); border-top: 0; position: relative; }
+#root .rb-side-group.is-extra::before { content: ""; position: absolute; left: var(--krds-number-5); right: var(--krds-number-5); top: 0; height: var(--krds-border-width-static-regular); background: var(--layout-raised-bg); }
+#root .rb-side-foot { border-top: 0; padding-top: var(--krds-number-5); }
+#root .rb-side-foot > .rb-side-list { gap: var(--layout-sidebar-foot-gap); }
+
+/* 8. 접음 = 아이콘 열 44(공공 깃랩). 항목 28 정사각, 아이콘 x14. 머리, 글자, 꺾쇠, 묶음 목록은 숨기고 글자는 읽기 이름으로 남긴다 */
+@media (min-width: 768px) {
+  #root .rb-shell.has-side.is-side-hidden > .rb-side-wrap { width: var(--layout-sidebar-rail-w); transform: none; visibility: visible; }
+  #root .rb-shell.has-side.is-side-hidden > .rb-panel { margin-left: var(--layout-sidebar-rail-w); }
+}
+#root .rb-side.is-rail { width: var(--layout-sidebar-rail-w); padding-top: var(--krds-number-5); }
+#root .rb-side.is-rail .rb-side-title, #root .rb-side.is-rail .rb-side-fold, #root .rb-side.is-rail .rb-side-count, #root .rb-side.is-rail .rb-side-group-btn > .rb-icon:last-child, #root .rb-side.is-rail .rb-side-link.active::before { display: none; }
+#root .rb-side.is-rail .rb-side-text { position: absolute; width: var(--krds-number-1); height: var(--krds-number-1); overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#root .rb-side.is-rail .rb-side-link, #root .rb-side.is-rail .rb-side-group-btn { width: var(--layout-sidebar-item-h); padding: 0; justify-content: center; }
+#root .rb-side.is-rail .rb-side-project { margin-bottom: var(--layout-sidebar-project-gap); }
+#root .rb-side.is-rail .rb-side-group.has-sep::after, #root .rb-side.is-rail .rb-side-group.is-extra::before { left: var(--krds-number-5); right: auto; width: var(--krds-number-7); }
+#root .rb-shell.is-side-hidden .rb-side-scroll, #root .rb-shell.is-side-hidden .rb-side-foot { opacity: 1; }
+#root .rb-side-project { gap: var(--krds-number-5); }
+@media (max-width: 767px) {
+  #root .rb-side { width: var(--layout-drawer-w); border-radius: 0 var(--layout-drawer-radius) var(--layout-drawer-radius) 0; }
+}

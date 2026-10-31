@@ -142,6 +142,17 @@
   --layout-sidebar-item-h: var(--krds-number-11);
   --layout-sidebar-icon: var(--krds-number-8);
   --layout-sidebar-top: var(--krds-number-3);
+  /* UX/17 사이드바 실측: 접음 아이콘 열 44, 프로젝트 줄 아래 8(항목 사이 2 + 6), 구분선 위아래 12 + 선 gray-90, 바닥 두 줄 사이 4, 프로젝트 아바타 24 */
+  --layout-sidebar-rail-w: var(--krds-number-15);
+  /* 좁은 화면 서랍: 폭 = min(320, 화면 - 72)(공공 깃랩 360 → 288, 768 → 320), 오른쪽 모서리 16 */
+  --layout-drawer-w: min(calc(var(--krds-number-12) * 10), calc(100vw - var(--krds-number-19)));
+  --layout-drawer-radius: var(--krds-number-8);
+  --layout-sidebar-item-gap: var(--krds-number-2);
+  --layout-sidebar-project-gap: var(--krds-number-5);
+  --layout-sidebar-sep-gap: var(--krds-number-7);
+  --layout-sidebar-foot-gap: var(--krds-number-3);
+  --layout-sidebar-avatar: var(--krds-number-10);
+  --layout-sidebar-text-weight: var(--krds-font-weight-regular);
   /* v2 실측: 화면 제목 28/36(공공 깃랩 28/36.4, KRDS mobile heading-xlarge 2.8rem), 프로젝트 제목 32/40(공공 깃랩 30/37.5, KRDS pc heading-large) */
   --layout-title-size: var(--krds-mobile-font-size-heading-xlarge);
   --layout-title-lh: calc(var(--krds-number-12) + var(--krds-number-3));

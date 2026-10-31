@@ -1,0 +1,14 @@
+{
+  "_source": "공공 깃랩 gitlab.aigov.go.kr 실측(2026. 10. 31., 1280/1440/1920 같은 값, 읽기 전용). 표: UX/17_사이드바_실측.md. 값은 사이드바 상자 왼쪽 위 기준 px",
+  "width": 240, "railWidth": 44,
+  "header": { "dy": 4, "h": 37, "textX": 16 },
+  "firstItemDy": 45,
+  "item": { "x": 8, "w": 224, "h": 28, "radius": 8, "iconX": 16, "icon": 16, "labelX": 44, "chevronX": 208, "pitch": 30 },
+  "project": { "avatarX": 12, "avatar": 24, "labelX": 44, "pitchToNext": 36 },
+  "separator": { "gap": 12 },
+  "foot": { "helpFromBottom": 68, "collapseFromBottom": 36 },
+  "rail": { "itemX": 8, "item": 28, "iconX": 14, "firstItemDy": 8 },
+  "drawer": { "360": 288, "768": 320 },
+  "colors": { "bg": "rgb(0, 0, 0)", "current": "rgb(30, 33, 36)", "text": "rgb(205, 209, 213)" },
+  "tolerance": 1
+}

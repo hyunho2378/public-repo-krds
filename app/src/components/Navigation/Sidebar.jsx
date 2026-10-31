@@ -139,7 +139,7 @@ function SideLink({ it, tipApi, indent }) {
   );
 }
 
-function Group({ group, tipApi }) {
+function Group({ group, tipApi, rail, onShow }) {
   const { pathname } = useLocation();
   const hasActive = group.items.some((it) => it.to && (pathname === it.to || pathname.startsWith(it.to + '/')));
   const [open, setOpen] = useState(group.open || hasActive);
@@ -154,7 +154,7 @@ function Group({ group, tipApi }) {
   const listId = 'rb-side-g-' + group.name.replace(/\s/g, '');
   return (
     <div className={'rb-side-group' + (group.extra && !group.sep ? ' is-extra' : '') + (group.sep ? ' has-sep' : '')}>
-      <button type="button" className="rb-side-group-btn" aria-expanded={open} aria-controls={listId} onClick={() => setOpen(!open)}>
+      <button type="button" className="rb-side-group-btn" aria-expanded={open} aria-controls={listId} title={rail ? group.name : undefined} onClick={() => { if (rail) { onShow(); setOpen(true); } else setOpen(!open); }}>
         <Icon name={group.icon} />
         <span className="rb-side-text">{group.name}</span>
         <Icon name="arrow-down" />
@@ -169,7 +169,9 @@ function Group({ group, tipApi }) {
   );
 }
 
-export function Sidebar({ project, open, onClose, onHide, hidden = false }) {
+// 접음(공공 깃랩 '사이드바 접음'): 숨기지 않고 폭 44 아이콘 열로 줄인다(UX/17 3절). 묶음 아이콘을 누르면 다시 펼치고 그 묶음을 연다
+export function Sidebar({ project, open, onClose, onHide, onShow, hidden = false }) {
+  const rail = hidden;
   const { signedIn, role } = useAuth();
   const menu = project ? projectMenu(project.id, { signedIn, role, issues: project.issues, webUrl: project.webUrl }) : globalMenu({ signedIn });
   const tipApi = useTip();
@@ -184,8 +186,8 @@ export function Sidebar({ project, open, onClose, onHide, hidden = false }) {
   return (
     <>
       {open ? <div className="rb-side-dim" onClick={onClose} /> : null}
-      <div className="rb-side-wrap" data-figma="gitlab-sidebar" aria-hidden={hidden || undefined} ref={(el) => { if (el) el.inert = hidden; }}>
-        <nav id="rb-sidebar" className={'rb-side' + (open ? ' is-open' : '')} aria-label={project ? t.Side_labelProject : t.Side_label}>
+      <div className="rb-side-wrap" data-figma="gitlab-sidebar">
+        <nav id="rb-sidebar" className={'rb-side' + (open ? ' is-open' : '') + (rail ? ' is-rail' : '')} aria-label={project ? t.Side_labelProject : t.Side_label}>
           <div className="rb-side-scroll">
             <p className="rb-side-title">{project ? u.G_project : menu.title}</p>
             {project ? (
@@ -195,17 +197,24 @@ export function Sidebar({ project, open, onClose, onHide, hidden = false }) {
               </NavLink>
             ) : null}
             <div className="rb-side-groups" data-figma="sidebar-nav">
-              {menu.groups.map((g, i) => <Group key={g.name || `g${i}`} group={g} tipApi={tipApi} />)}
+              {menu.groups.map((g, i) => <Group key={g.name || `g${i}`} group={g} tipApi={tipApi} rail={rail} onShow={onShow} />)}
             </div>
           </div>
           <div className="rb-side-foot">
             <ul className="rb-side-list">
               <li><SideLink it={item(u.G_help, '/help', { icon: 'help' })} tipApi={tipApi} /></li>
               <li>
-                <button type="button" className="rb-side-link rb-side-hide" onClick={() => { tipApi.hide(); onHide(); }} aria-controls="rb-sidebar">
-                  <Icon name="panel_open" />
-                  <span className="rb-side-text">{u.G_sideCollapse}</span>
-                </button>
+                {rail ? (
+                  <button type="button" className="rb-side-link rb-side-hide" onClick={() => { tipApi.hide(); onShow(); }} aria-controls="rb-sidebar" title={u.G_sideExpand}>
+                    <Icon name="panel_close" />
+                    <span className="rb-side-text">{u.G_sideExpand}</span>
+                  </button>
+                ) : (
+                  <button type="button" className="rb-side-link rb-side-hide" onClick={() => { tipApi.hide(); onHide(); }} aria-controls="rb-sidebar">
+                    <Icon name="panel_open" />
+                    <span className="rb-side-text">{u.G_sideCollapse}</span>
+                  </button>
+                )}
               </li>
             </ul>
           </div>
