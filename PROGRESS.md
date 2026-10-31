@@ -289,3 +289,15 @@
   - 40 5 {'D21': 40} ('only-figma', 'tabs') A-09_1024_Guest {'want': {'x': 40, 'y': 199, 'w': 944, 'h': 40}}
   - 38 4 {'D21': 38} ('box', 'login-field', 'y') G-08b_360_Guest {'field': 'y', 'figma': 497, 'code': 474, 'diff': -23}
   - 35 4 {'D21': 10, 'C1': 20, 'C2': 5} ('box', 'section-title', 'y') G-06_1024_Guest {'field': 'y', 'figma': 169, 'code': 204, 'diff': 35}
+
+## 라운드4 끝(11. 1. 01:25, D21): 공식 합 2,360(허용 뺀 값), 새 허용 0건, 2,000 이하 미달. 남은 상위: A-01 768 행 두 줄 여부(코드 57/Figma 69), A-01 1024 행 y 11, gl-filter y(C1·C2), filter-search x·y(C2), G-06 보류, A-09 탭 줄, G-08b 360, G-06 section-title y, 판 위 1px(Figma 121 대 코드 120 공통)
+  - 98 3 {'D21': 98} ('box', 'project-row', 'h') A-01_768_Guest {'field': 'h', 'figma': 69, 'code': 57, 'diff': -12}
+  - 84 3 {'D21': 84} ('box', 'project-row', 'y') A-01_1024_Guest {'field': 'y', 'figma': 191, 'code': 202, 'diff': 11}
+  - 75 3 {'D21': 75} ('only-figma', 'project-row') A-01_1024_Guest {'want': {'x': 320, 'y': 421, 'w': 664, 'h': 95}}
+  - 72 8 {'D21': 20, 'C1': 20, 'C2': 32} ('box', 'gl-filter', 'y') G-01_1024_Guest {'field': 'y', 'figma': 217, 'code': 220, 'diff': 3}
+  - 66 7 {'C2': 66} ('box', 'filter-search', 'y') R-11_1024_Guest {'field': 'y', 'figma': 195, 'code': 201, 'diff': 6}
+  - 46 5 {'C2': 46} ('box', 'filter-search', 'x') R-11_1024_Guest {'field': 'x', 'figma': 867, 'code': 855, 'diff': -12}
+  - 44 5 {'D21': 30, 'C1': 10, 'C2': 4} ('text', 'page-head') G-06_1024_Guest {'figma': ['내 작업'], 'code': '내 프로젝트', 'pending': '사용자 
+  - 40 5 {'D21': 40} ('only-figma', 'tabs') A-09_1024_Guest {'want': {'x': 40, 'y': 199, 'w': 944, 'h': 40}}
+  - 38 4 {'D21': 38} ('box', 'login-field', 'y') G-08b_360_Guest {'field': 'y', 'figma': 497, 'code': 474, 'diff': -23}
+  - 35 4 {'D21': 10, 'C1': 20, 'C2': 5} ('box', 'section-title', 'y') G-06_1024_Guest {'field': 'y', 'figma': 169, 'code': 204, 'diff': 35}
