@@ -7,7 +7,10 @@ import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { u } from '../copy/ui';
-import { w } from '../copy/work';
+import { w, au, w2 } from '../copy/work';
+import { IconButton } from '../components/Action/IconButton';
+import { EmptyArt } from './parts/EmptyArt';
+import { newWindow } from '../components/Layout/newWindow';
 import { SORTS, matchTitle, sortItems } from '../components/Code/ListTools';
 import { Drop } from '../components/Code/Drop';
 import { Icon } from '../components/Code/Icon';
@@ -16,6 +19,7 @@ import { Readme } from '../components/Help/Readme';
 import { day } from './parts/repoCommon';
 import '../components/Code/code.css';
 import './parts/glWork.css';
+import './parts/glRepo.css';
 
 export function StateTabs({ value, onChange, items, label }) {
   return (
@@ -51,6 +55,7 @@ export function Issues() {
       <div className="rb-code-area">
         <div className="gl-work-tabs" data-figma="gl-tabs">
           <span className="gl-work-tab">{w.all}</span>
+          <a className="krds-btn small text" href={`${frame.data.project.web_url}/-/issues`} {...newWindow(w2.openOrig)}>{w2.viewAdd}</a>
           <LinkButton to={`/projects/${frame.id}/issues/new`} Type="secondary" Size="small">{w.new}</LinkButton>
         </div>
         <div className="gl-work-filter" data-figma="gl-filter">
@@ -66,6 +71,7 @@ export function Issues() {
                 )}
               </Drop>
             </span>
+            <IconButton icon="close" label={w2.clearFilter} onClick={() => { setQuery(''); setSt('opened'); }} />
             <input type="search" value={query} placeholder={w.search} aria-label={u.List_searchLabel} onChange={(e) => setQuery(e.target.value)} />
             <Icon name="search" />
           </div>
@@ -97,13 +103,23 @@ export function Issues() {
                   </li>
                 ))}
               </ul>
+            ) : (all.opened.length + all.closed.length === 0 && !query ? (
+              <div className="gl-empty-big">
+                <EmptyArt kind="doc" />
+                <h2>{au.wsEmptyTitle}</h2>
+                <p>{au.wsEmptyBody}</p>
+                <div className="gl-empty-actions">
+                  <LinkButton to="/login" Type="primary" Size="small">{au.register} / {au.login}</LinkButton>
+                </div>
+              </div>
             ) : (
-              <div className="gl-work-empty">
-                <h3>{w.noResult}</h3>
+              <div className="gl-empty-big">
+                <EmptyArt kind="search" />
+                <h2>{w.noResult}</h2>
                 <p>{w.noResultHelp}</p>
                 <LinkButton to={`/projects/${frame.id}/issues/new`} Type="secondary" Size="small">{w.new}</LinkButton>
               </div>
-            )}
+            ))}
           </>
         )}
       </div>

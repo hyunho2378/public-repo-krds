@@ -17,6 +17,9 @@ import { rp } from '../copy/work';
 import { IconButton } from '../components/Action/IconButton';
 import { Avatar } from '../components/Layout/Avatar';
 import './parts/glRepo.css';
+import { gql, Q } from './parts/glGraphql';
+import { au } from '../copy/work';
+import { EmptyArt } from './parts/EmptyArt';
 import '../components/Code/code.css';
 
 
@@ -28,8 +31,8 @@ function MembersView({ list }) {
       <div data-figma="page-head"><h2 className="gl-page-title">{rp.membersTitle}</h2></div>
       <p className="gl-page-help">{rp.membersHelp}</p>
       <div className="gl-tabs" data-figma="gl-tabs" role="tablist">
-        <span className="gl-tab active" role="tab" aria-selected="true">{rp.tabMembers} <span className="rb-pill">{list.length}</span></span>
-        <span className="gl-tab" role="tab" aria-selected="false">{rp.tabDirect} <span className="rb-pill">{list.length}</span></span>
+        <span className="gl-tab active" role="tab" aria-selected="true">{rp.tabMembers} <span className="gl-mr-count">{list.length}</span></span>
+        <span className="gl-tab" role="tab" aria-selected="false">{rp.tabDirect} <span className="gl-mr-count">{list.length}</span></span>
       </div>
       <div className="gl-work-filter" data-figma="gl-filter">
         <div className="gl-work-bar" role="search">
@@ -40,12 +43,14 @@ function MembersView({ list }) {
       </div>
       <div className="gl-table-wrap">
         <table className="gl-table">
-          <thead><tr><th scope="col">{rp.colAccount}</th><th scope="col">{rp.colRole}</th><th scope="col">{rp.colActivity}</th></tr></thead>
+          <thead><tr><th scope="col">{rp.colAccount}</th><th scope="col">{rp.colSource}</th><th scope="col">{rp.colRole}</th><th scope="col">{rp.colExpire}</th><th scope="col">{rp.colActivity}</th></tr></thead>
           <tbody>
             {rows.map((m) => (
               <tr key={m.id}>
-                <td><div className="gl-acct"><Avatar src={m.avatar_url} name={m.name} /><div><strong>{orgLabel(m.name)}</strong><small>@{m.username}</small></div></div></td>
+                <td><div className="gl-acct"><Avatar src={m.avatar_url} name={m.name} seed={m.id} /><div><strong>{m.name}</strong><small>@{m.username}</small></div></div></td>
+                <td className="gl-source">{au.sourceDirect(m.name)}</td>
                 <td>{rp.roles[m.access_level] || m.access_level}</td>
+                <td><span className="gl-date-input">{au.expireHint}</span></td>
                 <td>{m.created_at ? `${rp.joined} ${day(m.created_at)}` : ''}</td>
               </tr>
             ))}
@@ -58,7 +63,8 @@ function MembersView({ list }) {
 
 function LabelsView({ list, id }) {
   const [q, setQ] = useState('');
-  const rows = list.filter((l) => l.name.toLowerCase().includes(q.trim().toLowerCase())).sort((a, b) => a.name.localeCompare(b.name));
+  const [arch, setArch] = useState(false);
+  const rows = (arch ? [] : list).filter((l) => l.name.toLowerCase().includes(q.trim().toLowerCase())).sort((a, b) => a.name.localeCompare(b.name));
   const prio = rows.filter((l) => l.priority != null);
   const other = rows.filter((l) => l.priority == null);
   const row = (l) => (
@@ -73,8 +79,8 @@ function LabelsView({ list, id }) {
   return (
     <>
       <div className="gl-tabs">
-        <span className="gl-tab active">{rp.tabActive}</span>
-        <span className="gl-tab">{rp.tabArchived}</span>
+        <button type="button" className={'gl-tab' + (arch ? '' : ' active')} onClick={() => setArch(false)}>{rp.tabActive}</button>
+        <button type="button" className={'gl-tab' + (arch ? ' active' : '')} onClick={() => setArch(true)}>{rp.tabArchived}</button>
         <span className="gl-tools">
           <span className="gl-work-bar"><input type="search" value={q} placeholder={rp.search} aria-label={rp.search} onChange={(e) => setQ(e.target.value)} /><Icon name="search" /></span>
         </span>
@@ -82,7 +88,7 @@ function LabelsView({ list, id }) {
       <section className="gl-box">
         <h2 className="gl-box-head">{rp.prio} <span className="rb-subtle">{prio.length}</span></h2>
         <p className="gl-box-help">{rp.prioHelp}</p>
-        {prio.length ? <ul>{prio.map(row)}</ul> : null}
+        {prio.length ? <ul>{prio.map(row)}</ul> : <div className="gl-empty-big"><EmptyArt kind="label" /></div>}
       </section>
       <section className="gl-box">
         <h2 className="gl-box-head">{rp.others} <span className="rb-subtle">{other.length}</span></h2>
@@ -164,6 +170,20 @@ const SECTIONS = {
   },
 };
 
+const GQL_SECTIONS = ['labels', 'members', 'boards', 'milestones', 'snippets'];
+const GQL_LOAD = {
+  labels: async (path) => (await gql(Q.labels, { p: path })).project.labels.nodes.map((n) => ({ id: n.title, name: n.title, color: n.color, text_color: n.textColor, description: n.description })),
+  // 공공 깃랩 멤버 화면은 서버가 그려 공개 API에 없다. 공개 프로젝트 정보의 소유자(project.owner)로 소유자 한 줄만 만든다(지어낸 값 없음)
+  members: async (path, owner, project) => {
+    const ns = project?.namespace;
+    const o = owner || (ns?.kind === 'user' ? { id: ns.id, name: ns.name, username: ns.path, avatar_url: ns.avatar_url } : null);
+    return o ? [{ id: o.id, name: o.name, username: o.username, avatar_url: o.avatar_url, access_level: 50 }] : [];
+  },
+  boards: async (path) => { const p = (await gql(Q.board, { p: path })).project; return { boards: p.boards.nodes, open: p.open, closed: p.closed }; },
+  milestones: async (path) => (await gql(Q.milestones, { p: path })).project.milestones.nodes,
+  snippets: async (path) => (await gql(Q.snippets, { p: path })).project.snippets.nodes,
+};
+
 export const SECTION_KEYS = Object.keys(SECTIONS);
 const SECTION_SCREEN = { boards: 'R-13', labels: 'R-14', milestones: 'R-15', pipelines: 'R-18', packages: 'R-20', wiki: 'R-21', snippets: 'R-22', members: 'R-23', activity: 'R-24' };
 
@@ -171,9 +191,17 @@ export default function RepoSections({ section }) {
   const { id } = useParams();
   const conf = SECTIONS[section];
   const frame = useProject();
-  const body = useData(async () => (await conf.load(id)).data, [id, section]);
+  const path = frame.data?.project?.path_with_namespace;
+  const owner = frame.data?.project?.owner;
+  const body = useData(async () => {
+    if (GQL_SECTIONS.includes(section)) {
+      if (!path) return null;
+      return GQL_LOAD[section](path, owner, frame.data.project);
+    }
+    return (await conf.load(id)).data;
+  }, [id, section, path]);
   if (!frame.data) return <ProjectFrame screenId={SECTION_SCREEN[section]} data={frame} />;
-  const list = Array.isArray(body.data) ? body.data : null;
+  const list = Array.isArray(body.data) ? body.data : section === 'boards' && body.data ? body.data : null;
   const needsLogin = body.state === 'Error' && body.status === 401;
   // GitHub의 빈 위키: 제목과 첫 문서 만들기 버튼만 둔다. 문서 작성은 공공 깃랩 위키 화면에서 한다
   if (section === 'wiki' && list && !list.length) {
@@ -184,6 +212,40 @@ export default function RepoSections({ section }) {
           <h2 className="krds-text-heading-small">{u.Wiki_emptyTitle}</h2>
           <p className="krds-text-body-medium rb-subtle">{u.Wiki_emptyBody}</p>
           <a className="krds-btn medium primary" href={`${url}/-/wikis/home?view=create`} {...newWindow(String(u.Wiki_create))}>{u.Wiki_create}</a>
+        </div>
+      </ProjectFrame>
+    );
+  }
+  if (list && section === 'boards') {
+    return (
+      <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state="Ideal">
+        <div className="rb-code-area">
+          <h2 className="gl-page-title">{au.boardTitle}</h2>
+          <div className="gl-tabs" data-figma="gl-tabs"><span className="gl-tab active">{list.boards[0]?.name || 'Development'}</span></div>
+          <div className="gl-board">
+            {[[au.colOpen, list.open], [au.colClosed, list.closed]].map(([name, col]) => (
+              <section key={name} className="gl-board-col">
+                <h3><span>{name}</span><span>{au.cardCount(col.count)}</span></h3>
+                {col.nodes.map((i) => <a key={i.iid} className="gl-card" href={i.webUrl} {...newWindow(i.title)}>{i.title}<small>#{i.iid}</small></a>)}
+              </section>
+            ))}
+          </div>
+        </div>
+      </ProjectFrame>
+    );
+  }
+  if (list && (section === 'milestones' || section === 'snippets')) {
+    const empty = !list.length;
+    return (
+      <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state={empty ? 'Empty' : 'Ideal'}>
+        <div className="rb-code-area">
+          <h2 className="gl-page-title">{conf.title()}</h2>
+          {section === 'milestones' ? <div className="gl-tabs" data-figma="gl-tabs"><span className="gl-tab active">{au.tabOpen}</span><span className="gl-tab">{au.tabClosed}</span><span className="gl-tab">{au.tabAll}</span></div> : null}
+          {empty ? (
+            <div className="gl-empty-big"><EmptyArt kind="doc" /><p>{section === 'milestones' ? au.milestoneEmpty : au.snippetEmpty}</p></div>
+          ) : (
+            <ul className="rb-plain-list">{list.map((m) => <li className="rb-plain-row" key={m.title}><span className="rb-plain-main">{m.title}</span><span className="rb-plain-meta rb-subtle">{m.dueDate || m.fileName || ''}</span></li>)}</ul>
+          )}
         </div>
       </ProjectFrame>
     );

@@ -1,5 +1,5 @@
 /* 공공 깃랩 프로젝트 하위 화면(멤버 25, 라벨 26): 제목 19 굵게 + 설명 13, 탭, 필터 막대, 표, 라벨 묶음 상자 */
-.gl-page-title { margin: 0; font-size: var(--rb-step-19); line-height: var(--rb-lh-19); font-weight: var(--krds-font-weight-bold); }
+.gl-page-title { margin: 0; font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--krds-font-weight-bold); }
 .gl-page-help { margin: var(--krds-gap-3) 0 var(--layout-section-gap); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
 .gl-tabs { display: flex; align-items: center; gap: var(--krds-gap-3); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); margin-bottom: var(--layout-filter-list-gap); }
 .gl-tabs .gl-tab { display: inline-flex; align-items: center; gap: var(--krds-gap-3); min-height: var(--rb-search-h); padding: 0 var(--krds-gap-4); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); border-bottom: var(--krds-border-width-static-medium) solid transparent; margin-bottom: calc(-1 * var(--krds-border-width-static-regular)); }
@@ -26,3 +26,24 @@
 .gl-ct-card h3 { margin: 0; font-size: var(--rb-step-17); line-height: var(--rb-lh-17); font-weight: var(--krds-font-weight-bold); overflow-wrap: anywhere; }
 .gl-ct-card p { margin: var(--krds-gap-2) 0 0; font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
 @media (max-width: 767px) { .gl-ct-grid { grid-template-columns: minmax(0, 1fr); } }
+.gl-art { width: calc(var(--krds-number-16) * 2.5); height: calc(var(--krds-number-16) * 2.5); flex: none; }
+.gl-art-bg { fill: var(--layout-raised-bg); }
+.gl-art-line { fill: none; stroke: var(--krds-color-text-basic); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.gl-empty-big { display: flex; flex-direction: column; align-items: center; gap: var(--krds-gap-5); padding: var(--layout-section-gap) 0; text-align: center; }
+.gl-empty-big h2 { margin: 0; font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--krds-font-weight-bold); }
+.gl-empty-big p { margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.gl-empty-actions { display: flex; gap: var(--krds-gap-3); }
+.gl-board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--layout-gutter); }
+.gl-board-col { border-radius: var(--layout-panel-radius); background: var(--layout-raised-bg); padding: var(--krds-gap-5); min-width: 0; }
+.gl-board-col h3 { display: flex; justify-content: space-between; margin: 0 0 var(--krds-gap-5); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); }
+.gl-card { display: block; padding: var(--krds-gap-5); margin-bottom: var(--krds-gap-3); border: var(--krds-border-width-static-regular) solid var(--layout-divider); border-radius: var(--krds-gap-3); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); overflow-wrap: anywhere; }
+.gl-card small { display: block; margin-top: var(--krds-gap-2); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); color: var(--layout-text-subtle); }
+.gl-source { font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
+.gl-date-input { display: inline-flex; align-items: center; min-height: var(--rb-search-h); padding: 0 var(--krds-gap-4); border: var(--krds-border-width-static-regular) solid var(--layout-divider); border-radius: var(--krds-gap-3); font-size: var(--rb-step-13); color: var(--layout-text-subtle); }
+@media (max-width: 767px) { .gl-board { grid-template-columns: minmax(0, 1fr); } }
+.gl-chart { margin: 0; }
+.gl-chart svg { display: block; width: 100%; height: calc(var(--krds-number-16) * 3); overflow: visible; }
+.gl-chart-grid { stroke: var(--layout-divider); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.gl-chart-line { fill: none; stroke: var(--krds-color-light-information-50); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.gl-chart figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin-top: var(--krds-gap-3); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); font-weight: var(--krds-font-weight-bold); }
+.gl-chart-key { width: var(--krds-number-10); height: var(--krds-gap-2); background: var(--krds-color-light-information-50); }

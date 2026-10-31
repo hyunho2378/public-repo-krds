@@ -1,12 +1,13 @@
 /* 공공 깃랩 작업 항목 목록(캡처 20, 49): 탭 줄 + 새 항목, 필터 막대, 'n 항목' 줄, 빈 상태 */
-.gl-work-tabs { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); margin-bottom: var(--krds-gap-5); }
+.gl-work-tabs { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); border-bottom: var(--krds-border-width-static-regular) solid var(--layout-divider); margin-bottom: var(--krds-gap-5); }
+.gl-work-tabs > .gl-work-tab { margin-right: auto; }
 .gl-work-tab { display: inline-flex; align-items: center; min-height: var(--rb-search-h); padding: 0 var(--krds-gap-4); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); border-bottom: var(--krds-border-width-static-medium) solid currentColor; margin-bottom: calc(-1 * var(--krds-border-width-static-regular)); }
 .gl-work-filter { display: flex; align-items: center; gap: var(--krds-gap-3); margin-bottom: var(--krds-gap-3); }
-.gl-work-bar { display: flex; align-items: center; flex: 1 1 auto; min-width: 0; gap: var(--krds-gap-3); min-height: var(--rb-search-h); padding: 0 var(--krds-gap-3); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-gap-2); background: var(--krds-color-surface-white); }
+.gl-work-bar { display: flex; align-items: center; flex: 1 1 auto; min-width: 0; gap: var(--krds-gap-3); min-height: var(--rb-search-h); padding: 0 var(--krds-gap-3); border: var(--krds-border-width-static-regular) solid var(--layout-divider); border-radius: var(--krds-gap-2); background: var(--layout-raised-bg); }
 .gl-work-bar input { flex: 1 1 auto; min-width: 0; border: 0; background: transparent; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); color: inherit; }
 .gl-work-token { display: inline-flex; align-items: center; gap: var(--krds-gap-3); flex: none; padding: 0 var(--krds-gap-3); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-gap-2); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); white-space: nowrap; }
 .gl-work-count { display: flex; align-items: center; min-height: var(--rb-search-h); margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
 .gl-work-empty { display: flex; flex-direction: column; align-items: center; gap: var(--krds-gap-5); padding: var(--krds-gap-10) 0; text-align: center; }
-.gl-work-empty h3 { font-size: var(--rb-step-19); line-height: var(--rb-lh-19); font-weight: var(--krds-font-weight-bold); margin: 0; }
+.gl-work-empty h3 { font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--krds-font-weight-bold); margin: 0; }
 .gl-work-empty p { font-size: var(--rb-step-13); line-height: var(--rb-lh-13); margin: 0; }
 @media (max-width: 767px) { .gl-work-filter { flex-wrap: wrap; } .gl-work-tabs { flex-wrap: wrap; } }

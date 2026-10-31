@@ -4,7 +4,7 @@
 .gl-badge.is-closed { background: var(--krds-color-light-danger-50); }
 .gl-badge.is-merged { background: var(--krds-color-light-information-50); }
 .gl-badge.is-opened { background: var(--krds-color-light-success-50); }
-.gl-mr-h1 { margin: 0; font-size: var(--rb-step-24); line-height: var(--rb-lh-24); font-weight: var(--krds-font-weight-bold); overflow-wrap: anywhere; }
+.gl-mr-h1 { margin: 0; font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--krds-font-weight-bold); overflow-wrap: anywhere; }
 .gl-mr-statusline { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); }
 .gl-chip { padding: 0 var(--krds-gap-3); border: var(--krds-border-width-static-regular) solid var(--layout-divider); border-radius: var(--krds-gap-2); font-size: var(--rb-step-13); line-height: var(--rb-lh-19); }
 .gl-person { display: inline-flex; align-items: center; gap: var(--krds-gap-3); }
@@ -27,7 +27,7 @@
 .gl-mr-main-col .rb-detail-body { background: none; border: 0; padding: 0; }
 .gl-box-body ul { margin: 0; padding-left: var(--krds-gap-8); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
 .gl-activity-head { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); margin-bottom: var(--krds-gap-5); }
-.gl-activity-head h2 { margin: 0; font-size: var(--rb-step-19); line-height: var(--rb-lh-19); font-weight: var(--krds-font-weight-bold); }
+.gl-activity-head h2 { margin: 0; font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--krds-font-weight-bold); }
 .gl-activity ul { margin: 0; padding: 0; list-style: none; }
 .gl-note { display: flex; gap: var(--krds-gap-4); padding: var(--krds-gap-3) 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
 .gl-note p { margin: var(--krds-gap-2) 0 0; overflow-wrap: anywhere; }
