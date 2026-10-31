@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { auth as authApi } from '../../api/client';
 import { devAuth, devRole } from '../../api/devState';
 
+const DEV_USER = { id: 0, name: '류승인', username: 'dev-sample' };
+
 export function useAuth() {
   const forcedAuth = devAuth();
   const forcedRole = devRole();
@@ -19,7 +21,8 @@ export function useAuth() {
     auth: signedIn ? 'Signed-in' : 'Guest',
     signedIn,
     role: signedIn ? forcedRole || session?.role || 'viewer' : null,
-    user: session?.user || null,
+    // 개발 전용 ?auth=Signed-in: 실제 공공 깃랩처럼 계정 단추에 사용자 머리글자가 나오게 Figma 표본 사용자(예시 자료 kordoc 소유자)를 쓴다. 배포본에서는 devAuth가 꺼져 쓰이지 않음
+    user: session?.user || (forcedAuth === 'Signed-in' ? DEV_USER : null),
     // 세션 확인이 끝났는지(없는 주소를 로그인으로 보낼 때 깜빡임 방지)
     ready: !!forcedAuth || session !== null,
   };

@@ -295,7 +295,8 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-shell:not(.is-bare) > .rb-panel { border: 0; box-shadow: inset 0 0 0 var(--krds-border-width-static-regular) var(--layout-panel-border); }
 
 /* 22. Figma 대조(원인 상위): 바닥글 면 gray-90(Figma, D-20 덧붙임은 Figma 정답), 세로 바 틀 면 바깥색 */
-#root #krds-footer, #root .rb-panel-in > #krds-footer { background: var(--layout-raised-bg); }
+/* D-20 개정(2026. 10. 31. 사용자 결정): 판 안 바닥글은 판과 같은 면, 위 구분선 하나만(별도 채움 상자 금지, D-15 면 분리 최소). 폭은 본문 컨테이너. 판 없는 로그인(is-bare)만 바깥색 위 전체 폭 gray-90 면 */
+#root .rb-panel-in > #krds-footer { background: none; border-top: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
 #root .rb-side-wrap { background: var(--layout-shell-bg); }
 #root .rb-x-filter .drop-btn, #root .rb-x-filter button, #root .rb-x-filter input, #root .rb-x-search { height: var(--layout-filter-control-h); min-height: 0; }
 .rb-login3-alert { margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); color: var(--krds-color-text-basic); }

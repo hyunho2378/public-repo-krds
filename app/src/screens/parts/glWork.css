@@ -19,4 +19,4 @@
 .gl-work-filter .gl-work-bar { min-height: var(--layout-filter-control-h); }
 .gl-work-tabs-left { display: flex; align-items: center; gap: 0; }
 .gl-work-tabs-left .krds-btn { margin-right: 0; }
-.gl-work-filter { border-radius: var(--layout-panel-radius); }
+.gl-work-filter { border-radius: 0; }

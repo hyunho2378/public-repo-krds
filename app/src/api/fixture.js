@@ -38,6 +38,11 @@ export function fixtureFor(path) {
     [/^projects\/[^/]+\/merge_requests\/\d+$/, 'mr_56'],
     [/^projects\/[^/]+\/merge_requests\/\d+\/changes$/, 'mr_56_changes'],
     [/^projects\/[^/]+\/languages$/, 'languages'],
+    // C2 요청(2026. 10. 31.): 실제 공개 API 응답(events의 이메일 키 제거)
+    [/^projects\/[^/]+\/pipelines$/, 'pipelines'],
+    [/^projects\/[^/]+\/events$/, 'events'],
+    [/^projects\/[^/]+\/wikis$/, 'wikis'],
+    [/^projects\/[^/]+\/packages$/, 'packages'],
     // 커밋 상세(R-05): 받아 둔 최신 커밋과 diff. 커밋이 들어간 브랜치·태그와 관련 MR(실제 응답 기준: main, v4.24.21, 없음)
     [/^projects\/[^/]+\/repository\/commits\/[0-9a-f]{7,40}$/, 'commit_latest'],
     [/^projects\/[^/]+\/repository\/commits\/[0-9a-f]{7,40}\/diff$/, 'commit_latest_diff'],
