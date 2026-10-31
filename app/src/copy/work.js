@@ -64,3 +64,20 @@ export const au = {
 };
 
 export const w2 = { viewAdd: '뷰 추가', clearFilter: '필터 지우기', removeToken: '필터 제거', more: '더보기', newItem: '새 항목', openOrig: '공공 깃랩에서 열기' };
+
+// 감사 v3 04 P1 #24~#27 실제 문구(캡처 24, 28, 29, 59)
+export const p1 = {
+  wikiTitle: '이 위키에는 아직 콘텐츠가 없습니다.',
+  wikiBody: 'GitLab Wiki를 사용하여 프로젝트 또는 그룹의 문서에서 공동 작업을 할 수 있습니다. Markdown 또는 AsciiDoc과 같은 마크업 형식으로 작성된 Wiki 페이지를 별도의 Git 리포지토리에 저장하고 Git, GitLab 웹 인터페이스 또는 API를 통해 Wiki에 액세스할 수 있습니다.',
+  pkgTitle: '패키지 레지스트리', pkgCount: (n) => `${n} 패키지`, pkgFilter: '필터 결과', pkgSort: '게시됨',
+  pkgEmpty: '아직 패키지가 없습니다.', pkgEmptyBody: 'GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요.',
+  plFilter: '파이프라인 필터링', plShowId: '파이프라인 ID 보기', plStatus: '상태', plPipeline: '파이프라인', plBy: '다음에 의해 생성됨', plStages: '스테이지', plAction: '동작',
+  plStatusName: { success: '성공함', failed: '실패함', running: '실행 중', pending: '대기 중', canceled: '취소됨', skipped: '건너뜀', manual: '수동', created: '생성됨' },
+  actTabs: [['all', '전체'], ['push', '푸시 이벤트'], ['merge', '머지 이벤트'], ['issue', '이슈 이벤트'], ['note', '댓글'], ['wiki', '위키'], ['design', '디자인'], ['team', '팀']],
+  actFeed: '피드', actNone: '표시할 활동이 없습니다.',
+  pushedBranch: (b) => `Pushed to branch ${b}`, pushedTag: (b) => `Pushed new tag ${b}`, moreCommits: (n) => `... and ${n} more commits.`, compare: 'Compare',
+  sortActivity: '활동 정렬', oldest: '오래된 순', newest: '최신순', dotMenu: '더보기', openOrig: '공공 깃랩에서 열기',
+  mrChecklist: (d, t) => `${t}개 중 ${d}개의 체크 리스트 아이템 완료`, assigneeLabel: '담당자',
+  tokenKey: { author: '작성자', assignee: '담당자', reviewer: '리뷰어', label: '라벨', milestone: '마일스톤', source: '소스 브랜치', target: '대상 브랜치' },
+  tokenSuggest: ['작성자', '담당자', '리뷰어', '라벨', '마일스톤', '대상 브랜치', '소스 브랜치', '이 텍스트 검색'],
+};

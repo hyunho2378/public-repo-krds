@@ -7,7 +7,7 @@ import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { u } from '../copy/ui';
-import { w, au, w2 } from '../copy/work';
+import { w, au, w2, p1 } from '../copy/work';
 import { IconButton } from '../components/Action/IconButton';
 import { EmptyArt } from './parts/EmptyArt';
 import { newWindow } from '../components/Layout/newWindow';
@@ -56,7 +56,16 @@ export function Issues() {
         <div className="gl-work-tabs" data-figma="gl-tabs">
           <span className="gl-work-tab">{w.all}</span>
           <a className="krds-btn small text" href={`${frame.data.project.web_url}/-/issues`} {...newWindow(w2.openOrig)}>{w2.viewAdd}</a>
-          <LinkButton to={`/projects/${frame.id}/issues/new`} Type="secondary" Size="small">{w.new}</LinkButton>
+          <span className="gl-work-tools">
+            <Drop label={p1.dotMenu} align="right" button={<Icon name="ellipsis_vertical" />} btnClass="krds-btn text rb-iconbtn is-small">
+              {(close) => (
+                <ul className="drop-list" aria-label={p1.dotMenu}>
+                  <li><a className="item-link" href={`${frame.data.project.web_url}/-/issues`} {...newWindow(p1.openOrig)} onClick={close}>{p1.openOrig}</a></li>
+                </ul>
+              )}
+            </Drop>
+            <LinkButton to={`/projects/${frame.id}/issues/new`} Type="secondary" Size="small">{w.new}</LinkButton>
+          </span>
         </div>
         <div className="gl-work-filter" data-figma="gl-filter">
           <div className="gl-work-bar" role="search">

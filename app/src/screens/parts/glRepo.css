@@ -47,3 +47,13 @@
 .gl-chart-line { fill: none; stroke: var(--krds-color-light-information-50); stroke-width: 2; vector-effect: non-scaling-stroke; }
 .gl-chart figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin-top: var(--krds-gap-3); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); font-weight: var(--krds-font-weight-bold); }
 .gl-chart-key { width: var(--krds-number-10); height: var(--krds-gap-2); background: var(--krds-color-light-information-50); }
+.gl-act { display: flex; gap: var(--krds-gap-4); padding: var(--krds-gap-5) 0; border-bottom: var(--krds-border-width-static-regular) solid var(--layout-divider); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.gl-act-main { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+.gl-act-time { flex: none; font-size: var(--rb-step-13); line-height: var(--rb-lh-13); color: var(--layout-text-subtle); white-space: nowrap; }
+.gl-act code, .gl-pl code { font-size: var(--rb-step-13); }
+.gl-wiki-body { max-width: calc(var(--krds-number-16) * 11); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.gl-pkg-count { display: flex; align-items: center; gap: var(--krds-gap-3); margin: var(--krds-gap-3) 0 var(--layout-section-gap); font-size: var(--rb-step-15); }
+.gl-pl td small, .gl-pl td code { display: inline-block; margin-top: var(--krds-gap-2); }
+.gl-token-list { position: absolute; z-index: 5; margin-top: var(--krds-gap-3); padding: var(--krds-gap-3) 0; list-style: none; background: var(--layout-raised-bg); border: var(--krds-border-width-static-regular) solid var(--layout-divider); border-radius: var(--krds-gap-3); min-width: calc(var(--krds-number-16) * 4); }
+.gl-token-list button { display: block; width: 100%; min-height: var(--rb-side-item-h); padding: 0 var(--krds-gap-5); background: none; border: 0; color: inherit; text-align: left; font-size: var(--rb-step-15); cursor: pointer; }
+.gl-token-list button:hover { background: var(--layout-divider); }

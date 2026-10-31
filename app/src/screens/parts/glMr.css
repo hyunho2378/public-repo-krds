@@ -3,7 +3,7 @@
 .gl-mr-tab { display: inline-flex; align-items: center; gap: var(--krds-gap-3); min-height: var(--rb-search-h); padding: 0 var(--krds-gap-4); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); background: transparent; border: 0; border-bottom: var(--krds-border-width-static-medium) solid transparent; margin-bottom: calc(-1 * var(--krds-border-width-static-regular)); color: inherit; cursor: pointer; }
 .gl-mr-tab[aria-selected="true"] { font-weight: var(--krds-font-weight-bold); border-bottom-color: currentColor; }
 .gl-mr-count { padding: 0 var(--krds-gap-3); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray); border-radius: var(--krds-gap-5); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); font-weight: var(--krds-font-weight-regular); }
-.gl-mr-row { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--krds-gap-5); padding: var(--krds-gap-3) 0; border-bottom: var(--krds-border-width-static-regular) solid var(--layout-divider); min-width: 0; }
+.gl-mr-row { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--krds-gap-5); padding: var(--krds-gap-3) 0 calc(var(--krds-gap-3) - var(--krds-border-width-static-regular)); border-bottom: var(--krds-border-width-static-regular) solid var(--layout-divider); min-width: 0; }
 .gl-mr-main { display: flex; flex-direction: column; gap: var(--krds-gap-2); min-width: 0; flex: 1 1 auto; }
 .gl-mr-title { margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); overflow-wrap: anywhere; }
 .gl-mr-title a { color: inherit; text-decoration: none; }
@@ -16,3 +16,9 @@
 .gl-mr-pipe { display: flex; align-items: center; gap: var(--krds-gap-5); padding: var(--layout-row-pad-y) 0; border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); flex-wrap: wrap; }
 @media (max-width: 767px) { .gl-mr-row { flex-direction: column; } .gl-mr-side { align-items: flex-start; text-align: left; } }
 .gl-mr-side .gl-badge { line-height: var(--rb-lh-13); }
+
+.gl-mr-task { font-weight: var(--krds-font-weight-regular); font-size: var(--rb-step-13); color: var(--layout-text-subtle); }
+.gl-mr-badges { display: flex; align-items: center; gap: var(--krds-gap-3); }
+.gl-act-tools { display: flex; align-items: center; gap: var(--krds-gap-3); }
+.gl-work-bar { position: relative; }
+.gl-token-list { inset-inline-start: 0; top: 100%; }

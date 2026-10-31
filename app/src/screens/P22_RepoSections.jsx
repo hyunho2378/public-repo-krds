@@ -18,7 +18,8 @@ import { IconButton } from '../components/Action/IconButton';
 import { Avatar } from '../components/Layout/Avatar';
 import './parts/glRepo.css';
 import { gql, Q } from './parts/glGraphql';
-import { au } from '../copy/work';
+import { au, p1 } from '../copy/work';
+import { ago } from './parts/glTime';
 import { EmptyArt } from './parts/EmptyArt';
 import '../components/Code/code.css';
 
@@ -94,6 +95,104 @@ function LabelsView({ list, id }) {
         <h2 className="gl-box-head">{rp.others} <span className="rb-subtle">{other.length}</span></h2>
         {other.length ? <ul>{other.map(row)}</ul> : <p className="gl-box-empty">{rp.items} 0</p>}
       </section>
+    </>
+  );
+}
+
+
+function PageSearch({ value, onChange, placeholder, children }) {
+  return (
+    <div className="gl-work-filter" data-figma="gl-filter">
+      <div className="gl-work-bar" role="search">
+        <input type="search" value={value} placeholder={placeholder} aria-label={placeholder} onChange={(e) => onChange(e.target.value)} />
+        <Icon name="search" />
+      </div>
+      {children}
+    </div>
+  );
+}
+
+function WikiEmpty() {
+  return (
+    <div className="gl-empty-big"><EmptyArt kind="doc" /><h2>{p1.wikiTitle}</h2><p className="gl-wiki-body">{p1.wikiBody}</p></div>
+  );
+}
+
+function PackagesView({ list }) {
+  const [q, setQ] = useState('');
+  const rows = list.filter((x) => `${x.name} ${x.version}`.toLowerCase().includes(q.trim().toLowerCase()));
+  return (
+    <>
+      <div data-figma="page-head"><h2 className="gl-page-title">{p1.pkgTitle}</h2></div>
+      <p className="gl-pkg-count"><Icon name="ext/catalog" /> {p1.pkgCount(list.length)}</p>
+      <PageSearch value={q} onChange={setQ} placeholder={p1.pkgFilter}>
+        <span className="krds-btn small tertiary">{p1.pkgSort}</span>
+      </PageSearch>
+      {rows.length ? (
+        <ul className="rb-plain-list">{rows.map((x) => <li className="rb-plain-row" key={x.id}><span className="rb-plain-main">{x.name}</span><span className="rb-plain-sub rb-subtle">{x.version}</span><span className="rb-plain-meta rb-subtle">{x.package_type}</span></li>)}</ul>
+      ) : (
+        <div className="gl-empty-big"><EmptyArt kind="doc" /><h2>{p1.pkgEmpty}</h2><p>{p1.pkgEmptyBody}</p></div>
+      )}
+    </>
+  );
+}
+
+function PipelinesView({ list }) {
+  const [q, setQ] = useState('');
+  const rows = list.filter((x) => `${x.id} ${x.ref} ${x.sha}`.toLowerCase().includes(q.trim().toLowerCase()));
+  const cls = (st) => (st === 'success' ? 'is-opened' : st === 'failed' ? 'is-closed' : 'is-merged');
+  return (
+    <>
+      <PageSearch value={q} onChange={setQ} placeholder={p1.plFilter}>
+        <span className="krds-btn small tertiary">{p1.plShowId}</span>
+      </PageSearch>
+      <div className="gl-table-wrap">
+        <table className="gl-table gl-pl">
+          <thead><tr><th scope="col">{p1.plStatus}</th><th scope="col">{p1.plPipeline}</th><th scope="col">{p1.plBy}</th><th scope="col">{p1.plStages}</th><th scope="col">{p1.plAction}</th></tr></thead>
+          <tbody>
+            {rows.map((x) => (
+              <tr key={x.id}>
+                <td><span className={`gl-badge ${cls(x.status)}`}>{p1.plStatusName[x.status] || x.status}</span><br /><small className="gl-source">{ago(x.created_at)}</small></td>
+                <td><strong>#{x.id}</strong><br /><code className="gl-chip">{x.ref}</code> <code className="gl-chip">{(x.sha || '').slice(0, 8)}</code></td>
+                <td /><td /><td />
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+}
+
+const ACT_KIND = { push: (e) => e.action_name.startsWith('pushed'), merge: (e) => e.target_type === 'MergeRequest', issue: (e) => e.target_type === 'Issue', note: (e) => e.action_name === 'commented on', wiki: (e) => e.target_type === 'WikiPage::Meta', design: (e) => e.target_type === 'DesignManagement::Design', team: (e) => ['joined', 'left'].includes(e.action_name) };
+
+function ActivityView({ list }) {
+  const [tab, setTab] = useState('all');
+  const rows = tab === 'all' ? list : list.filter(ACT_KIND[tab]);
+  return (
+    <>
+      <div className="gl-tabs" data-figma="gl-tabs" role="tablist">
+        {p1.actTabs.map(([k, n]) => <button key={k} type="button" role="tab" aria-selected={tab === k} className={'gl-tab' + (tab === k ? ' active' : '')} onClick={() => setTab(k)}>{n}</button>)}
+      </div>
+      {rows.length ? (
+        <ul className="rb-plain-list">
+          {rows.map((e) => {
+            const pd = e.push_data;
+            return (
+              <li className="gl-act" key={e.id}>
+                <Avatar src={e.author?.avatar_url} name={e.author?.name} seed={e.author?.id} />
+                <div className="gl-act-main">
+                  <strong>{e.author?.name}</strong> <span className="rb-subtle">@{e.author?.username}</span>
+                  <div>{pd ? (pd.ref_type === 'tag' ? p1.pushedTag(pd.ref) : p1.pushedBranch(pd.ref)) : `${t.P22_action[e.action_name] || e.action_name} ${e.target_title || ''}`}</div>
+                  {pd?.commit_title ? <div><code>{(pd.commit_to || '').slice(0, 8)}</code> · {pd.commit_title}</div> : null}
+                  {pd?.commit_count > 1 ? <div>{p1.moreCommits(pd.commit_count - 1)}</div> : null}
+                </div>
+                <span className="gl-act-time">{ago(e.created_at)}</span>
+              </li>
+            );
+          })}
+        </ul>
+      ) : <p className="rb-subtle">{p1.actNone}</p>}
     </>
   );
 }
@@ -203,15 +302,18 @@ export default function RepoSections({ section }) {
   if (!frame.data) return <ProjectFrame screenId={SECTION_SCREEN[section]} data={frame} />;
   const list = Array.isArray(body.data) ? body.data : section === 'boards' && body.data ? body.data : null;
   const needsLogin = body.state === 'Error' && body.status === 401;
-  // GitHub의 빈 위키: 제목과 첫 문서 만들기 버튼만 둔다. 문서 작성은 공공 깃랩 위키 화면에서 한다
-  if (section === 'wiki' && list && !list.length) {
-    const url = frame.data.project.web_url;
+  if (list && section === 'wiki' && !list.length) {
     return (
       <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state="Empty">
-        <div className="rb-wiki-empty">
-          <h2 className="krds-text-heading-small">{u.Wiki_emptyTitle}</h2>
-          <p className="krds-text-body-medium rb-subtle">{u.Wiki_emptyBody}</p>
-          <a className="krds-btn medium primary" href={`${url}/-/wikis/home?view=create`} {...newWindow(String(u.Wiki_create))}>{u.Wiki_create}</a>
+        <div className="rb-code-area"><WikiEmpty /></div>
+      </ProjectFrame>
+    );
+  }
+  if (list && ['packages', 'pipelines', 'activity'].includes(section)) {
+    return (
+      <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state={list.length ? 'Ideal' : 'Empty'}>
+        <div className="rb-code-area">
+          {section === 'packages' ? <PackagesView list={list} /> : section === 'pipelines' ? <PipelinesView list={list} /> : <ActivityView list={list} />}
         </div>
       </ProjectFrame>
     );

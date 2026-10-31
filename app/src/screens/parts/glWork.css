@@ -11,3 +11,5 @@
 .gl-work-empty h3 { font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--krds-font-weight-bold); margin: 0; }
 .gl-work-empty p { font-size: var(--rb-step-13); line-height: var(--rb-lh-13); margin: 0; }
 @media (max-width: 767px) { .gl-work-filter { flex-wrap: wrap; } .gl-work-tabs { flex-wrap: wrap; } }
+
+.gl-work-tools { display: flex; align-items: center; gap: var(--krds-gap-3); }

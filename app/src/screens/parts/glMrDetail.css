@@ -33,3 +33,6 @@
 .gl-note p { margin: var(--krds-gap-2) 0 0; overflow-wrap: anywhere; }
 .gl-reply { margin: var(--layout-section-gap) 0 0; text-align: center; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
 @media (max-width: 1023px) { .gl-mr-split { grid-template-columns: minmax(0, 1fr); } }
+
+.gl-badge { gap: var(--krds-gap-2); }
+.gl-badge .rb-icon { width: var(--krds-number-8); height: var(--krds-number-8); }

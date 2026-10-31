@@ -11,7 +11,7 @@ import { u } from '../copy/ui';
 import { matchTitle } from '../components/Code/ListTools';
 import { Drop } from '../components/Code/Drop';
 import { Icon } from '../components/Code/Icon';
-import { mr, au } from '../copy/work';
+import { mr, au, p1 } from '../copy/work';
 import { gql, Q } from './parts/glGraphql';
 import { Avatar } from '../components/Layout/Avatar';
 import { IconButton } from '../components/Action/IconButton';
@@ -25,7 +25,29 @@ import './parts/glMrDetail.css';
 
 const LABEL = { opened: t.P20_opened, merged: mr.tabMerged, closed: t.P20_closed };
 
+const T = p1.tokenKey;
+const TOKEN_FIELD = {
+  [T.author]: (m) => `${m.author?.name || ''} ${m.author?.username || ''}`,
+  [T.assignee]: (m) => (m.assignees || []).map((a) => `${a.name} ${a.username}`).join(' '),
+  [T.reviewer]: (m) => (m.reviewers || []).map((a) => `${a.name} ${a.username}`).join(' '),
+  [T.label]: (m) => (m.labels || []).join(' '),
+  [T.milestone]: (m) => m.milestone?.title || '',
+  [T.source]: (m) => m.source_branch || '',
+  [T.target]: (m) => m.target_branch || '',
+};
+function filterMr(list, query) {
+  const q = query.trim();
+  const i = q.indexOf(':');
+  const key = i > 0 ? q.slice(0, i).trim() : '';
+  if (TOKEN_FIELD[key]) {
+    const v = q.slice(i + 1).trim().toLowerCase();
+    return v ? list.filter((m) => TOKEN_FIELD[key](m).toLowerCase().includes(v)) : list;
+  }
+  return matchTitle(list, query);
+}
+
 const STATES = [['opened', mr.tabOpen], ['merged', mr.tabMerged], ['closed', mr.tabClosed], ['all', mr.tabAll]];
+const BADGE_ICON = { opened: 'ext/issues', merged: 'ext/merge-request', closed: 'close' };
 const PILL = { merged: mr.tabMerged, closed: mr.tabClosed };
 
 export function MergeRequests() {
@@ -34,6 +56,7 @@ export function MergeRequests() {
   const [sortKey, setSortKey] = useState('created_at');
   const [dir, setDir] = useState('desc');
   const [query, setQuery] = useState('');
+  const [suggest, setSuggest] = useState(false);
   const body = useData(async () => {
     const [opened, merged, closed] = await Promise.all(['opened', 'merged', 'closed'].map((x) => gitlab.mergeRequests(frame.id, x)));
     const seen = new Map();
@@ -44,7 +67,7 @@ export function MergeRequests() {
   }, [frame.id]);
   if (!frame.data) return <ProjectFrame screenId="R-16" data={frame} />;
   const all = body.data;
-  const list = all ? [...matchTitle(all[st], query)].sort((x, y) => (new Date(y[sortKey] || 0) - new Date(x[sortKey] || 0)) * (dir === 'desc' ? 1 : -1)) : null;
+  const list = all ? [...filterMr(all[st], query)].sort((x, y) => (new Date(y[sortKey] || 0) - new Date(x[sortKey] || 0)) * (dir === 'desc' ? 1 : -1)) : null;
   return (
     <ProjectFrame screenId="R-16" tab="" tabLabel={t.P20_title} data={frame} state={all ? (all.all.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
@@ -58,8 +81,13 @@ export function MergeRequests() {
         <div className="gl-work-filter" data-figma="gl-filter">
           <div className="gl-work-bar" role="search">
             <IconButton icon="ext/history" label={mr.recent} onClick={() => setQuery('')} />
-            <input type="search" value={query} placeholder={mr.search} aria-label={mr.searchLabel} onChange={(e) => setQuery(e.target.value)} />
+            <input type="search" value={query} placeholder={mr.search} aria-label={mr.searchLabel} onChange={(e) => setQuery(e.target.value)} onFocus={() => setSuggest(true)} onBlur={() => setTimeout(() => setSuggest(false), 150)} />
             <Icon name="search" />
+            {suggest && !query ? (
+            <ul className="gl-token-list" role="listbox" aria-label={mr.searchLabel}>
+              {p1.tokenSuggest.map((k) => <li key={k} role="option" aria-selected="false"><button type="button" onMouseDown={(e) => { e.preventDefault(); setQuery(k === p1.tokenSuggest[7] ? '' : `${k}: `); }}>{k}</button></li>)}
+            </ul>
+            ) : null}
           </div>
           <Drop label={mr.sortBy} align="right" button={<span>{sortKey === 'created_at' ? mr.sortCreated : mr.sortUpdated}</span>}>
             {(close) => (
@@ -78,11 +106,14 @@ export function MergeRequests() {
               {list.map((m) => (
                 <li className="gl-mr-row" key={m.iid}>
                   <div className="gl-mr-main">
-                    <p className="gl-mr-title"><Link to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link></p>
+                    <p className="gl-mr-title"><Link to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link>{m.task_completion_status?.count ? <span className="gl-mr-task"> {p1.mrChecklist(m.task_completion_status.completed_count, m.task_completion_status.count)}</span> : null}</p>
                     <p className="gl-mr-meta">!{m.iid} · {ago(m.created_at)} {mr.createdBy(m.author?.name || '')}</p>
                   </div>
                   <div className="gl-mr-side">
-                    {PILL[m.state] ? <span className={`gl-badge is-${m.state}`}>{PILL[m.state]}</span> : null}
+                    <span className="gl-mr-badges">
+                      {PILL[m.state] ? <span className={`gl-badge is-${m.state}`}><Icon name={BADGE_ICON[m.state]} />{PILL[m.state]}</span> : null}
+                      {(m.assignees || []).map((a) => <Avatar key={a.id} src={a.avatar_url} name={a.name} seed={a.id} />)}
+                    </span>
                     <p className="gl-mr-meta">{mr.updated(ago(m.updated_at))}</p>
                   </div>
                 </li>
@@ -115,6 +146,7 @@ export function MergeRequest() {
   const seg = loc.pathname.replace(/\/+$/, '').split('/').pop();
   const view = ['commits', 'pipelines', 'diffs'].includes(seg) ? seg : 'overview';
   const [notice, setNotice] = useState(false);
+  const [newestFirst, setNewest] = useState(false);
   const { signedIn, role } = useAuth();
   const path = frame.data?.project?.path_with_namespace;
   const body = useData(async () => (await gitlab.mergeRequest(frame.id, iid)).data, [frame.id, iid]);
@@ -136,7 +168,8 @@ export function MergeRequest() {
   const x = extra.data;
   const base = `/projects/${frame.id}/merge-requests/${iid}`;
   const counts = { '': 0, '/commits': commits.data?.length || x?.commitCount || 0, '/pipelines': pipes.data?.length ?? 0, '/diffs': changes.data?.length ?? 0 };
-  const notes = (x?.discussions?.nodes || []).flatMap((d) => d.notes.nodes);
+  const notes0 = (x?.discussions?.nodes || []).flatMap((d) => d.notes.nodes);
+  const notes = newestFirst ? [...notes0].reverse() : notes0;
   const who = m?.author?.name || '';
   const stateWord = m ? (LABEL[m.state] || m.state) : '';
   return (
@@ -146,7 +179,7 @@ export function MergeRequest() {
           <div className="gl-mr-head" data-figma="page-head">
             <h1 className="gl-mr-h1">{m.title}</h1>
             <p className="gl-mr-meta gl-mr-statusline">
-              <span className={`gl-badge is-${m.state}`}>{stateWord}</span>
+              <span className={`gl-badge is-${m.state}`}><Icon name={BADGE_ICON[m.state] || 'close'} />{stateWord}</span>
               <span className="gl-person">{who}</span>
               <span>{au.fromTo}</span>
               <code className="gl-chip rb-break-any">{m.source_branch}</code>
@@ -187,7 +220,7 @@ export function MergeRequest() {
                   </div>
                 </section>
                 <section className="gl-activity">
-                  <div className="gl-activity-head"><h2>{au.activity}</h2><span className="krds-btn small tertiary">{au.allActivity}</span></div>
+                  <div className="gl-activity-head"><h2>{au.activity}</h2><div className="gl-act-tools"><span className="krds-btn small tertiary">{au.allActivity}</span><Drop label={p1.sortActivity} align="right" button={<span>{newestFirst ? p1.newest : p1.oldest}</span>}>{(close) => (<ul className="drop-list" aria-label={p1.sortActivity}>{[[true, p1.newest], [false, p1.oldest]].map(([v, n]) => <li key={n}><button type="button" className={'item-link' + (v === newestFirst ? ' active' : '')} onClick={() => { close(); setNewest(v); }}>{n}</button></li>)}</ul>)}</Drop></div></div>
                   <ul>
                     {notes.length ? notes.map((n, i) => (
                       <li key={i} className="gl-note">
