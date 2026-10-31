@@ -234,3 +234,8 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-x-searchbtn { gap: var(--krds-number-3); }
 #root .rb-side-scroll, #root .rb-side-groups { gap: var(--layout-sidebar-item-gap); }
 .sr-only { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+/* 768 미만 터치 대상 44(KRDS 최소 터치 영역 44x44, WCAG 2.5.5): 상단 바 아이콘 단추와 서랍 항목. 데스크톱은 공공 깃랩 32 / 28 그대로 */
+@media (max-width: 767px) {
+  #root .rb-gbar-icon, #root .rb-gbar .rb-gbar-navtoggle, #root .rb-gbar-search { width: var(--krds-number-15); height: var(--krds-number-15); }
+  #root .rb-shell.is-drawer .rb-side-link, #root .rb-shell.is-drawer .rb-side-group-btn { min-height: var(--krds-number-15); height: auto; }
+}
