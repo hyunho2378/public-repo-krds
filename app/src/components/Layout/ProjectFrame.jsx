@@ -106,7 +106,8 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
   }, [data.id, project0?.name, project0?.open_issues_count]);
   if (!data.data && !seeded) {
     return (
-      <Page id={screenId} title={t.ProjectFrame_2} state={data.state}>
+      // 불러오는 동안은 탭 제목을 바꾸지 않는다('도구'로 깜빡이던 것, audit_v3 05-16)
+      <Page id={screenId} title={null} state={data.state}>
         <Status {...data} />
       </Page>
     );
