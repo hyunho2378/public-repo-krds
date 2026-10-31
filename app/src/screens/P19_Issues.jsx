@@ -10,6 +10,7 @@ import { u } from '../copy/ui';
 import { w, au, w2, p1 } from '../copy/work';
 import { IconButton } from '../components/Action/IconButton';
 import { EmptyArt } from './parts/EmptyArt';
+import { HistoryButton } from './parts/HistoryButton';
 import { newWindow } from '../components/Layout/newWindow';
 import { SORTS, matchTitle, sortItems } from '../components/Code/ListTools';
 import { Drop } from '../components/Code/Drop';
@@ -71,7 +72,7 @@ export function Issues() {
         </div>
         <div className="gl-work-filter" data-figma="gl-filter">
           <div className="gl-work-bar" role="search">
-            <IconButton icon="time" label={w2.recent} onClick={() => { setQuery(''); setSt('opened'); }} />
+            <HistoryButton label={w2.recent} onClick={() => { setQuery(''); setSt('opened'); }} />
             <span className="gl-work-token">{w.status} {w.is}
               <Drop label={w.status} align="left" btnClass="krds-btn small text" button={<span>{stateName}</span>}>
                 {(close) => (

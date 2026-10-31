@@ -6,6 +6,7 @@ import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { EmptyState, Status } from '../components/Feedback/Status';
 import { orgLabel } from '../components/Layout/orgLabel';
 import { ct, au } from '../copy/work';
+import { Icon } from '../components/Code/Icon';
 import { request } from '../api/client';
 import { CommitChart, dailyCounts } from './parts/CommitChart';
 import './parts/glRepo.css';
@@ -31,10 +32,10 @@ export default function Contributors() {
   return (
     <ProjectFrame screenId="R-10" tab="" tabLabel={t.P21_title} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
       <div className="rb-code-area">
-        <div data-figma="page-head">
+        <div data-figma="page-head" className="gl-ph">
         <h2 className="gl-page-title">{ct.title}</h2>
         <div className="gl-ct-tools">
-          <span className="krds-btn small tertiary">{frame.data.project.default_branch || 'main'}</span>
+          <span className="krds-btn small tertiary"><Icon name="ext/branch" />{frame.data.project.default_branch || 'main'}<Icon name="arrow-down" /></span>
           <span className="krds-btn small tertiary">{ct.history}</span>
         </div>
         </div>

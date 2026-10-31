@@ -76,7 +76,7 @@ export const p1 = {
   actTabs: [['all', '전체'], ['push', '푸시 이벤트'], ['merge', '머지 이벤트'], ['issue', '이슈 이벤트'], ['note', '댓글'], ['wiki', '위키'], ['design', '디자인'], ['team', '팀']],
   actFeed: '피드', actNone: '표시할 활동이 없습니다.',
   pushedBranch: (b) => `Pushed to branch ${b}`, pushedTag: (b) => `Pushed new tag ${b}`, moreCommits: (n) => `... and ${n} more commits.`, compare: 'Compare',
-  sortActivity: '활동 정렬', oldest: '오래된 순', newest: '최신순', dotMenu: '더보기', openOrig: '공공 깃랩에서 열기',
+  rss: '피드 구독', sortActivity: '활동 정렬', oldest: '오래된 순', newest: '최신순', dotMenu: '더보기', openOrig: '공공 깃랩에서 열기',
   mrChecklist: (d, t) => `${t}개 중 ${d}개의 체크 리스트 아이템 완료`, assigneeLabel: '담당자',
   tokenKey: { author: '작성자', assignee: '담당자', reviewer: '리뷰어', label: '라벨', milestone: '마일스톤', source: '소스 브랜치', target: '대상 브랜치' },
   tokenSuggest: ['작성자', '담당자', '리뷰어', '라벨', '마일스톤', '대상 브랜치', '소스 브랜치', '이 텍스트 검색'],

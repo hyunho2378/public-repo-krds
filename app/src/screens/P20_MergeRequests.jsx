@@ -15,6 +15,7 @@ import { mr, au, p1 } from '../copy/work';
 import { gql, Q } from './parts/glGraphql';
 import { Avatar } from '../components/Layout/Avatar';
 import { EmptyArt } from './parts/EmptyArt';
+import { HistoryButton } from './parts/HistoryButton';
 import './parts/glRepo.css';
 import { IconButton } from '../components/Action/IconButton';
 import { ago } from './parts/glTime';
@@ -82,7 +83,7 @@ export function MergeRequests() {
         </div>
         <div className="gl-work-filter" data-figma="gl-filter">
           <div className="gl-work-bar" role="search">
-            <IconButton icon="time" label={mr.recent} onClick={() => setQuery('')} />
+            <HistoryButton label={mr.recent} onClick={() => setQuery('')} />
             <input type="search" value={query} placeholder={mr.search} aria-label={mr.searchLabel} onChange={(e) => setQuery(e.target.value)} onFocus={() => setSuggest(true)} onBlur={() => setTimeout(() => setSuggest(false), 150)} />
             <Icon name="search" />
             {suggest && !query ? (

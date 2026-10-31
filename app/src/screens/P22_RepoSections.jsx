@@ -21,6 +21,8 @@ import { gql, Q } from './parts/glGraphql';
 import { au, p1 } from '../copy/work';
 import { ago } from './parts/glTime';
 import { EmptyArt } from './parts/EmptyArt';
+import { HistoryButton } from './parts/HistoryButton';
+import { IconButton as IconBtn2 } from '../components/Action/IconButton';
 import '../components/Code/code.css';
 
 
@@ -29,7 +31,7 @@ function MembersView({ list }) {
   const rows = list.filter((m) => `${m.name} ${m.username}`.toLowerCase().includes(q.trim().toLowerCase()));
   return (
     <>
-      <div data-figma="page-head"><h2 className="gl-page-title">{rp.membersTitle}</h2></div>
+      <div data-figma="page-head" className="gl-ph-pad"><h2 className="gl-page-title">{rp.membersTitle}</h2></div>
       <p className="gl-page-help">{rp.membersHelp}</p>
       <div className="gl-tabs" data-figma="gl-tabs" role="tablist">
         <span className="gl-tab active" role="tab" aria-selected="true">{rp.tabMembers} <span className="gl-mr-count">{list.length}</span></span>
@@ -37,7 +39,7 @@ function MembersView({ list }) {
       </div>
       <div className="gl-work-filter" data-figma="gl-filter">
         <div className="gl-work-bar" role="search">
-          <IconButton icon="time" label={rp.recent} onClick={() => setQ('')} />
+          <HistoryButton label={rp.recent} onClick={() => setQ('')} />
           <input type="search" value={q} placeholder={rp.filterMembers} aria-label={rp.filterMembers} onChange={(e) => setQ(e.target.value)} />
           <Icon name="search" />
         </div>
@@ -105,9 +107,11 @@ function LabelsView({ list, id }) {
   );
   return (
     <>
-      <div className="gl-tabs" data-figma="gl-tabs">
+      <div className="gl-tabs">
+        <span className="gl-tabs-left" data-figma="gl-tabs">
         <button type="button" className={'gl-tab' + (arch ? '' : ' active')} onClick={() => setArch(false)}>{rp.tabActive}</button>
         <button type="button" className={'gl-tab' + (arch ? ' active' : '')} onClick={() => setArch(true)}>{rp.tabArchived}</button>
+        </span>
         <span className="gl-tools">
           <span className="gl-work-bar"><input type="search" value={q} placeholder={rp.search} aria-label={rp.search} onChange={(e) => setQ(e.target.value)} /><Icon name="search" /></span>
         </span>
@@ -149,7 +153,7 @@ function PackagesView({ list }) {
   const rows = list.filter((x) => `${x.name} ${x.version}`.toLowerCase().includes(q.trim().toLowerCase()));
   return (
     <>
-      <div data-figma="page-head"><h2 className="gl-page-title">{p1.pkgTitle}</h2>
+      <div data-figma="page-head" className="gl-ph"><h2 className="gl-page-title">{p1.pkgTitle}</h2>
       <p className="gl-pkg-count"><Icon name="ext/catalog" /> {p1.pkgCount(list.length)}</p></div>
       <PageSearch value={q} onChange={setQ} placeholder={p1.pkgFilter}>
         <span className="krds-btn small tertiary">{p1.pkgSort}</span>
@@ -197,8 +201,11 @@ function ActivityView({ list }) {
   const rows = tab === 'all' ? list : list.filter(ACT_KIND[tab]);
   return (
     <>
+      <div className="gl-tabs-row">
       <div className="gl-tabs" data-figma="gl-tabs" role="tablist">
         {p1.actTabs.map(([k, n]) => <button key={k} type="button" role="tab" aria-selected={tab === k} className={'gl-tab' + (tab === k ? ' active' : '')} onClick={() => setTab(k)}>{n}</button>)}
+      </div>
+      <IconButton icon="ext/rss" label={p1.rss} />
       </div>
       {rows.length ? (
         <ul className="rb-plain-list">
