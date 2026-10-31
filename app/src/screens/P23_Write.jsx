@@ -87,7 +87,7 @@ export default function Write({ mode }) {
   };
 
   return (
-    <ProjectFrame screenId={SCREEN[mode]} tab="" tabLabel={title} data={frame} state="Ideal" headExtra={mode === 'branch' ? null : (<div className="gl-histtop"><span className="rb-branch-btn"><Icon name="ext/branch" /><span className="rb-ellipsis">{branch}</span><Icon name="arrow-down" /></span><span className="gl-histproject">{project.path || project.name}</span></div>)}>
+    <ProjectFrame screenId={SCREEN[mode]} tab="" tabLabel={title} crumbs={mode === 'branch' ? [[g.brTitle, `/projects/${id}/branches`], [title]] : [[g.repoLabel, `/projects/${id}/code`], [title]]} data={frame} state="Ideal" headExtra={mode === 'branch' ? null : (<div className="gl-histtop"><span className="rb-branch-btn"><Icon name="ext/branch" /><span className="rb-ellipsis">{branch}</span><Icon name="arrow-down" /></span><span className="gl-histproject">{project.path || project.name}</span></div>)}>
       <div className="rb-write">
         <div className="rb-write-head">
           <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeTarget(project.name, branch)}</p>
