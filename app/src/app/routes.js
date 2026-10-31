@@ -64,6 +64,9 @@ export const routes = [
   { id: 'R-12', path: '/projects/:id/issues/:iid', Screen: Issue },
   { id: 'R-16', path: '/projects/:id/merge-requests', Screen: MergeRequests },
   { id: 'R-17', path: '/projects/:id/merge-requests/:iid', Screen: MergeRequest },
+  { id: 'R-17', path: '/projects/:id/merge-requests/:iid/commits', Screen: MergeRequest },
+  { id: 'R-17', path: '/projects/:id/merge-requests/:iid/pipelines', Screen: MergeRequest },
+  { id: 'R-17', path: '/projects/:id/merge-requests/:iid/diffs', Screen: MergeRequest },
   { id: 'R-10', path: '/projects/:id/contributors', Screen: Contributors },
   ...SECTION_KEYS.map((key) => ({
     id: SECTION_ID[key],
