@@ -1,6 +1,6 @@
 # Figma 대 코드 전수 대조 원장(parity ledger)
 
-- 생성: 2026-10-31T11:36:10.448Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
+- 생성: 2026-10-31T11:38:05.994Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
 - 다시 만들기: 개발 서버에서 측정(app/scripts/export-code-boxes.mjs 또는 Aside 탭에서 export-code-boxes.js) 뒤 `npm run check:parity`
 
 ## 0. 해소 규칙
@@ -296,26 +296,26 @@
 | R-02_360_Signed-in | C1 | 5 | 3 | 0 | 2 | 2 | 4 | 0 | 3 | 0 | 19 | 14 |
 | R-02_768_Guest | C1 | 16 | 3 | 0 | 2 | 2 | 3 | 0 | 3 | 0 | 29 | 15 |
 | R-02_768_Signed-in | C1 | 16 | 3 | 0 | 2 | 2 | 4 | 0 | 3 | 0 | 30 | 15 |
-| R-03_1024_Guest | C1 | 3 | 2 | 0 | 2 | 3 | 4 | 1 | 2 | 0 | 17 | 13 |
-| R-03_1024_Signed-in | C1 | 5 | 3 | 0 | 2 | 3 | 4 | 1 | 2 | 0 | 20 | 13 |
-| R-03_1440_Guest | C1 | 4 | 2 | 0 | 3 | 3 | 5 | 1 | 3 | 0 | 21 | 16 |
-| R-03_1440_Signed-in | C1 | 4 | 3 | 0 | 3 | 3 | 5 | 1 | 3 | 0 | 22 | 16 |
-| R-03_1920_Guest | C1 | 3 | 2 | 0 | 3 | 3 | 5 | 1 | 3 | 0 | 20 | 16 |
-| R-03_1920_Signed-in | C1 | 3 | 3 | 0 | 3 | 3 | 5 | 1 | 3 | 0 | 21 | 16 |
-| R-03_360_Guest | C1 | 3 | 3 | 0 | 2 | 2 | 3 | 1 | 3 | 0 | 17 | 14 |
-| R-03_360_Signed-in | C1 | 3 | 3 | 0 | 2 | 2 | 4 | 1 | 3 | 0 | 18 | 14 |
-| R-03_768_Guest | C1 | 12 | 3 | 0 | 2 | 2 | 3 | 1 | 3 | 0 | 26 | 15 |
-| R-03_768_Signed-in | C1 | 12 | 3 | 0 | 2 | 2 | 4 | 1 | 3 | 0 | 27 | 15 |
-| R-04_1024_Guest | C1 | 4 | 2 | 0 | 4 | 3 | 5 | 0 | 0 | 0 | 18 | 14 |
-| R-04_1024_Signed-in | C1 | 6 | 3 | 0 | 4 | 3 | 5 | 0 | 2 | 0 | 23 | 14 |
-| R-04_1440_Guest | C1 | 5 | 2 | 0 | 5 | 3 | 6 | 0 | 1 | 0 | 22 | 17 |
-| R-04_1440_Signed-in | C1 | 5 | 3 | 0 | 5 | 3 | 6 | 0 | 1 | 0 | 23 | 17 |
-| R-04_1920_Guest | C1 | 4 | 2 | 0 | 5 | 3 | 6 | 0 | 1 | 0 | 21 | 17 |
-| R-04_1920_Signed-in | C1 | 4 | 3 | 0 | 5 | 3 | 6 | 0 | 1 | 0 | 22 | 17 |
-| R-04_360_Guest | C1 | 4 | 3 | 0 | 4 | 2 | 4 | 0 | 1 | 0 | 18 | 14 |
-| R-04_360_Signed-in | C1 | 4 | 3 | 0 | 4 | 2 | 5 | 0 | 1 | 0 | 19 | 14 |
-| R-04_768_Guest | C1 | 15 | 3 | 0 | 4 | 2 | 4 | 0 | 1 | 0 | 29 | 15 |
-| R-04_768_Signed-in | C1 | 15 | 3 | 0 | 4 | 2 | 5 | 0 | 1 | 0 | 30 | 15 |
+| R-03_1024_Guest | C1 | 5 | 2 | 0 | 2 | 2 | 1 | 1 | 4 | 0 | 17 | 16 |
+| R-03_1024_Signed-in | C1 | 4 | 2 | 0 | 2 | 2 | 2 | 1 | 2 | 0 | 15 | 16 |
+| R-03_1440_Guest | C1 | 4 | 2 | 0 | 2 | 2 | 3 | 1 | 3 | 0 | 17 | 19 |
+| R-03_1440_Signed-in | C1 | 4 | 2 | 0 | 2 | 2 | 3 | 1 | 3 | 0 | 17 | 19 |
+| R-03_1920_Guest | C1 | 3 | 2 | 0 | 2 | 2 | 3 | 1 | 3 | 0 | 16 | 19 |
+| R-03_1920_Signed-in | C1 | 3 | 2 | 0 | 2 | 2 | 3 | 1 | 3 | 0 | 16 | 19 |
+| R-03_360_Guest | C1 | 3 | 2 | 0 | 2 | 1 | 2 | 1 | 3 | 0 | 14 | 17 |
+| R-03_360_Signed-in | C1 | 3 | 2 | 0 | 2 | 1 | 2 | 1 | 3 | 0 | 14 | 17 |
+| R-03_768_Guest | C1 | 12 | 2 | 0 | 2 | 1 | 2 | 1 | 3 | 0 | 23 | 18 |
+| R-03_768_Signed-in | C1 | 12 | 2 | 0 | 2 | 1 | 2 | 1 | 3 | 0 | 23 | 18 |
+| R-04_1024_Guest | C1 | 5 | 2 | 0 | 4 | 3 | 2 | 0 | 0 | 0 | 16 | 17 |
+| R-04_1024_Signed-in | C1 | 5 | 2 | 0 | 4 | 3 | 3 | 0 | 0 | 0 | 17 | 17 |
+| R-04_1440_Guest | C1 | 5 | 2 | 0 | 4 | 3 | 4 | 0 | 1 | 0 | 19 | 20 |
+| R-04_1440_Signed-in | C1 | 5 | 2 | 0 | 4 | 3 | 4 | 0 | 1 | 0 | 19 | 20 |
+| R-04_1920_Guest | C1 | 4 | 2 | 0 | 4 | 3 | 4 | 0 | 1 | 0 | 18 | 20 |
+| R-04_1920_Signed-in | C1 | 4 | 2 | 0 | 4 | 3 | 4 | 0 | 1 | 0 | 18 | 20 |
+| R-04_360_Guest | C1 | 4 | 2 | 0 | 4 | 2 | 3 | 0 | 1 | 0 | 16 | 17 |
+| R-04_360_Signed-in | C1 | 4 | 2 | 0 | 4 | 2 | 3 | 0 | 1 | 0 | 16 | 17 |
+| R-04_768_Guest | C1 | 15 | 2 | 0 | 4 | 2 | 3 | 0 | 1 | 0 | 27 | 18 |
+| R-04_768_Signed-in | C1 | 15 | 2 | 0 | 4 | 2 | 3 | 0 | 1 | 0 | 27 | 18 |
 | R-05_1024_Guest | C1 | 1 | 1 | 0 | 2 | 1 | 3 | 5 | 0 | 0 | 13 | 15 |
 | R-05_1024_Signed-in | C1 | 3 | 2 | 0 | 2 | 1 | 3 | 5 | 0 | 0 | 16 | 15 |
 | R-05_1440_Guest | C1 | 1 | 1 | 0 | 3 | 1 | 4 | 5 | 1 | 0 | 16 | 18 |
@@ -326,46 +326,46 @@
 | R-05_360_Signed-in | C1 | 1 | 2 | 0 | 2 | 0 | 3 | 5 | 1 | 0 | 14 | 15 |
 | R-05_768_Guest | C1 | 8 | 2 | 0 | 2 | 0 | 2 | 5 | 1 | 0 | 20 | 16 |
 | R-05_768_Signed-in | C1 | 8 | 2 | 0 | 2 | 0 | 3 | 5 | 1 | 0 | 21 | 16 |
-| R-06_1024_Guest | C1 | 3 | 1 | 0 | 2 | 2 | 3 | 0 | 0 | 0 | 11 | 11 |
-| R-06_1024_Signed-in | C1 | 3 | 2 | 0 | 2 | 2 | 3 | 0 | 0 | 0 | 12 | 11 |
-| R-06_1440_Guest | C1 | 3 | 1 | 0 | 3 | 2 | 4 | 0 | 1 | 0 | 14 | 13 |
-| R-06_1440_Signed-in | C1 | 3 | 2 | 0 | 3 | 2 | 4 | 0 | 1 | 0 | 15 | 13 |
-| R-06_1920_Guest | C1 | 2 | 1 | 0 | 3 | 2 | 4 | 0 | 1 | 0 | 13 | 13 |
-| R-06_1920_Signed-in | C1 | 2 | 2 | 0 | 3 | 2 | 4 | 0 | 1 | 0 | 14 | 13 |
-| R-06_360_Guest | C1 | 2 | 2 | 1 | 2 | 1 | 2 | 0 | 1 | 0 | 11 | 11 |
-| R-06_360_Signed-in | C1 | 2 | 2 | 1 | 2 | 1 | 3 | 0 | 1 | 0 | 12 | 11 |
-| R-06_768_Guest | C1 | 11 | 2 | 0 | 2 | 1 | 2 | 0 | 1 | 0 | 19 | 13 |
-| R-06_768_Signed-in | C1 | 11 | 2 | 0 | 2 | 1 | 3 | 0 | 1 | 0 | 20 | 13 |
-| R-07_1024_Guest | C1 | 6 | 2 | 0 | 4 | 6 | 3 | 0 | 0 | 0 | 21 | 12 |
-| R-07_1024_Signed-in | C1 | 8 | 4 | 0 | 4 | 6 | 4 | 0 | 1 | 0 | 27 | 12 |
-| R-07_1440_Guest | C1 | 6 | 2 | 0 | 5 | 6 | 4 | 0 | 1 | 0 | 24 | 14 |
-| R-07_1440_Signed-in | C1 | 7 | 4 | 0 | 5 | 6 | 5 | 0 | 1 | 0 | 28 | 14 |
-| R-07_1920_Guest | C1 | 5 | 2 | 0 | 5 | 6 | 4 | 0 | 1 | 0 | 23 | 14 |
-| R-07_1920_Signed-in | C1 | 6 | 4 | 0 | 5 | 6 | 5 | 0 | 1 | 0 | 27 | 14 |
-| R-07_360_Guest | C1 | 5 | 3 | 0 | 4 | 5 | 2 | 0 | 1 | 0 | 20 | 12 |
-| R-07_360_Signed-in | C1 | 5 | 3 | 0 | 4 | 5 | 3 | 0 | 1 | 0 | 21 | 12 |
-| R-07_768_Guest | C1 | 17 | 3 | 0 | 4 | 5 | 2 | 0 | 1 | 0 | 32 | 14 |
-| R-07_768_Signed-in | C1 | 18 | 4 | 0 | 4 | 5 | 4 | 0 | 1 | 0 | 36 | 14 |
-| R-08_1024_Guest | C1 | 6 | 2 | 0 | 2 | 3 | 4 | 0 | 2 | 0 | 19 | 13 |
-| R-08_1024_Signed-in | C1 | 4 | 3 | 0 | 2 | 3 | 4 | 0 | 0 | 0 | 16 | 13 |
-| R-08_1440_Guest | C1 | 5 | 2 | 0 | 3 | 3 | 5 | 0 | 1 | 0 | 19 | 16 |
-| R-08_1440_Signed-in | C1 | 5 | 3 | 0 | 3 | 3 | 5 | 0 | 1 | 0 | 20 | 16 |
-| R-08_1920_Guest | C1 | 4 | 2 | 0 | 3 | 3 | 5 | 0 | 1 | 0 | 18 | 16 |
-| R-08_1920_Signed-in | C1 | 4 | 3 | 0 | 3 | 3 | 5 | 0 | 1 | 0 | 19 | 16 |
-| R-08_360_Guest | C1 | 4 | 3 | 1 | 2 | 2 | 3 | 0 | 1 | 0 | 16 | 13 |
-| R-08_360_Signed-in | C1 | 4 | 3 | 1 | 2 | 2 | 4 | 0 | 1 | 0 | 17 | 13 |
-| R-08_768_Guest | C1 | 15 | 3 | 0 | 2 | 2 | 3 | 0 | 1 | 0 | 26 | 14 |
-| R-08_768_Signed-in | C1 | 15 | 3 | 0 | 2 | 2 | 4 | 0 | 1 | 0 | 27 | 14 |
-| R-09_1024_Guest | C1 | 3 | 1 | 0 | 2 | 2 | 4 | 0 | 0 | 0 | 12 | 14 |
-| R-09_1024_Signed-in | C1 | 3 | 2 | 0 | 2 | 2 | 4 | 0 | 0 | 0 | 13 | 14 |
-| R-09_1440_Guest | C1 | 2 | 1 | 0 | 3 | 2 | 5 | 0 | 1 | 0 | 14 | 17 |
-| R-09_1440_Signed-in | C1 | 2 | 2 | 0 | 3 | 2 | 5 | 0 | 1 | 0 | 15 | 17 |
-| R-09_1920_Guest | C1 | 1 | 1 | 0 | 3 | 2 | 5 | 0 | 1 | 0 | 13 | 17 |
-| R-09_1920_Signed-in | C1 | 1 | 2 | 0 | 3 | 2 | 5 | 0 | 1 | 0 | 14 | 17 |
-| R-09_360_Guest | C1 | 1 | 2 | 0 | 2 | 1 | 3 | 0 | 1 | 0 | 10 | 14 |
-| R-09_360_Signed-in | C1 | 1 | 2 | 0 | 2 | 1 | 4 | 0 | 1 | 0 | 11 | 14 |
-| R-09_768_Guest | C1 | 10 | 2 | 0 | 2 | 1 | 3 | 0 | 1 | 0 | 19 | 15 |
-| R-09_768_Signed-in | C1 | 10 | 2 | 0 | 2 | 1 | 4 | 0 | 1 | 0 | 20 | 15 |
+| R-06_1024_Guest | C1 | 3 | 1 | 0 | 2 | 2 | 0 | 0 | 0 | 0 | 8 | 14 |
+| R-06_1024_Signed-in | C1 | 2 | 1 | 0 | 2 | 2 | 1 | 0 | 0 | 0 | 8 | 14 |
+| R-06_1440_Guest | C1 | 3 | 1 | 0 | 2 | 2 | 2 | 0 | 1 | 0 | 11 | 16 |
+| R-06_1440_Signed-in | C1 | 3 | 1 | 0 | 2 | 2 | 2 | 0 | 1 | 0 | 11 | 16 |
+| R-06_1920_Guest | C1 | 2 | 1 | 0 | 2 | 2 | 2 | 0 | 1 | 0 | 10 | 16 |
+| R-06_1920_Signed-in | C1 | 2 | 1 | 0 | 2 | 2 | 2 | 0 | 1 | 0 | 10 | 16 |
+| R-06_360_Guest | C1 | 2 | 1 | 1 | 2 | 1 | 1 | 0 | 1 | 0 | 9 | 14 |
+| R-06_360_Signed-in | C1 | 2 | 1 | 1 | 2 | 1 | 1 | 0 | 1 | 0 | 9 | 14 |
+| R-06_768_Guest | C1 | 11 | 1 | 0 | 2 | 1 | 1 | 0 | 1 | 0 | 17 | 16 |
+| R-06_768_Signed-in | C1 | 11 | 1 | 0 | 2 | 1 | 1 | 0 | 1 | 0 | 17 | 16 |
+| R-07_1024_Guest | C1 | 4 | 2 | 0 | 3 | 3 | 0 | 0 | 0 | 0 | 12 | 15 |
+| R-07_1024_Signed-in | C1 | 6 | 3 | 0 | 3 | 3 | 2 | 0 | 0 | 0 | 17 | 15 |
+| R-07_1440_Guest | C1 | 5 | 2 | 0 | 3 | 3 | 2 | 0 | 1 | 0 | 16 | 17 |
+| R-07_1440_Signed-in | C1 | 6 | 3 | 0 | 3 | 3 | 3 | 0 | 1 | 0 | 19 | 17 |
+| R-07_1920_Guest | C1 | 4 | 2 | 0 | 3 | 3 | 2 | 0 | 1 | 0 | 15 | 17 |
+| R-07_1920_Signed-in | C1 | 5 | 3 | 0 | 3 | 3 | 3 | 0 | 1 | 0 | 18 | 17 |
+| R-07_360_Guest | C1 | 4 | 2 | 0 | 3 | 2 | 1 | 0 | 1 | 0 | 13 | 15 |
+| R-07_360_Signed-in | C1 | 4 | 2 | 0 | 3 | 2 | 1 | 0 | 1 | 0 | 13 | 15 |
+| R-07_768_Guest | C1 | 16 | 2 | 0 | 3 | 2 | 1 | 0 | 1 | 0 | 25 | 17 |
+| R-07_768_Signed-in | C1 | 17 | 3 | 0 | 3 | 2 | 2 | 0 | 1 | 0 | 28 | 17 |
+| R-08_1024_Guest | C1 | 5 | 2 | 0 | 2 | 3 | 1 | 0 | 0 | 0 | 13 | 16 |
+| R-08_1024_Signed-in | C1 | 6 | 2 | 0 | 2 | 3 | 2 | 0 | 0 | 0 | 15 | 16 |
+| R-08_1440_Guest | C1 | 5 | 2 | 0 | 2 | 3 | 3 | 0 | 1 | 0 | 16 | 19 |
+| R-08_1440_Signed-in | C1 | 5 | 2 | 0 | 2 | 3 | 3 | 0 | 1 | 0 | 16 | 19 |
+| R-08_1920_Guest | C1 | 4 | 2 | 0 | 2 | 3 | 3 | 0 | 1 | 0 | 15 | 19 |
+| R-08_1920_Signed-in | C1 | 4 | 2 | 0 | 2 | 3 | 3 | 0 | 1 | 0 | 15 | 19 |
+| R-08_360_Guest | C1 | 4 | 2 | 1 | 2 | 2 | 2 | 0 | 1 | 0 | 14 | 16 |
+| R-08_360_Signed-in | C1 | 4 | 2 | 1 | 2 | 2 | 2 | 0 | 1 | 0 | 14 | 16 |
+| R-08_768_Guest | C1 | 15 | 2 | 0 | 2 | 2 | 2 | 0 | 1 | 0 | 24 | 17 |
+| R-08_768_Signed-in | C1 | 15 | 2 | 0 | 2 | 2 | 2 | 0 | 1 | 0 | 24 | 17 |
+| R-09_1024_Guest | C1 | 3 | 1 | 0 | 2 | 2 | 2 | 0 | 0 | 0 | 10 | 16 |
+| R-09_1024_Signed-in | C1 | 3 | 1 | 0 | 2 | 2 | 2 | 0 | 0 | 0 | 10 | 16 |
+| R-09_1440_Guest | C1 | 2 | 1 | 0 | 3 | 2 | 3 | 0 | 1 | 0 | 12 | 19 |
+| R-09_1440_Signed-in | C1 | 2 | 1 | 0 | 3 | 2 | 3 | 0 | 1 | 0 | 12 | 19 |
+| R-09_1920_Guest | C1 | 1 | 1 | 0 | 3 | 2 | 3 | 0 | 1 | 0 | 11 | 19 |
+| R-09_1920_Signed-in | C1 | 1 | 1 | 0 | 3 | 2 | 3 | 0 | 1 | 0 | 11 | 19 |
+| R-09_360_Guest | C1 | 1 | 1 | 0 | 2 | 1 | 1 | 0 | 1 | 0 | 7 | 16 |
+| R-09_360_Signed-in | C1 | 1 | 1 | 0 | 2 | 1 | 2 | 0 | 1 | 0 | 8 | 16 |
+| R-09_768_Guest | C1 | 10 | 1 | 0 | 2 | 1 | 1 | 0 | 1 | 0 | 16 | 17 |
+| R-09_768_Signed-in | C1 | 10 | 1 | 0 | 2 | 1 | 2 | 0 | 1 | 0 | 17 | 17 |
 | R-10_1024_Guest | C2 | 1 | 1 | 0 | 2 | 1 | 3 | 1 | 0 | 0 | 9 | 14 |
 | R-10_1024_Signed-in | C2 | 3 | 2 | 0 | 2 | 1 | 3 | 1 | 0 | 0 | 12 | 14 |
 | R-10_1440_Guest | C2 | 1 | 1 | 0 | 3 | 1 | 4 | 1 | 1 | 0 | 12 | 17 |
@@ -576,7 +576,7 @@
 | R-30_360_Signed-in | D21 | 1 | 2 | 0 | 2 | 0 | 1 | 2 | 1 | 0 | 9 | 11 |
 | R-30_768_Guest | D21 | 8 | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 0 | 15 | 13 |
 | R-30_768_Signed-in | D21 | 8 | 2 | 0 | 2 | 0 | 1 | 2 | 1 | 0 | 16 | 13 |
-| **합** |  | 2656 | 1069 | 49 | 1209 | 792 | 1729 | 880 | 979 | 22 | 9385 |  |
+| **합** |  | 2645 | 1027 | 49 | 1179 | 752 | 1614 | 880 | 976 | 22 | 9144 |  |
 
 - 기본값이 아닌 Figma 변형(코드 재현 대기, 8개): G-01_360_Auth-Guest_Drawer-Open, G-02_1440_Auth-Guest_Dialog-Open, G-09_1440_Auth-Guest_Kind-LoginRequired, R-01_1440_Auth-Guest_Drawer-Closed_Sidebar-Collapsed_Info-Short, R-01_1440_Auth-Guest_Drawer-Closed_Sidebar-Expanded_Info-Expanded, R-01_360_Auth-Guest_Drawer-Open_Sidebar-Expanded_Info-Short, R-11_1440_Auth-Guest_State-Empty, R-11_1440_Auth-Guest_State-NoResults
 
@@ -6889,481 +6889,415 @@
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 menu,search,setting |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 위치/크기 | global-search | x Figma 389 / 코드 343 (-46) |
+| 위치/크기 | global-search | w Figma 246 / 코드 338 (+92) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리포지토리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리포지토리' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
-| 위치/크기 | commit-bar | h Figma 66 / 코드 64 (-2) |
+| 위치/크기 | commit-bar | h Figma 66 / 코드 72 (+6) |
 | 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
-| 모서리·안쪽·간격 | commit-bar | 안쪽 12 12 12 12→0 0 0 0 |
 | 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
 | 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
 | Figma에만 | preview | 코드에 이름표 없음(Figma 41,364 942x5256) |
-| 코드에만 | page-head | Figma에 없음 |
-| 코드에만 | toolbar | Figma에 없음 |
-
-### R-03_1024_Signed-in (C1, 20건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,menu,my,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
-| 위치/크기 | global-search | x Figma 389 / 코드 386 (-3) |
-| 위치/크기 | global-search | w Figma 246 / 코드 251 (+5) |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리포지토리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리포지토리' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
-| 위치/크기 | commit-bar | h Figma 66 / 코드 64 (-2) |
-| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
-| 모서리·안쪽·간격 | commit-bar | 안쪽 12 12 12 12→0 0 0 0 |
-| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
-| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
-| Figma에만 | preview | 코드에 이름표 없음(Figma 41,364 942x5256) |
-| 코드에만 | page-head | Figma에 없음 |
-| 코드에만 | toolbar | Figma에 없음 |
-
-### R-03_1440_Guest (C1, 21건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
-| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,panel-open,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript,panel-open |
-| 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리포지토리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리포지토리' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,panel-open,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript,panel-open |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
-| 위치/크기 | commit-bar | h Figma 66 / 코드 64 (-2) |
-| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
-| 모서리·안쪽·간격 | commit-bar | 안쪽 12 12 12 12→0 0 0 0 |
-| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
-| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
-| Figma에만 | preview | 코드에 이름표 없음(Figma 297,364 1086x5054) |
-| 코드에만 | sidebar-nav | Figma에 없음 |
-| 코드에만 | page-head | Figma에 없음 |
-| 코드에만 | toolbar | Figma에 없음 |
-
-### R-03_1440_Signed-in (C1, 22건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
-| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,panel-open,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript,panel-open |
-| 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리포지토리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리포지토리' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,panel-open,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript,panel-open |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
-| 위치/크기 | commit-bar | h Figma 66 / 코드 64 (-2) |
-| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
-| 모서리·안쪽·간격 | commit-bar | 안쪽 12 12 12 12→0 0 0 0 |
-| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
-| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
-| Figma에만 | preview | 코드에 이름표 없음(Figma 297,364 1086x5054) |
-| 코드에만 | sidebar-nav | Figma에 없음 |
-| 코드에만 | page-head | Figma에 없음 |
-| 코드에만 | toolbar | Figma에 없음 |
-
-### R-03_1920_Guest (C1, 20건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
-| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,panel-open,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript,panel-open |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리포지토리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리포지토리' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,panel-open,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript,panel-open |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
-| 위치/크기 | commit-bar | h Figma 66 / 코드 64 (-2) |
-| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
-| 모서리·안쪽·간격 | commit-bar | 안쪽 12 12 12 12→0 0 0 0 |
-| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
-| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
-| Figma에만 | preview | 코드에 이름표 없음(Figma 481,364 1198x4922) |
-| 코드에만 | sidebar-nav | Figma에 없음 |
-| 코드에만 | page-head | Figma에 없음 |
-| 코드에만 | toolbar | Figma에 없음 |
-
-### R-03_1920_Signed-in (C1, 21건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
-| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,panel-open,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript,panel-open |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리포지토리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리포지토리' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,panel-open,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript,panel-open |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
-| 위치/크기 | commit-bar | h Figma 66 / 코드 64 (-2) |
-| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
-| 모서리·안쪽·간격 | commit-bar | 안쪽 12 12 12 12→0 0 0 0 |
-| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
-| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
-| Figma에만 | preview | 코드에 이름표 없음(Figma 481,364 1198x4922) |
-| 코드에만 | sidebar-nav | Figma에 없음 |
-| 코드에만 | page-head | Figma에 없음 |
-| 코드에만 | toolbar | Figma에 없음 |
-
-### R-03_360_Guest (C1, 17건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리포지토리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리포지토리' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
-| 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | commit-bar | y Figma 225 / 코드 326 (+101) |
-| 위치/크기 | commit-bar | h Figma 66 / 코드 116 (+50) |
-| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
-| 모서리·안쪽·간격 | commit-bar | 안쪽 12 12 12 12→0 0 0 0 |
-| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
-| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
-| Figma에만 | preview | 코드에 이름표 없음(Figma 17,434 326x9094) |
-| 코드에만 | global-search | Figma에 없음 |
-| 코드에만 | page-head | Figma에 없음 |
-| 코드에만 | toolbar | Figma에 없음 |
-
-### R-03_360_Signed-in (C1, 18건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '알림 도구 올리기' |
-| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리포지토리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리포지토리' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
-| 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | commit-bar | y Figma 225 / 코드 326 (+101) |
-| 위치/크기 | commit-bar | h Figma 66 / 코드 116 (+50) |
-| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
-| 모서리·안쪽·간격 | commit-bar | 안쪽 12 12 12 12→0 0 0 0 |
-| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
-| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
-| Figma에만 | preview | 코드에 이름표 없음(Figma 17,434 326x9094) |
-| 코드에만 | global-search | Figma에 없음 |
-| 코드에만 | page-head | Figma에 없음 |
-| 코드에만 | toolbar | Figma에 없음 |
-
-### R-03_768_Guest (C1, 26건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
-| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
-| 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
-| 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리포지토리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리포지토리' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
-| 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | commit-bar | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
-| 위치/크기 | commit-bar | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | commit-bar | h Figma 66 / 코드 64 (-2) |
-| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
-| 모서리·안쪽·간격 | commit-bar | 안쪽 12 12 12 12→0 0 0 0 |
-| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
-| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
-| Figma에만 | preview | 코드에 이름표 없음(Figma 25,364 718x5744) |
-| 코드에만 | global-search | Figma에 없음 |
-| 코드에만 | page-head | Figma에 없음 |
-| 코드에만 | toolbar | Figma에 없음 |
-
-### R-03_768_Signed-in (C1, 27건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
-| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
-| 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
-| 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리포지토리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리포지토리' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,ellipsis-vertical,icon-file/markdown,system-info / 코드 arrow-down,branch,copy,document,download,ellipsis-horizontal,ellipsis-vertical,file:typescript |
-| 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | commit-bar | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
-| 위치/크기 | commit-bar | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | commit-bar | h Figma 66 / 코드 64 (-2) |
-| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
-| 모서리·안쪽·간격 | commit-bar | 안쪽 12 12 12 12→0 0 0 0 |
-| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
-| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
-| Figma에만 | preview | 코드에 이름표 없음(Figma 25,364 718x5744) |
-| 코드에만 | global-search | Figma에 없음 |
-| 코드에만 | page-head | Figma에 없음 |
-| 코드에만 | toolbar | Figma에 없음 |
-
-### R-04_1024_Guest (C1, 18건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 menu,search,setting |
-| 아이콘 | content-panel | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 커밋' 없음. 코드: '서울특별시 광진구 류승인 kordoc 커밋' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
-| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
-| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
-| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
-| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
-| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
-
-### R-04_1024_Signed-in (C1, 23건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,menu,my,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
-| 위치/크기 | global-search | x Figma 389 / 코드 340 (-49) |
-| 위치/크기 | global-search | w Figma 246 / 코드 344 (+98) |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 커밋' 없음. 코드: '서울특별시 광진구 류승인 kordoc 커밋' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
-| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
-| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
-| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
-| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
-| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
 | 코드에만 | gitlab-sidebar | Figma에 없음 |
 | 코드에만 | sidebar-nav | Figma에 없음 |
+| 코드에만 | page-head | Figma에 없음 |
+| 코드에만 | toolbar | Figma에 없음 |
 
-### R-04_1440_Guest (C1, 22건)
+### R-03_1024_Signed-in (C1, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,panel-open,plus,search |
+| 위치/크기 | global-search | w Figma 246 / 코드 244 (-2) |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
+| 위치/크기 | commit-bar | h Figma 66 / 코드 72 (+6) |
+| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
+| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
+| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
+| Figma에만 | preview | 코드에 이름표 없음(Figma 41,364 942x5256) |
+| 코드에만 | page-head | Figma에 없음 |
+| 코드에만 | toolbar | Figma에 없음 |
+
+### R-03_1440_Guest (C1, 17건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 커밋' 없음. 코드: '서울특별시 광진구 류승인 kordoc 커밋' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
-| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
-| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
-| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
-| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
-| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
+| 위치/크기 | commit-bar | h Figma 66 / 코드 72 (+6) |
+| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
+| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
+| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
+| Figma에만 | preview | 코드에 이름표 없음(Figma 297,364 1086x5054) |
 | 코드에만 | sidebar-nav | Figma에 없음 |
+| 코드에만 | page-head | Figma에 없음 |
+| 코드에만 | toolbar | Figma에 없음 |
 
-### R-04_1440_Signed-in (C1, 23건)
+### R-03_1440_Signed-in (C1, 17건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,plus,search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 커밋' 없음. 코드: '서울특별시 광진구 류승인 kordoc 커밋' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
-| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
-| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
-| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
-| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
-| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
+| 위치/크기 | commit-bar | h Figma 66 / 코드 72 (+6) |
+| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
+| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
+| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
+| Figma에만 | preview | 코드에 이름표 없음(Figma 297,364 1086x5054) |
 | 코드에만 | sidebar-nav | Figma에 없음 |
+| 코드에만 | page-head | Figma에 없음 |
+| 코드에만 | toolbar | Figma에 없음 |
 
-### R-04_1920_Guest (C1, 21건)
+### R-03_1920_Guest (C1, 16건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 커밋' 없음. 코드: '서울특별시 광진구 류승인 kordoc 커밋' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
-| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
-| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
-| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
-| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
-| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
+| 위치/크기 | commit-bar | h Figma 66 / 코드 72 (+6) |
+| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
+| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
+| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
+| Figma에만 | preview | 코드에 이름표 없음(Figma 481,364 1198x4922) |
 | 코드에만 | sidebar-nav | Figma에 없음 |
+| 코드에만 | page-head | Figma에 없음 |
+| 코드에만 | toolbar | Figma에 없음 |
 
-### R-04_1920_Signed-in (C1, 22건)
+### R-03_1920_Signed-in (C1, 16건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,plus,search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 커밋' 없음. 코드: '서울특별시 광진구 류승인 kordoc 커밋' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
-| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
-| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
-| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
-| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
-| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
+| 위치/크기 | commit-bar | h Figma 66 / 코드 72 (+6) |
+| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
+| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
+| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
+| Figma에만 | preview | 코드에 이름표 없음(Figma 481,364 1198x4922) |
 | 코드에만 | sidebar-nav | Figma에 없음 |
+| 코드에만 | page-head | Figma에 없음 |
+| 코드에만 | toolbar | Figma에 없음 |
 
-### R-04_360_Guest (C1, 18건)
+### R-03_360_Guest (C1, 14건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
-| 아이콘 | content-panel | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 커밋' 없음. 코드: '서울특별시 광진구 류승인 kordoc 커밋' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search / 코드 ellipsis-vertical,panel-open,search |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 84 / 코드 78 (-6) |
-| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
-| 위치/크기 | gl-filter | y Figma 213 / 코드 222 (+9) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
-| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
-| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
-| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 위치/크기 | commit-bar | y Figma 225 / 코드 326 (+101) |
+| 위치/크기 | commit-bar | h Figma 66 / 코드 124 (+58) |
+| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
+| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
+| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
+| Figma에만 | preview | 코드에 이름표 없음(Figma 17,434 326x9094) |
 | 코드에만 | global-search | Figma에 없음 |
+| 코드에만 | page-head | Figma에 없음 |
+| 코드에만 | toolbar | Figma에 없음 |
 
-### R-04_360_Signed-in (C1, 19건)
+### R-03_360_Signed-in (C1, 14건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '알림 도구 올리기' |
-| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 커밋' 없음. 코드: '서울특별시 광진구 류승인 kordoc 커밋' |
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,issues,merge-request,panel-open,plus,search |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 84 / 코드 78 (-6) |
-| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
-| 위치/크기 | gl-filter | y Figma 213 / 코드 222 (+9) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
-| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
-| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
-| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 위치/크기 | commit-bar | y Figma 225 / 코드 326 (+101) |
+| 위치/크기 | commit-bar | h Figma 66 / 코드 124 (+58) |
+| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
+| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
+| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
+| Figma에만 | preview | 코드에 이름표 없음(Figma 17,434 326x9094) |
 | 코드에만 | global-search | Figma에 없음 |
+| 코드에만 | page-head | Figma에 없음 |
+| 코드에만 | toolbar | Figma에 없음 |
 
-### R-04_768_Guest (C1, 29건)
+### R-03_768_Guest (C1, 23건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search / 코드 ellipsis-vertical,panel-open,search |
 | 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
 | 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 커밋' 없음. 코드: '서울특별시 광진구 류승인 kordoc 커밋' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
 | 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
+| 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | commit-bar | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
+| 위치/크기 | commit-bar | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | commit-bar | h Figma 66 / 코드 72 (+6) |
+| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
+| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
+| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
+| Figma에만 | preview | 코드에 이름표 없음(Figma 25,364 718x5744) |
+| 코드에만 | global-search | Figma에 없음 |
+| 코드에만 | page-head | Figma에 없음 |
+| 코드에만 | toolbar | Figma에 없음 |
+
+### R-03_768_Signed-in (C1, 23건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,issues,merge-request,panel-open,plus,search |
+| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
+| 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
+| 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | commit-bar | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | commit-bar | y Figma 225 / 코드 232 (+7) |
+| 위치/크기 | commit-bar | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | commit-bar | h Figma 66 / 코드 72 (+6) |
+| 문구 | commit-bar | Figma 글 '서울특별시 광진구 류승인가 11시간 전에 작성' 없음. 코드: 'C release: 4.24.21 서울특별시 광진구 류승인가 2일 전에 작성 03f9484e 커밋 SHA 복사 이력' |
+| 모서리·안쪽·간격 | commit-bar | 간격 12→0 |
+| 아이콘 | commit-bar | Figma arrow-right,copy,download / 코드 copy,ellipsis-horizontal |
+| Figma에만 | preview | 코드에 이름표 없음(Figma 25,364 718x5744) |
+| 코드에만 | global-search | Figma에 없음 |
+| 코드에만 | page-head | Figma에 없음 |
+| 코드에만 | toolbar | Figma에 없음 |
+
+### R-04_1024_Guest (C1, 16건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 위치/크기 | global-search | w Figma 246 / 코드 244 (-2) |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
+| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
+| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
+| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
+| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
+| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+
+### R-04_1024_Signed-in (C1, 17건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,panel-open,plus,search |
+| 위치/크기 | global-search | w Figma 246 / 코드 244 (-2) |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
+| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
+| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
+| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
+| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
+| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+
+### R-04_1440_Guest (C1, 19건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search |
+| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
+| 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
+| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
+| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
+| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
+| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
+| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 코드에만 | sidebar-nav | Figma에 없음 |
+
+### R-04_1440_Signed-in (C1, 19건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,plus,search |
+| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
+| 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
+| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
+| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
+| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
+| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
+| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 코드에만 | sidebar-nav | Figma에 없음 |
+
+### R-04_1920_Guest (C1, 18건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search |
+| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
+| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
+| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
+| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
+| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
+| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 코드에만 | sidebar-nav | Figma에 없음 |
+
+### R-04_1920_Signed-in (C1, 18건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,plus,search |
+| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 84 / 코드 86 (+2) |
+| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
+| 위치/크기 | gl-filter | y Figma 213 / 코드 230 (+17) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
+| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
+| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
+| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 코드에만 | sidebar-nav | Figma에 없음 |
+
+### R-04_360_Guest (C1, 16건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search / 코드 ellipsis-vertical,panel-open,search |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 84 / 코드 78 (-6) |
+| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
+| 위치/크기 | gl-filter | y Figma 213 / 코드 222 (+9) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
+| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
+| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
+| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 코드에만 | global-search | Figma에 없음 |
+
+### R-04_360_Signed-in (C1, 16건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,issues,merge-request,panel-open,plus,search |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 84 / 코드 78 (-6) |
+| 아이콘 | page-head | Figma arrow-down,branch / 코드 branch,ellipsis-vertical |
+| 위치/크기 | gl-filter | y Figma 213 / 코드 222 (+9) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 32 (-33) |
+| 문구 | gl-filter | Figma 글 '검색 또는 결과 필터...' 없음. 코드: '' |
+| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 색 | gl-filter | fill Figma #1e2124 color/layout/raised-bg / 코드 없음  |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→0 0 0 0 |
+| 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
+| 코드에만 | global-search | Figma에 없음 |
+
+### R-04_768_Guest (C1, 27건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search / 코드 ellipsis-vertical,panel-open,search |
+| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
+| 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
+| 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
 | 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
 | 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
@@ -7384,21 +7318,18 @@
 | 아이콘 | gl-filter | Figma arrow-down,search,time / 코드 search,time |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-04_768_Signed-in (C1, 30건)
+### R-04_768_Signed-in (C1, 27건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,issues,merge-request,panel-open,plus,search |
 | 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
 | 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 커밋' 없음. 코드: '서울특별시 광진구 류승인 kordoc 커밋' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
 | 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,branch,commit,copy,search,time / 코드 arrow-down,branch,commit,copy,ellipsis-vertical,folder,search,tag,time |
 | 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
 | 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
@@ -7632,124 +7563,101 @@
 | Figma에만 | diff-file#3 | 코드에 이름표 없음(Figma 24,1351 720x58) |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-06_1024_Guest (C1, 11건)
+### R-06_1024_Guest (C1, 8건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 menu,search,setting |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
 | 위치/크기 | global-search | w Figma 246 / 코드 244 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리비전 비교' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리비전 비교' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→8 |
 
-### R-06_1024_Signed-in (C1, 12건)
+### R-06_1024_Signed-in (C1, 8건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,menu,my,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
-| 위치/크기 | global-search | w Figma 246 / 코드 244 (-2) |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,panel-open,plus,search |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리비전 비교' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리비전 비교' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→8 |
 
-### R-06_1440_Guest (C1, 14건)
+### R-06_1440_Guest (C1, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리비전 비교' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리비전 비교' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→8 |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-06_1440_Signed-in (C1, 15건)
+### R-06_1440_Signed-in (C1, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,plus,search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리비전 비교' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리비전 비교' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→8 |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-06_1920_Guest (C1, 13건)
+### R-06_1920_Guest (C1, 10건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리비전 비교' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리비전 비교' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→8 |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-06_1920_Signed-in (C1, 14건)
+### R-06_1920_Signed-in (C1, 10건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,plus,search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리비전 비교' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리비전 비교' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→8 |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-06_360_Guest (C1, 11건)
+### R-06_360_Guest (C1, 9건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리비전 비교' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리비전 비교' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search / 코드 ellipsis-vertical,panel-open,search |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | page-head | h Figma 40 / 코드 106 (+66) |
@@ -7757,16 +7665,13 @@
 | 모서리·안쪽·간격 | page-head | 간격 12→8 |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-06_360_Signed-in (C1, 12건)
+### R-06_360_Signed-in (C1, 9건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '알림 도구 올리기' |
-| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리비전 비교' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리비전 비교' |
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,issues,merge-request,panel-open,plus,search |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | page-head | h Figma 40 / 코드 106 (+66) |
@@ -7774,20 +7679,18 @@
 | 모서리·안쪽·간격 | page-head | 간격 12→8 |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-06_768_Guest (C1, 19건)
+### R-06_768_Guest (C1, 17건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search / 코드 ellipsis-vertical,panel-open,search |
 | 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
 | 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리비전 비교' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리비전 비교' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
 | 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
 | 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
@@ -7798,21 +7701,18 @@
 | 모서리·안쪽·간격 | page-head | 간격 12→8 |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-06_768_Signed-in (C1, 20건)
+### R-06_768_Signed-in (C1, 17건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,issues,merge-request,panel-open,plus,search |
 | 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
 | 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 리비전 비교' 없음. 코드: '서울특별시 광진구 류승인 kordoc 리비전 비교' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
 | 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,arrow-right,download,system-info / 코드 swap |
 | 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
 | 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
@@ -7823,295 +7723,217 @@
 | 모서리·안쪽·간격 | page-head | 간격 12→8 |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-07_1024_Guest (C1, 21건)
+### R-07_1024_Guest (C1, 12건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 menu,search,setting |
-| 아이콘 | content-panel | Figma arrow-down,branch,copy,download,search / 코드 copy,download,search |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | section-title | y Figma 243 / 코드 266 (+23) |
+| 위치/크기 | section-title | w Figma 944 / 코드 942 (-2) |
+| 모서리·안쪽·간격 | section-title | 안쪽 8 0 8 0→0 8 0 8 |
+| 모서리·안쪽·간격 | section-title | 간격 8→0 |
+| 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
+| 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
+| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+
+### R-07_1024_Signed-in (C1, 17건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,panel-open,plus,search |
 | 위치/크기 | global-search | w Figma 246 / 코드 244 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 브랜치' 없음. 코드: '서울특별시 광진구 류승인 kordoc 브랜치' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | section-title | y Figma 243 / 코드 250 (+7) |
-| 위치/크기 | section-title | w Figma 944 / 코드 942 (-2) |
-| 모서리·안쪽·간격 | section-title | 안쪽 8 0 8 0→0 8 0 8 |
-| 모서리·안쪽·간격 | section-title | 간격 8→0 |
-| 색 | gl-tabs | stroke Figma #464c53 color/layout/divider / 코드 #33363d gray-80 |
-| 모서리·안쪽·간격 | gl-tabs | 간격 0→8 |
-| 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 50 (-15) |
-| 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
-| 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 모서리·안쪽·간격 | gl-filter | 모서리 0→8 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→8 8 8 8 |
-
-### R-07_1024_Signed-in (C1, 27건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,menu,my,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,search / 코드 copy,download,search |
-| 위치/크기 | global-search | x Figma 389 / 코드 374 (-15) |
-| 위치/크기 | global-search | w Figma 246 / 코드 276 (+30) |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 브랜치' 없음. 코드: '서울특별시 광진구 류승인 kordoc 브랜치' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,search / 코드 copy,download,search |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | section-title | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | section-title | y Figma 243 / 코드 266 (+23) |
 | 위치/크기 | section-title | w Figma 944 / 코드 942 (-2) |
 | 위치/크기 | section-title | h Figma 56 / 코드 40 (-16) |
 | 문구 | section-title | Figma 글 '새 브랜치' 없음. 코드: '활성 브랜치' |
 | 모서리·안쪽·간격 | section-title | 안쪽 8 0 8 0→0 8 0 8 |
 | 모서리·안쪽·간격 | section-title | 간격 8→0 |
 | 아이콘 | section-title | Figma arrow-right,download / 코드 없음 |
-| 색 | gl-tabs | stroke Figma #464c53 color/layout/divider / 코드 #33363d gray-80 |
-| 모서리·안쪽·간격 | gl-tabs | 간격 0→8 |
 | 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 50 (-15) |
 | 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
 | 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 모서리·안쪽·간격 | gl-filter | 모서리 0→8 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→8 8 8 8 |
-| 코드에만 | gitlab-sidebar | Figma에 없음 |
 
-### R-07_1440_Guest (C1, 24건)
+### R-07_1440_Guest (C1, 16건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 브랜치' 없음. 코드: '서울특별시 광진구 류승인 kordoc 브랜치' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | section-title | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | section-title | y Figma 243 / 코드 266 (+23) |
 | 위치/크기 | section-title | w Figma 1088 / 코드 1086 (-2) |
 | 모서리·안쪽·간격 | section-title | 안쪽 8 0 8 0→0 8 0 8 |
 | 모서리·안쪽·간격 | section-title | 간격 8→0 |
-| 색 | gl-tabs | stroke Figma #464c53 color/layout/divider / 코드 #33363d gray-80 |
-| 모서리·안쪽·간격 | gl-tabs | 간격 0→8 |
 | 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 50 (-15) |
 | 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
 | 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 모서리·안쪽·간격 | gl-filter | 모서리 0→8 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→8 8 8 8 |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-07_1440_Signed-in (C1, 28건)
+### R-07_1440_Signed-in (C1, 19건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,plus,search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 브랜치' 없음. 코드: '서울특별시 광진구 류승인 kordoc 브랜치' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | section-title | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | section-title | y Figma 243 / 코드 266 (+23) |
 | 위치/크기 | section-title | w Figma 1088 / 코드 1086 (-2) |
 | 위치/크기 | section-title | h Figma 56 / 코드 40 (-16) |
 | 문구 | section-title | Figma 글 '새 브랜치' 없음. 코드: '활성 브랜치' |
 | 모서리·안쪽·간격 | section-title | 안쪽 8 0 8 0→0 8 0 8 |
 | 모서리·안쪽·간격 | section-title | 간격 8→0 |
 | 아이콘 | section-title | Figma arrow-right,download / 코드 없음 |
-| 색 | gl-tabs | stroke Figma #464c53 color/layout/divider / 코드 #33363d gray-80 |
-| 모서리·안쪽·간격 | gl-tabs | 간격 0→8 |
 | 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 50 (-15) |
 | 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
 | 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 모서리·안쪽·간격 | gl-filter | 모서리 0→8 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→8 8 8 8 |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-07_1920_Guest (C1, 23건)
+### R-07_1920_Guest (C1, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,branch,copy,download,search / 코드 copy,download,search |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 브랜치' 없음. 코드: '서울특별시 광진구 류승인 kordoc 브랜치' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | section-title | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | section-title | y Figma 243 / 코드 266 (+23) |
 | 위치/크기 | section-title | w Figma 1200 / 코드 1198 (-2) |
 | 모서리·안쪽·간격 | section-title | 안쪽 8 0 8 0→0 8 0 8 |
 | 모서리·안쪽·간격 | section-title | 간격 8→0 |
-| 색 | gl-tabs | stroke Figma #464c53 color/layout/divider / 코드 #33363d gray-80 |
-| 모서리·안쪽·간격 | gl-tabs | 간격 0→8 |
 | 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 50 (-15) |
 | 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
 | 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 모서리·안쪽·간격 | gl-filter | 모서리 0→8 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→8 8 8 8 |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-07_1920_Signed-in (C1, 27건)
+### R-07_1920_Signed-in (C1, 18건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,plus,search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,search / 코드 copy,download,search |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 브랜치' 없음. 코드: '서울특별시 광진구 류승인 kordoc 브랜치' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | section-title | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | section-title | y Figma 243 / 코드 266 (+23) |
 | 위치/크기 | section-title | w Figma 1200 / 코드 1198 (-2) |
 | 위치/크기 | section-title | h Figma 56 / 코드 40 (-16) |
 | 문구 | section-title | Figma 글 '새 브랜치' 없음. 코드: '활성 브랜치' |
 | 모서리·안쪽·간격 | section-title | 안쪽 8 0 8 0→0 8 0 8 |
 | 모서리·안쪽·간격 | section-title | 간격 8→0 |
 | 아이콘 | section-title | Figma arrow-right,download / 코드 없음 |
-| 색 | gl-tabs | stroke Figma #464c53 color/layout/divider / 코드 #33363d gray-80 |
-| 모서리·안쪽·간격 | gl-tabs | 간격 0→8 |
 | 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 50 (-15) |
 | 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
 | 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 모서리·안쪽·간격 | gl-filter | 모서리 0→8 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→8 8 8 8 |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-07_360_Guest (C1, 20건)
+### R-07_360_Guest (C1, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
-| 아이콘 | content-panel | Figma branch,copy,search / 코드 copy,download,search |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 브랜치' 없음. 코드: '서울특별시 광진구 류승인 kordoc 브랜치' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search / 코드 ellipsis-vertical,panel-open,search |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma branch,copy,search / 코드 copy,download,search |
 | 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | section-title | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | section-title | y Figma 243 / 코드 266 (+23) |
 | 위치/크기 | section-title | w Figma 328 / 코드 326 (-2) |
 | 모서리·안쪽·간격 | section-title | 안쪽 8 0 8 0→0 8 0 8 |
 | 모서리·안쪽·간격 | section-title | 간격 8→0 |
-| 색 | gl-tabs | stroke Figma #464c53 color/layout/divider / 코드 #33363d gray-80 |
-| 모서리·안쪽·간격 | gl-tabs | 간격 0→8 |
 | 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 50 (-15) |
 | 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
 | 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 모서리·안쪽·간격 | gl-filter | 모서리 0→8 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→8 8 8 8 |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-07_360_Signed-in (C1, 21건)
+### R-07_360_Signed-in (C1, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '알림 도구 올리기' |
-| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
-| 아이콘 | content-panel | Figma branch,copy,search / 코드 copy,download,search |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 브랜치' 없음. 코드: '서울특별시 광진구 류승인 kordoc 브랜치' |
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,issues,merge-request,panel-open,plus,search |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma branch,copy,search / 코드 copy,download,search |
 | 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | section-title | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | section-title | y Figma 243 / 코드 266 (+23) |
 | 위치/크기 | section-title | w Figma 328 / 코드 326 (-2) |
 | 모서리·안쪽·간격 | section-title | 안쪽 8 0 8 0→0 8 0 8 |
 | 모서리·안쪽·간격 | section-title | 간격 8→0 |
-| 색 | gl-tabs | stroke Figma #464c53 color/layout/divider / 코드 #33363d gray-80 |
-| 모서리·안쪽·간격 | gl-tabs | 간격 0→8 |
 | 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 50 (-15) |
 | 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
 | 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 모서리·안쪽·간격 | gl-filter | 모서리 0→8 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→8 8 8 8 |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-07_768_Guest (C1, 32건)
+### R-07_768_Guest (C1, 25건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search / 코드 ellipsis-vertical,panel-open,search |
 | 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
 | 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 브랜치' 없음. 코드: '서울특별시 광진구 류승인 kordoc 브랜치' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
 | 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
 | 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | section-title | x Figma 24 / 코드 33 (+9) |
-| 위치/크기 | section-title | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | section-title | y Figma 243 / 코드 266 (+23) |
 | 위치/크기 | section-title | w Figma 720 / 코드 702 (-18) |
 | 모서리·안쪽·간격 | section-title | 안쪽 8 0 8 0→0 8 0 8 |
 | 모서리·안쪽·간격 | section-title | 간격 8→0 |
 | 위치/크기 | gl-tabs | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | gl-tabs | w Figma 720 / 코드 704 (-16) |
-| 색 | gl-tabs | stroke Figma #464c53 color/layout/divider / 코드 #33363d gray-80 |
-| 모서리·안쪽·간격 | gl-tabs | 간격 0→8 |
 | 위치/크기 | gl-filter | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
 | 위치/크기 | gl-filter | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 50 (-15) |
 | 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
 | 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 모서리·안쪽·간격 | gl-filter | 모서리 0→8 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→8 8 8 8 |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-07_768_Signed-in (C1, 36건)
+### R-07_768_Signed-in (C1, 28건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,issues,merge-request,panel-open,plus,search |
 | 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
 | 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 브랜치' 없음. 코드: '서울특별시 광진구 류승인 kordoc 브랜치' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
 | 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,arrow-right,branch,copy,download,search / 코드 copy,download,search |
 | 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
 | 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | section-title | x Figma 24 / 코드 33 (+9) |
-| 위치/크기 | section-title | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | section-title | y Figma 243 / 코드 266 (+23) |
 | 위치/크기 | section-title | w Figma 720 / 코드 702 (-18) |
 | 위치/크기 | section-title | h Figma 56 / 코드 40 (-16) |
 | 문구 | section-title | Figma 글 '새 브랜치' 없음. 코드: '활성 브랜치' |
@@ -8120,53 +7942,21 @@
 | 아이콘 | section-title | Figma arrow-right,download / 코드 없음 |
 | 위치/크기 | gl-tabs | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | gl-tabs | w Figma 720 / 코드 704 (-16) |
-| 색 | gl-tabs | stroke Figma #464c53 color/layout/divider / 코드 #33363d gray-80 |
-| 모서리·안쪽·간격 | gl-tabs | 간격 0→8 |
 | 위치/크기 | gl-filter | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | gl-filter | y Figma 170 / 코드 200 (+30) |
 | 위치/크기 | gl-filter | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 50 (-15) |
 | 문구 | gl-filter | Figma 글 '브랜치 이름으로 필터링' 없음. 코드: '' |
 | 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 모서리·안쪽·간격 | gl-filter | 모서리 0→8 |
-| 모서리·안쪽·간격 | gl-filter | 안쪽 16 16 16 16→8 8 8 8 |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-08_1024_Guest (C1, 19건)
+### R-08_1024_Guest (C1, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 menu,search,setting |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | global-search | x Figma 389 / 코드 340 (-49) |
-| 위치/크기 | global-search | w Figma 246 / 코드 344 (+98) |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 위치/크기 | global-search | w Figma 246 / 코드 244 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 태그' 없음. 코드: '서울특별시 광진구 류승인 kordoc 태그' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
-| 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
-| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
-| 코드에만 | gitlab-sidebar | Figma에 없음 |
-| 코드에만 | sidebar-nav | Figma에 없음 |
-
-### R-08_1024_Signed-in (C1, 16건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,menu,my,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 태그' 없음. 코드: '서울특별시 광진구 류승인 kordoc 태그' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
@@ -8177,364 +7967,336 @@
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 | 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
 
-### R-08_1440_Guest (C1, 19건)
+### R-08_1024_Signed-in (C1, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
-| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 태그' 없음. 코드: '서울특별시 광진구 류승인 kordoc 태그' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
-| 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
-| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
-| 코드에만 | sidebar-nav | Figma에 없음 |
-
-### R-08_1440_Signed-in (C1, 20건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
-| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 태그' 없음. 코드: '서울특별시 광진구 류승인 kordoc 태그' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
-| 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
-| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
-| 코드에만 | sidebar-nav | Figma에 없음 |
-
-### R-08_1920_Guest (C1, 18건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
-| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 태그' 없음. 코드: '서울특별시 광진구 류승인 kordoc 태그' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
-| 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
-| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
-| 코드에만 | sidebar-nav | Figma에 없음 |
-
-### R-08_1920_Signed-in (C1, 19건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
-| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 태그' 없음. 코드: '서울특별시 광진구 류승인 kordoc 태그' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
-| 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
-| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
-| 코드에만 | sidebar-nav | Figma에 없음 |
-
-### R-08_360_Guest (C1, 16건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 태그' 없음. 코드: '서울특별시 광진구 류승인 kordoc 태그' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 40 / 코드 126 (+86) |
-| 글자 속성 | page-head | 크기 32→24, 줄 높이 40→32 |
-| 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 위치/크기 | gl-filter | y Figma 221 / 코드 270 (+49) |
-| 위치/크기 | gl-filter | h Figma 101 / 코드 74 (-27) |
-| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
-| 코드에만 | global-search | Figma에 없음 |
-
-### R-08_360_Signed-in (C1, 17건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '알림 도구 올리기' |
-| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 태그' 없음. 코드: '서울특별시 광진구 류승인 kordoc 태그' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 40 / 코드 126 (+86) |
-| 글자 속성 | page-head | 크기 32→24, 줄 높이 40→32 |
-| 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 위치/크기 | gl-filter | y Figma 221 / 코드 270 (+49) |
-| 위치/크기 | gl-filter | h Figma 101 / 코드 74 (-27) |
-| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
-| 코드에만 | global-search | Figma에 없음 |
-
-### R-08_768_Guest (C1, 26건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
-| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
-| 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 태그' 없음. 코드: '서울특별시 광진구 류승인 kordoc 태그' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | page-head | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
-| 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 위치/크기 | gl-filter | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
-| 위치/크기 | gl-filter | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
-| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
-| 코드에만 | global-search | Figma에 없음 |
-
-### R-08_768_Signed-in (C1, 27건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
-| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
-| 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 태그' 없음. 코드: '서울특별시 광진구 류승인 kordoc 태그' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,arrow-right,arrow-sort-both,download,rss,search,tag / 코드 copy,download,rss,search,sort-desc,tag |
-| 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | page-head | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
-| 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 위치/크기 | gl-filter | x Figma 24 / 코드 32 (+8) |
-| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
-| 위치/크기 | gl-filter | w Figma 720 / 코드 704 (-16) |
-| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
-| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
-| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
-| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
-| 코드에만 | global-search | Figma에 없음 |
-
-### R-09_1024_Guest (C1, 12건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 menu,search,setting |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
-| 위치/크기 | global-search | x Figma 389 / 코드 387 (-2) |
-| 위치/크기 | global-search | w Figma 246 / 코드 250 (+4) |
-| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 릴리스' 없음. 코드: '서울특별시 광진구 류승인 kordoc 릴리스' |
-| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
-| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
-| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
-
-### R-09_1024_Signed-in (C1, 13건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,menu,my,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,panel-open,plus,search |
 | 위치/크기 | global-search | x Figma 389 / 코드 386 (-3) |
 | 위치/크기 | global-search | w Figma 246 / 코드 251 (+5) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 릴리스' 없음. 코드: '서울특별시 광진구 류승인 kordoc 릴리스' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
+| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
 
-### R-09_1440_Guest (C1, 14건)
+### R-08_1440_Guest (C1, 16건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 릴리스' 없음. 코드: '서울특별시 광진구 류승인 kordoc 릴리스' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
+| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-09_1440_Signed-in (C1, 15건)
+### R-08_1440_Signed-in (C1, 16건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,plus,search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 릴리스' 없음. 코드: '서울특별시 광진구 류승인 kordoc 릴리스' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
+| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-09_1920_Guest (C1, 13건)
+### R-08_1920_Guest (C1, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 릴리스' 없음. 코드: '서울특별시 광진구 류승인 kordoc 릴리스' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
+| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-09_1920_Signed-in (C1, 14건)
+### R-08_1920_Signed-in (C1, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... / 알림 도구 올리기' |
-| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
-| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 문구 | topbar | Figma 글 '류' 없음. 코드: '탐색 검색 또는 이동... /' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,issues,merge-request,my,plus,search |
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 릴리스' 없음. 코드: '서울특별시 광진구 류승인 kordoc 릴리스' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
 | 모서리·안쪽·간격 | page-head | 간격 12→16 |
-| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
+| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
 | 코드에만 | sidebar-nav | Figma에 없음 |
 
-### R-09_360_Guest (C1, 10건)
+### R-08_360_Guest (C1, 14건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 릴리스' 없음. 코드: '서울특별시 광진구 류승인 kordoc 릴리스' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search / 코드 ellipsis-vertical,panel-open,search |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
+| 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 40 / 코드 126 (+86) |
+| 글자 속성 | page-head | 크기 32→24, 줄 높이 40→32 |
+| 모서리·안쪽·간격 | page-head | 간격 12→16 |
+| 위치/크기 | gl-filter | y Figma 221 / 코드 270 (+49) |
+| 위치/크기 | gl-filter | h Figma 101 / 코드 74 (-27) |
+| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
+| 코드에만 | global-search | Figma에 없음 |
+
+### R-08_360_Signed-in (C1, 14건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,issues,merge-request,panel-open,plus,search |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | h Figma 40 / 코드 126 (+86) |
+| 글자 속성 | page-head | 크기 32→24, 줄 높이 40→32 |
+| 모서리·안쪽·간격 | page-head | 간격 12→16 |
+| 위치/크기 | gl-filter | y Figma 221 / 코드 270 (+49) |
+| 위치/크기 | gl-filter | h Figma 101 / 코드 74 (-27) |
+| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
+| 코드에만 | global-search | Figma에 없음 |
+
+### R-08_768_Guest (C1, 24건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search / 코드 ellipsis-vertical,panel-open,search |
+| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
+| 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
+| 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | page-head | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
+| 모서리·안쪽·간격 | page-head | 간격 12→16 |
+| 위치/크기 | gl-filter | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
+| 위치/크기 | gl-filter | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
+| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
+| 코드에만 | global-search | Figma에 없음 |
+
+### R-08_768_Signed-in (C1, 24건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
+| 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,issues,merge-request,panel-open,plus,search |
+| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
+| 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
+| 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 위치/크기 | page-head | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | page-head | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | page-head | h Figma 40 / 코드 70 (+30) |
+| 모서리·안쪽·간격 | page-head | 간격 12→16 |
+| 위치/크기 | gl-filter | x Figma 24 / 코드 32 (+8) |
+| 위치/크기 | gl-filter | y Figma 199 / 코드 214 (+15) |
+| 위치/크기 | gl-filter | w Figma 720 / 코드 704 (-16) |
+| 위치/크기 | gl-filter | h Figma 65 / 코드 74 (+9) |
+| 문구 | gl-filter | Figma 글 '태그 이름으로 필터링' 없음. 코드: '업데이트 날짜 정렬 방향 바꾸기' |
+| 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
+| 아이콘 | gl-filter | Figma arrow-down,arrow-sort-both,search / 코드 search,sort-desc |
+| 코드에만 | global-search | Figma에 없음 |
+
+### R-09_1024_Guest (C1, 10건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 menu,search,setting |
+| 위치/크기 | global-search | x Figma 389 / 코드 387 (-2) |
+| 위치/크기 | global-search | w Figma 246 / 코드 250 (+4) |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 모서리·안쪽·간격 | page-head | 간격 12→16 |
+| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+
+### R-09_1024_Signed-in (C1, 10건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '/', '류' 없음. 코드: '탐색 검색 또는 이동... 알림 도구 올리기' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,menu,my,plus,search |
+| 위치/크기 | global-search | x Figma 389 / 코드 386 (-3) |
+| 위치/크기 | global-search | w Figma 246 / 코드 251 (+5) |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 모서리·안쪽·간격 | page-head | 간격 12→16 |
+| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+
+### R-09_1440_Guest (C1, 12건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
+| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
+| 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 모서리·안쪽·간격 | page-head | 간격 12→16 |
+| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+| 코드에만 | sidebar-nav | Figma에 없음 |
+
+### R-09_1440_Signed-in (C1, 12건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '/', '류' 없음. 코드: '탐색 검색 또는 이동... 알림 도구 올리기' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
+| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
+| 위치/크기 | global-search | w Figma 346 / 코드 344 (-2) |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 모서리·안쪽·간격 | page-head | 간격 12→16 |
+| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+| 코드에만 | sidebar-nav | Figma에 없음 |
+
+### R-09_1920_Guest (C1, 11건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '/' 없음. 코드: '탐색 검색 또는 이동... 등록 로그인' |
+| 아이콘 | topbar | Figma panel-open,search / 코드 search,setting |
+| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 모서리·안쪽·간격 | page-head | 간격 12→16 |
+| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+| 코드에만 | sidebar-nav | Figma에 없음 |
+
+### R-09_1920_Signed-in (C1, 11건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '/', '류' 없음. 코드: '탐색 검색 또는 이동... 알림 도구 올리기' |
+| 아이콘 | topbar | Figma issues,merge-request,new-folder,panel-open,search,system-info / 코드 bell,my,plus,search |
+| 색 | gitlab-sidebar | fill Figma #000000 color/layout/shell-bg / 코드 없음  |
+| 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,bookmarks,calendar,document,ecg-heart,globe,pipeline,rocket,setting,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
+| 모서리·안쪽·간격 | global-search | 안쪽 0 12 0 12→0 4 0 8 |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
+| 위치/크기 | footer | h Figma 198 / 코드 202 (+4) |
+| 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
+| 모서리·안쪽·간격 | page-head | 간격 12→16 |
+| 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
+| 코드에만 | sidebar-nav | Figma에 없음 |
+
+### R-09_360_Guest (C1, 7건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '' |
+| 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
 | 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 모서리·안쪽·간격 | page-head | 간격 12→16 |
 | 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-09_360_Signed-in (C1, 11건)
+### R-09_360_Signed-in (C1, 8건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | topbar | Figma 글 '탐색' 없음. 코드: '알림 도구 올리기' |
 | 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 릴리스' 없음. 코드: '서울특별시 광진구 류승인 kordoc 릴리스' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | footer | h Figma 290 / 코드 294 (+4) |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
 | 모서리·안쪽·간격 | page-head | 간격 12→16 |
 | 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-09_768_Guest (C1, 19건)
+### R-09_768_Guest (C1, 16건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... /' |
 | 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
 | 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 릴리스' 없음. 코드: '서울특별시 광진구 류승인 kordoc 릴리스' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
 | 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
 | 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
@@ -8545,21 +8307,18 @@
 | 아이콘 | page-head | Figma arrow-down,arrow-sort-both,download,rss / 코드 rss,sort-desc |
 | 코드에만 | global-search | Figma에 없음 |
 
-### R-09_768_Signed-in (C1, 20건)
+### R-09_768_Signed-in (C1, 17건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... / 알림 도구 올리기' |
+| 문구 | topbar | Figma 글 '탐색' 없음. 코드: '검색 또는 이동... 알림 도구 올리기' |
 | 아이콘 | topbar | Figma ellipsis-vertical,menu,search,system-info / 코드 bell,menu,plus,search |
 | 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
 | 위치/크기 | content-panel | w Figma 768 / 코드 752 (-16) |
-| 아이콘 | content-panel | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | breadcrumb | x Figma 24 / 코드 32 (+8) |
-| 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 / kordoc / 릴리스' 없음. 코드: '서울특별시 광진구 류승인 kordoc 릴리스' |
 | 색 | breadcrumb | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
 | 위치/크기 | main | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | main | w Figma 720 / 코드 704 (-16) |
-| 아이콘 | main | Figma arrow-down,arrow-sort-both,download,rss / 코드 calendar,document,download,rss,sort-desc,tag |
 | 위치/크기 | footer | x Figma 24 / 코드 32 (+8) |
 | 위치/크기 | footer | w Figma 720 / 코드 704 (-16) |
 | 위치/크기 | footer | h Figma 270 / 코드 274 (+4) |
