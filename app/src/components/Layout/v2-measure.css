@@ -225,3 +225,12 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-split { height: var(--layout-topbar-btn-h); border: 0; border-radius: var(--krds-radius-medium3); background: var(--krds-color-light-gray-80); }
 #root .rb-split-count { border-inline-start: var(--krds-border-width-static-regular) solid var(--layout-panel-bg); }
 #root .rb-split-main:hover, #root .rb-split-count:hover { background: var(--krds-color-light-gray-70); }
+
+/* 19. D-16 4의 배수 정리(감사 v3 배포본 스캔): 목록 행 안 간격 4, 주제 줄 위 8, 필터 입력과 정렬 단추 좌우 12, 키 표시 안쪽 4 */
+#root .rb-prow-main { gap: var(--krds-number-3); }
+#root .rb-prow-topics { margin-top: calc(var(--layout-topic-gap) - var(--krds-number-3)); }
+#root .rb-x-filter input, #root .rb-x-sortbtn, #root .rb-x-recent { padding-inline: var(--krds-number-7); }
+#root .rb-gbar-kbd { padding: 0 var(--krds-number-3); }
+#root .rb-x-searchbtn { gap: var(--krds-number-3); }
+#root .rb-side-scroll, #root .rb-side-groups { gap: var(--layout-sidebar-item-gap); }
+.sr-only { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }

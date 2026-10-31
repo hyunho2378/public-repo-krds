@@ -151,6 +151,16 @@
   --rb-bp-drawer: 1200;
   /* 서랍과 검색 대화창 뒤 덮개(공공 깃랩 rgba(0, 0, 0, 0.64)) */
   --layout-dim: rgb(0 0 0 / 0.64);
+  /* D-16 4의 배수: KRDS 모서리 medium1, medium2(6)를 8로 올린다(버튼, 입력, 경로 링크 등 KRDS 부품 전체). 2026. 10. 31. 감사 v3 */
+  --krds-radius-medium1: var(--krds-number-5);
+  --krds-radius-medium2: var(--krds-number-5);
+  /* D-16 4의 배수(감사 v3 배포본 스캔): KRDS 간격 중 4의 배수가 아닌 단계를 가장 가까운 4의 배수로 맞춘다.
+     gap-1, padding-1(2) → 4, padding-4(10) → 8, 원시 number-4(6) → 8, number-6(10) → 8. 선 두께용 number-1(1), number-2(2)는 그대로 */
+  --krds-gap-1: 0.4rem;
+  --krds-padding-1: 0.4rem;
+  --krds-padding-4: 0.8rem;
+  --krds-number-4: 0.8rem;
+  --krds-number-6: 0.8rem;
   /* 상단 검색 단추 폭: 화면 폭 24%, 240~440(공공 깃랩 1440 344, 1920 440). 대화창 폭 768, 모서리 16, 입력 높이 40 */
   --layout-gsearch-w: clamp(var(--rb-gbar-search-min), round(down, 24vw, var(--krds-number-3)), calc(var(--krds-number-21) * 4 + var(--krds-number-17)));
   --layout-gsdlg-w: calc(var(--krds-number-21) * 8);
@@ -161,7 +171,8 @@
   --layout-login-col: calc(var(--krds-number-21) * 4 + var(--krds-number-12));
   --layout-login-gap: var(--krds-number-18);
   --layout-login-top: calc(var(--krds-number-18) * 2 + var(--krds-number-8));
-  --layout-sidebar-item-gap: var(--krds-number-2);
+  /* 항목 사이: 공공 깃랩 실측 2지만 D-16(4의 배수)이 이긴다 → 4(피치 32). UX/17 5절 */
+  --layout-sidebar-item-gap: var(--krds-number-3);
   --layout-sidebar-project-gap: var(--krds-number-5);
   --layout-sidebar-sep-gap: var(--krds-number-7);
   --layout-sidebar-foot-gap: var(--krds-number-3);
