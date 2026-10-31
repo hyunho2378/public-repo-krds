@@ -213,3 +213,17 @@
 - [C2] 원장 6차: 필터 막대를 탭 줄 바로 아래(코드영역 gap 0, 막대 높이 32 고정)로 y와 h 해소, 탭 높이 49(음수 마진 제거), R-10/R-20 경로 줄을 '기여자 분석', '패키지 레지스트리'로. 표는 직전 줄 아래 값(R-xx: 합, 전역 제외)을 /tmp 갱신본으로 대체: 위 sumry 출력 참조. 남음: global-search#2(화면 안 검색칸 Figma 이름 확인 필요), R-11 gl-tabs 폭, R-17
 
 - [C1] 원장 6차(전용 탭 5731, 전환 끔, 900ms, 내 요소만): R-02 80→75, R-03 44→44, R-04 60→60, R-05 226→136, R-06 4→4, R-07 44→44, R-08 34→26, R-09 10→10, R-27 17→17, R-28 2→2, R-29 4→4. 전역 포함: R-02 86, R-03 48, R-04 74, R-05 140, R-06 12, R-07 52, R-08 30, R-09 14, R-27 21, R-28 14, R-29 12. 이번: 경로 줄 문구(R-27~29), 필터 막대 간격 실측 보정(탭 아래 0, 설명 아래 16, gl.css 국소), 최근 검색 아이콘 history. 남은: gl-filter 글자색, page-head 아이콘(arrow-down 드롭다운 꺾쇠는 코드에서 data-icon 없는 토글 표시, Figma 인스턴스 이름), R-03 preview, commit-bar 문구(작성자 이름 표기: 코드 계정 이름 vs 공개 이름). 허용 목록 추가 없음.
+
+## Figma 대조(2026. 10. 31. 23:15, D21): 합 2,754(허용 뺀 값), 새 허용 0건, 목표 2,000 이하 미달
+- 위치/크기 1,232, 문구 208, 글자 27, 색 57, 모서리·간격 175, 아이콘 279, Figma에만 456, 코드에만 308, 순서 12 / D21 1,771 · C1 493 · C2 490
+- 남은 원인 상위 10
+  - 120 1 {'D21': 120} ('only-code', 'project-row') G-01_1024_Guest {}
+  - 114 3 {'D21': 114} ('box', 'project-row', 'h') A-01_1024_Guest {'field': 'h', 'figma': 57, 'code': 69, 'diff': 12}
+  - 76 19 {'D21': 60, 'C2': 4, 'C1': 12} ('box', 'sidebar-nav', 'h') A-05_1440_Guest {'field': 'h', 'figma': 352, 'code': 354, 'diff': 2}
+  - 75 3 {'D21': 75} ('only-figma', 'project-row') A-01_1024_Guest {'want': {'x': 40, 'y': 867, 'w': 944, 'h': 95}}
+  - 72 8 {'D21': 20, 'C1': 20, 'C2': 32} ('box', 'gl-filter', 'y') G-01_1024_Guest {'field': 'y', 'figma': 217, 'code': 220, 'diff': 3}
+  - 60 15 {'D21': 56, 'C1': 4} ('icon', 'gitlab-sidebar') A-05_1440_Guest {'figma': ['analytics', 'catalog', 'group', 'help', 'inquiry', 'multi'
+  - 60 6 {'D21': 20, 'C1': 20, 'C2': 20} ('icon', 'gl-filter') G-01_1024_Guest {'figma': ['arrow-down', 'history', 'search', 'sort-desc'], 'code
+  - 58 3 {'D21': 58} ('box', 'project-row', 'y') A-01_1024_Guest {'field': 'y', 'figma': 577, 'code': 202, 'diff': -375}
+  - 54 6 {'D21': 30, 'C1': 10, 'C2': 14} ('text', 'page-head') G-06_1024_Guest {'figma': ['내 작업'], 'code': '내 프로젝트'}
+  - 54 4 {'D21': 54} ('box', 'login-field', 'y') G-08b_1024_Guest {'field': 'y', 'figma': 158, 'code': 134, 'diff': -24}

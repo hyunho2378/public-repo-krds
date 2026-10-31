@@ -23,6 +23,10 @@ const norm = (s) => String(s || '').replace(/\s+/g, ' ').trim();
 // 경로 줄 구분자('/', '>')는 코드에서 CSS로 그려 글에 없으므로 문구 비교에서 뺀다
 const normCrumb = (s) => norm(String(s || '').replace(/\s[/>›]\s/g, ' '));
 const hex6 = (h) => (h ? String(h).toLowerCase().slice(0, 7) : null);
+// Figma 부품 이름 → 코드 data-icon 대응표(code_plan/icon_name_map.json, Figma 작업자 관리). 허용 목록 아님: 같은 아이콘의 이름 차이만 맞춘다
+let ICON_MAP = {};
+try { ICON_MAP = JSON.parse(await fs.readFile(path.join(path.dirname(fileURLToPath(import.meta.url)), '../../code_plan/icon_name_map.json'), 'utf8')).map || {}; } catch {}
+const figIcon = (s) => iconName(ICON_MAP[s] || s);
 const iconName = (s) => String(s).replace(/^icon(-ext)?\//, '').replace(/^ext\//, '').replace(/^file\//, 'file:').replace(/[_\s]/g, '-').toLowerCase();
 const allowed = (screen, bp, name, kind, field, fy) => allow.find((r) => (r.screen === '*' || r.screen === screen) && (r.bp === '*' || String(r.bp) === String(bp)) && (r.name === '*' || r.name === name.replace(/#\d+$/, '')) && r.kind === kind && (!r.field || r.field === field) && (r.minY == null || (fy ?? 0) >= r.minY));
 const onlyScreen = arg('screen'); const onlyBp = arg('bp');
@@ -71,7 +75,7 @@ function cmp(screen, bp, auth, fv, cv) {
     const fr = Array.isArray(fe.radius) ? fe.radius[0] : fe.radius; if (fr != null && Math.abs(fr - ce.radius) > TOL) add('shape', k, { detail: `모서리 ${fr}→${ce.radius}` });
     if (Array.isArray(fe.padding) && fe.padding.some((v, i) => Math.abs(v - ce.pad[i]) > TOL)) add('shape', k, { detail: `안쪽 ${fe.padding.join(' ')}→${ce.pad.join(' ')}` });
     if (fe.gap != null && fe.layout && fe.layout !== 'NONE' && (ce.nchild ?? 2) >= 2) { const cg = fe.layout === 'HORIZONTAL' ? ce.gap[1] : ce.gap[0]; if (Math.abs(fe.gap - cg) > TOL) add('shape', k, { detail: `간격 ${fe.gap}→${cg}` }); }
-    const fi = [...new Set((fe.icons || []).map(iconName))].sort(); const ci = [...new Set((ce.icons || []).map(iconName))].sort();
+    const fi = [...new Set((fe.icons || []).map(figIcon))].sort(); const ci = [...new Set((ce.icons || []).map(iconName))].sort();
     if (fi.length && fi.join() !== ci.join()) add('icon', k, { figma: fi, code: ci });
   }
   for (const k of Object.keys(cEls)) if (!fEls[k]) add('only-code', k, {});
