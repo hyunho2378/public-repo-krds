@@ -155,7 +155,8 @@ function PackagesView({ list }) {
     <>
       <p className="gl-pkg-count"><Icon name="ext/catalog" /> {p1.pkgCount(list.length)}</p>
       <PageSearch value={q} onChange={setQ} placeholder={p1.pkgFilter}>
-        <span className="krds-btn small tertiary">{p1.pkgSort}</span>
+        <span className="krds-btn small tertiary">{p1.pkgSort}<Icon name="arrow-down" /></span>
+        <IconButton icon="ext/sort-desc" label={rp.desc} />
       </PageSearch>
       {rows.length ? (
         <ul className="rb-plain-list">{rows.map((x) => <li className="rb-plain-row" key={x.id}><span className="rb-plain-main">{x.name}</span><span className="rb-plain-sub rb-subtle">{x.version}</span><span className="rb-plain-meta rb-subtle">{x.package_type}</span></li>)}</ul>
@@ -173,7 +174,7 @@ function PipelinesView({ list }) {
   return (
     <>
       <PageSearch value={q} onChange={setQ} placeholder={p1.plFilter}>
-        <span className="krds-btn small tertiary">{p1.plShowId}</span>
+        <span className="krds-btn small tertiary">{p1.plShowId}<Icon name="arrow-down" /></span>
       </PageSearch>
       <div className="gl-table-wrap">
         <table className="gl-table gl-pl">
