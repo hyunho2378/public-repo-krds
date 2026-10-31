@@ -39,3 +39,26 @@ export const ct = {
   title: '기여자 분석', history: '이력', branchHead: '커밋할 브랜치', note: '머지 커밋 제외',
   commits: (n) => `${n}개의 커밋`, none: '표시할 기여자가 없습니다',
 };
+
+// 감사 v3 04: 공공 깃랩 실측 문구
+export const au = {
+  loginReply: '회신하려면', register: '등록', login: '로그인', orWord: '또는', pleaseDo: '하십시오',
+  assignee: '담당자', reviewer: '리뷰어', labels: '라벨', milestone: '마일스톤', workItems: '작업 항목', timeTrack: '시간 추적', participants: '참가자',
+  none: '없음', noTime: '추정 시간이나 소비된 시간이 없습니다.',
+  approvalOptional: '승인은 옵션입니다.', approvedBy: '승인함', closedBy: '닫음:', mergedBy: '머지됨:', openState: '열림',
+  mergeDetail: '머지 세부정보', notMerged: (t) => `변경사항들이 ${t}에 머지되지 않았습니다.`, mergedInto: (t) => `변경사항들이 ${t}에 머지되었습니다.`,
+  activity: '활동', allActivity: '모든 활동', code: '코드', requested: (when) => `${when}의 머지를 요청함`, requestedTo: '를', fromTo: '가',
+  copy: '복사', pipelineNone: '이 머지 리퀘스트에 파이프라인이 없습니다', rejected: '가져옴',
+  likes: '좋아요', dislikes: '싫어요', closedEvent: 'closed', systemMerged: 'merged', count: (n, w) => `${n}명의 ${w}`, noteOf: '댓글',
+  // 빈 상태
+  wsEmptyTitle: '버그를 추적하고, 기능을 계획하며, 작업을 이슈로 정리하세요',
+  wsEmptyBody: '작업 항목으로 업무를 나누고 담당자, 마일스톤, 라벨로 진행을 관리합니다.',
+  boardTitle: '이슈 보드', colOpen: '열기', colClosed: 'Closed', cardCount: (n) => `${n} 항목`,
+  milestoneEmpty: '마일스톤을 사용하여 일정 기간 동안 이슈와 머지 리퀘스트를 추적합니다.', snippetEmpty: '표시할 스니펫이 없습니다.',
+  tabOpen: '열림', tabClosed: '닫힘', tabAll: '전체', tabDone: '완료',
+  jobStatus: '상태', jobName: '작업', jobPipeline: '파이프라인', jobStage: '스테이지', jobCreated: '생성', jobCommit: '커밋',
+  allowFailed: '실패 허용됨', statusName: { SUCCESS: '성공', FAILED: '실패', SKIPPED: '건너뜀', RUNNING: '실행 중', CANCELED: '취소됨', PENDING: '대기 중', MANUAL: '수동', CREATED: '생성됨' },
+  jobsTitle: '작업', jobsHelp: '파이프라인에서 실행된 작업 목록',
+  ownerRole: 'Owner', sourceDirect: (n) => `${n}가 생성한 직접 멤버`, expireHint: '만료일',
+  contribTitle: '기여자 분석', commitsChart: '커밋 수', avg: '평균', max: '최대', limited: (n) => `최근 ${n}개 커밋 기준`, chartNone: '표시할 커밋이 없습니다',
+};

@@ -1,0 +1,35 @@
+/* 머지 리퀘스트 상세(캡처 36~39, 감사 v3 04 #8~#11, #16): 제목 큰 글자, 상태 배지, 탭 주소, 본문 + 오른쪽 정보 열, 반응, 승인, 머지 상태, 활동.
+   상태 배지는 KRDS 원색 단계 채움 + 흰 글자(D-15의 원색 단계 채움 허용 범위, D-21 머리 띠 선례). 연한 채움은 쓰지 않는다 */
+.gl-badge { display: inline-flex; align-items: center; padding: 0 var(--krds-gap-4); border-radius: var(--krds-gap-6); font-size: var(--rb-step-13); line-height: var(--rb-lh-19); font-weight: var(--krds-font-weight-bold); color: var(--krds-color-text-inverse); white-space: nowrap; }
+.gl-badge.is-closed { background: var(--krds-color-light-danger-50); }
+.gl-badge.is-merged { background: var(--krds-color-light-information-50); }
+.gl-badge.is-opened { background: var(--krds-color-light-success-50); }
+.gl-mr-h1 { margin: 0; font-size: var(--rb-step-24); line-height: var(--rb-lh-24); font-weight: var(--krds-font-weight-bold); overflow-wrap: anywhere; }
+.gl-mr-statusline { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); }
+.gl-chip { padding: 0 var(--krds-gap-3); border: var(--krds-border-width-static-regular) solid var(--layout-divider); border-radius: var(--krds-gap-2); font-size: var(--rb-step-13); line-height: var(--rb-lh-19); }
+.gl-person { display: inline-flex; align-items: center; gap: var(--krds-gap-3); }
+.gl-mr-split { display: grid; grid-template-columns: minmax(0, 1fr) var(--layout-info-col); gap: var(--layout-gutter); align-items: start; }
+.gl-mr-main-col { display: flex; flex-direction: column; gap: var(--layout-section-gap); min-width: 0; }
+.gl-mr-side-col { display: flex; flex-direction: column; min-width: 0; }
+.gl-side-block { padding: var(--krds-gap-5) 0; border-bottom: var(--krds-border-width-static-regular) solid var(--layout-divider); }
+.gl-side-block:last-child { border-bottom: 0; }
+.gl-side-block h3 { margin: 0 0 var(--krds-gap-3); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); }
+.gl-side-block > div { display: flex; flex-wrap: wrap; gap: var(--krds-gap-3); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.gl-reactions { display: flex; gap: var(--krds-gap-3); }
+.gl-react { display: inline-flex; align-items: center; min-height: var(--rb-search-h); padding: 0 var(--krds-gap-5); border-radius: var(--krds-gap-3); background: var(--layout-raised-bg); font-size: var(--rb-step-15); }
+.gl-box { border-radius: var(--layout-panel-radius); background: var(--layout-raised-bg); overflow: hidden; }
+.gl-box-line { margin: 0; padding: var(--krds-gap-5); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); color: var(--layout-text-subtle); }
+.gl-mergebox .gl-box-strong { font-weight: var(--krds-font-weight-bold); color: inherit; border-bottom: var(--krds-border-width-static-regular) solid var(--layout-divider); }
+.gl-mergebox.is-closed .gl-box-strong { border-left: var(--krds-gap-2) solid var(--krds-color-light-danger-50); }
+.gl-mergebox.is-merged .gl-box-strong { border-left: var(--krds-gap-2) solid var(--krds-color-light-information-50); }
+.gl-box-body { padding: var(--krds-gap-5); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.gl-mb-title { margin: 0 0 var(--krds-gap-2); background: none; font-weight: var(--krds-font-weight-regular); }
+.gl-mr-main-col .rb-detail-body { background: none; border: 0; padding: 0; }
+.gl-box-body ul { margin: 0; padding-left: var(--krds-gap-8); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
+.gl-activity-head { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); margin-bottom: var(--krds-gap-5); }
+.gl-activity-head h2 { margin: 0; font-size: var(--rb-step-19); line-height: var(--rb-lh-19); font-weight: var(--krds-font-weight-bold); }
+.gl-activity ul { margin: 0; padding: 0; list-style: none; }
+.gl-note { display: flex; gap: var(--krds-gap-4); padding: var(--krds-gap-3) 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.gl-note p { margin: var(--krds-gap-2) 0 0; overflow-wrap: anywhere; }
+.gl-reply { margin: var(--layout-section-gap) 0 0; text-align: center; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+@media (max-width: 1023px) { .gl-mr-split { grid-template-columns: minmax(0, 1fr); } }

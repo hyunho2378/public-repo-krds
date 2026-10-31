@@ -1,6 +1,6 @@
 // P-20 변경 제안(머지 리퀘스트) 목록과 상세, 읽기 전용. 코드 탭 하위 메뉴.
 import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { t } from '../copy/ko';
 import { atLeast, useAuth } from '../components/Identity/useAuth';
 import { gitlab, request } from '../api/client';
@@ -11,7 +11,9 @@ import { u } from '../copy/ui';
 import { matchTitle } from '../components/Code/ListTools';
 import { Drop } from '../components/Code/Drop';
 import { Icon } from '../components/Code/Icon';
-import { mr } from '../copy/work';
+import { mr, au } from '../copy/work';
+import { gql, Q } from './parts/glGraphql';
+import { Avatar } from '../components/Layout/Avatar';
 import { IconButton } from '../components/Action/IconButton';
 import { ago } from './parts/glTime';
 import { Readme } from '../components/Help/Readme';
@@ -19,6 +21,7 @@ import { DiffView } from '../components/Code/DiffView';
 import { day } from './parts/repoCommon';
 import '../components/Code/code.css';
 import './parts/glMr.css';
+import './parts/glMrDetail.css';
 
 const LABEL = { opened: t.P20_opened, merged: mr.tabMerged, closed: t.P20_closed };
 
@@ -79,7 +82,7 @@ export function MergeRequests() {
                     <p className="gl-mr-meta">!{m.iid} · {ago(m.created_at)} {mr.createdBy(m.author?.name || '')}</p>
                   </div>
                   <div className="gl-mr-side">
-                    {PILL[m.state] ? <span className="rb-pill">{PILL[m.state]}</span> : null}
+                    {PILL[m.state] ? <span className={`gl-badge is-${m.state}`}>{PILL[m.state]}</span> : null}
                     <p className="gl-mr-meta">{mr.updated(ago(m.updated_at))}</p>
                   </div>
                 </li>
@@ -92,57 +95,127 @@ export function MergeRequests() {
   );
 }
 
+const TABS = [['', mr.overview], ['/commits', mr.commits], ['/pipelines', mr.pipelines], ['/diffs', mr.changes]];
+
+function SideBlock({ title, count, children }) {
+  return (
+    <section className="gl-side-block">
+      <h3>{count != null ? <span>{count} </span> : null}{title}</h3>
+      <div>{children}</div>
+    </section>
+  );
+}
+
+const people = (nodes) => (nodes?.length ? nodes.map((n) => <span key={n.username} className="gl-person"><Avatar src={n.avatarUrl} name={n.name} seed={n.username} />{n.name}</span>) : <span className="rb-subtle">{au.none}</span>);
+
 export function MergeRequest() {
   const { iid } = useParams();
   const frame = useProject();
-  const [view, setView] = useState('talk');
+  const loc = useLocation();
+  const seg = loc.pathname.replace(/\/+$/, '').split('/').pop();
+  const view = ['commits', 'pipelines', 'diffs'].includes(seg) ? seg : 'overview';
   const [notice, setNotice] = useState(false);
   const { signedIn, role } = useAuth();
+  const path = frame.data?.project?.path_with_namespace;
   const body = useData(async () => (await gitlab.mergeRequest(frame.id, iid)).data, [frame.id, iid]);
-  const commits = useData(async () => {
+  const extra = useData(async () => {
+    if (!path) return null;
+    try { return (await gql(Q.mr, { p: path, i: String(iid) })).project.mergeRequest; } catch { return null; }
+  }, [path, iid]);
+  const get = (suffix, pick) => async () => {
     try {
-      const r = await request(`/api/gitlab/projects/${encodeURIComponent(frame.id)}/merge_requests/${encodeURIComponent(iid)}/commits`);
-      return r.data || [];
-    } catch {
-      return [];
-    }
-  }, [frame.id, iid]);
-  const changes = useData(async () => {
-    try {
-      const r = await request(`/api/gitlab/projects/${encodeURIComponent(frame.id)}/merge_requests/${encodeURIComponent(iid)}/changes`);
-      return r.data?.changes || [];
-    } catch {
-      return [];
-    }
-  }, [frame.id, iid]);
-  const pipes = useData(async () => {
-    try {
-      const r = await request(`/api/gitlab/projects/${encodeURIComponent(frame.id)}/merge_requests/${encodeURIComponent(iid)}/pipelines`);
-      return r.data || [];
-    } catch {
-      return [];
-    }
-  }, [frame.id, iid]);
+      const r = await request(`/api/gitlab/projects/${encodeURIComponent(frame.id)}/merge_requests/${encodeURIComponent(iid)}/${suffix}`);
+      return pick(r.data);
+    } catch { return []; }
+  };
+  const commits = useData(get('commits', (d) => d || []), [frame.id, iid]);
+  const changes = useData(get('changes', (d) => d?.changes || []), [frame.id, iid]);
+  const pipes = useData(get('pipelines', (d) => d || []), [frame.id, iid]);
   if (!frame.data) return <ProjectFrame screenId="R-17" data={frame} />;
   const m = body.data;
+  const x = extra.data;
+  const base = `/projects/${frame.id}/merge-requests/${iid}`;
+  const counts = { '': 0, '/commits': commits.data?.length || x?.commitCount || 0, '/pipelines': pipes.data?.length ?? 0, '/diffs': changes.data?.length ?? 0 };
+  const notes = (x?.discussions?.nodes || []).flatMap((d) => d.notes.nodes);
+  const who = m?.author?.name || '';
+  const stateWord = m ? (LABEL[m.state] || m.state) : '';
   return (
     <ProjectFrame screenId="R-17" tab="" tabLabel={t.P20_title} crumbs={[[t.P20_title, `/projects/${frame.id}/merge-requests`], [`!${iid}`]]} data={frame} state={m ? 'Ideal' : body.state}>
       {!m ? <Status {...body} /> : (
         <div className="rb-code-area">
           <div className="gl-mr-head" data-figma="page-head">
-            <h2>{m.title}</h2>
-            <p className="gl-mr-meta">
-              <span className="rb-pill">{LABEL[m.state] || m.state}</span> !{m.iid} · {ago(m.created_at)} {mr.createdBy(m.author?.name || '')}
+            <h1 className="gl-mr-h1">{m.title}</h1>
+            <p className="gl-mr-meta gl-mr-statusline">
+              <span className={`gl-badge is-${m.state}`}>{stateWord}</span>
+              <span className="gl-person">{who}</span>
+              <span>{au.fromTo}</span>
+              <code className="gl-chip rb-break-any">{m.source_branch}</code>
+              <span>{au.requestedTo}</span>
+              <code className="gl-chip">{m.target_branch}</code>
+              <span>{au.requested(ago(m.created_at))}</span>
             </p>
-            <p className="gl-mr-meta rb-break-any">{mr.source} {m.source_branch}, {mr.target} {m.target_branch}</p>
           </div>
-          <div className="rb-code-views" role="tablist" aria-label={t.P20_tabsLabel}>
-            {[['talk', mr.overview], ['commits', `${mr.commits} ${commits.data?.length ?? 0}`], ['pipes', `${mr.pipelines} ${pipes.data?.length ?? 0}`], ['files', `${mr.changes} ${changes.data?.length ?? 0}`]].map(([key, label]) => (
-              <button key={key} type="button" role="tab" aria-selected={view === key} className={'rb-code-view' + (view === key ? ' active' : '')} onClick={() => setView(key)}>{label}</button>
-            ))}
+          <div className="gl-tabs" data-figma="gl-tabs" role="tablist" aria-label={t.P20_tabsLabel}>
+            {TABS.map(([suffix, label]) => {
+              const on = (suffix === '' && view === 'overview') || suffix === `/${view}`;
+              return (
+                <Link key={suffix} role="tab" aria-selected={on} aria-current={on ? 'page' : undefined} className={'gl-tab' + (on ? ' active' : '')} to={base + suffix}>
+                  {label} <span className="gl-mr-count">{counts[suffix]}</span>
+                </Link>
+              );
+            })}
           </div>
-          {view === 'talk' ? (
-            m.description ? <div className="rb-detail-body"><Readme source={m.description} /></div> : <EmptyState title={t.P20_noDesc} />
+          {view === 'overview' ? (
+            <div className="gl-mr-split">
+              <div className="gl-mr-main-col">
+                {m.description ? <div className="rb-detail-body"><Readme source={m.description} /></div> : <p className="rb-subtle">{t.P20_noDesc}</p>}
+                <div className="gl-reactions">
+                  <span className="gl-react">{au.likes} {m.upvotes ?? 0}</span>
+                  <span className="gl-react">{au.dislikes} {m.downvotes ?? 0}</span>
+                </div>
+                <section className="gl-box gl-approval">
+                  <p className="gl-box-line">{x?.approvedBy?.nodes?.length ? `${au.approvedBy} ${x.approvedBy.nodes.map((n) => n.name).join(', ')}` : au.approvalOptional}</p>
+                </section>
+                <section className={`gl-box gl-mergebox is-${m.state}`}>
+                  <p className="gl-box-line gl-box-strong">
+                    {m.state === 'merged' ? au.mergedBy : m.state === 'closed' ? au.closedBy : au.openState}
+                    {' '}<span className="gl-person">{(m.merged_by || m.closed_by || m.author)?.name || who}</span> {ago(m.merged_at || m.closed_at || m.updated_at)}
+                  </p>
+                  <div className="gl-box-body">
+                    <p className="gl-mb-title">{au.mergeDetail}</p>
+                    <ul><li>{m.state === 'merged' ? au.mergedInto(m.target_branch) : au.notMerged(m.target_branch)}</li></ul>
+                  </div>
+                </section>
+                <section className="gl-activity">
+                  <div className="gl-activity-head"><h2>{au.activity}</h2><span className="krds-btn small tertiary">{au.allActivity}</span></div>
+                  <ul>
+                    {notes.length ? notes.map((n, i) => (
+                      <li key={i} className="gl-note">
+                        <Avatar src={n.author?.avatarUrl} name={n.author?.name} seed={n.author?.username} />
+                        <div><strong>{n.author?.name}</strong> <span className="rb-subtle">{n.system ? n.body : ''} {ago(n.createdAt)}</span>{n.system ? null : <p>{n.body}</p>}</div>
+                      </li>
+                    )) : (
+                      <li className="gl-note">
+                        <Avatar src={m.author?.avatar_url} name={who} seed={m.author?.username} />
+                        <div><strong>{who}</strong> <span className="rb-subtle">{m.state === 'merged' ? au.systemMerged : m.state === 'closed' ? au.closedEvent : au.openState} {ago(m.merged_at || m.closed_at || m.updated_at)}</span></div>
+                      </li>
+                    )}
+                  </ul>
+                  <p className="gl-reply">{au.loginReply} <Link className="krds-link" to="/login">{au.register}</Link> {au.orWord} <Link className="krds-link" to="/login">{au.login}</Link> {au.pleaseDo}</p>
+                </section>
+              </div>
+              <aside className="gl-mr-side-col" aria-label={au.participants}>
+                <SideBlock title={au.assignee} count={x?.assignees?.nodes?.length ?? 0}>{people(x?.assignees?.nodes)}</SideBlock>
+                <SideBlock title={au.reviewer} count={x?.reviewers?.nodes?.length ?? 0}>{people(x?.reviewers?.nodes)}</SideBlock>
+                <SideBlock title={au.labels}>{x?.labels?.nodes?.length ? x.labels.nodes.map((l) => <span key={l.title} className="gl-label-name" style={{ background: l.color, color: l.textColor }}>{l.title}</span>) : <span className="rb-subtle">{au.none}</span>}</SideBlock>
+                <SideBlock title={au.milestone}><span className="rb-subtle">{x?.milestone?.title || au.none}</span></SideBlock>
+                <SideBlock title={au.workItems}><span className="rb-subtle">{au.none}</span></SideBlock>
+                <SideBlock title={au.timeTrack}><span className="rb-subtle">{x && (x.timeEstimate || x.totalTimeSpent) ? `${x.totalTimeSpent}/${x.timeEstimate}` : au.noTime}</span></SideBlock>
+                <SideBlock title={au.count(x?.participants?.nodes?.length ?? 1, au.participants)}>
+                  {x?.participants?.nodes?.length ? x.participants.nodes.map((n) => <Avatar key={n.username} src={n.avatarUrl} name={n.name} seed={n.username} />) : <Avatar src={m.author?.avatar_url} name={who} seed={m.author?.username} />}
+                </SideBlock>
+              </aside>
+            </div>
           ) : view === 'commits' ? (
             commits.data?.length ? (
               <ul className="rb-plain-list">
@@ -150,20 +223,17 @@ export function MergeRequest() {
                   <li className="rb-plain-row" key={c.id}>
                     <span className="rb-plain-main rb-ellipsis">{c.title}</span>
                     <span className="rb-plain-sub rb-subtle">{c.author_name}</span>
-                    <span className="rb-plain-meta rb-subtle">{day(c.created_at)}</span>
+                    <span className="rb-plain-meta rb-subtle">{ago(c.created_at)}</span>
                   </li>
                 ))}
               </ul>
             ) : <EmptyState title={t.P20_noCommits} />
-          ) : view === 'pipes' ? (
+          ) : view === 'pipelines' ? (
             pipes.data?.length ? (
               <ul className="rb-plain-list">
                 {pipes.data.map((p) => (
                   <li className="gl-mr-pipe" key={p.id}>
-                    <span className="rb-pill">{p.status}</span>
-                    <span>#{p.id}</span>
-                    <span className="rb-break-any">{p.ref}</span>
-                    <span className="rb-subtle">{ago(p.created_at)}</span>
+                    <span>{p.status}</span><span>#{p.id}</span><span className="rb-break-any">{p.ref}</span><span className="rb-subtle">{ago(p.created_at)}</span>
                   </li>
                 ))}
               </ul>
@@ -175,11 +245,6 @@ export function MergeRequest() {
             <div className="rb-write-actions">
               <button type="button" className="krds-btn small tertiary" onClick={() => setNotice(true)}>{t.P20_close}</button>
               <button type="button" className="krds-btn small primary" onClick={() => setNotice(true)}>{t.P20_merge}</button>
-            </div>
-          ) : null}
-          {signedIn && atLeast(role, 'developer') && m.state === 'closed' ? (
-            <div className="rb-write-actions">
-              <button type="button" className="krds-btn small tertiary" onClick={() => setNotice(true)}>{t.P20_reopen}</button>
             </div>
           ) : null}
           {notice ? (
