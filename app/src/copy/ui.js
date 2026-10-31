@@ -133,6 +133,7 @@ export const u = {
   G_sideExpand: "사이드바 펼침",
   G_extra: "업무 도구",
   G_extraTitle: "덧붙인 기능",
+  S_filter: "필터",
   G_pinned: "고정됨",
   G_more: "추가 기능",
   G_manage: "관리",

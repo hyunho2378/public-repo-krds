@@ -69,3 +69,6 @@
 .gl-ph-pad + .gl-page-help { margin: 0 0 var(--krds-gap-5); }
 .gl-tabs-left { flex: 1 1 auto; min-width: 0; }
 .gl-tabs .gl-tab { min-height: var(--krds-number-16); }
+
+#root .gl-tabs.gl-tabs-req { margin-top: calc(-1 * var(--krds-gap-4)); }
+#root .gl-tabs.gl-tabs-gap { gap: var(--krds-gap-2); }

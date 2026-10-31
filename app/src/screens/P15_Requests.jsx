@@ -78,7 +78,7 @@ export default function Requests() {
         </form>
       ) : (
         <>
-          <div className="gl-tabs" data-figma="tabs" role="tablist">
+          <div className="gl-tabs gl-tabs-req" data-figma="tabs" role="tablist">
             {[['votes', rq.byVotes], ['recent', rq.recent], ['mine', rq.mine(session?.authenticated ? (list.data?.data?.items || []).filter((r) => r.mine).length : 0)]].map(([k, n]) => (
               <button key={k} type="button" role="tab" aria-selected={order === k} className={'gl-tab' + (order === k ? ' active' : '')} onClick={() => setOrder(k)}>{n}</button>
             ))}

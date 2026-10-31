@@ -45,6 +45,7 @@ export default function Search() {
   const archived = params.get('archived') === 'true';
   const page = Math.max(1, Number(params.get('page')) || 1);
   const [text, setText] = useState(q);
+  const [showScopes, setShowScopes] = useState(false);
   const [arch, setArch] = useState(archived);
   useEffect(() => setText(q), [q]);
   const list = useData(
@@ -77,8 +78,10 @@ export default function Search() {
         <input id="s-q" type="search" value={text} placeholder={u.S_hint} onChange={(e) => setText(e.target.value)} />
         {text ? <button type="button" className="rb-s-clear" aria-label={u.S_clear} title={u.S_clear} onClick={() => { setText(''); set({ q: '', search: '' }); }}><Icon name="close" /></button> : null}
       </form>
+      {/* 공공 깃랩: 1024 미만은 왼쪽 범위 열 대신 검색칸 아래 오른쪽 '필터' 단추(눌러 범위 패널 열기, search_breakpoints.md) */}
+      <div className="rb-s-filterbar"><button type="button" className="krds-btn small tertiary rb-s-filterbtn" data-figma="search-filter" aria-expanded={showScopes} aria-controls="rb-s-side" onClick={() => setShowScopes(!showScopes)}><Icon name="ext/filter" /><span>{u.S_filter}</span></button></div>
       <div className="rb-s-body">
-        <aside className="rb-s-side" aria-label={u.S_scopes}>
+        <aside id="rb-s-side" className={'rb-s-side' + (showScopes ? ' is-open' : '')} aria-label={u.S_scopes}>
           <ul className="rb-s-scopes">
             {scopes.map(([label, icon, href, n]) => (
               <li key={label}>

@@ -352,3 +352,11 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 /* 업무로 찾기 간단형 행: 모든 폭에서 한 줄(이름 + 개수), 개수 줄이 아래로 내려가지 않게 */
 #root .rb-taskfind .rb-prow { flex-wrap: nowrap; grid-template-columns: auto auto minmax(0, 1fr) auto auto; }
 #root .rb-taskfind .rb-prow-side { flex-direction: row; }
+/* 검색 '필터' 단추(1024 미만, 실제 공공 깃랩): 높이 32, 오른쪽 정렬, 검색칸 아래 12, 결과는 단추 아래 16. 1024 이상은 왼쪽 범위 열 */
+#root .rb-s-filterbar { display: none; }
+@media (max-width: 1023px) {
+  #root .rb-s-filterbar { display: flex; justify-content: flex-end; margin-top: calc(var(--krds-number-4) * -1); margin-bottom: calc(var(--krds-number-3) * -1); } /* 판 쌓임 간격(8, 20)에 더해 검색칸→단추 12, 단추→결과 16 */
+  #root .rb-s-filterbtn { height: var(--krds-number-12); min-height: 0; padding: 0 var(--krds-number-7); gap: var(--krds-number-3); border-radius: var(--krds-radius-medium3); }
+  #root .rb-s-side:not(.is-open) { display: none; }
+}
+@media (max-width: 767px) { #root .rb-s-filterbar { margin-top: calc(var(--krds-number-3) * -1); margin-bottom: 0; } }
