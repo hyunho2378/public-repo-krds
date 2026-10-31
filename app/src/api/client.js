@@ -78,6 +78,9 @@ const gitlabCommitsPage = (id, ref, page) =>
 export const gitlab = {
   project: (id) => request(`/api/gitlab/projects/${enc(id)}?license=true`),
   readme: (id, ref = 'HEAD') => request(`/api/gitlab/projects/${enc(id)}/repository/files/README.md/raw?ref=${enc(ref)}`),
+  // 파일 찾기: 재귀 트리 한 쪽(100개)
+  treeAll: (id, ref = '', page = 1) =>
+    request(`/api/gitlab/projects/${enc(id)}/repository/tree?recursive=true&per_page=100&page=${page}${ref ? `&ref=${enc(ref)}` : ''}`),
   tree: (id, path = '', ref = '') =>
     request(`/api/gitlab/projects/${enc(id)}/repository/tree?per_page=100${path ? `&path=${enc(path)}` : ''}${ref ? `&ref=${enc(ref)}` : ''}`),
   fileMeta: (id, path, ref = 'HEAD') => request(`/api/gitlab/projects/${enc(id)}/repository/files/${enc(path)}?ref=${enc(ref)}`),

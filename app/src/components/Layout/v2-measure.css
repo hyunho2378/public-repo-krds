@@ -150,3 +150,30 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-gbar-left { display: flex; align-items: center; gap: var(--krds-number-3); }
 #root .rb-gbar-left > .rb-gbar-brand { order: -1; }
 @media (max-width: 767px) { #root .rb-gbar-in > .rb-gsearch { margin-inline: auto 0; } }
+
+/* 14. 공공 깃랩 기본 단추 두 가지(높이 32, 모서리 8, 좌우 12): 회색 채움 rgba(137,136,141,.4) 합성 → gray-80, 밝은 채움(코드) 220 → gray-10. 보조 단추 규칙과 별개의 채움 단추 */
+#root .rb-btn-fill, #root .rb-btn-light { display: inline-flex; align-items: center; justify-content: center; gap: var(--krds-gap-2); height: var(--layout-topbar-btn-h); min-height: 0; padding: 0 var(--krds-number-7); border: 0; border-radius: var(--krds-radius-medium3); font: inherit; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-regular); text-decoration: none; white-space: nowrap; cursor: pointer; }
+#root .rb-btn-fill { background: var(--krds-color-light-gray-80); color: var(--krds-color-text-basic); }
+#root .rb-btn-fill:hover { background: var(--krds-color-light-gray-70); }
+#root .rb-btn-light { background: var(--krds-color-light-gray-10); color: var(--krds-color-light-gray-95); }
+#root .rb-btn-light:hover { background: var(--krds-color-light-gray-20); }
+#root .rb-btn-light .rb-icon, #root .rb-btn-fill .rb-icon { width: var(--krds-number-8); height: var(--krds-number-8); }
+#root .rb-btn-fill:focus-visible, #root .rb-btn-light:focus-visible { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); outline-offset: var(--krds-number-1); }
+#root .rb-branch-btn.rb-btn-fill { max-width: calc(var(--krds-number-21) * 2); }
+/* 브랜치 메뉴와 코드 메뉴(공공 깃랩 248 / 348 폭) */
+.rb-branch-menu { width: calc(var(--krds-number-21) * 2 + var(--krds-number-18) - var(--krds-number-5)); max-width: calc(100vw - var(--krds-number-12)); }
+.rb-code-menu { width: calc(var(--krds-number-21) * 3 + var(--krds-number-18) - var(--krds-number-7) * 2 + var(--krds-number-5)); max-width: calc(100vw - var(--krds-number-12)); padding-bottom: var(--krds-number-3); }
+.rb-branch-menu .rb-menu-title, .rb-code-menu .rb-menu-title { margin: 0; padding: var(--krds-number-5) var(--krds-number-7) var(--krds-number-3); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); font-weight: var(--krds-font-weight-bold); color: var(--layout-text-subtle); }
+.rb-menu-search { display: flex; align-items: center; gap: var(--krds-gap-2); margin: 0 var(--krds-number-5) var(--krds-number-3); height: var(--krds-number-12); padding: 0 var(--krds-number-5); border: var(--krds-border-width-static-regular) solid var(--krds-color-light-gray-60); border-radius: var(--krds-radius-medium3); }
+.rb-menu-search input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: none; color: inherit; font: inherit; font-size: var(--rb-step-15); }
+.rb-menu-search:focus-within { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); }
+.rb-menu-empty { margin: 0; padding: var(--krds-number-5) var(--krds-number-7); font-size: var(--rb-step-13); color: var(--layout-text-subtle); }
+.rb-code-url { display: flex; align-items: center; gap: var(--krds-gap-2); margin: 0 var(--krds-number-7); }
+.rb-code-url code { flex: 1; min-width: 0; height: var(--krds-number-12); display: flex; align-items: center; padding: 0 var(--krds-number-5); border: var(--krds-border-width-static-regular) solid var(--krds-color-light-gray-60); border-radius: var(--krds-radius-medium3); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: var(--rb-step-13); }
+.rb-code-fmts { display: flex; flex-wrap: wrap; gap: var(--krds-gap-2); list-style: none; margin: 0; padding: 0 var(--krds-number-7); }
+.rb-code-extra { margin-top: var(--krds-number-5); border-top: var(--krds-border-width-static-regular) solid var(--layout-divider); padding-top: var(--krds-number-3); }
+.rb-gsdlg-list .item-link.is-sel { background: var(--krds-color-light-gray-80); }
+/* 프로젝트 홈 최근 커밋 막대(공공 깃랩 info-well: 면 rgb(40,39,45), 모서리 8) */
+#root .rb-commit-bar { background: var(--layout-raised-bg); border-radius: var(--krds-radius-medium3); }
+/* 파일 표 글자 한 단계(공공 깃랩 14 → KRDS 15)로 통일. 머리는 굵게 */
+#root .rb-tree th, #root .rb-tree td, #root .rb-tree td * { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }

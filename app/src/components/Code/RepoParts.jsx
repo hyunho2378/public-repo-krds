@@ -1,5 +1,7 @@
 // Figma: Repo/Toolbar, Repo/CommitBar, Repo/FileTable, Repo/Readme, Repo/About. GitHub와 GitLab 저장소 첫 화면 배치(D-04 개정).
 import { FileIcon } from './FileIcon';
+import { gitlab } from '../../api/client';
+const fetchTree = async (id, ref, page) => (await gitlab.treeAll(id, ref, page)).data || [];
 import { u } from '../../copy/ui';
 import { newWindow } from '../Layout/newWindow';
 import { toast } from '../Feedback/Toast';
@@ -37,18 +39,32 @@ function useCopy() {
 export function BranchSelect({ id, current, branches = [], path }) {
   branches = branches || [];
   const navigate = useNavigate();
+  const [q, setQ] = useState('');
+  const list = (branches.length ? branches : [{ name: current }]).filter((b) => !q || b.name.toLowerCase().includes(q.toLowerCase()));
+  // 공공 깃랩: 브랜치 단추는 회색 채움 32, 열면 맨 위에 'Git 리비전으로 검색' 입력(audit_v3 02-10, 02-15)
   return (
-    <Drop label={t.Home_branchSelect} align="left" btnClass="rb-branch-btn" button={<><Icon name="ext/branch" /><span className="rb-ellipsis">{current}</span></>}>
+    <Drop label={t.Home_branchSelect} align="left" btnClass="rb-branch-btn rb-btn-fill" button={<><Icon name="ext/branch" /><span className="rb-ellipsis">{current}</span></>}>
       {(close) => (
-        <ul className="drop-list" aria-label={t.Home_branchSelect}>
-          {(branches || [{ name: current }]).map((b) => (
-            <li key={b.name}>
-              <button type="button" className={`item-link${b.name === current ? ' active' : ''}`} aria-current={b.name === current ? 'true' : undefined} onClick={() => { close(); navigate(`/projects/${id}${path ? '/code/' + path : ''}?ref=${enc(b.name)}`); }}>
-                <span className="rb-break-any">{b.name}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
+        <div className="rb-branch-menu">
+          <p className="rb-menu-title">{u.R_switchRef}</p>
+          <div className="rb-menu-search">
+            <label className="sr-only" htmlFor="ref-search">{u.R_searchRef}</label>
+            <Icon name="search" />
+            <input id="ref-search" type="search" autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder={u.R_searchRef} autoComplete="off" />
+          </div>
+          <p className="rb-menu-title">{t.Home_branches || u.I_branches}</p>
+          {list.length ? (
+            <ul className="drop-list" aria-label={t.Home_branchSelect}>
+              {list.map((b) => (
+                <li key={b.name}>
+                  <button type="button" className={`item-link${b.name === current ? ' active' : ''}`} aria-current={b.name === current ? 'true' : undefined} onClick={() => { close(); navigate(`/projects/${id}${path ? '/code/' + path : ''}?ref=${enc(b.name)}`); }}>
+                    <span className="rb-break-any">{b.name}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          ) : <p className="rb-menu-empty">{u.R_noRef}</p>}
+        </div>
       )}
     </Drop>
   );
@@ -69,17 +85,49 @@ export function AddFileMenu({ id, branch }) {
   );
 }
 
-export function CodeMenu({ id, zipUrl, cloneUrl }) {
+// 공공 깃랩 코드 메뉴: 복제(SSH, HTTPS), IDE에서 열기, 소스 코드 내려받기 4형식. 실행 방법은 우리 덧붙임(audit_v3 02-16)
+export function CodeMenu({ id, zipUrl, cloneUrl, sshUrl }) {
   const [note, copy] = useCopy();
+  const base = zipUrl ? zipUrl.replace(/\.zip$/, '') : '';
+  const fmts = base ? [['zip', '.zip'], ['tar.gz', '.tar.gz'], ['tar.bz2', '.tar.bz2'], ['tar', '.tar']] : [];
   return (
     <>
-      <Drop label={t.Home_code} btnClass="krds-btn small primary" button={<><span className="rb-drop-full">{t.Home_code}</span><span className="rb-drop-compact"><Icon name="download" /><span className="sr-only">{t.Home_code}</span></span></>}>
+      <Drop label={t.Home_code} btnClass="rb-btn-light" button={<><span className="rb-drop-full">{t.Home_code}</span><span className="rb-drop-compact"><Icon name="download" /><span className="sr-only">{t.Home_code}</span></span><Icon name="arrow-down" /></>}>
         {(close) => (
-          <ul className="drop-list">
-            <li><a className="item-link" href={zipUrl}><Icon name="download" /> {t.Home_zip}</a></li>
-            {cloneUrl ? <li><button type="button" className="item-link" onClick={() => { copy(cloneUrl); close(); }}><Icon name="copy" /> {t.Home_https}</button></li> : null}
-            <li><Link className="item-link" to={`/projects/${id}/use`} onClick={close}><Icon name="document" /> {t.Home_runGuide}</Link></li>
-          </ul>
+          <div className="rb-code-menu">
+            {sshUrl ? (
+              <div className="rb-code-clone">
+                <p className="rb-menu-title">{u.C_ssh}</p>
+                <div className="rb-code-url"><code>{sshUrl}</code><IconButton icon="copy" label={u.C_copyUrl} size="small" onClick={() => copy(sshUrl)} /></div>
+              </div>
+            ) : null}
+            {cloneUrl ? (
+              <div className="rb-code-clone">
+                <p className="rb-menu-title">{u.C_https}</p>
+                <div className="rb-code-url"><code>{cloneUrl}</code><IconButton icon="copy" label={u.C_copyUrl} size="small" onClick={() => copy(cloneUrl)} /></div>
+              </div>
+            ) : null}
+            {cloneUrl ? (
+              <>
+                <p className="rb-menu-title">{u.C_ide}</p>
+                <ul className="drop-list">
+                  <li><a className="item-link" href={`vscode://vscode.git/clone?url=${encodeURIComponent(cloneUrl)}`} onClick={close}>{u.C_vscode}</a></li>
+                  <li><a className="item-link" href={`jetbrains://idea/checkout/git?idea.required.plugins.id=Git4Idea&checkout.repo=${encodeURIComponent(cloneUrl)}`} onClick={close}>{u.C_intellij}</a></li>
+                </ul>
+              </>
+            ) : null}
+            {fmts.length ? (
+              <>
+                <p className="rb-menu-title">{u.C_download}</p>
+                <ul className="rb-code-fmts">
+                  {fmts.map(([label, ext]) => <li key={label}><a className="rb-btn-fill" href={base + ext}>{label}</a></li>)}
+                </ul>
+              </>
+            ) : null}
+            <ul className="drop-list rb-code-extra">
+              <li><Link className="item-link" to={`/projects/${id}/use`} onClick={close}><Icon name="document" /> {t.Home_runGuide}</Link></li>
+            </ul>
+          </div>
         )}
       </Drop>
       <span className="sr-only" role="status" aria-live="polite">{note}</span>
@@ -87,27 +135,82 @@ export function CodeMenu({ id, zipUrl, cloneUrl }) {
   );
 }
 
-export function FileFind({ value, onChange }) {
-  const input = useRef(null);
+// 공공 깃랩: '파일 찾기'는 회색 채움 단추(32). 누르거나 t를 누르면 파일 찾기 대화창이 열리고 전체 파일 경로에서 거른다(audit_v3 02-1, 02-17)
+export function FileFind({ id, refName }) {
+  const [open, setOpen] = useState(false);
+  const btn = useRef(null);
   useEffect(() => {
     const onKey = (e) => {
       if (e.key !== 't' || e.metaKey || e.ctrlKey || e.altKey) return;
       const tag = document.activeElement?.tagName;
-      if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || document.activeElement?.isContentEditable) return;
+      if (document.querySelector('[role="dialog"]')) return;
       e.preventDefault();
-      input.current?.focus();
+      setOpen(true);
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, []);
   return (
-    <div className="krds-input-wrap rb-find">
-      <label className="sr-only" htmlFor="file-find">{t.Home_findLabel}</label>
-      <Icon name="search" />
-      <input ref={input} id="file-find" className="krds-input small" type="search" placeholder={t.Home_find} value={value} onChange={(e) => onChange(e.target.value)} autoComplete="off" />
-      <kbd className="rb-kbd" aria-hidden="true">{t.Home_findHint}</kbd>
+    <>
+      <button type="button" ref={btn} className="rb-btn-fill rb-find-btn" aria-haspopup="dialog" aria-keyshortcuts="T" title={`${t.Home_find} (T)`} onClick={() => setOpen(true)}>{t.Home_find}</button>
+      {open ? <FileFinder id={id} refName={refName} onClose={() => { setOpen(false); requestAnimationFrame(() => btn.current?.focus()); }} /> : null}
+    </>
+  );
+}
+
+function FileFinder({ id, refName, onClose }) {
+  const navigate = useNavigate();
+  const [q, setQ] = useState('');
+  const [files, setFiles] = useState(null);
+  const [sel, setSel] = useState(0);
+  const input = useRef(null);
+  useEffect(() => {
+    input.current?.focus();
+    let live = true;
+    gitlabTreeAll(id, refName).then((list) => { if (live) setFiles(list); }).catch(() => { if (live) setFiles([]); });
+    const onKey = (e) => { if (e.key === 'Escape') { e.stopPropagation(); onClose(); } };
+    document.addEventListener('keydown', onKey, true);
+    return () => { live = false; document.removeEventListener('keydown', onKey, true); };
+  }, [id, refName]);
+  const hits = useMemo(() => {
+    const k = q.trim().toLowerCase();
+    return (files || []).filter((f) => !k || f.toLowerCase().includes(k)).slice(0, 20);
+  }, [files, q]);
+  const open = (p) => { onClose(); navigate(`/projects/${id}/code/${p.split('/').map(enc).join('/')}${refName ? `?ref=${enc(refName)}` : ''}`); };
+  return (
+    <div className="rb-gsdlg-dim" onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+      <div className="rb-gsdlg" role="dialog" aria-modal="true" aria-label={t.Home_find}>
+        <form className="rb-gsdlg-form" role="search" onSubmit={(e) => { e.preventDefault(); if (hits[sel]) open(hits[sel]); }}>
+          <label className="sr-only" htmlFor="file-finder">{t.Home_findLabel}</label>
+          <Icon name="search" />
+          <input id="file-finder" ref={input} type="search" value={q} autoComplete="off" placeholder={u.F_placeholder} onChange={(e) => { setQ(e.target.value); setSel(0); }}
+            onKeyDown={(e) => { if (e.key === 'ArrowDown') { e.preventDefault(); setSel((n) => Math.min(n + 1, hits.length - 1)); } if (e.key === 'ArrowUp') { e.preventDefault(); setSel((n) => Math.max(n - 1, 0)); } }} />
+        </form>
+        <div className="rb-gsdlg-list">
+          <p className="rb-menu-title">{u.F_files}</p>
+          {files == null ? <p className="rb-menu-empty">{u.F_loading}</p> : hits.length ? (
+            <ul className="drop-list">
+              {hits.map((f, i) => (
+                <li key={f}><button type="button" className={'item-link' + (i === sel ? ' is-sel' : '')} onClick={() => open(f)}><FileIcon name={f.split('/').pop()} /><span className="rb-break-any">{f}</span></button></li>
+              ))}
+            </ul>
+          ) : <p className="rb-menu-empty">{u.F_none}</p>}
+        </div>
+      </div>
     </div>
   );
+}
+
+/** 저장소 전체 파일 경로(재귀 트리, 100개씩 최대 10쪽). 공공 깃랩 파일 찾기와 같은 자료 */
+async function gitlabTreeAll(id, ref) {
+  const out = [];
+  for (let page = 1; page <= 10; page++) {
+    const res = await fetchTree(id, ref, page);
+    out.push(...res.filter((x) => x.type === 'blob').map((x) => x.path));
+    if (res.length < 100) break;
+  }
+  return out;
 }
 
 export function CommitBar({ id, commit, count, more, path, owner, pipeline }) {

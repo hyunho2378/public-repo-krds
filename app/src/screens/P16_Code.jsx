@@ -247,9 +247,9 @@ export default function Code() {
               ) : <PathCrumbs id={frame.id} path={path} refQuery={refQuery} root={project.name} />}
             </div>
             <div className="rb-toolbar-right">
-              {b?.kind === 'tree' ? <FileFind value={filter} onChange={setFilter} /> : null}
+              {b?.kind === 'tree' ? <FileFind id={frame.id} refName={ref} /> : null}
               {b?.kind === 'tree' && signedIn && atLeast(role, 'developer') ? <AddFileMenu id={frame.id} branch={ref} /> : null}
-              <CodeMenu id={frame.id} zipUrl={zipUrl} cloneUrl={project.http_url_to_repo} />
+              <CodeMenu id={frame.id} zipUrl={zipUrl} cloneUrl={project.http_url_to_repo} sshUrl={project.ssh_url_to_repo} />
             </div>
           </div>
           {!b ? (

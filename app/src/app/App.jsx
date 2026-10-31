@@ -77,28 +77,38 @@ const NO_SIDEBAR = ['/login', '/login/failed', '/login/otp', '/register', '/pass
 const SOLO_PATH = { '/search': u.S_title, '/projects/new': t.NewProject_title, '/help': t.Header_5 };
 const EXPLORE_PATH = { '/': u.G_projects, '/explore': u.G_projects, '/organizations': u.G_groups, '/explore/topics': u.G_topics, '/explore/snippets': u.G_snippets };
 
-/** D-22 단축키: ? 목록, g c / g i / g p 이동, b 사이드바(파일 보기에서는 파일 트리가 b를 쓴다) */
+/** D-22 단축키(2026. 10. 31. 개정): 공공 깃랩 '?' 대화상자에 있는 키 중 우리 화면이 있는 것만 쓴다(대응표 UX/16 6절).
+ *  전역: ? 목록, s 또는 / 검색(GlobalBar), f 필터 막대, ⌘(Ctrl)+\ 사이드바, Shift+h 홈, Shift+p 내 프로젝트
+ *  프로젝트: g o 개요, g f 파일, g c 커밋, g n 리포지토리 그래프, g r 릴리스, g i 작업 항목, g m 머지 리퀘스트, g p 파이프라인, g j 작업, Shift+c 브랜치 비교, t 파일 찾기(RepoParts) */
+const G_KEYS = { o: '', f: '/code', c: '/changes', n: '/graph', r: '/releases', i: '/issues', m: '/merge-requests', p: '/pipelines', j: '/jobs' };
 function useShortcuts({ toggleSide, openKeys, project }) {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
   useEffect(() => {
     let g = 0;
     const onKey = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === '\\') { e.preventDefault(); toggleSide(); return; }
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       const el = document.activeElement;
-      if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
+      if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT' || el.isContentEditable)) return;
+      if (document.querySelector('[role="dialog"]') && e.key !== '?') return;
       if (e.key === '?') { e.preventDefault(); openKeys(); return; }
-      if (e.key === 'g') { g = Date.now(); return; }
       if (g && Date.now() - g < 1000 && project) {
-        const to = { c: '/code', i: '/issues', p: '/merge-requests' }[e.key];
+        const to = G_KEYS[e.key];
         g = 0;
-        if (to) { e.preventDefault(); navigate(`/projects/${project.id}${to}`); return; }
+        if (to != null) { e.preventDefault(); navigate(`/projects/${project.id}${to}`); return; }
       }
-      if (e.key === 'b' && !/\/code\/.+/.test(pathname)) { e.preventDefault(); toggleSide(); }
+      if (e.key === 'g' && !e.shiftKey) { g = Date.now(); return; }
+      if (e.shiftKey && e.key === 'H') { e.preventDefault(); navigate('/'); return; }
+      if (e.shiftKey && e.key === 'P') { e.preventDefault(); navigate('/my'); return; }
+      if (e.shiftKey && e.key === 'C' && project) { e.preventDefault(); navigate(`/projects/${project.id}/compare`); return; }
+      if (e.key === 'f' && !e.shiftKey) {
+        const box = document.querySelector('#main .rb-x-filter input, #main [role="search"] input, #main input[type="search"]');
+        if (box) { e.preventDefault(); box.focus(); }
+      }
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [toggleSide, openKeys, project, navigate, pathname]);
+  }, [toggleSide, openKeys, project, navigate]);
 }
 
 function Shell() {
@@ -114,7 +124,7 @@ function Shell() {
   const sideDesk = !bare && !mobile;
   const [keys, setKeys] = useState(false);
   const toggleSide = useCallback(() => (mobile ? setNavOpen((v) => !v) : setHidden(!hidden)), [mobile, hidden, setHidden]);
-  const openKeys = useCallback(() => setKeys(true), []);
+  const openKeys = useCallback(() => setKeys((v) => !v), []);
   useShortcuts({ toggleSide, openKeys, project });
   const explore = EXPLORE_PATH[pathname];
   return (
