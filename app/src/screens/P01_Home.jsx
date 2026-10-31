@@ -16,7 +16,8 @@ import { ProjectRow } from '../components/Layout/ProjectRow';
 import { loadCards } from '../api/cards';
 
 export const FIELDS = [t.P01_1, t.P01_2, t.P01_3, t.P01_4, t.P01_5, t.P01_6, t.P01_7];
-const SORTS = [['last_activity_at', u.X_sortUpdated], ['created_at', u.X_sortCreated], ['name', u.X_sortName], ['star_count', u.X_sortStars]];
+// 공공 깃랩 정렬 메뉴 순서와 낱말: 이름, 만든 날짜, 업데이트 날짜, 별점(audit_v3 E-10)
+const SORTS = [['name', u.X_sortName], ['created_at', u.X_sortCreated], ['last_activity_at', u.X_sortUpdated], ['star_count', u.X_sortStars]];
 const PER = 20;
 const RECENT_KEY = 'rb-explore-recent';
 

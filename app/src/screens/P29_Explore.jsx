@@ -17,7 +17,7 @@ export default function Explore() {
 /** 공공 깃랩 /explore/projects/topics: 제목, '이름으로 필터링', '주제 n' 상자 안 행(머리글자, 이름, 프로젝트 수) */
 export function Topics() {
   const [q, setQ] = useState('');
-  const list = useData(() => request(`/api/gitlab/topics?per_page=100${q.length >= 1 ? `&search=${encodeURIComponent(q)}` : ''}`), [q], (d) => !d.data?.length);
+  const list = useData(() => request(`/api/gitlab/topics?per_page=20${q.length >= 1 ? `&search=${encodeURIComponent(q)}` : ''}`), [q], (d) => !d.data?.length);
   const items = list.data?.data || [];
   return (
     <Page id="G-01t" title={u.T_title} state={list.state}>
@@ -27,7 +27,7 @@ export function Topics() {
       <Status {...list} />
       {items.length ? (
         <section className="rb-box" aria-labelledby="tp-box">
-          <h2 id="tp-box" className="rb-box-head krds-text-body-small-bold">{u.T_box} <span className="rb-subtle"><Icon name="view_all" /> {list.data?.pagination?.total ?? items.length}</span></h2>
+          <h2 id="tp-box" className="rb-box-head krds-text-body-small-bold">{u.T_box} <span className="rb-subtle"><Icon name="view_all" /> {items.length}</span></h2>
           <ul className="rb-box-list">
             {items.map((tp) => (
               <li key={tp.id}>
@@ -50,9 +50,10 @@ export function Snippets() {
   return (
     <Page id="G-01s" title={u.Sn_title} state="Empty">
       <h1 className="rb-x-title" data-figma="page-head">{u.Sn_title}</h1>
-      <div className="rb-empty-center">
-        <Icon name="ext/snippet" />
-        <p className="krds-text-body-medium-bold">{u.Sn_none}</p>
+      {/* 공공 깃랩 빈 상태: 회색 원 안 아이콘, 아래 큰 글자 한 줄(audit_v3 S-01) */}
+      <div className="rb-empty-center rb-empty-circle">
+        <span className="rb-empty-art" aria-hidden="true"><Icon name="ext/snippet" /></span>
+        <p className="rb-empty-title">{u.Sn_none}</p>
       </div>
     </Page>
   );

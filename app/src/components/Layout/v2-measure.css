@@ -201,3 +201,22 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
   .rb-login2-links { grid-row: 3; grid-column: 1; }
 }
 #root .rb-login2-main > .rb-mois-logo { width: var(--krds-number-17); height: auto; }
+
+/* 16. 그룹, 주제, 스니펫(공공 깃랩 1440): 제목 → 안내 문장 12, 안내 → 탭 16. 주제: 제목 → 입력 16, 입력 → 상자 16, 상자는 회색 채움 gray-80(실제 58,56,63) 모서리 12, 안쪽 0 4 4 */
+#root .rb-page > .rb-x-title + p { margin-top: calc(var(--krds-number-7) - var(--rb-rhythm)); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); color: var(--krds-color-text-basic); }
+#root .rb-page > .rb-x-title + p + .rb-x-tabs { margin-top: calc(var(--krds-number-8) - var(--rb-rhythm)); }
+#root .rb-page > .rb-x-title + label + .rb-s-input { margin-top: calc(var(--krds-number-8) - var(--rb-rhythm)); }
+#root .rb-page > .rb-s-input ~ .rb-box { margin-top: calc(var(--krds-number-8) - var(--rb-rhythm)); }
+#root .rb-box { border: 0; border-radius: var(--krds-radius-xlarge1); background: var(--layout-head-bg); padding: 0 var(--krds-number-3) var(--krds-number-3); }
+#root .rb-box-head { background: none; border-bottom: 0; padding: var(--krds-number-7) var(--krds-number-5); }
+#root .rb-box-list { border-radius: var(--krds-radius-medium3); background: var(--layout-panel-bg); overflow: hidden; }
+#root .rb-box-row:hover { background: var(--layout-raised-bg); }
+/* 스니펫 빈 상태: 지름 96 회색 원(gray-80) 안 아이콘 48, 아래 19 굵게 */
+#root .rb-empty-art { display: inline-flex; align-items: center; justify-content: center; width: var(--krds-number-21); height: var(--krds-number-21); border-radius: var(--krds-radius-max); background: var(--layout-head-bg); color: var(--layout-text-subtle); }
+#root .rb-empty-art .rb-icon { width: var(--krds-number-16); height: var(--krds-number-16); }
+#root .rb-empty-title { margin: 0; font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--krds-font-weight-bold); }
+
+/* 17. 펼침 메뉴(공공 깃랩 gl-new-dropdown): 면 gray-90(실제 40,39,45), 모서리 8, 항목 호버 gray-80. 판(gray-95)과 층이 갈린다(audit_v3 E-10) */
+#root .rb-menu, .rb-menu { background: var(--layout-raised-bg); border-color: var(--krds-color-light-gray-80); border-radius: var(--krds-radius-medium3); }
+#root .rb-menu .item-link:hover, #root .rb-menu .item-link:focus-visible, #root .rb-menu .rb-menu-item:hover { background: var(--krds-color-light-gray-80); }
+#root .rb-x-sort .rb-menu, #root .rb-x-recent + .rb-menu { min-width: calc(var(--krds-number-21) * 2 + var(--krds-number-18) - var(--krds-number-5)); }
