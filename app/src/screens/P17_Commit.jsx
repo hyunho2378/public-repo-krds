@@ -40,7 +40,7 @@ export default function Commit() {
     <ProjectFrame screenId="R-05" tab="/changes" tabLabel={t.P17_title} crumbs={[[t.Side_hintCommit, `/projects/${frame.id}/changes`], [sha.slice(0, 8)]]} data={frame} state={b ? (b.files.length ? 'Ideal' : 'Empty') : body.state}>
       {!b ? <Status {...body} /> : (
         <div className="gl-page">
-          <header className="gl-commit-head">
+          <header className="gl-commit-head" data-figma="page-head">
             <p className="gl-commit-line">
               <span>{g.commitTitle} <code>{c.short_id}</code></span>
               <CopyButton text={c.id} label={g.copySha} />

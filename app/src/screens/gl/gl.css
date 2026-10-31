@@ -234,3 +234,15 @@
 .gl-side-row > * { min-width: 0; }
 .gl-box-title { padding-block: var(--krds-padding-1); }
 @media (max-width: 767px) { .gl-tab { height: var(--krds-number-16); } }
+.gl-pagehead { display: flex; flex-direction: column; gap: var(--krds-gap-4); }
+
+/* 패리티 원장: 탭 줄 구분선은 layout-divider, 탭 간격 0 + 안쪽 16, 필터 막대 안쪽 16 */
+#root .gl-tabs { gap: 0; border-bottom-color: var(--layout-divider); }
+#root .gl-tab { padding-inline: var(--layout-filter-pad); }
+#root .gl-bar { padding: var(--layout-filter-pad); border-radius: 0; }
+#root .gl-bar.is-bare { padding: 0; }
+
+/* 패리티 원장: commit-bar 안쪽 12, 간격 12 */
+#root .gl-cbar { padding: var(--krds-number-7); }
+#root .gl-cbar-line { padding: 0; gap: var(--krds-number-7); }
+#root .gl-cbar .gl-commit-body { margin: var(--krds-number-7) 0 0; }

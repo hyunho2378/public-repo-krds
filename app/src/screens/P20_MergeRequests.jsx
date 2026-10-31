@@ -82,7 +82,7 @@ export function MergeRequests() {
         </div>
         <div className="gl-work-filter" data-figma="gl-filter">
           <div className="gl-work-bar" role="search">
-            <IconButton icon="ext/history" label={mr.recent} onClick={() => setQuery('')} />
+            <IconButton icon="time" label={mr.recent} onClick={() => setQuery('')} />
             <input type="search" value={query} placeholder={mr.search} aria-label={mr.searchLabel} onChange={(e) => setQuery(e.target.value)} onFocus={() => setSuggest(true)} onBlur={() => setTimeout(() => setSuggest(false), 150)} />
             <Icon name="search" />
             {suggest && !query ? (

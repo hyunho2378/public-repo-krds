@@ -90,6 +90,7 @@ export default function Changes() {
   return (
     <ProjectFrame screenId="R-04" tab="/changes" tabLabel={t.ProjectTabs_4} data={frame} state={state}>
       <div className="gl-page">
+        <div data-figma="page-head" className="gl-pagehead">
         <div className="gl-histtop">
           <Menu label={g.refSelect} align="left" btnClass="rb-branch-btn" button={<><Icon name="ext/branch" /><span className="rb-ellipsis">{cur}</span></>}>
             {(close) => (
@@ -102,10 +103,11 @@ export default function Changes() {
           </Menu>
           <span className="gl-histproject">{project.path || project.name}</span>
         </div>
-        <div className="gl-head" data-figma="page-head">
+        <div className="gl-head">
           <h1 className="gl-title">{g.histTitle}</h1>
           <div className="gl-head-actions"><Menu label={g.moreOpts} align="right" toggle={false} btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="ellipsis_vertical" />}>{(close) => (<ul className="drop-list"><li><a className="item-link" href={`${project.web_url}/-/commits/${encodeURIComponent(cur)}?format=atom`} {...newWindow(g.rss)} onClick={close}>{g.rss}</a></li></ul>)}</Menu></div>
         </div>
+      </div>
         {path ? (
           <p className="gl-ref-meta"><code className="rb-break-any">{path}</code><Link className="krds-link" to={`/projects/${frame.id}/changes`}>{t.P06_clearFilter}</Link></p>
         ) : null}

@@ -36,7 +36,7 @@ function Editor({ value, onChange, path }) {
   const markdown = /\.(md|markdown)$/i.test(path || '');
   return (
     <div className="rb-editor">
-      <div className="rb-editor-tabs" role="tablist" aria-label={t.Write_editorLabel}>
+      <div className="rb-editor-tabs" data-figma="tabs" role="tablist" aria-label={t.Write_editorLabel}>
         <button type="button" role="tab" aria-selected={view === 'write'} className={'rb-code-view' + (view === 'write' ? ' active' : '')} onClick={() => setView('write')}>{t.Write_write}</button>
         {markdown ? <button type="button" role="tab" aria-selected={view === 'preview'} className={'rb-code-view' + (view === 'preview' ? ' active' : '')} onClick={() => setView('preview')}>{t.P16_viewPreview}</button> : null}
       </div>

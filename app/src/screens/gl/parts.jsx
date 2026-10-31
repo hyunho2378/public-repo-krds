@@ -71,7 +71,7 @@ export function GlCommitBar({ id, commit, owner, path }) {
   const who = owner && owner.path === commit.author_name ? owner.name : commit.author_name;
   const body = (commit.message || '').replace(commit.title, '').trim();
   return (
-    <div className="gl-cbar">
+    <div className="gl-cbar" data-figma="commit-bar">
       <div className="gl-cbar-line">
         <Avatar className="is-32" name={commit.author_name} />
         <div className="gl-ref-main gl-grow">

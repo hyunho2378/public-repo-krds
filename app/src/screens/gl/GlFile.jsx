@@ -150,7 +150,7 @@ export function GlFile({ path, base, text, rawUrl, size, blame, onBlame, blameSt
         </div>
       </header>
       {binary ? <p className="gl-empty">{t.P16_binary}</p>
-        : view === 'preview' ? <div className="gl-preview"><Readme source={text} base={base} /></div>
+        : view === 'preview' ? <div className="gl-preview" data-figma="preview"><Readme source={text} base={base} /></div>
           : view === 'blame' && !blame ? <p className="gl-empty">{blameState === 'Error' ? t.P16_blameError : t.P16_blameLoading}</p>
             : <Lines lines={lines} lang={lang} blame={view === 'blame' ? blame : null} />}
     </section>
