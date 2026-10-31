@@ -186,6 +186,9 @@
   --layout-title-project-lh: var(--rb-lh-32);
   --layout-title-section: var(--krds-pc-font-size-heading-small);
   --layout-title-section-lh: var(--rb-lh-19);
+  /* 768 미만 화면·프로젝트 제목: KRDS mobile heading-large 24 / 32(공공 깃랩 360에서 약 24) */
+  --layout-title-page-sm: var(--krds-mobile-font-size-heading-large);
+  --layout-title-page-sm-lh: var(--rb-lh-24);
   /* 옛 이름(같은 값을 가리킨다) */
   --layout-title-size: var(--layout-title-page);
   --layout-title-lh: var(--layout-title-page-lh);

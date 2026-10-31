@@ -239,3 +239,8 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
   #root .rb-gbar-icon, #root .rb-gbar .rb-gbar-navtoggle, #root .rb-gbar-search { width: var(--krds-number-15); height: var(--krds-number-15); }
   #root .rb-shell.is-drawer .rb-side-link, #root .rb-shell.is-drawer .rb-side-group-btn { min-height: var(--krds-number-15); height: auto; }
 }
+@media (max-width: 767px) {
+  #root .rb-main h1:not(.rb-repo-name):not(.sr-only):not(.rb-md-h1):not(.rb-login2-title), #root .rb-repo-name { font-size: var(--layout-title-page-sm); line-height: var(--layout-title-page-sm-lh); }
+}
+/* 검색 결과: 사이드바 없는 셸은 판 왼쪽 8(바깥 여백) */
+#root .rb-shell:not(.has-side):not(.is-drawer):not(.is-bare) { padding: 0 var(--rb-panel-gap) var(--rb-panel-gap); }

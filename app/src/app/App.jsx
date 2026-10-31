@@ -82,6 +82,8 @@ function NotFoundOrLogin() {
 
 /** 로그인처럼 혼자 서는 화면은 왼쪽 바를 두지 않는다(공공 깃랩 46). */
 const NO_SIDEBAR = ['/login', '/login/failed', '/login/otp', '/register', '/password'];
+/** 공공 깃랩 검색 결과는 사이드바 없이 판 전체 폭(audit_v3 SR-01). 상단 바는 있다 */
+const NO_SIDE_ONLY = ['/search'];
 /** 탐색 목록 화면의 판 안 경로(공공 깃랩 '탐색 / 프로젝트') */
 /** 탐색 밖 단독 화면의 판 안 경로(공공 깃랩 44 '검색'처럼 한 칸) */
 const SOLO_PATH = { '/search': u.S_title, '/projects/new': t.NewProject_title, '/help': t.Header_5 };
@@ -131,7 +133,8 @@ function Shell() {
   // 공공 깃랩: 1200 미만이면 사이드바가 서랍(덮개 0.64, 왼쪽에서 밀려 들어옴). 그 이상은 펼침 또는 44 아이콘 열
   const mobile = !useMinWidth(breakpoint('--rb-bp-drawer'));
   const [hidden, setHidden] = useBoolPref('rb-sidebar-hidden', false);
-  const sideDesk = !bare && !mobile;
+  const noSide = NO_SIDE_ONLY.includes(pathname);
+  const sideDesk = !bare && !mobile && !noSide;
   const [keys, setKeys] = useState(false);
   const toggleSide = useCallback(() => (mobile ? setNavOpen((v) => !v) : setHidden(!hidden)), [mobile, hidden, setHidden]);
   const openKeys = useCallback(() => setKeys((v) => !v), []);
@@ -146,7 +149,7 @@ function Shell() {
         navOpen={navOpen}
         onToggleNav={() => setNavOpen((v) => !v)}
         hasNav={!bare}
-        drawer={mobile && !bare}
+        drawer={mobile && !bare && !noSide}
         sideHidden={false}
         onShowSide={() => setHidden(false)}
         area={u.G_explore}
@@ -154,8 +157,8 @@ function Shell() {
       </div>
       <NoticeBanner message={import.meta.env.VITE_NOTICE} />
       {/* D-22: 사이드바는 접어도 그대로 두고(다시 그리지 않음) transform으로 밀어 넣는다. 본문 판은 margin-left가 같은 시간 곡선으로 따라온다 */}
-      <div className={'rb-shell' + (sideDesk ? ' has-side' : '') + (sideDesk && hidden ? ' is-side-hidden' : '') + (mobile && !bare ? ' is-drawer' : '') + (bare ? ' is-bare' : '')}>
-        {bare ? null : (
+      <div className={'rb-shell' + (sideDesk ? ' has-side' : '') + (sideDesk && hidden ? ' is-side-hidden' : '') + (mobile && !bare && !noSide ? ' is-drawer' : '') + (bare ? ' is-bare' : '')}>
+        {bare || noSide ? null : (
           <Sidebar project={project} open={navOpen} onClose={closeNav} onHide={mobile ? closeNav : () => setHidden(true)} onShow={() => setHidden(false)} hidden={sideDesk && hidden} />
         )}
         <div className="rb-panel" id="rb-scroll" data-figma="content-panel">
