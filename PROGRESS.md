@@ -120,3 +120,4 @@
 - 해소 규칙과 허용 목록: 원장 0절, code_plan/parity_allow.json(근거 필수). 이름표 규칙: UX/audit_v3/parity_names.md
 - 측정 창 높이는 Figma 변형 프레임 높이(최대 1400), 판 안 스크롤바는 숨기고 잰다. Signed-in은 개발 서버 ?auth=Signed-in 스위치
 - [C2] 원장 대조 R-16(MR 목록): 1920 Guest 23건에서 18건, 1440 Guest 24건에서 19건(gl-tabs 높이, 간격, 선색, gl-filter 면, 안쪽, 시계 아이콘). 남은 R-16: page-head(실제에 제목 줄 없음, Figma 쪽), gl-tabs 문구 '열림' 대 실제 '열기', gl-filter 높이 +8(KRDS small 단추 40). 다음: R-11, R-23, R-10, R-12~15, R-17~24, R-26
+- [C2] 원장 대조: 필터 막대 단추/입력 높이를 --layout-filter-control-h(32)로. R-16 1440 Guest 24→15, 1920 Guest 23→14, 360 Guest 20→14 (1920 Signed-in 26은 재측정 필요). R-11 1440 Guest 18, R-23 1440 Guest 14(전 값은 기록 안 됨, 이전 합 229/235를 10변형으로 나눈 평균 약 23). 다음: R-10, R-12~15, R-17~22, R-24, R-26
