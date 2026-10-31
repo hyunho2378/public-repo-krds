@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T14:49:30.724Z",
+ "generated": "2026-10-31T15:02:02.137Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
@@ -12,7 +12,7 @@
     "shape": 1,
     "icon": 0,
     "only-figma": 7,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 19,
@@ -429,11 +429,6 @@
       "w": 944,
       "h": 123
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     },
     {
@@ -453,7 +448,7 @@
     "shape": 1,
     "icon": 0,
     "only-figma": 7,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 19,
@@ -874,11 +869,6 @@
     },
     {
      "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
@@ -894,7 +884,7 @@
     "shape": 1,
     "icon": 0,
     "only-figma": 7,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -1212,11 +1202,6 @@
       "w": 920,
       "h": 123
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     },
     {
@@ -1236,7 +1221,7 @@
     "shape": 1,
     "icon": 0,
     "only-figma": 7,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -1558,11 +1543,6 @@
     },
     {
      "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
@@ -1578,7 +1558,7 @@
     "shape": 1,
     "icon": 0,
     "only-figma": 7,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -1896,11 +1876,6 @@
       "w": 920,
       "h": 123
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     },
     {
@@ -1920,7 +1895,7 @@
     "shape": 1,
     "icon": 0,
     "only-figma": 7,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -2242,11 +2217,6 @@
     },
     {
      "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
@@ -2262,7 +2232,7 @@
     "shape": 1,
     "icon": 4,
     "only-figma": 7,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 21,
@@ -2869,11 +2839,6 @@
       "w": 328,
       "h": 147
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     },
     {
@@ -2893,7 +2858,7 @@
     "shape": 1,
     "icon": 4,
     "only-figma": 7,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 21,
@@ -3504,11 +3469,6 @@
     },
     {
      "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
@@ -3524,7 +3484,7 @@
     "shape": 1,
     "icon": 0,
     "only-figma": 7,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 20,
@@ -3875,11 +3835,6 @@
       "w": 704,
       "h": 123
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     },
     {
@@ -3899,7 +3854,7 @@
     "shape": 1,
     "icon": 0,
     "only-figma": 7,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 20,
@@ -4250,11 +4205,6 @@
       "w": 704,
       "h": 123
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     },
     {
@@ -9648,8 +9598,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 322,
-     "diff": -124,
+     "code": 321,
+     "diff": -125,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -9699,8 +9649,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 40,
-     "code": 48,
-     "diff": 8,
+     "code": 47,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -9775,8 +9725,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 322,
-     "diff": -124,
+     "code": 321,
+     "diff": -125,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -9826,8 +9776,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 40,
-     "code": 48,
-     "diff": 8,
+     "code": 47,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -9945,8 +9895,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 322,
-     "diff": -124,
+     "code": 321,
+     "diff": -125,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -9996,8 +9946,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 40,
-     "code": 48,
-     "diff": 8,
+     "code": 47,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -10115,8 +10065,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 322,
-     "diff": -124,
+     "code": 321,
+     "diff": -125,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10166,8 +10116,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 40,
-     "code": 48,
-     "diff": 8,
+     "code": 47,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -10285,8 +10235,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 322,
-     "diff": -124,
+     "code": 321,
+     "diff": -125,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10336,8 +10286,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 40,
-     "code": 48,
-     "diff": 8,
+     "code": 47,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -10455,8 +10405,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 322,
-     "diff": -124,
+     "code": 321,
+     "diff": -125,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10506,8 +10456,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 40,
-     "code": 48,
-     "diff": 8,
+     "code": 47,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -10588,8 +10538,8 @@
      "name": "main",
      "field": "h",
      "figma": 698,
-     "code": 302,
-     "diff": -396,
+     "code": 301,
+     "diff": -397,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10639,8 +10589,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 40,
-     "code": 48,
-     "diff": 8,
+     "code": 47,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -10721,8 +10671,8 @@
      "name": "main",
      "field": "h",
      "figma": 698,
-     "code": 302,
-     "diff": -396,
+     "code": 301,
+     "diff": -397,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10772,8 +10722,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 40,
-     "code": 48,
-     "diff": 8,
+     "code": 47,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -10854,8 +10804,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 322,
-     "diff": -124,
+     "code": 321,
+     "diff": -125,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10905,8 +10855,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 40,
-     "code": 48,
-     "diff": 8,
+     "code": 47,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -10987,8 +10937,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 322,
-     "diff": -124,
+     "code": 321,
+     "diff": -125,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -11038,8 +10988,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 40,
-     "code": 48,
-     "diff": 8,
+     "code": 47,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -11135,7 +11085,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 8,
+   "allowed": 7,
    "rows": [
     {
      "kind": "shape",
@@ -11185,11 +11135,6 @@
     {
      "kind": "only-code",
      "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title#2",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
@@ -11292,7 +11237,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -11360,11 +11305,6 @@
     {
      "kind": "only-code",
      "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title#2",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
@@ -11467,7 +11407,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -11535,11 +11475,6 @@
     {
      "kind": "only-code",
      "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title#2",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
@@ -11648,7 +11583,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "box",
@@ -11722,11 +11657,6 @@
     {
      "kind": "only-code",
      "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title#2",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
@@ -11817,7 +11747,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 9,
+   "allowed": 8,
    "rows": [
     {
      "kind": "shape",
@@ -11873,11 +11803,6 @@
     {
      "kind": "only-code",
      "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title#2",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
@@ -16640,7 +16565,7 @@
      "figma": [
       "업데이트됨 2026. 10. 28."
      ],
-     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 10분 전",
+     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 26분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -16670,7 +16595,7 @@
       "[공공행정] 정부·지자체·공공기관의 지원사업(모집 공고·공공서비스)을 공공데이터포털 API로 하루 두 번 모아, 지역·대상(청년·농업인·소상공인 등)과 내 조건(나이·소득)으로 찾아보는 웹 서비스입니다. https://jiwonmoa.orfa.shop",
       "주제:"
      ],
-     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 28분 전",
+     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -16691,7 +16616,7 @@
       "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 28분 전",
+     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -16799,7 +16724,7 @@
       "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
       "주제:"
      ],
-     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 6시간 전",
+     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 7시간 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -16968,7 +16893,7 @@
      "figma": [
       "업데이트됨 2026. 10. 28."
      ],
-     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 10분 전",
+     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 26분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -16998,7 +16923,7 @@
       "[공공행정] 정부·지자체·공공기관의 지원사업(모집 공고·공공서비스)을 공공데이터포털 API로 하루 두 번 모아, 지역·대상(청년·농업인·소상공인 등)과 내 조건(나이·소득)으로 찾아보는 웹 서비스입니다. https://jiwonmoa.orfa.shop",
       "주제:"
      ],
-     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 28분 전",
+     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -17019,7 +16944,7 @@
       "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 28분 전",
+     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -17127,7 +17052,7 @@
       "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
       "주제:"
      ],
-     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 6시간 전",
+     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 7시간 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -17323,7 +17248,7 @@
      "figma": [
       "업데이트됨 2026. 10. 28."
      ],
-     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 10분 전",
+     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 26분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -17353,7 +17278,7 @@
       "[공공행정] 정부·지자체·공공기관의 지원사업(모집 공고·공공서비스)을 공공데이터포털 API로 하루 두 번 모아, 지역·대상(청년·농업인·소상공인 등)과 내 조건(나이·소득)으로 찾아보는 웹 서비스입니다. https://jiwonmoa.orfa.shop",
       "주제:"
      ],
-     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 28분 전",
+     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -17374,7 +17299,7 @@
       "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 28분 전",
+     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -17485,7 +17410,7 @@
       "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
       "주제:"
      ],
-     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 6시간 전",
+     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 7시간 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -17681,7 +17606,7 @@
      "figma": [
       "업데이트됨 2026. 10. 28."
      ],
-     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 10분 전",
+     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 26분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -17711,7 +17636,7 @@
       "[공공행정] 정부·지자체·공공기관의 지원사업(모집 공고·공공서비스)을 공공데이터포털 API로 하루 두 번 모아, 지역·대상(청년·농업인·소상공인 등)과 내 조건(나이·소득)으로 찾아보는 웹 서비스입니다. https://jiwonmoa.orfa.shop",
       "주제:"
      ],
-     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 28분 전",
+     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -17732,7 +17657,7 @@
       "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 28분 전",
+     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -17843,7 +17768,7 @@
       "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
       "주제:"
      ],
-     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 6시간 전",
+     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 7시간 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18039,7 +17964,7 @@
      "figma": [
       "업데이트됨 2026. 10. 28."
      ],
-     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 10분 전",
+     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 26분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18069,7 +17994,7 @@
       "[공공행정] 정부·지자체·공공기관의 지원사업(모집 공고·공공서비스)을 공공데이터포털 API로 하루 두 번 모아, 지역·대상(청년·농업인·소상공인 등)과 내 조건(나이·소득)으로 찾아보는 웹 서비스입니다. https://jiwonmoa.orfa.shop",
       "주제:"
      ],
-     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 28분 전",
+     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18090,7 +18015,7 @@
       "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 28분 전",
+     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18210,7 +18135,7 @@
       "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
       "주제:"
      ],
-     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 6시간 전",
+     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 7시간 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18406,7 +18331,7 @@
      "figma": [
       "업데이트됨 2026. 10. 28."
      ],
-     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 10분 전",
+     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 26분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18436,7 +18361,7 @@
       "[공공행정] 정부·지자체·공공기관의 지원사업(모집 공고·공공서비스)을 공공데이터포털 API로 하루 두 번 모아, 지역·대상(청년·농업인·소상공인 등)과 내 조건(나이·소득)으로 찾아보는 웹 서비스입니다. https://jiwonmoa.orfa.shop",
       "주제:"
      ],
-     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 28분 전",
+     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18457,7 +18382,7 @@
       "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 28분 전",
+     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18577,7 +18502,7 @@
       "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
       "주제:"
      ],
-     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 6시간 전",
+     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 7시간 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18611,7 +18536,7 @@
   "G-01_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 12,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -18621,15 +18546,15 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 28,
+   "allowed": 26,
    "rows": [
     {
      "kind": "box",
      "name": "body",
      "field": "h",
-     "figma": 2090,
+     "figma": 1888,
      "code": 1328,
-     "diff": -762,
+     "diff": -560,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -18672,9 +18597,9 @@
      "kind": "box",
      "name": "content-panel",
      "field": "h",
-     "figma": 2090,
+     "figma": 1888,
      "code": 1328,
-     "diff": -762,
+     "diff": -560,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -18732,9 +18657,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 1697,
+     "figma": 1495,
      "code": 4025,
-     "diff": 2328,
+     "diff": 2530,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -18777,9 +18702,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1859,
+     "figma": 1657,
      "code": 4169,
-     "diff": 2310,
+     "diff": 2512,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -18812,9 +18737,9 @@
      "kind": "box",
      "name": "gl-filter",
      "field": "h",
-     "figma": 361,
+     "figma": 159,
      "code": 145,
-     "diff": -216,
+     "diff": -14,
      "allowed": null
     },
     {
@@ -18830,10 +18755,10 @@
      "kind": "box",
      "name": "project-row",
      "field": "y",
-     "figma": 610,
+     "figma": 408,
      "code": 365,
-     "diff": -245,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+     "diff": -43,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -18880,10 +18805,10 @@
      "kind": "box",
      "name": "project-row#2",
      "field": "y",
-     "figma": 781,
+     "figma": 579,
      "code": 554,
-     "diff": -227,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+     "diff": -25,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -18900,7 +18825,7 @@
      "figma": [
       "업데이트됨 2026. 10. 28."
      ],
-     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 10분 전",
+     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 26분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18929,9 +18854,9 @@
      "kind": "box",
      "name": "project-row#3",
      "field": "y",
-     "figma": 880,
+     "figma": 678,
      "code": 696,
-     "diff": -184,
+     "diff": 18,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -18952,7 +18877,7 @@
       "[공공행정] 정부·지자체·공공기관의 지원사업(모집 공고·공공서비스)을 공공데이터포털 API로 하루 두 번 모아, 지역·대상(청년·농업인·소상공인 등)과 내 조건(나이·소득)으로 찾아보는 웹 서비스입니다. https://jiwonmoa.orfa.shop",
       "주제:"
      ],
-     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 28분 전",
+     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -18981,9 +18906,9 @@
      "kind": "box",
      "name": "project-row#4",
      "field": "y",
-     "figma": 1055,
+     "figma": 853,
      "code": 841,
-     "diff": -214,
+     "diff": -12,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19004,7 +18929,7 @@
       "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 28분 전",
+     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -19033,9 +18958,9 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 1202,
+     "figma": 1000,
      "code": 961,
-     "diff": -241,
+     "diff": -39,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19085,9 +19010,9 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 1349,
+     "figma": 1147,
      "code": 1156,
-     "diff": -193,
+     "diff": 9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19125,9 +19050,9 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 1496,
+     "figma": 1294,
      "code": 1344,
-     "diff": -152,
+     "diff": 50,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19177,9 +19102,9 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 1643,
+     "figma": 1441,
      "code": 1561,
-     "diff": -82,
+     "diff": 120,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19200,7 +19125,7 @@
       "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
       "주제:"
      ],
-     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 6시간 전",
+     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 7시간 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -19229,8 +19154,8 @@
      "kind": "only-figma",
      "name": "filter-search",
      "want": {
-      "x": 110,
-      "y": 386,
+      "x": 295,
+      "y": 265,
       "w": 32,
       "h": 32
      },
@@ -19256,7 +19181,7 @@
   "G-01_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 10,
+    "box": 12,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -19266,15 +19191,15 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 28,
+   "allowed": 26,
    "rows": [
     {
      "kind": "box",
      "name": "body",
      "field": "h",
-     "figma": 2090,
+     "figma": 1888,
      "code": 1328,
-     "diff": -762,
+     "diff": -560,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -19317,9 +19242,9 @@
      "kind": "box",
      "name": "content-panel",
      "field": "h",
-     "figma": 2090,
+     "figma": 1888,
      "code": 1328,
-     "diff": -762,
+     "diff": -560,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -19377,9 +19302,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 1697,
+     "figma": 1495,
      "code": 4025,
-     "diff": 2328,
+     "diff": 2530,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -19422,9 +19347,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1859,
+     "figma": 1657,
      "code": 4169,
-     "diff": 2310,
+     "diff": 2512,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19457,9 +19382,9 @@
      "kind": "box",
      "name": "gl-filter",
      "field": "h",
-     "figma": 361,
+     "figma": 159,
      "code": 145,
-     "diff": -216,
+     "diff": -14,
      "allowed": null
     },
     {
@@ -19475,10 +19400,10 @@
      "kind": "box",
      "name": "project-row",
      "field": "y",
-     "figma": 610,
+     "figma": 408,
      "code": 365,
-     "diff": -245,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+     "diff": -43,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -19525,10 +19450,10 @@
      "kind": "box",
      "name": "project-row#2",
      "field": "y",
-     "figma": 781,
+     "figma": 579,
      "code": 554,
-     "diff": -227,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+     "diff": -25,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -19545,7 +19470,7 @@
      "figma": [
       "업데이트됨 2026. 10. 28."
      ],
-     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 10분 전",
+     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 26분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -19574,9 +19499,9 @@
      "kind": "box",
      "name": "project-row#3",
      "field": "y",
-     "figma": 880,
+     "figma": 678,
      "code": 696,
-     "diff": -184,
+     "diff": 18,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19597,7 +19522,7 @@
       "[공공행정] 정부·지자체·공공기관의 지원사업(모집 공고·공공서비스)을 공공데이터포털 API로 하루 두 번 모아, 지역·대상(청년·농업인·소상공인 등)과 내 조건(나이·소득)으로 찾아보는 웹 서비스입니다. https://jiwonmoa.orfa.shop",
       "주제:"
      ],
-     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 28분 전",
+     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -19626,9 +19551,9 @@
      "kind": "box",
      "name": "project-row#4",
      "field": "y",
-     "figma": 1055,
+     "figma": 853,
      "code": 841,
-     "diff": -214,
+     "diff": -12,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19649,7 +19574,7 @@
       "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 28분 전",
+     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -19678,9 +19603,9 @@
      "kind": "box",
      "name": "project-row#5",
      "field": "y",
-     "figma": 1202,
+     "figma": 1000,
      "code": 961,
-     "diff": -241,
+     "diff": -39,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19730,9 +19655,9 @@
      "kind": "box",
      "name": "project-row#6",
      "field": "y",
-     "figma": 1349,
+     "figma": 1147,
      "code": 1156,
-     "diff": -193,
+     "diff": 9,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19770,9 +19695,9 @@
      "kind": "box",
      "name": "project-row#7",
      "field": "y",
-     "figma": 1496,
+     "figma": 1294,
      "code": 1344,
-     "diff": -152,
+     "diff": 50,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19822,9 +19747,9 @@
      "kind": "box",
      "name": "project-row#8",
      "field": "y",
-     "figma": 1643,
+     "figma": 1441,
      "code": 1561,
-     "diff": -82,
+     "diff": 120,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -19845,7 +19770,7 @@
       "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
       "주제:"
      ],
-     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 6시간 전",
+     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 7시간 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -19874,8 +19799,8 @@
      "kind": "only-figma",
      "name": "filter-search",
      "want": {
-      "x": 110,
-      "y": 386,
+      "x": 295,
+      "y": 265,
       "w": 32,
       "h": 32
      },
@@ -20060,7 +19985,7 @@
      "figma": [
       "업데이트됨 2026. 10. 28."
      ],
-     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 10분 전",
+     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 26분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -20090,7 +20015,7 @@
       "[공공행정] 정부·지자체·공공기관의 지원사업(모집 공고·공공서비스)을 공공데이터포털 API로 하루 두 번 모아, 지역·대상(청년·농업인·소상공인 등)과 내 조건(나이·소득)으로 찾아보는 웹 서비스입니다. https://jiwonmoa.orfa.shop",
       "주제:"
      ],
-     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 28분 전",
+     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -20120,7 +20045,7 @@
       "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 28분 전",
+     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -20228,7 +20153,7 @@
       "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
       "주제:"
      ],
-     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 6시간 전",
+     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 7시간 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -20421,7 +20346,7 @@
      "figma": [
       "업데이트됨 2026. 10. 28."
      ],
-     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 10분 전",
+     "code": "인 인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO 0 0 - 0 업데이트됨 26분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -20451,7 +20376,7 @@
       "[공공행정] 정부·지자체·공공기관의 지원사업(모집 공고·공공서비스)을 공공데이터포털 API로 하루 두 번 모아, 지역·대상(청년·농업인·소상공인 등)과 내 조건(나이·소득)으로 찾아보는 웹 서비스입니다. https://jiwonmoa.orfa.shop",
       "주제:"
      ],
-     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 28분 전",
+     "code": "화 화성특례시 신환철 / hwaseong-kb https://hskb.netlify.app 6 5 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -20481,7 +20406,7 @@
       "김남수 주무관의 온나라 업무통신 자동 발송기에 Windows 설치 도우미를 기여하기 위한 포크입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 28분 전",
+     "code": "서 서초구청 홍성민 / ImmediatelyLaw 0 0 - 0 업데이트됨 44분 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -20589,7 +20514,7 @@
       "K-Startup 사업공고·공지와 첨부 문서를 AI 대화에서 검색하고, 지원요건·가점·연도별 변화를 원문 근거로 비교·분석하는 원격 MCP 서비스입니다. ChatGPT·Claude",
       "주제:"
      ],
-     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 6시간 전",
+     "code": "중 중부지방산림청 산림재난안전과 김봉수 / 산림토목 설계 검증-deletion_scheduled-1784 0 0 - 0 업데이트됨 7시간 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -20630,7 +20555,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 4,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 15,
@@ -20949,11 +20874,6 @@
       "w": 944,
       "h": 123
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     }
    ]
@@ -20968,7 +20888,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 4,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 15,
@@ -21288,11 +21208,6 @@
       "h": 123
      },
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
@@ -21306,7 +21221,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 4,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -21625,11 +21540,6 @@
       "w": 884,
       "h": 123
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     }
    ]
@@ -21644,7 +21554,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 4,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -21964,11 +21874,6 @@
       "h": 123
      },
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
@@ -21982,7 +21887,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 4,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -22301,11 +22206,6 @@
       "w": 884,
       "h": 123
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     }
    ]
@@ -22320,7 +22220,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 4,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -22640,11 +22540,6 @@
       "h": 123
      },
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
@@ -22658,7 +22553,7 @@
     "shape": 0,
     "icon": 3,
     "only-figma": 4,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 20,
@@ -23145,11 +23040,6 @@
       "w": 328,
       "h": 147
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     }
    ]
@@ -23164,7 +23054,7 @@
     "shape": 0,
     "icon": 3,
     "only-figma": 4,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 20,
@@ -23652,11 +23542,6 @@
       "h": 147
      },
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
-     "allowed": null
     }
    ]
   },
@@ -23670,7 +23555,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 4,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 19,
@@ -23968,11 +23853,6 @@
       "w": 704,
       "h": 123
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     }
    ]
@@ -23987,7 +23867,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 4,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 19,
@@ -24285,11 +24165,6 @@
       "w": 704,
       "h": 123
      },
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "page-head",
      "allowed": null
     }
    ]
@@ -38671,7 +38546,7 @@
   "R-01_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 17,
+    "box": 9,
     "text": 3,
     "font": 0,
     "color": 0,
@@ -38773,19 +38648,10 @@
     {
      "kind": "box",
      "name": "main",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "main",
      "field": "h",
      "figma": 7648,
-     "code": 7670,
-     "diff": 22,
+     "code": 7590,
+     "diff": -58,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -38817,33 +38683,15 @@
      "name": "footer",
      "field": "y",
      "figma": 7810,
-     "code": 7814,
-     "diff": 4,
+     "code": 7734,
+     "diff": -76,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "project-info",
-     "field": "x",
-     "figma": 688,
-     "code": 673,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -38870,15 +38718,6 @@
      "figma": 185,
      "code": 192,
      "diff": 7,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "toolbar",
-     "field": "w",
-     "figma": 624,
-     "code": 609,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -38911,15 +38750,6 @@
      "figma": 233,
      "code": 240,
      "diff": 7,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "commit-bar",
-     "field": "w",
-     "figma": 624,
-     "code": 609,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -38976,15 +38806,6 @@
     {
      "kind": "box",
      "name": "file-table",
-     "field": "w",
-     "figma": 624,
-     "code": 609,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "file-table",
      "field": "h",
      "figma": 1262,
      "code": 1441,
@@ -39018,19 +38839,10 @@
     {
      "kind": "box",
      "name": "readme",
-     "field": "w",
-     "figma": 624,
-     "code": 609,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "readme",
      "field": "h",
      "figma": 6176,
-     "code": 5999,
-     "diff": -177,
+     "code": 5919,
+     "diff": -257,
      "allowed": null
     },
     {
@@ -39061,15 +38873,6 @@
      "code": [
       "file:markdown"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "intro-card",
-     "field": "x",
-     "figma": 688,
-     "code": 673,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -39555,7 +39358,7 @@
   "R-01_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 17,
+    "box": 9,
     "text": 3,
     "font": 0,
     "color": 0,
@@ -39660,19 +39463,10 @@
     {
      "kind": "box",
      "name": "main",
-     "field": "w",
-     "figma": 1088,
-     "code": 1073,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "main",
      "field": "h",
      "figma": 7112,
-     "code": 7179,
-     "diff": 67,
+     "code": 7166,
+     "diff": 54,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -39704,33 +39498,15 @@
      "name": "footer",
      "field": "y",
      "figma": 7274,
-     "code": 7323,
-     "diff": 49,
+     "code": 7310,
+     "diff": 36,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "w",
-     "figma": 1088,
-     "code": 1073,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "project-info",
-     "field": "x",
-     "figma": 1088,
-     "code": 1073,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -39757,15 +39533,6 @@
      "figma": 185,
      "code": 192,
      "diff": 7,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "toolbar",
-     "field": "w",
-     "figma": 768,
-     "code": 753,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -39798,15 +39565,6 @@
      "figma": 233,
      "code": 240,
      "diff": 7,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "commit-bar",
-     "field": "w",
-     "figma": 768,
-     "code": 753,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -39863,15 +39621,6 @@
     {
      "kind": "box",
      "name": "file-table",
-     "field": "w",
-     "figma": 768,
-     "code": 753,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "file-table",
      "field": "h",
      "figma": 1262,
      "code": 1441,
@@ -39905,19 +39654,10 @@
     {
      "kind": "box",
      "name": "readme",
-     "field": "w",
-     "figma": 768,
-     "code": 753,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "readme",
      "field": "h",
      "figma": 5640,
-     "code": 5508,
-     "diff": -132,
+     "code": 5495,
+     "diff": -145,
      "allowed": null
     },
     {
@@ -39948,15 +39688,6 @@
      "code": [
       "file:markdown"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "intro-card",
-     "field": "x",
-     "figma": 1088,
-     "code": 1073,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -41263,7 +40994,7 @@
   "R-01_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 14,
+    "box": 6,
     "text": 3,
     "font": 0,
     "color": 0,
@@ -41383,19 +41114,10 @@
     {
      "kind": "box",
      "name": "main",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "main",
      "field": "h",
      "figma": 11419,
-     "code": 8958,
-     "diff": -2461,
+     "code": 8833,
+     "diff": -2586,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -41439,18 +41161,9 @@
      "name": "footer",
      "field": "y",
      "figma": 11581,
-     "code": 9102,
-     "diff": -2479,
+     "code": 8977,
+     "diff": -2604,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -41470,15 +41183,6 @@
     {
      "kind": "box",
      "name": "project-info",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-info",
      "field": "h",
      "figma": 746,
      "code": 774,
@@ -41493,15 +41197,6 @@
      "code": 1042,
      "diff": 55,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "toolbar",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -41535,15 +41230,6 @@
      "code": 1130,
      "diff": 55,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "commit-bar",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -41599,15 +41285,6 @@
     {
      "kind": "box",
      "name": "file-table",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "file-table",
      "field": "h",
      "figma": 1219,
      "code": 1400,
@@ -41641,19 +41318,10 @@
     {
      "kind": "box",
      "name": "readme",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "readme",
      "field": "h",
      "figma": 9148,
-     "code": 6358,
-     "diff": -2790,
+     "code": 6234,
+     "diff": -2914,
      "allowed": null
     },
     {
@@ -41694,15 +41362,6 @@
      "code": 687,
      "diff": -112,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "intro-card",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -41765,7 +41424,7 @@
   "R-01_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 14,
+    "box": 6,
     "text": 3,
     "font": 0,
     "color": 0,
@@ -41885,19 +41544,10 @@
     {
      "kind": "box",
      "name": "main",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "main",
      "field": "h",
      "figma": 11419,
-     "code": 8958,
-     "diff": -2461,
+     "code": 8833,
+     "diff": -2586,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -41941,18 +41591,9 @@
      "name": "footer",
      "field": "y",
      "figma": 11581,
-     "code": 9102,
-     "diff": -2479,
+     "code": 8977,
+     "diff": -2604,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -41972,15 +41613,6 @@
     {
      "kind": "box",
      "name": "project-info",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-info",
      "field": "h",
      "figma": 746,
      "code": 774,
@@ -41995,15 +41627,6 @@
      "code": 1042,
      "diff": 55,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "toolbar",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -42037,15 +41660,6 @@
      "code": 1130,
      "diff": 55,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "commit-bar",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -42101,15 +41715,6 @@
     {
      "kind": "box",
      "name": "file-table",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "file-table",
      "field": "h",
      "figma": 1219,
      "code": 1400,
@@ -42143,19 +41748,10 @@
     {
      "kind": "box",
      "name": "readme",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "readme",
      "field": "h",
      "figma": 9148,
-     "code": 6358,
-     "diff": -2790,
+     "code": 6234,
+     "diff": -2914,
      "allowed": null
     },
     {
@@ -42196,15 +41792,6 @@
      "code": 687,
      "diff": -112,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "intro-card",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -42267,7 +41854,7 @@
   "R-01_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 14,
+    "box": 6,
     "text": 3,
     "font": 0,
     "color": 0,
@@ -42385,19 +41972,10 @@
     {
      "kind": "box",
      "name": "main",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "main",
      "field": "h",
      "figma": 8054,
-     "code": 8016,
-     "diff": -38,
+     "code": 7916,
+     "diff": -138,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -42440,18 +42018,9 @@
      "name": "footer",
      "field": "y",
      "figma": 8216,
-     "code": 8160,
-     "diff": -56,
+     "code": 8060,
+     "diff": -156,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -42471,15 +42040,6 @@
     {
      "kind": "box",
      "name": "project-info",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-info",
      "field": "h",
      "figma": 724,
      "code": 673,
@@ -42494,15 +42054,6 @@
      "code": 889,
      "diff": -36,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "toolbar",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -42535,15 +42086,6 @@
      "code": 937,
      "diff": -36,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "commit-bar",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -42599,15 +42141,6 @@
     {
      "kind": "box",
      "name": "file-table",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "file-table",
      "field": "h",
      "figma": 1262,
      "code": 1441,
@@ -42641,19 +42174,10 @@
     {
      "kind": "box",
      "name": "readme",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "readme",
      "field": "h",
      "figma": 5842,
-     "code": 5648,
-     "diff": -194,
+     "code": 5548,
+     "diff": -294,
      "allowed": null
     },
     {
@@ -42694,15 +42218,6 @@
      "code": 560,
      "diff": -177,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "intro-card",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -42765,7 +42280,7 @@
   "R-01_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 14,
+    "box": 6,
     "text": 3,
     "font": 0,
     "color": 0,
@@ -42883,19 +42398,10 @@
     {
      "kind": "box",
      "name": "main",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "main",
      "field": "h",
      "figma": 8054,
-     "code": 8016,
-     "diff": -38,
+     "code": 7916,
+     "diff": -138,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -42938,18 +42444,9 @@
      "name": "footer",
      "field": "y",
      "figma": 8216,
-     "code": 8160,
-     "diff": -56,
+     "code": 8060,
+     "diff": -156,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -42969,15 +42466,6 @@
     {
      "kind": "box",
      "name": "project-info",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-info",
      "field": "h",
      "figma": 724,
      "code": 673,
@@ -42992,15 +42480,6 @@
      "code": 889,
      "diff": -36,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "toolbar",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -43033,15 +42512,6 @@
      "code": 937,
      "diff": -36,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "commit-bar",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -43097,15 +42567,6 @@
     {
      "kind": "box",
      "name": "file-table",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "file-table",
      "field": "h",
      "figma": 1262,
      "code": 1441,
@@ -43139,19 +42600,10 @@
     {
      "kind": "box",
      "name": "readme",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "readme",
      "field": "h",
      "figma": 5842,
-     "code": 5648,
-     "diff": -194,
+     "code": 5548,
+     "diff": -294,
      "allowed": null
     },
     {
@@ -43192,15 +42644,6 @@
      "code": 560,
      "diff": -177,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "intro-card",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -53445,7 +52888,7 @@
   "R-07_1024_Guest": {
    "owner": "C1",
    "counts": {
-    "box": 3,
+    "box": 4,
     "text": 0,
     "font": 0,
     "color": 1,
@@ -53552,8 +52995,8 @@
      "name": "section-title",
      "field": "y",
      "figma": 243,
-     "code": 226,
-     "diff": -17,
+     "code": 225,
+     "diff": -18,
      "allowed": null
     },
     {
@@ -53567,11 +53010,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 160,
-     "diff": -10,
+     "code": 159,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -53587,7 +53039,7 @@
   "R-07_1024_Signed-in": {
    "owner": "C1",
    "counts": {
-    "box": 3,
+    "box": 4,
     "text": 1,
     "font": 0,
     "color": 1,
@@ -53696,8 +53148,8 @@
      "name": "section-title",
      "field": "y",
      "figma": 243,
-     "code": 226,
-     "diff": -17,
+     "code": 225,
+     "diff": -18,
      "allowed": null
     },
     {
@@ -53720,11 +53172,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 160,
-     "diff": -10,
+     "code": 159,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -53740,7 +53201,7 @@
   "R-07_1440_Guest": {
    "owner": "C1",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 1,
@@ -53847,8 +53308,8 @@
      "name": "section-title",
      "field": "y",
      "figma": 243,
-     "code": 226,
-     "diff": -17,
+     "code": 225,
+     "diff": -18,
      "allowed": null
     },
     {
@@ -53862,11 +53323,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 160,
-     "diff": -10,
+     "code": 159,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -53891,7 +53361,7 @@
   "R-07_1440_Signed-in": {
    "owner": "C1",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 1,
     "font": 0,
     "color": 1,
@@ -54000,8 +53470,8 @@
      "name": "section-title",
      "field": "y",
      "figma": 243,
-     "code": 226,
-     "diff": -17,
+     "code": 225,
+     "diff": -18,
      "allowed": null
     },
     {
@@ -54024,11 +53494,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 160,
-     "diff": -10,
+     "code": 159,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -54053,7 +53532,7 @@
   "R-07_1920_Guest": {
    "owner": "C1",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 1,
@@ -54160,8 +53639,8 @@
      "name": "section-title",
      "field": "y",
      "figma": 243,
-     "code": 226,
-     "diff": -17,
+     "code": 225,
+     "diff": -18,
      "allowed": null
     },
     {
@@ -54175,11 +53654,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 160,
-     "diff": -10,
+     "code": 159,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -54204,7 +53692,7 @@
   "R-07_1920_Signed-in": {
    "owner": "C1",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 1,
     "font": 0,
     "color": 1,
@@ -54313,8 +53801,8 @@
      "name": "section-title",
      "field": "y",
      "figma": 243,
-     "code": 226,
-     "diff": -17,
+     "code": 225,
+     "diff": -18,
      "allowed": null
     },
     {
@@ -54337,11 +53825,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 160,
-     "diff": -10,
+     "code": 159,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -54366,7 +53863,7 @@
   "R-07_360_Guest": {
    "owner": "C1",
    "counts": {
-    "box": 3,
+    "box": 4,
     "text": 0,
     "font": 0,
     "color": 1,
@@ -54442,8 +53939,8 @@
      "name": "main",
      "field": "h",
      "figma": 318,
-     "code": 248,
-     "diff": -70,
+     "code": 247,
+     "diff": -71,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -54482,8 +53979,8 @@
      "name": "section-title",
      "field": "y",
      "figma": 243,
-     "code": 226,
-     "diff": -17,
+     "code": 225,
+     "diff": -18,
      "allowed": null
     },
     {
@@ -54497,11 +53994,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 160,
-     "diff": -10,
+     "code": 159,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -54517,7 +54023,7 @@
   "R-07_360_Signed-in": {
    "owner": "C1",
    "counts": {
-    "box": 3,
+    "box": 4,
     "text": 0,
     "font": 0,
     "color": 1,
@@ -54593,8 +54099,8 @@
      "name": "main",
      "field": "h",
      "figma": 318,
-     "code": 248,
-     "diff": -70,
+     "code": 247,
+     "diff": -71,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -54633,8 +54139,8 @@
      "name": "section-title",
      "field": "y",
      "figma": 243,
-     "code": 226,
-     "diff": -17,
+     "code": 225,
+     "diff": -18,
      "allowed": null
     },
     {
@@ -54648,11 +54154,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 160,
-     "diff": -10,
+     "code": 159,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -54668,7 +54183,7 @@
   "R-07_768_Guest": {
    "owner": "C1",
    "counts": {
-    "box": 3,
+    "box": 4,
     "text": 0,
     "font": 0,
     "color": 1,
@@ -54781,8 +54296,8 @@
      "name": "section-title",
      "field": "y",
      "figma": 243,
-     "code": 226,
-     "diff": -17,
+     "code": 225,
+     "diff": -18,
      "allowed": null
     },
     {
@@ -54796,11 +54311,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 160,
-     "diff": -10,
+     "code": 159,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -54816,7 +54340,7 @@
   "R-07_768_Signed-in": {
    "owner": "C1",
    "counts": {
-    "box": 3,
+    "box": 4,
     "text": 1,
     "font": 0,
     "color": 1,
@@ -54931,8 +54455,8 @@
      "name": "section-title",
      "field": "y",
      "figma": 243,
-     "code": 226,
-     "diff": -17,
+     "code": 225,
+     "diff": -18,
      "allowed": null
     },
     {
@@ -54955,11 +54479,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 160,
-     "diff": -10,
+     "code": 159,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -60295,9 +59828,9 @@
      "kind": "box",
      "name": "body",
      "field": "h",
-     "figma": 3489,
+     "figma": 3529,
      "code": 1328,
-     "diff": -2161,
+     "diff": -2201,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -60330,9 +59863,9 @@
      "kind": "box",
      "name": "content-panel",
      "field": "h",
-     "figma": 3489,
+     "figma": 3529,
      "code": 1328,
-     "diff": -2161,
+     "diff": -2201,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -60380,9 +59913,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 3096,
+     "figma": 3136,
      "code": 2579,
-     "diff": -517,
+     "diff": -557,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -60409,9 +59942,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 3258,
+     "figma": 3298,
      "code": 2723,
-     "diff": -535,
+     "diff": -575,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -60433,9 +59966,9 @@
      "kind": "box",
      "name": "gl-filter",
      "field": "h",
-     "figma": 79,
+     "figma": 119,
      "code": 105,
-     "diff": 26,
+     "diff": -14,
      "allowed": null
     },
     {
@@ -60467,9 +60000,9 @@
      "kind": "box",
      "name": "filter-search",
      "field": "x",
-     "figma": 227,
+     "figma": 295,
      "code": 316,
-     "diff": 89,
+     "diff": 21,
      "allowed": null
     }
    ]
@@ -60493,9 +60026,9 @@
      "kind": "box",
      "name": "body",
      "field": "h",
-     "figma": 3489,
+     "figma": 3529,
      "code": 1328,
-     "diff": -2161,
+     "diff": -2201,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -60528,9 +60061,9 @@
      "kind": "box",
      "name": "content-panel",
      "field": "h",
-     "figma": 3489,
+     "figma": 3529,
      "code": 1328,
-     "diff": -2161,
+     "diff": -2201,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -60578,9 +60111,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 3096,
+     "figma": 3136,
      "code": 2579,
-     "diff": -517,
+     "diff": -557,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -60607,9 +60140,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 3258,
+     "figma": 3298,
      "code": 2723,
-     "diff": -535,
+     "diff": -575,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -60631,9 +60164,9 @@
      "kind": "box",
      "name": "gl-filter",
      "field": "h",
-     "figma": 79,
+     "figma": 119,
      "code": 105,
-     "diff": 26,
+     "diff": -14,
      "allowed": null
     },
     {
@@ -60665,9 +60198,9 @@
      "kind": "box",
      "name": "filter-search",
      "field": "x",
-     "figma": 227,
+     "figma": 295,
      "code": 316,
-     "diff": 89,
+     "diff": 21,
      "allowed": null
     }
    ]
@@ -62071,7 +61604,7 @@
   "R-13_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -62185,17 +61718,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 893,
-     "code": 927,
-     "diff": 34,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
+     "code": 935,
+     "diff": 42,
      "allowed": null
     }
    ]
@@ -62203,7 +61727,7 @@
   "R-13_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -62317,17 +61841,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 893,
-     "code": 927,
-     "diff": 34,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
+     "code": 935,
+     "diff": 42,
      "allowed": null
     }
    ]
@@ -62335,7 +61850,7 @@
   "R-13_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -62454,17 +61969,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1293,
-     "code": 1327,
-     "diff": 34,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
+     "code": 1335,
+     "diff": 42,
      "allowed": null
     },
     {
@@ -62481,7 +61987,7 @@
   "R-13_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -62600,17 +62106,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1293,
-     "code": 1327,
-     "diff": 34,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
+     "code": 1335,
+     "diff": 42,
      "allowed": null
     },
     {
@@ -62627,7 +62124,7 @@
   "R-13_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -62746,17 +62243,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1589,
-     "code": 1623,
-     "diff": 34,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
+     "code": 1631,
+     "diff": 42,
      "allowed": null
     },
     {
@@ -62773,7 +62261,7 @@
   "R-13_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -62892,17 +62380,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1589,
-     "code": 1623,
-     "diff": 34,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
+     "code": 1631,
+     "diff": 42,
      "allowed": null
     },
     {
@@ -63048,8 +62527,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 253,
-     "code": 287,
-     "diff": 34,
+     "code": 295,
+     "diff": 42,
      "allowed": null
     },
     {
@@ -63057,8 +62536,8 @@
      "name": "filter-search",
      "field": "y",
      "figma": 138,
-     "code": 176,
-     "diff": 38,
+     "code": 177,
+     "diff": 39,
      "allowed": null
     }
    ]
@@ -63195,8 +62674,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 253,
-     "code": 287,
-     "diff": 34,
+     "code": 295,
+     "diff": 42,
      "allowed": null
     },
     {
@@ -63204,8 +62683,8 @@
      "name": "filter-search",
      "field": "y",
      "figma": 138,
-     "code": 176,
-     "diff": 38,
+     "code": 177,
+     "diff": 39,
      "allowed": null
     }
    ]
@@ -63213,7 +62692,7 @@
   "R-13_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -63333,17 +62812,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 645,
-     "code": 679,
-     "diff": 34,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
+     "code": 687,
+     "diff": 42,
      "allowed": null
     }
    ]
@@ -63351,7 +62821,7 @@
   "R-13_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -63471,17 +62941,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 645,
-     "code": 679,
-     "diff": 34,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
+     "code": 687,
+     "diff": 42,
      "allowed": null
     }
    ]
@@ -63551,8 +63012,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 892,
-     "diff": 527,
+     "code": 891,
+     "diff": 526,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -63572,8 +63033,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1036,
-     "diff": 355,
+     "code": 1035,
+     "diff": 354,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -63677,8 +63138,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 892,
-     "diff": 463,
+     "code": 891,
+     "diff": 462,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -63698,8 +63159,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1036,
-     "diff": 355,
+     "code": 1035,
+     "diff": 354,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -63809,8 +63270,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 892,
-     "diff": 527,
+     "code": 891,
+     "diff": 526,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -63830,8 +63291,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1036,
-     "diff": 355,
+     "code": 1035,
+     "diff": 354,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -63941,8 +63402,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 892,
-     "diff": 463,
+     "code": 891,
+     "diff": 462,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -63962,8 +63423,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1036,
-     "diff": 355,
+     "code": 1035,
+     "diff": 354,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -64073,8 +63534,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 892,
-     "diff": 527,
+     "code": 891,
+     "diff": 526,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -64094,8 +63555,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1036,
-     "diff": 355,
+     "code": 1035,
+     "diff": 354,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -64205,8 +63666,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 892,
-     "diff": 463,
+     "code": 891,
+     "diff": 462,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -64226,8 +63687,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1036,
-     "diff": 355,
+     "code": 1035,
+     "diff": 354,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -64337,8 +63798,8 @@
      "name": "main",
      "field": "h",
      "figma": 681,
-     "code": 912,
-     "diff": 231,
+     "code": 911,
+     "diff": 230,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -64358,8 +63819,8 @@
      "name": "footer",
      "field": "y",
      "figma": 843,
-     "code": 1056,
-     "diff": 213,
+     "code": 1055,
+     "diff": 212,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -64469,8 +63930,8 @@
      "name": "main",
      "field": "h",
      "figma": 681,
-     "code": 912,
-     "diff": 231,
+     "code": 911,
+     "diff": 230,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -64490,8 +63951,8 @@
      "name": "footer",
      "field": "y",
      "figma": 843,
-     "code": 1056,
-     "diff": 213,
+     "code": 1055,
+     "diff": 212,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -64601,8 +64062,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 892,
-     "diff": 527,
+     "code": 891,
+     "diff": 526,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -64622,8 +64083,8 @@
      "name": "footer",
      "field": "y",
      "figma": 527,
-     "code": 1036,
-     "diff": 509,
+     "code": 1035,
+     "diff": 508,
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
@@ -64733,8 +64194,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 892,
-     "diff": 463,
+     "code": 891,
+     "diff": 462,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -64754,8 +64215,8 @@
      "name": "footer",
      "field": "y",
      "figma": 591,
-     "code": 1036,
-     "diff": 445,
+     "code": 1035,
+     "diff": 444,
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
@@ -65799,10 +65260,10 @@
     {
      "kind": "box",
      "name": "filter-search",
-     "field": "y",
-     "figma": 187,
-     "code": 185,
-     "diff": -2,
+     "field": "x",
+     "figma": 778,
+     "code": 785,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -65959,10 +65420,10 @@
     {
      "kind": "box",
      "name": "filter-search",
-     "field": "y",
-     "figma": 187,
-     "code": 185,
-     "diff": -2,
+     "field": "x",
+     "figma": 778,
+     "code": 785,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -66128,10 +65589,10 @@
     {
      "kind": "box",
      "name": "filter-search",
-     "field": "y",
-     "figma": 187,
-     "code": 185,
-     "diff": -2,
+     "field": "x",
+     "figma": 1178,
+     "code": 1185,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -66297,10 +65758,10 @@
     {
      "kind": "box",
      "name": "filter-search",
-     "field": "y",
-     "figma": 187,
-     "code": 185,
-     "diff": -2,
+     "field": "x",
+     "figma": 1178,
+     "code": 1185,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -66466,10 +65927,10 @@
     {
      "kind": "box",
      "name": "filter-search",
-     "field": "y",
-     "figma": 187,
-     "code": 185,
-     "diff": -2,
+     "field": "x",
+     "figma": 1474,
+     "code": 1481,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -66635,10 +66096,10 @@
     {
      "kind": "box",
      "name": "filter-search",
-     "field": "y",
-     "figma": 187,
-     "code": 185,
-     "diff": -2,
+     "field": "x",
+     "figma": 1474,
+     "code": 1481,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -66651,7 +66112,7 @@
   "R-16_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 5,
+    "box": 4,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -66667,9 +66128,9 @@
      "kind": "box",
      "name": "body",
      "field": "h",
-     "figma": 1837,
+     "figma": 1811,
      "code": 1328,
-     "diff": -509,
+     "diff": -483,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -66700,9 +66161,9 @@
      "kind": "box",
      "name": "content-panel",
      "field": "h",
-     "figma": 1837,
+     "figma": 1811,
      "code": 1328,
-     "diff": -509,
+     "diff": -483,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -66748,9 +66209,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 1444,
+     "figma": 1418,
      "code": 414,
-     "diff": -1030,
+     "diff": -1004,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -66787,9 +66248,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1606,
+     "figma": 1580,
      "code": 1098,
-     "diff": -508,
+     "diff": -482,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -66820,27 +66281,18 @@
      "kind": "box",
      "name": "gl-filter",
      "field": "h",
-     "figma": 145,
+     "figma": 119,
      "code": 105,
-     "diff": -40,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 138,
-     "code": 287,
-     "diff": 149,
+     "diff": -14,
      "allowed": null
     },
     {
      "kind": "box",
      "name": "filter-search",
      "field": "y",
-     "figma": 227,
-     "code": 233,
-     "diff": 6,
+     "figma": 194,
+     "code": 234,
+     "diff": 40,
      "allowed": null
     },
     {
@@ -66853,7 +66305,7 @@
   "R-16_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 5,
+    "box": 4,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -66869,9 +66321,9 @@
      "kind": "box",
      "name": "body",
      "field": "h",
-     "figma": 1837,
+     "figma": 1811,
      "code": 1328,
-     "diff": -509,
+     "diff": -483,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -66902,9 +66354,9 @@
      "kind": "box",
      "name": "content-panel",
      "field": "h",
-     "figma": 1837,
+     "figma": 1811,
      "code": 1328,
-     "diff": -509,
+     "diff": -483,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -66950,9 +66402,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 1444,
+     "figma": 1418,
      "code": 414,
-     "diff": -1030,
+     "diff": -1004,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -66989,9 +66441,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 1606,
+     "figma": 1580,
      "code": 1098,
-     "diff": -508,
+     "diff": -482,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -67022,27 +66474,18 @@
      "kind": "box",
      "name": "gl-filter",
      "field": "h",
-     "figma": 145,
+     "figma": 119,
      "code": 105,
-     "diff": -40,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 138,
-     "code": 287,
-     "diff": 149,
+     "diff": -14,
      "allowed": null
     },
     {
      "kind": "box",
      "name": "filter-search",
      "field": "y",
-     "figma": 227,
-     "code": 233,
-     "diff": 6,
+     "figma": 194,
+     "code": 234,
+     "diff": 40,
      "allowed": null
     },
     {
@@ -67205,10 +66648,10 @@
     {
      "kind": "box",
      "name": "filter-search",
-     "field": "y",
-     "figma": 187,
-     "code": 185,
-     "diff": -2,
+     "field": "x",
+     "figma": 530,
+     "code": 537,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -67371,10 +66814,10 @@
     {
      "kind": "box",
      "name": "filter-search",
-     "field": "y",
-     "figma": 187,
-     "code": 185,
-     "diff": -2,
+     "field": "x",
+     "figma": 530,
+     "code": 537,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -69386,7 +68829,7 @@
   "R-18_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 0,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -69445,31 +68888,13 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 761,
-     "code": 753,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
-     "allowed": null
     }
    ]
   },
   "R-18_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 0,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -69528,31 +68953,13 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 761,
-     "code": 753,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
-     "allowed": null
     }
    ]
   },
   "R-18_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -69629,24 +69036,6 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 1161,
-     "code": 1153,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -69662,7 +69051,7 @@
   "R-18_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -69742,24 +69131,6 @@
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 1161,
-     "code": 1153,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "sidebar-nav",
      "field": "w",
      "figma": 224,
@@ -69772,7 +69143,7 @@
   "R-18_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -69849,24 +69220,6 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 1457,
-     "code": 1449,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -69882,7 +69235,7 @@
   "R-18_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -69962,24 +69315,6 @@
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 1457,
-     "code": 1449,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "sidebar-nav",
      "field": "w",
      "figma": 224,
@@ -69992,7 +69327,7 @@
   "R-18_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 0,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -70002,13 +69337,31 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 8,
+   "allowed": 10,
    "rows": [
+    {
+     "kind": "box",
+     "name": "body",
+     "field": "h",
+     "figma": 918,
+     "code": 892,
+     "diff": -26,
+     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
+    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+    },
+    {
+     "kind": "box",
+     "name": "content-panel",
+     "field": "h",
+     "figma": 918,
+     "code": 892,
+     "diff": -26,
+     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -70035,9 +69388,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 499,
+     "figma": 525,
      "code": 591,
-     "diff": 92,
+     "diff": 66,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70056,9 +69409,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 661,
+     "figma": 687,
      "code": 735,
-     "diff": 74,
+     "diff": 48,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70066,40 +69419,13 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "h",
-     "figma": 79,
-     "code": 105,
-     "diff": 26,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 121,
-     "code": 287,
-     "diff": 166,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 145,
-     "code": 136,
-     "diff": -9,
-     "allowed": null
     }
    ]
   },
   "R-18_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 0,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -70109,13 +69435,31 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 8,
+   "allowed": 10,
    "rows": [
+    {
+     "kind": "box",
+     "name": "body",
+     "field": "h",
+     "figma": 918,
+     "code": 892,
+     "diff": -26,
+     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
+    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+    },
+    {
+     "kind": "box",
+     "name": "content-panel",
+     "field": "h",
+     "figma": 918,
+     "code": 892,
+     "diff": -26,
+     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -70142,9 +69486,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 499,
+     "figma": 525,
      "code": 591,
-     "diff": 92,
+     "diff": 66,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70163,9 +69507,9 @@
      "kind": "box",
      "name": "footer",
      "field": "y",
-     "figma": 661,
+     "figma": 687,
      "code": 735,
-     "diff": 74,
+     "diff": 48,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70173,40 +69517,13 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "h",
-     "figma": 79,
-     "code": 105,
-     "diff": 26,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 121,
-     "code": 287,
-     "diff": 166,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 145,
-     "code": 136,
-     "diff": -9,
-     "allowed": null
     }
    ]
   },
   "R-18_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 0,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -70271,31 +69588,13 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 513,
-     "code": 505,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
-     "allowed": null
     }
    ]
   },
   "R-18_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 0,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -70360,24 +69659,6 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 513,
-     "code": 505,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 138,
-     "code": 136,
-     "diff": -2,
-     "allowed": null
     }
    ]
   },
@@ -70422,8 +69703,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 639,
-     "diff": 30,
+     "code": 638,
+     "diff": 29,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70431,8 +69712,8 @@
      "name": "footer",
      "field": "y",
      "figma": 771,
-     "code": 783,
-     "diff": 12,
+     "code": 782,
+     "diff": 11,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70443,20 +69724,20 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 170,
-     "code": 168,
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
      "diff": -2,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 935,
-     "code": 927,
-     "diff": -8,
+     "name": "gl-filter",
+     "field": "y",
+     "figma": 170,
+     "code": 167,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -70511,8 +69792,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 639,
-     "diff": 30,
+     "code": 638,
+     "diff": 29,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70520,8 +69801,8 @@
      "name": "footer",
      "field": "y",
      "figma": 771,
-     "code": 783,
-     "diff": 12,
+     "code": 782,
+     "diff": 11,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70532,20 +69813,20 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 170,
-     "code": 168,
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
      "diff": -2,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 935,
-     "code": 927,
-     "diff": -8,
+     "name": "gl-filter",
+     "field": "y",
+     "figma": 170,
+     "code": 167,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -70618,8 +69899,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 595,
-     "diff": -14,
+     "code": 594,
+     "diff": -15,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70630,20 +69911,20 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 170,
-     "code": 168,
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
      "diff": -2,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 1335,
-     "code": 1327,
-     "diff": -8,
+     "name": "gl-filter",
+     "field": "y",
+     "figma": 170,
+     "code": 167,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -70716,8 +69997,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 595,
-     "diff": -14,
+     "code": 594,
+     "diff": -15,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70728,20 +70009,20 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 170,
-     "code": 168,
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
      "diff": -2,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 1335,
-     "code": 1327,
-     "diff": -8,
+     "name": "gl-filter",
+     "field": "y",
+     "figma": 170,
+     "code": 167,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -70814,8 +70095,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 595,
-     "diff": -14,
+     "code": 594,
+     "diff": -15,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70826,20 +70107,20 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 170,
-     "code": 168,
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
      "diff": -2,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 1631,
-     "code": 1623,
-     "diff": -8,
+     "name": "gl-filter",
+     "field": "y",
+     "figma": 170,
+     "code": 167,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -70912,8 +70193,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 595,
-     "diff": -14,
+     "code": 594,
+     "diff": -15,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70924,20 +70205,20 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 170,
-     "code": 168,
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
      "diff": -2,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 1631,
-     "code": 1623,
-     "diff": -8,
+     "name": "gl-filter",
+     "field": "y",
+     "figma": 170,
+     "code": 167,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -71016,8 +70297,8 @@
      "name": "main",
      "field": "h",
      "figma": 1225,
-     "code": 972,
-     "diff": -253,
+     "code": 971,
+     "diff": -254,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -71025,8 +70306,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1387,
-     "code": 1116,
-     "diff": -271,
+     "code": 1115,
+     "diff": -272,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -71037,20 +70318,20 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 170,
-     "code": 168,
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
      "diff": -2,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 295,
-     "code": 287,
-     "diff": -8,
+     "name": "gl-filter",
+     "field": "y",
+     "figma": 170,
+     "code": 167,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -71129,8 +70410,8 @@
      "name": "main",
      "field": "h",
      "figma": 1225,
-     "code": 972,
-     "diff": -253,
+     "code": 971,
+     "diff": -254,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -71138,8 +70419,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1387,
-     "code": 1116,
-     "diff": -271,
+     "code": 1115,
+     "diff": -272,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -71150,20 +70431,20 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 170,
-     "code": 168,
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
      "diff": -2,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 295,
-     "code": 287,
-     "diff": -8,
+     "name": "gl-filter",
+     "field": "y",
+     "figma": 170,
+     "code": 167,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -71224,8 +70505,8 @@
      "name": "main",
      "field": "h",
      "figma": 741,
-     "code": 770,
-     "diff": 29,
+     "code": 769,
+     "diff": 28,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -71233,8 +70514,8 @@
      "name": "footer",
      "field": "y",
      "figma": 903,
-     "code": 914,
-     "diff": 11,
+     "code": 913,
+     "diff": 10,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -71245,20 +70526,20 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 170,
-     "code": 168,
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
      "diff": -2,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 687,
-     "code": 679,
-     "diff": -8,
+     "name": "gl-filter",
+     "field": "y",
+     "figma": 170,
+     "code": 167,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -71319,8 +70600,8 @@
      "name": "main",
      "field": "h",
      "figma": 741,
-     "code": 770,
-     "diff": 29,
+     "code": 769,
+     "diff": 28,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -71328,8 +70609,8 @@
      "name": "footer",
      "field": "y",
      "figma": 903,
-     "code": 914,
-     "diff": 11,
+     "code": 913,
+     "diff": 10,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -71340,20 +70621,20 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 170,
-     "code": 168,
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
      "diff": -2,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 687,
-     "code": 679,
-     "diff": -8,
+     "name": "gl-filter",
+     "field": "y",
+     "figma": 170,
+     "code": 167,
+     "diff": -3,
      "allowed": null
     },
     {
@@ -71370,7 +70651,7 @@
   "R-20_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -71480,17 +70761,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 796,
-     "code": 790,
-     "diff": -6,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 220,
-     "code": 218,
-     "diff": -2,
+     "code": 798,
+     "diff": 2,
      "allowed": null
     },
     {
@@ -71503,7 +70775,7 @@
   "R-20_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -71613,17 +70885,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 796,
-     "code": 790,
-     "diff": -6,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 220,
-     "code": 218,
-     "diff": -2,
+     "code": 798,
+     "diff": 2,
      "allowed": null
     },
     {
@@ -71636,7 +70899,7 @@
   "R-20_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -71748,17 +71011,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1196,
-     "code": 1190,
-     "diff": -6,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 220,
-     "code": 218,
-     "diff": -2,
+     "code": 1198,
+     "diff": 2,
      "allowed": null
     },
     {
@@ -71771,7 +71025,7 @@
   "R-20_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -71883,17 +71137,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1196,
-     "code": 1190,
-     "diff": -6,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 220,
-     "code": 218,
-     "diff": -2,
+     "code": 1198,
+     "diff": 2,
      "allowed": null
     },
     {
@@ -71906,7 +71151,7 @@
   "R-20_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -72018,17 +71263,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1492,
-     "code": 1486,
-     "diff": -6,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 220,
-     "code": 218,
-     "diff": -2,
+     "code": 1494,
+     "diff": 2,
      "allowed": null
     },
     {
@@ -72041,7 +71277,7 @@
   "R-20_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -72153,17 +71389,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1492,
-     "code": 1486,
-     "diff": -6,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 220,
-     "code": 218,
-     "diff": -2,
+     "code": 1494,
+     "diff": 2,
      "allowed": null
     },
     {
@@ -72176,7 +71403,7 @@
   "R-20_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -72310,17 +71537,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 156,
-     "code": 287,
-     "diff": 131,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 212,
-     "code": 210,
-     "diff": -2,
+     "code": 295,
+     "diff": 139,
      "allowed": null
     },
     {
@@ -72333,7 +71551,7 @@
   "R-20_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -72467,17 +71685,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 156,
-     "code": 287,
-     "diff": 131,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 212,
-     "code": 210,
-     "diff": -2,
+     "code": 295,
+     "diff": 139,
      "allowed": null
     },
     {
@@ -72490,7 +71699,7 @@
   "R-20_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -72606,17 +71815,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 548,
-     "code": 542,
-     "diff": -6,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 220,
-     "code": 218,
-     "diff": -2,
+     "code": 550,
+     "diff": 2,
      "allowed": null
     },
     {
@@ -72629,7 +71829,7 @@
   "R-20_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -72745,17 +71945,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 548,
-     "code": 542,
-     "diff": -6,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "y",
-     "figma": 220,
-     "code": 218,
-     "diff": -2,
+     "code": 550,
+     "diff": 2,
      "allowed": null
     },
     {
@@ -74303,7 +73494,7 @@
   "R-23_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -74381,8 +73572,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 351,
-     "diff": -28,
+     "code": 350,
+     "diff": -29,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -74422,11 +73613,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 268,
-     "diff": -4,
+     "code": 267,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -74434,8 +73634,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 809,
-     "code": 827,
-     "diff": 18,
+     "code": 835,
+     "diff": 26,
      "allowed": null
     },
     {
@@ -74457,7 +73657,7 @@
   "R-23_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -74535,8 +73735,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 351,
-     "diff": -28,
+     "code": 350,
+     "diff": -29,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -74594,11 +73794,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 268,
-     "diff": -4,
+     "code": 267,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -74606,8 +73815,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 809,
-     "code": 827,
-     "diff": 18,
+     "code": 835,
+     "diff": 26,
      "allowed": null
     },
     {
@@ -74629,7 +73838,7 @@
   "R-23_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -74705,8 +73914,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 351,
-     "diff": -28,
+     "code": 350,
+     "diff": -29,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -74746,11 +73955,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 268,
-     "diff": -4,
+     "code": 267,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -74758,8 +73976,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1209,
-     "code": 1227,
-     "diff": 18,
+     "code": 1235,
+     "diff": 26,
      "allowed": null
     },
     {
@@ -74781,7 +73999,7 @@
   "R-23_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -74857,8 +74075,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 351,
-     "diff": -28,
+     "code": 350,
+     "diff": -29,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -74916,11 +74134,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 268,
-     "diff": -4,
+     "code": 267,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -74928,8 +74155,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1209,
-     "code": 1227,
-     "diff": 18,
+     "code": 1235,
+     "diff": 26,
      "allowed": null
     },
     {
@@ -74951,7 +74178,7 @@
   "R-23_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -75027,8 +74254,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 329,
-     "diff": -50,
+     "code": 328,
+     "diff": -51,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75068,11 +74295,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 268,
-     "diff": -4,
+     "code": 267,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -75080,8 +74316,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1505,
-     "code": 1523,
-     "diff": 18,
+     "code": 1531,
+     "diff": 26,
      "allowed": null
     },
     {
@@ -75103,7 +74339,7 @@
   "R-23_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -75179,8 +74415,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 329,
-     "diff": -50,
+     "code": 328,
+     "diff": -51,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75238,11 +74474,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 268,
-     "diff": -4,
+     "code": 267,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -75250,8 +74495,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1505,
-     "code": 1523,
-     "diff": 18,
+     "code": 1531,
+     "diff": 26,
      "allowed": null
     },
     {
@@ -75273,7 +74518,7 @@
   "R-23_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 5,
+    "box": 3,
     "text": 0,
     "font": 1,
     "color": 0,
@@ -75283,8 +74528,17 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 13,
    "rows": [
+    {
+     "kind": "box",
+     "name": "body",
+     "field": "h",
+     "figma": 1043,
+     "code": 1003,
+     "diff": -40,
+     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
+    },
     {
      "kind": "icon",
      "name": "body",
@@ -75310,6 +74564,15 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+    },
+    {
+     "kind": "box",
+     "name": "content-panel",
+     "field": "h",
+     "figma": 1043,
+     "code": 1003,
+     "diff": -40,
+     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -75356,9 +74619,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 610,
-     "code": 465,
-     "diff": -145,
+     "figma": 650,
+     "code": 464,
+     "diff": -186,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75380,6 +74643,15 @@
       "sort-desc"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
+    },
+    {
+     "kind": "box",
+     "name": "footer",
+     "field": "y",
+     "figma": 812,
+     "code": 773,
+     "diff": -39,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -75413,29 +74685,11 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 286,
-     "code": 288,
-     "diff": 2,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
+     "name": "gl-tabs",
      "field": "h",
-     "figma": 65,
-     "code": 105,
-     "diff": 40,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 226,
-     "code": 287,
-     "diff": 61,
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -75448,7 +74702,7 @@
   "R-23_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 5,
+    "box": 3,
     "text": 0,
     "font": 1,
     "color": 0,
@@ -75458,8 +74712,17 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 13,
    "rows": [
+    {
+     "kind": "box",
+     "name": "body",
+     "field": "h",
+     "figma": 1043,
+     "code": 1003,
+     "diff": -40,
+     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
+    },
     {
      "kind": "icon",
      "name": "body",
@@ -75485,6 +74748,15 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+    },
+    {
+     "kind": "box",
+     "name": "content-panel",
+     "field": "h",
+     "figma": 1043,
+     "code": 1003,
+     "diff": -40,
+     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -75531,9 +74803,9 @@
      "kind": "box",
      "name": "main",
      "field": "h",
-     "figma": 610,
-     "code": 465,
-     "diff": -145,
+     "figma": 650,
+     "code": 464,
+     "diff": -186,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75555,6 +74827,15 @@
       "sort-desc"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
+    },
+    {
+     "kind": "box",
+     "name": "footer",
+     "field": "y",
+     "figma": 812,
+     "code": 773,
+     "diff": -39,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -75588,29 +74869,11 @@
     },
     {
      "kind": "box",
-     "name": "gl-filter",
-     "field": "y",
-     "figma": 286,
-     "code": 288,
-     "diff": 2,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
+     "name": "gl-tabs",
      "field": "h",
-     "figma": 65,
-     "code": 105,
-     "diff": 40,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "filter-search",
-     "field": "x",
-     "figma": 226,
-     "code": 287,
-     "diff": 61,
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -75623,7 +74886,7 @@
   "R-23_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -75707,8 +74970,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 373,
-     "diff": -6,
+     "code": 372,
+     "diff": -7,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75748,11 +75011,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 268,
-     "diff": -4,
+     "code": 267,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -75760,8 +75032,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 561,
-     "code": 579,
-     "diff": 18,
+     "code": 587,
+     "diff": 26,
      "allowed": null
     },
     {
@@ -75783,7 +75055,7 @@
   "R-23_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -75867,8 +75139,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 373,
-     "diff": -6,
+     "code": 372,
+     "diff": -7,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75926,11 +75198,20 @@
     },
     {
      "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 268,
-     "diff": -4,
+     "code": 267,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -75938,8 +75219,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 561,
-     "code": 579,
-     "diff": 18,
+     "code": 587,
+     "diff": 26,
      "allowed": null
     },
     {
@@ -75961,7 +75242,7 @@
   "R-24_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -76043,8 +75324,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10678,
-     "diff": 9352,
+     "code": 10677,
+     "diff": 9351,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76065,8 +75346,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10822,
-     "diff": 9334,
+     "code": 10821,
+     "diff": 9333,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -76074,13 +75355,22 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
     }
    ]
   },
   "R-24_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -76162,8 +75452,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10678,
-     "diff": 9352,
+     "code": 10677,
+     "diff": 9351,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76184,8 +75474,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10822,
-     "diff": 9334,
+     "code": 10821,
+     "diff": 9333,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -76193,13 +75483,22 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
     }
    ]
   },
   "R-24_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -76295,8 +75594,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10678,
-     "diff": 9352,
+     "code": 10677,
+     "diff": 9351,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76317,8 +75616,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10822,
-     "diff": 9334,
+     "code": 10821,
+     "diff": 9333,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -76326,13 +75625,22 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
     }
    ]
   },
   "R-24_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -76428,8 +75736,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10678,
-     "diff": 9352,
+     "code": 10677,
+     "diff": 9351,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76450,8 +75758,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10822,
-     "diff": 9334,
+     "code": 10821,
+     "diff": 9333,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -76459,13 +75767,22 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
     }
    ]
   },
   "R-24_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -76561,8 +75878,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10678,
-     "diff": 9352,
+     "code": 10677,
+     "diff": 9351,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76583,8 +75900,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10822,
-     "diff": 9334,
+     "code": 10821,
+     "diff": 9333,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -76592,13 +75909,22 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
     }
    ]
   },
   "R-24_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -76694,8 +76020,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10678,
-     "diff": 9352,
+     "code": 10677,
+     "diff": 9351,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76716,8 +76042,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10822,
-     "diff": 9334,
+     "code": 10821,
+     "diff": 9333,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -76725,6 +76051,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "gl-tabs",
+     "field": "h",
+     "figma": 49,
+     "code": 47,
+     "diff": -2,
+     "allowed": null
     }
    ]
   },
@@ -76819,8 +76154,8 @@
      "name": "main",
      "field": "h",
      "figma": 1912,
-     "code": 13318,
-     "diff": 11406,
+     "code": 13317,
+     "diff": 11405,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76841,8 +76176,8 @@
      "name": "footer",
      "field": "y",
      "figma": 2074,
-     "code": 13462,
-     "diff": 11388,
+     "code": 13461,
+     "diff": 11387,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -76856,8 +76191,8 @@
      "name": "gl-tabs",
      "field": "h",
      "figma": 145,
-     "code": 48,
-     "diff": -97,
+     "code": 47,
+     "diff": -98,
      "allowed": null
     }
    ]
@@ -76953,8 +76288,8 @@
      "name": "main",
      "field": "h",
      "figma": 1912,
-     "code": 13318,
-     "diff": 11406,
+     "code": 13317,
+     "diff": 11405,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76975,8 +76310,8 @@
      "name": "footer",
      "field": "y",
      "figma": 2074,
-     "code": 13462,
-     "diff": 11388,
+     "code": 13461,
+     "diff": 11387,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -76990,8 +76325,8 @@
      "name": "gl-tabs",
      "field": "h",
      "figma": 145,
-     "code": 48,
-     "diff": -97,
+     "code": 47,
+     "diff": -98,
      "allowed": null
     }
    ]
@@ -77087,8 +76422,8 @@
      "name": "main",
      "field": "h",
      "figma": 1374,
-     "code": 10876,
-     "diff": 9502,
+     "code": 10875,
+     "diff": 9501,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -77109,8 +76444,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1536,
-     "code": 11020,
-     "diff": 9484,
+     "code": 11019,
+     "diff": 9483,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -77124,8 +76459,8 @@
      "name": "gl-tabs",
      "field": "h",
      "figma": 97,
-     "code": 48,
-     "diff": -49,
+     "code": 47,
+     "diff": -50,
      "allowed": null
     }
    ]
@@ -77221,8 +76556,8 @@
      "name": "main",
      "field": "h",
      "figma": 1374,
-     "code": 10876,
-     "diff": 9502,
+     "code": 10875,
+     "diff": 9501,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -77243,8 +76578,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1536,
-     "code": 11020,
-     "diff": 9484,
+     "code": 11019,
+     "diff": 9483,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -77258,8 +76593,8 @@
      "name": "gl-tabs",
      "field": "h",
      "figma": 97,
-     "code": 48,
-     "diff": -49,
+     "code": 47,
+     "diff": -50,
      "allowed": null
     }
    ]

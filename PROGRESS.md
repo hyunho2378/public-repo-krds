@@ -262,3 +262,15 @@
   - 38 4 {'D21': 38} ('box', 'login-field', 'y') G-08b_360_Guest {'field': 'y', 'figma': 497, 'code': 474, 'diff': -23}
 - [C2] 원장 9차: R-17 제목 줄 전체를 page-head(h1+코드 단추, 코드 단추 자체에 code-button, 탭 간격 4), 필터 막대 끝 패딩 0과 위 선
 - [C2] 원장 10차: R-17 코드 단추 32 높이, page-head 아래 안쪽 8과 높이 48, 탭 간격 4(.gl-tabs.gl-tabs-gap)
+
+## 라운드2(2026. 11. 1. 00:20, D21): 공식 합 2,468, 새 허용 0건. 다음: A-01 360 업무로 찾기 행(81 대 57), A-01 결과 행 매칭(Figma 1024 x40 y577 = 결과 목록, 코드 x320 = 왼쪽 범위 열 옆), A-09 탭 줄, G-08b 360 입력칸 y, C2 gl-tabs 49·filter-search x
+  - 110 3 {'D21': 110} ('box', 'project-row', 'h') A-01_360_Guest {'field': 'h', 'figma': 57, 'code': 81, 'diff': 24}
+  - 75 3 {'D21': 75} ('only-figma', 'project-row') A-01_1024_Guest {'want': {'x': 40, 'y': 867, 'w': 944, 'h': 95}}
+  - 70 8 {'D21': 20, 'C1': 20, 'C2': 30} ('box', 'gl-filter', 'y') G-01_1024_Guest {'field': 'y', 'figma': 217, 'code': 220, 'diff': 3}
+  - 62 3 {'D21': 62} ('box', 'project-row', 'y') A-01_1024_Guest {'field': 'y', 'figma': 577, 'code': 202, 'diff': -375}
+  - 52 6 {'C1': 10, 'C2': 42} ('box', 'gl-tabs', 'h') R-07_1024_Guest {'field': 'h', 'figma': 49, 'code': 47, 'diff': -2}
+  - 46 5 {'C2': 46} ('box', 'filter-search', 'x') R-11_1024_Guest {'field': 'x', 'figma': 867, 'code': 855, 'diff': -12}
+  - 44 5 {'D21': 30, 'C1': 10, 'C2': 4} ('text', 'page-head') G-06_1024_Guest {'figma': ['내 작업'], 'code': '내 프로젝트', 'pending': '사용자 캡처 대
+  - 40 5 {'D21': 40} ('only-figma', 'tabs') A-09_1024_Guest {'want': {'x': 40, 'y': 199, 'w': 944, 'h': 40}}
+  - 38 4 {'D21': 38} ('box', 'login-field', 'y') G-08b_360_Guest {'field': 'y', 'figma': 497, 'code': 474, 'diff': -23}
+  - 36 2 {'D21': 36} ('box', 'project-row', 'x') A-01_1024_Guest {'field': 'x', 'figma': 40, 'code': 320, 'diff': 280}
