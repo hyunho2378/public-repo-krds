@@ -365,3 +365,8 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 /* 판 위 1px: 실제 공공 깃랩 판 테두리는 CSS border(1)라 내용이 1 아래에서 시작, Figma도 테두리가 레이아웃에 포함돼 경로 줄 y81. 코드는 안쪽 그림자 선이라 위 안쪽에 선 두께를 더해 같게 */
 #root .rb-shell:not(.is-bare) > .rb-panel > .rb-panel-in { padding-top: calc(var(--rb-panel-pad-y) + var(--krds-border-width-static-regular)); }
 @media (max-width: 1023px) { #root .rb-taskfind .rb-prow > .rb-prow-main { grid-column: 3; grid-row: 1; } #root .rb-taskfind .rb-prow > .rb-prow-side { grid-column: 3; grid-row: 2; justify-self: start; } #root .rb-taskfind .rb-prow > .krds-drop-wrap { grid-column: 5; grid-row: 1; } }
+/* 탐색 행 오른쪽 열: 개수 줄·업데이트 줄 각 20(13/20) + 사이 4 = 44(실제 구조 + KRDS 글자, 10. 31. 판정) */
+#root .rb-prow-stats, #root .rb-prow-time { line-height: var(--rb-lh-13); min-height: 0; }
+#root .rb-prow-stats li, #root .rb-prow-stats a { line-height: var(--rb-lh-13); height: var(--rb-lh-13); }
+/* 768 미만 사이드바 없는 화면(검색): 판 바깥 여백 없이 판 안 16(KRDS 360 마진, 행 폭 328) */
+@media (max-width: 767px) { #root .rb-shell:not(.has-side):not(.is-drawer):not(.is-bare) { padding: 0; } }

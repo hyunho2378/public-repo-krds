@@ -2035,7 +2035,7 @@
     "Explore/업무로 찾기"
    ],
    "code": {
-    "path": "/search?q=%ED%9A%8C%EC%9D%98%EB%A1%9D%20%EC%9E%90%EB%8F%99%20%EC%9E%91%EC%84%B1",
+    "path": "/search?q=%EB%B3%B4%EA%B3%A0%EC%84%9C%20%EC%9E%91%EC%84%B1",
     "query": {
      "fixture": "kordoc"
     },
