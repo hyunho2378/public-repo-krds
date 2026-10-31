@@ -132,6 +132,7 @@ export const g = {
   blameOn: 'Blame',
   swapBtn: '소스와 대상 바꾸기',
   repoLabel: '리포지토리',
+  fileEditTab: '파일 편집',
   noSave: '시험판에서는 저장할 수 없습니다',
   assignee: '담당자',
   labels: '라벨',

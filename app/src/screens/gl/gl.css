@@ -249,3 +249,5 @@
 #root .gl-pagehead { gap: var(--krds-number-7); }
 #root .gl-filter-input:placeholder-shown { color: var(--krds-color-text-subtle); }
 #root .gl-head { gap: var(--krds-number-7); }
+#root .gl-bar.is-top { border-radius: var(--krds-radius-medium3) var(--krds-radius-medium3) 0 0; }
+#root .rb-editor-tabs .rb-code-view { height: var(--rb-row-h); }

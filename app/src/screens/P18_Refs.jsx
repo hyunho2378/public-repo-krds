@@ -123,7 +123,7 @@ export function Tags() {
         <p className="gl-intro">{g.tagIntro}</p>
         {!list ? <Status {...body} /> : (
           <div>
-            <div className="gl-bar" data-figma="gl-filter">
+            <div className="gl-bar is-top" data-figma="gl-filter">
               <FilterField value={query} onChange={setQuery} placeholder={g.tagFilter} />
               <SortControl options={[['updated', g.sortUpdated], ['name', g.sortName]]} value={sort} onChange={setSort} desc={desc} onDir={() => setDesc(!desc)} />
             </div>

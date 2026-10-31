@@ -153,8 +153,7 @@ function PackagesView({ list }) {
   const rows = list.filter((x) => `${x.name} ${x.version}`.toLowerCase().includes(q.trim().toLowerCase()));
   return (
     <>
-      <div data-figma="page-head" className="gl-ph"><h2 className="gl-page-title">{p1.pkgTitle}</h2>
-      <p className="gl-pkg-count"><Icon name="ext/catalog" /> {p1.pkgCount(list.length)}</p></div>
+      <p className="gl-pkg-count"><Icon name="ext/catalog" /> {p1.pkgCount(list.length)}</p>
       <PageSearch value={q} onChange={setQ} placeholder={p1.pkgFilter}>
         <span className="krds-btn small tertiary">{p1.pkgSort}</span>
       </PageSearch>
