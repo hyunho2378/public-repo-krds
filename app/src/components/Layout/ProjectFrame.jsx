@@ -96,7 +96,7 @@ const clip = (s) => (s.length > 80 ? `${s.slice(0, 79)}…` : s);
 
 const PAGE_HEAD = new Set(['A-03', 'A-08', 'A-10', 'R-30', 'R-27', 'R-28', 'R-29', 'R-20']);
 
-export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false, hideCrumbs = false, title = false, info = false }) {
+export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false, hideCrumbs = false, title = false, info = false, headExtra = null }) {
   // 프로젝트 알림: 왼쪽 바(프로젝트 메뉴, 작업 항목 수)에 쓴다. 화면을 떠나면 지운다.
   // 목록에서 눌러 들어오면 그 행의 프로젝트 자료(state.project)로 경로와 제목을 먼저 그린다(빈 제목 670ms 방지, audit_v3 05-17)
   const seed = useLocation().state?.project;
@@ -132,7 +132,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
         {/* 공공 깃랩 02, 52: 제목 줄은 본문과 정보 열 위 전체 폭(모바일에서는 정보 열이 제목 바로 아래로) */}
         {title ? <div className="rb-repo-title-row"><RepoHeader project={project} id={data.id} /></div> : null}
         {/* 덧붙임 화면(A-03, A-08, A-10)과 사용 방법(R-30): 경로 아래 화면 제목 32/40(Figma page-head, D-16 화면 제목) */}
-        {PAGE_HEAD.has(screenId) && tabLabel && !seeded ? <h1 className="rb-frame-title" data-figma="page-head">{tabLabel}</h1> : null}
+        {PAGE_HEAD.has(screenId) && tabLabel && !seeded ? (headExtra ? <div className="rb-frame-headbox" data-figma="page-head">{headExtra}<h1 className="rb-frame-title">{tabLabel}</h1></div> : <h1 className="rb-frame-title" data-figma="page-head">{tabLabel}</h1>) : null}
         <div className="rb-repo-body">
           {seeded ? <Status {...data} /> : children}
         </div>
