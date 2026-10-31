@@ -18,7 +18,9 @@ const frameH = (screen, bp, auth) => { const v = figma.find((x) => x.screen === 
 const only = process.argv.includes('--screen') ? process.argv[process.argv.indexOf('--screen') + 1] : null;
 const browser = await chromium.launch();
 const page = await browser.newPage();
-const out = { measuredAt: new Date().toISOString(), base: BASE, screens: {} };
+// --screen이면 기존 measured_full.json에 그 화면만 바꿔 넣는다
+const prev = await fs.readFile(path.join(ROOT, 'code_plan', 'measured_full.json'), 'utf8').then(JSON.parse).catch(() => null);
+const out = only && prev ? { ...prev, measuredAt: new Date().toISOString() } : { measuredAt: new Date().toISOString(), base: BASE, screens: {} };
 for (const s of map.screens) {
   if (only && s.screen !== only) continue;
   for (const auth of s.code.auth) {
