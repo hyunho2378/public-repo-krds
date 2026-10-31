@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T13:15:21.176Z",
+ "generated": "2026-10-31T13:19:18.623Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
@@ -101624,8 +101624,8 @@
   "R-20_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
-    "text": 2,
+    "box": 1,
+    "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
@@ -101634,7 +101634,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "icon",
@@ -101703,25 +101703,18 @@
      "name": "main",
      "field": "h",
      "figma": 409,
-     "code": 465,
-     "diff": 56,
+     "code": 429,
+     "diff": 20,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
      "kind": "text",
      "name": "main",
      "figma": [
-      "패키지 레지스트리",
       "</>"
      ],
-     "code": "패키지 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
+     "code": "패키지 레지스트리 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
-    },
-    {
-     "kind": "shape",
-     "name": "main",
-     "detail": "간격 8→24",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
      "kind": "icon",
@@ -101755,30 +101748,11 @@
     },
     {
      "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 74,
-     "code": 40,
-     "diff": -34,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "패키지 레지스트리",
-      "0 패키지"
-     ],
-     "code": "패키지",
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 203,
-     "code": 254,
-     "diff": 51,
+     "code": 218,
+     "diff": 15,
      "allowed": null
     },
     {
@@ -101797,8 +101771,8 @@
   "R-20_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
-    "text": 2,
+    "box": 1,
+    "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
@@ -101807,7 +101781,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "icon",
@@ -101876,25 +101850,18 @@
      "name": "main",
      "field": "h",
      "figma": 409,
-     "code": 465,
-     "diff": 56,
+     "code": 429,
+     "diff": 20,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
      "kind": "text",
      "name": "main",
      "figma": [
-      "패키지 레지스트리",
       "</>"
      ],
-     "code": "패키지 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
+     "code": "패키지 레지스트리 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
-    },
-    {
-     "kind": "shape",
-     "name": "main",
-     "detail": "간격 8→24",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
      "kind": "icon",
@@ -101928,30 +101895,11 @@
     },
     {
      "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 74,
-     "code": 40,
-     "diff": -34,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "패키지 레지스트리",
-      "0 패키지"
-     ],
-     "code": "패키지",
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 203,
-     "code": 254,
-     "diff": 51,
+     "code": 218,
+     "diff": 15,
      "allowed": null
     },
     {
@@ -101970,8 +101918,8 @@
   "R-20_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 6,
-    "text": 2,
+    "box": 5,
+    "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
@@ -101980,7 +101928,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 14,
+   "allowed": 13,
    "rows": [
     {
      "kind": "shape",
@@ -102115,25 +102063,18 @@
      "name": "main",
      "field": "h",
      "figma": 409,
-     "code": 465,
-     "diff": 56,
+     "code": 429,
+     "diff": 20,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
      "kind": "text",
      "name": "main",
      "figma": [
-      "패키지 레지스트리",
       "</>"
      ],
-     "code": "패키지 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
+     "code": "패키지 레지스트리 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
-    },
-    {
-     "kind": "shape",
-     "name": "main",
-     "detail": "간격 8→24",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
      "kind": "icon",
@@ -102167,30 +102108,11 @@
     },
     {
      "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 74,
-     "code": 40,
-     "diff": -34,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "패키지 레지스트리",
-      "0 패키지"
-     ],
-     "code": "패키지",
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 203,
-     "code": 254,
-     "diff": 51,
+     "code": 218,
+     "diff": 15,
      "allowed": null
     },
     {
@@ -102277,8 +102199,8 @@
   "R-20_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 6,
-    "text": 2,
+    "box": 5,
+    "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
@@ -102287,7 +102209,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 14,
+   "allowed": 13,
    "rows": [
     {
      "kind": "shape",
@@ -102422,25 +102344,18 @@
      "name": "main",
      "field": "h",
      "figma": 409,
-     "code": 465,
-     "diff": 56,
+     "code": 429,
+     "diff": 20,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
      "kind": "text",
      "name": "main",
      "figma": [
-      "패키지 레지스트리",
       "</>"
      ],
-     "code": "패키지 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
+     "code": "패키지 레지스트리 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
-    },
-    {
-     "kind": "shape",
-     "name": "main",
-     "detail": "간격 8→24",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
      "kind": "icon",
@@ -102474,30 +102389,11 @@
     },
     {
      "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 74,
-     "code": 40,
-     "diff": -34,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "패키지 레지스트리",
-      "0 패키지"
-     ],
-     "code": "패키지",
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 203,
-     "code": 254,
-     "diff": 51,
+     "code": 218,
+     "diff": 15,
      "allowed": null
     },
     {
@@ -102584,8 +102480,8 @@
   "R-20_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 6,
-    "text": 2,
+    "box": 5,
+    "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
@@ -102594,7 +102490,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 14,
+   "allowed": 13,
    "rows": [
     {
      "kind": "shape",
@@ -102729,25 +102625,18 @@
      "name": "main",
      "field": "h",
      "figma": 409,
-     "code": 465,
-     "diff": 56,
+     "code": 429,
+     "diff": 20,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
      "kind": "text",
      "name": "main",
      "figma": [
-      "패키지 레지스트리",
       "</>"
      ],
-     "code": "패키지 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
+     "code": "패키지 레지스트리 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
-    },
-    {
-     "kind": "shape",
-     "name": "main",
-     "detail": "간격 8→24",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
      "kind": "icon",
@@ -102781,30 +102670,11 @@
     },
     {
      "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 74,
-     "code": 40,
-     "diff": -34,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "패키지 레지스트리",
-      "0 패키지"
-     ],
-     "code": "패키지",
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 203,
-     "code": 254,
-     "diff": 51,
+     "code": 218,
+     "diff": 15,
      "allowed": null
     },
     {
@@ -102891,8 +102761,8 @@
   "R-20_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 6,
-    "text": 2,
+    "box": 5,
+    "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
@@ -102901,7 +102771,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 14,
+   "allowed": 13,
    "rows": [
     {
      "kind": "shape",
@@ -103036,25 +102906,18 @@
      "name": "main",
      "field": "h",
      "figma": 409,
-     "code": 465,
-     "diff": 56,
+     "code": 429,
+     "diff": 20,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
      "kind": "text",
      "name": "main",
      "figma": [
-      "패키지 레지스트리",
       "</>"
      ],
-     "code": "패키지 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
+     "code": "패키지 레지스트리 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
-    },
-    {
-     "kind": "shape",
-     "name": "main",
-     "detail": "간격 8→24",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
      "kind": "icon",
@@ -103088,30 +102951,11 @@
     },
     {
      "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 74,
-     "code": 40,
-     "diff": -34,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "패키지 레지스트리",
-      "0 패키지"
-     ],
-     "code": "패키지",
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 203,
-     "code": 254,
-     "diff": 51,
+     "code": 218,
+     "diff": 15,
      "allowed": null
     },
     {
@@ -103199,7 +103043,7 @@
    "owner": "C2",
    "counts": {
     "box": 3,
-    "text": 2,
+    "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
@@ -103208,7 +103052,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 12,
    "rows": [
     {
      "kind": "icon",
@@ -103283,25 +103127,18 @@
      "name": "main",
      "field": "h",
      "figma": 431,
-     "code": 519,
-     "diff": 88,
+     "code": 483,
+     "diff": 52,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
      "kind": "text",
      "name": "main",
      "figma": [
-      "패키지 레지스트리",
       "</>"
      ],
-     "code": "패키지 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
+     "code": "패키지 레지스트리 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
-    },
-    {
-     "kind": "shape",
-     "name": "main",
-     "detail": "간격 8→24",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
      "kind": "icon",
@@ -103324,8 +103161,8 @@
      "name": "footer",
      "field": "y",
      "figma": 593,
-     "code": 663,
-     "diff": 70,
+     "code": 627,
+     "diff": 34,
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
@@ -103347,18 +103184,8 @@
      "name": "page-head",
      "field": "h",
      "figma": 74,
-     "code": 32,
-     "diff": -42,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "패키지 레지스트리",
-      "0 패키지"
-     ],
-     "code": "패키지",
+     "code": 66,
+     "diff": -8,
      "allowed": null
     },
     {
@@ -103366,8 +103193,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 203,
-     "code": 246,
-     "diff": 43,
+     "code": 210,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -103396,7 +103223,7 @@
    "owner": "C2",
    "counts": {
     "box": 3,
-    "text": 2,
+    "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
@@ -103405,7 +103232,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 12,
    "rows": [
     {
      "kind": "icon",
@@ -103480,25 +103307,18 @@
      "name": "main",
      "field": "h",
      "figma": 431,
-     "code": 519,
-     "diff": 88,
+     "code": 483,
+     "diff": 52,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
      "kind": "text",
      "name": "main",
      "figma": [
-      "패키지 레지스트리",
       "</>"
      ],
-     "code": "패키지 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
+     "code": "패키지 레지스트리 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
-    },
-    {
-     "kind": "shape",
-     "name": "main",
-     "detail": "간격 8→24",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
      "kind": "icon",
@@ -103521,8 +103341,8 @@
      "name": "footer",
      "field": "y",
      "figma": 593,
-     "code": 663,
-     "diff": 70,
+     "code": 627,
+     "diff": 34,
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
@@ -103544,18 +103364,8 @@
      "name": "page-head",
      "field": "h",
      "figma": 74,
-     "code": 32,
-     "diff": -42,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "패키지 레지스트리",
-      "0 패키지"
-     ],
-     "code": "패키지",
+     "code": 66,
+     "diff": -8,
      "allowed": null
     },
     {
@@ -103563,8 +103373,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 203,
-     "code": 246,
-     "diff": 43,
+     "code": 210,
+     "diff": 7,
      "allowed": null
     },
     {
@@ -103592,8 +103402,8 @@
   "R-20_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
-    "text": 2,
+    "box": 1,
+    "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
@@ -103602,7 +103412,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 12,
    "rows": [
     {
      "kind": "icon",
@@ -103677,25 +103487,18 @@
      "name": "main",
      "field": "h",
      "figma": 409,
-     "code": 465,
-     "diff": 56,
+     "code": 429,
+     "diff": 20,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
      "kind": "text",
      "name": "main",
      "figma": [
-      "패키지 레지스트리",
       "</>"
      ],
-     "code": "패키지 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
+     "code": "패키지 레지스트리 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
-    },
-    {
-     "kind": "shape",
-     "name": "main",
-     "detail": "간격 8→24",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
      "kind": "icon",
@@ -103718,8 +103521,8 @@
      "name": "footer",
      "field": "y",
      "figma": 571,
-     "code": 609,
-     "diff": 38,
+     "code": 573,
+     "diff": 2,
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
@@ -103738,30 +103541,11 @@
     },
     {
      "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 74,
-     "code": 40,
-     "diff": -34,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "패키지 레지스트리",
-      "0 패키지"
-     ],
-     "code": "패키지",
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 203,
-     "code": 254,
-     "diff": 51,
+     "code": 218,
+     "diff": 15,
      "allowed": null
     },
     {
@@ -103780,8 +103564,8 @@
   "R-20_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
-    "text": 2,
+    "box": 1,
+    "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
@@ -103790,7 +103574,7 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 12,
    "rows": [
     {
      "kind": "icon",
@@ -103865,25 +103649,18 @@
      "name": "main",
      "field": "h",
      "figma": 409,
-     "code": 465,
-     "diff": 56,
+     "code": 429,
+     "diff": 20,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
      "kind": "text",
      "name": "main",
      "figma": [
-      "패키지 레지스트리",
       "</>"
      ],
-     "code": "패키지 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
+     "code": "패키지 레지스트리 0 패키지 게시됨 아직 패키지가 없습니다. GitLab에서 패키지를 게시하고 공유하는 방법을 알아보세요. 필터 결과",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
-    },
-    {
-     "kind": "shape",
-     "name": "main",
-     "detail": "간격 8→24",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
      "kind": "icon",
@@ -103906,8 +103683,8 @@
      "name": "footer",
      "field": "y",
      "figma": 571,
-     "code": 609,
-     "diff": 38,
+     "code": 573,
+     "diff": 2,
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
@@ -103926,30 +103703,11 @@
     },
     {
      "kind": "box",
-     "name": "page-head",
-     "field": "h",
-     "figma": 74,
-     "code": 40,
-     "diff": -34,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "패키지 레지스트리",
-      "0 패키지"
-     ],
-     "code": "패키지",
-     "allowed": null
-    },
-    {
-     "kind": "box",
      "name": "gl-filter",
      "field": "y",
      "figma": 203,
-     "code": 254,
-     "diff": 51,
+     "code": 218,
+     "diff": 15,
      "allowed": null
     },
     {

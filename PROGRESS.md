@@ -177,3 +177,4 @@
   - 120 1 {'D21': 120} ('only-code', 'project-row') G-01_1024_Guest {}
   - 110 2 {'D21': 110} ('box', 'project-row', 'h') G-01_1024_Guest {'field': 'h', 'figma': 80, 'code': 91, 'diff': 11}
   - 110 2 {'D21': 110} ('shape', 'project-row', '간격 #→#') G-01_1024_Guest {'detail': '간격 12→8'}
+- [C2] 한도 중단 후 재개: R-20 PackagesView를 제목 h1+개수 한 상자로 복구(PAGE_HEAD에서 R-20 빠짐 확인, h1 1개). 위 줄의 (합, 전역 제외) 표는 R-10~R-24 최신. 남음: R-11 gl-tabs 폭, R-17 tabs 간격, R-23 gl-filter y

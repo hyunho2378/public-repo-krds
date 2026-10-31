@@ -1,6 +1,6 @@
 # Figma 대 코드 전수 대조 원장(parity ledger)
 
-- 생성: 2026-10-31T13:15:21.176Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
+- 생성: 2026-10-31T13:19:18.623Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
 - 다시 만들기: 개발 서버에서 측정(app/scripts/export-code-boxes.mjs 또는 Aside 탭에서 export-code-boxes.js) 뒤 `npm run check:parity`
 
 ## 0. 해소 규칙
@@ -27,12 +27,12 @@
 | 8 | 코드에만 · project-row | 120 | D21 120 | Figma | 검색 결과 행 구조(실제 검색 행)와 이름표 | G-01_1024_Guest |
 | 9 | 위치/크기 · project-row · h | 110 | D21 110 | Figma | 검색 행 구조 확인 요청 | G-01_1024_Guest |
 | 10 | 모서리·안쪽·간격 · project-row | 110 | D21 110 | Figma | 검색 행 구조 확인 요청 | G-01_1024_Guest |
-| 11 | 위치/크기 · page-head · h | 104 | D21 56, C1 38, C2 10 | 미정 |  | A-01_1024_Guest |
-| 12 | 위치/크기 · gl-filter · y | 100 | D21 20, C1 30, C2 50 | 미정 |  | G-01_1024_Guest |
+| 11 | 위치/크기 · gl-filter · y | 100 | D21 20, C1 30, C2 50 | 미정 |  | G-01_1024_Guest |
+| 12 | 위치/크기 · page-head · h | 96 | D21 56, C1 38, C2 2 | 미정 |  | A-01_1024_Guest |
 | 13 | 문구 · breadcrumb | 90 | D21 30, C2 20, C1 40 | 코드 | A-01 '검색 / 업무로 찾기' 경로 두 칸 | A-03_1024_Guest |
 | 14 | 아이콘 · project-row | 88 | D21 88 | Figma | 검색 행 구조 확인 요청 | G-01_1024_Guest |
-| 15 | 문구 · page-head | 84 | D21 50, C1 20, C2 14 | 미정 |  | A-09_1024_Guest |
-| 16 | 순서 · (화면) | 77 | D21 73, C1 4 | 미정 |  | A-01_1024_Guest |
+| 15 | 순서 · (화면) | 77 | D21 73, C1 4 | 미정 |  | A-01_1024_Guest |
+| 16 | 문구 · page-head | 74 | D21 50, C1 20, C2 4 | 미정 |  | A-09_1024_Guest |
 | 17 | 위치/크기 · login-field · y | 74 | D21 74 | 미정 |  | G-08_360_Guest |
 | 18 | 아이콘 · gl-filter | 59 | D21 20, C1 20, C2 19 | 둘 다 | 최근 검색 history↔time, 정렬 sort-desc↔arrow-sort-both 이름 대응 | G-01_1024_Guest |
 | 19 | 위치/크기 · gl-filter · h | 58 | D21 12, C1 10, C2 36 | 미정 |  | G-01_360_Guest |
@@ -555,16 +555,16 @@
 | R-19_360_Signed-in | C2 | 1 | 0 | 1 | 2 | 0 | 0 | 0 | 0 | 0 | 4 | 9 |
 | R-19_768_Guest | C2 | 1 | 0 | 1 | 2 | 0 | 0 | 0 | 0 | 0 | 4 | 7 |
 | R-19_768_Signed-in | C2 | 1 | 0 | 1 | 2 | 0 | 0 | 0 | 0 | 0 | 4 | 7 |
-| R-20_1024_Guest | C2 | 2 | 2 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 6 | 11 |
-| R-20_1024_Signed-in | C2 | 2 | 2 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 6 | 11 |
-| R-20_1440_Guest | C2 | 6 | 2 | 0 | 1 | 1 | 2 | 0 | 0 | 0 | 12 | 14 |
-| R-20_1440_Signed-in | C2 | 6 | 2 | 0 | 1 | 1 | 2 | 0 | 0 | 0 | 12 | 14 |
-| R-20_1920_Guest | C2 | 6 | 2 | 0 | 1 | 1 | 2 | 0 | 0 | 0 | 12 | 14 |
-| R-20_1920_Signed-in | C2 | 6 | 2 | 0 | 1 | 1 | 2 | 0 | 0 | 0 | 12 | 14 |
-| R-20_360_Guest | C2 | 3 | 2 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 7 | 13 |
-| R-20_360_Signed-in | C2 | 3 | 2 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 7 | 13 |
-| R-20_768_Guest | C2 | 2 | 2 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 6 | 13 |
-| R-20_768_Signed-in | C2 | 2 | 2 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 6 | 13 |
+| R-20_1024_Guest | C2 | 1 | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 4 | 10 |
+| R-20_1024_Signed-in | C2 | 1 | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 4 | 10 |
+| R-20_1440_Guest | C2 | 5 | 1 | 0 | 1 | 1 | 2 | 0 | 0 | 0 | 10 | 13 |
+| R-20_1440_Signed-in | C2 | 5 | 1 | 0 | 1 | 1 | 2 | 0 | 0 | 0 | 10 | 13 |
+| R-20_1920_Guest | C2 | 5 | 1 | 0 | 1 | 1 | 2 | 0 | 0 | 0 | 10 | 13 |
+| R-20_1920_Signed-in | C2 | 5 | 1 | 0 | 1 | 1 | 2 | 0 | 0 | 0 | 10 | 13 |
+| R-20_360_Guest | C2 | 3 | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 6 | 12 |
+| R-20_360_Signed-in | C2 | 3 | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 6 | 12 |
+| R-20_768_Guest | C2 | 1 | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 4 | 12 |
+| R-20_768_Signed-in | C2 | 1 | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 4 | 12 |
 | R-21_1024_Guest | C2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 6 |
 | R-21_1024_Signed-in | C2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 7 |
 | R-21_1440_Guest | C2 | 4 | 0 | 0 | 1 | 0 | 2 | 0 | 0 | 0 | 7 | 10 |
@@ -665,7 +665,7 @@
 | R-30_360_Signed-in | D21 | 1 | 0 | 1 | 1 | 0 | 0 | 1 | 0 | 0 | 4 | 9 |
 | R-30_768_Guest | D21 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 2 | 9 |
 | R-30_768_Signed-in | D21 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 2 | 9 |
-| **합** |  | 2244 | 460 | 85 | 559 | 352 | 676 | 405 | 298 | 77 | 5156 |  |
+| **합** |  | 2236 | 450 | 85 | 559 | 352 | 676 | 405 | 298 | 77 | 5138 |  |
 
 - 기본값이 아닌 Figma 변형(코드 재현 대기, 8개): G-01_360_Auth-Guest_Drawer-Open, G-02_1440_Auth-Guest_Dialog-Open, G-09_1440_Auth-Guest_Kind-LoginRequired, R-01_1440_Auth-Guest_Drawer-Closed_Sidebar-Collapsed_Info-Short, R-01_1440_Auth-Guest_Drawer-Closed_Sidebar-Expanded_Info-Expanded, R-01_360_Auth-Guest_Drawer-Open_Sidebar-Expanded_Info-Short, R-11_1440_Auth-Guest_State-Empty, R-11_1440_Auth-Guest_State-NoResults
 
@@ -7221,38 +7221,32 @@
 | 글자 속성 | gl-filter | 크기 15→13, 줄 높이 22→20 |
 | 색 | gl-filter | text Figma #cdd1d5 color/text/subtle / 코드 #f4f5f6 gray-5 |
 
-### R-20_1024_Guest (C2, 6건)
+### R-20_1024_Guest (C2, 4건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 kordoc 패키지 레지스트리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 패키지' |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 74 / 코드 40 (-34) |
-| 문구 | page-head | Figma 글 '패키지 레지스트리', '0 패키지' 없음. 코드: '패키지' |
-| 위치/크기 | gl-filter | y Figma 203 / 코드 254 (+51) |
+| 위치/크기 | gl-filter | y Figma 203 / 코드 218 (+15) |
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 
-### R-20_1024_Signed-in (C2, 6건)
+### R-20_1024_Signed-in (C2, 4건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 kordoc 패키지 레지스트리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 패키지' |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 74 / 코드 40 (-34) |
-| 문구 | page-head | Figma 글 '패키지 레지스트리', '0 패키지' 없음. 코드: '패키지' |
-| 위치/크기 | gl-filter | y Figma 203 / 코드 254 (+51) |
+| 위치/크기 | gl-filter | y Figma 203 / 코드 218 (+15) |
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 
-### R-20_1440_Guest (C2, 12건)
+### R-20_1440_Guest (C2, 10건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
 | 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 kordoc 패키지 레지스트리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 패키지' |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 74 / 코드 40 (-34) |
-| 문구 | page-head | Figma 글 '패키지 레지스트리', '0 패키지' 없음. 코드: '패키지' |
-| 위치/크기 | gl-filter | y Figma 203 / 코드 254 (+51) |
+| 위치/크기 | gl-filter | y Figma 203 / 코드 218 (+15) |
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 | 위치/크기 | sidebar-nav | x Figma 16 / 코드 8 (-8) |
 | 위치/크기 | sidebar-nav | y Figma 168 / 코드 154 (-14) |
@@ -7260,16 +7254,14 @@
 | 위치/크기 | sidebar-nav | h Figma 661 / 코드 624 (-37) |
 | 아이콘 | sidebar-nav | Figma analytics,arrow-down,arrow-right,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
 
-### R-20_1440_Signed-in (C2, 12건)
+### R-20_1440_Signed-in (C2, 10건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
 | 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 kordoc 패키지 레지스트리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 패키지' |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 74 / 코드 40 (-34) |
-| 문구 | page-head | Figma 글 '패키지 레지스트리', '0 패키지' 없음. 코드: '패키지' |
-| 위치/크기 | gl-filter | y Figma 203 / 코드 254 (+51) |
+| 위치/크기 | gl-filter | y Figma 203 / 코드 218 (+15) |
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 | 위치/크기 | sidebar-nav | x Figma 16 / 코드 8 (-8) |
 | 위치/크기 | sidebar-nav | y Figma 168 / 코드 154 (-14) |
@@ -7277,16 +7269,14 @@
 | 위치/크기 | sidebar-nav | h Figma 661 / 코드 624 (-37) |
 | 아이콘 | sidebar-nav | Figma analytics,arrow-down,arrow-right,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
 
-### R-20_1920_Guest (C2, 12건)
+### R-20_1920_Guest (C2, 10건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
 | 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 kordoc 패키지 레지스트리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 패키지' |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 74 / 코드 40 (-34) |
-| 문구 | page-head | Figma 글 '패키지 레지스트리', '0 패키지' 없음. 코드: '패키지' |
-| 위치/크기 | gl-filter | y Figma 203 / 코드 254 (+51) |
+| 위치/크기 | gl-filter | y Figma 203 / 코드 218 (+15) |
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 | 위치/크기 | sidebar-nav | x Figma 16 / 코드 8 (-8) |
 | 위치/크기 | sidebar-nav | y Figma 168 / 코드 154 (-14) |
@@ -7294,16 +7284,14 @@
 | 위치/크기 | sidebar-nav | h Figma 661 / 코드 624 (-37) |
 | 아이콘 | sidebar-nav | Figma analytics,arrow-down,arrow-right,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
 
-### R-20_1920_Signed-in (C2, 12건)
+### R-20_1920_Signed-in (C2, 10건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 아이콘 | gitlab-sidebar | Figma analytics,arrow-down,arrow-right,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
 | 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 kordoc 패키지 레지스트리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 패키지' |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 74 / 코드 40 (-34) |
-| 문구 | page-head | Figma 글 '패키지 레지스트리', '0 패키지' 없음. 코드: '패키지' |
-| 위치/크기 | gl-filter | y Figma 203 / 코드 254 (+51) |
+| 위치/크기 | gl-filter | y Figma 203 / 코드 218 (+15) |
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 | 위치/크기 | sidebar-nav | x Figma 16 / 코드 8 (-8) |
 | 위치/크기 | sidebar-nav | y Figma 168 / 코드 154 (-14) |
@@ -7311,50 +7299,44 @@
 | 위치/크기 | sidebar-nav | h Figma 661 / 코드 624 (-37) |
 | 아이콘 | sidebar-nav | Figma analytics,arrow-down,arrow-right,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all / 코드 analytics,arrow-down,calendar,cloud,code,deploy,monitor,pin,rocket,users,view-all |
 
-### R-20_360_Guest (C2, 7건)
+### R-20_360_Guest (C2, 6건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 kordoc 패키지 레지스트리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 패키지' |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 74 / 코드 32 (-42) |
-| 문구 | page-head | Figma 글 '패키지 레지스트리', '0 패키지' 없음. 코드: '패키지' |
-| 위치/크기 | gl-filter | y Figma 203 / 코드 246 (+43) |
+| 위치/크기 | page-head | h Figma 74 / 코드 66 (-8) |
+| 위치/크기 | gl-filter | y Figma 203 / 코드 210 (+7) |
 | 위치/크기 | gl-filter | h Figma 65 / 코드 105 (+40) |
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 
-### R-20_360_Signed-in (C2, 7건)
+### R-20_360_Signed-in (C2, 6건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 kordoc 패키지 레지스트리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 패키지' |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 74 / 코드 32 (-42) |
-| 문구 | page-head | Figma 글 '패키지 레지스트리', '0 패키지' 없음. 코드: '패키지' |
-| 위치/크기 | gl-filter | y Figma 203 / 코드 246 (+43) |
+| 위치/크기 | page-head | h Figma 74 / 코드 66 (-8) |
+| 위치/크기 | gl-filter | y Figma 203 / 코드 210 (+7) |
 | 위치/크기 | gl-filter | h Figma 65 / 코드 105 (+40) |
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 
-### R-20_768_Guest (C2, 6건)
+### R-20_768_Guest (C2, 4건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 kordoc 패키지 레지스트리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 패키지' |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 74 / 코드 40 (-34) |
-| 문구 | page-head | Figma 글 '패키지 레지스트리', '0 패키지' 없음. 코드: '패키지' |
-| 위치/크기 | gl-filter | y Figma 203 / 코드 254 (+51) |
+| 위치/크기 | gl-filter | y Figma 203 / 코드 218 (+15) |
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 
-### R-20_768_Signed-in (C2, 6건)
+### R-20_768_Signed-in (C2, 4건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 문구 | breadcrumb | Figma 글 '서울특별시 광진구 류승인 kordoc 패키지 레지스트리' 없음. 코드: '서울특별시 광진구 류승인 kordoc 패키지' |
 | 색 | footer | fill Figma #1e2124 color/surface/gray-subtler / 코드 없음  |
-| 위치/크기 | page-head | h Figma 74 / 코드 40 (-34) |
-| 문구 | page-head | Figma 글 '패키지 레지스트리', '0 패키지' 없음. 코드: '패키지' |
-| 위치/크기 | gl-filter | y Figma 203 / 코드 254 (+51) |
+| 위치/크기 | gl-filter | y Figma 203 / 코드 218 (+15) |
 | 모서리·안쪽·간격 | gl-filter | 모서리 8→0 |
 
 ### R-21_1024_Guest (C2, 1건)
