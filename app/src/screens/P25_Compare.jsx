@@ -123,7 +123,7 @@ export default function Compare() {
                 {commits.map((c) => (
                   <li key={c.id}>
                     <div className="gl-ref-row">
-                      <Avatar className="is-24" src={project.namespace?.avatar_url} name={orgLabel(c.author_name)} />
+                      <Avatar className="is-24" name={c.author_name} />
                       <div className="gl-ref-main gl-grow">
                         <p className="gl-ref-name"><Link to={`/projects/${id}/changes/${c.id}`}>{c.title}</Link>{(c.message || '').replace(c.title, '').trim() ? <button type="button" className="gl-dots" aria-expanded={!!bodyOpen[c.id]} aria-label={bodyOpen[c.id] ? g.collapseBody : g.expandBody} onClick={() => setBodyOpen({ ...bodyOpen, [c.id]: !bodyOpen[c.id] })}><Icon name="ellipsis_horizontal" /></button> : null}</p>
                         {bodyOpen[c.id] ? <pre className="gl-commit-body">{(c.message || '').replace(c.title, '').trim()}</pre> : null}

@@ -228,7 +228,7 @@ export default function Code() {
 
 
   return (
-    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? t.Tab_code : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} stats={{ commits: commitInfo.data?.count ?? b?.count ?? 0, more: commitInfo.data?.count != null ? false : b?.more }} wide={!!path} hideCrumbs={!!path} title={isHome} info={isHome}>
+    <ProjectFrame screenId={path ? (body.data?.kind === "file" ? "R-03" : "R-02") : "R-01"} tab="" tabLabel={path ? g.repoLabel : ''} crumbs={path ? [[body.data?.kind === 'file' ? path.split('/').pop() : t.RepoSub_files]] : []} data={frame} state={state} stats={{ commits: commitInfo.data?.count ?? b?.count ?? 0, more: commitInfo.data?.count != null ? false : b?.more }} wide={!!path} hideCrumbs={!!path} title={isHome} info={isHome}>
       {path ? <h1 className="sr-only">{path.split('/').pop()}</h1> : null}
       <div className={`rb-code-wrap${path && treeOpen && treeWide ? ' has-tree' : ''}`}>
         {path && treeOpen && treeWide ? (

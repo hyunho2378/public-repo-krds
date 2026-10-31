@@ -73,7 +73,7 @@ export function GlCommitBar({ id, commit, owner, path }) {
   return (
     <div className="gl-cbar">
       <div className="gl-cbar-line">
-        <Avatar className="is-32" src={owner?.avatar_url} name={who} />
+        <Avatar className="is-32" name={commit.author_name} />
         <div className="gl-ref-main gl-grow">
           <p className="gl-ref-name">
             <Link to={`/projects/${id}/changes/${commit.id}`}>{commit.title}</Link>

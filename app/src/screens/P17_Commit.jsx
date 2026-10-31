@@ -46,7 +46,7 @@ export default function Commit() {
               <CopyButton text={c.id} label={g.copySha} />
               <span>{g.wrote} <time dateTime={c.committed_date}>{t.fn.ago(c.committed_date)}</time></span>
               <span>{g.wroteBy}</span>
-              <Avatar className="is-24" src={owner?.avatar_url} name={who} />
+              <Avatar className="is-24" name={c.author_name} />
               <strong>{who}</strong>
             </p>
             <div className="gl-head-actions">

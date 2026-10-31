@@ -232,3 +232,5 @@
 .gl-sha { padding: var(--krds-number-2) var(--krds-number-5); border-radius: var(--krds-radius-medium3); background: var(--layout-divider); }
 .gl-side-row .gl-select, .gl-side-row .krds-btn { width: 100%; justify-content: space-between; }
 .gl-side-row > * { min-width: 0; }
+.gl-box-title { padding-block: var(--krds-padding-1); }
+@media (max-width: 767px) { .gl-tab { height: var(--krds-number-16); } }

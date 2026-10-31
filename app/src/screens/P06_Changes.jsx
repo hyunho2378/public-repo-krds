@@ -25,7 +25,7 @@ function CommitRow({ id, c, owner, tags, path, open, onToggle }) {
   return (
     <li className="gl-crow">
       <div className="gl-crow-line">
-        <Avatar className="is-32" src={owner?.avatar_url} name={who} />
+        <Avatar className="is-32" name={c.author_name} />
         <div className="gl-ref-main gl-grow">
           <p className="gl-ref-name"><Link to={`/projects/${id}/changes/${c.id}`}>{c.title}</Link></p>
           <p className="gl-ref-meta"><span>{c.author_name}</span><time dateTime={c.committed_date}>{g.wrote} {t.fn.ago(c.committed_date)}</time></p>
