@@ -31,7 +31,7 @@ export function Notifications() {
     <Page id="G-07" title={t.TabBar_alerts} state={signedIn ? 'Empty' : 'Empty'}>
       <div className="rb-write">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-small" data-figma="section-title">{t.TabBar_alerts}</h1>
+          <h1 className="krds-text-heading-small" data-figma="page-head">{t.TabBar_alerts}</h1>
           <p className="krds-text-body-xsmall rb-subtle">{t.Alerts_hint}</p>
         </div>
         {!signedIn ? <NeedLogin title={t.TabBar_alerts} path="/notifications" /> : <EmptyState title={t.Alerts_none} />}

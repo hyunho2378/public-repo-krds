@@ -90,7 +90,6 @@ export default function Write({ mode }) {
     <ProjectFrame screenId={SCREEN[mode]} tab="" tabLabel={title} data={frame} state="Ideal">
       <div className="rb-write">
         <div className="rb-write-head">
-          <h2 className="krds-text-body-small-bold">{title}</h2>
           <p className="krds-text-body-xsmall rb-subtle">{t.fn.writeTarget(project.name, branch)}</p>
         </div>
 

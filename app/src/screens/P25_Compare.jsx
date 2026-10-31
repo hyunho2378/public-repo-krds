@@ -98,7 +98,7 @@ export default function Compare() {
   return (
     <ProjectFrame screenId="R-06" tab="" tabLabel={g.compareTitle} data={frame} state={applied ? (same ? 'Empty' : result.state) : 'Ideal'}>
       <div className="gl-page">
-        <div className="gl-head-text" data-figma="page-head">
+        <div className="gl-head-text">
           <h1 className="gl-title">{g.compareTitle}</h1>
           <p className="gl-intro">{g.compareIntro} <a className="krds-link" href="https://docs.gitlab.com/user/project/repository/branches/#compare-branches" {...newWindow(g.compareHelp)}>{g.compareHelp}</a></p>
         </div>

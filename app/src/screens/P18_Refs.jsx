@@ -117,12 +117,10 @@ export function Tags() {
     <ProjectFrame screenId="R-08" tab="" tabLabel={t.P18_tags} data={frame} state={list ? (list.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="gl-page">
         <div className="gl-head" data-figma="page-head">
-          <div className="gl-head-text">
-            <h1 className="gl-title">{g.tagTitle}</h1>
-            <p className="gl-intro">{g.tagIntro}</p>
-          </div>
+          <h1 className="gl-title">{g.tagTitle}</h1>
           <div className="gl-head-actions"><Rss href={`${project.web_url}/-/tags?format=atom`} /></div>
         </div>
+        <p className="gl-intro">{g.tagIntro}</p>
         {!list ? <Status {...body} /> : (
           <div>
             <div className="gl-bar" data-figma="gl-filter">
