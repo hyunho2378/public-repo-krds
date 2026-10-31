@@ -337,3 +337,6 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-ra-note-t { font-weight: var(--krds-font-weight-bold); }
 /* G-08b 로그인 실패 안내: Figma 안내 상자(안쪽 12 16, 오류색 선, 채움 없음, 모서리 8). 선은 안쪽 그림자라 높이에 더하지 않음 */
 #root .rb-login3-alert { padding: var(--krds-number-7) var(--krds-number-8); border-radius: var(--krds-radius-medium3); box-shadow: inset 0 0 0 var(--krds-border-width-static-regular) var(--krds-color-border-danger, var(--krds-color-text-danger)); }
+/* A-01 업무로 찾기 간단형 행: 이름만 한 줄(Figma 덧붙임), 넘치면 말줄임 */
+#root .rb-taskfind .rb-prow-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#root .rb-taskfind .rb-prow-main { min-width: 0; }

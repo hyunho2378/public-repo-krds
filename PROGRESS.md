@@ -228,3 +228,20 @@
   - 54 6 {'D21': 30, 'C1': 10, 'C2': 14} ('text', 'page-head') G-06_1024_Guest {'figma': ['내 작업'], 'code': '내 프로젝트'}
   - 54 4 {'D21': 54} ('box', 'login-field', 'y') G-08b_1024_Guest {'field': 'y', 'figma': 158, 'code': 134, 'diff': -24}
 - [C2] 원장 7차: 탭 부품 통일(간격 0, 선색 divider, 하단 마진 0), 토큰 글자 15(실제 14, KRDS 15), 필터 검색 단추 filter-search 이름표(P19/20/22/30). R-19 필터 글자 실제: 14px, 색 rgb(236,236,239)=기본 글자색. 같은 조건(전환 끄기, 900ms)
+
+## Figma 대조(2026. 10. 31. 23:30, D21): 공식 합 2,555(허용 뺀 값, 같은 조건 전체 재측정), 새 허용 0건, 목표 2,000 이하 미달
+- 위치/크기 1,219, 문구 208, 글자 17, 색 47, 모서리·간격 185, 아이콘 223, Figma에만 426, 코드에만 218, 순서 12 / D21 1,533 · C2 540 · C1 482
+- 대조 규칙 4-3(반복 목록: project-row, diff-file, group-row는 Figma 표본 N개만) 원장 0절에 기록, parity_allow 변경 없음
+- G-06 제목: 실제 /dashboard/projects는 로그아웃 시 로그인으로 넘어가고 UX/handson 캡처도 없어 실제 제목 확인 못 함(판정 보류)
+- 이후 코드(미측정): A-01 업무로 찾기 간단형 행 제목 = 이름만 한 줄(Figma)
+- 남은 원인 상위 10
+  - 114 3 {'D21': 114} ('box', 'project-row', 'h') A-01_1024_Guest {'field': 'h', 'figma': 57, 'code': 69, 'diff': 12}
+  - 76 19 {'D21': 60, 'C2': 4, 'C1': 12} ('box', 'sidebar-nav', 'h') A-05_1440_Guest {'field': 'h', 'figma': 352, 'code': 354, 'diff': 2}
+  - 75 3 {'D21': 75} ('only-figma', 'project-row') A-01_1024_Guest {'want': {'x': 40, 'y': 867, 'w': 944, 'h': 95}}
+  - 72 8 {'D21': 20, 'C1': 20, 'C2': 32} ('box', 'gl-filter', 'y') G-01_1024_Guest {'field': 'y', 'figma': 217, 'code': 220, 'diff': 3}
+  - 62 3 {'D21': 62} ('box', 'project-row', 'y') A-01_1024_Guest {'field': 'y', 'figma': 577, 'code': 202, 'diff': -375}
+  - 60 6 {'D21': 20, 'C1': 20, 'C2': 20} ('icon', 'gl-filter') G-01_1024_Guest {'figma': ['arrow-down', 'history', 'search', 'sort-desc'], 'code': ['history', 'search', 'sort
+  - 54 6 {'D21': 30, 'C1': 10, 'C2': 14} ('text', 'page-head') G-06_1024_Guest {'figma': ['내 작업'], 'code': '내 프로젝트'}
+  - 50 6 {'D21': 50} ('only-figma', 'tabs') A-05_1024_Guest {'want': {'x': 40, 'y': 199, 'w': 944, 'h': 40}}
+  - 50 5 {'C2': 50} ('only-code', 'filter-search') R-13_1024_Guest {}
+  - 45 9 {'D21': 17, 'C1': 14, 'C2': 14} ('box', 'page-head', 'h') G-03_360_Guest {'field': 'h', 'figma': 32, 'code': 64, 'diff': 32}
