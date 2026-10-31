@@ -246,3 +246,17 @@
   - 50 5 {'C2': 50} ('only-code', 'filter-search') R-13_1024_Guest {}
   - 45 9 {'D21': 17, 'C1': 14, 'C2': 14} ('box', 'page-head', 'h') G-03_360_Guest {'field': 'h', 'figma': 32, 'code': 64, 'diff': 32}
 - [C2] 원장 8차: A-05 요청 보드에 탭 줄(공감 많은 순, 최근, 내가 쓴 요청 n; 정렬 전환), R-17 MR 제목 줄에 code-button 드롭다운. R-13/18/19/20 filter-search는 Figma 반영됨
+
+## 라운드1(2026. 10. 31. 23:55, D21): 공식 합 2,598(허용 뺀 값), 새 허용 0건. 보류 G-06 제목 10건(건수 포함, 원장 0절 4-4)
+- 다음(라운드2): A-01 업무로 찾기 행 360·1024 높이(81/69 대 57), A-09 탭 줄(Figma에만, 덧붙임), G-08b 360 입력칸 y, A-01 page-head 코드에만. C2: filter-search x·y(R-11 등 128건), A-05 탭 줄. C1: page-head 아이콘, 경로 줄
+- 상위 10
+  - 110 3 {'D21': 110} ('box', 'project-row', 'h') A-01_360_Guest {'field': 'h', 'figma': 57, 'code': 81, 'diff': 24}
+  - 75 3 {'D21': 75} ('only-figma', 'project-row') A-01_1024_Guest {'want': {'x': 40, 'y': 867, 'w': 944, 'h': 95}}
+  - 72 8 {'D21': 20, 'C1': 20, 'C2': 32} ('box', 'gl-filter', 'y') G-01_1024_Guest {'field': 'y', 'figma': 217, 'code': 220, 'diff': 3}
+  - 66 7 {'C2': 66} ('box', 'filter-search', 'y') R-11_1024_Guest {'field': 'y', 'figma': 195, 'code': 201, 'diff': 6}
+  - 62 7 {'C2': 62} ('box', 'filter-search', 'x') R-11_1024_Guest {'field': 'x', 'figma': 867, 'code': 847, 'diff': -20}
+  - 58 3 {'D21': 58} ('box', 'project-row', 'y') A-01_1024_Guest {'field': 'y', 'figma': 577, 'code': 202, 'diff': -375}
+  - 54 6 {'D21': 30, 'C1': 10, 'C2': 14} ('text', 'page-head') G-06_1024_Guest {'figma': ['내 작업'], 'code': '내 프로젝트', 'pending': '사용자 캡처 대기(실�
+  - 40 4 {'D21': 40} ('only-code', 'page-head') A-01_1024_Guest {}
+  - 40 5 {'D21': 40} ('only-figma', 'tabs') A-09_1024_Guest {'want': {'x': 40, 'y': 199, 'w': 944, 'h': 40}}
+  - 38 4 {'D21': 38} ('box', 'login-field', 'y') G-08b_360_Guest {'field': 'y', 'figma': 497, 'code': 474, 'diff': -23}
