@@ -313,3 +313,12 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
   #root .rb-gbar .rb-gbar-left, #root .rb-gbar .rb-gbar-right { gap: var(--krds-number-4); }
   #root .rb-gbar .rb-gbar-area { display: inline; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 }
+/* 23. 로그인 Figma 대조(G-08~08e): 판 안 위 정렬(세로 가운데 아님, 1440에서 +9 해소). 1024 미만 한 열: 공지(로고 96 위) → 카드, 전체 폭, 구분선 없음, 사이 48 */
+#root .rb-shell.is-bare > .rb-panel > .rb-panel-in.rb-panel-in { justify-content: flex-start; }
+@media (max-width: 1023px) {
+  .rb-login3 { grid-template-columns: minmax(0, 1fr); justify-content: stretch; row-gap: var(--krds-number-16); }
+  .rb-login3-divider { display: none; }
+  .rb-login3-side { justify-content: flex-start; }
+  .rb-login3-side-in { gap: var(--krds-number-12); align-items: stretch; }
+  .rb-login3-side-in > .rb-mois-logo { width: var(--krds-number-21); align-self: center; }
+}
