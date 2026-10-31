@@ -47,7 +47,7 @@ function MembersView({ list }) {
         <span className="krds-btn small tertiary">{rp.sortAccount}</span>
         <IconButton icon="ext/sort-desc" label={rp.desc} />
       </div>
-      <div className="gl-table-wrap">
+      <div className="gl-table-wrap gl-members">
         <table className="gl-table">
           <thead><tr><th scope="col">{rp.colAccount}</th><th scope="col">{rp.colSource}</th><th scope="col">{rp.colRole}</th><th scope="col">{rp.colExpire}</th><th scope="col">{rp.colActivity}</th></tr></thead>
           <tbody>

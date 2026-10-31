@@ -72,3 +72,9 @@
 
 #root .gl-tabs.gl-tabs-req { margin-top: calc(-1 * var(--krds-gap-4)); }
 #root .gl-tabs.gl-tabs-gap { gap: var(--krds-gap-2); }
+.gl-members .gl-table { table-layout: fixed; }
+.gl-members .gl-table th:nth-child(1) { width: 40%; }
+.gl-members .gl-table th:nth-child(2) { width: 12%; }
+.gl-members .gl-table th:nth-child(3) { width: 14%; }
+.gl-members .gl-table th:nth-child(4) { width: 16%; }
+.gl-members .gl-table th:nth-child(5) { width: 18%; }
