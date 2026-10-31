@@ -324,3 +324,14 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
   .rb-login3-side-in > .rb-mois-logo { width: var(--krds-number-21); align-self: center; }
 }
 #root .rb-repo-main > .rb-frame-title { grid-column: 1 / -1; margin: 0; }
+/* R-25 리포지토리 분석(캡처 30): 절마다 아래 구분선, 막대는 KRDS 주색 테두리 + 회색 면(장식 없음) */
+#root .rb-ra-sec { display: flex; flex-direction: column; gap: var(--krds-number-4); padding-bottom: var(--krds-number-12); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+#root .rb-ra-sec h2 { margin: 0; font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); }
+#root .rb-ra-sec p { margin: 0; }
+#root .rb-ra-chart { margin: 0; display: flex; flex-direction: column; gap: var(--krds-number-4); }
+#root .rb-ra-bars { list-style: none; margin: 0; padding: 0; display: flex; align-items: flex-end; gap: var(--krds-number-8); height: calc(var(--krds-number-20) * 3); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
+#root .rb-ra-bar { flex: 1 1 0; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: var(--krds-number-3); }
+#root .rb-ra-fill { display: block; width: 100%; min-height: var(--krds-number-1); background: var(--layout-raised-bg); border: var(--krds-border-width-static-regular) solid var(--krds-color-border-primary); box-sizing: border-box; }
+#root .rb-ra-key, #root .rb-ra-axis { font-size: var(--rb-step-13); line-height: var(--rb-lh-13); color: var(--krds-color-text-subtle); text-align: center; }
+#root .rb-ra-note { display: flex; gap: var(--krds-number-4); align-items: flex-start; }
+#root .rb-ra-note-t { font-weight: var(--krds-font-weight-bold); }

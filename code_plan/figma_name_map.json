@@ -1160,7 +1160,7 @@
     "Project/리포지토리 분석"
    ],
    "code": {
-    "path": "/projects/150/graph",
+    "path": "/projects/150/analytics",
     "query": {
      "fixture": "kordoc"
     },
@@ -1177,7 +1177,8 @@
     ],
     "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
     "roles": [],
-    "variantsInCode": {}
+    "variantsInCode": {},
+    "note": "캡처 30 리포지토리 분석(/-/graphs/<브랜치>/charts). 캡처 22 그래프(/graph)는 R-25g로 따로"
    }
   },
   {

@@ -81,7 +81,7 @@ export function projectMenu(id, { signedIn, role, issues, webUrl } = {}) {
     { name: u.G_monitor, icon: 'ext/monitor', items: [item(u.G_incidents, null, up('/-/incidents')), item(t.Law_title, `${p}/law-alerts`, { extra: true })] },
     { name: u.G_analyze, icon: 'analytics', items: [
       item(u.G_vsa, null, up('/-/value_stream_analytics')), item(u.G_contributors, `${p}/contributors`),
-      item(u.G_cicdAnalytics, null, up('/-/pipelines/charts')), item(u.G_repoAnalytics, null, up('/-/graphs/main/charts')),
+      item(u.G_cicdAnalytics, null, up('/-/pipelines/charts')), item(u.G_repoAnalytics, `${p}/analytics`),
       item(u.G_experiments, null, up('/-/ml/experiments')),
     ] },
   ];

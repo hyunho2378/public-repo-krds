@@ -9,6 +9,7 @@ import Usage from '../screens/P07_Usage';
 import Feedback from '../screens/P08_Feedback';
 import Publish from '../screens/P09_Publish';
 import PublishCheck from '../screens/P31_PublishCheck';
+import RepoAnalytics from '../screens/P32_RepoAnalytics';
 import MyProjects from '../screens/P10_MyProjects';
 import Organizations from '../screens/P11_Organizations';
 import Login from '../screens/P12_Login';
@@ -89,7 +90,8 @@ export const routes = [
   { id: 'G-11', path: '/settings', Screen: Settings },
   { id: 'A-09', path: '/collaborate', Screen: Collaborate },
   { id: 'R-26', path: '/projects/:id/settings', Screen: ProjectSettings },
-  { id: 'R-25', path: '/projects/:id/graph', Screen: RepoGraph },
+  { id: 'R-25', path: '/projects/:id/analytics', Screen: RepoAnalytics },
+  { id: 'R-25g', path: '/projects/:id/graph', Screen: RepoGraph },
   { id: 'G-05', path: '/projects/new', Screen: NewProject },
   { id: 'G-01', path: '/explore', Screen: Explore },
   { id: 'G-01t', path: '/explore/topics', Screen: ExploreTopics },
