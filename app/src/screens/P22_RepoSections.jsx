@@ -96,7 +96,7 @@ function BoardView({ list }) {
   );
 }
 
-function LabelsView({ list, id }) {
+function LabelsView({ list, id, projectName }) {
   const [q, setQ] = useState('');
   const [arch, setArch] = useState(false);
   const rows = (arch ? [] : list).filter((l) => l.name.toLowerCase().includes(q.trim().toLowerCase())).sort((a, b) => a.name.localeCompare(b.name));
@@ -104,7 +104,8 @@ function LabelsView({ list, id }) {
   const other = rows.filter((l) => l.priority == null);
   const row = (l) => (
     <li className="gl-label-row" key={l.id || l.name}>
-      <span className="gl-label-name" style={{ background: l.color, color: l.text_color }}>{l.name}</span>
+      <span className="gl-label-main"><span className="gl-label-name" style={{ background: l.color, color: l.text_color }}>{l.name}</span>
+        <span className="gl-label-project"><Icon name="ext/project" />{projectName}</span></span>
       <span className="gl-label-links">
         <Link className="krds-link" to={`/projects/${id}/issues`}>{rp.toIssues}</Link>
         <Link className="krds-link" to={`/projects/${id}/merge-requests`}>{rp.toMrs}</Link>
@@ -120,6 +121,7 @@ function LabelsView({ list, id }) {
         </span>
         <span className="gl-tools">
           <span className="gl-work-bar"><input type="search" value={q} placeholder={rp.search} aria-label={rp.search} onChange={(e) => setQ(e.target.value)} /><FilterSearch label={u.List_searchLabel} /></span>
+          <span className="krds-btn small tertiary">{rp.sortName}<Icon name="arrow-down" /></span>
         </span>
       </div>
       <section className="gl-box">
@@ -389,7 +391,7 @@ export default function RepoSections({ section }) {
     return (
       <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state={list.length ? 'Ideal' : 'Empty'}>
         <div className="rb-code-area">
-          {section === 'members' ? <MembersView list={list} /> : <LabelsView list={list} id={id} />}
+          {section === 'members' ? <MembersView list={list} /> : <LabelsView list={list} id={id} projectName={frame.data.project.path_with_namespace.split('/').join(' / ')} />}
         </div>
       </ProjectFrame>
     );
