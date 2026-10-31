@@ -1,6 +1,6 @@
 # Figma 대 코드 전수 대조 원장(parity ledger)
 
-- 생성: 2026-10-31T14:32:23.783Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
+- 생성: 2026-10-31T14:33:48.251Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
 - 다시 만들기: 개발 서버에서 측정(app/scripts/export-code-boxes.mjs 또는 Aside 탭에서 export-code-boxes.js) 뒤 `npm run check:parity`
 
 ## 0. 해소 규칙
@@ -21,25 +21,25 @@
 | 순위 | 원인(분류 · 요소 · 항목) | 건수 | 담당 화면 분포 | 해소 쪽 | 비고 | 예 |
 |---:|---|---:|---|---|---|---|
 | 1 | 위치/크기 · project-row · h | 114 | D21 114 | Figma | 검색 행 구조 확인 요청 | A-01_1024_Guest |
-| 2 | 위치/크기 · sidebar-nav · h | 76 | D21 60, C2 4, C1 12 | 미정 |  | A-05_1440_Guest |
-| 3 | Figma에만 · project-row | 75 | D21 75 | 미정 |  | A-01_1024_Guest |
+| 2 | Figma에만 · project-row | 75 | D21 75 | 미정 |  | A-01_1024_Guest |
+| 3 | 위치/크기 · sidebar-nav · h | 72 | D21 56, C2 4, C1 12 | 미정 |  | A-06_1440_Guest |
 | 4 | 위치/크기 · gl-filter · y | 72 | D21 20, C1 20, C2 32 | 미정 |  | G-01_1024_Guest |
-| 5 | 위치/크기 · project-row · y | 62 | D21 62 | Figma | 검색 행 구조 확인 요청 | A-01_1024_Guest |
-| 6 | 아이콘 · gl-filter | 60 | D21 20, C1 20, C2 20 | 둘 다 | 최근 검색 history↔time, 정렬 sort-desc↔arrow-sort-both 이름 대응 | G-01_1024_Guest |
-| 7 | 문구 · page-head | 54 | D21 30, C1 10, C2 14 | 미정 |  | G-06_1024_Guest |
-| 8 | Figma에만 · tabs | 50 | D21 50 | 미정 |  | A-05_1024_Guest |
-| 9 | 코드에만 · filter-search | 50 | C2 50 | 미정 |  | R-13_1024_Guest |
+| 5 | 위치/크기 · filter-search · y | 66 | C2 66 | 미정 |  | R-11_1024_Guest |
+| 6 | 위치/크기 · project-row · y | 62 | D21 62 | Figma | 검색 행 구조 확인 요청 | A-01_1024_Guest |
+| 7 | 위치/크기 · filter-search · x | 62 | C2 62 | 미정 |  | R-11_1024_Guest |
+| 8 | 아이콘 · gl-filter | 60 | D21 20, C1 20, C2 20 | 둘 다 | 최근 검색 history↔time, 정렬 sort-desc↔arrow-sort-both 이름 대응 | G-01_1024_Guest |
+| 9 | 문구 · page-head | 54 | D21 30, C1 10, C2 14 | 미정 |  | G-06_1024_Guest |
 | 10 | 위치/크기 · page-head · h | 45 | D21 17, C1 14, C2 14 | 미정 |  | G-03_360_Guest |
 | 11 | 모서리·안쪽·간격 · page-head | 45 | D21 15, C1 20, C2 10 | 미정 |  | G-04_1024_Guest |
 | 12 | 코드에만 · page-head | 40 | D21 40 | Figma | Figma 변형에 page-head 이름표 없음 | A-01_1024_Guest |
-| 13 | 모서리·안쪽·간격 · commit-bar | 40 | D21 20, C1 20 | 미정 |  | R-01_1024_Guest |
-| 14 | 아이콘 · page-head | 40 | C1 30, C2 10 | 미정 |  | R-04_1024_Guest |
-| 15 | 위치/크기 · login-field · y | 38 | D21 38 | 미정 |  | G-08b_360_Guest |
-| 16 | 위치/크기 · project-row · x | 36 | D21 36 | Figma | 검색 행 구조 확인 요청 | A-01_1024_Guest |
-| 17 | 위치/크기 · project-row · w | 36 | D21 36 | Figma | 검색 행 구조 확인 요청 | A-01_1024_Guest |
-| 18 | 위치/크기 · section-title · y | 35 | D21 10, C1 20, C2 5 | 미정 |  | G-06_1024_Guest |
-| 19 | 위치/크기 · gl-filter · h | 34 | D21 12, C1 10, C2 12 | 미정 |  | G-01_360_Guest |
-| 20 | 위치/크기 · sidebar-nav · w | 32 | C1 12, C2 20 | 미정 |  | R-06_1440_Guest |
+| 13 | Figma에만 · tabs | 40 | D21 40 | 미정 |  | A-09_1024_Guest |
+| 14 | 모서리·안쪽·간격 · commit-bar | 40 | D21 20, C1 20 | 미정 |  | R-01_1024_Guest |
+| 15 | 아이콘 · page-head | 40 | C1 30, C2 10 | 미정 |  | R-04_1024_Guest |
+| 16 | 위치/크기 · login-field · y | 38 | D21 38 | 미정 |  | G-08b_360_Guest |
+| 17 | 위치/크기 · project-row · x | 36 | D21 36 | Figma | 검색 행 구조 확인 요청 | A-01_1024_Guest |
+| 18 | 위치/크기 · project-row · w | 36 | D21 36 | Figma | 검색 행 구조 확인 요청 | A-01_1024_Guest |
+| 19 | 위치/크기 · section-title · y | 35 | D21 10, C1 20, C2 5 | 미정 |  | G-06_1024_Guest |
+| 20 | 위치/크기 · gl-filter · h | 34 | D21 12, C1 10, C2 12 | 미정 |  | G-01_360_Guest |
 
 ## 0-2. 로그인 상태(Signed-in) 대조
 
@@ -148,16 +148,16 @@
 | A-04_360_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 5 | 13 |
 | A-04_768_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 5 | 13 |
 | A-04_768_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 5 | 13 |
-| A-05_1024_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 11 |
-| A-05_1024_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 11 |
-| A-05_1440_Guest | D21 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 2 | 14 |
-| A-05_1440_Signed-in | D21 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 2 | 14 |
-| A-05_1920_Guest | D21 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 2 | 14 |
-| A-05_1920_Signed-in | D21 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 2 | 14 |
-| A-05_360_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 12 |
-| A-05_360_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 12 |
-| A-05_768_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 12 |
-| A-05_768_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 12 |
+| A-05_1024_Guest | D21 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 11 |
+| A-05_1024_Signed-in | D21 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 11 |
+| A-05_1440_Guest | D21 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 14 |
+| A-05_1440_Signed-in | D21 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 14 |
+| A-05_1920_Guest | D21 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 14 |
+| A-05_1920_Signed-in | D21 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 14 |
+| A-05_360_Guest | D21 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 12 |
+| A-05_360_Signed-in | D21 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 12 |
+| A-05_768_Guest | D21 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 12 |
+| A-05_768_Signed-in | D21 | 2 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 3 | 12 |
 | A-06_1024_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 |
 | A-06_1024_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 7 |
 | A-06_1440_Guest | D21 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 11 |
@@ -488,16 +488,16 @@
 | R-12_360_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 13 |
 | R-12_768_Guest | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 |
 | R-12_768_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 11 |
-| R-13_1024_Guest | C2 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 2 | 9 |
-| R-13_1024_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 2 | 9 |
-| R-13_1440_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 3 | 11 |
-| R-13_1440_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 3 | 11 |
-| R-13_1920_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 3 | 11 |
-| R-13_1920_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 3 | 11 |
-| R-13_360_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 3 | 10 |
-| R-13_360_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 3 | 10 |
-| R-13_768_Guest | C2 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 2 | 10 |
-| R-13_768_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 2 | 10 |
+| R-13_1024_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 3 | 9 |
+| R-13_1024_Signed-in | C2 | 2 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 3 | 9 |
+| R-13_1440_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 4 | 11 |
+| R-13_1440_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 4 | 11 |
+| R-13_1920_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 4 | 11 |
+| R-13_1920_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 4 | 11 |
+| R-13_360_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 4 | 10 |
+| R-13_360_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 4 | 10 |
+| R-13_768_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 3 | 10 |
+| R-13_768_Signed-in | C2 | 2 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 3 | 10 |
 | R-14_1024_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 3 | 10 |
 | R-14_1024_Signed-in | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 3 | 10 |
 | R-14_1440_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 3 | 12 |
@@ -528,46 +528,46 @@
 | R-16_360_Signed-in | C2 | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | 14 |
 | R-16_768_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 14 |
 | R-16_768_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 14 |
-| R-17_1024_Guest | C2 | 1 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 | 5 | 12 |
-| R-17_1024_Signed-in | C2 | 1 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 | 5 | 12 |
-| R-17_1440_Guest | C2 | 1 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 | 5 | 15 |
-| R-17_1440_Signed-in | C2 | 1 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 | 5 | 15 |
-| R-17_1920_Guest | C2 | 1 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 | 5 | 15 |
-| R-17_1920_Signed-in | C2 | 1 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 | 5 | 15 |
-| R-17_360_Guest | C2 | 3 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 | 7 | 13 |
-| R-17_360_Signed-in | C2 | 3 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 | 7 | 13 |
-| R-17_768_Guest | C2 | 2 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 | 6 | 13 |
-| R-17_768_Signed-in | C2 | 2 | 1 | 0 | 0 | 2 | 1 | 0 | 0 | 0 | 6 | 13 |
-| R-18_1024_Guest | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 6 |
-| R-18_1024_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 6 |
-| R-18_1440_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 9 |
-| R-18_1440_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 9 |
-| R-18_1920_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 9 |
-| R-18_1920_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 9 |
-| R-18_360_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 8 |
-| R-18_360_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 8 |
-| R-18_768_Guest | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 7 |
-| R-18_768_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 7 |
-| R-19_1024_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 6 |
-| R-19_1024_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 6 |
-| R-19_1440_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 8 |
-| R-19_1440_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 8 |
-| R-19_1920_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 8 |
-| R-19_1920_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 8 |
-| R-19_360_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 9 |
-| R-19_360_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 9 |
-| R-19_768_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 7 |
-| R-19_768_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 7 |
-| R-20_1024_Guest | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 10 |
-| R-20_1024_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 10 |
-| R-20_1440_Guest | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 12 |
-| R-20_1440_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 12 |
-| R-20_1920_Guest | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 12 |
-| R-20_1920_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 12 |
-| R-20_360_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 12 |
-| R-20_360_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 2 | 12 |
-| R-20_768_Guest | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 11 |
-| R-20_768_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 11 |
+| R-17_1024_Guest | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 12 |
+| R-17_1024_Signed-in | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 12 |
+| R-17_1440_Guest | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 15 |
+| R-17_1440_Signed-in | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 15 |
+| R-17_1920_Guest | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 15 |
+| R-17_1920_Signed-in | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 15 |
+| R-17_360_Guest | C2 | 8 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 15 | 13 |
+| R-17_360_Signed-in | C2 | 8 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 15 | 13 |
+| R-17_768_Guest | C2 | 7 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 14 | 13 |
+| R-17_768_Signed-in | C2 | 7 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 14 | 13 |
+| R-18_1024_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 6 |
+| R-18_1024_Signed-in | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 6 |
+| R-18_1440_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 9 |
+| R-18_1440_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 9 |
+| R-18_1920_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 9 |
+| R-18_1920_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 9 |
+| R-18_360_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 8 |
+| R-18_360_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 8 |
+| R-18_768_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 7 |
+| R-18_768_Signed-in | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 7 |
+| R-19_1024_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 6 |
+| R-19_1024_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 6 |
+| R-19_1440_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 8 |
+| R-19_1440_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 8 |
+| R-19_1920_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 8 |
+| R-19_1920_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 8 |
+| R-19_360_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 9 |
+| R-19_360_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 9 |
+| R-19_768_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 7 |
+| R-19_768_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 7 |
+| R-20_1024_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 10 |
+| R-20_1024_Signed-in | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 10 |
+| R-20_1440_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 12 |
+| R-20_1440_Signed-in | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 12 |
+| R-20_1920_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 12 |
+| R-20_1920_Signed-in | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 12 |
+| R-20_360_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 12 |
+| R-20_360_Signed-in | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 12 |
+| R-20_768_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 11 |
+| R-20_768_Signed-in | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 11 |
 | R-21_1024_Guest | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 6 |
 | R-21_1024_Signed-in | C2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 7 |
 | R-21_1440_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 9 |
@@ -668,7 +668,7 @@
 | R-30_360_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 9 |
 | R-30_768_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 9 |
 | R-30_768_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 9 |
-| **합** |  | 1219 | 208 | 17 | 47 | 185 | 223 | 426 | 218 | 12 | 2555 |  |
+| **합** |  | 1365 | 208 | 17 | 47 | 215 | 233 | 416 | 178 | 12 | 2691 |  |
 
 - 기본값이 아닌 Figma 변형(코드 재현 대기, 8개): G-01_360_Auth-Guest_Drawer-Open, G-02_1440_Auth-Guest_Dialog-Open, G-09_1440_Auth-Guest_Kind-LoginRequired, R-01_1440_Auth-Guest_Drawer-Closed_Sidebar-Collapsed_Info-Short, R-01_1440_Auth-Guest_Drawer-Closed_Sidebar-Expanded_Info-Expanded, R-01_360_Auth-Guest_Drawer-Open_Sidebar-Expanded_Info-Short, R-11_1440_Auth-Guest_State-Empty, R-11_1440_Auth-Guest_State-NoResults
 
@@ -1219,69 +1219,85 @@
 | Figma에만 | file-table | 코드에 이름표 없음(Figma 32,961 704x1262) |
 | Figma에만 | readme | 코드에 이름표 없음(Figma 32,2239 704x5842) |
 
-### A-05_1024_Guest (D21, 1건)
+### A-05_1024_Guest (D21, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| Figma에만 | tabs | 코드에 이름표 없음(Figma 40,199 944x40) |
+| 위치/크기 | tabs | y Figma 199 / 코드 210 (+11) |
+| 위치/크기 | tabs | h Figma 40 / 코드 48 (+8) |
+| 모서리·안쪽·간격 | tabs | 간격 4→0 |
 
-### A-05_1024_Signed-in (D21, 1건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| Figma에만 | tabs | 코드에 이름표 없음(Figma 40,199 944x40) |
-
-### A-05_1440_Guest (D21, 2건)
+### A-05_1024_Signed-in (D21, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| Figma에만 | tabs | 코드에 이름표 없음(Figma 296,199 1088x40) |
-| 위치/크기 | sidebar-nav | h Figma 352 / 코드 354 (+2) |
+| 위치/크기 | tabs | y Figma 199 / 코드 210 (+11) |
+| 위치/크기 | tabs | h Figma 40 / 코드 48 (+8) |
+| 모서리·안쪽·간격 | tabs | 간격 4→0 |
 
-### A-05_1440_Signed-in (D21, 2건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| Figma에만 | tabs | 코드에 이름표 없음(Figma 296,199 1088x40) |
-| 위치/크기 | sidebar-nav | h Figma 352 / 코드 354 (+2) |
-
-### A-05_1920_Guest (D21, 2건)
+### A-05_1440_Guest (D21, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| Figma에만 | tabs | 코드에 이름표 없음(Figma 480,199 1200x40) |
-| 위치/크기 | sidebar-nav | h Figma 352 / 코드 354 (+2) |
+| 위치/크기 | tabs | y Figma 199 / 코드 210 (+11) |
+| 위치/크기 | tabs | h Figma 40 / 코드 48 (+8) |
+| 모서리·안쪽·간격 | tabs | 간격 4→0 |
 
-### A-05_1920_Signed-in (D21, 2건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| Figma에만 | tabs | 코드에 이름표 없음(Figma 480,199 1200x40) |
-| 위치/크기 | sidebar-nav | h Figma 352 / 코드 354 (+2) |
-
-### A-05_360_Guest (D21, 1건)
+### A-05_1440_Signed-in (D21, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| Figma에만 | tabs | 코드에 이름표 없음(Figma 16,191 328x40) |
+| 위치/크기 | tabs | y Figma 199 / 코드 210 (+11) |
+| 위치/크기 | tabs | h Figma 40 / 코드 48 (+8) |
+| 모서리·안쪽·간격 | tabs | 간격 4→0 |
 
-### A-05_360_Signed-in (D21, 1건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| Figma에만 | tabs | 코드에 이름표 없음(Figma 16,191 328x40) |
-
-### A-05_768_Guest (D21, 1건)
+### A-05_1920_Guest (D21, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| Figma에만 | tabs | 코드에 이름표 없음(Figma 32,199 704x40) |
+| 위치/크기 | tabs | y Figma 199 / 코드 210 (+11) |
+| 위치/크기 | tabs | h Figma 40 / 코드 48 (+8) |
+| 모서리·안쪽·간격 | tabs | 간격 4→0 |
 
-### A-05_768_Signed-in (D21, 1건)
+### A-05_1920_Signed-in (D21, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| Figma에만 | tabs | 코드에 이름표 없음(Figma 32,199 704x40) |
+| 위치/크기 | tabs | y Figma 199 / 코드 210 (+11) |
+| 위치/크기 | tabs | h Figma 40 / 코드 48 (+8) |
+| 모서리·안쪽·간격 | tabs | 간격 4→0 |
+
+### A-05_360_Guest (D21, 3건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | tabs | y Figma 191 / 코드 198 (+7) |
+| 위치/크기 | tabs | h Figma 40 / 코드 48 (+8) |
+| 모서리·안쪽·간격 | tabs | 간격 4→0 |
+
+### A-05_360_Signed-in (D21, 3건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | tabs | y Figma 191 / 코드 198 (+7) |
+| 위치/크기 | tabs | h Figma 40 / 코드 48 (+8) |
+| 모서리·안쪽·간격 | tabs | 간격 4→0 |
+
+### A-05_768_Guest (D21, 3건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | tabs | y Figma 199 / 코드 210 (+11) |
+| 위치/크기 | tabs | h Figma 40 / 코드 48 (+8) |
+| 모서리·안쪽·간격 | tabs | 간격 4→0 |
+
+### A-05_768_Signed-in (D21, 3건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | tabs | y Figma 199 / 코드 210 (+11) |
+| 위치/크기 | tabs | h Figma 40 / 코드 48 (+8) |
+| 모서리·안쪽·간격 | tabs | 간격 4→0 |
 
 ### A-06_1440_Guest (D21, 1건)
 
@@ -4202,81 +4218,91 @@
 |---|---|---|
 | Figma에만 | comment-editor | 코드에 이름표 없음(Figma 32,801 704x122) |
 
-### R-13_1024_Guest (C2, 2건)
+### R-13_1024_Guest (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 893 / 코드 927 (+34) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
 
-### R-13_1024_Signed-in (C2, 2건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-13_1440_Guest (C2, 3건)
+### R-13_1024_Signed-in (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
+| 위치/크기 | filter-search | x Figma 893 / 코드 927 (+34) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
+
+### R-13_1440_Guest (C2, 4건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
+| 위치/크기 | filter-search | x Figma 1293 / 코드 1327 (+34) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
 | 위치/크기 | sidebar-nav | w Figma 224 / 코드 213 (-11) |
-| 코드에만 | filter-search | Figma에 없음 |
 
-### R-13_1440_Signed-in (C2, 3건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
-| 위치/크기 | sidebar-nav | w Figma 224 / 코드 213 (-11) |
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-13_1920_Guest (C2, 3건)
+### R-13_1440_Signed-in (C2, 4건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
+| 위치/크기 | filter-search | x Figma 1293 / 코드 1327 (+34) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
 | 위치/크기 | sidebar-nav | w Figma 224 / 코드 213 (-11) |
-| 코드에만 | filter-search | Figma에 없음 |
 
-### R-13_1920_Signed-in (C2, 3건)
+### R-13_1920_Guest (C2, 4건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
+| 위치/크기 | filter-search | x Figma 1589 / 코드 1623 (+34) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
 | 위치/크기 | sidebar-nav | w Figma 224 / 코드 213 (-11) |
-| 코드에만 | filter-search | Figma에 없음 |
 
-### R-13_360_Guest (C2, 3건)
+### R-13_1920_Signed-in (C2, 4건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
+| 위치/크기 | filter-search | x Figma 1589 / 코드 1623 (+34) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
+| 위치/크기 | sidebar-nav | w Figma 224 / 코드 213 (-11) |
+
+### R-13_360_Guest (C2, 4건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | h Figma 65 / 코드 105 (+40) |
 | 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 253 / 코드 287 (+34) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 176 (+38) |
 
-### R-13_360_Signed-in (C2, 3건)
+### R-13_360_Signed-in (C2, 4건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | h Figma 65 / 코드 105 (+40) |
 | 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 253 / 코드 287 (+34) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 176 (+38) |
 
-### R-13_768_Guest (C2, 2건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-13_768_Signed-in (C2, 2건)
+### R-13_768_Guest (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 645 / 코드 679 (+34) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
+
+### R-13_768_Signed-in (C2, 3건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 아이콘 | gl-filter | Figma arrow-down,search,setting / 코드 search |
+| 위치/크기 | filter-search | x Figma 645 / 코드 679 (+34) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
 
 ### R-14_1024_Guest (C2, 3건)
 
@@ -4450,309 +4476,419 @@
 |---|---|---|
 | 위치/크기 | filter-search | y Figma 187 / 코드 185 (-2) |
 
-### R-17_1024_Guest (C2, 5건)
+### R-17_1024_Guest (C2, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | page-head | w Figma 944 / 코드 435 (-509) |
 | 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
 | 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
 | 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
 | 아이콘 | page-head | Figma arrow-down / 코드 없음 |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
+| 위치/크기 | code-button | x Figma 922 / 코드 925 (+3) |
+| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
+| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
+| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
+| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
 
-### R-17_1024_Signed-in (C2, 5건)
+### R-17_1024_Signed-in (C2, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | page-head | w Figma 944 / 코드 435 (-509) |
 | 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
 | 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
 | 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
 | 아이콘 | page-head | Figma arrow-down / 코드 없음 |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
+| 위치/크기 | code-button | x Figma 922 / 코드 925 (+3) |
+| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
+| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
+| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
+| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
 
-### R-17_1440_Guest (C2, 5건)
+### R-17_1440_Guest (C2, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | page-head | w Figma 1088 / 코드 435 (-653) |
 | 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
 | 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
 | 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
 | 아이콘 | page-head | Figma arrow-down / 코드 없음 |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
+| 위치/크기 | code-button | x Figma 1322 / 코드 1325 (+3) |
+| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
+| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
+| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
+| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
 
-### R-17_1440_Signed-in (C2, 5건)
+### R-17_1440_Signed-in (C2, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | page-head | w Figma 1088 / 코드 435 (-653) |
 | 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
 | 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
 | 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
 | 아이콘 | page-head | Figma arrow-down / 코드 없음 |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
+| 위치/크기 | code-button | x Figma 1322 / 코드 1325 (+3) |
+| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
+| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
+| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
+| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
 
-### R-17_1920_Guest (C2, 5건)
+### R-17_1920_Guest (C2, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | page-head | w Figma 1200 / 코드 435 (-765) |
 | 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
 | 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
 | 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
 | 아이콘 | page-head | Figma arrow-down / 코드 없음 |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
+| 위치/크기 | code-button | x Figma 1618 / 코드 1621 (+3) |
+| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
+| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
+| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
+| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
 
-### R-17_1920_Signed-in (C2, 5건)
+### R-17_1920_Signed-in (C2, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | page-head | w Figma 1200 / 코드 435 (-765) |
 | 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
 | 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
 | 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
 | 아이콘 | page-head | Figma arrow-down / 코드 없음 |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
+| 위치/크기 | code-button | x Figma 1618 / 코드 1621 (+3) |
+| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
+| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
+| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
+| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
 
-### R-17_360_Guest (C2, 7건)
+### R-17_360_Guest (C2, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | page-head | w Figma 328 / 코드 240 (-88) |
 | 위치/크기 | page-head | h Figma 72 / 코드 32 (-40) |
 | 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
 | 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
 | 아이콘 | page-head | Figma arrow-down / 코드 없음 |
-| 위치/크기 | tabs | y Figma 305 / 코드 288 (-17) |
+| 위치/크기 | tabs | y Figma 305 / 코드 296 (-9) |
 | 위치/크기 | tabs | h Figma 104 / 코드 48 (-56) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
+| 위치/크기 | code-button | x Figma 282 / 코드 285 (+3) |
+| 위치/크기 | code-button | y Figma 137 / 코드 129 (-8) |
+| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
+| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
+| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
 
-### R-17_360_Signed-in (C2, 7건)
+### R-17_360_Signed-in (C2, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | page-head | w Figma 328 / 코드 240 (-88) |
 | 위치/크기 | page-head | h Figma 72 / 코드 32 (-40) |
 | 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
 | 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
 | 아이콘 | page-head | Figma arrow-down / 코드 없음 |
-| 위치/크기 | tabs | y Figma 305 / 코드 288 (-17) |
+| 위치/크기 | tabs | y Figma 305 / 코드 296 (-9) |
 | 위치/크기 | tabs | h Figma 104 / 코드 48 (-56) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
+| 위치/크기 | code-button | x Figma 282 / 코드 285 (+3) |
+| 위치/크기 | code-button | y Figma 137 / 코드 129 (-8) |
+| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
+| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
+| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
 
-### R-17_768_Guest (C2, 6건)
+### R-17_768_Guest (C2, 14건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | page-head | w Figma 704 / 코드 435 (-269) |
 | 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
 | 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
 | 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
 | 아이콘 | page-head | Figma arrow-down / 코드 없음 |
 | 위치/크기 | tabs | y Figma 243 / 코드 250 (+7) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
+| 위치/크기 | code-button | x Figma 674 / 코드 677 (+3) |
+| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
+| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
+| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
+| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
 
-### R-17_768_Signed-in (C2, 6건)
+### R-17_768_Signed-in (C2, 14건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | page-head | w Figma 704 / 코드 435 (-269) |
 | 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
 | 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
 | 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
 | 아이콘 | page-head | Figma arrow-down / 코드 없음 |
 | 위치/크기 | tabs | y Figma 243 / 코드 250 (+7) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
+| 위치/크기 | code-button | x Figma 674 / 코드 677 (+3) |
+| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
+| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
+| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
+| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
 
-### R-18_1024_Guest (C2, 1건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-18_1024_Signed-in (C2, 1건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-18_1440_Guest (C2, 2건)
+### R-18_1024_Guest (C2, 2건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | filter-search | x Figma 761 / 코드 753 (-8) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
+
+### R-18_1024_Signed-in (C2, 2건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | filter-search | x Figma 761 / 코드 753 (-8) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
+
+### R-18_1440_Guest (C2, 3건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | filter-search | x Figma 1161 / 코드 1153 (-8) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
 | 위치/크기 | sidebar-nav | w Figma 224 / 코드 213 (-11) |
-| 코드에만 | filter-search | Figma에 없음 |
 
-### R-18_1440_Signed-in (C2, 2건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 위치/크기 | sidebar-nav | w Figma 224 / 코드 213 (-11) |
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-18_1920_Guest (C2, 2건)
+### R-18_1440_Signed-in (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | filter-search | x Figma 1161 / 코드 1153 (-8) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
 | 위치/크기 | sidebar-nav | w Figma 224 / 코드 213 (-11) |
-| 코드에만 | filter-search | Figma에 없음 |
 
-### R-18_1920_Signed-in (C2, 2건)
+### R-18_1920_Guest (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
+| 위치/크기 | filter-search | x Figma 1457 / 코드 1449 (-8) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
 | 위치/크기 | sidebar-nav | w Figma 224 / 코드 213 (-11) |
-| 코드에만 | filter-search | Figma에 없음 |
 
-### R-18_360_Guest (C2, 2건)
+### R-18_1920_Signed-in (C2, 3건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | filter-search | x Figma 1457 / 코드 1449 (-8) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
+| 위치/크기 | sidebar-nav | w Figma 224 / 코드 213 (-11) |
+
+### R-18_360_Guest (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | h Figma 79 / 코드 105 (+26) |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 121 / 코드 287 (+166) |
+| 위치/크기 | filter-search | y Figma 145 / 코드 136 (-9) |
 
-### R-18_360_Signed-in (C2, 2건)
+### R-18_360_Signed-in (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | h Figma 79 / 코드 105 (+26) |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 121 / 코드 287 (+166) |
+| 위치/크기 | filter-search | y Figma 145 / 코드 136 (-9) |
 
-### R-18_768_Guest (C2, 1건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-18_768_Signed-in (C2, 1건)
+### R-18_768_Guest (C2, 2건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 513 / 코드 505 (-8) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
 
-### R-19_1024_Guest (C2, 2건)
+### R-18_768_Signed-in (C2, 2건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 513 / 코드 505 (-8) |
+| 위치/크기 | filter-search | y Figma 138 / 코드 136 (-2) |
 
-### R-19_1024_Signed-in (C2, 2건)
+### R-19_1024_Guest (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 935 / 코드 927 (-8) |
+| 위치/크기 | filter-search | y Figma 187 / 코드 184 (-3) |
 
-### R-19_1440_Guest (C2, 2건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-19_1440_Signed-in (C2, 2건)
+### R-19_1024_Signed-in (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 935 / 코드 927 (-8) |
+| 위치/크기 | filter-search | y Figma 187 / 코드 184 (-3) |
 
-### R-19_1920_Guest (C2, 2건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-19_1920_Signed-in (C2, 2건)
+### R-19_1440_Guest (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 1335 / 코드 1327 (-8) |
+| 위치/크기 | filter-search | y Figma 187 / 코드 184 (-3) |
 
-### R-19_360_Guest (C2, 2건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-19_360_Signed-in (C2, 2건)
+### R-19_1440_Signed-in (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 1335 / 코드 1327 (-8) |
+| 위치/크기 | filter-search | y Figma 187 / 코드 184 (-3) |
 
-### R-19_768_Guest (C2, 2건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-19_768_Signed-in (C2, 2건)
+### R-19_1920_Guest (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 1631 / 코드 1623 (-8) |
+| 위치/크기 | filter-search | y Figma 187 / 코드 184 (-3) |
 
-### R-20_1024_Guest (C2, 1건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-20_1024_Signed-in (C2, 1건)
+### R-19_1920_Signed-in (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
+| 위치/크기 | filter-search | x Figma 1631 / 코드 1623 (-8) |
+| 위치/크기 | filter-search | y Figma 187 / 코드 184 (-3) |
 
-### R-20_1440_Guest (C2, 1건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-20_1440_Signed-in (C2, 1건)
+### R-19_360_Guest (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
+| 위치/크기 | filter-search | x Figma 295 / 코드 287 (-8) |
+| 위치/크기 | filter-search | y Figma 187 / 코드 184 (-3) |
 
-### R-20_1920_Guest (C2, 1건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-20_1920_Signed-in (C2, 1건)
+### R-19_360_Signed-in (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
+| 위치/크기 | filter-search | x Figma 295 / 코드 287 (-8) |
+| 위치/크기 | filter-search | y Figma 187 / 코드 184 (-3) |
 
-### R-20_360_Guest (C2, 2건)
+### R-19_768_Guest (C2, 3건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
+| 위치/크기 | filter-search | x Figma 687 / 코드 679 (-8) |
+| 위치/크기 | filter-search | y Figma 187 / 코드 184 (-3) |
+
+### R-19_768_Signed-in (C2, 3건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | gl-filter | y Figma 170 / 코드 168 (-2) |
+| 위치/크기 | filter-search | x Figma 687 / 코드 679 (-8) |
+| 위치/크기 | filter-search | y Figma 187 / 코드 184 (-3) |
+
+### R-20_1024_Guest (C2, 2건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | filter-search | x Figma 796 / 코드 790 (-6) |
+| 위치/크기 | filter-search | y Figma 220 / 코드 218 (-2) |
+
+### R-20_1024_Signed-in (C2, 2건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | filter-search | x Figma 796 / 코드 790 (-6) |
+| 위치/크기 | filter-search | y Figma 220 / 코드 218 (-2) |
+
+### R-20_1440_Guest (C2, 2건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | filter-search | x Figma 1196 / 코드 1190 (-6) |
+| 위치/크기 | filter-search | y Figma 220 / 코드 218 (-2) |
+
+### R-20_1440_Signed-in (C2, 2건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | filter-search | x Figma 1196 / 코드 1190 (-6) |
+| 위치/크기 | filter-search | y Figma 220 / 코드 218 (-2) |
+
+### R-20_1920_Guest (C2, 2건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | filter-search | x Figma 1492 / 코드 1486 (-6) |
+| 위치/크기 | filter-search | y Figma 220 / 코드 218 (-2) |
+
+### R-20_1920_Signed-in (C2, 2건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | filter-search | x Figma 1492 / 코드 1486 (-6) |
+| 위치/크기 | filter-search | y Figma 220 / 코드 218 (-2) |
+
+### R-20_360_Guest (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | h Figma 65 / 코드 105 (+40) |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 156 / 코드 287 (+131) |
+| 위치/크기 | filter-search | y Figma 212 / 코드 210 (-2) |
 
-### R-20_360_Signed-in (C2, 2건)
+### R-20_360_Signed-in (C2, 3건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | 위치/크기 | gl-filter | h Figma 65 / 코드 105 (+40) |
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 156 / 코드 287 (+131) |
+| 위치/크기 | filter-search | y Figma 212 / 코드 210 (-2) |
 
-### R-20_768_Guest (C2, 1건)
-
-| 분류 | 요소 | 내용 |
-|---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
-
-### R-20_768_Signed-in (C2, 1건)
+### R-20_768_Guest (C2, 2건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 코드에만 | filter-search | Figma에 없음 |
+| 위치/크기 | filter-search | x Figma 548 / 코드 542 (-6) |
+| 위치/크기 | filter-search | y Figma 220 / 코드 218 (-2) |
+
+### R-20_768_Signed-in (C2, 2건)
+
+| 분류 | 요소 | 내용 |
+|---|---|---|
+| 위치/크기 | filter-search | x Figma 548 / 코드 542 (-6) |
+| 위치/크기 | filter-search | y Figma 220 / 코드 218 (-2) |
 
 ### R-21_1440_Guest (C2, 1건)
 

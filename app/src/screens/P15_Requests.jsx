@@ -12,6 +12,8 @@ import { Status, EmptyState } from '../components/Feedback/Status';
 import { LoginRequiredModal } from '../components/Feedback/LoginRequiredModal';
 import { FormField, requireFields } from '../components/Input/FormField';
 import { Button } from '../components/Action/Button';
+import { rq } from '../copy/work';
+import './parts/glRepo.css';
 
 const FIELDS = [
   ['task', t.P15_1, t.P15_2],
@@ -28,6 +30,7 @@ export default function Requests() {
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState({});
   const writing = params.get('new') === '1';
+  const [order, setOrder] = useState('votes');
 
   useEffect(() => {
     auth.session().then(setSession).catch(() => setSession({ authenticated: false }));
@@ -75,12 +78,17 @@ export default function Requests() {
         </form>
       ) : (
         <>
+          <div className="gl-tabs" data-figma="tabs" role="tablist">
+            {[['votes', rq.byVotes], ['recent', rq.recent], ['mine', rq.mine(session?.authenticated ? (list.data?.data?.items || []).filter((r) => r.mine).length : 0)]].map(([k, n]) => (
+              <button key={k} type="button" role="tab" aria-selected={order === k} className={'gl-tab' + (order === k ? ' active' : '')} onClick={() => setOrder(k)}>{n}</button>
+            ))}
+          </div>
           <div className="rb-actions"><Button onClick={startWrite}>{t.P02_12}</Button></div>
           <Status {...list} />
           {list.state === 'Empty' && <EmptyState title={t.P15_14}>{t.P15_13}</EmptyState>}
           {hasData(list.state) && (
             <ul className="krds-structured-list rb-list">
-              {list.data.data.items.map((r) => (
+              {[...list.data.data.items].filter((r) => order !== 'mine' || r.mine).sort((a, b) => (order === 'votes' ? (b.votes || 0) - (a.votes || 0) : new Date(b.createdAt || 0) - new Date(a.createdAt || 0))).map((r) => (
                 <li className="structured-item rb-list-link" key={r.id}>
                   <span className="krds-text-body-small-bold">{r.task}</span>
                   <span className="krds-text-body-xsmall rb-subtle">{r.currentProcess}</span>

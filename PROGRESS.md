@@ -245,3 +245,4 @@
   - 50 6 {'D21': 50} ('only-figma', 'tabs') A-05_1024_Guest {'want': {'x': 40, 'y': 199, 'w': 944, 'h': 40}}
   - 50 5 {'C2': 50} ('only-code', 'filter-search') R-13_1024_Guest {}
   - 45 9 {'D21': 17, 'C1': 14, 'C2': 14} ('box', 'page-head', 'h') G-03_360_Guest {'field': 'h', 'figma': 32, 'code': 64, 'diff': 32}
+- [C2] 원장 8차: A-05 요청 보드에 탭 줄(공감 많은 순, 최근, 내가 쓴 요청 n; 정렬 전환), R-17 MR 제목 줄에 code-button 드롭다운. R-13/18/19/20 filter-search는 Figma 반영됨

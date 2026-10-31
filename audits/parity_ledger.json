@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T14:32:23.783Z",
+ "generated": "2026-10-31T14:33:48.251Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
@@ -9508,13 +9508,13 @@
   "A-05_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 0,
+    "shape": 1,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -9564,8 +9564,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 254,
-     "diff": -192,
+     "code": 322,
+     "diff": -124,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -9573,11 +9573,11 @@
      "name": "main",
      "figma": [
       "필요한 도구를 요청하고 공감합니다",
-      "공감 많은 순",
-      "최근",
-      "내가 쓴 요청"
+      "12",
+      "출장 여비 자동 계산 도구",
+      "엑셀로 계산하는 일이 많습니다. 규정 개정 반영까지 되면 좋겠습니다."
      ],
-     "code": "요청 보드 필요 도구 등록, 타 기관 공감 요청하기 요청 없음 필요 도구 등록",
+     "code": "요청 보드 필요 도구 등록, 타 기관 공감 공감 많은 순 최근 내가 쓴 요청 0 요청하기 요청 없음 필요 도구 등록",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
@@ -9602,14 +9602,27 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "tabs",
-     "want": {
-      "x": 40,
-      "y": 199,
-      "w": 944,
-      "h": 40
-     },
+     "field": "y",
+     "figma": 199,
+     "code": 210,
+     "diff": 11,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "h",
+     "figma": 40,
+     "code": 48,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "tabs",
+     "detail": "간격 4→0",
      "allowed": null
     },
     {
@@ -9622,13 +9635,13 @@
   "A-05_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 0,
+    "shape": 1,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -9678,8 +9691,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 254,
-     "diff": -192,
+     "code": 322,
+     "diff": -124,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -9687,11 +9700,11 @@
      "name": "main",
      "figma": [
       "필요한 도구를 요청하고 공감합니다",
-      "공감 많은 순",
-      "최근",
-      "내가 쓴 요청"
+      "12",
+      "출장 여비 자동 계산 도구",
+      "엑셀로 계산하는 일이 많습니다. 규정 개정 반영까지 되면 좋겠습니다."
      ],
-     "code": "요청 보드 필요 도구 등록, 타 기관 공감 요청하기 요청 없음 필요 도구 등록",
+     "code": "요청 보드 필요 도구 등록, 타 기관 공감 공감 많은 순 최근 내가 쓴 요청 0 요청하기 요청 없음 필요 도구 등록",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
@@ -9716,14 +9729,27 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "tabs",
-     "want": {
-      "x": 40,
-      "y": 199,
-      "w": 944,
-      "h": 40
-     },
+     "field": "y",
+     "figma": 199,
+     "code": 210,
+     "diff": 11,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "h",
+     "figma": 40,
+     "code": 48,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "tabs",
+     "detail": "간격 4→0",
      "allowed": null
     },
     {
@@ -9736,13 +9762,13 @@
   "A-05_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 1,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 0,
+    "shape": 1,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -9835,8 +9861,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 254,
-     "diff": -192,
+     "code": 322,
+     "diff": -124,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -9844,11 +9870,11 @@
      "name": "main",
      "figma": [
       "필요한 도구를 요청하고 공감합니다",
-      "공감 많은 순",
-      "최근",
-      "내가 쓴 요청"
+      "12",
+      "출장 여비 자동 계산 도구",
+      "엑셀로 계산하는 일이 많습니다. 규정 개정 반영까지 되면 좋겠습니다."
      ],
-     "code": "요청 보드 필요 도구 등록, 타 기관 공감 요청하기 요청 없음 필요 도구 등록",
+     "code": "요청 보드 필요 도구 등록, 타 기관 공감 공감 많은 순 최근 내가 쓴 요청 0 요청하기 요청 없음 필요 도구 등록",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
@@ -9873,23 +9899,27 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "tabs",
-     "want": {
-      "x": 296,
-      "y": 199,
-      "w": 1088,
-      "h": 40
-     },
+     "field": "y",
+     "figma": 199,
+     "code": 210,
+     "diff": 11,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "sidebar-nav",
+     "name": "tabs",
      "field": "h",
-     "figma": 352,
-     "code": 354,
-     "diff": 2,
+     "figma": 40,
+     "code": 48,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "tabs",
+     "detail": "간격 4→0",
      "allowed": null
     },
     {
@@ -9902,13 +9932,13 @@
   "A-05_1440_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 1,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 0,
+    "shape": 1,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -10001,8 +10031,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 254,
-     "diff": -192,
+     "code": 322,
+     "diff": -124,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10010,11 +10040,11 @@
      "name": "main",
      "figma": [
       "필요한 도구를 요청하고 공감합니다",
-      "공감 많은 순",
-      "최근",
-      "내가 쓴 요청"
+      "12",
+      "출장 여비 자동 계산 도구",
+      "엑셀로 계산하는 일이 많습니다. 규정 개정 반영까지 되면 좋겠습니다."
      ],
-     "code": "요청 보드 필요 도구 등록, 타 기관 공감 요청하기 요청 없음 필요 도구 등록",
+     "code": "요청 보드 필요 도구 등록, 타 기관 공감 공감 많은 순 최근 내가 쓴 요청 0 요청하기 요청 없음 필요 도구 등록",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
@@ -10039,23 +10069,27 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "tabs",
-     "want": {
-      "x": 296,
-      "y": 199,
-      "w": 1088,
-      "h": 40
-     },
+     "field": "y",
+     "figma": 199,
+     "code": 210,
+     "diff": 11,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "sidebar-nav",
+     "name": "tabs",
      "field": "h",
-     "figma": 352,
-     "code": 354,
-     "diff": 2,
+     "figma": 40,
+     "code": 48,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "tabs",
+     "detail": "간격 4→0",
      "allowed": null
     },
     {
@@ -10068,13 +10102,13 @@
   "A-05_1920_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 1,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 0,
+    "shape": 1,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -10167,8 +10201,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 254,
-     "diff": -192,
+     "code": 322,
+     "diff": -124,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10176,11 +10210,11 @@
      "name": "main",
      "figma": [
       "필요한 도구를 요청하고 공감합니다",
-      "공감 많은 순",
-      "최근",
-      "내가 쓴 요청"
+      "12",
+      "출장 여비 자동 계산 도구",
+      "엑셀로 계산하는 일이 많습니다. 규정 개정 반영까지 되면 좋겠습니다."
      ],
-     "code": "요청 보드 필요 도구 등록, 타 기관 공감 요청하기 요청 없음 필요 도구 등록",
+     "code": "요청 보드 필요 도구 등록, 타 기관 공감 공감 많은 순 최근 내가 쓴 요청 0 요청하기 요청 없음 필요 도구 등록",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
@@ -10205,23 +10239,27 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "tabs",
-     "want": {
-      "x": 480,
-      "y": 199,
-      "w": 1200,
-      "h": 40
-     },
+     "field": "y",
+     "figma": 199,
+     "code": 210,
+     "diff": 11,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "sidebar-nav",
+     "name": "tabs",
      "field": "h",
-     "figma": 352,
-     "code": 354,
-     "diff": 2,
+     "figma": 40,
+     "code": 48,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "tabs",
+     "detail": "간격 4→0",
      "allowed": null
     },
     {
@@ -10234,13 +10272,13 @@
   "A-05_1920_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 1,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 0,
+    "shape": 1,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -10333,8 +10371,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 254,
-     "diff": -192,
+     "code": 322,
+     "diff": -124,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10342,11 +10380,11 @@
      "name": "main",
      "figma": [
       "필요한 도구를 요청하고 공감합니다",
-      "공감 많은 순",
-      "최근",
-      "내가 쓴 요청"
+      "12",
+      "출장 여비 자동 계산 도구",
+      "엑셀로 계산하는 일이 많습니다. 규정 개정 반영까지 되면 좋겠습니다."
      ],
-     "code": "요청 보드 필요 도구 등록, 타 기관 공감 요청하기 요청 없음 필요 도구 등록",
+     "code": "요청 보드 필요 도구 등록, 타 기관 공감 공감 많은 순 최근 내가 쓴 요청 0 요청하기 요청 없음 필요 도구 등록",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
@@ -10371,23 +10409,27 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "tabs",
-     "want": {
-      "x": 480,
-      "y": 199,
-      "w": 1200,
-      "h": 40
-     },
+     "field": "y",
+     "figma": 199,
+     "code": 210,
+     "diff": 11,
      "allowed": null
     },
     {
      "kind": "box",
-     "name": "sidebar-nav",
+     "name": "tabs",
      "field": "h",
-     "figma": 352,
-     "code": 354,
-     "diff": 2,
+     "figma": 40,
+     "code": 48,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "tabs",
+     "detail": "간격 4→0",
      "allowed": null
     },
     {
@@ -10400,13 +10442,13 @@
   "A-05_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 0,
+    "shape": 1,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -10462,8 +10504,8 @@
      "name": "main",
      "field": "h",
      "figma": 698,
-     "code": 238,
-     "diff": -460,
+     "code": 302,
+     "diff": -396,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10471,11 +10513,11 @@
      "name": "main",
      "figma": [
       "필요한 도구를 요청하고 공감합니다",
-      "공감 많은 순",
-      "최근",
-      "내가 쓴 요청"
+      "12",
+      "출장 여비 자동 계산 도구",
+      "엑셀로 계산하는 일이 많습니다. 규정 개정 반영까지 되면 좋겠습니다."
      ],
-     "code": "요청 보드 필요 도구 등록, 타 기관 공감 요청하기 요청 없음 필요 도구 등록",
+     "code": "요청 보드 필요 도구 등록, 타 기관 공감 공감 많은 순 최근 내가 쓴 요청 0 요청하기 요청 없음 필요 도구 등록",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
@@ -10500,14 +10542,27 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "tabs",
-     "want": {
-      "x": 16,
-      "y": 191,
-      "w": 328,
-      "h": 40
-     },
+     "field": "y",
+     "figma": 191,
+     "code": 198,
+     "diff": 7,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "h",
+     "figma": 40,
+     "code": 48,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "tabs",
+     "detail": "간격 4→0",
      "allowed": null
     },
     {
@@ -10520,13 +10575,13 @@
   "A-05_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 0,
+    "shape": 1,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -10582,8 +10637,8 @@
      "name": "main",
      "field": "h",
      "figma": 698,
-     "code": 238,
-     "diff": -460,
+     "code": 302,
+     "diff": -396,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10591,11 +10646,11 @@
      "name": "main",
      "figma": [
       "필요한 도구를 요청하고 공감합니다",
-      "공감 많은 순",
-      "최근",
-      "내가 쓴 요청"
+      "12",
+      "출장 여비 자동 계산 도구",
+      "엑셀로 계산하는 일이 많습니다. 규정 개정 반영까지 되면 좋겠습니다."
      ],
-     "code": "요청 보드 필요 도구 등록, 타 기관 공감 요청하기 요청 없음 필요 도구 등록",
+     "code": "요청 보드 필요 도구 등록, 타 기관 공감 공감 많은 순 최근 내가 쓴 요청 0 요청하기 요청 없음 필요 도구 등록",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
@@ -10620,14 +10675,27 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "tabs",
-     "want": {
-      "x": 16,
-      "y": 191,
-      "w": 328,
-      "h": 40
-     },
+     "field": "y",
+     "figma": 191,
+     "code": 198,
+     "diff": 7,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "h",
+     "figma": 40,
+     "code": 48,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "tabs",
+     "detail": "간격 4→0",
      "allowed": null
     },
     {
@@ -10640,13 +10708,13 @@
   "A-05_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 0,
+    "shape": 1,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -10702,8 +10770,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 254,
-     "diff": -192,
+     "code": 322,
+     "diff": -124,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10711,11 +10779,11 @@
      "name": "main",
      "figma": [
       "필요한 도구를 요청하고 공감합니다",
-      "공감 많은 순",
-      "최근",
-      "내가 쓴 요청"
+      "12",
+      "출장 여비 자동 계산 도구",
+      "엑셀로 계산하는 일이 많습니다. 규정 개정 반영까지 되면 좋겠습니다."
      ],
-     "code": "요청 보드 필요 도구 등록, 타 기관 공감 요청하기 요청 없음 필요 도구 등록",
+     "code": "요청 보드 필요 도구 등록, 타 기관 공감 공감 많은 순 최근 내가 쓴 요청 0 요청하기 요청 없음 필요 도구 등록",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
@@ -10740,14 +10808,27 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "tabs",
-     "want": {
-      "x": 32,
-      "y": 199,
-      "w": 704,
-      "h": 40
-     },
+     "field": "y",
+     "figma": 199,
+     "code": 210,
+     "diff": 11,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "h",
+     "figma": 40,
+     "code": 48,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "tabs",
+     "detail": "간격 4→0",
      "allowed": null
     },
     {
@@ -10760,13 +10841,13 @@
   "A-05_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 0,
+    "shape": 1,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -10822,8 +10903,8 @@
      "name": "main",
      "field": "h",
      "figma": 446,
-     "code": 254,
-     "diff": -192,
+     "code": 322,
+     "diff": -124,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -10831,11 +10912,11 @@
      "name": "main",
      "figma": [
       "필요한 도구를 요청하고 공감합니다",
-      "공감 많은 순",
-      "최근",
-      "내가 쓴 요청"
+      "12",
+      "출장 여비 자동 계산 도구",
+      "엑셀로 계산하는 일이 많습니다. 규정 개정 반영까지 되면 좋겠습니다."
      ],
-     "code": "요청 보드 필요 도구 등록, 타 기관 공감 요청하기 요청 없음 필요 도구 등록",
+     "code": "요청 보드 필요 도구 등록, 타 기관 공감 공감 많은 순 최근 내가 쓴 요청 0 요청하기 요청 없음 필요 도구 등록",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
@@ -10860,14 +10941,27 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "tabs",
-     "want": {
-      "x": 32,
-      "y": 199,
-      "w": 704,
-      "h": 40
-     },
+     "field": "y",
+     "figma": 199,
+     "code": 210,
+     "diff": 11,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "h",
+     "figma": 40,
+     "code": 48,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "tabs",
+     "detail": "간격 4→0",
      "allowed": null
     },
     {
@@ -63612,14 +63706,14 @@
   "R-13_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 9,
@@ -63722,8 +63816,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 893,
+     "code": 927,
+     "diff": 34,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
      "allowed": null
     }
    ]
@@ -63731,14 +63838,14 @@
   "R-13_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 9,
@@ -63841,8 +63948,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 893,
+     "code": 927,
+     "diff": 34,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
      "allowed": null
     }
    ]
@@ -63850,14 +63970,14 @@
   "R-13_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 11,
@@ -63966,16 +64086,29 @@
     },
     {
      "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1293,
+     "code": 1327,
+     "diff": 34,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "sidebar-nav",
      "field": "w",
      "figma": 224,
      "code": 213,
      "diff": -11,
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -63983,14 +64116,14 @@
   "R-13_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 11,
@@ -64099,16 +64232,29 @@
     },
     {
      "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1293,
+     "code": 1327,
+     "diff": 34,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "sidebar-nav",
      "field": "w",
      "figma": 224,
      "code": 213,
      "diff": -11,
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -64116,14 +64262,14 @@
   "R-13_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 11,
@@ -64232,16 +64378,29 @@
     },
     {
      "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1589,
+     "code": 1623,
+     "diff": 34,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "sidebar-nav",
      "field": "w",
      "figma": 224,
      "code": 213,
      "diff": -11,
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -64249,14 +64408,14 @@
   "R-13_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 11,
@@ -64365,16 +64524,29 @@
     },
     {
      "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1589,
+     "code": 1623,
+     "diff": 34,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "sidebar-nav",
      "field": "w",
      "figma": 224,
      "code": 213,
      "diff": -11,
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -64382,14 +64554,14 @@
   "R-13_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 10,
@@ -64507,8 +64679,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 253,
+     "code": 287,
+     "diff": 34,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 176,
+     "diff": 38,
      "allowed": null
     }
    ]
@@ -64516,14 +64701,14 @@
   "R-13_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 10,
@@ -64641,8 +64826,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 253,
+     "code": 287,
+     "diff": 34,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 176,
+     "diff": 38,
      "allowed": null
     }
    ]
@@ -64650,14 +64848,14 @@
   "R-13_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 10,
@@ -64766,8 +64964,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 645,
+     "code": 679,
+     "diff": 34,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
      "allowed": null
     }
    ]
@@ -64775,14 +64986,14 @@
   "R-13_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 10,
@@ -64891,8 +65102,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 645,
+     "code": 679,
+     "diff": 34,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
      "allowed": null
     }
    ]
@@ -68798,12 +69022,12 @@
   "R-17_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 6,
     "text": 1,
     "font": 0,
     "color": 0,
-    "shape": 2,
-    "icon": 1,
+    "shape": 4,
+    "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -68829,6 +69053,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -68864,6 +69089,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -68896,6 +69122,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -68914,6 +69141,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "page-head",
+     "field": "w",
+     "figma": 944,
+     "code": 435,
+     "diff": -509,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -68955,6 +69191,63 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "code-button",
+     "field": "x",
+     "figma": 922,
+     "code": 925,
+     "diff": 3,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "y",
+     "figma": 125,
+     "code": 129,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "w",
+     "figma": 62,
+     "code": 26,
+     "diff": -36,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "h",
+     "figma": 32,
+     "code": 22,
+     "diff": -10,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "모서리 4→0",
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "안쪽 0 8 0 8→0 0 0 0",
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "code-button",
+     "figma": [
+      "arrow-down"
+     ],
+     "code": [],
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -68964,12 +69257,12 @@
   "R-17_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 6,
     "text": 1,
     "font": 0,
     "color": 0,
-    "shape": 2,
-    "icon": 1,
+    "shape": 4,
+    "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -68995,6 +69288,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -69030,6 +69324,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69062,6 +69357,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69080,6 +69376,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "page-head",
+     "field": "w",
+     "figma": 944,
+     "code": 435,
+     "diff": -509,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -69121,6 +69426,63 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "code-button",
+     "field": "x",
+     "figma": 922,
+     "code": 925,
+     "diff": 3,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "y",
+     "figma": 125,
+     "code": 129,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "w",
+     "figma": 62,
+     "code": 26,
+     "diff": -36,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "h",
+     "figma": 32,
+     "code": 22,
+     "diff": -10,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "모서리 4→0",
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "안쪽 0 8 0 8→0 0 0 0",
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "code-button",
+     "figma": [
+      "arrow-down"
+     ],
+     "code": [],
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -69130,12 +69492,12 @@
   "R-17_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 6,
     "text": 1,
     "font": 0,
     "color": 0,
-    "shape": 2,
-    "icon": 1,
+    "shape": 4,
+    "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -69209,6 +69571,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69241,6 +69604,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69259,6 +69623,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "page-head",
+     "field": "w",
+     "figma": 1088,
+     "code": 435,
+     "diff": -653,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -69300,6 +69673,63 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "code-button",
+     "field": "x",
+     "figma": 1322,
+     "code": 1325,
+     "diff": 3,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "y",
+     "figma": 125,
+     "code": 129,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "w",
+     "figma": 62,
+     "code": 26,
+     "diff": -36,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "h",
+     "figma": 32,
+     "code": 22,
+     "diff": -10,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "모서리 4→0",
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "안쪽 0 8 0 8→0 0 0 0",
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "code-button",
+     "figma": [
+      "arrow-down"
+     ],
+     "code": [],
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -69309,12 +69739,12 @@
   "R-17_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 6,
     "text": 1,
     "font": 0,
     "color": 0,
-    "shape": 2,
-    "icon": 1,
+    "shape": 4,
+    "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -69388,6 +69818,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69420,6 +69851,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69438,6 +69870,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "page-head",
+     "field": "w",
+     "figma": 1088,
+     "code": 435,
+     "diff": -653,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -69479,6 +69920,63 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "code-button",
+     "field": "x",
+     "figma": 1322,
+     "code": 1325,
+     "diff": 3,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "y",
+     "figma": 125,
+     "code": 129,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "w",
+     "figma": 62,
+     "code": 26,
+     "diff": -36,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "h",
+     "figma": 32,
+     "code": 22,
+     "diff": -10,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "모서리 4→0",
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "안쪽 0 8 0 8→0 0 0 0",
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "code-button",
+     "figma": [
+      "arrow-down"
+     ],
+     "code": [],
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -69488,12 +69986,12 @@
   "R-17_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 6,
     "text": 1,
     "font": 0,
     "color": 0,
-    "shape": 2,
-    "icon": 1,
+    "shape": 4,
+    "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -69567,6 +70065,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69599,6 +70098,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69617,6 +70117,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "page-head",
+     "field": "w",
+     "figma": 1200,
+     "code": 435,
+     "diff": -765,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -69658,6 +70167,63 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "code-button",
+     "field": "x",
+     "figma": 1618,
+     "code": 1621,
+     "diff": 3,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "y",
+     "figma": 125,
+     "code": 129,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "w",
+     "figma": 62,
+     "code": 26,
+     "diff": -36,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "h",
+     "figma": 32,
+     "code": 22,
+     "diff": -10,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "모서리 4→0",
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "안쪽 0 8 0 8→0 0 0 0",
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "code-button",
+     "figma": [
+      "arrow-down"
+     ],
+     "code": [],
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -69667,12 +70233,12 @@
   "R-17_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 6,
     "text": 1,
     "font": 0,
     "color": 0,
-    "shape": 2,
-    "icon": 1,
+    "shape": 4,
+    "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -69746,6 +70312,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69778,6 +70345,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69796,6 +70364,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "page-head",
+     "field": "w",
+     "figma": 1200,
+     "code": 435,
+     "diff": -765,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -69837,6 +70414,63 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "code-button",
+     "field": "x",
+     "figma": 1618,
+     "code": 1621,
+     "diff": 3,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "y",
+     "figma": 125,
+     "code": 129,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "w",
+     "figma": 62,
+     "code": 26,
+     "diff": -36,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "h",
+     "figma": 32,
+     "code": 22,
+     "diff": -10,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "모서리 4→0",
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "안쪽 0 8 0 8→0 0 0 0",
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "code-button",
+     "figma": [
+      "arrow-down"
+     ],
+     "code": [],
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -69846,12 +70480,12 @@
   "R-17_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 8,
     "text": 1,
     "font": 0,
     "color": 0,
-    "shape": 2,
-    "icon": 1,
+    "shape": 4,
+    "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -69877,6 +70511,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -69918,6 +70553,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69936,8 +70572,8 @@
      "name": "main",
      "field": "h",
      "figma": 1363,
-     "code": 1662,
-     "diff": 299,
+     "code": 1670,
+     "diff": 307,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -69950,6 +70586,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -69959,8 +70596,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1525,
-     "code": 1806,
-     "diff": 281,
+     "code": 1814,
+     "diff": 289,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -69968,6 +70605,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "page-head",
+     "field": "w",
+     "figma": 328,
+     "code": 240,
+     "diff": -88,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -70007,8 +70653,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 305,
-     "code": 288,
-     "diff": -17,
+     "code": 296,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -70027,6 +70673,63 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "code-button",
+     "field": "x",
+     "figma": 282,
+     "code": 285,
+     "diff": 3,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "y",
+     "figma": 137,
+     "code": 129,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "w",
+     "figma": 62,
+     "code": 26,
+     "diff": -36,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "h",
+     "figma": 32,
+     "code": 22,
+     "diff": -10,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "모서리 4→0",
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "안쪽 0 8 0 8→0 0 0 0",
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "code-button",
+     "figma": [
+      "arrow-down"
+     ],
+     "code": [],
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -70036,12 +70739,12 @@
   "R-17_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 8,
     "text": 1,
     "font": 0,
     "color": 0,
-    "shape": 2,
-    "icon": 1,
+    "shape": 4,
+    "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -70067,6 +70770,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -70108,6 +70812,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -70126,8 +70831,8 @@
      "name": "main",
      "field": "h",
      "figma": 1469,
-     "code": 1662,
-     "diff": 193,
+     "code": 1670,
+     "diff": 201,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70140,6 +70845,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -70149,8 +70855,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1631,
-     "code": 1806,
-     "diff": 175,
+     "code": 1814,
+     "diff": 183,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70158,6 +70864,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "page-head",
+     "field": "w",
+     "figma": 328,
+     "code": 240,
+     "diff": -88,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -70197,8 +70912,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 305,
-     "code": 288,
-     "diff": -17,
+     "code": 296,
+     "diff": -9,
      "allowed": null
     },
     {
@@ -70217,6 +70932,63 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "code-button",
+     "field": "x",
+     "figma": 282,
+     "code": 285,
+     "diff": 3,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "y",
+     "figma": 137,
+     "code": 129,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "w",
+     "figma": 62,
+     "code": 26,
+     "diff": -36,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "h",
+     "figma": 32,
+     "code": 22,
+     "diff": -10,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "모서리 4→0",
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "안쪽 0 8 0 8→0 0 0 0",
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "code-button",
+     "figma": [
+      "arrow-down"
+     ],
+     "code": [],
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -70226,12 +70998,12 @@
   "R-17_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 7,
     "text": 1,
     "font": 0,
     "color": 0,
-    "shape": 2,
-    "icon": 1,
+    "shape": 4,
+    "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -70257,6 +71029,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -70298,6 +71071,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -70330,6 +71104,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -70348,6 +71123,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "page-head",
+     "field": "w",
+     "figma": 704,
+     "code": 435,
+     "diff": -269,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -70398,6 +71182,63 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "code-button",
+     "field": "x",
+     "figma": 674,
+     "code": 677,
+     "diff": 3,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "y",
+     "figma": 125,
+     "code": 129,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "w",
+     "figma": 62,
+     "code": 26,
+     "diff": -36,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "h",
+     "figma": 32,
+     "code": 22,
+     "diff": -10,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "모서리 4→0",
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "안쪽 0 8 0 8→0 0 0 0",
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "code-button",
+     "figma": [
+      "arrow-down"
+     ],
+     "code": [],
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -70407,12 +71248,12 @@
   "R-17_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 7,
     "text": 1,
     "font": 0,
     "color": 0,
-    "shape": 2,
-    "icon": 1,
+    "shape": 4,
+    "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -70438,6 +71279,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -70479,6 +71321,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -70511,6 +71354,7 @@
       "merge-request"
      ],
      "code": [
+      "arrow-down",
       "close"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -70529,6 +71373,15 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "box",
+     "name": "page-head",
+     "field": "w",
+     "figma": 704,
+     "code": 435,
+     "diff": -269,
+     "allowed": null
     },
     {
      "kind": "box",
@@ -70579,6 +71432,63 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "code-button",
+     "field": "x",
+     "figma": 674,
+     "code": 677,
+     "diff": 3,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "y",
+     "figma": 125,
+     "code": 129,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "w",
+     "figma": 62,
+     "code": 26,
+     "diff": -36,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "code-button",
+     "field": "h",
+     "figma": 32,
+     "code": 22,
+     "diff": -10,
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "모서리 4→0",
+     "allowed": null
+    },
+    {
+     "kind": "shape",
+     "name": "code-button",
+     "detail": "안쪽 0 8 0 8→0 0 0 0",
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "code-button",
+     "figma": [
+      "arrow-down"
+     ],
+     "code": [],
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -70588,14 +71498,14 @@
   "R-18_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -70649,8 +71559,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 761,
+     "code": 753,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
      "allowed": null
     }
    ]
@@ -70658,14 +71581,14 @@
   "R-18_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -70719,8 +71642,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 761,
+     "code": 753,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
      "allowed": null
     }
    ]
@@ -70728,14 +71664,14 @@
   "R-18_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 9,
@@ -70808,16 +71744,29 @@
     },
     {
      "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1161,
+     "code": 1153,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "sidebar-nav",
      "field": "w",
      "figma": 224,
      "code": 213,
      "diff": -11,
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -70825,14 +71774,14 @@
   "R-18_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 9,
@@ -70905,16 +71854,29 @@
     },
     {
      "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1161,
+     "code": 1153,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "sidebar-nav",
      "field": "w",
      "figma": 224,
      "code": 213,
      "diff": -11,
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -70922,14 +71884,14 @@
   "R-18_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 9,
@@ -71002,16 +71964,29 @@
     },
     {
      "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1457,
+     "code": 1449,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "sidebar-nav",
      "field": "w",
      "figma": 224,
      "code": 213,
      "diff": -11,
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -71019,14 +71994,14 @@
   "R-18_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 9,
@@ -71099,16 +72074,29 @@
     },
     {
      "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1457,
+     "code": 1449,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "sidebar-nav",
      "field": "w",
      "figma": 224,
      "code": 213,
      "diff": -11,
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -71116,14 +72104,14 @@
   "R-18_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 8,
@@ -71201,8 +72189,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 121,
+     "code": 287,
+     "diff": 166,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 145,
+     "code": 136,
+     "diff": -9,
      "allowed": null
     }
    ]
@@ -71210,14 +72211,14 @@
   "R-18_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 8,
@@ -71295,8 +72296,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 121,
+     "code": 287,
+     "diff": 166,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 145,
+     "code": 136,
+     "diff": -9,
      "allowed": null
     }
    ]
@@ -71304,14 +72318,14 @@
   "R-18_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 7,
@@ -71371,8 +72385,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 513,
+     "code": 505,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
      "allowed": null
     }
    ]
@@ -71380,14 +72407,14 @@
   "R-18_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 7,
@@ -71447,8 +72474,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 513,
+     "code": 505,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 138,
+     "code": 136,
+     "diff": -2,
      "allowed": null
     }
    ]
@@ -71456,14 +72496,14 @@
   "R-19_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -71523,8 +72563,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 935,
+     "code": 927,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 184,
+     "diff": -3,
      "allowed": null
     }
    ]
@@ -71532,14 +72585,14 @@
   "R-19_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 6,
@@ -71599,8 +72652,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 935,
+     "code": 927,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 184,
+     "diff": -3,
      "allowed": null
     }
    ]
@@ -71608,14 +72674,14 @@
   "R-19_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 8,
@@ -71684,8 +72750,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 1335,
+     "code": 1327,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 184,
+     "diff": -3,
      "allowed": null
     }
    ]
@@ -71693,14 +72772,14 @@
   "R-19_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 8,
@@ -71769,8 +72848,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 1335,
+     "code": 1327,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 184,
+     "diff": -3,
      "allowed": null
     }
    ]
@@ -71778,14 +72870,14 @@
   "R-19_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 8,
@@ -71854,8 +72946,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 1631,
+     "code": 1623,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 184,
+     "diff": -3,
      "allowed": null
     }
    ]
@@ -71863,14 +72968,14 @@
   "R-19_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 8,
@@ -71939,8 +73044,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 1631,
+     "code": 1623,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 184,
+     "diff": -3,
      "allowed": null
     }
    ]
@@ -71948,14 +73066,14 @@
   "R-19_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 9,
@@ -72039,8 +73157,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 295,
+     "code": 287,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 184,
+     "diff": -3,
      "allowed": null
     }
    ]
@@ -72048,14 +73179,14 @@
   "R-19_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 9,
@@ -72139,8 +73270,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 295,
+     "code": 287,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 184,
+     "diff": -3,
      "allowed": null
     }
    ]
@@ -72148,14 +73292,14 @@
   "R-19_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 7,
@@ -72221,8 +73365,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 687,
+     "code": 679,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 184,
+     "diff": -3,
      "allowed": null
     }
    ]
@@ -72230,14 +73387,14 @@
   "R-19_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 7,
@@ -72303,8 +73460,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 687,
+     "code": 679,
+     "diff": -8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 184,
+     "diff": -3,
      "allowed": null
     }
    ]
@@ -72312,14 +73482,14 @@
   "R-20_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 10,
@@ -72418,8 +73588,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 796,
+     "code": 790,
+     "diff": -6,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 220,
+     "code": 218,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -72432,14 +73615,14 @@
   "R-20_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 10,
@@ -72538,8 +73721,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 796,
+     "code": 790,
+     "diff": -6,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 220,
+     "code": 218,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -72552,14 +73748,14 @@
   "R-20_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -72660,8 +73856,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 1196,
+     "code": 1190,
+     "diff": -6,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 220,
+     "code": 218,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -72674,14 +73883,14 @@
   "R-20_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -72782,8 +73991,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 1196,
+     "code": 1190,
+     "diff": -6,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 220,
+     "code": 218,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -72796,14 +74018,14 @@
   "R-20_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -72904,8 +74126,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 1492,
+     "code": 1486,
+     "diff": -6,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 220,
+     "code": 218,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -72918,14 +74153,14 @@
   "R-20_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -73026,8 +74261,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 1492,
+     "code": 1486,
+     "diff": -6,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 220,
+     "code": 218,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -73040,14 +74288,14 @@
   "R-20_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -73170,8 +74418,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 156,
+     "code": 287,
+     "diff": 131,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 212,
+     "code": 210,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -73184,14 +74445,14 @@
   "R-20_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 1,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -73314,8 +74575,21 @@
      "allowed": null
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 156,
+     "code": 287,
+     "diff": 131,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 212,
+     "code": 210,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -73328,14 +74602,14 @@
   "R-20_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 11,
@@ -73440,8 +74714,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 548,
+     "code": 542,
+     "diff": -6,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 220,
+     "code": 218,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -73454,14 +74741,14 @@
   "R-20_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 2,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 1,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 11,
@@ -73566,8 +74853,21 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-code",
+     "kind": "box",
      "name": "filter-search",
+     "field": "x",
+     "figma": 548,
+     "code": 542,
+     "diff": -6,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 220,
+     "code": 218,
+     "diff": -2,
      "allowed": null
     },
     {

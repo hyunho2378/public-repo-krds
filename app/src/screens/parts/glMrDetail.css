@@ -42,3 +42,5 @@
 .gl-commit-row { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); padding: var(--krds-gap-4) var(--krds-gap-5); border-bottom: var(--krds-border-width-static-regular) solid var(--layout-divider); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
 .gl-commit-row:last-child { border-bottom: 0; }
 .gl-commit-row p { margin: 0; }
+
+.gl-mr-titlerow { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--krds-gap-5); }

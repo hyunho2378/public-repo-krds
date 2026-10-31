@@ -12,7 +12,8 @@ import { matchTitle } from '../components/Code/ListTools';
 import { Drop } from '../components/Code/Drop';
 import { FilterSearch } from './parts/FilterSearch';
 import { Icon } from '../components/Code/Icon';
-import { mr, au, p1 } from '../copy/work';
+import { mr, au, p1, rq } from '../copy/work';
+import { newWindow } from '../components/Layout/newWindow';
 import { gql, Q } from './parts/glGraphql';
 import { Avatar } from '../components/Layout/Avatar';
 import { EmptyArt } from './parts/EmptyArt';
@@ -183,7 +184,8 @@ export function MergeRequest() {
       {!m ? <Status {...body} /> : (
         <div className="rb-code-area">
           <div className="gl-mr-head">
-            <h1 className="gl-mr-h1">{m.title}</h1>
+            <div className="gl-mr-titlerow"><h1 className="gl-mr-h1">{m.title}</h1>
+            <Drop label={rq.code} align="right" button={<span data-figma="code-button">{rq.code}</span>}>{(close) => (<ul className="drop-list" aria-label={rq.code}><li><a className="item-link" href={`${frame.data.project.web_url}/-/merge_requests/${m.iid}`} {...newWindow(rq.code)} onClick={close}>{p1.openOrig}</a></li></ul>)}</Drop></div>
             <p className="gl-mr-meta gl-mr-statusline">
               <span className={`gl-badge is-${m.state}`}><Icon name={BADGE_ICON[m.state] || 'close'} />{stateWord}</span>
               <span className="gl-person">{who}</span>
