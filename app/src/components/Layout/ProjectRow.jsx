@@ -30,7 +30,8 @@ export function ProjectRow({ p, mrs, issues }) {
   return (
     <li className="rb-prow" data-figma="project-row">
       <Icon name="ext/project" />
-      <Avatar src={p.avatar_url} name={p.name} className="is-32" />
+      {/* 공공 깃랩: 머리글자는 '만든 곳 / 이름'의 첫 글자(서울특별시 광진구 류승인 / kordoc → 서) */}
+      <Avatar src={p.avatar_url} name={owner || p.name} seed={p.id} className="is-32" />
       <div className="rb-prow-main">
         <p className="rb-prow-title">
           <Link to={`/projects/${p.id}`}>{owner ? `${owner} / ` : ''}{p.name}</Link>

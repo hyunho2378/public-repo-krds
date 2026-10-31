@@ -141,6 +141,12 @@ export default function Home() {
           <input id="x-filter" type="search" value={text} placeholder={u.X_filter} onChange={(e) => setText(e.target.value)} aria-describedby={warn ? 'x-filter-warn' : undefined} />
           <button type="submit" className="rb-x-searchbtn" aria-label={u.X_search} title={u.X_search}><Icon name="search" /></button>
         </form>
+        {/* 덧붙임(D-21 4장, UX/14 2): 업무 분야 선택 1개. 별도 줄 없이 필터 막대 안 정렬 앞 한 칸(2026. 10. 31. 사용자 지적) */}
+        {fieldOpts.length ? (
+          <div className="rb-x-extra" data-figma="extra-field-filter">
+            <PickMenu label={u.X_field} value={field} options={[['', u.X_fieldAll], ...fieldOpts.map((f) => [f.name, `${f.name} ${f.count}`])]} onPick={(f) => set({ field: f })} className="rb-x-sortbtn" />
+          </div>
+        ) : null}
         <div className="rb-x-sort" role="group" aria-label={u.X_sortBy}>
           <PickMenu label={u.X_sortBy} value={sort} options={SORTS} onPick={(k) => set({ sort: k })} className="rb-x-sortbtn" />
           <button type="button" className="rb-x-dir" onClick={() => set({ dir: dir === 'asc' ? 'desc' : 'asc' })} aria-label={dir === 'asc' ? u.X_sortDesc : u.X_sortAsc} title={dir === 'asc' ? u.X_sortDesc : u.X_sortAsc}>
@@ -149,13 +155,6 @@ export default function Home() {
         </div>
       </div>
       {warn ? <p id="x-filter-warn" className="krds-text-body-xsmall rb-subtle" role="status">{u.X_min3}</p> : null}
-      {/* 덧붙임(D-21 4장, UX/14 2): 업무 분야 선택 한 줄. 소개 카드 분야가 있을 때만 */}
-      {fieldOpts.length ? (
-        <div className="rb-x-extra" data-figma="extra-field-filter">
-          <span className="krds-text-body-xsmall rb-subtle">{u.X_field}</span>
-          <PickMenu label={u.X_field} value={field} options={[['', u.X_fieldAll], ...fieldOpts.map((f) => [f.name, `${f.name} ${f.count}`])]} onPick={(f) => set({ field: f })} className="rb-x-sortbtn" />
-        </div>
-      ) : null}
       <Status {...list} />
       {list.state === 'Empty' ? <p className="krds-text-body-small rb-subtle">{u.X_none}</p> : null}
       {items.length ? <ul className="rb-prows">{items.map((p) => <ProjectRow key={p.id} p={p} mrs={mrs[p.id]?.mr} issues={mrs[p.id]?.issues} />)}</ul> : null}

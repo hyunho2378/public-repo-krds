@@ -118,16 +118,55 @@
   --layout-sidebar-item-pad-y: var(--krds-number-5);
   --layout-sidebar-item-pad-x: var(--krds-number-7);
   --layout-panel-gap: var(--krds-number-5);
-  --layout-panel-radius: var(--krds-radius-medium3);
-  --layout-container-max: calc(var(--krds-number-21) * 12 + var(--krds-number-16));
+  /* v2 실측(2026. 10. 31., 공공 깃랩 1440/1920): 판은 세로 바 바로 옆(왼쪽 0), 오른쪽과 아래만 8 */
+  --layout-panel-gap-left: var(--krds-number-0);
+  /* v2 실측: 공공 깃랩 panels-container 모서리 12 → KRDS radius-xlarge1(12) */
+  --layout-panel-radius: var(--krds-radius-xlarge1);
+  /* v2 실측: 공공 깃랩 container-limited 1280 - 좌우 12 = 본문 1256 = 96x13 + 8 */
+  --layout-container-max: calc(var(--krds-number-21) * 13 + var(--krds-number-5));
   /* 판 안 컨테이너 좌우 여백(폭별): lg 48(1280 이상), md 32(1024~1279), 기본 24(768~1023), sm 16(768 미만). 공공 깃랩 01, 02 비율(판 폭의 약 4%) */
-  --layout-container-pad-x-lg: var(--krds-number-16);
-  --layout-container-pad-x-md: var(--krds-number-12);
-  --layout-container-pad-x: var(--krds-number-10);
-  --layout-container-pad-x-sm: var(--krds-number-8);
-  --layout-container-pad-y: var(--krds-number-10);
-  --layout-crumb-title-gap: var(--krds-number-10);
-  --layout-filter-list-gap: var(--krds-number-8);
+  /* v2 실측: 공공 깃랩 판 안 좌우 여백은 모든 폭에서 12(container-fluid px). 이전 48/32/24/16은 캡처 비율 추정이라 폐기 */
+  --layout-container-pad-x-lg: var(--krds-number-7);
+  --layout-container-pad-x-md: var(--krds-number-7);
+  --layout-container-pad-x: var(--krds-number-7);
+  --layout-container-pad-x-sm: var(--krds-number-7);
+  /* v2 실측: 판 위 → 경로 줄 8, 경로 줄 위 → 제목 위 40(경로 20 + 간격 20), 제목 → 탭 12, 탭 → 필터 막대 0, 필터 막대 → 첫 행 8 */
+  --layout-container-pad-y: var(--krds-number-5);
+  --layout-crumb-title-gap: var(--krds-number-9);
+  --layout-title-tabs-gap: var(--krds-number-7);
+  --layout-filter-list-gap: var(--krds-number-5);
+  --layout-filter-pad: var(--krds-number-8);
+  --layout-row-pad-x: var(--krds-number-8);
+  --layout-topic-gap: var(--krds-number-5);
+  /* v2 실측: 세로 바 항목 28, 안쪽 좌우 8(아이콘 16이 x16, 글자 x44), 항목 사이 2, 모서리 8, 머리('탐색') 위 4 + 위아래 8 */
+  --layout-sidebar-item-h: var(--krds-number-11);
+  --layout-sidebar-icon: var(--krds-number-8);
+  --layout-sidebar-top: var(--krds-number-3);
+  /* v2 실측: 화면 제목 28/36(공공 깃랩 28/36.4, KRDS mobile heading-xlarge 2.8rem), 프로젝트 제목 32/40(공공 깃랩 30/37.5, KRDS pc heading-large) */
+  --layout-title-size: var(--krds-mobile-font-size-heading-xlarge);
+  --layout-title-lh: calc(var(--krds-number-12) + var(--krds-number-3));
+  --layout-repo-title-size: var(--krds-pc-font-size-heading-large);
+  --layout-repo-title-lh: var(--rb-lh-32);
+  /* v2 색 층(공공 깃랩 rgb → 가장 가까운 KRDS gray 단계). 바깥(세로 바, 상단 바) 5,5,6 → gray-100, 판 24,23,29 → gray-95, 판 테두리 58,56,63 → gray-80,
+     필터 막대와 현재 항목 40,39,45 → gray-90, 필터 위 선과 행 구분선 76,75,81 → gray-70, 주제 알약 164,163,168 → gray-30(글자 24,23,29 → gray-95), 보조 글자 191,191,195 → gray-20 */
+  --layout-shell-bg: var(--krds-color-light-gray-100);
+  --layout-panel-bg: var(--krds-color-light-gray-95);
+  --layout-panel-border: var(--krds-color-light-gray-80);
+  --layout-raised-bg: var(--krds-color-light-gray-90);
+  --layout-head-bg: var(--krds-color-light-gray-80);
+  --layout-divider: var(--krds-color-light-gray-70);
+  --layout-topic-bg: var(--krds-color-light-gray-30);
+  --layout-topic-text: var(--krds-color-light-gray-95);
+  --layout-text-subtle: var(--krds-color-light-gray-20);
+  /* 머리글자 타일 7색: KRDS 원색 50 + 흰 글자(대비 계산은 UX/gitlab_compare/v2/measure.md 5절) */
+  --layout-tone-0: var(--krds-color-light-primary-50);
+  --layout-tone-1: var(--krds-color-light-success-50);
+  --layout-tone-2: var(--krds-color-light-point-50);
+  --layout-tone-3: var(--krds-color-light-information-50);
+  --layout-tone-4: var(--krds-color-light-warning-50);
+  --layout-tone-5: var(--krds-color-light-secondary-50);
+  --layout-tone-6: var(--krds-color-light-danger-50);
+  --layout-tone-text: var(--krds-color-light-gray-0);
   --layout-row-pad-y: var(--krds-number-7);
   --layout-gutter: var(--krds-number-10);
   --layout-section-gap: var(--krds-number-10);

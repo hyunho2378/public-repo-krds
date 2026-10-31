@@ -7,7 +7,7 @@
   const toRgb = (h) => { h = h.replace('#', ''); if (h.length === 3) h = h.split('').map((c) => c + c).join(''); const n = parseInt(h.slice(0, 6), 16); return `${(n >> 16) & 255},${(n >> 8) & 255},${n & 255}`; };
   for (const sheet of document.styleSheets) {
     let rules; try { rules = sheet.cssRules; } catch { continue; }
-    const walk = (list) => { for (const r of list) { if (r.cssRules) walk(r.cssRules); if (!r.style) continue; for (let i = 0; i < r.style.length; i++) { const p = r.style[i]; if (!p.startsWith('--krds')) continue; const v = r.style.getPropertyValue(p).trim(); if (/^#[0-9a-f]{3,8}$/i.test(v)) hex.add(toRgb(v)); } } };
+    const walk = (list) => { for (const r of list) { if (r.styleSheet) { try { walk(r.styleSheet.cssRules); } catch { /* 다른 출처 */ } } if (r.cssRules) walk(r.cssRules); if (!r.style) continue; for (let i = 0; i < r.style.length; i++) { const p = r.style[i]; if (!p.startsWith('--krds')) continue; const v = r.style.getPropertyValue(p).trim(); if (/^#[0-9a-f]{3,8}$/i.test(v)) hex.add(toRgb(v)); } } };
     walk(rules);
   }
   hex.add('0,0,0'); hex.add('255,255,255');

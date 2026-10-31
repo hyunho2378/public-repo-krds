@@ -9,10 +9,19 @@ export function avatarUrl(raw) {
   return /^https?:/.test(raw) ? raw : GITLAB + raw;
 }
 
-export function Avatar({ src, name, className = '' }) {
+// 머리글자 타일 색(D-15 개정 2026. 10. 31.): 공공 깃랩처럼 타일마다 색이 다르다(id % 7, id가 없으면 이름 해시).
+// KRDS 원색 50 단계 7색 + 흰 글자. 판(gray-95)과 행 호버(gray-90) 위 비텍스트 대비 3:1 이상, 글자 4.5:1 이상(UX/gitlab_compare/v2/measure.md 5절)
+export function avatarTone(seed, name) {
+  let n = Number.isFinite(seed) ? seed : 0;
+  if (!Number.isFinite(seed)) for (const ch of String(name || '')) n = (n * 31 + ch.codePointAt(0)) >>> 0;
+  return n % 7;
+}
+
+export function Avatar({ src, name, seed, className = '' }) {
   const [failed, setFailed] = useState(false);
   const url = avatarUrl(src);
   const letter = (name || '').trim().slice(0, 1).toUpperCase();
+  const tone = avatarTone(seed, name);
   if (url && !failed) {
     return (
       <img
@@ -24,5 +33,5 @@ export function Avatar({ src, name, className = '' }) {
       />
     );
   }
-  return <span className={`rb-avatar ${className}`.trim()} aria-hidden="true">{letter}</span>;
+  return <span className={`rb-avatar is-letter is-tone-${tone} ${className}`.trim()} aria-hidden="true">{letter}</span>;
 }

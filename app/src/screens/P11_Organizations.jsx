@@ -43,7 +43,7 @@ function GroupRow({ g, n }) {
   return (
     <li className="rb-prow rb-grow-row" data-figma="group-row">
       <Icon name="ext/group" />
-      <Avatar src={g.avatar_url} name={g.name} className="is-32" />
+      <Avatar src={g.avatar_url} name={g.name} seed={g.id} className="is-32" />
       <div className="rb-prow-main">
         <p className="rb-prow-title">
           <a href={g.web_url} {...newWindow(g.full_name || g.name)}>{g.full_name || g.name}</a>

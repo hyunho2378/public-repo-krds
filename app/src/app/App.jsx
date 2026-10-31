@@ -15,6 +15,7 @@ import { u } from '../copy/ui';
 import { t } from '../copy/ko';
 import { breakpoint, useBoolPref, useMinWidth } from './prefs';
 import '../components/Layout/shell.css';
+import '../components/Layout/v2-measure.css';
 
 /** 화면이 바뀌면 맨 위로, 본문에 초점(화면 낭독기가 새 화면을 읽도록). 좁은 화면 서랍도 닫는다.
  *  D-22: 뒤로/앞으로 가기(POP)에서는 그 화면의 스크롤 위치를 되살린다(이 탭에서만 기억). */

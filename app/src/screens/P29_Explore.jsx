@@ -32,7 +32,7 @@ export function Topics() {
             {items.map((tp) => (
               <li key={tp.id}>
                 <Link className="rb-box-row" to={`/search?topic=${encodeURIComponent(tp.name)}`}>
-                  <Avatar src={tp.avatar_url} name={tp.title || tp.name} className="is-32" />
+                  <Avatar src={tp.avatar_url} name={tp.title || tp.name} seed={tp.id} className="is-32" />
                   <span className="krds-text-body-small-bold">{tp.title || tp.name}</span>
                   <span className="rb-box-n rb-subtle" title={u.T_projects}><Icon name="analytics" />{tp.total_projects_count}</span>
                 </Link>
