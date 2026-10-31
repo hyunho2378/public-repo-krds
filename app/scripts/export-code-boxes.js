@@ -31,6 +31,9 @@
     const clone = e.cloneNode(true); clone.querySelectorAll('.sr-only, [aria-hidden="true"] .sr-only').forEach((x) => x.remove());
     const srs = [...e.querySelectorAll('.sr-only')].map((x) => (x.innerText || x.textContent || '').trim()).filter(Boolean);
     let t = (e.innerText || '').replace(/\s+/g, ' ').trim(); for (const x of srs) t = t.replace(x.replace(/\s+/g, ' '), ' ');
+    // 입력칸 자리표시(placeholder)는 Figma에서 글로 보이므로 글에 더한다
+    const phs = [...e.querySelectorAll('input[placeholder], textarea[placeholder]')].filter(shown).map((x) => x.value ? x.value : x.placeholder);
+    if (phs.length) t = `${t} ${phs.join(' ')}`;
     t = t.replace(/\s+/g, ' ').trim();
     const textEl = [e, ...e.querySelectorAll('*')].find((k) => [...k.childNodes].some((x) => x.nodeType === 3 && x.textContent.trim())) || e;
     const tc = getComputedStyle(textEl);
@@ -45,7 +48,7 @@
       border: bw || 0, borderColor: bcol, borderTok: tok(bcol), radius: px(c.borderTopLeftRadius),
       pad: [px(c.paddingTop), px(c.paddingRight), px(c.paddingBottom), px(c.paddingLeft)], gap: [px(c.rowGap), px(c.columnGap)],
       icons: [...e.querySelectorAll('[data-icon]')].filter(shown).slice(0, 20).map((i) => (i.tagName === 'IMG' ? 'file/' : '') + i.getAttribute('data-icon')),
-      kids, nchild: e.children.length,
+      kids, nchild: [...e.children].filter((k) => { const r = k.getBoundingClientRect(); return r.width && r.height && getComputedStyle(k).display !== 'none' && !k.classList.contains('sr-only'); }).length,
     };
   }
   return { screen: document.querySelector('[data-screen-id]')?.getAttribute('data-screen-id') || null, url: location.pathname + location.search, frame: { w: innerWidth, h: Math.max(document.documentElement.scrollHeight, panelScroll ? panelScroll.scrollHeight + (panelScroll.getBoundingClientRect().top) : 0) }, elements: out, order };

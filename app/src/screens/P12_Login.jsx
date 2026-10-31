@@ -45,19 +45,7 @@ export default function Login() {
   return (
     <Page id="G-08" title={t.P10_2} state="Ideal">
       <div className="rb-login3">
-        <section className="rb-login3-side" aria-labelledby="login-notice-head">
-          <div className="rb-login3-side-in" data-figma="login-notice">
-          <MoisLogo label={u.Login_moisAlt} figma="login-logo" />
-          {u.Login_notice.length ? (
-            <div className="rb-login3-notice" role="status" data-figma="notice-block">
-              <h2 id="login-notice-head" className="rb-login3-notice-head">{u.Login_noticeHead}</h2>
-              <p className="rb-login3-notice-title">{u.Login_notice[0]}</p>
-              <p className="rb-login3-notice-date">{u.Login_notice[1]}</p>
-              {u.Login_notice.slice(2).map((line, i) => <p key={line} className={i === 1 ? 'is-subtle' : undefined}>{line}</p>)}
-            </div>
-          ) : null}
-          </div>
-        </section>
+        <LoginSide />
         <span className="rb-login3-divider" data-figma="login-divider" aria-hidden="true" />
         <div className="rb-login3-main" data-figma="login-card">
           <h1 className="rb-login3-title">{t.P10_2}</h1>
@@ -95,5 +83,26 @@ export default function Login() {
         ) : null}
       </div>
     </Page>
+  );
+}
+
+/** Figma G-08 왼쪽 열(행정안전부 로고 + 공지)과 세로선. 로그인 변형(G-08b~e)도 같은 틀을 쓴다 */
+export function LoginSide() {
+  return (
+    <>
+          <section className="rb-login3-side" aria-labelledby="login-notice-head">
+            <div className="rb-login3-side-in" data-figma="login-notice">
+            <MoisLogo label={u.Login_moisAlt} figma="login-logo" />
+            {u.Login_notice.length ? (
+              <div className="rb-login3-notice" role="status" data-figma="notice-block">
+                <h2 id="login-notice-head" className="rb-login3-notice-head">{u.Login_noticeHead}</h2>
+                <p className="rb-login3-notice-title">{u.Login_notice[0]}</p>
+                <p className="rb-login3-notice-date">{u.Login_notice[1]}</p>
+                {u.Login_notice.slice(2).map((line, i) => <p key={line} className={i === 1 ? 'is-subtle' : undefined}>{line}</p>)}
+              </div>
+            ) : null}
+            </div>
+          </section>
+    </>
   );
 }

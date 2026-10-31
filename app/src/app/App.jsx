@@ -85,9 +85,16 @@ const NO_SIDEBAR = ['/login', '/login/failed', '/login/otp', '/register', '/pass
 /** 공공 깃랩 검색 결과는 사이드바 없이 판 전체 폭(audit_v3 SR-01). 상단 바는 있다 */
 const NO_SIDE_ONLY = ['/search'];
 /** 탐색 목록 화면의 판 안 경로(공공 깃랩 '탐색 / 프로젝트') */
-/** 탐색 밖 단독 화면의 판 안 경로(공공 깃랩 44 '검색'처럼 한 칸) */
-const SOLO_PATH = { '/search': u.S_title, '/projects/new': t.NewProject_title, '/help': t.Header_5 };
-const EXPLORE_PATH = { '/': u.G_projects, '/explore': u.G_projects, '/organizations': u.G_groups, '/explore/topics': u.G_topics, '/explore/snippets': u.G_snippets };
+/** 판 안 경로 줄(전역 화면). Figma G·A 변형의 경로 줄 글과 같게, 공공 깃랩 실측이 있는 곳(검색 = '검색' 한 칸)은 실측대로 */
+const CRUMB_HOME = { [u.G_explore]: '/', [t.Header_5]: '/help', [u.Crumb_user]: '/settings', [u.Crumb_project]: '/my' };
+const PATH_CRUMB = {
+  '/': [u.G_explore, u.G_projects], '/explore': [u.G_explore, u.G_projects], '/organizations': [u.G_explore, u.G_groups],
+  '/explore/topics': [u.G_explore, u.G_topics], '/explore/snippets': [u.G_explore, u.G_snippets],
+  '/search': [u.S_title], '/projects/new': [u.Crumb_project, t.NewProject_title], '/help': [u.G_explore, t.Header_5],
+  '/my': [u.G_explore, u.Crumb_myWork], '/notifications': [u.G_explore, u.Crumb_alerts], '/settings': [u.Crumb_user, u.Crumb_profile],
+  '/error': [u.Crumb_error], '/requests': [u.G_explore, u.Crumb_requests], '/insights': [u.G_explore, u.Crumb_insights],
+  '/mcp': [t.Header_5, u.Crumb_mcp], '/collaborate': [u.G_explore, u.Crumb_collab], '/checklist': [u.G_explore, u.Crumb_checklist],
+};
 
 /** D-22 단축키(2026. 10. 31. 개정): 공공 깃랩 '?' 대화상자에 있는 키 중 우리 화면이 있는 것만 쓴다(대응표 UX/16 6절).
  *  전역: ? 목록, s 또는 / 검색(GlobalBar), f 필터 막대, ⌘(Ctrl)+\ 사이드바, Shift+h 홈, Shift+p 내 프로젝트
@@ -139,7 +146,7 @@ function Shell() {
   const toggleSide = useCallback(() => (mobile ? setNavOpen((v) => !v) : setHidden(!hidden)), [mobile, hidden, setHidden]);
   const openKeys = useCallback(() => setKeys((v) => !v), []);
   useShortcuts({ toggleSide, openKeys, project });
-  const explore = EXPLORE_PATH[pathname];
+  const crumb = PATH_CRUMB[pathname];
   return (
     <>
       <FocusOnNavigate onNavigate={closeNav} />
@@ -163,7 +170,7 @@ function Shell() {
         )}
         <div className="rb-panel" id="rb-scroll" data-figma="content-panel">
           <div className="rb-panel-in">
-            {explore ? <Breadcrumb home={false} items={[[u.G_explore, '/'], [explore, null]]} /> : SOLO_PATH[pathname] ? <Breadcrumb home={false} items={[[SOLO_PATH[pathname], null]]} /> : null}
+            {crumb && !bare ? <Breadcrumb home={false} items={crumb.map((c, i) => [c, i < crumb.length - 1 ? CRUMB_HOME[c] || null : null])} /> : null}
             <main id="main" tabIndex={-1} className="rb-main">
               <Routes>
                 {routes.map(({ id, path, Screen }) => (

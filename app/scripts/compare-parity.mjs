@@ -15,6 +15,7 @@ const figma = await rd('code_plan/figma_full.json');
 const code = await rd('code_plan/measured_full.json');
 const allow = (await rd('code_plan/parity_allow.json')).rules;
 const map = await rd('code_plan/figma_name_map.json');
+const causes = (await rd('code_plan/parity_causes.json').catch(() => ({ causes: [] }))).causes;
 const TOL = 1;
 const W = { Thin: 100, Light: 300, Regular: 400, Medium: 500, SemiBold: 600, 'Semi Bold': 600, Bold: 700, ExtraBold: 800 };
 const DEF = { Drawer: 'Closed', Sidebar: 'Expanded', Info: 'Short', Dialog: 'Closed', Kind: 'NotFound', State: 'List', Panel: 'Closed' };
@@ -106,6 +107,18 @@ await fs.writeFile(path.join(ROOT, 'audits', 'parity_ledger.json'), JSON.stringi
 const L = [];
 L.push('# Figma 대 코드 전수 대조 원장(parity ledger)', '', `- 생성: ${result.generated}. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json`, '- 다시 만들기: 개발 서버에서 측정(app/scripts/export-code-boxes.mjs 또는 Aside 탭에서 export-code-boxes.js) 뒤 `npm run check:parity`', '');
 L.push('## 0. 해소 규칙', '', '1. 값이 실제 공공 깃랩 실측과 같으면 그 값이 정답이다. 다른 쪽(코드 또는 Figma)을 맞춘다', '2. 실제 실측이 없는 덧붙임(A 화면, 소개 카드, 업무 분야 등)은 Figma가 정답이다. 코드가 따른다', '3. 코드와 Figma가 둘 다 실제와 다르면 실제를 따라 둘 다 고친다', '4. 사용자 결정 기록(D-xx)이 있으면 그 결정이 앞선다(예: 판 안 여백 48/32/24/16, KRDS 글자 단계, 4의 배수)', '5. 의도한 차이는 code_plan/parity_allow.json에 근거와 함께 올린다. 원장 건수는 허용을 뺀 값', '6. 담당: 코드 C1(R-02~09, 25, 27~29) · C2(R-10~24, 26) · D21(전역 틀, R-01, R-30, G, A, 로그인), Figma는 Figma 작업자', '');
+// 0-1. 원인 상위 20: 같은 분류 + 요소 이름(+ 항목) 묶음
+{
+  const g = new Map();
+  for (const [key, sc] of Object.entries(result.screens)) for (const r of sc.rows) { if (r.allowed) continue; const n = r.name.replace(/#\d+$/, ''); const sig = [r.kind, n, r.kind === 'box' ? r.field : r.kind === 'color' ? r.field : ''].join('|'); const o = g.get(sig) || { kind: r.kind, name: n, field: r.kind === 'box' || r.kind === 'color' ? r.field : '', n: 0, owners: {}, ex: key }; o.n++; o.owners[sc.owner] = (o.owners[sc.owner] || 0) + 1; g.set(sig, o); }
+  const top = [...g.values()].sort((a, b) => b.n - a.n).slice(0, 20);
+  L.push('## 0-1. 원인 상위 20(같은 원인 반복 묶음)', '', '| 순위 | 원인(분류 · 요소 · 항목) | 건수 | 담당 화면 분포 | 해소 쪽 | 비고 | 예 |', '|---:|---|---:|---|---|---|---|');
+  top.forEach((o, i) => { const c = causes.find((x) => x.kind === o.kind && x.name === o.name && (!x.field || x.field === o.field)); L.push(`| ${i + 1} | ${LABEL[o.kind]} · ${o.name}${o.field ? ' · ' + o.field : ''} | ${o.n} | ${Object.entries(o.owners).map(([k, v]) => `${k} ${v}`).join(', ')} | ${c ? c.side : '미정'} | ${c ? c.note : ''} | ${o.ex} |`); });
+  L.push('');
+}
+L.push('## 0-2. 로그인 상태(Signed-in) 대조', '', '- 정적 배포본(GitHub Pages)에는 로그인 상태를 만들 수 없어(개발용 ?auth 스위치는 배포본에서 꺼짐) Signed-in 변형은 개발 서버(http://127.0.0.1:5731, ?auth=Signed-in)에서만 잰다. 배포본 검증은 Guest만', '', '| 화면 | Signed-in 변형 수(폭) | 개발 서버 대조 | 역할 변형(Figma Role) |', '|---|---:|---|---|');
+for (const s of map.screens) { const n = Object.keys(result.screens).filter((k) => k.startsWith(s.screen + '_') && k.endsWith('_Signed-in')).length; L.push(`| ${s.screen} ${s.figmaSet.replace(/^\S+ /, '')} | ${n} | ${n ? '함' : '없음'} | ${s.code?.roles?.length ? s.code.roles.join(', ') + '(코드 ?role= 재현 대기)' : '-'} |`); }
+L.push('');
 L.push('## 1. 화면별 차이 건수(허용 뺀 값)', '', `| 화면_폭_auth | 담당 | ${KINDS.map((k) => LABEL[k]).join(' | ')} | 합 | 허용 |`, `|---|---|${KINDS.map(() => '---:').join('|')}|---:|---:|`);
 const tot = Object.fromEntries(KINDS.map((k) => [k, 0])); let all = 0;
 for (const [key, s] of Object.entries(result.screens)) { const sum = KINDS.reduce((a, k) => a + s.counts[k], 0); all += sum; KINDS.forEach((k) => (tot[k] += s.counts[k])); L.push(`| ${key} | ${s.owner} | ${KINDS.map((k) => s.counts[k]).join(' | ')} | ${sum} | ${s.allowed} |`); }

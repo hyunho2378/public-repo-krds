@@ -162,6 +162,13 @@
    "name": "content-panel",
    "kind": "icon",
    "reason": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "project-row",
+   "kind": "text",
+   "reason": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
   }
  ]
 }
