@@ -12,6 +12,21 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '.
 const rd = async (p) => JSON.parse(await fs.readFile(path.join(ROOT, p), 'utf8'));
 const arg = (n) => (process.argv.includes(`--${n}`) ? process.argv[process.argv.indexOf(`--${n}`) + 1] : null);
 const figma = await rd('code_plan/figma_full.json');
+// Figma 작업자는 화면 묶음만 다시 내보내면 code_plan/figma_full/<변형>.json만 갱신하고 합본은 그대로 둘 때가 있다. 합본보다 새 개별 파일로 덮어쓴다(10. 31. 합본 00:22 정체로 반영 누락)
+{
+  const dir = path.join(ROOT, 'code_plan/figma_full');
+  const baseT = (await fs.stat(path.join(ROOT, 'code_plan/figma_full.json'))).mtimeMs;
+  let names = []; try { names = (await fs.readdir(dir)).filter((n) => n.endsWith('.json')); } catch {}
+  let n = 0;
+  for (const f of names) {
+    const st = await fs.stat(path.join(dir, f)); if (st.mtimeMs <= baseT) continue;
+    const v = JSON.parse(await fs.readFile(path.join(dir, f), 'utf8'));
+    const i = figma.data.findIndex((x) => x.variantId === v.variantId);
+    if (i >= 0) figma.data[i] = { ...v, file: f }; else figma.data.push({ ...v, file: f });
+    n++;
+  }
+  if (n) console.error(`Figma 개별 파일 ${n}개가 합본보다 새로워 덮어씀`);
+}
 const code = await rd('code_plan/measured_full.json');
 const allow = (await rd('code_plan/parity_allow.json')).rules;
 const map = await rd('code_plan/figma_name_map.json');
