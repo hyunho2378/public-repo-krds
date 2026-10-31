@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T12:38:53.340Z",
+ "generated": "2026-10-31T12:46:35.473Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
@@ -61632,7 +61632,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 2,
     "icon": 1,
     "only-figma": 0,
@@ -61756,6 +61756,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -61843,7 +61851,7 @@
     "box": 4,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 2,
     "icon": 1,
     "only-figma": 0,
@@ -61976,6 +61984,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -62063,7 +62079,7 @@
     "box": 8,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
@@ -62261,6 +62277,14 @@
      "code": 2191,
      "diff": 917,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -62418,7 +62442,7 @@
     "box": 8,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
@@ -62625,6 +62649,14 @@
      "code": 2191,
      "diff": 917,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -62782,7 +62814,7 @@
     "box": 8,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
@@ -62980,6 +63012,14 @@
      "code": 2191,
      "diff": 917,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -63137,7 +63177,7 @@
     "box": 8,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
@@ -63346,6 +63386,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -63501,7 +63549,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 2,
     "icon": 1,
     "only-figma": 0,
@@ -63632,6 +63680,14 @@
      "code": 2270,
      "diff": 1039,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -63721,7 +63777,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 2,
     "icon": 1,
     "only-figma": 0,
@@ -63854,6 +63910,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -63941,7 +64005,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 2,
     "icon": 1,
     "only-figma": 0,
@@ -64069,6 +64133,14 @@
      "code": 2191,
      "diff": 917,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -64158,7 +64230,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 2,
     "icon": 1,
     "only-figma": 0,
@@ -64288,6 +64360,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -64375,7 +64455,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
@@ -64517,6 +64597,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -64590,7 +64678,7 @@
     "box": 4,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
@@ -64741,6 +64829,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -64814,7 +64910,7 @@
     "box": 8,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 3,
     "only-figma": 0,
@@ -65024,6 +65120,14 @@
      "code": 5372,
      "diff": -88,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -65167,7 +65271,7 @@
     "box": 8,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 3,
     "only-figma": 0,
@@ -65388,6 +65492,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -65529,7 +65641,7 @@
     "box": 8,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 3,
     "only-figma": 0,
@@ -65741,6 +65853,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -65882,7 +66002,7 @@
     "box": 8,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 3,
     "only-figma": 0,
@@ -66103,6 +66223,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -66244,7 +66372,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
@@ -66390,6 +66518,14 @@
      "code": 6842,
      "diff": -2728,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -66465,7 +66601,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
@@ -66613,6 +66749,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -66686,7 +66830,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
@@ -66832,6 +66976,14 @@
      "code": 5860,
      "diff": -334,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -66907,7 +67059,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
@@ -67053,6 +67205,14 @@
      "code": 5860,
      "diff": -334,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -70025,11 +70185,11 @@
     "box": 13,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 6,
     "icon": 5,
     "only-figma": 0,
-    "only-code": 7,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 13,
@@ -70189,6 +70349,14 @@
      "code": 7380,
      "diff": 5442,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -70449,41 +70617,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#4",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#5",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#6",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#7",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#8",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#10",
      "allowed": null
     }
    ]
@@ -70492,13 +70625,13 @@
    "owner": "C1",
    "counts": {
     "box": 13,
-    "text": 2,
+    "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 6,
     "icon": 5,
     "only-figma": 0,
-    "only-code": 7,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 13,
@@ -70544,15 +70677,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -70667,6 +70791,14 @@
      "code": 7380,
      "diff": 5442,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -70927,41 +71059,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#4",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#5",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#6",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#7",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#8",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#10",
      "allowed": null
     }
    ]
@@ -70972,11 +71069,11 @@
     "box": 17,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 6,
     "icon": 7,
     "only-figma": 0,
-    "only-code": 7,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 17,
@@ -71198,6 +71295,14 @@
      "code": 7380,
      "diff": 5442,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -71529,41 +71634,6 @@
       "users",
       "view-all"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#4",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#5",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#6",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#7",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#8",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#10",
      "allowed": null
     }
    ]
@@ -71572,13 +71642,13 @@
    "owner": "C1",
    "counts": {
     "box": 17,
-    "text": 2,
+    "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 6,
     "icon": 7,
     "only-figma": 0,
-    "only-code": 7,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 17,
@@ -71635,15 +71705,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -71809,6 +71870,14 @@
      "code": 7380,
      "diff": 5442,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -72140,41 +72209,6 @@
       "users",
       "view-all"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#4",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#5",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#6",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#7",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#8",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#10",
      "allowed": null
     }
    ]
@@ -72185,11 +72219,11 @@
     "box": 17,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 6,
     "icon": 7,
     "only-figma": 0,
-    "only-code": 7,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 17,
@@ -72411,6 +72445,14 @@
      "code": 7365,
      "diff": 5427,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -72742,41 +72784,6 @@
       "users",
       "view-all"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#4",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#5",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#6",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#7",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#8",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#10",
      "allowed": null
     }
    ]
@@ -72785,13 +72792,13 @@
    "owner": "C1",
    "counts": {
     "box": 17,
-    "text": 2,
+    "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 6,
     "icon": 7,
     "only-figma": 0,
-    "only-code": 7,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 17,
@@ -72848,15 +72855,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -73022,6 +73020,14 @@
      "code": 7365,
      "diff": 5427,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -73353,41 +73359,6 @@
       "users",
       "view-all"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#4",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#5",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#6",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#7",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#8",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#10",
      "allowed": null
     }
    ]
@@ -73398,11 +73369,11 @@
     "box": 7,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 6,
     "icon": 5,
     "only-figma": 0,
-    "only-code": 7,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -73568,6 +73539,14 @@
      "code": 8145,
      "diff": 6289,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -73774,41 +73753,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#4",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#5",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#6",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#7",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#8",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#10",
      "allowed": null
     }
    ]
@@ -73819,11 +73763,11 @@
     "box": 7,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 6,
     "icon": 5,
     "only-figma": 0,
-    "only-code": 7,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -73989,6 +73933,14 @@
      "code": 8145,
      "diff": 6289,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -74196,41 +74148,6 @@
       "upload"
      ],
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#4",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#5",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#6",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#7",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#8",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#10",
-     "allowed": null
     }
    ]
   },
@@ -74240,11 +74157,11 @@
     "box": 7,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 6,
     "icon": 5,
     "only-figma": 0,
-    "only-code": 7,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -74410,6 +74327,14 @@
      "code": 8001,
      "diff": 6009,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -74616,41 +74541,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#4",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#5",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#6",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#7",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#8",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#10",
      "allowed": null
     }
    ]
@@ -74661,11 +74551,11 @@
     "box": 7,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 6,
     "icon": 5,
     "only-figma": 0,
-    "only-code": 7,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -74831,6 +74721,14 @@
      "code": 8001,
      "diff": 6009,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -75037,41 +74935,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#4",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#5",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#6",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#7",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#8",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#10",
      "allowed": null
     }
    ]
@@ -83724,7 +83587,7 @@
     "box": 1,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -83830,6 +83693,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -83873,7 +83744,7 @@
     "box": 1,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -83988,6 +83859,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -84031,7 +83910,7 @@
     "box": 5,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 0,
@@ -84216,6 +84095,14 @@
      "code": 2372,
      "diff": 446,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -84329,7 +84216,7 @@
     "box": 5,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 0,
@@ -84525,6 +84412,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -84636,7 +84531,7 @@
     "box": 5,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 0,
@@ -84821,6 +84716,14 @@
      "code": 2372,
      "diff": 446,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -84934,7 +84837,7 @@
     "box": 5,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 0,
@@ -85130,6 +85033,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -85241,7 +85152,7 @@
     "box": 1,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -85351,6 +85262,14 @@
      "code": 3758,
      "diff": -308,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -85396,7 +85315,7 @@
     "box": 1,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -85508,6 +85427,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -85551,7 +85478,7 @@
     "box": 1,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -85661,6 +85588,14 @@
      "code": 2456,
      "diff": 290,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -85706,7 +85641,7 @@
     "box": 1,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -85818,6 +85753,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -85861,7 +85804,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 1,
@@ -85985,6 +85928,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -86011,7 +85962,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -86075,7 +86026,7 @@
     "box": 4,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 1,
@@ -86208,6 +86159,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -86234,7 +86193,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -86298,7 +86257,7 @@
     "box": 8,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 1,
@@ -86494,6 +86453,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -86520,7 +86487,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -86652,7 +86619,7 @@
     "box": 8,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 1,
@@ -86857,6 +86824,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -86883,7 +86858,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -87015,7 +86990,7 @@
     "box": 8,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 1,
@@ -87211,6 +87186,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -87237,7 +87220,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -87369,7 +87352,7 @@
     "box": 8,
     "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 1,
@@ -87574,6 +87557,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -87600,7 +87591,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -87732,7 +87723,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 1,
@@ -87862,6 +87853,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -87888,7 +87887,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -87952,7 +87951,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 1,
@@ -88082,6 +88081,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -88108,7 +88115,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -88172,7 +88179,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 1,
@@ -88302,6 +88309,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -88328,7 +88343,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -88392,7 +88407,7 @@
     "box": 4,
     "text": 1,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 1,
@@ -88522,6 +88537,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -88548,7 +88571,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -88612,7 +88635,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -88661,6 +88684,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -88677,9 +88708,9 @@
    "owner": "C2",
    "counts": {
     "box": 0,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 1,
@@ -88698,15 +88729,6 @@
      ],
      "code": [],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -88770,6 +88792,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -88796,17 +88826,17 @@
   "R-12_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 4,
-    "text": 0,
+    "box": 5,
+    "text": 2,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
-    "only-figma": 0,
+    "only-figma": 1,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -88838,16 +88868,15 @@
       "view-all"
      ],
      "code": [
-      "analytics",
       "arrow-down",
-      "calendar",
-      "cloud",
-      "code",
-      "deploy",
-      "monitor",
-      "pin",
-      "rocket",
-      "users",
+      "catalog",
+      "group",
+      "help",
+      "panel-open",
+      "project",
+      "snippet",
+      "sparkle",
+      "tag",
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -88857,6 +88886,18 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+    },
+    {
+     "kind": "text",
+     "name": "gitlab-sidebar",
+     "figma": [
+      "K",
+      "kordoc",
+      "고정됨",
+      "멤버"
+     ],
+     "code": "탐색 프로젝트 그룹 CI/CD 카탈로그 AI 카탈로그 주제 스니펫 업무 도구 도움말 사이드바 접음",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -88882,19 +88923,30 @@
       "view-all"
      ],
      "code": [
-      "analytics",
       "arrow-down",
-      "calendar",
-      "cloud",
-      "code",
-      "deploy",
-      "monitor",
-      "pin",
-      "rocket",
-      "users",
+      "catalog",
+      "group",
+      "help",
+      "panel-open",
+      "project",
+      "snippet",
+      "sparkle",
+      "tag",
       "view-all"
      ],
      "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "content-panel",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc / 작업 항목 / #55",
+      "[제안] 캡션 안 표도 셀 blocks처럼 구조로 받을 수 있게 — IRCell.blocks 패턴의 캡션 확장",
+      "닫힘",
+      "서울특별시 광진구 류승인 · 2026. 07. 24. 작성 · #55"
+     ],
+     "code": "(30112) 세종특별자치시 도움6로 42(어진동) 대표전화 02-2100-3399 (유료, 평일 09시~18시) 정부민원안내콜센터 110 (무료, 평일 09시~18시) 이용안내 누리집 안내지도 개인정보처리방침 저작",
+     "allowed": "판 전체 글은 자료"
     },
     {
      "kind": "shape",
@@ -88903,31 +88955,53 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
-     "kind": "box",
+     "kind": "only-figma",
      "name": "breadcrumb",
-     "field": "w",
-     "figma": 1088,
-     "code": 278,
-     "diff": -810,
-     "allowed": "코드 경로 줄은 글자 폭, Figma는 컨테이너 폭(FILL)"
+     "want": {
+      "x": 296,
+      "y": 81,
+      "w": 1088,
+      "h": 20
+     },
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "main",
+     "field": "y",
+     "figma": 121,
+     "code": 80,
+     "diff": -41,
+     "allowed": null
     },
     {
      "kind": "box",
      "name": "main",
      "field": "h",
      "figma": 660,
-     "code": 793,
-     "diff": 133,
+     "code": 147,
+     "diff": -513,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
-     "kind": "box",
+     "kind": "text",
+     "name": "main",
+     "figma": [
+      "[제안] 캡션 안 표도 셀 blocks처럼 구조로 받을 수 있게 — IRCell.blocks 패턴의 캡션 확장",
+      "닫힘",
+      "서울특별시 광진구 류승인 · 2026. 07. 24. 작성 · #55",
+      "서울특별시 광진구 류승인 · 2026. 07. 24."
+     ],
+     "code": "",
+     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
+    },
+    {
+     "kind": "color",
      "name": "footer",
-     "field": "y",
-     "figma": 822,
-     "code": 937,
-     "diff": 115,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -88949,8 +89023,8 @@
      "name": "sidebar-nav",
      "field": "y",
      "figma": 168,
-     "code": 154,
-     "diff": -14,
+     "code": 118,
+     "diff": -50,
      "allowed": null
     },
     {
@@ -88967,8 +89041,20 @@
      "name": "sidebar-nav",
      "field": "h",
      "figma": 693,
-     "code": 656,
-     "diff": -37,
+     "code": 240,
+     "diff": -453,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "sidebar-nav",
+     "figma": [
+      "고정됨",
+      "멤버",
+      "작업 항목",
+      "브랜치"
+     ],
+     "code": "프로젝트 그룹 CI/CD 카탈로그 AI 카탈로그 주제 스니펫 업무 도구",
      "allowed": null
     },
     {
@@ -88989,24 +89075,16 @@
       "view-all"
      ],
      "code": [
-      "analytics",
       "arrow-down",
-      "calendar",
-      "cloud",
-      "code",
-      "deploy",
-      "monitor",
-      "pin",
-      "rocket",
-      "users",
+      "catalog",
+      "group",
+      "project",
+      "snippet",
+      "sparkle",
+      "tag",
       "view-all"
      ],
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
   },
@@ -89014,9 +89092,9 @@
    "owner": "C2",
    "counts": {
     "box": 4,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 1,
@@ -89068,15 +89146,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -89178,6 +89247,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -89272,217 +89349,127 @@
   "R-12_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 0,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 2,
-    "only-figma": 0,
+    "icon": 0,
+    "only-figma": 10,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 0,
    "rows": [
     {
-     "kind": "shape",
+     "kind": "only-figma",
      "name": "body",
-     "detail": "안쪽 0 8 8 0→0 8 8 8",
-     "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
+     "want": {
+      "x": 0,
+      "y": 72,
+      "w": 1920,
+      "h": 969
+     },
+     "allowed": null
     },
     {
-     "kind": "shape",
-     "name": "body",
-     "detail": "간격 8→0",
-     "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
+     "kind": "only-figma",
+     "name": "system-band",
+     "want": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 24
+     },
+     "allowed": null
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "arrow-down",
-      "arrow-right",
-      "calendar",
-      "cloud",
-      "code",
-      "deploy",
-      "monitor",
-      "pin",
-      "rocket",
-      "users",
-      "view-all"
-     ],
-     "code": [
-      "analytics",
-      "arrow-down",
-      "calendar",
-      "cloud",
-      "code",
-      "deploy",
-      "monitor",
-      "pin",
-      "rocket",
-      "users",
-      "view-all"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "shape",
+     "kind": "only-figma",
      "name": "topbar",
-     "detail": "안쪽 0 16 0 16→0 0 0 0",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "shape",
-     "name": "gitlab-sidebar",
-     "detail": "안쪽 8 8 8 8→0 0 0 0",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "arrow-down",
-      "arrow-right",
-      "calendar",
-      "cloud",
-      "code",
-      "deploy",
-      "monitor",
-      "pin",
-      "rocket",
-      "users",
-      "view-all"
-     ],
-     "code": [
-      "analytics",
-      "arrow-down",
-      "calendar",
-      "cloud",
-      "code",
-      "deploy",
-      "monitor",
-      "pin",
-      "rocket",
-      "users",
-      "view-all"
-     ],
+     "want": {
+      "x": 0,
+      "y": 24,
+      "w": 1920,
+      "h": 48
+     },
      "allowed": null
     },
     {
-     "kind": "shape",
+     "kind": "only-figma",
+     "name": "gitlab-sidebar",
+     "want": {
+      "x": 0,
+      "y": 72,
+      "w": 240,
+      "h": 961
+     },
+     "allowed": null
+    },
+    {
+     "kind": "only-figma",
      "name": "content-panel",
-     "detail": "안쪽 8 48 8 48→0 0 0 0",
-     "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+     "want": {
+      "x": 248,
+      "y": 72,
+      "w": 1664,
+      "h": 961
+     },
+     "allowed": null
     },
     {
-     "kind": "box",
+     "kind": "only-figma",
+     "name": "global-search",
+     "want": {
+      "x": 740,
+      "y": 32,
+      "w": 440,
+      "h": 32
+     },
+     "allowed": null
+    },
+    {
+     "kind": "only-figma",
      "name": "breadcrumb",
-     "field": "w",
-     "figma": 1200,
-     "code": 278,
-     "diff": -922,
-     "allowed": "코드 경로 줄은 글자 폭, Figma는 컨테이너 폭(FILL)"
+     "want": {
+      "x": 480,
+      "y": 81,
+      "w": 1200,
+      "h": 20
+     },
+     "allowed": null
     },
     {
-     "kind": "box",
+     "kind": "only-figma",
      "name": "main",
-     "field": "h",
-     "figma": 660,
-     "code": 771,
-     "diff": 111,
-     "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
+     "want": {
+      "x": 480,
+      "y": 121,
+      "w": 1200,
+      "h": 660
+     },
+     "allowed": null
     },
     {
-     "kind": "box",
+     "kind": "only-figma",
      "name": "footer",
-     "field": "y",
-     "figma": 822,
-     "code": 915,
-     "diff": 93,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "shape",
-     "name": "footer",
-     "detail": "안쪽 24 0 24 0→0 0 0 0",
-     "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
-    },
-    {
-     "kind": "box",
-     "name": "sidebar-nav",
-     "field": "x",
-     "figma": 16,
-     "code": 8,
-     "diff": -8,
+     "want": {
+      "x": 480,
+      "y": 822,
+      "w": 1200,
+      "h": 202
+     },
      "allowed": null
     },
     {
-     "kind": "box",
+     "kind": "only-figma",
      "name": "sidebar-nav",
-     "field": "y",
-     "figma": 168,
-     "code": 154,
-     "diff": -14,
+     "want": {
+      "x": 16,
+      "y": 168,
+      "w": 208,
+      "h": 693
+     },
      "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "sidebar-nav",
-     "field": "w",
-     "figma": 208,
-     "code": 224,
-     "diff": 16,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "sidebar-nav",
-     "field": "h",
-     "figma": 693,
-     "code": 656,
-     "diff": -37,
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "sidebar-nav",
-     "figma": [
-      "analytics",
-      "arrow-down",
-      "arrow-right",
-      "calendar",
-      "cloud",
-      "code",
-      "deploy",
-      "monitor",
-      "pin",
-      "rocket",
-      "users",
-      "view-all"
-     ],
-     "code": [
-      "analytics",
-      "arrow-down",
-      "calendar",
-      "cloud",
-      "code",
-      "deploy",
-      "monitor",
-      "pin",
-      "rocket",
-      "users",
-      "view-all"
-     ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "section-title",
-     "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
    ]
   },
@@ -89490,9 +89477,9 @@
    "owner": "C2",
    "counts": {
     "box": 4,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 1,
@@ -89544,15 +89531,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -89654,6 +89632,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -89751,7 +89737,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -89824,6 +89810,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -89842,7 +89836,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 1,
@@ -89948,6 +89942,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -89977,7 +89979,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -90032,6 +90034,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -90050,7 +90060,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 1,
@@ -90138,6 +90148,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -90167,7 +90185,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -90255,6 +90273,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -90263,7 +90289,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -90285,9 +90311,9 @@
    "owner": "C2",
    "counts": {
     "box": 0,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -90308,15 +90334,6 @@
       "search"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -90384,6 +90401,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -90392,7 +90417,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -90416,7 +90441,7 @@
     "box": 4,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 0,
@@ -90573,6 +90598,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -90581,7 +90614,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -90671,9 +90704,9 @@
    "owner": "C2",
    "counts": {
     "box": 4,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 0,
@@ -90725,15 +90758,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -90839,6 +90863,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -90847,7 +90879,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -90939,7 +90971,7 @@
     "box": 4,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 0,
@@ -91096,6 +91128,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -91104,7 +91144,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -91194,9 +91234,9 @@
    "owner": "C2",
    "counts": {
     "box": 4,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 3,
     "only-figma": 0,
@@ -91248,15 +91288,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -91362,6 +91393,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -91370,7 +91409,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -91462,7 +91501,7 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -91556,6 +91595,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -91573,7 +91620,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -91597,7 +91644,7 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -91691,6 +91738,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -91708,7 +91763,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -91732,7 +91787,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -91826,6 +91881,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -91834,7 +91897,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -91858,7 +91921,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 1,
     "only-figma": 0,
@@ -91952,6 +92015,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -91960,7 +92031,7 @@
     {
      "kind": "shape",
      "name": "gl-filter",
-     "detail": "모서리 8→12",
+     "detail": "모서리 8→0",
      "allowed": null
     },
     {
@@ -91984,7 +92055,7 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -92069,6 +92140,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -92094,9 +92173,9 @@
    "owner": "C2",
    "counts": {
     "box": 1,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -92116,15 +92195,6 @@
       "search"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -92190,6 +92260,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -92217,7 +92295,7 @@
     "box": 5,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -92370,6 +92448,14 @@
      "code": 1044,
      "diff": 363,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -92465,9 +92551,9 @@
    "owner": "C2",
    "counts": {
     "box": 5,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -92519,15 +92605,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -92629,6 +92706,14 @@
      "code": 1044,
      "diff": 363,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -92726,7 +92811,7 @@
     "box": 5,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -92881,6 +92966,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -92974,9 +93067,9 @@
    "owner": "C2",
    "counts": {
     "box": 5,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -93028,15 +93121,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -93138,6 +93222,14 @@
      "code": 1044,
      "diff": 363,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -93235,7 +93327,7 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -93324,6 +93416,14 @@
      "code": 1064,
      "diff": 221,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -93353,7 +93453,7 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -93444,6 +93544,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -93471,7 +93579,7 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -93562,6 +93670,14 @@
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -93589,7 +93705,7 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -93680,6 +93796,14 @@
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -93707,7 +93831,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -93758,6 +93882,14 @@
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -93774,9 +93906,9 @@
    "owner": "C2",
    "counts": {
     "box": 0,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -93785,15 +93917,6 @@
    },
    "allowed": 7,
    "rows": [
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
-    },
     {
      "kind": "shape",
      "name": "topbar",
@@ -93836,6 +93959,14 @@
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -93854,7 +93985,7 @@
     "box": 4,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -93985,6 +94116,14 @@
      ],
      "code": "마일스톤을 사용하여 일정 기간 동안 이슈와 머지 리퀘스트를 추적합니다. 이슈와 머지 리퀘스트를 정리하고 요청을 일관된 그룹으로 머지합니다. 그리고 옵션을 이용하여 시작일 및 마감일을 설정합니다.",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -94071,9 +94210,9 @@
    "owner": "C2",
    "counts": {
     "box": 4,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -94125,15 +94264,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -94213,6 +94343,14 @@
      ],
      "code": "마일스톤을 사용하여 일정 기간 동안 이슈와 머지 리퀘스트를 추적합니다. 이슈와 머지 리퀘스트를 정리하고 요청을 일관된 그룹으로 머지합니다. 그리고 옵션을 이용하여 시작일 및 마감일을 설정합니다.",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -94301,7 +94439,7 @@
     "box": 4,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -94434,6 +94572,14 @@
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -94518,9 +94664,9 @@
    "owner": "C2",
    "counts": {
     "box": 4,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -94572,15 +94718,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -94660,6 +94797,14 @@
      ],
      "code": "마일스톤을 사용하여 일정 기간 동안 이슈와 머지 리퀘스트를 추적합니다. 이슈와 머지 리퀘스트를 정리하고 요청을 일관된 그룹으로 머지합니다. 그리고 옵션을 이용하여 시작일 및 마감일을 설정합니다.",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -94748,7 +94893,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -94814,6 +94959,14 @@
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -94832,7 +94985,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -94898,6 +95051,14 @@
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -94916,7 +95077,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -94982,6 +95143,14 @@
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -95000,7 +95169,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -95066,6 +95235,14 @@
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -95084,8 +95261,8 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
-    "shape": 1,
+    "color": 1,
+    "shape": 0,
     "icon": 1,
     "only-figma": 1,
     "only-code": 0,
@@ -95214,6 +95391,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -95226,12 +95411,6 @@
      "figma": 170,
      "code": 184,
      "diff": 14,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -95272,10 +95451,10 @@
    "owner": "C2",
    "counts": {
     "box": 1,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
-    "shape": 1,
+    "color": 1,
+    "shape": 0,
     "icon": 1,
     "only-figma": 1,
     "only-code": 0,
@@ -95308,15 +95487,6 @@
       "time"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -95413,6 +95583,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -95425,12 +95603,6 @@
      "figma": 170,
      "code": 184,
      "diff": 14,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -95473,8 +95645,8 @@
     "box": 5,
     "text": 0,
     "font": 0,
-    "color": 0,
-    "shape": 1,
+    "color": 1,
+    "shape": 0,
     "icon": 3,
     "only-figma": 1,
     "only-code": 0,
@@ -95677,6 +95849,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -95689,12 +95869,6 @@
      "figma": 170,
      "code": 184,
      "diff": 14,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -95803,10 +95977,10 @@
    "owner": "C2",
    "counts": {
     "box": 5,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
-    "shape": 1,
+    "color": 1,
+    "shape": 0,
     "icon": 3,
     "only-figma": 1,
     "only-code": 0,
@@ -95866,15 +96040,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -96018,6 +96183,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -96030,12 +96203,6 @@
      "figma": 170,
      "code": 184,
      "diff": 14,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -96146,8 +96313,8 @@
     "box": 5,
     "text": 0,
     "font": 0,
-    "color": 0,
-    "shape": 1,
+    "color": 1,
+    "shape": 0,
     "icon": 3,
     "only-figma": 1,
     "only-code": 0,
@@ -96350,6 +96517,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -96362,12 +96537,6 @@
      "figma": 170,
      "code": 184,
      "diff": 14,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -96476,10 +96645,10 @@
    "owner": "C2",
    "counts": {
     "box": 5,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
-    "shape": 1,
+    "color": 1,
+    "shape": 0,
     "icon": 3,
     "only-figma": 1,
     "only-code": 0,
@@ -96539,15 +96708,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -96691,6 +96851,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -96703,12 +96871,6 @@
      "figma": 170,
      "code": 184,
      "diff": 14,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -96819,8 +96981,8 @@
     "box": 3,
     "text": 0,
     "font": 0,
-    "color": 0,
-    "shape": 1,
+    "color": 1,
+    "shape": 0,
     "icon": 1,
     "only-figma": 1,
     "only-code": 0,
@@ -96955,6 +97117,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -96985,12 +97155,6 @@
      "figma": 145,
      "code": 105,
      "diff": -40,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -97033,8 +97197,8 @@
     "box": 3,
     "text": 0,
     "font": 0,
-    "color": 0,
-    "shape": 1,
+    "color": 1,
+    "shape": 0,
     "icon": 1,
     "only-figma": 1,
     "only-code": 0,
@@ -97169,6 +97333,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -97199,12 +97371,6 @@
      "figma": 145,
      "code": 105,
      "diff": -40,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -97247,8 +97413,8 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
-    "shape": 1,
+    "color": 1,
+    "shape": 0,
     "icon": 1,
     "only-figma": 1,
     "only-code": 0,
@@ -97383,6 +97549,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -97395,12 +97569,6 @@
      "figma": 170,
      "code": 184,
      "diff": 14,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -97443,8 +97611,8 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
-    "shape": 1,
+    "color": 1,
+    "shape": 0,
     "icon": 1,
     "only-figma": 1,
     "only-code": 0,
@@ -97579,6 +97747,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -97591,12 +97767,6 @@
      "figma": 170,
      "code": 184,
      "diff": 14,
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -97639,24 +97809,15 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 0,
     "only-figma": 0,
     "only-code": 1,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 9,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1310,
-     "code": 1302,
-     "diff": -8,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
@@ -97676,15 +97837,6 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1302,
-     "code": 1294,
-     "diff": -8,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -97739,13 +97891,12 @@
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
     },
     {
-     "kind": "box",
+     "kind": "color",
      "name": "footer",
-     "field": "y",
-     "figma": 1163,
-     "code": 1156,
-     "diff": -7,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -97784,9 +97935,9 @@
    "owner": "C2",
    "counts": {
     "box": 1,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 0,
     "only-figma": 0,
@@ -97817,15 +97968,6 @@
       "close"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -97904,6 +98046,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -97942,24 +98092,15 @@
     "box": 5,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 2,
     "only-figma": 0,
     "only-code": 1,
     "order": 0
    },
-   "allowed": 16,
+   "allowed": 12,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1280,
-     "code": 1272,
-     "diff": -8,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "body",
@@ -98011,15 +98152,6 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
-     "kind": "box",
-     "name": "gitlab-sidebar",
-     "field": "h",
-     "figma": 1272,
-     "code": 1264,
-     "diff": -8,
-     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
-    },
-    {
      "kind": "shape",
      "name": "gitlab-sidebar",
      "detail": "안쪽 8 8 8 8→0 0 0 0",
@@ -98056,15 +98188,6 @@
       "view-all"
      ],
      "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1272,
-     "code": 1264,
-     "diff": -8,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -98119,13 +98242,12 @@
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
     },
     {
-     "kind": "box",
+     "kind": "color",
      "name": "footer",
-     "field": "y",
-     "figma": 1133,
-     "code": 1126,
-     "diff": -7,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -98232,9 +98354,9 @@
    "owner": "C2",
    "counts": {
     "box": 5,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 2,
     "only-figma": 0,
@@ -98295,15 +98417,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -98429,6 +98542,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -98535,24 +98656,15 @@
     "box": 5,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 2,
     "only-figma": 0,
     "only-code": 1,
     "order": 0
    },
-   "allowed": 16,
+   "allowed": 12,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1280,
-     "code": 1272,
-     "diff": -8,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "body",
@@ -98604,15 +98716,6 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
-     "kind": "box",
-     "name": "gitlab-sidebar",
-     "field": "h",
-     "figma": 1272,
-     "code": 1264,
-     "diff": -8,
-     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
-    },
-    {
      "kind": "shape",
      "name": "gitlab-sidebar",
      "detail": "안쪽 8 8 8 8→0 0 0 0",
@@ -98649,15 +98752,6 @@
       "view-all"
      ],
      "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1272,
-     "code": 1264,
-     "diff": -8,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -98712,13 +98806,12 @@
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
     },
     {
-     "kind": "box",
+     "kind": "color",
      "name": "footer",
-     "field": "y",
-     "figma": 1133,
-     "code": 1126,
-     "diff": -7,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -98825,9 +98918,9 @@
    "owner": "C2",
    "counts": {
     "box": 5,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 2,
     "only-figma": 0,
@@ -98888,15 +98981,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -99022,6 +99106,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -99128,7 +99220,7 @@
     "box": 2,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 0,
     "only-figma": 0,
@@ -99243,6 +99335,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -99290,7 +99390,7 @@
     "box": 2,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 0,
     "only-figma": 0,
@@ -99405,6 +99505,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -99452,7 +99560,7 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 0,
     "only-figma": 0,
@@ -99567,6 +99675,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -99605,7 +99721,7 @@
     "box": 1,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 1,
     "icon": 0,
     "only-figma": 0,
@@ -99718,6 +99834,14 @@
      "code": 1666,
      "diff": 345,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -101587,38 +101711,20 @@
     "box": 1,
     "text": 0,
     "font": 1,
-    "color": 1,
-    "shape": 1,
+    "color": 2,
+    "shape": 0,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 8,
+   "allowed": 6,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 918,
-     "code": 970,
-     "diff": 52,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 910,
-     "code": 962,
-     "diff": 52,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -101654,6 +101760,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -101680,12 +101794,6 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     }
    ]
@@ -101694,49 +101802,22 @@
    "owner": "C2",
    "counts": {
     "box": 1,
-    "text": 1,
+    "text": 0,
     "font": 1,
-    "color": 1,
-    "shape": 1,
+    "color": 2,
+    "shape": 0,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 8,
+   "allowed": 6,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 918,
-     "code": 970,
-     "diff": 52,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
-    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 910,
-     "code": 962,
-     "diff": 52,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -101772,6 +101853,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -101798,12 +101887,6 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     }
    ]
@@ -101814,24 +101897,15 @@
     "box": 5,
     "text": 0,
     "font": 1,
-    "color": 1,
-    "shape": 1,
+    "color": 2,
+    "shape": 0,
     "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 10,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 918,
-     "code": 970,
-     "diff": 52,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "body",
@@ -101883,15 +101957,6 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
-     "kind": "box",
-     "name": "gitlab-sidebar",
-     "field": "h",
-     "figma": 910,
-     "code": 962,
-     "diff": 52,
-     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
-    },
-    {
      "kind": "shape",
      "name": "gitlab-sidebar",
      "detail": "안쪽 8 8 8 8→0 0 0 0",
@@ -101930,15 +101995,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 910,
-     "code": 962,
-     "diff": 52,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
-    },
-    {
      "kind": "shape",
      "name": "content-panel",
      "detail": "안쪽 8 48 8 48→0 0 0 0",
@@ -101967,9 +102023,17 @@
      "name": "footer",
      "field": "y",
      "figma": 771,
-     "code": 824,
-     "diff": 53,
+     "code": 795,
+     "diff": 24,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -101998,12 +102062,6 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -102080,26 +102138,17 @@
    "owner": "C2",
    "counts": {
     "box": 5,
-    "text": 1,
+    "text": 0,
     "font": 1,
-    "color": 1,
-    "shape": 1,
+    "color": 2,
+    "shape": 0,
     "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 10,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 918,
-     "code": 970,
-     "diff": 52,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "body",
@@ -102145,28 +102194,10 @@
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
     },
     {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "gitlab-sidebar",
-     "field": "h",
-     "figma": 910,
-     "code": 962,
-     "diff": 52,
-     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
     },
     {
      "kind": "shape",
@@ -102207,15 +102238,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 910,
-     "code": 962,
-     "diff": 52,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
-    },
-    {
      "kind": "shape",
      "name": "content-panel",
      "detail": "안쪽 8 48 8 48→0 0 0 0",
@@ -102244,9 +102266,17 @@
      "name": "footer",
      "field": "y",
      "figma": 771,
-     "code": 824,
-     "diff": 53,
+     "code": 795,
+     "diff": 24,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -102275,12 +102305,6 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -102359,24 +102383,15 @@
     "box": 5,
     "text": 0,
     "font": 1,
-    "color": 1,
-    "shape": 1,
+    "color": 2,
+    "shape": 0,
     "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 10,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 918,
-     "code": 970,
-     "diff": 52,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "body",
@@ -102428,15 +102443,6 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
-     "kind": "box",
-     "name": "gitlab-sidebar",
-     "field": "h",
-     "figma": 910,
-     "code": 962,
-     "diff": 52,
-     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
-    },
-    {
      "kind": "shape",
      "name": "gitlab-sidebar",
      "detail": "안쪽 8 8 8 8→0 0 0 0",
@@ -102475,15 +102481,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 910,
-     "code": 962,
-     "diff": 52,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
-    },
-    {
      "kind": "shape",
      "name": "content-panel",
      "detail": "안쪽 8 48 8 48→0 0 0 0",
@@ -102512,9 +102509,17 @@
      "name": "footer",
      "field": "y",
      "figma": 771,
-     "code": 824,
-     "diff": 53,
+     "code": 795,
+     "diff": 24,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -102543,12 +102548,6 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -102625,26 +102624,17 @@
    "owner": "C2",
    "counts": {
     "box": 5,
-    "text": 1,
+    "text": 0,
     "font": 1,
-    "color": 1,
-    "shape": 1,
+    "color": 2,
+    "shape": 0,
     "icon": 2,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 10,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 918,
-     "code": 970,
-     "diff": 52,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "body",
@@ -102690,28 +102680,10 @@
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
     },
     {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "gitlab-sidebar",
-     "field": "h",
-     "figma": 910,
-     "code": 962,
-     "diff": 52,
-     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
     },
     {
      "kind": "shape",
@@ -102752,15 +102724,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 910,
-     "code": 962,
-     "diff": 52,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
-    },
-    {
      "kind": "shape",
      "name": "content-panel",
      "detail": "안쪽 8 48 8 48→0 0 0 0",
@@ -102789,9 +102752,17 @@
      "name": "footer",
      "field": "y",
      "figma": 771,
-     "code": 824,
-     "diff": 53,
+     "code": 795,
+     "diff": 24,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -102820,12 +102791,6 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     },
     {
@@ -102904,8 +102869,8 @@
     "box": 1,
     "text": 0,
     "font": 1,
-    "color": 1,
-    "shape": 1,
+    "color": 2,
+    "shape": 0,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -102977,6 +102942,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -103003,12 +102976,6 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     }
    ]
@@ -103019,8 +102986,8 @@
     "box": 1,
     "text": 0,
     "font": 1,
-    "color": 1,
-    "shape": 1,
+    "color": 2,
+    "shape": 0,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
@@ -103092,6 +103059,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -103118,12 +103093,6 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     }
    ]
@@ -103134,38 +103103,20 @@
     "box": 1,
     "text": 0,
     "font": 1,
-    "color": 1,
-    "shape": 1,
+    "color": 2,
+    "shape": 0,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 9,
+   "allowed": 7,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1122,
-     "code": 1174,
-     "diff": 52,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1114,
-     "code": 1166,
-     "diff": 52,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -103207,6 +103158,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -103233,12 +103192,6 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     }
    ]
@@ -103249,38 +103202,20 @@
     "box": 1,
     "text": 0,
     "font": 1,
-    "color": 1,
-    "shape": 1,
+    "color": 2,
+    "shape": 0,
     "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 9,
+   "allowed": 7,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1122,
-     "code": 1174,
-     "diff": 52,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1114,
-     "code": 1166,
-     "diff": 52,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -103322,6 +103257,14 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -103348,12 +103291,6 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
-     "allowed": null
-    },
-    {
-     "kind": "shape",
-     "name": "gl-filter",
-     "detail": "모서리 0→12",
      "allowed": null
     }
    ]
@@ -106673,7 +106610,7 @@
     "box": 0,
     "text": 0,
     "font": 1,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -106719,6 +106656,14 @@
      "allowed": null
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -106735,9 +106680,9 @@
    "owner": "C2",
    "counts": {
     "box": 0,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -106746,15 +106691,6 @@
    },
    "allowed": 7,
    "rows": [
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
-    },
     {
      "kind": "shape",
      "name": "topbar",
@@ -106795,6 +106731,14 @@
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -106813,7 +106757,7 @@
     "box": 4,
     "text": 0,
     "font": 1,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -106941,6 +106885,14 @@
      "allowed": null
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -107025,9 +106977,9 @@
    "owner": "C2",
    "counts": {
     "box": 4,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -107079,15 +107031,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -107165,6 +107108,14 @@
      ],
      "code": "표시할 스니펫이 없습니다.",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -107253,7 +107204,7 @@
     "box": 4,
     "text": 0,
     "font": 1,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -107381,6 +107332,14 @@
      "allowed": null
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -107465,9 +107424,9 @@
    "owner": "C2",
    "counts": {
     "box": 4,
-    "text": 1,
+    "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 2,
     "only-figma": 0,
@@ -107519,15 +107478,6 @@
       "view-all"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
-     "kind": "text",
-     "name": "topbar",
-     "figma": [
-      "류"
-     ],
-     "code": "탐색 검색 또는 이동… / 내",
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -107605,6 +107555,14 @@
      ],
      "code": "표시할 스니펫이 없습니다.",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",
@@ -107693,7 +107651,7 @@
     "box": 0,
     "text": 0,
     "font": 1,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -107742,6 +107700,14 @@
      "kind": "font",
      "name": "main",
      "detail": "크기 24→19, 줄 높이 32→28",
+     "allowed": null
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
      "allowed": null
     },
     {
@@ -107763,7 +107729,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -107818,6 +107784,14 @@
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -107836,7 +107810,7 @@
     "box": 0,
     "text": 0,
     "font": 1,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -107888,6 +107862,14 @@
      "allowed": null
     },
     {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
+    },
+    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -107906,7 +107888,7 @@
     "box": 0,
     "text": 0,
     "font": 0,
-    "color": 0,
+    "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
@@ -107959,6 +107941,14 @@
      ],
      "code": "표시할 스니펫이 없습니다.",
      "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
+    },
+    {
+     "kind": "color",
+     "name": "footer",
+     "field": "fill",
+     "figma": "#1e2124 color/surface/gray-subtler",
+     "code": "없음 ",
+     "allowed": null
     },
     {
      "kind": "shape",

@@ -60,7 +60,7 @@ export default function Requests() {
 
   return (
     <Page id="A-05" title={t.Header_3} state={writing ? 'Write' : list.state}>
-      <h1 className="krds-text-heading-small" data-figma="section-title">{phrase(t.Header_3)}</h1>
+      <h1 className="krds-text-heading-small" data-figma="page-head">{phrase(t.Header_3)}</h1>
       <p className="rb-subtle">{phrase(t.P15_10)}</p>
       {message && <p role="status" className="krds-text-body-small">{message}</p>}
       {writing ? (
