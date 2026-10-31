@@ -21,6 +21,9 @@ export function fixtureName() {
 export function fixtureFor(path) {
   if (!fixtureName()) return null;
   const p = path.replace(/^\/api\/gitlab\//, '').split('?')[0];
+  const ok = (data) => ({ mock: false, source: 'sample/kordoc', fixture: 'kordoc', state: 'Ideal', data, pagination: { nextPage: null, total: null } });
+  if (/^projects\/[^/]+\/repository\/commits\/[0-9a-f]{7,40}\/refs$/.test(p)) return ok([{ type: 'branch', name: 'main' }, { type: 'tag', name: 'v4.24.21' }]);
+  if (/^projects\/[^/]+\/repository\/commits\/[0-9a-f]{7,40}\/merge_requests$/.test(p)) return ok([]);
   const map = [
     [/^projects\/[^/]+$/, 'project'],
     [/^projects\/[^/]+\/repository\/branches$/, 'branches'],
@@ -35,6 +38,9 @@ export function fixtureFor(path) {
     [/^projects\/[^/]+\/merge_requests\/\d+$/, 'mr_56'],
     [/^projects\/[^/]+\/merge_requests\/\d+\/changes$/, 'mr_56_changes'],
     [/^projects\/[^/]+\/languages$/, 'languages'],
+    // 커밋 상세(R-05): 받아 둔 최신 커밋과 diff. 커밋이 들어간 브랜치·태그와 관련 MR(실제 응답 기준: main, v4.24.21, 없음)
+    [/^projects\/[^/]+\/repository\/commits\/[0-9a-f]{7,40}$/, 'commit_latest'],
+    [/^projects\/[^/]+\/repository\/commits\/[0-9a-f]{7,40}\/diff$/, 'commit_latest_diff'],
   ];
   // 파일 원문과 정보: 받아 둔 파일만 돌려주고, 그 밖의 파일은 실제 요청으로 넘긴다(다른 파일에 README를 돌려주지 않는다)
   const fm = p.match(/^projects\/[^/]+\/repository\/files\/([^/]+?)(\/raw)?$/);

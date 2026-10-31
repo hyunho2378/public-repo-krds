@@ -118,7 +118,7 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
   #root .rb-gbar-cta, #root .rb-gbar-right > .rb-gbar-drop:not(.rb-gbar-more), #root .rb-gbar-area { display: none; }
   #root .rb-gbar-more { display: inline-flex; }
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   #root .rb-gbar-in > .rb-gsearch { display: block; margin-inline-start: auto; }
   #root .rb-gbar-search { width: var(--layout-topbar-btn-h); padding: 0; justify-content: center; border: 0; background: none; }
   #root .rb-gbar-search .rb-gbar-search-text, #root .rb-gbar-search .rb-gbar-kbd { display: none; }
@@ -149,7 +149,7 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 /* 공공 깃랩 순서: 로고, 메뉴 열기(서랍일 때), 검색. 360은 검색 아이콘을 오른쪽 묶음 바로 앞 */
 #root .rb-gbar-left { display: flex; align-items: center; gap: var(--krds-number-3); }
 #root .rb-gbar-left > .rb-gbar-brand { order: -1; }
-@media (max-width: 767px) { #root .rb-gbar-in > .rb-gsearch { margin-inline: auto 0; } }
+@media (max-width: 1023px) { #root .rb-gbar-in > .rb-gsearch { margin-inline: auto 0; } }
 
 /* 14. 공공 깃랩 기본 단추 두 가지(높이 32, 모서리 8, 좌우 12): 회색 채움 rgba(137,136,141,.4) 합성 → gray-80, 밝은 채움(코드) 220 → gray-10. 보조 단추 규칙과 별개의 채움 단추 */
 #root .rb-btn-fill, #root .rb-btn-light { display: inline-flex; align-items: center; justify-content: center; gap: var(--krds-gap-2); height: var(--layout-topbar-btn-h); min-height: 0; padding: 0 var(--krds-number-7); border: 0; border-radius: var(--krds-radius-medium3); font: inherit; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-regular); text-decoration: none; white-space: nowrap; cursor: pointer; }
@@ -235,7 +235,7 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-side-scroll, #root .rb-side-groups { gap: var(--layout-sidebar-item-gap); }
 .sr-only { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
 /* 768 미만 터치 대상 44(KRDS 최소 터치 영역 44x44, WCAG 2.5.5): 상단 바 아이콘 단추와 서랍 항목. 데스크톱은 공공 깃랩 32 / 28 그대로 */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   #root .rb-gbar-icon, #root .rb-gbar .rb-gbar-navtoggle, #root .rb-gbar-search { width: var(--krds-number-15); min-width: 0; height: var(--krds-number-15); padding: 0; border-radius: var(--krds-radius-medium3); gap: 0; }
   #root .rb-shell.is-drawer .rb-side-link, #root .rb-shell.is-drawer .rb-side-group-btn { min-height: var(--krds-number-15); height: auto; }
 }
@@ -305,3 +305,11 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
   #root .rb-gbar[data-auth="Signed-in"] .rb-gbar-right > a.rb-gbar-icon:not([href$="/notifications"]), #root .rb-gbar[data-auth="Signed-in"] .rb-gbar-account { display: none; }
 }
 #root .rb-gbar-account .rb-avatar.is-24 { width: var(--krds-number-10); height: var(--krds-number-10); font-size: var(--rb-step-13); }
+/* 1024 미만 상단 바(Figma gitlab_topbar Mobile, 768·360 공통): 좌우 16(KRDS 모바일 여백), 단추 사이 8, 영역 이름(탐색) 보임 */
+@media (max-width: 1023px) {
+  #root .rb-gbar .rb-gbar-in { padding-inline: var(--krds-number-8); gap: var(--krds-number-4); }
+  #root .rb-gbar .rb-gbar-in > .rb-gsearch { flex: none; width: auto; max-width: none; margin-inline: auto 0; }
+  #root .rb-gbar .rb-gbar-in > .rb-gbar-right { margin-inline-start: 0; }
+  #root .rb-gbar .rb-gbar-left, #root .rb-gbar .rb-gbar-right { gap: var(--krds-number-4); }
+  #root .rb-gbar .rb-gbar-area { display: inline; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+}
