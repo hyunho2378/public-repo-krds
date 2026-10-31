@@ -302,3 +302,4 @@
   - 38 4 {'D21': 38} ('box', 'login-field', 'y') G-08b_360_Guest {'field': 'y', 'figma': 497, 'code': 474, 'diff': -23}
   - 35 4 {'D21': 10, 'C1': 20, 'C2': 5} ('box', 'section-title', 'y') G-06_1024_Guest {'field': 'y', 'figma': 169, 'code': 204, 'diff': 35}
 - 11. 1. 01:40 D21: 판 위 1px 원인 = 테두리(실제 CSS border·Figma 레이아웃 포함 대 코드 안쪽 그림자) → 코드 판 안쪽 위 +1(경로 줄 81, Figma와 같음). A-01 1024 미만 업무로 찾기 행 두 줄(부모 판정, 768 확인은 M 재측정에서). 측정·대조는 M(XBHJj5WOxmhQ5uie), Figma는 5wSoEqgZoXOYOYr6로 넘김
+- [C2] 원장 13차(재측정은 M 담당으로 이관): R-11 탭 줄 아래 간격 8(Figma 필터 y 178), '+ 뷰 추가' 문구. R-11 50건 분류(1024 기준 각 10변형): gl-filter y +7(간격 16→8 해소), 아이콘 close 코드에만(실제 캡처 20에 지우기 x 있음, Figma 요청), gl-tabs 문구 '+ 뷰 추가'(해소), filter-search x −12·y +6(입력 묶음 끝 정렬)
