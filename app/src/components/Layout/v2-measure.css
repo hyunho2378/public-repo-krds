@@ -349,3 +349,6 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 }
 /* 전역 세로 바 '덧붙인 기능' 제목: Figma 제목 줄 36(위 8 + 글 22 + 아래 6), 첫 항목 Figma와 같은 자리 */
 #root .rb-side-group.is-heading > .rb-side-title { padding-bottom: calc(var(--krds-number-3) + var(--krds-number-2)); }
+/* 업무로 찾기 간단형 행: 모든 폭에서 한 줄(이름 + 개수), 개수 줄이 아래로 내려가지 않게 */
+#root .rb-taskfind .rb-prow { flex-wrap: nowrap; grid-template-columns: auto auto minmax(0, 1fr) auto auto; }
+#root .rb-taskfind .rb-prow-side { flex-direction: row; }

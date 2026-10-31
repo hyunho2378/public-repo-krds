@@ -184,8 +184,8 @@ export function MergeRequest() {
       {!m ? <Status {...body} /> : (
         <div className="rb-code-area">
           <div className="gl-mr-head">
-            <div className="gl-mr-titlerow"><h1 className="gl-mr-h1">{m.title}</h1>
-            <Drop label={rq.code} align="right" button={<span data-figma="code-button">{rq.code}</span>}>{(close) => (<ul className="drop-list" aria-label={rq.code}><li><a className="item-link" href={`${frame.data.project.web_url}/-/merge_requests/${m.iid}`} {...newWindow(rq.code)} onClick={close}>{p1.openOrig}</a></li></ul>)}</Drop></div>
+            <div className="gl-mr-titlerow" data-figma="page-head"><h1 className="gl-mr-h1">{m.title}</h1>
+            <Drop label={rq.code} align="right" button={<><span>{rq.code}</span><Icon name="arrow-down" /></>} btnProps={{ 'data-figma': 'code-button' }}>{(close) => (<ul className="drop-list" aria-label={rq.code}><li><a className="item-link" href={`${frame.data.project.web_url}/-/merge_requests/${m.iid}`} {...newWindow(rq.code)} onClick={close}>{p1.openOrig}</a></li></ul>)}</Drop></div>
             <p className="gl-mr-meta gl-mr-statusline">
               <span className={`gl-badge is-${m.state}`}><Icon name={BADGE_ICON[m.state] || 'close'} />{stateWord}</span>
               <span className="gl-person">{who}</span>
@@ -196,7 +196,7 @@ export function MergeRequest() {
               <span>{au.requested(ago(m.created_at))}</span>
             </p>
           </div>
-          <div className="gl-tabs" data-figma="tabs" role="tablist" aria-label={t.P20_tabsLabel}>
+          <div className="gl-tabs gl-tabs-gap" data-figma="tabs" role="tablist" aria-label={t.P20_tabsLabel}>
             {TABS.map(([suffix, label]) => {
               const on = (suffix === '' && view === 'overview') || suffix === `/${view}`;
               return (

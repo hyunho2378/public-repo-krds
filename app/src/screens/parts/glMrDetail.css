@@ -44,3 +44,6 @@
 .gl-commit-row p { margin: 0; }
 
 .gl-mr-titlerow { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--krds-gap-5); }
+
+.gl-mr-titlerow { min-height: var(--krds-number-16); padding-bottom: var(--krds-gap-5); box-sizing: content-box; }
+.gl-tabs-gap { gap: var(--krds-gap-3); }

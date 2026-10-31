@@ -13,7 +13,7 @@ export function Page({ id, title, state, children, noFigma = false }) {
       const h = el.querySelector('h2:not(aside h2):not(nav h2)');
       if (h && !h.hasAttribute('data-figma')) h.setAttribute('data-figma', 'section-title');
       // 화면 머리: 이름표가 없으면 첫 h1에 page-head(Figma 대조 이름표, 2026. 10. 31.)
-      const h1 = [...el.querySelectorAll('h1')].find((x) => !x.classList.contains('rb-md-h1') && !x.matches('.rb-login3-title, .rb-login2-title') && !x.closest('.rb-md, .rb-readme, .rb-md-body'));
+      const h1 = [...el.querySelectorAll('h1')].find((x) => !x.classList.contains('rb-md-h1') && !x.matches('.rb-login3-title, .rb-login2-title, .sr-only') && !x.closest('.rb-md, .rb-readme, .rb-md-body'));
       if (h1 && !el.querySelector('[data-figma="page-head"]') && !h1.hasAttribute('data-figma')) h1.setAttribute('data-figma', 'page-head');
     };
     tag();

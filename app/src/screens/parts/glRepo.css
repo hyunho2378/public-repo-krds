@@ -1,7 +1,7 @@
 /* 공공 깃랩 프로젝트 하위 화면(멤버 25, 라벨 26): 제목 19 굵게 + 설명 13, 탭, 필터 막대, 표, 라벨 묶음 상자 */
 .gl-page-title { margin: 0; font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--krds-font-weight-bold); }
 .gl-page-help { margin: var(--krds-gap-3) 0 var(--layout-section-gap); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); }
-.gl-tabs { display: flex; align-items: center; gap: 0; border-bottom: var(--krds-border-width-static-regular) solid var(--layout-divider); margin-bottom: 0; }
+.gl-tabs { display: flex; align-items: center; gap: 0; border-bottom: 0; margin-bottom: 0; }
 .gl-tabs .gl-tab { display: inline-flex; align-items: center; gap: var(--krds-gap-3); min-height: var(--rb-search-h); padding: 0 var(--krds-gap-4); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); border-bottom: var(--krds-border-width-static-medium) solid transparent;  }
 .gl-tabs .gl-tab.active { font-weight: var(--krds-font-weight-bold); border-bottom-color: currentColor; }
 .gl-tabs .gl-tools { margin-left: auto; display: flex; align-items: center; gap: var(--krds-gap-3); padding-bottom: var(--krds-gap-3); }

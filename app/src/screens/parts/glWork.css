@@ -26,3 +26,5 @@
 .gl-work-tabs-left { flex: 1 1 auto; min-width: 0; }
 .gl-work-tabs { gap: 0; }
 .gl-filter-search { display: inline-flex; align-items: center; justify-content: center; flex: none; width: var(--layout-filter-control-h); height: var(--layout-filter-control-h); padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; }
+.gl-work-filter .gl-work-bar { padding-right: 0; }
+.gl-work-filter { border-bottom: 0; border-top: var(--krds-border-width-static-regular) solid var(--layout-divider); }
