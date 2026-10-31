@@ -19,9 +19,9 @@ const isMd = (p) => /\.(md|markdown)$/i.test(p || '');
 
 function sizeLabel(bytes) {
   if (!Number.isFinite(bytes)) return '';
-  if (bytes < 1024) return t.fn.bytes(bytes);
-  if (bytes < 1024 * 1024) return t.fn.kib((bytes / 1024).toFixed(1));
-  return t.fn.mib((bytes / 1024 / 1024).toFixed(1));
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(2)} KiB`;
+  return `${(bytes / 1024 / 1024).toFixed(2)} MiB`;
 }
 
 function Lines({ lines, lang, blame }) {

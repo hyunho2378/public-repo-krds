@@ -10,7 +10,7 @@
 .gl-tabs { display: flex; gap: var(--krds-gap-6); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
 .gl-tab { display: inline-flex; align-items: center; gap: var(--krds-gap-2); height: var(--rb-row-h); padding: 0 var(--krds-padding-2); margin-bottom: calc(var(--krds-border-width-static-regular) * -1); border: 0; border-bottom: var(--krds-border-width-static-medium) solid transparent; background: none; color: var(--krds-color-text-basic); font: inherit; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); cursor: pointer; transition: color var(--rb-motion-fast) var(--rb-motion-ease); }
 .gl-tab:hover { color: var(--krds-color-text-subtle); }
-.gl-tab[aria-selected='true'] { font-weight: var(--rb-fw-current); border-bottom-color: var(--krds-color-border-primary); }
+.gl-tab[aria-selected="true"] { font-weight: var(--rb-fw-current); border-bottom-color: var(--rb-status-primary); }
 .gl-tab-count { font-size: var(--rb-step-13); color: var(--krds-color-text-subtle); }
 
 /* 필터 막대: 입력 + 돋보기, 오른쪽에 정렬 */
@@ -229,3 +229,6 @@
 .gl-filter-lead .rb-iconbtn { height: 100%; }
 .gl-ref-name.is-lg { font-size: var(--rb-step-17); line-height: var(--rb-lh-17); }
 .gl-filled[aria-pressed='true'] { background: var(--layout-head-bg); }
+.gl-sha { padding: var(--krds-number-2) var(--krds-number-5); border-radius: var(--krds-radius-medium3); background: var(--layout-divider); }
+.gl-side-row .gl-select, .gl-side-row .krds-btn { width: 100%; justify-content: space-between; }
+.gl-side-row > * { min-width: 0; }
