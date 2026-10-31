@@ -68,9 +68,9 @@ export default function Commit() {
             {c.parent_ids?.[0] ? (
               <li><Icon name="ext/commit" /><span>{g.parent}</span><Link className="krds-link" to={`/projects/${frame.id}/changes/${c.parent_ids[0]}`}><code>{c.parent_ids[0].slice(0, 8)}</code></Link></li>
             ) : null}
-            {branches.length ? <li><Icon name="ext/branch" /><span>{g.branchLabel}</span>{branches.map((r) => <Link key={r.name} className="rb-pill" to={`/projects/${frame.id}/code?ref=${enc(r.name)}`}>{r.name}</Link>)}</li> : null}
-            {tags.length ? <li><Icon name="ext/tag" /><span>{g.tagLabel}</span>{tags.map((r) => <Link key={r.name} className="rb-pill" to={`/projects/${frame.id}/code?ref=${enc(r.name)}`}>{r.name}</Link>)}</li> : null}
-            {b.mrs && !b.mrs.length ? <li><Icon name="ext/merge-request" /><span>{g.noMr}</span></li> : null}
+            <li><Icon name="ext/branch" /><span>{g.branchLabel}</span>{branches.map((r) => <Link key={r.name} className="gl-chip" to={`/projects/${frame.id}/code?ref=${enc(r.name)}`}>{r.name}</Link>)}</li>
+            <li><Icon name="ext/tag" />{tags.length ? <><span>{g.tagLabel}</span>{tags.map((r) => <Link key={r.name} className="gl-chip" to={`/projects/${frame.id}/code?ref=${enc(r.name)}`}>{r.name}</Link>)}</> : <span>{g.noTag}</span>}</li>
+            {!b.mrs || !b.mrs.length ? <li><Icon name="ext/merge-request" /><span>{g.noMr}</span></li> : null}
             {b.mrs?.map((m) => <li key={m.iid}><Icon name="ext/merge-request" /><Link className="krds-link" to={`/projects/${frame.id}/merge-requests/${m.iid}`}>{m.title}</Link></li>)}
           </ul>
           {b.files.length ? <GlDiff files={b.files} id={frame.id} refName={c.id} webUrl={project.web_url} /> : <EmptyState title={t.P17_noDiff} />}

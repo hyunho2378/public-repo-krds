@@ -61,7 +61,7 @@
 .gl-commit-head { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); padding-bottom: var(--krds-padding-4); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
 .gl-commit-line { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); min-width: 0; }
 .gl-commit-line code, .gl-info code { font-family: 'D2Coding', ui-monospace, Menlo, Consolas, monospace; }
-.gl-commit-title { margin: 0; font-size: var(--rb-step-19); line-height: var(--rb-lh-19); font-weight: var(--rb-fw-title); overflow-wrap: anywhere; }
+.gl-commit-title { margin: 0; font-size: var(--rb-step-24); line-height: var(--rb-lh-24); font-weight: var(--rb-fw-title); overflow-wrap: anywhere; }
 .gl-commit-body { margin: 0; padding: var(--krds-padding-4); border-inline-start: var(--krds-number-2) solid var(--krds-color-border-gray); font-family: 'D2Coding', ui-monospace, Menlo, Consolas, monospace; font-size: var(--rb-step-13); line-height: var(--rb-lh-13); white-space: pre-wrap; overflow-wrap: anywhere; }
 .gl-info { margin: 0; padding: 0; list-style: none; border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-gray-subtler); }
 .gl-info > li { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-4); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
@@ -198,3 +198,30 @@
 .gl-sidefield { display: flex; flex-direction: column; gap: var(--krds-gap-2); padding-bottom: var(--krds-padding-4); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
 .gl-sidenone { margin: 0; font-size: var(--rb-step-15); color: var(--krds-color-text-subtle); }
 @media (max-width: 1023px) { .gl-newitem { grid-template-columns: minmax(0, 1fr); } }
+
+/* 감사 v3(03): 제목 24, 타임라인, 행 상자, 채운 배지/단추, 필터 32 */
+.gl-title { font-size: var(--rb-step-24); line-height: var(--rb-lh-24); }
+.gl-bar.is-bare { padding: 0; background: none; border: 0; border-radius: 0; }
+.gl-bar.is-bare .gl-filter-field { background: var(--layout-raised-bg); }
+.gl-filter-field { height: var(--rb-side-item-h); background: var(--layout-raised-bg); border-color: var(--layout-panel-border); border-radius: var(--krds-radius-medium3); }
+.gl-bar { background: var(--layout-raised-bg); border-color: var(--layout-divider); }
+.gl-dayhead-btn { display: inline-flex; align-items: center; gap: var(--krds-gap-3); padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.gl-commit-groups .gl-crows { margin-inline-start: var(--krds-number-5); padding-inline-start: var(--krds-number-8); border-inline-start: var(--krds-border-width-static-regular) solid var(--layout-divider); }
+.gl-crow { background: var(--layout-raised-bg); border: var(--krds-border-width-static-regular) solid var(--layout-panel-border); border-radius: var(--krds-radius-medium3); }
+.gl-crow:hover { background: var(--layout-divider); }
+.gl-crow-line { padding: var(--krds-number-4) var(--krds-number-6); }
+.gl-crow .rb-avatar.is-32, .gl-cbar .rb-avatar.is-32 { border-radius: var(--krds-radius-max); }
+.gl-crow .gl-ref-name a { font-weight: var(--rb-fw-current); }
+.gl-crow .rb-pill, .gl-chip, .gl-badge { display: inline-flex; align-items: center; gap: var(--krds-gap-2); padding: 0 var(--krds-number-5); border: 0; border-radius: var(--krds-radius-max); background: var(--layout-divider); color: var(--krds-color-text-basic); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); text-decoration: none; }
+.gl-badge.is-primary { background: var(--rb-status-primary); color: var(--krds-color-text-inverse); }
+.gl-filled { background: var(--layout-divider); }
+.gl-ref-row { background: var(--layout-raised-bg); }
+.gl-box { border-color: var(--layout-panel-border); }
+.gl-box-title { background: var(--layout-head-bg); }
+.gl-tabs { border-color: var(--layout-divider); }
+.gl-radios { display: flex; flex-direction: column; gap: var(--krds-gap-2); }
+.gl-select { height: var(--rb-side-item-h); border-radius: var(--krds-radius-medium3); background: var(--layout-raised-bg); border-color: var(--layout-panel-border); }
+.gl-select.is-fixed { background: var(--layout-divider); }
+.gl-sidefield { border-color: var(--layout-divider); }
+.gl-crow .gl-fold { transform: none; }
+.gl-crow .gl-fold.is-open { transform: rotate(180deg); }

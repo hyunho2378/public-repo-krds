@@ -22,7 +22,7 @@ export function SourceMenu({ project, refName }) {
   const base = `${project.web_url}/-/archive/${encodeURIComponent(refName)}/${project.path}-${encodeURIComponent(refName)}`;
   const rows = [[g.srcZip, 'zip'], [g.srcTarGz, 'tar.gz'], [g.srcTarBz2, 'tar.bz2'], [g.srcTar, 'tar']];
   return (
-    <Menu label={g.download} align="right" btnClass="krds-btn small tertiary gl-dl" button={<Icon name="download" />}>
+    <Menu label={g.download} align="right" btnClass="krds-btn small tertiary gl-dl gl-filled" button={<Icon name="download" />}>
       {(close) => (
         <ul className="drop-list">
           <li><p className="rb-menu-title">{g.dlTitle}</p></li>

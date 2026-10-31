@@ -161,7 +161,7 @@ export default function Code() {
   // y: 지금 보는 지점을 커밋 번호로 고정한 영구 링크로 바꾼다(GitLab, GitHub와 같은 단축키).
   const shaRef = useRef(null);
   // D-18: 파일 트리는 열고 닫는 버튼과 B 단축키(GitHub와 같다). 선택은 기억한다
-  const [treeOpen, setTreeOpen] = useBoolPref('rb-tree-open', true);
+  const [treeOpen, setTreeOpen] = useBoolPref('rb-tree-open', false);
   const treeWide = useMinWidth(breakpoint('--rb-bp-tree'));
   useEffect(() => {
     if (!path) return undefined;

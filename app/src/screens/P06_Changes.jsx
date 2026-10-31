@@ -54,6 +54,7 @@ export default function Changes() {
   const [next, setNext] = useState(null);
   const [q, setQ] = useState('');
   const [openIds, setOpenIds] = useState({});
+  const [folded, setFolded] = useState({});
   const [recent, setRecent] = useState(() => { try { return JSON.parse(readPref('rb-commit-recent') || '[]'); } catch { return []; } });
   const remember = (v) => { const s = v.trim(); if (s.length < 1) return; const n = [s, ...recent.filter((x) => x !== s)].slice(0, 5); setRecent(n); writePref('rb-commit-recent', JSON.stringify(n)); };
   const list = useData(async () => {
@@ -108,7 +109,7 @@ export default function Changes() {
         {path ? (
           <p className="gl-ref-meta"><code className="rb-break-any">{path}</code><Link className="krds-link" to={`/projects/${frame.id}/changes`}>{t.P06_clearFilter}</Link></p>
         ) : null}
-        <div className="gl-bar is-alone" data-figma="gl-filter">
+        <div className="gl-bar is-bare" data-figma="gl-filter">
           <Menu label={g.histRecent} align="left" btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="time" label={g.histRecent} />}>
             {(close) => (
               <ul className="drop-list" aria-label={g.histRecent}>
@@ -127,12 +128,12 @@ export default function Changes() {
           <div className="gl-commit-groups">
             {groupByDay(items, 'committed_date').map((grp) => (
               <section key={grp.day} aria-label={`${t.P06_dayGroup} ${grp.day}`}>
-                <h2 className="gl-dayhead"><Icon name="ext/commit" /><span>{grp.day}</span></h2>
-                <ul className="gl-crows">
+                <h2 className="gl-dayhead"><button type="button" className="gl-dayhead-btn" aria-expanded={!folded[grp.day]} aria-label={`${grp.day} ${folded[grp.day] ? g.expandDay : g.collapseDay}`} onClick={() => setFolded({ ...folded, [grp.day]: !folded[grp.day] })}><Icon name="ext/commit" /><span>{grp.day}</span></button></h2>
+                {folded[grp.day] ? null : <ul className="gl-crows">
                   {grp.items.map((c) => (
                     <CommitRow key={c.id} id={frame.id} c={c} owner={project.namespace} tags={tagOf[c.id] || []} path={path} open={!!openIds[c.id]} onToggle={() => setOpenIds({ ...openIds, [c.id]: !openIds[c.id] })} />
                   ))}
-                </ul>
+                </ul>}
               </section>
             ))}
             {next ? <div><button type="button" className="krds-btn small tertiary" onClick={more}>{g.histMore}</button></div> : null}

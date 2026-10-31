@@ -105,14 +105,14 @@ export default function Compare() {
         <form className="gl-compare" onSubmit={(e) => { e.preventDefault(); if (from && to) setApplied({ from, to, straight }); }}>
           <div className="gl-compare-pick">
             <Side title={g.source} value={to} list={list} onChange={setTo} fixedProject={projectName} />
-            <IconButton icon="arrow-right" label={g.swap} size="medium" className="gl-swap" onClick={() => { setFrom(to); setTo(from); }} />
+            <IconButton icon="ext/swap" label={g.swap} size="medium" className="gl-swap" onClick={() => { setFrom(to); setTo(from); }} />
             <Side title={g.target} value={from} list={list} onChange={setFrom} fixedProject={projectName} loading={!!applied && result.state === 'Loading'} />
           </div>
-          <fieldset className="gl-radios">
-            <legend className="gl-side-title">{g.showChanges}</legend>
+          <div className="gl-radios" role="group" aria-labelledby="gl-show-changes">
+            <p id="gl-show-changes" className="gl-side-title">{g.showChanges}</p>
             <div className="krds-form-check"><input id="gl-st-0" type="radio" name="straight" checked={!straight} onChange={() => setStraight(false)} /><label htmlFor="gl-st-0">{g.onlySource}</label></div>
             <div className="krds-form-check"><input id="gl-st-1" type="radio" name="straight" checked={straight} onChange={() => setStraight(true)} /><label htmlFor="gl-st-1">{g.sinceSource}</label></div>
-          </fieldset>
+          </div>
           <div><button type="submit" className="krds-btn small primary" disabled={!from || !to}>{g.compareBtn}</button></div>
         </form>
         {!applied ? null : same ? <EmptyState title={t.Issue_sameBranch} /> : !result.data ? <Status {...result} /> : (

@@ -182,7 +182,7 @@ function TreeNode({ node, stats }) {
 }
 
 export function GlDiff({ files, id, refName, webUrl }) {
-  const [mode, setMode] = useState('inline');
+  const [mode, setMode] = useState('parallel');
   const [panel, setPanel] = useState(true);
   const [view, setView] = useState('tree');
   const [q, setQ] = useState('');
@@ -200,15 +200,10 @@ export function GlDiff({ files, id, refName, webUrl }) {
         </p>
         <IconButton icon="expand_more" label={g.expandAll} size="small" onClick={() => setAll(false)} />
         <IconButton icon="arrow-right" label={g.collapseAll} size="small" onClick={() => setAll(true)} />
-        <Menu label={g.viewMode} align="right" btnClass="krds-btn small tertiary" button={<span>{mode === 'inline' ? g.inline : g.parallel}</span>}>
-          {(close) => (
-            <ul className="drop-list" aria-label={g.viewMode}>
-              {[['inline', g.inline], ['parallel', g.parallel]].map(([k, n]) => (
-                <li key={k}><button type="button" className={'item-link' + (mode === k ? ' active' : '')} aria-current={mode === k ? 'true' : undefined} onClick={() => { close(); setMode(k); }}>{n}</button></li>
-              ))}
-            </ul>
-          )}
-        </Menu>
+        <div className="gl-seg" role="group" aria-label={g.viewMode}>
+          <IconButton icon="document" label={g.inline} size="small" aria-pressed={mode === 'inline'} className={mode === 'inline' ? 'is-on' : ''} onClick={() => setMode('inline')} />
+          <IconButton icon="ext/code" label={g.parallel} size="small" aria-pressed={mode === 'parallel'} className={mode === 'parallel' ? 'is-on' : ''} onClick={() => setMode('parallel')} />
+        </div>
       </div>
       <div className={'gl-diff-main' + (panel ? ' has-panel' : '')}>
         {panel ? (

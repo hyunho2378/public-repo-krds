@@ -51,8 +51,8 @@ function RefRow({ id, project, name, commit, isBranch, flags }) {
 function Flags({ x }) {
   return (
     <>
-      {x.default ? <span className="rb-pill">{g.defaultBadge}</span> : null}
-      {x.protected ? <span className="rb-pill">{g.protectedBadge}</span> : null}
+      {x.default ? <span className="gl-badge is-primary">{g.defaultBadge}</span> : null}
+      {x.protected ? <span className="gl-badge">{g.protectedBadge}</span> : null}
     </>
   );
 }
@@ -72,7 +72,7 @@ export function Branches() {
   const stale = sorted.filter((x) => !x.default && now - when(x.commit) > STALE_MS);
   const byTab = { overview: fresh, active: fresh, stale, all: sorted };
   const shown = (byTab[tab] || []).filter((x) => !q || x.name.toLowerCase().includes(q));
-  const tabs = [['overview', g.tabOverview, null], ['active', g.tabActive, fresh.length], ['stale', g.tabStale, stale.length], ['all', g.tabAll, sorted.length]];
+  const tabs = [['overview', g.tabOverview, null], ['active', g.tabActive, null], ['stale', g.tabStale, null], ['all', g.tabAll, null]];
   const rows = (arr) => arr.map((x) => <RefRow key={x.name} id={frame.id} project={project} name={x.name} commit={x.commit} isBranch flags={<Flags x={x} />} />);
   return (
     <ProjectFrame screenId="R-07" tab="" tabLabel={g.brTitle} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
