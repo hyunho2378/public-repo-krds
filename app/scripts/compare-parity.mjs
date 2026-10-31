@@ -24,6 +24,8 @@ const norm = (s) => String(s || '').replace(/\s+/g, ' ').trim();
 const normCrumb = (s) => norm(String(s || '').replace(/\s[/>›]\s/g, ' '));
 const hex6 = (h) => (h ? String(h).toLowerCase().slice(0, 7) : null);
 // Figma 부품 이름 → 코드 data-icon 대응표(code_plan/icon_name_map.json, Figma 작업자 관리). 허용 목록 아님: 같은 아이콘의 이름 차이만 맞춘다
+// 반복 목록 이름표(원장 0절 4-3)
+const REPEAT = new Set(['project-row', 'diff-file', 'group-row']);
 let ICON_MAP = {};
 try { ICON_MAP = JSON.parse(await fs.readFile(path.join(path.dirname(fileURLToPath(import.meta.url)), '../../code_plan/icon_name_map.json'), 'utf8')).map || {}; } catch {}
 const figIcon = (s) => iconName(ICON_MAP[s] || s);
@@ -78,7 +80,14 @@ function cmp(screen, bp, auth, fv, cv) {
     const fi = [...new Set((fe.icons || []).map(figIcon))].sort(); const ci = [...new Set((ce.icons || []).map(iconName))].sort();
     if (fi.length && fi.join() !== ci.join()) add('icon', k, { figma: fi, code: ci });
   }
-  for (const k of Object.keys(cEls)) if (!fEls[k]) add('only-code', k, {});
+  // 반복 목록 규칙(원장 0절 4-3): 반복 행·카드는 Figma 표본 수 N만큼 앞의 N개만 대조. 코드의 N+1번째부터는 같은 행 부품이라 세지 않는다(목록 길이는 자료 길이)
+  const fCount = (base) => Object.keys(fEls).filter((x) => x.replace(/#\d+$/, '') === base).length;
+  for (const k of Object.keys(cEls)) {
+    if (fEls[k]) continue;
+    const base = k.replace(/#\d+$/, '');
+    if (REPEAT.has(base) && fCount(base) > 0) continue;
+    add('only-code', k, {});
+  }
   // 순서: 두 쪽 모두 화면에 보이는 위치(y, 같은 줄이면 x) 순으로 늘어놓고 같은 이름들의 순서를 비교(Figma 레이어 순서는 쌓임 순서라 쓰지 않음)
   const common = Object.keys(fEls).filter((k) => cEls[k]);
   const byPos = (get) => [...common].sort((a, b) => { const A = get(a), B = get(b); return Math.abs(A.y - B.y) > 4 ? A.y - B.y : A.x - B.x; });
@@ -111,7 +120,7 @@ await fs.writeFile(path.join(ROOT, 'audits', 'parity_ledger.json'), JSON.stringi
 // 원장(md): 0절 해소 규칙, 1절 화면별 건수 표, 2절 화면별 세부(허용 아님만)
 const L = [];
 L.push('# Figma 대 코드 전수 대조 원장(parity ledger)', '', `- 생성: ${result.generated}. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json`, '- 다시 만들기: 개발 서버에서 측정(app/scripts/export-code-boxes.mjs 또는 Aside 탭에서 export-code-boxes.js) 뒤 `npm run check:parity`', '');
-L.push('## 0. 해소 규칙', '', '1. 값이 실제 공공 깃랩 실측과 같으면 그 값이 정답이다. 다른 쪽(코드 또는 Figma)을 맞춘다', '2. 실제 실측이 없는 덧붙임(A 화면, 소개 카드, 업무 분야 등)은 Figma가 정답이다. 코드가 따른다', '3. 코드와 Figma가 둘 다 실제와 다르면 실제를 따라 둘 다 고친다', '4. 사용자 결정 기록(D-xx)이 있으면 그 결정이 앞선다(예: 판 안 여백 48/32/24/16, KRDS 글자 단계, 4의 배수)', '5. 의도한 차이는 code_plan/parity_allow.json에 근거와 함께 올린다. 원장 건수는 허용을 뺀 값', '4-1. 적용 중인 사용자 결정: 판 안 바닥글 = 판과 같은 면 + 위 구분선만, 채움 없음(D-20 개정 10. 31.) · 로그인 바닥글 = 바깥색 위 전체 폭 gray-90(G-08) · A-01 = G-02 실제 검색 구조 + 덧붙임 업무로 찾기 한 묶음(맨 위 3개 + 더보기, UX/14 3장) · 상단 바와 아이콘 단추 1024 미만 44(터치) · 판 안 여백 48/32/24/16, 바깥 8(D-21) · 4의 배수(D-16). 바닥글 면 색 차이는 이 결정에 맞춰 양쪽을 고쳐 해소한다(허용 목록에 올리지 않음)', '4-2. Figma 기준 숫자: 세트 56, 변형 592, 프로토타입 연결 833(823 + A-01 탐색 행 마우스 올림 상태 10, 2026. 10. 31. 사용자 인정)', '6. 담당: 코드 C1(R-02~09, 25, 27~29) · C2(R-10~24, 26) · D21(전역 틀, R-01, R-30, G, A, 로그인), Figma는 Figma 작업자', '');
+L.push('## 0. 해소 규칙', '', '1. 값이 실제 공공 깃랩 실측과 같으면 그 값이 정답이다. 다른 쪽(코드 또는 Figma)을 맞춘다', '2. 실제 실측이 없는 덧붙임(A 화면, 소개 카드, 업무 분야 등)은 Figma가 정답이다. 코드가 따른다', '3. 코드와 Figma가 둘 다 실제와 다르면 실제를 따라 둘 다 고친다', '4. 사용자 결정 기록(D-xx)이 있으면 그 결정이 앞선다(예: 판 안 여백 48/32/24/16, KRDS 글자 단계, 4의 배수)', '5. 의도한 차이는 code_plan/parity_allow.json에 근거와 함께 올린다. 원장 건수는 허용을 뺀 값', '4-1. 적용 중인 사용자 결정: 판 안 바닥글 = 판과 같은 면 + 위 구분선만, 채움 없음(D-20 개정 10. 31.) · 로그인 바닥글 = 바깥색 위 전체 폭 gray-90(G-08) · A-01 = G-02 실제 검색 구조 + 덧붙임 업무로 찾기 한 묶음(맨 위 3개 + 더보기, UX/14 3장) · 상단 바와 아이콘 단추 1024 미만 44(터치) · 판 안 여백 48/32/24/16, 바깥 8(D-21) · 4의 배수(D-16). 바닥글 면 색 차이는 이 결정에 맞춰 양쪽을 고쳐 해소한다(허용 목록에 올리지 않음)', '4-3. 반복 목록 규칙(부모 판정 10. 31.): 반복 행·카드는 Figma 표본 수 N만큼 앞의 N개만 대조하고, 코드의 나머지 반복 행은 같은 행 부품이라 세지 않는다. 근거: 목록 길이는 자료 길이, 행 구조는 앞 N개에서 검사(Figma 내보내기도 같은 이름 최대 3개). 허용 목록 아님. 적용 이름표: ' + [...REPEAT].join(', '), '4-2. Figma 기준 숫자: 세트 56, 변형 592, 프로토타입 연결 833(823 + A-01 탐색 행 마우스 올림 상태 10, 2026. 10. 31. 사용자 인정)', '6. 담당: 코드 C1(R-02~09, 25, 27~29) · C2(R-10~24, 26) · D21(전역 틀, R-01, R-30, G, A, 로그인), Figma는 Figma 작업자', '');
 // 0-1. 원인 상위 20: 같은 분류 + 요소 이름(+ 항목) 묶음
 {
   const g = new Map();
