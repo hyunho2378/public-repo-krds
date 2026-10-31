@@ -86,7 +86,7 @@ export function Issues() {
               </Drop>
             </span>
             <input type="search" value={query} placeholder={w.search} aria-label={u.List_searchLabel} onChange={(e) => setQuery(e.target.value)} />
-            <IconButton icon="close" label={w2.clearFilter} onClick={() => { setQuery(''); setSt('opened'); }} />
+            <IconButton icon="close" data-figma="filter-clear" label={w2.clearFilter} onClick={() => { setQuery(''); setSt('opened'); }} />
             <FilterSearch label={u.List_searchLabel} />
           </div>
           <Drop label={w.display} align="right" button={<span>{w.display}</span>}>
