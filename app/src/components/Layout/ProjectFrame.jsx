@@ -94,7 +94,7 @@ function RepoHeader({ project, id }) {
 // 탭 제목이 너무 길어지지 않게 설명은 80자에서 말줄임
 const clip = (s) => (s.length > 80 ? `${s.slice(0, 79)}…` : s);
 
-const PAGE_HEAD = new Set(['A-03', 'A-08', 'A-10', 'R-30', 'R-27', 'R-28', 'R-29', 'R-20']);
+const PAGE_HEAD = new Set(['A-03', 'A-08', 'A-10', 'R-30', 'R-27', 'R-28', 'R-29']);
 
 export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false, hideCrumbs = false, title = false, info = false, headExtra = null }) {
   // 프로젝트 알림: 왼쪽 바(프로젝트 메뉴, 작업 항목 수)에 쓴다. 화면을 떠나면 지운다.

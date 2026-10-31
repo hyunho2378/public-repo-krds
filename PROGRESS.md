@@ -162,3 +162,18 @@
 - [C2] 원장 해소 5차: R-14 gl-tabs 폭을 남는 폭으로(flex 1)와 탭 높이 48, R-18 파이프라인 ID 보기와 R-20 게시됨에 arrow-down, R-20 정렬 방향 단추. R-20은 PAGE_HEAD와 제목+개수 한 상자(74) 충돌이라 코드 갈래에 PAGE_HEAD에서 R-20 제거 요청(답 대기). 필터 모서리 8→0은 Figma에 요청(실측 0). 부모 탭(5F46EF4C…) 사용, 사용자 탭 17DD7A78은 이전 측정에 잘못 썼음(주소 원복함)
 
 - [C1] 원장 5차(포트 5731, 전환 끔, 900ms, fixture, 내 요소만 건수): 4차 대비 R-03 60→44, R-08 52→34, R-27 30→17, R-28 10→2, R-29 10→4, 나머지 동일(R-02 80, R-04 60, R-05 226, R-06 4, R-07 44, R-09 10). 전역 포함: R-02 114, R-03 78, R-04 104, R-05 260, R-06 38, R-07 78, R-08 68, R-09 44, R-27 61, R-28 46, R-29 48. 이번: 파일 제목 줄 40, 최근 커밋 막대 66, R-27/28 머리 84(브랜치 + 프로젝트 + 제목, ProjectFrame headExtra). R-05는 Figma 재내보내기(머리 줄 49, diff-file 모서리 8, 간격 24) 대기, 코드 값은 이미 일치. 남은: R-03 preview y -8과 높이 -77, R-04/R-07 gl-filter 글자색과 y, R-27 tabs y +51, R-02 commit-bar(공용). 허용 목록 추가 없음.
+
+## Figma 대조(2026. 10. 31. 23:30, D21): 합 5,156(허용 뺀 값), 새 허용 0건
+- 위치/크기 2,244, 문구 460, 글자 85, 색 559, 모서리·간격 352, 아이콘 676, Figma에만 405, 코드에만 298, 순서 77
+- Figma 33차(바닥글 채움 없음, 세로 바 메뉴 x8 w224 y154, A-01 구조, 로그인 768) 재내보내기 전 값. 재내보내기 뒤 다시 대조
+- 남은 원인 상위 10
+  - 506 51 {'D21': 227, 'C1': 120, 'C2': 159} ('color', 'footer', 'fill', '#1e2124', '없음') A-01_1024_Guest {'field': 'fill', 'figma': '#1e2124 color/s
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('icon', 'gitlab-sidebar') A-02_1440_Guest {'figma': ['analytics', 'arrow-down', 'arrow-right', 'calendar', 'cl
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('box', 'sidebar-nav', 'x') A-02_1440_Guest {'field': 'x', 'figma': 16, 'code': 8, 'diff': -8}
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('box', 'sidebar-nav', 'y') A-02_1440_Guest {'field': 'y', 'figma': 168, 'code': 154, 'diff': -14}
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('box', 'sidebar-nav', 'w') A-02_1440_Guest {'field': 'w', 'figma': 208, 'code': 224, 'diff': 16}
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('box', 'sidebar-nav', 'h') A-02_1440_Guest {'field': 'h', 'figma': 565, 'code': 656, 'diff': 91}
+  - 192 48 {'D21': 84, 'C1': 48, 'C2': 60} ('icon', 'sidebar-nav') A-02_1440_Guest {'figma': ['analytics', 'arrow-down', 'arrow-right', 'calendar', 'cloud
+  - 120 1 {'D21': 120} ('only-code', 'project-row') G-01_1024_Guest {}
+  - 110 2 {'D21': 110} ('box', 'project-row', 'h') G-01_1024_Guest {'field': 'h', 'figma': 80, 'code': 91, 'diff': 11}
+  - 110 2 {'D21': 110} ('shape', 'project-row', '간격 #→#') G-01_1024_Guest {'detail': '간격 12→8'}
