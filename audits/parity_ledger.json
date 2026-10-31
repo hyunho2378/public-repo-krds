@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T16:26:04.790Z",
+ "generated": "2026-10-31T16:40:38.733Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
@@ -15820,31 +15820,13 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 20,
+   "allowed": 18,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1158,
-     "code": 1202,
-     "diff": 44,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1150,
-     "code": 1194,
-     "diff": 44,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -16164,7 +16146,7 @@
   "G-01_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 23,
+    "box": 12,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -16174,31 +16156,13 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 20,
+   "allowed": 18,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1158,
-     "code": 1202,
-     "diff": 44,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1150,
-     "code": 1194,
-     "diff": 44,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -16214,15 +16178,6 @@
      "code": 79,
      "diff": -865,
      "allowed": "코드 경로 줄은 글자 폭, Figma는 컨테이너 폭(FILL)"
-    },
-    {
-     "kind": "box",
-     "name": "main",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -16247,15 +16202,6 @@
      "code": 2298,
      "diff": 1287,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -16284,15 +16230,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-filter",
      "figma": [
@@ -16308,15 +16245,6 @@
      "figma": 290,
      "code": 294,
      "diff": 4,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -16349,15 +16277,6 @@
     {
      "kind": "box",
      "name": "project-row#2",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
      "field": "h",
      "figma": 69,
      "code": 73,
@@ -16385,15 +16304,6 @@
     {
      "kind": "box",
      "name": "project-row#3",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
      "field": "h",
      "figma": 119,
      "code": 143,
@@ -16407,15 +16317,6 @@
      "figma": 547,
      "code": 582,
      "diff": 35,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -16451,15 +16352,6 @@
     {
      "kind": "box",
      "name": "project-row#5",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#5",
      "field": "h",
      "figma": 71,
      "code": 73,
@@ -16486,15 +16378,6 @@
      "code": 754,
      "diff": 65,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -16527,15 +16410,6 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
-     "kind": "box",
-     "name": "project-row#7",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
@@ -16555,15 +16429,6 @@
      "code": 917,
      "diff": 66,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "w",
-     "figma": 944,
-     "code": 929,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -16627,17 +16492,8 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 24,
+   "allowed": 21,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1138,
-     "code": 1202,
-     "diff": 64,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "body",
@@ -16657,28 +16513,10 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
-     "kind": "box",
-     "name": "gitlab-sidebar",
-     "field": "h",
-     "figma": 1130,
-     "code": 1194,
-     "diff": 64,
-     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
-    },
-    {
      "kind": "shape",
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1130,
-     "code": 1194,
-     "diff": 64,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -17017,17 +16855,8 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 24,
+   "allowed": 21,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1138,
-     "code": 1202,
-     "diff": 64,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "body",
@@ -17047,28 +16876,10 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
-     "kind": "box",
-     "name": "gitlab-sidebar",
-     "field": "h",
-     "figma": 1130,
-     "code": 1194,
-     "diff": 64,
-     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
-    },
-    {
      "kind": "shape",
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1130,
-     "code": 1194,
-     "diff": 64,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -17407,17 +17218,8 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 24,
+   "allowed": 21,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1118,
-     "code": 1180,
-     "diff": 62,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "body",
@@ -17437,28 +17239,10 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
-     "kind": "box",
-     "name": "gitlab-sidebar",
-     "field": "h",
-     "figma": 1110,
-     "code": 1172,
-     "diff": 62,
-     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
-    },
-    {
      "kind": "shape",
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1110,
-     "code": 1172,
-     "diff": 62,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -17797,17 +17581,8 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 24,
+   "allowed": 21,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1118,
-     "code": 1180,
-     "diff": 62,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "body",
@@ -17827,28 +17602,10 @@
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
     },
     {
-     "kind": "box",
-     "name": "gitlab-sidebar",
-     "field": "h",
-     "figma": 1110,
-     "code": 1172,
-     "diff": 62,
-     "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
-    },
-    {
      "kind": "shape",
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1110,
-     "code": 1172,
-     "diff": 62,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -18794,7 +18551,7 @@
   "G-01_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 22,
+    "box": 10,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -18804,7 +18561,7 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 26,
+   "allowed": 25,
    "rows": [
     {
      "kind": "box",
@@ -18914,19 +18671,10 @@
     {
      "kind": "box",
      "name": "main",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "main",
      "field": "h",
      "figma": 1423,
-     "code": 4239,
-     "diff": 2816,
+     "code": 4103,
+     "diff": 2680,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -18970,18 +18718,9 @@
      "name": "footer",
      "field": "y",
      "figma": 1585,
-     "code": 4384,
-     "diff": 2799,
+     "code": 4248,
+     "diff": 2663,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -19012,15 +18751,6 @@
     {
      "kind": "box",
      "name": "gl-filter",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "gl-filter",
      "field": "h",
      "figma": 159,
      "code": 145,
@@ -19043,15 +18773,6 @@
      "figma": 408,
      "code": 366,
      "diff": -42,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -19106,19 +18827,10 @@
     {
      "kind": "box",
      "name": "project-row#2",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
      "field": "h",
      "figma": 99,
-     "code": 165,
-     "diff": 66,
+     "code": 143,
+     "diff": 44,
      "allowed": null
     },
     {
@@ -19150,24 +18862,6 @@
       "merge-request",
       "star"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "y",
-     "figma": 630,
-     "code": 651,
-     "diff": 21,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -19206,18 +18900,9 @@
      "name": "project-row#4",
      "field": "y",
      "figma": 801,
-     "code": 896,
-     "diff": 95,
+     "code": 874,
+     "diff": 73,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -19267,27 +18952,9 @@
      "name": "project-row#5",
      "field": "y",
      "figma": 944,
-     "code": 1096,
-     "diff": 152,
+     "code": 1074,
+     "diff": 130,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#5",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#5",
-     "field": "h",
-     "figma": 143,
-     "code": 167,
-     "diff": 24,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -19298,7 +18965,7 @@
       "공공깃랩의 프로젝트를 카드로 둘러보고, 업무에 맞는 도구와 원본·파생 프로젝트를 찾아보는 웹사이트입니다.",
       "업데이트됨 2026. 10. 27."
      ],
-     "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 더보기 5 0 31 24 업데이트됨 1일 전",
+     "code": "G GPT는 거들뿐 / Watson 개인정보 보호 관련 사건, 법률 질문 등에 AI를 활용하여 답해주는 자문 도우미. 5 0 31 24 업데이트됨 1일 전",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -19328,18 +18995,9 @@
      "name": "project-row#6",
      "field": "y",
      "figma": 1087,
-     "code": 1263,
-     "diff": 176,
+     "code": 1217,
+     "diff": 130,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "text",
@@ -19380,18 +19038,9 @@
      "name": "project-row#7",
      "field": "y",
      "figma": 1230,
-     "code": 1405,
-     "diff": 175,
+     "code": 1359,
+     "diff": 129,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#7",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -19441,18 +19090,9 @@
      "name": "project-row#8",
      "field": "y",
      "figma": 1373,
-     "code": 1594,
-     "diff": 221,
+     "code": 1548,
+     "diff": 175,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "w",
-     "figma": 328,
-     "code": 313,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -19538,31 +19178,13 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 21,
+   "allowed": 19,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1290,
-     "code": 1328,
-     "diff": 38,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1282,
-     "code": 1320,
-     "diff": 38,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -19879,7 +19501,7 @@
   "G-01_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 22,
+    "box": 11,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -19889,31 +19511,13 @@
     "only-code": 3,
     "order": 0
    },
-   "allowed": 21,
+   "allowed": 19,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1290,
-     "code": 1328,
-     "diff": 38,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1282,
-     "code": 1320,
-     "diff": 38,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -19939,19 +19543,10 @@
     {
      "kind": "box",
      "name": "main",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "main",
      "field": "h",
      "figma": 909,
-     "code": 2404,
-     "diff": 1495,
+     "code": 2376,
+     "diff": 1467,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -19965,18 +19560,9 @@
      "name": "footer",
      "field": "y",
      "figma": 1071,
-     "code": 2549,
-     "diff": 1478,
+     "code": 2521,
+     "diff": 1450,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -20005,15 +19591,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-filter",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-filter",
      "figma": [
@@ -20029,15 +19606,6 @@
      "figma": 290,
      "code": 294,
      "diff": 4,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -20070,15 +19638,6 @@
     {
      "kind": "box",
      "name": "project-row#2",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#2",
      "field": "h",
      "figma": 69,
      "code": 73,
@@ -20106,15 +19665,6 @@
     {
      "kind": "box",
      "name": "project-row#3",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#3",
      "field": "h",
      "figma": 119,
      "code": 143,
@@ -20128,15 +19678,6 @@
      "figma": 547,
      "code": 582,
      "diff": 35,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "project-row#4",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
      "allowed": null
     },
     {
@@ -20170,15 +19711,6 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
-     "kind": "box",
-     "name": "project-row#5",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row#5",
      "figma": [
@@ -20198,15 +19730,6 @@
      "code": 772,
      "diff": 43,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#6",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -20239,15 +19762,6 @@
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
-     "kind": "box",
-     "name": "project-row#7",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "project-row#7",
      "figma": [
@@ -20267,15 +19781,6 @@
      "code": 936,
      "diff": 25,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
-     "kind": "box",
-     "name": "project-row#8",
-     "field": "w",
-     "figma": 704,
-     "code": 689,
-     "diff": -15,
-     "allowed": null
     },
     {
      "kind": "box",
@@ -60995,31 +60500,13 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 9,
+   "allowed": 7,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1088,
-     "code": 1008,
-     "diff": -80,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1088,
-     "code": 1008,
-     "diff": -80,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -61099,31 +60586,13 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 9,
+   "allowed": 7,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1088,
-     "code": 1008,
-     "diff": -80,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1088,
-     "code": 1008,
-     "diff": -80,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -61385,6 +60854,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -61409,6 +60880,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -61427,8 +60900,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 892,
-     "diff": 527,
+     "code": 1109,
+     "diff": 744,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -61439,6 +60912,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -61448,8 +60923,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1037,
-     "diff": 356,
+     "code": 1254,
+     "diff": 573,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -61463,8 +60938,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 309,
-     "code": 725,
-     "diff": 416,
+     "code": 641,
+     "diff": 332,
      "allowed": null
     },
     {
@@ -61511,6 +60986,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -61535,6 +61012,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -61553,8 +61032,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 892,
-     "diff": 463,
+     "code": 1109,
+     "diff": 680,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -61565,6 +61044,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -61574,8 +61055,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1037,
-     "diff": 356,
+     "code": 1254,
+     "diff": 573,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -61589,8 +61070,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 309,
-     "code": 725,
-     "diff": 416,
+     "code": 641,
+     "diff": 332,
      "allowed": null
     },
     {
@@ -61667,6 +61148,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -61685,8 +61168,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 892,
-     "diff": 527,
+     "code": 1109,
+     "diff": 744,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -61697,6 +61180,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -61706,8 +61191,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1037,
-     "diff": 356,
+     "code": 1254,
+     "diff": 573,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -61721,8 +61206,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 381,
-     "code": 869,
-     "diff": 488,
+     "code": 785,
+     "diff": 404,
      "allowed": null
     },
     {
@@ -61799,6 +61284,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -61817,8 +61304,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 892,
-     "diff": 463,
+     "code": 1109,
+     "diff": 680,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -61829,6 +61316,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -61838,8 +61327,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1037,
-     "diff": 356,
+     "code": 1254,
+     "diff": 573,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -61853,8 +61342,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 381,
-     "code": 869,
-     "diff": 488,
+     "code": 785,
+     "diff": 404,
      "allowed": null
     },
     {
@@ -61931,6 +61420,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -61949,8 +61440,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 892,
-     "diff": 527,
+     "code": 1109,
+     "diff": 744,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -61961,6 +61452,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -61970,8 +61463,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1037,
-     "diff": 356,
+     "code": 1254,
+     "diff": 573,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -61985,8 +61478,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 437,
-     "code": 981,
-     "diff": 544,
+     "code": 897,
+     "diff": 460,
      "allowed": null
     },
     {
@@ -62063,6 +61556,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -62081,8 +61576,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 892,
-     "diff": 463,
+     "code": 1109,
+     "diff": 680,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -62093,6 +61588,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -62102,8 +61599,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1037,
-     "diff": 356,
+     "code": 1254,
+     "diff": 573,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -62117,8 +61614,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 437,
-     "code": 981,
-     "diff": 544,
+     "code": 897,
+     "diff": 460,
      "allowed": null
     },
     {
@@ -62165,6 +61662,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -62195,6 +61694,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -62213,8 +61714,8 @@
      "name": "main",
      "field": "h",
      "figma": 681,
-     "code": 912,
-     "diff": 231,
+     "code": 1129,
+     "diff": 448,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -62225,6 +61726,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -62234,8 +61737,8 @@
      "name": "footer",
      "field": "y",
      "figma": 843,
-     "code": 1057,
-     "diff": 214,
+     "code": 1274,
+     "diff": 431,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -62249,8 +61752,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 1,
-     "code": 109,
-     "diff": 108,
+     "code": 25,
+     "diff": 24,
      "allowed": null
     },
     {
@@ -62297,6 +61800,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -62327,6 +61832,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -62345,8 +61852,8 @@
      "name": "main",
      "field": "h",
      "figma": 681,
-     "code": 912,
-     "diff": 231,
+     "code": 1129,
+     "diff": 448,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -62357,6 +61864,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -62366,8 +61875,8 @@
      "name": "footer",
      "field": "y",
      "figma": 843,
-     "code": 1057,
-     "diff": 214,
+     "code": 1274,
+     "diff": 431,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -62381,8 +61890,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 1,
-     "code": 109,
-     "diff": 108,
+     "code": 25,
+     "diff": 24,
      "allowed": null
     },
     {
@@ -62429,6 +61938,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -62459,6 +61970,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -62477,8 +61990,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 892,
-     "diff": 527,
+     "code": 1109,
+     "diff": 744,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -62489,6 +62002,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -62498,8 +62013,8 @@
      "name": "footer",
      "field": "y",
      "figma": 527,
-     "code": 1037,
-     "diff": 510,
+     "code": 1254,
+     "diff": 727,
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
@@ -62513,8 +62028,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 189,
-     "code": 485,
-     "diff": 296,
+     "code": 401,
+     "diff": 212,
      "allowed": null
     },
     {
@@ -62561,6 +62076,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
@@ -62591,6 +62108,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -62609,8 +62128,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 892,
-     "diff": 463,
+     "code": 1109,
+     "diff": 680,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -62621,6 +62140,8 @@
       "search"
      ],
      "code": [
+      "arrow-down",
+      "project",
       "search"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
@@ -62630,8 +62151,8 @@
      "name": "footer",
      "field": "y",
      "figma": 591,
-     "code": 1037,
-     "diff": 446,
+     "code": 1254,
+     "diff": 663,
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
@@ -62645,8 +62166,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 189,
-     "code": 485,
-     "diff": 296,
+     "code": 401,
+     "diff": 212,
      "allowed": null
     },
     {
@@ -71433,17 +70954,8 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 9,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 816,
-     "code": 828,
-     "diff": 12,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
@@ -71467,15 +70979,6 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 808,
-     "code": 820,
-     "diff": 12,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -71536,15 +71039,6 @@
       "sort-desc"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 669,
-     "code": 682,
-     "diff": 13,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -71590,17 +71084,8 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 10,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 816,
-     "code": 828,
-     "diff": 12,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
@@ -71624,15 +71109,6 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 808,
-     "code": 820,
-     "diff": 12,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -71704,15 +71180,6 @@
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
     },
     {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 669,
-     "code": 682,
-     "diff": 13,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
-    },
-    {
      "kind": "shape",
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
@@ -71755,7 +71222,7 @@
   "R-23_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -71772,8 +71239,8 @@
      "name": "body",
      "field": "h",
      "figma": 801,
-     "code": 828,
-     "diff": 27,
+     "code": 796,
+     "diff": -5,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -71799,8 +71266,8 @@
      "name": "gitlab-sidebar",
      "field": "h",
      "figma": 793,
-     "code": 820,
-     "diff": 27,
+     "code": 788,
+     "diff": -5,
      "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
     },
     {
@@ -71814,8 +71281,8 @@
      "name": "content-panel",
      "field": "h",
      "figma": 793,
-     "code": 820,
-     "diff": 27,
+     "code": 788,
+     "diff": -5,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -71883,8 +71350,8 @@
      "name": "footer",
      "field": "y",
      "figma": 654,
-     "code": 682,
-     "diff": 28,
+     "code": 650,
+     "diff": -4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -71909,6 +71376,15 @@
      "figma": 287,
      "code": 285,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "sidebar-nav",
+     "field": "w",
+     "figma": 224,
+     "code": 213,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -71921,7 +71397,7 @@
   "R-23_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -71938,8 +71414,8 @@
      "name": "body",
      "field": "h",
      "figma": 801,
-     "code": 828,
-     "diff": 27,
+     "code": 796,
+     "diff": -5,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -71965,8 +71441,8 @@
      "name": "gitlab-sidebar",
      "field": "h",
      "figma": 793,
-     "code": 820,
-     "diff": 27,
+     "code": 788,
+     "diff": -5,
      "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
     },
     {
@@ -71980,8 +71456,8 @@
      "name": "content-panel",
      "field": "h",
      "figma": 793,
-     "code": 820,
-     "diff": 27,
+     "code": 788,
+     "diff": -5,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -72058,8 +71534,8 @@
      "name": "footer",
      "field": "y",
      "figma": 654,
-     "code": 682,
-     "diff": 28,
+     "code": 650,
+     "diff": -4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -72096,6 +71572,15 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "sidebar-nav",
+     "field": "w",
+     "figma": 224,
+     "code": 213,
+     "diff": -11,
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -72105,7 +71590,7 @@
   "R-23_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 0,
     "font": 0,
     "color": 0,
@@ -72122,8 +71607,8 @@
      "name": "body",
      "field": "h",
      "figma": 801,
-     "code": 828,
-     "diff": 27,
+     "code": 796,
+     "diff": -5,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -72149,8 +71634,8 @@
      "name": "gitlab-sidebar",
      "field": "h",
      "figma": 793,
-     "code": 820,
-     "diff": 27,
+     "code": 788,
+     "diff": -5,
      "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
     },
     {
@@ -72164,8 +71649,8 @@
      "name": "content-panel",
      "field": "h",
      "figma": 793,
-     "code": 820,
-     "diff": 27,
+     "code": 788,
+     "diff": -5,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -72233,8 +71718,8 @@
      "name": "footer",
      "field": "y",
      "figma": 654,
-     "code": 682,
-     "diff": 28,
+     "code": 650,
+     "diff": -4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -72262,6 +71747,15 @@
      "allowed": null
     },
     {
+     "kind": "box",
+     "name": "sidebar-nav",
+     "field": "w",
+     "figma": 224,
+     "code": 213,
+     "diff": -11,
+     "allowed": null
+    },
+    {
      "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
@@ -72271,7 +71765,7 @@
   "R-23_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
@@ -72288,8 +71782,8 @@
      "name": "body",
      "field": "h",
      "figma": 801,
-     "code": 828,
-     "diff": 27,
+     "code": 796,
+     "diff": -5,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -72315,8 +71809,8 @@
      "name": "gitlab-sidebar",
      "field": "h",
      "figma": 793,
-     "code": 820,
-     "diff": 27,
+     "code": 788,
+     "diff": -5,
      "allowed": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
     },
     {
@@ -72330,8 +71824,8 @@
      "name": "content-panel",
      "field": "h",
      "figma": 793,
-     "code": 820,
-     "diff": 27,
+     "code": 788,
+     "diff": -5,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -72408,8 +71902,8 @@
      "name": "footer",
      "field": "y",
      "figma": 654,
-     "code": 682,
-     "diff": 28,
+     "code": 650,
+     "diff": -4,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -72443,6 +71937,15 @@
      "figma": 287,
      "code": 285,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "sidebar-nav",
+     "field": "w",
+     "figma": 224,
+     "code": 213,
+     "diff": -11,
      "allowed": null
     },
     {
@@ -72465,17 +71968,8 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 10,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1031,
-     "code": 1043,
-     "diff": 12,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
@@ -72501,15 +71995,6 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1031,
-     "code": 1043,
-     "diff": 12,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -72580,15 +72065,6 @@
       "sort-desc"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 800,
-     "code": 813,
-     "diff": 13,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -72658,17 +72134,8 @@
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 10,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1031,
-     "code": 1043,
-     "diff": 12,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
@@ -72694,15 +72161,6 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1031,
-     "code": 1043,
-     "diff": 12,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -72773,15 +72231,6 @@
       "sort-desc"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 800,
-     "code": 813,
-     "diff": 13,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -72858,8 +72307,8 @@
      "name": "body",
      "field": "h",
      "figma": 828,
-     "code": 760,
-     "diff": -68,
+     "code": 768,
+     "diff": -60,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -72891,8 +72340,8 @@
      "name": "content-panel",
      "field": "h",
      "figma": 820,
-     "code": 752,
-     "diff": -68,
+     "code": 760,
+     "diff": -60,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -72966,8 +72415,8 @@
      "name": "footer",
      "field": "y",
      "figma": 609,
-     "code": 542,
-     "diff": -67,
+     "code": 550,
+     "diff": -59,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -73021,8 +72470,8 @@
      "name": "body",
      "field": "h",
      "figma": 828,
-     "code": 760,
-     "diff": -68,
+     "code": 768,
+     "diff": -60,
      "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
     },
     {
@@ -73054,8 +72503,8 @@
      "name": "content-panel",
      "field": "h",
      "figma": 820,
-     "code": 752,
-     "diff": -68,
+     "code": 760,
+     "diff": -60,
      "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
@@ -73138,8 +72587,8 @@
      "name": "footer",
      "field": "y",
      "figma": 609,
-     "code": 542,
-     "diff": -67,
+     "code": 550,
+     "diff": -59,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {

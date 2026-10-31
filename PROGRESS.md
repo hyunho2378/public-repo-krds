@@ -359,3 +359,21 @@
 | 9 | 위치/크기 login-field y | 38 | 38 | 0 | D21 |
 | 10 | 위치/크기 project-row w | 36 | 22 | +14 | D21 |
 새로 생긴 원인(5건 이상): 위치 filter-clear x 10, 색 filter-clear 10, 모양 filter-clear·filter-display·filter-settings·filter-expand 각 10(전부 C2). 없어진 원인: 코드에만 filter-clear·display·settings·expand 각 10(Figma가 같은 이름을 넣어 짝이 맞춰짐). 큰 감소: gl-filter 아이콘 30→10. 비고: 측정 중 Figma 재내보내기가 겹쳐 앞쪽 약 300개는 옛 합본 높이 기준으로 쟀다(프레임 높이 변화는 확인 못 함). 판 y 72 복구와 R-23 행 89·표 138은 합본 갱신 뒤 값이라 M-4 대조에서 확인한다
+
+## 측정 라운드 M-4(11. 1. 01:40, M): 공식 합 2,284(이전 2,314, -30), 새 허용 0건, 560개 전체, 중간 Figma 재내보내기 없음
+담당: D21 1,375(-34) · C2 496(+4) · C1 413(0)
+| 순위 | 원인 | 건수 | 이전 | 증감 | 담당 |
+|---:|---|---:|---:|---:|---|
+| 1 | 위치/크기 project-row h | 86 | 87 | -1 | D21 |
+| 2 | 위치/크기 project-row y | 80 | 80 | 0 | D21 |
+| 3 | Figma에만 project-row | 75 | 75 | 0 | D21 |
+| 4 | 모서리·안쪽·간격 page-head | 45 | 45 | 0 | D21 15, C1 20, C2 10 |
+| 5 | 위치/크기 gl-filter y | 44 | 44 | 0 | D21 20, C1 20, C2 4 |
+| 6 | 문구 page-head | 44 | 44 | 0 | D21 30, C1 10, C2 4 |
+| 7 | Figma에만 tabs | 40 | 40 | 0 | D21 |
+| 8 | 모서리·안쪽·간격 commit-bar | 40 | 40 | 0 | D21 20, C1 20 |
+| 9 | 위치/크기 login-field y | 38 | 38 | 0 | D21 |
+| 10 | 위치/크기 sidebar-nav w | 36 | 32 | +4 | C1 12, C2 24 |
+새로 생긴 원인(5건 이상): 없음. 없어진 원인: 없음. 큰 감소: project-row w 36→12
+Figma에만 project-row 75 분포: A-01 5폭 x Guest·Signed-in 각 행#4~#8(5건) = 50, G-02 5폭 x 2 각 행#4·#5(2건) = 20, G-06 Signed-in 5폭 각 1건(행 이름 없는 첫 행) = 5
+project-row w 36→12 분포: A-01·G-02 360폭 Guest·Signed-in 각 행#1~#3(Figma 328, 코드 312) = 12. 그 밖 폭은 w 차이 0
