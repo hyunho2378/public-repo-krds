@@ -95,7 +95,7 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 }
 
 /* 10. 제목 세 단계(D-16 개정): 화면 h1은 --layout-title-page, 프로젝트 이름은 --layout-title-project. 문서 읽기 영역(README 등 .rb-md-h1)은 제외 */
-#root .rb-main h1:not(.rb-repo-name):not(.sr-only):not(.rb-md-h1) { font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--krds-font-weight-bold); }
+#root .rb-main h1:not(.rb-repo-name):not(.sr-only):not(.rb-md-h1):not(.rb-login2-title) { font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--krds-font-weight-bold); }
 #root .rb-repo-name { font-size: var(--layout-title-project); line-height: var(--layout-title-project-lh); }
 
 /* 11. 상단 바(공공 깃랩 실측 1440): 검색 단추 폭 24vw(240~440) 높이 32 모서리 12, 등록 = 밝은 회색 채움(220 → gray-10), 로그인 = 어두운 회색 채움(rgba(137,136,141,.4) 위 합성 55 → gray-80) */
@@ -177,3 +177,27 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-commit-bar { background: var(--layout-raised-bg); border-radius: var(--krds-radius-medium3); }
 /* 파일 표 글자 한 단계(공공 깃랩 14 → KRDS 15)로 통일. 머리는 굵게 */
 #root .rb-tree th, #root .rb-tree td, #root .rb-tree td * { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+
+/* 15. 로그인(공공 깃랩): 상단 바, 사이드바, 바닥글 없이 시스템 띠 아래 두 열. 판 테두리 없음, 바탕은 바깥과 같은 검정(장식 그라데이션은 쓰지 않는다) */
+#root .rb-shell.is-bare { min-height: calc(100dvh - var(--rb-masthead-h)); }
+#root .rb-shell.is-bare > .rb-panel { background: var(--layout-shell-bg); border: 0; min-height: calc(100dvh - var(--rb-masthead-h)); }
+.rb-login2 { display: grid; grid-template-columns: var(--layout-login-col) var(--layout-login-col); column-gap: var(--layout-login-gap); justify-content: center; align-items: start; padding-top: var(--layout-login-top); min-height: calc(100dvh - var(--rb-masthead-h) - var(--rb-panel-pad-y) * 2); grid-template-rows: auto 1fr auto; }
+.rb-login2-side { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; gap: var(--krds-number-9); padding-top: var(--krds-number-10); }
+.rb-login2-title { margin: 0; font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--krds-font-weight-bold); }
+.rb-login2-notice { display: flex; flex-direction: column; gap: var(--krds-number-7); }
+.rb-login2-notice p { margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.rb-login2-main { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; gap: var(--krds-number-5); }
+.rb-login2-main > .rb-mois-logo, .rb-login2-main > svg, .rb-login2-main > img { align-self: center; }
+.rb-login2-forgot { align-self: flex-end; margin-top: calc(var(--krds-number-3) * -1); font-size: var(--rb-step-15); }
+.rb-login2-alert { margin: 0; padding: var(--krds-number-5) var(--krds-number-7); border-radius: var(--krds-radius-medium3); background: var(--layout-raised-bg); font-size: var(--rb-step-15); }
+.rb-login2 .rb-login-submit { width: 100%; }
+.rb-login2-links { grid-column: 1 / -1; grid-row: 3; display: flex; gap: var(--krds-number-8); padding-block: var(--krds-number-10); }
+.rb-login2-links a { color: var(--krds-color-text-primary); font-size: var(--rb-step-15); text-decoration: none; }
+.rb-login2-links a:hover { text-decoration: underline; }
+@media (max-width: 1023px) {
+  .rb-login2 { grid-template-columns: minmax(0, var(--layout-login-col)); row-gap: var(--krds-number-10); padding-top: var(--krds-number-10); }
+  .rb-login2-side, .rb-login2-main { grid-column: 1; }
+  .rb-login2-main { grid-row: 2; }
+  .rb-login2-links { grid-row: 3; grid-column: 1; }
+}
+#root .rb-login2-main > .rb-mois-logo { width: var(--krds-number-17); height: auto; }

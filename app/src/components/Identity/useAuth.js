@@ -20,6 +20,8 @@ export function useAuth() {
     signedIn,
     role: signedIn ? forcedRole || session?.role || 'viewer' : null,
     user: session?.user || null,
+    // 세션 확인이 끝났는지(없는 주소를 로그인으로 보낼 때 깜빡임 방지)
+    ready: !!forcedAuth || session !== null,
   };
 }
 

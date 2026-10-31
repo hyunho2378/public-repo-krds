@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
+import { BrowserRouter, Navigate, Routes, Route, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
+import { useAuth } from '../components/Identity/useAuth';
 import { Toasts } from '../components/Feedback/Toast';
 import { ShortcutsDialog } from '../components/Feedback/ShortcutsDialog';
 import { GlobalBar } from '../components/Identity/GlobalBar';
@@ -70,6 +71,15 @@ function FocusOnNavigate({ onNavigate }) {
   return null;
 }
 
+/** 없는 주소: 공공 깃랩은 로그아웃 상태면 로그인 화면으로 보내고 '로그인하거나 등록한 뒤 계속' 안내를 띄운다(audit_v3 ER-01). 로그인 상태면 화면 없음 */
+function NotFoundOrLogin() {
+  const { signedIn, ready } = useAuth();
+  const loc = useLocation();
+  if (ready === false) return null;
+  if (!signedIn) return <Navigate to={`/login?reason=auth&returnTo=${encodeURIComponent(loc.pathname + loc.search)}`} replace />;
+  return <ErrorScreen kind="not-found" />;
+}
+
 /** 로그인처럼 혼자 서는 화면은 왼쪽 바를 두지 않는다(공공 깃랩 46). */
 const NO_SIDEBAR = ['/login', '/login/failed', '/login/otp', '/register', '/password'];
 /** 탐색 목록 화면의 판 안 경로(공공 깃랩 '탐색 / 프로젝트') */
@@ -132,7 +142,7 @@ function Shell() {
       <FocusOnNavigate onNavigate={closeNav} />
       <div className="rb-top">
       <Masthead />
-      <GlobalBar
+      {bare ? null : <GlobalBar
         navOpen={navOpen}
         onToggleNav={() => setNavOpen((v) => !v)}
         hasNav={!bare}
@@ -140,7 +150,7 @@ function Shell() {
         sideHidden={false}
         onShowSide={() => setHidden(false)}
         area={u.G_explore}
-      />
+      />}
       </div>
       <NoticeBanner message={import.meta.env.VITE_NOTICE} />
       {/* D-22: 사이드바는 접어도 그대로 두고(다시 그리지 않음) transform으로 밀어 넣는다. 본문 판은 margin-left가 같은 시간 곡선으로 따라온다 */}
@@ -156,11 +166,11 @@ function Shell() {
                 {routes.map(({ id, path, Screen }) => (
                   <Route key={id + path} path={path} element={<Screen />} />
                 ))}
-                <Route path="*" element={<ErrorScreen kind="not-found" />} />
+                <Route path="*" element={<NotFoundOrLogin />} />
               </Routes>
             </main>
             {/* D-21 7장: 바닥글은 본문과 같은 컨테이너 안, 판 맨 아래 */}
-            <Footer />
+            {bare ? null : <Footer />}
           </div>
         </div>
       </div>

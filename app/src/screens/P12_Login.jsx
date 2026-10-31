@@ -40,59 +40,45 @@ export default function Login() {
 
   // 공공 깃랩 로그인 공지 방식: 제목(굵게), 날짜(13 보조색). 점이나 색 아이콘은 쓰지 않는다
   const [noticeTitle, noticeDate] = String(t.P12_notice || '').split(': ');
+  // 공공 깃랩 로그인(2026. 10. 31. 실측 1440): 상단 바와 사이드바 없이 시스템 띠 아래 두 열. 왼쪽 서비스 이름(19 굵게)과 공지, 오른쪽 행정안전부 표지, 입력, 로그인(밝은 채움), 패스키(회색 채움), 등록 안내. 맨 아래 작은 링크(탐색, 도움말)
+  const reason = params.get('reason');
   return (
     <Page id="G-08" title={t.P10_2} state="Ideal">
-      <div className="rb-login">
-        {t.P12_notice ? (
-          <section className="rb-login-notice" aria-labelledby="login-notice-title">
-            <MoisLogo label={u.Login_moisAlt} />
-            <div className="rb-login-notice-item" role="status">
-              <h2 id="login-notice-title" className="krds-text-body-small-bold">{noticeTitle}</h2>
-              {noticeDate ? <p className="krds-text-body-xsmall rb-subtle">{noticeDate}</p> : null}
+      <div className="rb-login2">
+        <section className="rb-login2-side" aria-labelledby="login-service">
+          <h1 id="login-service" className="rb-login2-title">{u.Login_service}</h1>
+          {t.P12_notice ? (
+            <div className="rb-login2-notice" role="status">
+              <p>{noticeTitle}</p>
+              {noticeDate ? <p>{noticeDate}</p> : null}
             </div>
-            <Link className="krds-link" to="/register">{u.Login_noticeLink}</Link>
-          </section>
-        ) : null}
-        <div className="rb-login-main">
-        <h1 className="krds-text-heading-medium">{t.P10_2}</h1>
-        <form className="rb-login-form" onSubmit={submit}>
-          <FormField
-            id="login-id"
-            label={t.P12_idLabel}
-            required
-            value={id}
-            onChange={(e) => setId(e.target.value)}
-            autoComplete="off"
-            placeholder={t.P12_idLabel}
-          />
-          <FormField
-            id="login-pw"
-            label={t.P12_pwLabel}
-            required
-            type="password"
-            value={pw}
-            onChange={(e) => setPw(e.target.value)}
-            autoComplete="off"
-            placeholder={t.P12_pwLabel}
-          />
-          <div className="rb-login-row">
+          ) : null}
+        </section>
+        <div className="rb-login2-main">
+          <MoisLogo label={u.Login_moisAlt} />
+          {reason === 'auth' ? <p className="rb-login2-alert" role="alert">{u.Login_needAuth}</p> : null}
+          <h2 className="sr-only">{t.P10_2}</h2>
+          <form className="rb-login-form" onSubmit={submit}>
+            <FormField id="login-id" label={t.P12_idLabel} required value={id} onChange={(e) => setId(e.target.value)} autoComplete="off" />
+            <FormField id="login-pw" label={t.P12_pwLabel} required type="password" value={pw} onChange={(e) => setPw(e.target.value)} autoComplete="off" />
+            <a className="krds-link rb-login2-forgot" href={`${GITLAB}/users/password/new`} {...newWindow(String(t.P12_5))}>{t.P12_5}</a>
             <div className="krds-form-check">
               <input id="login-keep" type="checkbox" checked={keep} onChange={(e) => setKeep(e.target.checked)} />
               <label htmlFor="login-keep">{t.P12_keep}</label>
             </div>
-            <a className="krds-link" href={`${GITLAB}/users/password/new`} {...newWindow(String(t.P12_5))}>{t.P12_5}
-            </a>
-          </div>
-          <p className="krds-text-body-xsmall rb-subtle">{phrase(t.P12_noStore)}</p>
-          <button type="submit" className="krds-btn medium primary rb-login-submit">{t.P12_loginButton}</button>
-        </form>
-        <a className="krds-btn medium tertiary rb-login-submit" href={`${GITLAB}/users/sign_in`} {...newWindow(String(t.P12_passkeyButton2))}>{t.P12_passkeyButton2}
-        </a>
-        <p className="krds-text-body-xsmall rb-login-signup">
-          {t.P12_signupAsk}{' '}
-          <a className="krds-link" href={`${GITLAB}/users/sign_up`} {...newWindow(String(t.P12_signupNow))}>{t.P12_signupNow}
-          </a>
-        </p>
+            <p className="krds-text-body-xsmall rb-subtle">{phrase(t.P12_noStore)}</p>
+            <button type="submit" className="rb-btn-light rb-login-submit">{t.P12_loginButton}</button>
+          </form>
+          <a className="rb-btn-fill rb-login-submit" href={`${GITLAB}/users/sign_in`} {...newWindow(String(t.P12_passkeyButton2))}>{t.P12_passkeyButton2}</a>
+          <p className="krds-text-body-small rb-login-signup">
+            {t.P12_signupAsk}{' '}
+            <a className="krds-link" href={`${GITLAB}/users/sign_up`} {...newWindow(String(t.P12_signupNow))}>{t.P12_signupNow}</a>
+          </p>
+        </div>
+        <nav className="rb-login2-links" aria-label={u.Login_links}>
+          <Link to="/">{u.G_explore}</Link>
+          <Link to="/help">{t.Header_5}</Link>
+        </nav>
         {showStatic ? (
           <div className="rb-modal-dim" role="presentation">
             <div className="rb-modal" role="dialog" aria-modal="true" aria-labelledby="login-static">
@@ -105,7 +91,6 @@ export default function Login() {
             </div>
           </div>
         ) : null}
-        </div>
       </div>
     </Page>
   );

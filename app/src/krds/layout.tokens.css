@@ -157,6 +157,10 @@
   --layout-gsdlg-radius: var(--krds-number-8);
   /* 상단 바 단추 높이 32(공공 깃랩), 모서리 8 */
   --layout-topbar-btn-h: var(--krds-number-12);
+  /* 로그인(공공 깃랩 1440): 두 열 각 420 → 416(96x4 + 32), 열 사이 60 → 64, 위 146 → 144(시스템 띠 아래) */
+  --layout-login-col: calc(var(--krds-number-21) * 4 + var(--krds-number-12));
+  --layout-login-gap: var(--krds-number-18);
+  --layout-login-top: calc(var(--krds-number-18) * 2 + var(--krds-number-8));
   --layout-sidebar-item-gap: var(--krds-number-2);
   --layout-sidebar-project-gap: var(--krds-number-5);
   --layout-sidebar-sep-gap: var(--krds-number-7);
