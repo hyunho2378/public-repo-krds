@@ -370,3 +370,8 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-prow-stats li, #root .rb-prow-stats a { line-height: var(--rb-lh-13); height: var(--rb-lh-13); }
 /* 768 미만 사이드바 없는 화면(검색): 판 바깥 여백 없이 판 안 16(KRDS 360 마진, 행 폭 328) */
 @media (max-width: 767px) { #root .rb-shell:not(.has-side):not(.is-drawer):not(.is-bare) { padding: 0; } }
+/* 탐색 행 설명 2줄 말줄임(펼침 단추 없음), 주제 줄 24(실제 배지 높이, Figma 같음) */
+#root .rb-prow-desc.rb-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+#root .rb-prow-topics .rb-topic, #root .rb-prow-topics { min-height: var(--krds-number-10); }
+#root .rb-prow-topics .rb-topic { height: var(--krds-number-10); }
+#root .rb-prow-main > .rb-prow-topics { margin-top: 0; } /* 설명→주제 4(행 안 간격 하나) */

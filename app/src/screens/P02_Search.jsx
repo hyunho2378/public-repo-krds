@@ -76,7 +76,7 @@ export default function Search() {
         <Icon name="search" />
         <label className="sr-only" htmlFor="s-q">{u.S_input}</label>
         <input id="s-q" type="search" value={text} placeholder={u.S_hint} onChange={(e) => setText(e.target.value)} />
-        {text ? <button type="button" className="rb-s-clear" aria-label={u.S_clear} title={u.S_clear} onClick={() => { setText(''); set({ q: '', search: '' }); }}><Icon name="close" /></button> : null}
+        {text ? <button type="button" className="rb-s-clear" data-figma="search-clear" aria-label={u.S_clear} title={u.S_clear} onClick={() => { setText(''); set({ q: '', search: '' }); }}><Icon name="close" /></button> : null}
       </form>
       {/* 공공 깃랩: 1024 미만은 왼쪽 범위 열 대신 검색칸 아래 오른쪽 '필터' 단추(눌러 범위 패널 열기, search_breakpoints.md) */}
       <div className="rb-s-filterbar"><button type="button" className="krds-btn small tertiary rb-s-filterbtn" data-figma="search-filter" aria-expanded={showScopes} aria-controls="rb-s-side" onClick={() => setShowScopes(!showScopes)}><Icon name="ext/filter" /><span>{u.S_filter}</span></button></div>

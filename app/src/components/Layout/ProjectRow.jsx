@@ -37,7 +37,8 @@ export function ProjectRow({ p, mrs, issues, compact = false }) {
           <Link to={`/projects/${p.id}`} state={{ project: p }}>{owner && !compact ? `${owner} / ` : ''}{p.name}</Link>
           <Icon name="globe" label={u.X_public} />
         </p>
-        {desc && !compact ? <FoldText lines={2} className="rb-prow-desc">{desc}</FoldText> : null}
+        {/* 공공 깃랩 탐색 행: 설명은 2줄 말줄임, 펼침 단추 없음(실측) */}
+        {desc && !compact ? <p className="rb-prow-desc rb-clamp-2" title={desc}>{desc}</p> : null}
         {topics.length && !compact ? (
           <p className="rb-prow-topics">
             <span className="rb-subtle">{u.X_topics}</span>
