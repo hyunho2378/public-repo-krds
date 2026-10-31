@@ -192,7 +192,7 @@ export function Sidebar({ project, open, onClose, onHide, onShow, hidden = false
             <p className="rb-side-title">{project ? u.G_project : menu.title}</p>
             {project ? (
               <NavLink end to={`/projects/${project.id}`} className={({ isActive }) => 'rb-side-link rb-side-project' + (isActive ? ' active' : '')}>
-                <Avatar src={project.avatarUrl} name={project.name} />
+                <Avatar src={project.avatarUrl} name={project.name} seed={project.seed} />
                 <span className="rb-side-text">{project.name}</span>
               </NavLink>
             ) : null}

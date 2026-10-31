@@ -57,7 +57,8 @@ function RepoHeader({ project, id }) {
     <>
       <div className="rb-repo-head" data-figma="page-head">
         <h1 className="rb-repo-name">
-          <Avatar className="is-48" src={project.avatar_url || project.namespace?.avatar_url} name={project.name} seed={project.id} />
+          {/* 공공 깃랩: 프로젝트 그림이 없으면 만든 곳 그림이 아니라 프로젝트 이름 첫 글자 타일(kordoc → K) */}
+          <Avatar className="is-48" src={project.avatar_url} name={project.name} seed={project.id} />
           <span className="rb-repo-title-text">{project.name}</span>
           <Icon name="globe" label={u.X_public} />
         </h1>
@@ -97,7 +98,7 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
   // 프로젝트 알림: 왼쪽 바(프로젝트 메뉴, 작업 항목 수)에 쓴다. 화면을 떠나면 지운다.
   const project0 = data.data?.project;
   useEffect(() => {
-    if (project0) setProjectNav({ id: data.id, name: project0.name, owner: organizationOf(project0), issues: project0.open_issues_count, avatarUrl: project0.avatar_url || project0.namespace?.avatar_url, webUrl: project0.web_url });
+    if (project0) setProjectNav({ id: data.id, name: project0.name, owner: organizationOf(project0), issues: project0.open_issues_count, avatarUrl: project0.avatar_url, seed: data.id, webUrl: project0.web_url });
     return () => setProjectNav(null);
   }, [data.id, project0?.name, project0?.open_issues_count]);
   if (!data.data) {

@@ -118,18 +118,18 @@
   --layout-sidebar-item-pad-y: var(--krds-number-5);
   --layout-sidebar-item-pad-x: var(--krds-number-7);
   --layout-panel-gap: var(--krds-number-5);
-  /* v2 실측(2026. 10. 31., 공공 깃랩 1440/1920): 판은 세로 바 바로 옆(왼쪽 0), 오른쪽과 아래만 8 */
-  --layout-panel-gap-left: var(--krds-number-0);
+  /* D-21 7-1 사용자 우선(2026. 10. 31.): 판 바깥 8(왼쪽 포함). 공공 깃랩 실측 왼쪽 0은 기록만, 간격 값은 KRDS 규칙이 이긴다 */
+  --layout-panel-gap-left: var(--krds-number-5);
   /* v2 실측: 공공 깃랩 panels-container 모서리 12 → KRDS radius-xlarge1(12) */
   --layout-panel-radius: var(--krds-radius-xlarge1);
-  /* v2 실측: 공공 깃랩 container-limited 1280 - 좌우 12 = 본문 1256 = 96x13 + 8 */
-  --layout-container-max: calc(var(--krds-number-21) * 13 + var(--krds-number-5));
+  /* D-21 7-1 사용자 우선: 본문 최대 1200 가운데(공공 깃랩 1256은 기록만) */
+  --layout-container-max: calc(var(--krds-number-21) * 12 + var(--krds-number-16));
   /* 판 안 컨테이너 좌우 여백(폭별): lg 48(1280 이상), md 32(1024~1279), 기본 24(768~1023), sm 16(768 미만). 공공 깃랩 01, 02 비율(판 폭의 약 4%) */
-  /* v2 실측: 공공 깃랩 판 안 좌우 여백은 모든 폭에서 12(container-fluid px). 이전 48/32/24/16은 캡처 비율 추정이라 폐기 */
-  --layout-container-pad-x-lg: var(--krds-number-7);
-  --layout-container-pad-x-md: var(--krds-number-7);
-  --layout-container-pad-x: var(--krds-number-7);
-  --layout-container-pad-x-sm: var(--krds-number-7);
+  /* D-21 7-1 사용자 우선(2026. 10. 31.): KRDS 마진 규칙 유지. 공공 깃랩 실측 12는 360에서 KRDS 16 미달(감사 05), 사용자 지시 '마진이 사실상 없다' */
+  --layout-container-pad-x-lg: var(--krds-number-16);
+  --layout-container-pad-x-md: var(--krds-number-12);
+  --layout-container-pad-x: var(--krds-number-10);
+  --layout-container-pad-x-sm: var(--krds-number-8);
   /* v2 실측: 판 위 → 경로 줄 8, 경로 줄 위 → 제목 위 40(경로 20 + 간격 20), 제목 → 탭 12, 탭 → 필터 막대 0, 필터 막대 → 첫 행 8 */
   --layout-container-pad-y: var(--krds-number-5);
   --layout-crumb-title-gap: var(--krds-number-9);

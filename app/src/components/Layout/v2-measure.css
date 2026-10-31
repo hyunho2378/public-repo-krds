@@ -85,3 +85,4 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 @media (max-width: 767px) {
   #root .rb-side { width: var(--layout-drawer-w); border-radius: 0 var(--layout-drawer-radius) var(--layout-drawer-radius) 0; }
 }
+#root .rb-avatar.is-letter.is-48 { font-size: var(--rb-step-24); }
