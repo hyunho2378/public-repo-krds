@@ -375,3 +375,5 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-prow-topics .rb-topic, #root .rb-prow-topics { min-height: var(--krds-number-10); }
 #root .rb-prow-topics .rb-topic { height: var(--krds-number-10); }
 #root .rb-prow-main > .rb-prow-topics { margin-top: 0; } /* 설명→주제 4(행 안 간격 하나) */
+/* 검색칸 아래 → 첫 결과(범위 열·결과·업무로 찾기) 24: 실제 /search?search=hwp 1440 실측(검색칸 121~153, 첫 행 177, 11. 1.) */
+@media (min-width: 1024px) { #root .rb-s-body { margin-top: var(--krds-number-3); } }
