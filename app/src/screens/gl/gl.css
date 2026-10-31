@@ -2,7 +2,7 @@
 .gl-page { display: flex; flex-direction: column; gap: var(--rb-section-gap); min-width: 0; }
 .gl-head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--krds-gap-5); }
 .gl-head-text { display: flex; flex-direction: column; gap: var(--krds-gap-3); min-width: 0; }
-.gl-title { margin: 0; font-size: var(--rb-step-19); line-height: var(--rb-lh-19); font-weight: var(--rb-fw-title); color: var(--krds-color-text-basic); }
+.gl-title { margin: 0; font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--rb-fw-title); color: var(--krds-color-text-basic); }
 .gl-intro { margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); color: var(--krds-color-text-basic); }
 .gl-head-actions { display: flex; align-items: center; gap: var(--krds-gap-3); flex: none; }
 
@@ -45,7 +45,7 @@
 
 /* 릴리스 카드 */
 .gl-release { border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); overflow: hidden; }
-.gl-release-head { margin: 0; padding: var(--krds-padding-4); background: var(--krds-color-surface-gray-subtler); font-size: var(--rb-step-19); line-height: var(--rb-lh-19); font-weight: var(--rb-fw-title); overflow-wrap: anywhere; }
+.gl-release-head { margin: 0; padding: var(--krds-padding-4); background: var(--krds-color-surface-gray-subtler); font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--rb-fw-title); overflow-wrap: anywhere; }
 .gl-release-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: var(--rb-gutter); padding: var(--krds-padding-5) var(--krds-padding-4); }
 .gl-release-meta { display: flex; flex-direction: column; gap: var(--krds-gap-3); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); color: var(--krds-color-text-subtle); }
 .gl-release-meta p { display: flex; align-items: center; gap: var(--krds-gap-3); margin: 0; min-width: 0; overflow-wrap: anywhere; }
@@ -61,7 +61,7 @@
 .gl-commit-head { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); padding-bottom: var(--krds-padding-4); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); }
 .gl-commit-line { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); min-width: 0; }
 .gl-commit-line code, .gl-info code { font-family: 'D2Coding', ui-monospace, Menlo, Consolas, monospace; }
-.gl-commit-title { margin: 0; font-size: var(--rb-step-24); line-height: var(--rb-lh-24); font-weight: var(--rb-fw-title); overflow-wrap: anywhere; }
+.gl-commit-title { margin: 0; font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--rb-fw-title); overflow-wrap: anywhere; }
 .gl-commit-body { margin: 0; padding: var(--krds-padding-4); border-inline-start: var(--krds-number-2) solid var(--krds-color-border-gray); font-family: 'D2Coding', ui-monospace, Menlo, Consolas, monospace; font-size: var(--rb-step-13); line-height: var(--rb-lh-13); white-space: pre-wrap; overflow-wrap: anywhere; }
 .gl-info { margin: 0; padding: 0; list-style: none; border: var(--krds-border-width-static-regular) solid var(--krds-color-border-gray-light); border-radius: var(--krds-radius-medium2); background: var(--krds-color-surface-gray-subtler); }
 .gl-info > li { display: flex; flex-wrap: wrap; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-padding-4); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
@@ -200,7 +200,7 @@
 @media (max-width: 1023px) { .gl-newitem { grid-template-columns: minmax(0, 1fr); } }
 
 /* 감사 v3(03): 제목 24, 타임라인, 행 상자, 채운 배지/단추, 필터 32 */
-.gl-title { font-size: var(--rb-step-24); line-height: var(--rb-lh-24); }
+.gl-title { font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); }
 .gl-bar.is-bare { padding: 0; background: none; border: 0; border-radius: 0; }
 .gl-bar.is-bare .gl-filter-field { background: var(--layout-raised-bg); }
 .gl-filter-field { height: var(--rb-side-item-h); background: var(--layout-raised-bg); border-color: var(--layout-panel-border); border-radius: var(--krds-radius-medium3); }
