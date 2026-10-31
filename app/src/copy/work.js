@@ -63,7 +63,7 @@ export const au = {
   contribTitle: '기여자 분석', commitsChart: '커밋 수', avg: '평균', max: '최대', limited: (n) => `최근 ${n}개 커밋 기준`, chartNone: '표시할 커밋이 없습니다',
 };
 
-export const w2 = { recent: '최근 검색', viewAdd: '뷰 추가', clearFilter: '필터 지우기', removeToken: '필터 제거', more: '더보기', newItem: '새 항목', openOrig: '공공 깃랩에서 열기' };
+export const w2 = { recent: '최근 검색', viewAdd: '+ 뷰 추가', clearFilter: '필터 지우기', removeToken: '필터 제거', more: '더보기', newItem: '새 항목', openOrig: '공공 깃랩에서 열기' };
 
 // 감사 v3 04 P1 #24~#27 실제 문구(캡처 24, 28, 29, 59)
 export const p1 = {

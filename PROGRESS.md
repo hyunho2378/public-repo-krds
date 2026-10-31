@@ -301,3 +301,4 @@
   - 40 5 {'D21': 40} ('only-figma', 'tabs') A-09_1024_Guest {'want': {'x': 40, 'y': 199, 'w': 944, 'h': 40}}
   - 38 4 {'D21': 38} ('box', 'login-field', 'y') G-08b_360_Guest {'field': 'y', 'figma': 497, 'code': 474, 'diff': -23}
   - 35 4 {'D21': 10, 'C1': 20, 'C2': 5} ('box', 'section-title', 'y') G-06_1024_Guest {'field': 'y', 'figma': 169, 'code': 204, 'diff': 35}
+- 11. 1. 01:40 D21: 판 위 1px 원인 = 테두리(실제 CSS border·Figma 레이아웃 포함 대 코드 안쪽 그림자) → 코드 판 안쪽 위 +1(경로 줄 81, Figma와 같음). A-01 1024 미만 업무로 찾기 행 두 줄(부모 판정, 768 확인은 M 재측정에서). 측정·대조는 M(XBHJj5WOxmhQ5uie), Figma는 5wSoEqgZoXOYOYr6로 넘김
