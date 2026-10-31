@@ -5,7 +5,7 @@ import { request } from '../api/client';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
 import { Icon } from '../components/Code/Icon';
 
-const DAYS = ['월', '화', '수', '목', '금', '토', '일'];
+const DAYS = u.RA_days;
 
 function Bars({ rows, unit, axis }) {
   const max = Math.max(1, ...rows.map((r) => r[1]));

@@ -18,13 +18,14 @@ const item = (label, to, extra = {}) => ({ label, to, ...extra });
 
 /** 전역 탐색 메뉴(공공 깃랩 '탐색'). 우리에게 아직 없는 화면은 공공 깃랩 원본을 새 창으로 연다. */
 export function globalMenu({ signedIn } = {}) {
+  // 덧붙임 묶음 '덧붙인 기능'(Figma A·G 화면: 업무로 찾기, 요청 보드, 운영 현황판) + UX/14 1장 7번 '협업 모집'(Figma에 자리 없음 → UX/14 표의 자리).
+  // 업무 분야는 탐색 필터 막대(UX/14 2번), 내 작업·알림은 상단 바, 새 프로젝트·점검표·AI 코딩 도구 연결은 각 화면 진입점에 둔다(한 화면 덧붙임 하나)
   const extra = [
-    item(t.Side_fields, '/fields', { icon: 'bookmarks' }),
+    item(u.C_task, '/search', { icon: 'search' }),
     item(t.Side_requests, '/requests', { icon: 'inquiry' }),
+    item(t.Insights_title, '/insights', { icon: 'analytics' }),
+    item(t.Collab_title, '/collaborate', { icon: 'multi' }),
   ];
-  if (signedIn) {
-    extra.push(item(t.Header_my, '/my', { icon: 'my' }), item(t.TabBar_alerts, '/notifications', { icon: 'bell' }), item(t.Collab_title, '/collaborate', { icon: 'multi' }), item(t.NewProject_title, '/projects/new', { icon: 'plus' }), item(t.Checklist_title, '/checklist', { icon: 'check_circle' }), item(t.Mcp_title, '/mcp', { icon: 'component' }), item(t.Insights_title, '/insights', { icon: 'analytics' }));
-  }
   return {
     title: u.G_explore,
     groups: [
@@ -36,7 +37,7 @@ export function globalMenu({ signedIn } = {}) {
         item(u.G_topics, '/explore/topics', { icon: 'ext/tag' }),
         item(u.G_snippets, '/explore/snippets', { icon: 'ext/snippet' }),
       ] },
-      { name: u.G_extra, icon: 'view_all', items: extra, extra: true },
+      { name: u.G_extraTitle, heading: true, items: extra, extra: true },
     ],
   };
 }
@@ -144,6 +145,17 @@ function Group({ group, tipApi, rail, onShow }) {
   const hasActive = group.items.some((it) => it.to && (pathname === it.to || pathname.startsWith(it.to + '/')));
   const [open, setOpen] = useState(group.open || hasActive);
   useEffect(() => { if (hasActive) setOpen(true); }, [hasActive]);
+  if (group.heading) {
+    // Figma '덧붙인 기능': 접지 않는 제목 한 줄(머리 '탐색'과 같은 글자) + 아이콘 있는 항목
+    return (
+      <div className="rb-side-group is-heading">
+        <p className="rb-side-title">{group.name}</p>
+        <ul className="rb-side-list">
+          {group.items.map((it) => <li key={(it.to || it.href) + it.label}><SideLink it={it} tipApi={tipApi} /></li>)}
+        </ul>
+      </div>
+    );
+  }
   if (!group.name) {
     const list = (
       <ul className="rb-side-list">
