@@ -246,3 +246,4 @@
 #root .gl-cbar { padding: var(--krds-number-7); }
 #root .gl-cbar-line { padding: 0; gap: var(--krds-number-7); }
 #root .gl-cbar .gl-commit-body { margin: var(--krds-number-7) 0 0; }
+#root .gl-pagehead { gap: var(--krds-number-7); }

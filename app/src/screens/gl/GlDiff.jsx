@@ -84,7 +84,7 @@ function FileBlock({ file, index, mode, open, onToggle, id, refName, webUrl }) {
   const st = useMemo(() => diffStat([file]), [file]);
   const name = nameOf(file);
   return (
-    <section className="gl-file" id={`file-${index}`} aria-label={name} data-figma="diff-file">
+    <section className="gl-file" id={`file-${index}`} aria-label={name} data-figma={index < 3 ? 'diff-file' : undefined}>
       <header className="gl-file-head">
         <button type="button" className={'gl-fold' + (open ? ' is-open' : '')} aria-expanded={open} aria-label={open ? g.hideFile : g.showFile} onClick={onToggle}>
           <Icon name="arrow-down" />
