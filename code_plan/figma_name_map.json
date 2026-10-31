@@ -1224,7 +1224,8 @@
      "owner"
     ],
     "variantsInCode": {}
-   }
+   },
+   "owner_note": "코드 소유 C1(P27_Account ProjectSettings), 2026. 10. 31. C2→C1"
   },
   {
    "screen": "R-27",
@@ -2029,7 +2030,7 @@
     "Explore/업무로 찾기"
    ],
    "code": {
-    "path": "/search?q=%ED%9A%8C%EC%9D%98%EB%A1%9D",
+    "path": "/search?q=%EC%B6%9C%EC%9E%A5%EB%B9%84%EB%A5%BC%20%EA%B3%84%EC%82%B0%ED%95%98%EA%B3%A0%20%EC%8B%B6%EC%96%B4%EC%9A%94",
     "query": {},
     "breakpoints": [
      1920,

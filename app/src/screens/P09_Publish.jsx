@@ -64,7 +64,7 @@ export default function Publish() {
 
   return (
     <Page id="G-05c" title={t.Header_4} state={check ? (allPass ? 'Pass' : 'NeedsWork') : step === 0 && similar ? 'Similar' : 'Ideal'}>
-      <h1 className="krds-text-heading-small" data-figma="section-title">{phrase(t.Header_4)}</h1>
+      <h1 className="krds-text-heading-small" data-figma="page-head">{phrase(t.Header_4)}</h1>
       <p className="rb-subtle">{phrase(t.P09_11)}</p>
       <Steps label={t.P09_12} labels={STEPS} current={step} />
 

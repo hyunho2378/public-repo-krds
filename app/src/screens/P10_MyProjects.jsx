@@ -17,7 +17,7 @@ export default function MyProjects() {
   }, []);
   return (
     <Page id="G-06" title={t.P09_34} state={session?.authenticated ? 'Empty' : 'Login'}>
-      <h1 className="krds-text-heading-small" data-figma="section-title">{phrase(t.P09_34)}</h1>
+      <h1 className="krds-text-heading-small" data-figma="page-head">{phrase(t.P09_34)}</h1>
       {!session && <p role="status">{t.P10_1}</p>}
       {session && !session.authenticated && (
         <EmptyState title={t.P10_3} actions={<a className="krds-btn small primary" href={auth.loginUrl(location.pathname)}>{t.P10_2}</a>} />

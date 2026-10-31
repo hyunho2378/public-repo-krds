@@ -323,3 +323,4 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
   .rb-login3-side-in { gap: var(--krds-number-12); align-items: stretch; }
   .rb-login3-side-in > .rb-mois-logo { width: var(--krds-number-21); align-self: center; }
 }
+#root .rb-repo-main > .rb-frame-title { grid-column: 1 / -1; margin: 0; }

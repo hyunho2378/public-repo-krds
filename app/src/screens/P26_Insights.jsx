@@ -23,7 +23,7 @@ export function Insights() {
     <Page id="A-06" title={t.Insights_title} state={rows.length ? 'Ideal' : map.state}>
       <div className="rb-write">
         <div className="rb-write-head">
-          <h1 className="krds-text-heading-small" data-figma="section-title">{t.Insights_title}</h1>
+          <h1 className="krds-text-heading-small" data-figma="page-head">{t.Insights_title}</h1>
           <p className="krds-text-body-xsmall rb-subtle">{t.Insights_hint}</p>
         </div>
         {!rows.length ? <Status {...map} /> : (

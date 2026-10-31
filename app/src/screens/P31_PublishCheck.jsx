@@ -23,7 +23,6 @@ export default function PublishCheck() {
     <ProjectFrame screenId="A-03" tab="" tabLabel={t.PubCheck_title} data={frame} state={check ? (allPass ? 'Pass' : 'NeedsWork') : body.state}>
       <div className="rb-code-area">
         <div className="rb-detail-head">
-          <h2 className="krds-text-body-small-bold" data-figma="section-title">{t.PubCheck_title}</h2>
           <p className="krds-text-body-xsmall rb-subtle">{t.PubCheck_hint}</p>
         </div>
         {!check ? (

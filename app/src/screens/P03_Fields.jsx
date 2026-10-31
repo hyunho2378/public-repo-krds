@@ -18,7 +18,7 @@ export default function Fields() {
   }, []);
   return (
     <Page id="G-03" title={t.P03_1} state={map.state}>
-      <h1 className="krds-text-heading-small" data-figma="section-title">{phrase(t.P03_1)}</h1>
+      <h1 className="krds-text-heading-small" data-figma="page-head">{phrase(t.P03_1)}</h1>
       <p className="rb-subtle">{phrase(t.P03_2)}</p>
       <Status {...map} />
       {hasData(map.state) && (
