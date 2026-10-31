@@ -360,3 +360,5 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
   #root .rb-s-side:not(.is-open) { display: none; }
 }
 @media (max-width: 767px) { #root .rb-s-filterbar { margin-top: calc(var(--krds-number-3) * -1); margin-bottom: 0; } }
+@media (max-width: 767px) { #root .rb-taskfind .rb-prow { row-gap: var(--krds-number-2); align-items: start; } #root .rb-taskfind .rb-prow-side { margin: 0; } }
+@media (max-width: 767px) { #root .rb-taskfind .rb-prow { grid-template-rows: auto auto; } #root .rb-taskfind .rb-prow > .rb-avatar { grid-row: 1 / span 2; } }
