@@ -121,3 +121,9 @@
 - 측정 창 높이는 Figma 변형 프레임 높이(최대 1400), 판 안 스크롤바는 숨기고 잰다. Signed-in은 개발 서버 ?auth=Signed-in 스위치
 - [C2] 원장 대조 R-16(MR 목록): 1920 Guest 23건에서 18건, 1440 Guest 24건에서 19건(gl-tabs 높이, 간격, 선색, gl-filter 면, 안쪽, 시계 아이콘). 남은 R-16: page-head(실제에 제목 줄 없음, Figma 쪽), gl-tabs 문구 '열림' 대 실제 '열기', gl-filter 높이 +8(KRDS small 단추 40). 다음: R-11, R-23, R-10, R-12~15, R-17~24, R-26
 - [C2] 원장 대조: 필터 막대 단추/입력 높이를 --layout-filter-control-h(32)로. R-16 1440 Guest 24→15, 1920 Guest 23→14, 360 Guest 20→14 (1920 Signed-in 26은 재측정 필요). R-11 1440 Guest 18, R-23 1440 Guest 14(전 값은 기록 안 됨, 이전 합 229/235를 10변형으로 나눈 평균 약 23). 다음: R-10, R-12~15, R-17~22, R-24, R-26
+
+## Figma 대조 진행(2026. 10. 31. 21:50, 코드 갈래 D21)
+- 추이(허용 뺀 값): 15,870 → 9,406 → 7,104 → 6,137(UX/audit_v3/parity_trend.md). 목표 0건 미달
+- 다음 차례(D21): 360 global-search x/h(240·42 대 248·44), A 화면 page-head·tabs 이름표와 구조(A-03~A-11), 검색 행(project-row 80 높이, 간격 8), G-01 page-head 코드에만(Figma 이름표 없음 확인), 로그인 G-08 login-field y +9(1024), gl-filter 아이콘 이름 대응(history↔time, sort-desc↔arrow-sort-both)
+- 대기: Figma(상단 바 texts, 768/360 panel-open, sidebar-nav 이름표, global-search 344, A-01 경로), C1·C2 화면 항목(원장 2절)
+- 측정은 개발 서버 + Figma 프레임 높이, Signed-in은 개발 서버만(원장 0-2)
