@@ -180,7 +180,7 @@ export function MergeRequest() {
     <ProjectFrame screenId="R-17" tab="" tabLabel={t.P20_title} crumbs={[[t.P20_title, `/projects/${frame.id}/merge-requests`], [`!${iid}`]]} data={frame} state={m ? 'Ideal' : body.state}>
       {!m ? <Status {...body} /> : (
         <div className="rb-code-area">
-          <div className="gl-mr-head" data-figma="page-head">
+          <div className="gl-mr-head">
             <h1 className="gl-mr-h1">{m.title}</h1>
             <p className="gl-mr-meta gl-mr-statusline">
               <span className={`gl-badge is-${m.state}`}><Icon name={BADGE_ICON[m.state] || 'close'} />{stateWord}</span>
@@ -192,7 +192,7 @@ export function MergeRequest() {
               <span>{au.requested(ago(m.created_at))}</span>
             </p>
           </div>
-          <div className="gl-tabs" data-figma="gl-tabs" role="tablist" aria-label={t.P20_tabsLabel}>
+          <div className="gl-tabs" data-figma="tabs" role="tablist" aria-label={t.P20_tabsLabel}>
             {TABS.map(([suffix, label]) => {
               const on = (suffix === '' && view === 'overview') || suffix === `/${view}`;
               return (

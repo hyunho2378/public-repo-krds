@@ -37,10 +37,12 @@ function MembersView({ list }) {
       </div>
       <div className="gl-work-filter" data-figma="gl-filter">
         <div className="gl-work-bar" role="search">
-          <IconButton icon="ext/history" label={rp.recent} onClick={() => setQ('')} />
+          <IconButton icon="time" label={rp.recent} onClick={() => setQ('')} />
           <input type="search" value={q} placeholder={rp.filterMembers} aria-label={rp.filterMembers} onChange={(e) => setQ(e.target.value)} />
           <Icon name="search" />
         </div>
+        <span className="krds-btn small tertiary">{rp.sortAccount}</span>
+        <IconButton icon="ext/sort-desc" label={rp.desc} />
       </div>
       <div className="gl-table-wrap">
         <table className="gl-table">
@@ -57,6 +59,30 @@ function MembersView({ list }) {
             ))}
           </tbody>
         </table>
+      </div>
+    </>
+  );
+}
+
+function BoardView({ list }) {
+  const [q, setQ] = useState('');
+  const keep = (c) => c.nodes.filter((i) => i.title.toLowerCase().includes(q.trim().toLowerCase()));
+  return (
+    <>
+      <div className="gl-work-filter" data-figma="gl-filter">
+        <span className="krds-btn small tertiary">{list.boards[0]?.name || 'Development'}</span>
+        <div className="gl-work-bar" role="search">
+          <input type="search" value={q} placeholder={rp.search} aria-label={rp.search} onChange={(e) => setQ(e.target.value)} />
+          <Icon name="search" />
+        </div>
+      </div>
+      <div className="gl-board">
+        {[[au.colOpen, list.open], [au.colClosed, list.closed]].map(([name, col]) => (
+          <section key={name} className="gl-board-col">
+            <h3><span>{name}</span><span>{au.cardCount(col.count)}</span></h3>
+            {keep(col).map((i) => <a key={i.iid} className="gl-card" href={i.webUrl} {...newWindow(i.title)}>{i.title}<small>#{i.iid}</small></a>)}
+          </section>
+        ))}
       </div>
     </>
   );
@@ -79,7 +105,7 @@ function LabelsView({ list, id }) {
   );
   return (
     <>
-      <div className="gl-tabs">
+      <div className="gl-tabs" data-figma="gl-tabs">
         <button type="button" className={'gl-tab' + (arch ? '' : ' active')} onClick={() => setArch(false)}>{rp.tabActive}</button>
         <button type="button" className={'gl-tab' + (arch ? ' active' : '')} onClick={() => setArch(true)}>{rp.tabArchived}</button>
         <span className="gl-tools">
@@ -123,8 +149,8 @@ function PackagesView({ list }) {
   const rows = list.filter((x) => `${x.name} ${x.version}`.toLowerCase().includes(q.trim().toLowerCase()));
   return (
     <>
-      <div data-figma="page-head"><h2 className="gl-page-title">{p1.pkgTitle}</h2></div>
-      <p className="gl-pkg-count"><Icon name="ext/catalog" /> {p1.pkgCount(list.length)}</p>
+      <div data-figma="page-head"><h2 className="gl-page-title">{p1.pkgTitle}</h2>
+      <p className="gl-pkg-count"><Icon name="ext/catalog" /> {p1.pkgCount(list.length)}</p></div>
       <PageSearch value={q} onChange={setQ} placeholder={p1.pkgFilter}>
         <span className="krds-btn small tertiary">{p1.pkgSort}</span>
       </PageSearch>
@@ -321,17 +347,7 @@ export default function RepoSections({ section }) {
   if (list && section === 'boards') {
     return (
       <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state="Ideal">
-        <div className="rb-code-area">
-          <div className="gl-tabs" data-figma="gl-tabs"><span className="gl-tab active">{list.boards[0]?.name || 'Development'}</span></div>
-          <div className="gl-board">
-            {[[au.colOpen, list.open], [au.colClosed, list.closed]].map(([name, col]) => (
-              <section key={name} className="gl-board-col">
-                <h3><span>{name}</span><span>{au.cardCount(col.count)}</span></h3>
-                {col.nodes.map((i) => <a key={i.iid} className="gl-card" href={i.webUrl} {...newWindow(i.title)}>{i.title}<small>#{i.iid}</small></a>)}
-              </section>
-            ))}
-          </div>
-        </div>
+        <div className="rb-code-area"><BoardView list={list} /></div>
       </ProjectFrame>
     );
   }

@@ -1,6 +1,6 @@
 // 공공 깃랩 작업 항목 목록 문구(캡처 20, 49)
 export const w = {
-  all: '모든 항목',
+  all: '모든 항목', tokenOpen: '열기',
   new: '새 항목',
   status: '상태',
   is: '다음과 같음',
@@ -58,12 +58,12 @@ export const au = {
   tabOpen: '열림', tabClosed: '닫힘', tabAll: '전체', tabDone: '완료',
   jobStatus: '상태', jobName: '작업', jobPipeline: '파이프라인', jobStage: '스테이지', jobCreated: '생성', jobCommit: '커밋',
   allowFailed: '실패 허용됨', statusName: { SUCCESS: '성공', FAILED: '실패', SKIPPED: '건너뜀', RUNNING: '실행 중', CANCELED: '취소됨', PENDING: '대기 중', MANUAL: '수동', CREATED: '생성됨' },
-  jobsTitle: '작업', jobsHelp: '파이프라인에서 실행된 작업 목록',
+  jobKind: '종류', jobBuild: '빌드', jobSearch: '작업 이름 검색', jobsTitle: '작업', jobsHelp: '파이프라인에서 실행된 작업 목록',
   ownerRole: 'Owner', sourceDirect: (n) => `${n}가 생성한 직접 멤버`, expireHint: '만료일',
   contribTitle: '기여자 분석', commitsChart: '커밋 수', avg: '평균', max: '최대', limited: (n) => `최근 ${n}개 커밋 기준`, chartNone: '표시할 커밋이 없습니다',
 };
 
-export const w2 = { viewAdd: '뷰 추가', clearFilter: '필터 지우기', removeToken: '필터 제거', more: '더보기', newItem: '새 항목', openOrig: '공공 깃랩에서 열기' };
+export const w2 = { recent: '최근 검색', viewAdd: '뷰 추가', clearFilter: '필터 지우기', removeToken: '필터 제거', more: '더보기', newItem: '새 항목', openOrig: '공공 깃랩에서 열기' };
 
 // 감사 v3 04 P1 #24~#27 실제 문구(캡처 24, 28, 29, 59)
 export const p1 = {

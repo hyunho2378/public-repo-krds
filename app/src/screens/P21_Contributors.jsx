@@ -31,10 +31,12 @@ export default function Contributors() {
   return (
     <ProjectFrame screenId="R-10" tab="" tabLabel={t.P21_title} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
       <div className="rb-code-area">
+        <div data-figma="page-head">
         <h2 className="gl-page-title">{ct.title}</h2>
         <div className="gl-ct-tools">
           <span className="krds-btn small tertiary">{frame.data.project.default_branch || 'main'}</span>
           <span className="krds-btn small tertiary">{ct.history}</span>
+        </div>
         </div>
         <h3 className="gl-ct-sub">{ct.branchHead} {frame.data.project.default_branch || 'main'}</h3>
         <p className="gl-page-help">{ct.note}</p>

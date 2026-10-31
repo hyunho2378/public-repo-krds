@@ -1,8 +1,8 @@
 /* 공공 깃랩 작업 항목 목록(캡처 20, 49): 탭 줄 + 새 항목, 필터 막대, 'n 항목' 줄, 빈 상태 */
 .gl-work-tabs { display: flex; align-items: center; justify-content: space-between; gap: var(--krds-gap-5); border-bottom: var(--krds-border-width-static-regular) solid var(--layout-divider); margin-bottom: var(--krds-gap-5); }
 .gl-work-tabs > .gl-work-tab { margin-right: 0; }
-.gl-work-tabs > a.krds-btn { margin-right: auto; }
-.gl-work-tab { display: inline-flex; align-items: center; min-height: var(--rb-search-h); padding: 0 var(--krds-gap-4); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); border-bottom: var(--krds-border-width-static-medium) solid currentColor; margin-bottom: calc(-1 * var(--krds-border-width-static-regular)); }
+
+.gl-work-tab { display: inline-flex; align-items: center; min-height: var(--krds-number-16); padding: 0 var(--krds-gap-4); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); border-bottom: var(--krds-border-width-static-medium) solid currentColor; margin-bottom: calc(-1 * var(--krds-border-width-static-regular)); }
 .gl-work-filter { display: flex; align-items: center; gap: var(--krds-gap-3); padding: var(--krds-gap-5); margin-bottom: 0; background: var(--layout-raised-bg); border-bottom: var(--krds-border-width-static-regular) solid var(--layout-divider); }
 .gl-work-bar { display: flex; align-items: center; flex: 1 1 auto; min-width: 0; gap: var(--krds-gap-3); min-height: var(--rb-search-h); box-sizing: border-box; padding: 0 var(--krds-gap-3); border: var(--krds-border-width-static-regular) solid var(--layout-divider); border-radius: var(--krds-gap-2); background: var(--krds-color-surface-white); }
 .gl-work-bar input { flex: 1 1 auto; min-width: 0; border: 0; background: transparent; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); color: inherit; }
@@ -17,3 +17,6 @@
 .gl-work-filter .krds-btn, .gl-work-filter .drop-btn, .gl-work-filter .rb-iconbtn { min-height: var(--layout-filter-control-h); height: var(--layout-filter-control-h); }
 .gl-work-filter .rb-iconbtn { min-width: var(--layout-filter-control-h); width: var(--layout-filter-control-h); }
 .gl-work-filter .gl-work-bar { min-height: var(--layout-filter-control-h); }
+.gl-work-tabs-left { display: flex; align-items: center; gap: 0; }
+.gl-work-tabs-left .krds-btn { margin-right: 0; }
+.gl-work-filter { border-radius: var(--layout-panel-radius); }

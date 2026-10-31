@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { gql, Q } from './parts/glGraphql';
 import { au } from '../copy/work';
 import { ago } from './parts/glTime';
+import { Icon } from '../components/Code/Icon';
 import './parts/glRepo.css';
 import { useData } from '../api/useData';
 import { ProjectFrame, useProject } from '../components/Layout/ProjectFrame';
@@ -17,11 +18,13 @@ export default function Jobs() {
   const { id } = useParams();
   const frame = useProject();
   const [tab, setTab] = useState('all');
+  const [q, setQ] = useState('');
   const path = frame.data?.project?.path_with_namespace;
   const body = useData(async () => (path ? (await gql(Q.jobs, { p: path })).project.jobs.nodes : null), [id, path]);
   if (!frame.data) return <ProjectFrame screenId="R-19" data={frame} />;
   const all = Array.isArray(body.data) ? body.data : null;
-  const rows = all ? (tab === 'done' ? all.filter((j) => ['SUCCESS', 'FAILED', 'CANCELED', 'SKIPPED'].includes(j.status)) : all) : null;
+  const rows0 = all ? (tab === 'done' ? all.filter((j) => ['SUCCESS', 'FAILED', 'CANCELED', 'SKIPPED'].includes(j.status)) : all) : null;
+  const rows = rows0 ? rows0.filter((j) => j.name.toLowerCase().includes(q.trim().toLowerCase())) : null;
   return (
     <ProjectFrame screenId="R-19" tab="" tabLabel={t.Jobs_title} data={frame} state={rows ? (rows.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
@@ -31,6 +34,13 @@ export default function Jobs() {
               {n} {all ? <span className="gl-mr-count">{k === 'all' ? all.length : all.filter((j) => ['SUCCESS', 'FAILED', 'CANCELED', 'SKIPPED'].includes(j.status)).length}</span> : null}
             </button>
           ))}
+        </div>
+        <div className="gl-work-filter" data-figma="gl-filter">
+          <div className="gl-work-bar" role="search">
+            <span className="gl-work-token">{au.jobKind} = {au.jobBuild}</span>
+            <input type="search" value={q} placeholder={au.jobSearch} aria-label={au.jobSearch} onChange={(e) => setQ(e.target.value)} />
+            <Icon name="search" />
+          </div>
         </div>
         {!rows ? <Status {...body} /> : rows.length ? (
           <div className="gl-table-wrap">

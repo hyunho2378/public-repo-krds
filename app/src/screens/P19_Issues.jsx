@@ -49,13 +49,15 @@ export function Issues() {
   if (!frame.data) return <ProjectFrame screenId="R-11" data={frame} />;
   const all = body.data;
   const list = all ? sortItems(matchTitle(all[st], query), sort) : null;
-  const stateName = st === 'opened' ? t.P19_open : t.P19_closed;
+  const stateName = st === 'opened' ? w.tokenOpen : t.P19_closed;
   return (
     <ProjectFrame screenId="R-11" tab="/feedback" tabLabel={t.P19_title} data={frame} state={all ? (all.opened.length + all.closed.length ? 'Ideal' : 'Empty') : body.state}>
       <div className="rb-code-area">
-        <div className="gl-work-tabs" data-figma="gl-tabs">
+        <div className="gl-work-tabs">
+          <div className="gl-work-tabs-left" data-figma="gl-tabs">
           <span className="gl-work-tab">{w.all}</span>
           <a className="krds-btn small text" href={`${frame.data.project.web_url}/-/issues`} {...newWindow(w2.openOrig)}>{w2.viewAdd}</a>
+          </div>
           <span className="gl-work-tools">
             <Drop label={p1.dotMenu} align="right" button={<Icon name="ellipsis_vertical" />} btnClass="krds-btn text rb-iconbtn is-small">
               {(close) => (
@@ -69,11 +71,12 @@ export function Issues() {
         </div>
         <div className="gl-work-filter" data-figma="gl-filter">
           <div className="gl-work-bar" role="search">
+            <IconButton icon="time" label={w2.recent} onClick={() => { setQuery(''); setSt('opened'); }} />
             <span className="gl-work-token">{w.status} {w.is}
               <Drop label={w.status} align="left" btnClass="krds-btn small text" button={<span>{stateName}</span>}>
                 {(close) => (
                   <ul className="drop-list" aria-label={w.status}>
-                    {[['opened', t.P19_open], ['closed', t.P19_closed]].map(([k, n]) => (
+                    {[['opened', w.tokenOpen], ['closed', t.P19_closed]].map(([k, n]) => (
                       <li key={k}><button type="button" className={'item-link' + (k === st ? ' active' : '')} onClick={() => { close(); setSt(k); }}>{n}</button></li>
                     ))}
                   </ul>
