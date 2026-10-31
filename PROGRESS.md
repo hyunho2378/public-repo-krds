@@ -211,3 +211,5 @@
   - 60 15 {'D21': 56, 'C1': 4} ('icon', 'gitlab-sidebar') A-05_1440_Guest {'figma': ['analytics', 'attach', 'bookmarks', 'component', 'document'
   - 60 15 {'D21': 56, 'C1': 4} ('icon', 'sidebar-nav') A-05_1440_Guest {'figma': ['analytics', 'attach', 'bookmarks', 'component', 'document', '
 - [C2] 원장 6차: 필터 막대를 탭 줄 바로 아래(코드영역 gap 0, 막대 높이 32 고정)로 y와 h 해소, 탭 높이 49(음수 마진 제거), R-10/R-20 경로 줄을 '기여자 분석', '패키지 레지스트리'로. 표는 직전 줄 아래 값(R-xx: 합, 전역 제외)을 /tmp 갱신본으로 대체: 위 sumry 출력 참조. 남음: global-search#2(화면 안 검색칸 Figma 이름 확인 필요), R-11 gl-tabs 폭, R-17
+
+- [C1] 원장 6차(전용 탭 5731, 전환 끔, 900ms, 내 요소만): R-02 80→75, R-03 44→44, R-04 60→60, R-05 226→136, R-06 4→4, R-07 44→44, R-08 34→26, R-09 10→10, R-27 17→17, R-28 2→2, R-29 4→4. 전역 포함: R-02 86, R-03 48, R-04 74, R-05 140, R-06 12, R-07 52, R-08 30, R-09 14, R-27 21, R-28 14, R-29 12. 이번: 경로 줄 문구(R-27~29), 필터 막대 간격 실측 보정(탭 아래 0, 설명 아래 16, gl.css 국소), 최근 검색 아이콘 history. 남은: gl-filter 글자색, page-head 아이콘(arrow-down 드롭다운 꺾쇠는 코드에서 data-icon 없는 토글 표시, Figma 인스턴스 이름), R-03 preview, commit-bar 문구(작성자 이름 표기: 코드 계정 이름 vs 공개 이름). 허용 목록 추가 없음.
