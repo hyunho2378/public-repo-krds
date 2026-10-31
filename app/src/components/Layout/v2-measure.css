@@ -220,3 +220,8 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-menu, .rb-menu { background: var(--layout-raised-bg); border-color: var(--krds-color-light-gray-80); border-radius: var(--krds-radius-medium3); }
 #root .rb-menu .item-link:hover, #root .rb-menu .item-link:focus-visible, #root .rb-menu .rb-menu-item:hover { background: var(--krds-color-light-gray-80); }
 #root .rb-x-sort .rb-menu, #root .rb-x-recent + .rb-menu { min-width: calc(var(--krds-number-21) * 2 + var(--krds-number-18) - var(--krds-number-5)); }
+
+/* 18. 별표 분할 단추(공공 깃랩: 회색 채움 rgba(137,136,141,.4) → gray-80, 모서리 8, 칸 사이 판색 선) audit_v3 02-9 */
+#root .rb-split { height: var(--layout-topbar-btn-h); border: 0; border-radius: var(--krds-radius-medium3); background: var(--krds-color-light-gray-80); }
+#root .rb-split-count { border-inline-start: var(--krds-border-width-static-regular) solid var(--layout-panel-bg); }
+#root .rb-split-main:hover, #root .rb-split-count:hover { background: var(--krds-color-light-gray-70); }
