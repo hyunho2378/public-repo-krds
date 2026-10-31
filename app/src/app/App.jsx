@@ -29,6 +29,15 @@ if (typeof window !== 'undefined' && 'ResizeObserver' in window) {
   };
   requestAnimationFrame(watch);
 }
+/** 스크롤 상자: 공공 깃랩처럼 쪽 전체가 아니라 본문 판 안이 스크롤된다(audit_v3 G-04). 판이 없는 화면(로그인)은 창 */
+export function scrollBox() {
+  const el = document.getElementById('rb-scroll');
+  return el && getComputedStyle(el).overflowY === 'auto' ? el : document.scrollingElement;
+}
+let firstPaint = true;
+// 마지막 스크롤 위치를 계속 적어 둔다(화면이 바뀌는 순간 새 내용 높이에 눌려 값이 줄어드는 것을 피한다)
+let lastY = 0;
+if (typeof document !== 'undefined') document.addEventListener('scroll', (e) => { const t = e.target === document ? document.scrollingElement : e.target; if (t && (t.id === 'rb-scroll' || t === document.scrollingElement)) lastY = t.scrollTop; }, { capture: true, passive: true });
 function FocusOnNavigate({ onNavigate }) {
   const { pathname, key } = useLocation();
   const type = useNavigationType();
@@ -40,15 +49,23 @@ function FocusOnNavigate({ onNavigate }) {
     const release = setTimeout(() => { main.style.minHeight = ''; }, 700);
     return () => { clearTimeout(release); main.style.minHeight = ''; };
   }, [pathname]);
-  useEffect(() => {
+  // 뒤로 가기(POP): 그리기 전에 즉시 같은 위치로(부드러운 이동 없음, audit_v3 05-18). 내용이 늦게 차면 높이가 될 때까지 몇 프레임 다시 맞춘다
+  useLayoutEffect(() => {
+    const box = scrollBox();
     const y = type === 'POP' ? scrollMemo.get(key) : undefined;
-    if (y != null) requestAnimationFrame(() => window.scrollTo(0, y));
-    else window.scrollTo(0, 0);
-    document.getElementById('main')?.focus({ preventScroll: true });
+    let n = 0; let raf = 0;
+    const put = () => { const b = scrollBox(); b.scrollTo({ top: y, behavior: 'instant' }); if (Math.abs(b.scrollTop - y) > 1 && n++ < 60) raf = requestAnimationFrame(put); };
+    if (y == null) box.scrollTo({ top: 0, behavior: 'instant' });
+    else put();
+    lastY = y ?? 0;
+    // 떠나는 화면의 위치는 새 화면이 맨 위로 올리기 전(레이아웃 정리 단계)에 적는다
+    return () => { cancelAnimationFrame(raf); scrollMemo.set(key, lastY); };
+  }, [pathname, key, type]);
+  useEffect(() => {
+    // 처음 연 화면은 초점을 옮기지 않는다(첫 Tab이 '본문 바로가기'부터, audit_v3 G-09). 이후 이동에서만 본문에 초점
+    if (firstPaint) firstPaint = false;
+    else document.getElementById('main')?.focus({ preventScroll: true });
     onNavigate();
-    return () => {
-      scrollMemo.set(key, window.scrollY);
-    };
   }, [pathname, key, type, onNavigate]);
   return null;
 }
@@ -119,7 +136,7 @@ function Shell() {
         {bare ? null : (
           <Sidebar project={project} open={navOpen} onClose={closeNav} onHide={mobile ? closeNav : () => setHidden(true)} onShow={() => setHidden(false)} hidden={sideDesk && hidden} />
         )}
-        <div className="rb-panel" data-figma="content-panel">
+        <div className="rb-panel" id="rb-scroll" data-figma="content-panel">
           <div className="rb-panel-in">
             {explore ? <Breadcrumb home={false} items={[[u.G_explore, '/'], [explore, null]]} /> : SOLO_PATH[pathname] ? <Breadcrumb home={false} items={[[SOLO_PATH[pathname], null]]} /> : null}
             <main id="main" tabIndex={-1} className="rb-main">

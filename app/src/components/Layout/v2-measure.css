@@ -86,3 +86,14 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
   #root .rb-side { width: var(--layout-drawer-w); border-radius: 0 var(--layout-drawer-radius) var(--layout-drawer-radius) 0; }
 }
 #root .rb-avatar.is-letter.is-48 { font-size: var(--rb-step-24); }
+
+/* 9. 판 안 스크롤(공공 깃랩: body 높이는 화면 높이, 본문 판 안쪽만 스크롤. audit_v3 G-04). 판 아래 8은 셸 아래 여백 */
+#root .rb-shell:not(.is-bare) { flex: none; height: calc(100dvh - var(--rb-header-h) - var(--rb-masthead-h) - var(--rb-top-extra)); overflow: hidden; }
+#root .rb-shell:not(.is-bare) > .rb-panel { height: 100%; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scroll-behavior: auto; }
+@media (min-width: 1024px) {
+  #root .rb-repo-main.has-info > .rb-repo-info { top: var(--rb-panel-pad-y); }
+}
+
+/* 10. 제목 세 단계(D-16 개정): 화면 h1은 --layout-title-page, 프로젝트 이름은 --layout-title-project. 문서 읽기 영역(README 등 .rb-md-h1)은 제외 */
+#root .rb-main h1:not(.rb-repo-name):not(.sr-only):not(.rb-md-h1) { font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--krds-font-weight-bold); }
+#root .rb-repo-name { font-size: var(--layout-title-project); line-height: var(--layout-title-project-lh); }

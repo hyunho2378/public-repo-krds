@@ -3,7 +3,7 @@ import { iconBtnClass } from '../Action/IconButton';
 import { newWindow } from './newWindow';
 import { t } from '../../copy/ko';
 import { useState } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useLocation, useParams, useSearchParams } from 'react-router-dom';
 import { auth, gitlab, readmeOrEmpty } from '../../api/client';
 import { cleanDescription } from './StructuredList';
 import { LoginRequiredModal } from '../Feedback/LoginRequiredModal';
@@ -96,19 +96,22 @@ const clip = (s) => (s.length > 80 ? `${s.slice(0, 79)}…` : s);
 
 export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, state, stats, wide = false, hideCrumbs = false, title = false, info = false }) {
   // 프로젝트 알림: 왼쪽 바(프로젝트 메뉴, 작업 항목 수)에 쓴다. 화면을 떠나면 지운다.
-  const project0 = data.data?.project;
+  // 목록에서 눌러 들어오면 그 행의 프로젝트 자료(state.project)로 경로와 제목을 먼저 그린다(빈 제목 670ms 방지, audit_v3 05-17)
+  const seed = useLocation().state?.project;
+  const seeded = !data.data && seed && String(seed.id) === String(data.id);
+  const project0 = data.data?.project || (seeded ? seed : null);
   useEffect(() => {
     if (project0) setProjectNav({ id: data.id, name: project0.name, owner: organizationOf(project0), issues: project0.open_issues_count, avatarUrl: project0.avatar_url, seed: data.id, webUrl: project0.web_url });
     return () => setProjectNav(null);
   }, [data.id, project0?.name, project0?.open_issues_count]);
-  if (!data.data) {
+  if (!data.data && !seeded) {
     return (
       <Page id={screenId} title={t.ProjectFrame_2} state={data.state}>
         <Status {...data} />
       </Page>
     );
   }
-  const { project } = data.data;
+  const project = project0;
   // UX-007 10장: 제목에 서비스명 접미, 세로선 구분 기호를 쓰지 않는다.
   const ownerProject = `${organizationOf(project)}/${project.name}`;
   const deepLabel = crumbs?.length ? crumbs[crumbs.length - 1][0] : tabLabel;
@@ -126,9 +129,9 @@ export function ProjectFrame({ screenId, tab, tabLabel, crumbs, data, children, 
         {/* 공공 깃랩 02, 52: 제목 줄은 본문과 정보 열 위 전체 폭(모바일에서는 정보 열이 제목 바로 아래로) */}
         {title ? <div className="rb-repo-title-row"><RepoHeader project={project} id={data.id} /></div> : null}
         <div className="rb-repo-body">
-          {children}
+          {seeded ? <Status {...data} /> : children}
         </div>
-        {info ? (
+        {info && !seeded ? (
             <ProjectInfo id={data.id} project={project} readme={data.data.readme} totals={data.data.totals} stats={stats} languages={data.data.languages} root={data.data.root} />
         ) : null}
       </div>

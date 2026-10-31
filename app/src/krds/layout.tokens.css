@@ -153,11 +153,19 @@
   --layout-sidebar-foot-gap: var(--krds-number-3);
   --layout-sidebar-avatar: var(--krds-number-10);
   --layout-sidebar-text-weight: var(--krds-font-weight-regular);
-  /* v2 실측: 화면 제목 28/36(공공 깃랩 28/36.4, KRDS mobile heading-xlarge 2.8rem), 프로젝트 제목 32/40(공공 깃랩 30/37.5, KRDS pc heading-large) */
-  --layout-title-size: var(--krds-mobile-font-size-heading-xlarge);
-  --layout-title-lh: calc(var(--krds-number-12) + var(--krds-number-3));
-  --layout-repo-title-size: var(--krds-pc-font-size-heading-large);
-  --layout-repo-title-lh: var(--rb-lh-32);
+  /* 제목 세 단계(D-16 개정 2026. 10. 31., KRDS PC 글자 크기 토큰만). 모든 화면은 이 변수만 쓴다. 28은 KRDS에 없어 쓰지 않는다
+     화면 제목(공공 깃랩 28~30) → heading-large 32 / 40, 프로젝트 홈 제목(공공 깃랩 30) → heading-large 32 / 40, 섹션 제목 → heading-small 19 / 28 */
+  --layout-title-page: var(--krds-pc-font-size-heading-large);
+  --layout-title-page-lh: var(--rb-lh-32);
+  --layout-title-project: var(--krds-pc-font-size-heading-large);
+  --layout-title-project-lh: var(--rb-lh-32);
+  --layout-title-section: var(--krds-pc-font-size-heading-small);
+  --layout-title-section-lh: var(--rb-lh-19);
+  /* 옛 이름(같은 값을 가리킨다) */
+  --layout-title-size: var(--layout-title-page);
+  --layout-title-lh: var(--layout-title-page-lh);
+  --layout-repo-title-size: var(--layout-title-project);
+  --layout-repo-title-lh: var(--layout-title-project-lh);
   /* v2 색 층(공공 깃랩 rgb → 가장 가까운 KRDS gray 단계). 바깥(세로 바, 상단 바) 5,5,6 → gray-100, 판 24,23,29 → gray-95, 판 테두리 58,56,63 → gray-80,
      필터 막대와 현재 항목 40,39,45 → gray-90, 필터 위 선과 행 구분선 76,75,81 → gray-70, 주제 알약 164,163,168 → gray-30(글자 24,23,29 → gray-95), 보조 글자 191,191,195 → gray-20 */
   --layout-shell-bg: var(--krds-color-light-gray-100);

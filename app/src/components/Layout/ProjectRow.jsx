@@ -34,7 +34,7 @@ export function ProjectRow({ p, mrs, issues }) {
       <Avatar src={p.avatar_url} name={owner || p.name} seed={p.id} className="is-32" />
       <div className="rb-prow-main">
         <p className="rb-prow-title">
-          <Link to={`/projects/${p.id}`}>{owner ? `${owner} / ` : ''}{p.name}</Link>
+          <Link to={`/projects/${p.id}`} state={{ project: p }}>{owner ? `${owner} / ` : ''}{p.name}</Link>
           <Icon name="globe" label={u.X_public} />
         </p>
         {desc ? <FoldText lines={2} className="rb-prow-desc">{desc}</FoldText> : null}
