@@ -345,7 +345,7 @@ export default function RepoSections({ section }) {
   }
   if (list && ['packages', 'pipelines', 'activity'].includes(section)) {
     return (
-      <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={conf.title()} data={frame} state={list.length ? 'Ideal' : 'Empty'}>
+      <ProjectFrame screenId={SECTION_SCREEN[section]} tab="" tabLabel={section === 'packages' ? p1.pkgTitle : conf.title()} data={frame} state={list.length ? 'Ideal' : 'Empty'}>
         <div className="rb-code-area">
           {section === 'packages' ? <PackagesView list={list} /> : section === 'pipelines' ? <PipelinesView list={list} /> : <ActivityView list={list} />}
         </div>

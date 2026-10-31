@@ -54,12 +54,8 @@ export function projectMenu(id, { signedIn, role, issues, webUrl } = {}) {
       item(u.G_pipelines, `${p}/pipelines`, { hint: t.Side_hintPipeline }),
       item(u.G_usage, `${p}/use`, { hint: t.Side_hintUse, extra: true }),
     ] },
-    { name: u.G_more, icon: 'view_all', sep: true, items: [
-      item(t.ProjectTabs_1, `${p}/about`),
-      item(t.ProjectTabs_5, `${p}/feedback`, { hint: t.Side_hintFeedback }),
-      item(t.Law_title, `${p}/law-alerts`),
-      item(t.Handover_title, `${p}/handover`),
-    ], extra: true },
+    // 공공 깃랩 '추가 기능': 펼침 없는 한 줄(실제는 기능 모음 창을 여는 단추, 하위 항목 없음, 2026. 10. 31. 실측). 아래 구분선
+    { sep: true, items: [item(u.G_more, null, { href: `${webUrl || GITLAB}`, icon: 'view_all' })] },
     { name: u.G_manage, icon: 'ext/users', items: [
       item(u.G_activity, `${p}/activity`), item(u.G_members, `${p}/members`), item(u.G_labels, `${p}/labels`),
     ] },
@@ -81,7 +77,8 @@ export function projectMenu(id, { signedIn, role, issues, webUrl } = {}) {
     { name: u.G_operate, icon: 'ext/cloud', items: [
       item(u.G_envs, null, up('/-/environments')), item(u.G_terraform, null, up('/-/terraform_module_registry')),
     ] },
-    { name: u.G_monitor, icon: 'ext/monitor', items: [item(u.G_incidents, null, up('/-/incidents'))] },
+    // 덧붙임 법령 변경 알림: '모니터' 묶음 아래(UX/14 1장 8번, Figma A-10)
+    { name: u.G_monitor, icon: 'ext/monitor', items: [item(u.G_incidents, null, up('/-/incidents')), item(t.Law_title, `${p}/law-alerts`, { extra: true })] },
     { name: u.G_analyze, icon: 'analytics', items: [
       item(u.G_vsa, null, up('/-/value_stream_analytics')), item(u.G_contributors, `${p}/contributors`),
       item(u.G_cicdAnalytics, null, up('/-/pipelines/charts')), item(u.G_repoAnalytics, null, up('/-/graphs/main/charts')),
@@ -89,8 +86,11 @@ export function projectMenu(id, { signedIn, role, issues, webUrl } = {}) {
     ] },
   ];
   // 프로젝트 관리(설정, 공개 준비 점검)는 권한이 있을 때만(D-10 role). 공공 깃랩의 '설정' 자리(맨 끝)
+  // 덧붙임 공개 준비 점검: 권한이 있으면 '설정' 묶음 아래(UX/14 1장 5번), 없으면 목록 끝 한 줄(Figma R-01·A 화면). 소개·의견·인수인계는 세로 바에 두지 않는다(UX/14: 한 화면 덧붙임 하나, 진입은 프로젝트 홈 정보 열과 화면 안 단추)
   if (signedIn && (role === 'developer' || role === 'owner')) {
     groups.push({ name: t.PSet_title, icon: 'setting', items: [item(t.PSet_title, `${p}/settings`), item(t.Side_publishCheck, `${p}/publish-check`, { hint: t.Side_hintPublish })] });
+  } else {
+    groups.push({ items: [item(t.Side_publishCheck, `${p}/publish-check`, { hint: t.Side_hintPublish, icon: 'analytics', extra: true })] });
   }
   return { groups };
 }
@@ -145,11 +145,12 @@ function Group({ group, tipApi, rail, onShow }) {
   const [open, setOpen] = useState(group.open || hasActive);
   useEffect(() => { if (hasActive) setOpen(true); }, [hasActive]);
   if (!group.name) {
-    return (
+    const list = (
       <ul className="rb-side-list">
         {group.items.map((it) => <li key={(it.to || it.href) + it.label}><SideLink it={it} tipApi={tipApi} /></li>)}
       </ul>
     );
+    return group.sep ? <div className="rb-side-group has-sep">{list}</div> : list;
   }
   const listId = 'rb-side-g-' + group.name.replace(/\s/g, '');
   return (

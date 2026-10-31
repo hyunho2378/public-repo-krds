@@ -30,7 +30,7 @@ export default function Contributors() {
   if (!frame.data) return <ProjectFrame screenId="R-10" data={frame} />;
   const list = body.data ? [...body.data].sort((a, b) => b.commits - a.commits) : null;
   return (
-    <ProjectFrame screenId="R-10" tab="" tabLabel={t.P21_title} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
+    <ProjectFrame screenId="R-10" tab="" tabLabel={ct.title} data={frame} state={list ? (list.length ? (list.length === 1 ? 'Min' : 'Ideal') : 'Empty') : body.state}>
       <div className="rb-code-area">
         <div data-figma="page-head" className="gl-ph">
         <h2 className="gl-page-title">{ct.title}</h2>

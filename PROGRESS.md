@@ -210,3 +210,4 @@
   - 72 26 {'D21': 46, 'C1': 22, 'C2': 4} ('box', 'page-head', 'h') A-03_360_Guest {'field': 'h', 'figma': 40, 'code': 32, 'diff': -8}
   - 60 15 {'D21': 56, 'C1': 4} ('icon', 'gitlab-sidebar') A-05_1440_Guest {'figma': ['analytics', 'attach', 'bookmarks', 'component', 'document'
   - 60 15 {'D21': 56, 'C1': 4} ('icon', 'sidebar-nav') A-05_1440_Guest {'figma': ['analytics', 'attach', 'bookmarks', 'component', 'document', '
+- [C2] 원장 6차: 필터 막대를 탭 줄 바로 아래(코드영역 gap 0, 막대 높이 32 고정)로 y와 h 해소, 탭 높이 49(음수 마진 제거), R-10/R-20 경로 줄을 '기여자 분석', '패키지 레지스트리'로. 표는 직전 줄 아래 값(R-xx: 합, 전역 제외)을 /tmp 갱신본으로 대체: 위 sumry 출력 참조. 남음: global-search#2(화면 안 검색칸 Figma 이름 확인 필요), R-11 gl-tabs 폭, R-17
