@@ -112,7 +112,7 @@ export default function Changes() {
           <p className="gl-ref-meta"><code className="rb-break-any">{path}</code><Link className="krds-link" to={`/projects/${frame.id}/changes`}>{t.P06_clearFilter}</Link></p>
         ) : null}
         <div className="gl-bar is-bare">
-          <div className="gl-grow" onKeyDown={(e) => { if (e.key === 'Enter') remember(q); }}><FilterField figma="gl-filter" value={q} onChange={setQ} placeholder={g.histFilter} lead={<Menu label={g.histRecent} align="left" btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="time" label={g.histRecent} />}>
+          <div className="gl-grow" onKeyDown={(e) => { if (e.key === 'Enter') remember(q); }}><FilterField figma="gl-filter" value={q} onChange={setQ} placeholder={g.histFilter} lead={<Menu label={g.histRecent} align="left" btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="ext/history" label={g.histRecent} />}>
             {(close) => (
               <ul className="drop-list" aria-label={g.histRecent}>
                 <li><p className="rb-menu-title">{g.histRecent}</p></li>
