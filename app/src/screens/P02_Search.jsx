@@ -22,7 +22,7 @@ function TaskFind({ q }) {
   const hits = res.data || [];
   if (!hits.length) return null;
   return (
-    <section className="rb-taskfind" data-figma="extra-task-find" aria-labelledby="rb-taskfind">
+    <section className="rb-taskfind" data-figma="task-search" aria-labelledby="rb-taskfind">
       <h2 id="rb-taskfind" className="krds-text-body-small-bold">{u.C_task}</h2>
       <ul className="rb-taskfind-list">
         {hits.map((c) => (
