@@ -25,3 +25,4 @@
 .gl-work-filter .gl-work-bar input { height: 100%; padding: 0; min-height: 0; }
 .gl-work-tabs-left { flex: 1 1 auto; min-width: 0; }
 .gl-work-tabs { gap: 0; }
+.gl-filter-search { display: inline-flex; align-items: center; justify-content: center; flex: none; width: var(--layout-filter-control-h); height: var(--layout-filter-control-h); padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; }

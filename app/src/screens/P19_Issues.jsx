@@ -14,6 +14,7 @@ import { HistoryButton } from './parts/HistoryButton';
 import { newWindow } from '../components/Layout/newWindow';
 import { SORTS, matchTitle, sortItems } from '../components/Code/ListTools';
 import { Drop } from '../components/Code/Drop';
+import { FilterSearch } from './parts/FilterSearch';
 import { Icon } from '../components/Code/Icon';
 import { LinkButton } from '../components/Action/Button';
 import { Readme } from '../components/Help/Readme';
@@ -86,7 +87,7 @@ export function Issues() {
             </span>
             <IconButton icon="close" label={w2.clearFilter} onClick={() => { setQuery(''); setSt('opened'); }} />
             <input type="search" value={query} placeholder={w.search} aria-label={u.List_searchLabel} onChange={(e) => setQuery(e.target.value)} />
-            <Icon name="search" />
+            <FilterSearch label={u.List_searchLabel} />
           </div>
           <Drop label={w.display} align="right" button={<span>{w.display}</span>}>
             {(close) => (

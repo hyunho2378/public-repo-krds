@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { gql, Q } from './parts/glGraphql';
 import { au } from '../copy/work';
 import { ago } from './parts/glTime';
+import { u } from '../copy/ui';
+import { FilterSearch } from './parts/FilterSearch';
 import { Icon } from '../components/Code/Icon';
 import './parts/glRepo.css';
 import { useData } from '../api/useData';
@@ -39,7 +41,7 @@ export default function Jobs() {
           <div className="gl-work-bar" role="search">
             <span className="gl-work-token">{au.jobKind} = {au.jobBuild}</span>
             <input type="search" value={q} placeholder={au.jobSearch} aria-label={au.jobSearch} onChange={(e) => setQ(e.target.value)} />
-            <Icon name="search" />
+            <FilterSearch label={u.List_searchLabel} />
           </div>
         </div>
         {!rows ? <Status {...body} /> : rows.length ? (

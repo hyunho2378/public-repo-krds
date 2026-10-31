@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T14:12:54.279Z",
+ "generated": "2026-10-31T14:19:54.596Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
@@ -9867,7 +9867,7 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 1,
     "only-code": 0,
     "order": 0
@@ -9897,7 +9897,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -9931,39 +9931,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -10066,7 +10033,7 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 1,
     "only-code": 0,
     "order": 0
@@ -10096,7 +10063,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -10130,39 +10097,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -10265,7 +10199,7 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 1,
     "only-code": 0,
     "order": 0
@@ -10295,7 +10229,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -10329,39 +10263,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -10464,7 +10365,7 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 1,
     "only-code": 0,
     "order": 0
@@ -10494,7 +10395,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -10528,39 +10429,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -11331,12 +11199,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -11351,39 +11219,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -11394,39 +11229,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -11491,12 +11293,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -11511,39 +11313,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -11554,39 +11323,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -11651,12 +11387,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -11671,39 +11407,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -11714,39 +11417,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -11811,12 +11481,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -11831,39 +11501,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -11874,39 +11511,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -12493,7 +12097,7 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -12523,7 +12127,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -12557,39 +12161,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -12675,7 +12246,7 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -12705,7 +12276,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -12739,39 +12310,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -12857,7 +12395,7 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -12887,7 +12425,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -12921,39 +12459,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -13039,7 +12544,7 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -13069,7 +12574,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -13103,39 +12608,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -14777,12 +14249,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 1,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -14797,39 +14269,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -14840,39 +14279,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -14951,12 +14357,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 1,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -14971,39 +14377,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -15014,39 +14387,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -15125,12 +14465,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 1,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -15145,39 +14485,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -15188,39 +14495,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -15299,12 +14573,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 1,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -15319,39 +14593,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -15362,39 +14603,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -16915,12 +16123,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
     {
      "kind": "shape",
@@ -16935,39 +16143,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -16978,39 +16153,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -17073,12 +16215,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
     {
      "kind": "shape",
@@ -17093,39 +16235,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -17136,39 +16245,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -17231,12 +16307,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
     {
      "kind": "shape",
@@ -17251,39 +16327,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -17294,39 +16337,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -17389,12 +16399,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
     {
      "kind": "shape",
@@ -17409,39 +16419,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -17452,39 +16429,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -17896,7 +16840,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 2,
-    "only-code": 15,
+    "only-code": 3,
     "order": 0
    },
    "allowed": 23,
@@ -18314,7 +17258,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 603,
       "y": 234,
@@ -18336,66 +17280,6 @@
     {
      "kind": "only-code",
      "name": "extra-field-filter",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#10",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#11",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#12",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#13",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#14",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#15",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#16",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#17",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#18",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#19",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#20",
      "allowed": null
     }
    ]
@@ -18410,7 +17294,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 2,
-    "only-code": 15,
+    "only-code": 3,
     "order": 0
    },
    "allowed": 23,
@@ -18828,7 +17712,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 603,
       "y": 234,
@@ -18851,66 +17735,6 @@
      "kind": "only-code",
      "name": "extra-field-filter",
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#10",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#11",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#12",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#13",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#14",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#15",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#16",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#17",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#18",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#19",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#20",
-     "allowed": null
     }
    ]
   },
@@ -18922,9 +17746,9 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 2,
+    "icon": 1,
     "only-figma": 2,
-    "only-code": 15,
+    "only-code": 3,
     "order": 0
    },
    "allowed": 27,
@@ -18963,7 +17787,7 @@
       "history",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -19013,39 +17837,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "box",
@@ -19427,7 +18218,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 1003,
       "y": 234,
@@ -19458,66 +18249,6 @@
     {
      "kind": "only-code",
      "name": "extra-field-filter",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#10",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#11",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#12",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#13",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#14",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#15",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#16",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#17",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#18",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#19",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#20",
      "allowed": null
     }
    ]
@@ -19530,9 +18261,9 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 2,
+    "icon": 1,
     "only-figma": 2,
-    "only-code": 15,
+    "only-code": 3,
     "order": 0
    },
    "allowed": 27,
@@ -19571,7 +18302,7 @@
       "history",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -19621,39 +18352,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "box",
@@ -20035,7 +18733,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 1003,
       "y": 234,
@@ -20067,66 +18765,6 @@
      "kind": "only-code",
      "name": "extra-field-filter",
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#10",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#11",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#12",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#13",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#14",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#15",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#16",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#17",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#18",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#19",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#20",
-     "allowed": null
     }
    ]
   },
@@ -20138,9 +18776,9 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 2,
+    "icon": 1,
     "only-figma": 2,
-    "only-code": 15,
+    "only-code": 3,
     "order": 0
    },
    "allowed": 28,
@@ -20179,7 +18817,7 @@
       "history",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -20229,39 +18867,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "box",
@@ -20652,7 +19257,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 1299,
       "y": 234,
@@ -20683,66 +19288,6 @@
     {
      "kind": "only-code",
      "name": "extra-field-filter",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#10",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#11",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#12",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#13",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#14",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#15",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#16",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#17",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#18",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#19",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#20",
      "allowed": null
     }
    ]
@@ -20755,9 +19300,9 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 2,
+    "icon": 1,
     "only-figma": 2,
-    "only-code": 15,
+    "only-code": 3,
     "order": 0
    },
    "allowed": 28,
@@ -20796,7 +19341,7 @@
       "history",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -20846,39 +19391,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "box",
@@ -21269,7 +19781,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 1299,
       "y": 234,
@@ -21300,66 +19812,6 @@
     {
      "kind": "only-code",
      "name": "extra-field-filter",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#10",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#11",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#12",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#13",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#14",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#15",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#16",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#17",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#18",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#19",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#20",
      "allowed": null
     }
    ]
@@ -21374,7 +19826,7 @@
     "shape": 0,
     "icon": 9,
     "only-figma": 2,
-    "only-code": 15,
+    "only-code": 3,
     "order": 0
    },
    "allowed": 28,
@@ -21998,7 +20450,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 110,
       "y": 386,
@@ -22020,66 +20472,6 @@
     {
      "kind": "only-code",
      "name": "extra-field-filter",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#10",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#11",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#12",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#13",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#14",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#15",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#16",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#17",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#18",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#19",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#20",
      "allowed": null
     }
    ]
@@ -22094,7 +20486,7 @@
     "shape": 0,
     "icon": 9,
     "only-figma": 2,
-    "only-code": 15,
+    "only-code": 3,
     "order": 0
    },
    "allowed": 28,
@@ -22718,7 +21110,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 110,
       "y": 386,
@@ -22741,66 +21133,6 @@
      "kind": "only-code",
      "name": "extra-field-filter",
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#10",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#11",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#12",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#13",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#14",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#15",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#16",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#17",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#18",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#19",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#20",
-     "allowed": null
     }
    ]
   },
@@ -22814,7 +21146,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 2,
-    "only-code": 15,
+    "only-code": 3,
     "order": 0
    },
    "allowed": 23,
@@ -23238,7 +21570,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 355,
       "y": 234,
@@ -23260,66 +21592,6 @@
     {
      "kind": "only-code",
      "name": "extra-field-filter",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#10",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#11",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#12",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#13",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#14",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#15",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#16",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#17",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#18",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#19",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#20",
      "allowed": null
     }
    ]
@@ -23334,7 +21606,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 2,
-    "only-code": 15,
+    "only-code": 3,
     "order": 0
    },
    "allowed": 23,
@@ -23758,7 +22030,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 355,
       "y": 234,
@@ -23780,66 +22052,6 @@
     {
      "kind": "only-code",
      "name": "extra-field-filter",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#9",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#10",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#11",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#12",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#13",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#14",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#15",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#16",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#17",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#18",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#19",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "project-row#20",
      "allowed": null
     }
    ]
@@ -27840,12 +26052,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 11,
    "rows": [
     {
      "kind": "shape",
@@ -27860,39 +26072,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -27903,39 +26082,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -28027,12 +26173,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 11,
    "rows": [
     {
      "kind": "shape",
@@ -28047,39 +26193,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -28090,39 +26203,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -28214,12 +26294,12 @@
     "font": 0,
     "color": 5,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 11,
    "rows": [
     {
      "kind": "color",
@@ -28240,39 +26320,6 @@
      "name": "body",
      "detail": "간격 8→0",
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
-    },
-    {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
     },
     {
      "kind": "color",
@@ -28301,39 +26348,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "color",
@@ -28423,12 +26437,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 11,
    "rows": [
     {
      "kind": "shape",
@@ -28443,39 +26457,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -28486,39 +26467,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -29418,7 +27366,7 @@
     "font": 0,
     "color": 0,
     "shape": 1,
-    "icon": 2,
+    "icon": 1,
     "only-figma": 4,
     "only-code": 1,
     "order": 0
@@ -29449,7 +27397,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -29484,39 +27432,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -29713,7 +27628,7 @@
     "font": 0,
     "color": 0,
     "shape": 1,
-    "icon": 2,
+    "icon": 1,
     "only-figma": 4,
     "only-code": 1,
     "order": 0
@@ -29744,7 +27659,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -29779,39 +27694,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -30008,7 +27890,7 @@
     "font": 0,
     "color": 0,
     "shape": 1,
-    "icon": 2,
+    "icon": 1,
     "only-figma": 4,
     "only-code": 1,
     "order": 0
@@ -30039,7 +27921,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -30074,39 +27956,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -30303,7 +28152,7 @@
     "font": 0,
     "color": 0,
     "shape": 1,
-    "icon": 2,
+    "icon": 1,
     "only-figma": 4,
     "only-code": 1,
     "order": 0
@@ -30334,7 +28183,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -30369,39 +28218,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -31661,12 +29477,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
     {
      "kind": "shape",
@@ -31681,39 +29497,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -31724,39 +29507,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -31825,12 +29575,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 9,
+   "allowed": 8,
    "rows": [
     {
      "kind": "shape",
@@ -31845,39 +29595,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -31888,39 +29605,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -31980,12 +29664,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
     {
      "kind": "shape",
@@ -32000,39 +29684,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -32043,39 +29694,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -32144,12 +29762,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 9,
+   "allowed": 8,
    "rows": [
     {
      "kind": "shape",
@@ -32164,39 +29782,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -32207,39 +29792,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -32919,12 +30471,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -32939,39 +30491,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -32982,39 +30501,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -33127,7 +30613,7 @@
     "font": 1,
     "color": 1,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 2,
     "only-code": 0,
     "order": 0
@@ -33156,7 +30642,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -33191,39 +30677,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -33400,12 +30853,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -33420,39 +30873,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -33463,39 +30883,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -33608,7 +30995,7 @@
     "font": 1,
     "color": 1,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 2,
     "only-code": 0,
     "order": 0
@@ -33637,7 +31024,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -33672,39 +31059,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -34706,12 +32060,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -34726,39 +32080,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -34769,39 +32090,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -34867,7 +32155,7 @@
     "font": 0,
     "color": 0,
     "shape": 1,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 1,
     "only-code": 0,
     "order": 0
@@ -34897,7 +32185,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -34931,39 +32219,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -35075,12 +32330,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -35095,39 +32350,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -35138,39 +32360,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -35236,7 +32425,7 @@
     "font": 0,
     "color": 0,
     "shape": 1,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 1,
     "only-code": 0,
     "order": 0
@@ -35266,7 +32455,7 @@
       "help",
       "inquiry",
       "multi",
-      "panel-close",
+      "panel-open",
       "project",
       "search",
       "snippet",
@@ -35300,39 +32489,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -41618,12 +38774,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
     {
      "kind": "shape",
@@ -41638,39 +38794,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -41681,39 +38804,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -41794,12 +38884,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
     {
      "kind": "shape",
@@ -41814,39 +38904,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -41857,39 +38914,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -41970,12 +38994,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
     {
      "kind": "shape",
@@ -41990,39 +39014,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -42033,39 +39024,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -42146,12 +39104,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 10,
+   "allowed": 9,
    "rows": [
     {
      "kind": "shape",
@@ -42166,39 +39124,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -42209,39 +39134,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -42860,12 +39752,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 11,
    "rows": [
     {
      "kind": "shape",
@@ -42880,39 +39772,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -42923,39 +39782,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -43026,12 +39852,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 11,
    "rows": [
     {
      "kind": "shape",
@@ -43046,39 +39872,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -43089,39 +39882,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -43192,12 +39952,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 11,
    "rows": [
     {
      "kind": "shape",
@@ -43212,39 +39972,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -43255,39 +39982,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -43358,12 +40052,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 12,
+   "allowed": 11,
    "rows": [
     {
      "kind": "shape",
@@ -43378,39 +40072,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -43421,39 +40082,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -44069,12 +40697,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -44089,39 +40717,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -44132,39 +40727,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -44240,12 +40802,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -44260,39 +40822,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -44303,39 +40832,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -44412,12 +40908,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -44432,39 +40928,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -44475,39 +40938,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -44583,12 +41013,12 @@
     "font": 0,
     "color": 0,
     "shape": 0,
-    "icon": 1,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 11,
+   "allowed": 10,
    "rows": [
     {
      "kind": "shape",
@@ -44603,39 +41033,6 @@
      "allowed": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
     },
     {
-     "kind": "icon",
-     "name": "body",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": "셸 전체 아이콘 집합은 하위 요소에서 대조"
-    },
-    {
      "kind": "shape",
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
@@ -44646,39 +41043,6 @@
      "name": "gitlab-sidebar",
      "detail": "안쪽 0 8 8 8→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "icon",
-     "name": "gitlab-sidebar",
-     "figma": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-close",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "code": [
-      "analytics",
-      "catalog",
-      "group",
-      "help",
-      "inquiry",
-      "multi",
-      "panel-open",
-      "project",
-      "search",
-      "snippet",
-      "sparkle",
-      "tag"
-     ],
-     "allowed": null
     },
     {
      "kind": "shape",
@@ -53774,7 +50138,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 951,
       "y": 213,
@@ -54005,7 +50369,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 951,
       "y": 213,
@@ -54238,7 +50602,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 1351,
       "y": 213,
@@ -54471,7 +50835,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 1351,
       "y": 213,
@@ -54704,7 +51068,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 1647,
       "y": 213,
@@ -54937,7 +51301,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 1647,
       "y": 213,
@@ -55174,7 +51538,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 311,
       "y": 205,
@@ -55411,7 +51775,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 311,
       "y": 205,
@@ -55648,7 +52012,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 703,
       "y": 213,
@@ -55885,7 +52249,7 @@
     },
     {
      "kind": "only-figma",
-     "name": "global-search#2",
+     "name": "filter-search",
      "want": {
       "x": 703,
       "y": 213,
@@ -55911,7 +52275,7 @@
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 11,
@@ -56196,16 +52560,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#2",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#3",
      "allowed": null
     }
    ]
@@ -56220,7 +52574,7 @@
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 11,
@@ -56506,16 +52860,6 @@
       "upload"
      ],
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#2",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#3",
-     "allowed": null
     }
    ]
   },
@@ -56529,7 +52873,7 @@
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -56813,16 +53157,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#2",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#3",
      "allowed": null
     }
    ]
@@ -56837,7 +53171,7 @@
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -57122,16 +53456,6 @@
       "upload"
      ],
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#2",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#3",
-     "allowed": null
     }
    ]
   },
@@ -57145,7 +53469,7 @@
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -57429,16 +53753,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#2",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#3",
      "allowed": null
     }
    ]
@@ -57453,7 +53767,7 @@
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 14,
@@ -57738,16 +54052,6 @@
       "upload"
      ],
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#2",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#3",
-     "allowed": null
     }
    ]
   },
@@ -57761,7 +54065,7 @@
     "shape": 3,
     "icon": 3,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -58049,16 +54353,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#2",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#3",
      "allowed": null
     }
    ]
@@ -58073,7 +54367,7 @@
     "shape": 3,
     "icon": 3,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -58362,16 +54656,6 @@
       "upload"
      ],
      "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#2",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#3",
-     "allowed": null
     }
    ]
   },
@@ -58385,7 +54669,7 @@
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -58658,16 +54942,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#2",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#3",
      "allowed": null
     }
    ]
@@ -58682,7 +54956,7 @@
     "shape": 2,
     "icon": 3,
     "only-figma": 0,
-    "only-code": 2,
+    "only-code": 0,
     "order": 0
    },
    "allowed": 12,
@@ -58955,16 +55229,6 @@
       "ellipsis-vertical",
       "upload"
      ],
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#2",
-     "allowed": null
-    },
-    {
-     "kind": "only-code",
-     "name": "diff-file#3",
      "allowed": null
     }
    ]
@@ -66022,13 +62286,13 @@
   "R-11_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -66183,15 +62447,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-tabs",
-     "field": "w",
-     "figma": 834,
-     "code": 133,
-     "diff": -701,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-tabs",
      "figma": [
@@ -66201,14 +62456,21 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 867,
-      "y": 195,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 867,
+     "code": 847,
+     "diff": -20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 195,
+     "code": 201,
+     "diff": 6,
      "allowed": null
     }
    ]
@@ -66216,13 +62478,13 @@
   "R-11_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -66377,15 +62639,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-tabs",
-     "field": "w",
-     "figma": 834,
-     "code": 133,
-     "diff": -701,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-tabs",
      "figma": [
@@ -66395,14 +62648,21 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 867,
-      "y": 195,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 867,
+     "code": 847,
+     "diff": -20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 195,
+     "code": 201,
+     "diff": 6,
      "allowed": null
     }
    ]
@@ -66410,13 +62670,13 @@
   "R-11_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -66578,15 +62838,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-tabs",
-     "field": "w",
-     "figma": 978,
-     "code": 133,
-     "diff": -845,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-tabs",
      "figma": [
@@ -66596,14 +62847,21 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1267,
-      "y": 195,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1267,
+     "code": 1247,
+     "diff": -20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 195,
+     "code": 201,
+     "diff": 6,
      "allowed": null
     }
    ]
@@ -66611,13 +62869,13 @@
   "R-11_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -66779,15 +63037,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-tabs",
-     "field": "w",
-     "figma": 978,
-     "code": 133,
-     "diff": -845,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-tabs",
      "figma": [
@@ -66797,14 +63046,21 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1267,
-      "y": 195,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1267,
+     "code": 1247,
+     "diff": -20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 195,
+     "code": 201,
+     "diff": 6,
      "allowed": null
     }
    ]
@@ -66812,13 +63068,13 @@
   "R-11_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -66980,15 +63236,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-tabs",
-     "field": "w",
-     "figma": 1090,
-     "code": 133,
-     "diff": -957,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-tabs",
      "figma": [
@@ -66998,14 +63245,21 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1563,
-      "y": 195,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1563,
+     "code": 1543,
+     "diff": -20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 195,
+     "code": 201,
+     "diff": 6,
      "allowed": null
     }
    ]
@@ -67013,13 +63267,13 @@
   "R-11_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -67181,15 +63435,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-tabs",
-     "field": "w",
-     "figma": 1090,
-     "code": 133,
-     "diff": -957,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-tabs",
      "figma": [
@@ -67199,14 +63444,21 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1563,
-      "y": 195,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1563,
+     "code": 1543,
+     "diff": -20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 195,
+     "code": 201,
+     "diff": 6,
      "allowed": null
     }
    ]
@@ -67220,7 +63472,7 @@
     "color": 0,
     "shape": 0,
     "icon": 1,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -67390,15 +63642,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-tabs",
-     "field": "w",
-     "figma": 218,
-     "code": 133,
-     "diff": -85,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-tabs",
      "figma": [
@@ -67408,14 +63651,12 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 227,
-      "y": 202,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 227,
+     "code": 316,
+     "diff": 89,
      "allowed": null
     }
    ]
@@ -67429,7 +63670,7 @@
     "color": 0,
     "shape": 0,
     "icon": 1,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -67599,15 +63840,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-tabs",
-     "field": "w",
-     "figma": 218,
-     "code": 133,
-     "diff": -85,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-tabs",
      "figma": [
@@ -67617,14 +63849,12 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 227,
-      "y": 202,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 227,
+     "code": 316,
+     "diff": 89,
      "allowed": null
     }
    ]
@@ -67632,13 +63862,13 @@
   "R-11_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -67799,15 +64029,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-tabs",
-     "field": "w",
-     "figma": 594,
-     "code": 133,
-     "diff": -461,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-tabs",
      "figma": [
@@ -67817,14 +64038,21 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 619,
-      "y": 195,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 619,
+     "code": 599,
+     "diff": -20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 195,
+     "code": 201,
+     "diff": 6,
      "allowed": null
     }
    ]
@@ -67832,13 +64060,13 @@
   "R-11_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 3,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 1,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -67999,15 +64227,6 @@
      "allowed": null
     },
     {
-     "kind": "box",
-     "name": "gl-tabs",
-     "field": "w",
-     "figma": 594,
-     "code": 133,
-     "diff": -461,
-     "allowed": null
-    },
-    {
      "kind": "text",
      "name": "gl-tabs",
      "figma": [
@@ -68017,14 +64236,21 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 619,
-      "y": 195,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 619,
+     "code": 599,
+     "diff": -20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 195,
+     "code": 201,
+     "diff": 6,
      "allowed": null
     }
    ]
@@ -69039,7 +65265,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 9,
@@ -69139,6 +65365,11 @@
      "code": [
       "search"
      ],
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -69153,7 +65384,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 9,
@@ -69254,6 +65485,11 @@
       "search"
      ],
      "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -69267,7 +65503,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 11,
@@ -69381,6 +65617,11 @@
      "figma": 224,
      "code": 213,
      "diff": -11,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -69395,7 +65636,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 11,
@@ -69510,6 +65751,11 @@
      "code": 213,
      "diff": -11,
      "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -69523,7 +65769,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 11,
@@ -69637,6 +65883,11 @@
      "figma": 224,
      "code": 213,
      "diff": -11,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -69651,7 +65902,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 11,
@@ -69766,6 +66017,11 @@
      "code": 213,
      "diff": -11,
      "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -69779,7 +66035,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 10,
@@ -69894,6 +66150,11 @@
      "code": [
       "search"
      ],
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -69908,7 +66169,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 10,
@@ -70024,6 +66285,11 @@
       "search"
      ],
      "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -70037,7 +66303,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 10,
@@ -70143,6 +66409,11 @@
      "code": [
       "search"
      ],
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -70157,7 +66428,7 @@
     "shape": 0,
     "icon": 1,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 10,
@@ -70264,6 +66535,11 @@
       "search"
      ],
      "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -70277,7 +66553,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 10,
@@ -70332,8 +66608,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 900,
-     "diff": 535,
+     "code": 892,
+     "diff": 527,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70353,8 +66629,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1044,
-     "diff": 363,
+     "code": 1036,
+     "diff": 355,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70368,8 +66644,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 309,
-     "code": 737,
-     "diff": 428,
+     "code": 725,
+     "diff": 416,
      "allowed": null
     },
     {
@@ -70379,6 +66655,11 @@
      "figma": 49,
      "code": 47,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -70398,7 +66679,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 10,
@@ -70453,8 +66734,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 900,
-     "diff": 471,
+     "code": 892,
+     "diff": 463,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70474,8 +66755,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1044,
-     "diff": 363,
+     "code": 1036,
+     "diff": 355,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70489,8 +66770,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 309,
-     "code": 737,
-     "diff": 428,
+     "code": 725,
+     "diff": 416,
      "allowed": null
     },
     {
@@ -70500,6 +66781,11 @@
      "figma": 49,
      "code": 47,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -70519,7 +66805,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 12,
@@ -70580,8 +66866,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 900,
-     "diff": 535,
+     "code": 892,
+     "diff": 527,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70601,8 +66887,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1044,
-     "diff": 363,
+     "code": 1036,
+     "diff": 355,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70616,8 +66902,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 381,
-     "code": 881,
-     "diff": 500,
+     "code": 869,
+     "diff": 488,
      "allowed": null
     },
     {
@@ -70627,6 +66913,11 @@
      "figma": 49,
      "code": 47,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -70646,7 +66937,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 12,
@@ -70707,8 +66998,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 900,
-     "diff": 471,
+     "code": 892,
+     "diff": 463,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70728,8 +67019,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1044,
-     "diff": 363,
+     "code": 1036,
+     "diff": 355,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70743,8 +67034,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 381,
-     "code": 881,
-     "diff": 500,
+     "code": 869,
+     "diff": 488,
      "allowed": null
     },
     {
@@ -70754,6 +67045,11 @@
      "figma": 49,
      "code": 47,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -70773,7 +67069,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 12,
@@ -70834,8 +67130,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 900,
-     "diff": 535,
+     "code": 892,
+     "diff": 527,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70855,8 +67151,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1044,
-     "diff": 363,
+     "code": 1036,
+     "diff": 355,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70870,8 +67166,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 437,
-     "code": 993,
-     "diff": 556,
+     "code": 981,
+     "diff": 544,
      "allowed": null
     },
     {
@@ -70881,6 +67177,11 @@
      "figma": 49,
      "code": 47,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -70900,7 +67201,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 12,
@@ -70961,8 +67262,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 900,
-     "diff": 471,
+     "code": 892,
+     "diff": 463,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -70982,8 +67283,8 @@
      "name": "footer",
      "field": "y",
      "figma": 681,
-     "code": 1044,
-     "diff": 363,
+     "code": 1036,
+     "diff": 355,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -70997,8 +67298,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 437,
-     "code": 993,
-     "diff": 556,
+     "code": 981,
+     "diff": 544,
      "allowed": null
     },
     {
@@ -71008,6 +67309,11 @@
      "figma": 49,
      "code": 47,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -71027,7 +67333,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 11,
@@ -71088,8 +67394,8 @@
      "name": "main",
      "field": "h",
      "figma": 681,
-     "code": 920,
-     "diff": 239,
+     "code": 912,
+     "diff": 231,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -71109,8 +67415,8 @@
      "name": "footer",
      "field": "y",
      "figma": 843,
-     "code": 1064,
-     "diff": 221,
+     "code": 1056,
+     "diff": 213,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -71124,8 +67430,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 1,
-     "code": 121,
-     "diff": 120,
+     "code": 109,
+     "diff": 108,
      "allowed": null
     },
     {
@@ -71135,6 +67441,11 @@
      "figma": 49,
      "code": 47,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -71154,7 +67465,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 11,
@@ -71215,8 +67526,8 @@
      "name": "main",
      "field": "h",
      "figma": 681,
-     "code": 920,
-     "diff": 239,
+     "code": 912,
+     "diff": 231,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -71236,8 +67547,8 @@
      "name": "footer",
      "field": "y",
      "figma": 843,
-     "code": 1064,
-     "diff": 221,
+     "code": 1056,
+     "diff": 213,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -71251,8 +67562,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 1,
-     "code": 121,
-     "diff": 120,
+     "code": 109,
+     "diff": 108,
      "allowed": null
     },
     {
@@ -71262,6 +67573,11 @@
      "figma": 49,
      "code": 47,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -71281,7 +67597,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 11,
@@ -71342,8 +67658,8 @@
      "name": "main",
      "field": "h",
      "figma": 365,
-     "code": 900,
-     "diff": 535,
+     "code": 892,
+     "diff": 527,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -71363,8 +67679,8 @@
      "name": "footer",
      "field": "y",
      "figma": 527,
-     "code": 1044,
-     "diff": 517,
+     "code": 1036,
+     "diff": 509,
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
@@ -71378,8 +67694,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 189,
-     "code": 497,
-     "diff": 308,
+     "code": 485,
+     "diff": 296,
      "allowed": null
     },
     {
@@ -71389,6 +67705,11 @@
      "figma": 49,
      "code": 47,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -71408,7 +67729,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 11,
@@ -71469,8 +67790,8 @@
      "name": "main",
      "field": "h",
      "figma": 429,
-     "code": 900,
-     "diff": 471,
+     "code": 892,
+     "diff": 463,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -71490,8 +67811,8 @@
      "name": "footer",
      "field": "y",
      "figma": 591,
-     "code": 1044,
-     "diff": 453,
+     "code": 1036,
+     "diff": 445,
      "allowed": "바닥글 y는 본문 길이 결과"
     },
     {
@@ -71505,8 +67826,8 @@
      "name": "gl-tabs",
      "field": "w",
      "figma": 189,
-     "code": 497,
-     "diff": 308,
+     "code": 485,
+     "diff": 296,
      "allowed": null
     },
     {
@@ -71516,6 +67837,11 @@
      "figma": 49,
      "code": 47,
      "diff": -2,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -72386,13 +68712,13 @@
   "R-16_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -72528,14 +68854,12 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 778,
-      "y": 187,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 185,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -72548,13 +68872,13 @@
   "R-16_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -72690,14 +69014,12 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 778,
-      "y": 187,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 185,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -72710,13 +69032,13 @@
   "R-16_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -72861,14 +69183,12 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1178,
-      "y": 187,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 185,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -72881,13 +69201,13 @@
   "R-16_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -73032,14 +69352,12 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1178,
-      "y": 187,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 185,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -73052,13 +69370,13 @@
   "R-16_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -73203,14 +69521,12 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1474,
-      "y": 187,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 185,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -73223,13 +69539,13 @@
   "R-16_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -73374,14 +69690,12 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1474,
-      "y": 187,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 185,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -73394,13 +69708,13 @@
   "R-16_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -73569,14 +69883,21 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 138,
-      "y": 227,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 138,
+     "code": 287,
+     "diff": 149,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 227,
+     "code": 233,
+     "diff": 6,
      "allowed": null
     },
     {
@@ -73589,13 +69910,13 @@
   "R-16_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 3,
+    "box": 5,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -73764,14 +70085,21 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 138,
-      "y": 227,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 138,
+     "code": 287,
+     "diff": 149,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 227,
+     "code": 233,
+     "diff": 6,
      "allowed": null
     },
     {
@@ -73784,13 +70112,13 @@
   "R-16_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -73932,14 +70260,12 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 530,
-      "y": 187,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 185,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -73952,13 +70278,13 @@
   "R-16_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 0,
+    "box": 1,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -74100,14 +70426,12 @@
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 530,
-      "y": 187,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 187,
+     "code": 185,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -74186,8 +70510,8 @@
      "name": "main",
      "field": "h",
      "figma": 1001,
-     "code": 896,
-     "diff": -105,
+     "code": 888,
+     "diff": -113,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -74337,8 +70661,8 @@
      "name": "main",
      "field": "h",
      "figma": 1107,
-     "code": 896,
-     "diff": -211,
+     "code": 888,
+     "diff": -219,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -74483,8 +70807,8 @@
      "name": "main",
      "field": "h",
      "figma": 971,
-     "code": 852,
-     "diff": -119,
+     "code": 844,
+     "diff": -127,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -74647,8 +70971,8 @@
      "name": "main",
      "field": "h",
      "figma": 1077,
-     "code": 852,
-     "diff": -225,
+     "code": 844,
+     "diff": -233,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -74793,8 +71117,8 @@
      "name": "main",
      "field": "h",
      "figma": 971,
-     "code": 830,
-     "diff": -141,
+     "code": 822,
+     "diff": -149,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -74957,8 +71281,8 @@
      "name": "main",
      "field": "h",
      "figma": 1077,
-     "code": 830,
-     "diff": -247,
+     "code": 822,
+     "diff": -255,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75123,8 +71447,8 @@
      "name": "main",
      "field": "h",
      "figma": 1359,
-     "code": 1670,
-     "diff": 311,
+     "code": 1662,
+     "diff": 303,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75146,8 +71470,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1521,
-     "code": 1814,
-     "diff": 293,
+     "code": 1806,
+     "diff": 285,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -75307,8 +71631,8 @@
      "name": "main",
      "field": "h",
      "figma": 1465,
-     "code": 1670,
-     "diff": 205,
+     "code": 1662,
+     "diff": 197,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75330,8 +71654,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1627,
-     "code": 1814,
-     "diff": 187,
+     "code": 1806,
+     "diff": 179,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -75491,8 +71815,8 @@
      "name": "main",
      "field": "h",
      "figma": 1053,
-     "code": 1522,
-     "diff": 469,
+     "code": 1514,
+     "diff": 461,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75514,8 +71838,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1215,
-     "code": 1666,
-     "diff": 451,
+     "code": 1658,
+     "diff": 443,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -75657,8 +71981,8 @@
      "name": "main",
      "field": "h",
      "figma": 1159,
-     "code": 1522,
-     "diff": 363,
+     "code": 1514,
+     "diff": 355,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -75680,8 +72004,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1321,
-     "code": 1666,
-     "diff": 345,
+     "code": 1658,
+     "diff": 337,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -75740,7 +72064,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 6,
@@ -75792,6 +72116,11 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -75805,7 +72134,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 6,
@@ -75857,6 +72186,11 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -75870,7 +72204,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 9,
@@ -75948,6 +72282,11 @@
      "figma": 224,
      "code": 213,
      "diff": -11,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -75962,7 +72301,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 9,
@@ -76041,6 +72380,11 @@
      "code": 213,
      "diff": -11,
      "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -76054,7 +72398,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 9,
@@ -76132,6 +72476,11 @@
      "figma": 224,
      "code": 213,
      "diff": -11,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -76146,7 +72495,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 9,
@@ -76225,6 +72574,11 @@
      "code": 213,
      "diff": -11,
      "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -76238,7 +72592,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 8,
@@ -76313,6 +72667,11 @@
      "figma": 79,
      "code": 105,
      "diff": 26,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -76327,7 +72686,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 8,
@@ -76403,6 +72762,11 @@
      "code": 105,
      "diff": 26,
      "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -76416,7 +72780,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 7,
@@ -76474,6 +72838,11 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -76487,7 +72856,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 7,
@@ -76545,6 +72914,11 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     }
    ]
   },
@@ -76553,12 +72927,12 @@
    "counts": {
     "box": 1,
     "text": 0,
-    "font": 1,
+    "font": 0,
     "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 6,
@@ -76589,8 +72963,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 647,
-     "diff": 38,
+     "code": 639,
+     "diff": 30,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76598,8 +72972,8 @@
      "name": "footer",
      "field": "y",
      "figma": 771,
-     "code": 791,
-     "diff": 20,
+     "code": 783,
+     "diff": 12,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -76613,14 +72987,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 176,
-     "diff": 6,
-     "allowed": null
-    },
-    {
-     "kind": "font",
-     "name": "gl-filter",
-     "detail": "크기 15→13, 줄 높이 22→20",
+     "code": 168,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -76629,6 +72997,11 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -76638,12 +73011,12 @@
    "counts": {
     "box": 1,
     "text": 0,
-    "font": 1,
+    "font": 0,
     "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 6,
@@ -76674,8 +73047,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 647,
-     "diff": 38,
+     "code": 639,
+     "diff": 30,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76683,8 +73056,8 @@
      "name": "footer",
      "field": "y",
      "figma": 771,
-     "code": 791,
-     "diff": 20,
+     "code": 783,
+     "diff": 12,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -76698,14 +73071,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 176,
-     "diff": 6,
-     "allowed": null
-    },
-    {
-     "kind": "font",
-     "name": "gl-filter",
-     "detail": "크기 15→13, 줄 높이 22→20",
+     "code": 168,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -76714,6 +73081,11 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -76723,12 +73095,12 @@
    "counts": {
     "box": 1,
     "text": 0,
-    "font": 1,
+    "font": 0,
     "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 8,
@@ -76777,8 +73149,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 603,
-     "diff": -6,
+     "code": 595,
+     "diff": -14,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76792,14 +73164,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 176,
-     "diff": 6,
-     "allowed": null
-    },
-    {
-     "kind": "font",
-     "name": "gl-filter",
-     "detail": "크기 15→13, 줄 높이 22→20",
+     "code": 168,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -76808,6 +73174,11 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -76817,12 +73188,12 @@
    "counts": {
     "box": 1,
     "text": 0,
-    "font": 1,
+    "font": 0,
     "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 8,
@@ -76871,8 +73242,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 603,
-     "diff": -6,
+     "code": 595,
+     "diff": -14,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76886,14 +73257,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 176,
-     "diff": 6,
-     "allowed": null
-    },
-    {
-     "kind": "font",
-     "name": "gl-filter",
-     "detail": "크기 15→13, 줄 높이 22→20",
+     "code": 168,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -76902,6 +73267,11 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -76911,12 +73281,12 @@
    "counts": {
     "box": 1,
     "text": 0,
-    "font": 1,
+    "font": 0,
     "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 8,
@@ -76965,8 +73335,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 603,
-     "diff": -6,
+     "code": 595,
+     "diff": -14,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -76980,14 +73350,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 176,
-     "diff": 6,
-     "allowed": null
-    },
-    {
-     "kind": "font",
-     "name": "gl-filter",
-     "detail": "크기 15→13, 줄 높이 22→20",
+     "code": 168,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -76996,6 +73360,11 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -77005,12 +73374,12 @@
    "counts": {
     "box": 1,
     "text": 0,
-    "font": 1,
+    "font": 0,
     "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 8,
@@ -77059,8 +73428,8 @@
      "name": "main",
      "field": "h",
      "figma": 609,
-     "code": 603,
-     "diff": -6,
+     "code": 595,
+     "diff": -14,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -77074,14 +73443,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 176,
-     "diff": 6,
-     "allowed": null
-    },
-    {
-     "kind": "font",
-     "name": "gl-filter",
-     "detail": "크기 15→13, 줄 높이 22→20",
+     "code": 168,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -77090,6 +73453,11 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -77099,12 +73467,12 @@
    "counts": {
     "box": 1,
     "text": 0,
-    "font": 1,
+    "font": 0,
     "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 9,
@@ -77159,8 +73527,8 @@
      "name": "main",
      "field": "h",
      "figma": 1225,
-     "code": 980,
-     "diff": -245,
+     "code": 972,
+     "diff": -253,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -77168,8 +73536,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1387,
-     "code": 1124,
-     "diff": -263,
+     "code": 1116,
+     "diff": -271,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -77183,14 +73551,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 176,
-     "diff": 6,
-     "allowed": null
-    },
-    {
-     "kind": "font",
-     "name": "gl-filter",
-     "detail": "크기 15→13, 줄 높이 22→20",
+     "code": 168,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -77199,6 +73561,11 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -77208,12 +73575,12 @@
    "counts": {
     "box": 1,
     "text": 0,
-    "font": 1,
+    "font": 0,
     "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 9,
@@ -77268,8 +73635,8 @@
      "name": "main",
      "field": "h",
      "figma": 1225,
-     "code": 980,
-     "diff": -245,
+     "code": 972,
+     "diff": -253,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -77277,8 +73644,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1387,
-     "code": 1124,
-     "diff": -263,
+     "code": 1116,
+     "diff": -271,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -77292,14 +73659,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 176,
-     "diff": 6,
-     "allowed": null
-    },
-    {
-     "kind": "font",
-     "name": "gl-filter",
-     "detail": "크기 15→13, 줄 높이 22→20",
+     "code": 168,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -77308,6 +73669,11 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -77317,12 +73683,12 @@
    "counts": {
     "box": 1,
     "text": 0,
-    "font": 1,
+    "font": 0,
     "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 7,
@@ -77359,8 +73725,8 @@
      "name": "main",
      "field": "h",
      "figma": 741,
-     "code": 778,
-     "diff": 37,
+     "code": 770,
+     "diff": 29,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -77368,8 +73734,8 @@
      "name": "footer",
      "field": "y",
      "figma": 903,
-     "code": 922,
-     "diff": 19,
+     "code": 914,
+     "diff": 11,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -77383,14 +73749,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 176,
-     "diff": 6,
-     "allowed": null
-    },
-    {
-     "kind": "font",
-     "name": "gl-filter",
-     "detail": "크기 15→13, 줄 높이 22→20",
+     "code": 168,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -77399,6 +73759,11 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -77408,12 +73773,12 @@
    "counts": {
     "box": 1,
     "text": 0,
-    "font": 1,
+    "font": 0,
     "color": 1,
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 7,
@@ -77450,8 +73815,8 @@
      "name": "main",
      "field": "h",
      "figma": 741,
-     "code": 778,
-     "diff": 37,
+     "code": 770,
+     "diff": 29,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -77459,8 +73824,8 @@
      "name": "footer",
      "field": "y",
      "figma": 903,
-     "code": 922,
-     "diff": 19,
+     "code": 914,
+     "diff": 11,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -77474,14 +73839,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 170,
-     "code": 176,
-     "diff": 6,
-     "allowed": null
-    },
-    {
-     "kind": "font",
-     "name": "gl-filter",
-     "detail": "크기 15→13, 줄 높이 22→20",
+     "code": 168,
+     "diff": -2,
      "allowed": null
     },
     {
@@ -77490,6 +73849,11 @@
      "field": "text",
      "figma": "#cdd1d5 color/text/subtle",
      "code": "#f4f5f6 gray-5",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     }
    ]
@@ -77504,7 +73868,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 10,
@@ -77601,6 +73965,11 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     },
     {
      "kind": "only-code",
@@ -77619,7 +73988,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 10,
@@ -77719,6 +74088,11 @@
     },
     {
      "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
@@ -77734,7 +74108,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 12,
@@ -77833,6 +74207,11 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     },
     {
      "kind": "only-code",
@@ -77851,7 +74230,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 12,
@@ -77953,6 +74332,11 @@
     },
     {
      "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
@@ -77968,7 +74352,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 12,
@@ -78067,6 +74451,11 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     },
     {
      "kind": "only-code",
@@ -78085,7 +74474,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 12,
@@ -78187,6 +74576,11 @@
     },
     {
      "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
@@ -78202,20 +74596,11 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
-   "allowed": 14,
+   "allowed": 12,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 816,
-     "code": 824,
-     "diff": 8,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
@@ -78237,15 +74622,6 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 816,
-     "code": 824,
-     "diff": 8,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -78340,6 +74716,11 @@
      "figma": 65,
      "code": 105,
      "diff": 40,
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
      "allowed": null
     },
     {
@@ -78359,20 +74740,11 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
-   "allowed": 14,
+   "allowed": 12,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 816,
-     "code": 824,
-     "diff": 8,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
@@ -78394,15 +74766,6 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 816,
-     "code": 824,
-     "diff": 8,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -78501,6 +74864,11 @@
     },
     {
      "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
@@ -78516,7 +74884,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 11,
@@ -78622,6 +74990,11 @@
     },
     {
      "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
+    },
+    {
+     "kind": "only-code",
      "name": "section-title",
      "allowed": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
     }
@@ -78637,7 +75010,7 @@
     "shape": 0,
     "icon": 0,
     "only-figma": 0,
-    "only-code": 0,
+    "only-code": 1,
     "order": 0
    },
    "allowed": 11,
@@ -78740,6 +75113,11 @@
      "name": "footer",
      "detail": "안쪽 24 0 24 0→0 0 0 0",
      "allowed": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+    },
+    {
+     "kind": "only-code",
+     "name": "filter-search",
+     "allowed": null
     },
     {
      "kind": "only-code",
@@ -80286,13 +76664,13 @@
   "R-23_1024_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 4,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -80364,8 +76742,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 359,
-     "diff": -20,
+     "code": 351,
+     "diff": -28,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -80408,19 +76786,26 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 276,
-     "diff": 4,
+     "code": 268,
+     "diff": -4,
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 809,
-      "y": 289,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 809,
+     "code": 827,
+     "diff": 18,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 289,
+     "code": 284,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -80433,13 +76818,13 @@
   "R-23_1024_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 4,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -80511,8 +76896,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 359,
-     "diff": -20,
+     "code": 351,
+     "diff": -28,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -80573,19 +76958,26 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 276,
-     "diff": 4,
+     "code": 268,
+     "diff": -4,
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 809,
-      "y": 289,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 809,
+     "code": 827,
+     "diff": 18,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 289,
+     "code": 284,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -80598,13 +76990,13 @@
   "R-23_1440_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 4,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -80674,8 +77066,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 359,
-     "diff": -20,
+     "code": 351,
+     "diff": -28,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -80718,19 +77110,26 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 276,
-     "diff": 4,
+     "code": 268,
+     "diff": -4,
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1209,
-      "y": 289,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1209,
+     "code": 1227,
+     "diff": 18,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 289,
+     "code": 284,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -80743,13 +77142,13 @@
   "R-23_1440_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 4,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -80819,8 +77218,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 359,
-     "diff": -20,
+     "code": 351,
+     "diff": -28,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -80881,19 +77280,26 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 276,
-     "diff": 4,
+     "code": 268,
+     "diff": -4,
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1209,
-      "y": 289,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1209,
+     "code": 1227,
+     "diff": 18,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 289,
+     "code": 284,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -80906,13 +77312,13 @@
   "R-23_1920_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 4,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -80982,8 +77388,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 337,
-     "diff": -42,
+     "code": 329,
+     "diff": -50,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -81026,19 +77432,26 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 276,
-     "diff": 4,
+     "code": 268,
+     "diff": -4,
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1505,
-      "y": 289,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1505,
+     "code": 1523,
+     "diff": 18,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 289,
+     "code": 284,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -81051,13 +77464,13 @@
   "R-23_1920_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 4,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -81127,8 +77540,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 337,
-     "diff": -42,
+     "code": 329,
+     "diff": -50,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -81189,19 +77602,26 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 276,
-     "diff": 4,
+     "code": 268,
+     "diff": -4,
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 1505,
-      "y": 289,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 1505,
+     "code": 1523,
+     "diff": 18,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 289,
+     "code": 284,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -81214,27 +77634,18 @@
   "R-23_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 0,
     "font": 1,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 10,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1003,
-     "code": 1011,
-     "diff": 8,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
@@ -81260,15 +77671,6 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1003,
-     "code": 1011,
-     "diff": 8,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -81316,8 +77718,8 @@
      "name": "main",
      "field": "h",
      "figma": 610,
-     "code": 473,
-     "diff": -137,
+     "code": 465,
+     "diff": -145,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -81339,15 +77741,6 @@
       "sort-desc"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 772,
-     "code": 781,
-     "diff": 9,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -81384,8 +77777,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 286,
-     "code": 296,
-     "diff": 10,
+     "code": 288,
+     "diff": 2,
      "allowed": null
     },
     {
@@ -81398,14 +77791,12 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 226,
-      "y": 303,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 226,
+     "code": 287,
+     "diff": 61,
      "allowed": null
     },
     {
@@ -81418,27 +77809,18 @@
   "R-23_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 4,
+    "box": 5,
     "text": 0,
     "font": 1,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 13,
+   "allowed": 10,
    "rows": [
-    {
-     "kind": "box",
-     "name": "body",
-     "field": "h",
-     "figma": 1003,
-     "code": 1011,
-     "diff": 8,
-     "allowed": "판 안 스크롤: 셸 높이 = 화면 높이"
-    },
     {
      "kind": "icon",
      "name": "body",
@@ -81464,15 +77846,6 @@
      "name": "topbar",
      "detail": "안쪽 0 16 0 16→0 0 0 0",
      "allowed": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
-    },
-    {
-     "kind": "box",
-     "name": "content-panel",
-     "field": "h",
-     "figma": 1003,
-     "code": 1011,
-     "diff": 8,
-     "allowed": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
     },
     {
      "kind": "shape",
@@ -81520,8 +77893,8 @@
      "name": "main",
      "field": "h",
      "figma": 610,
-     "code": 473,
-     "diff": -137,
+     "code": 465,
+     "diff": -145,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -81543,15 +77916,6 @@
       "sort-desc"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
-    },
-    {
-     "kind": "box",
-     "name": "footer",
-     "field": "y",
-     "figma": 772,
-     "code": 781,
-     "diff": 9,
-     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -81588,8 +77952,8 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 286,
-     "code": 296,
-     "diff": 10,
+     "code": 288,
+     "diff": 2,
      "allowed": null
     },
     {
@@ -81602,14 +77966,12 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 226,
-      "y": 303,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 226,
+     "code": 287,
+     "diff": 61,
      "allowed": null
     },
     {
@@ -81622,13 +77984,13 @@
   "R-23_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 4,
     "text": 0,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -81706,8 +78068,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 381,
-     "diff": 2,
+     "code": 373,
+     "diff": -6,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -81750,19 +78112,26 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 276,
-     "diff": 4,
+     "code": 268,
+     "diff": -4,
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 561,
-      "y": 289,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 561,
+     "code": 579,
+     "diff": 18,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 289,
+     "code": 284,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -81775,13 +78144,13 @@
   "R-23_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 2,
+    "box": 4,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 0,
     "icon": 0,
-    "only-figma": 1,
+    "only-figma": 0,
     "only-code": 0,
     "order": 0
    },
@@ -81859,8 +78228,8 @@
      "name": "main",
      "field": "h",
      "figma": 379,
-     "code": 381,
-     "diff": 2,
+     "code": 373,
+     "diff": -6,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -81921,19 +78290,26 @@
      "name": "gl-filter",
      "field": "y",
      "figma": 272,
-     "code": 276,
-     "diff": 4,
+     "code": 268,
+     "diff": -4,
      "allowed": null
     },
     {
-     "kind": "only-figma",
-     "name": "global-search#2",
-     "want": {
-      "x": 561,
-      "y": 289,
-      "w": 32,
-      "h": 32
-     },
+     "kind": "box",
+     "name": "filter-search",
+     "field": "x",
+     "figma": 561,
+     "code": 579,
+     "diff": 18,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "filter-search",
+     "field": "y",
+     "figma": 289,
+     "code": 284,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -82028,8 +78404,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10686,
-     "diff": 9360,
+     "code": 10678,
+     "diff": 9352,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -82050,8 +78426,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10830,
-     "diff": 9342,
+     "code": 10822,
+     "diff": 9334,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -82147,8 +78523,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10686,
-     "diff": 9360,
+     "code": 10678,
+     "diff": 9352,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -82169,8 +78545,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10830,
-     "diff": 9342,
+     "code": 10822,
+     "diff": 9334,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -82280,8 +78656,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10686,
-     "diff": 9360,
+     "code": 10678,
+     "diff": 9352,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -82302,8 +78678,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10830,
-     "diff": 9342,
+     "code": 10822,
+     "diff": 9334,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -82413,8 +78789,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10686,
-     "diff": 9360,
+     "code": 10678,
+     "diff": 9352,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -82435,8 +78811,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10830,
-     "diff": 9342,
+     "code": 10822,
+     "diff": 9334,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -82546,8 +78922,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10686,
-     "diff": 9360,
+     "code": 10678,
+     "diff": 9352,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -82568,8 +78944,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10830,
-     "diff": 9342,
+     "code": 10822,
+     "diff": 9334,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -82679,8 +79055,8 @@
      "name": "main",
      "field": "h",
      "figma": 1326,
-     "code": 10686,
-     "diff": 9360,
+     "code": 10678,
+     "diff": 9352,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -82701,8 +79077,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1488,
-     "code": 10830,
-     "diff": 9342,
+     "code": 10822,
+     "diff": 9334,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -82804,8 +79180,8 @@
      "name": "main",
      "field": "h",
      "figma": 1912,
-     "code": 13326,
-     "diff": 11414,
+     "code": 13318,
+     "diff": 11406,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -82826,8 +79202,8 @@
      "name": "footer",
      "field": "y",
      "figma": 2074,
-     "code": 13470,
-     "diff": 11396,
+     "code": 13462,
+     "diff": 11388,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -82938,8 +79314,8 @@
      "name": "main",
      "field": "h",
      "figma": 1912,
-     "code": 13326,
-     "diff": 11414,
+     "code": 13318,
+     "diff": 11406,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -82960,8 +79336,8 @@
      "name": "footer",
      "field": "y",
      "figma": 2074,
-     "code": 13470,
-     "diff": 11396,
+     "code": 13462,
+     "diff": 11388,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -83072,8 +79448,8 @@
      "name": "main",
      "field": "h",
      "figma": 1374,
-     "code": 10884,
-     "diff": 9510,
+     "code": 10876,
+     "diff": 9502,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -83094,8 +79470,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1536,
-     "code": 11028,
-     "diff": 9492,
+     "code": 11020,
+     "diff": 9484,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -83206,8 +79582,8 @@
      "name": "main",
      "field": "h",
      "figma": 1374,
-     "code": 10884,
-     "diff": 9510,
+     "code": 10876,
+     "diff": 9502,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -83228,8 +79604,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1536,
-     "code": 11028,
-     "diff": 9492,
+     "code": 11020,
+     "diff": 9484,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {

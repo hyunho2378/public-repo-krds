@@ -10,6 +10,7 @@ import { EmptyState, Status } from '../components/Feedback/Status';
 import { u } from '../copy/ui';
 import { matchTitle } from '../components/Code/ListTools';
 import { Drop } from '../components/Code/Drop';
+import { FilterSearch } from './parts/FilterSearch';
 import { Icon } from '../components/Code/Icon';
 import { mr, au, p1 } from '../copy/work';
 import { gql, Q } from './parts/glGraphql';
@@ -85,7 +86,7 @@ export function MergeRequests() {
           <div className="gl-work-bar" role="search">
             <HistoryButton label={mr.recent} onClick={() => setQuery('')} />
             <input type="search" value={query} placeholder={mr.search} aria-label={mr.searchLabel} onChange={(e) => setQuery(e.target.value)} onFocus={() => setSuggest(true)} onBlur={() => setTimeout(() => setSuggest(false), 150)} />
-            <Icon name="search" />
+            <FilterSearch label={u.List_searchLabel} />
             {suggest && !query ? (
             <ul className="gl-token-list" role="listbox" aria-label={mr.searchLabel}>
               {p1.tokenSuggest.map((k) => <li key={k} role="option" aria-selected="false"><button type="button" onMouseDown={(e) => { e.preventDefault(); setQuery(k === p1.tokenSuggest[7] ? '' : `${k}: `); }}>{k}</button></li>)}

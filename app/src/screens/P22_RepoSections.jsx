@@ -4,6 +4,7 @@
 import { newWindow } from '../components/Layout/newWindow';
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { FilterSearch } from './parts/FilterSearch';
 import { Icon } from '../components/Code/Icon';
 import { t } from '../copy/ko';
 import { gitlab } from '../api/client';
@@ -41,7 +42,7 @@ function MembersView({ list }) {
         <div className="gl-work-bar" role="search">
           <HistoryButton label={rp.recent} onClick={() => setQ('')} />
           <input type="search" value={q} placeholder={rp.filterMembers} aria-label={rp.filterMembers} onChange={(e) => setQ(e.target.value)} />
-          <Icon name="search" />
+          <FilterSearch label={u.List_searchLabel} />
         </div>
         <span className="krds-btn small tertiary">{rp.sortAccount}</span>
         <IconButton icon="ext/sort-desc" label={rp.desc} />
@@ -75,7 +76,7 @@ function BoardView({ list }) {
         <span className="krds-btn small tertiary">{list.boards[0]?.name || 'Development'}</span>
         <div className="gl-work-bar" role="search">
           <input type="search" value={q} placeholder={rp.search} aria-label={rp.search} onChange={(e) => setQ(e.target.value)} />
-          <Icon name="search" />
+          <FilterSearch label={u.List_searchLabel} />
         </div>
       </div>
       <div className="gl-board">
@@ -113,7 +114,7 @@ function LabelsView({ list, id }) {
         <button type="button" className={'gl-tab' + (arch ? ' active' : '')} onClick={() => setArch(true)}>{rp.tabArchived}</button>
         </span>
         <span className="gl-tools">
-          <span className="gl-work-bar"><input type="search" value={q} placeholder={rp.search} aria-label={rp.search} onChange={(e) => setQ(e.target.value)} /><Icon name="search" /></span>
+          <span className="gl-work-bar"><input type="search" value={q} placeholder={rp.search} aria-label={rp.search} onChange={(e) => setQ(e.target.value)} /><FilterSearch label={u.List_searchLabel} /></span>
         </span>
       </div>
       <section className="gl-box">
@@ -135,7 +136,7 @@ function PageSearch({ value, onChange, placeholder, children }) {
     <div className="gl-work-filter" data-figma="gl-filter">
       <div className="gl-work-bar" role="search">
         <input type="search" value={value} placeholder={placeholder} aria-label={placeholder} onChange={(e) => onChange(e.target.value)} />
-        <Icon name="search" />
+        <FilterSearch label={u.List_searchLabel} />
       </div>
       {children}
     </div>

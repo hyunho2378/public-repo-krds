@@ -227,3 +227,4 @@
   - 58 3 {'D21': 58} ('box', 'project-row', 'y') A-01_1024_Guest {'field': 'y', 'figma': 577, 'code': 202, 'diff': -375}
   - 54 6 {'D21': 30, 'C1': 10, 'C2': 14} ('text', 'page-head') G-06_1024_Guest {'figma': ['내 작업'], 'code': '내 프로젝트'}
   - 54 4 {'D21': 54} ('box', 'login-field', 'y') G-08b_1024_Guest {'field': 'y', 'figma': 158, 'code': 134, 'diff': -24}
+- [C2] 원장 7차: 탭 부품 통일(간격 0, 선색 divider, 하단 마진 0), 토큰 글자 15(실제 14, KRDS 15), 필터 검색 단추 filter-search 이름표(P19/20/22/30). R-19 필터 글자 실제: 14px, 색 rgb(236,236,239)=기본 글자색. 같은 조건(전환 끄기, 900ms)
