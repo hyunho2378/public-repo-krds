@@ -1,4 +1,4 @@
-// 사이드바 회귀 검사: 대표 경로를 1280/1440/1920(펼침), 1440(접음), 360/768(서랍)에서 열어 sidebar-inspect.js로 명세(sidebar-spec.json)와 1px 이내인지 본다.
+// 사이드바 회귀 검사: 대표 경로를 1280/1440/1920(펼침), 1440(접음), 360/768/1024(서랍, 1200 미만)에서 열어 sidebar-inspect.js로 명세(sidebar-spec.json)와 1px 이내인지 본다.
 // 실행: 앱을 켠 뒤 node scripts/check-sidebar.mjs (playwright 필요, BASE 환경변수로 주소). 정적 검사(토큰 값)는 audit-sidebar-tokens.mjs가 audit:code에서 돈다
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -25,7 +25,7 @@ const drawer = async function 서랍(page) { await page.click('.rb-gbar-navtoggl
 for (const p of ['/', '/projects/150?fixture=kordoc']) {
   for (const w of [1280, 1440, 1920]) await run(p, w);
   await run(p, 1440, collapse);
-  for (const w of [360, 768]) await run(p, w, w < 768 ? drawer : null);
+  for (const w of [360, 768, 1024]) await run(p, w, drawer);
 }
 await browser.close();
 console.log(`사이드바 검사: 어긋난 경우 ${fails}`);

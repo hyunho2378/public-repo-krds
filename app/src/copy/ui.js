@@ -13,6 +13,7 @@ export const u = {
   Tree_toggle: "파일 트리",
   More_menu: "더보기",
   Hdr_signup: "등록",
+  Hdr_menu: "메뉴",
   Hdr_settings: "화면 설정",
   Alert_note: "참고",
   Alert_tip: "팁",
@@ -219,6 +220,8 @@ export const u = {
   Q_in: (q) => `다음 위치에서 '${q}' 검색…`,
   Q_all: "전체",
   Q_projects: "프로젝트",
+  Q_placeholder: "검색하려면 입력",
+  Q_place: "장소",
   Q_hint: "검색어 입력 후 Enter",
   // 탐색 > 주제, 스니펫(공공 깃랩 41, 42)
   T_title: "주제 둘러보기 · AI 정부 실험실 공공 저장소",

@@ -8,7 +8,8 @@
   "separator": { "gap": 12 },
   "foot": { "helpFromBottom": 68, "collapseFromBottom": 36 },
   "rail": { "itemX": 8, "item": 28, "iconX": 14, "firstItemDy": 8 },
-  "drawer": { "360": 288, "768": 320 },
+  "drawer": { "360": 288, "768": 320, "1024": 320 },
+  "drawerBelow": 1200,
   "colors": { "bg": "rgb(0, 0, 0)", "current": "rgb(30, 33, 36)", "text": "rgb(205, 209, 213)" },
   "tolerance": 1
 }

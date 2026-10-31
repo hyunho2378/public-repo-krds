@@ -1,7 +1,7 @@
 // D-08 전역 틀. 공공 깃랩(gitlab.aigov.go.kr) 상단 바 배치를 그대로 따른다.
 // 왼쪽: 사이드바 여닫기, 로고와 서비스명, "탐색" / 가운데: 검색 또는 이동(단축키 /) / 오른쪽: 화면 설정, 등록, 로그인 또는 내 계정.
 // 부품과 값은 KRDS만 쓴다.
-import { IconButton, iconBtnClass } from '../Action/IconButton';
+import { IconButton } from '../Action/IconButton';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { t } from '../../copy/ko';
@@ -34,26 +34,34 @@ function useDismiss(open, onClose) {
   return wrap;
 }
 
+/** 공공 깃랩 상단 검색: 상단 바에는 단추만 있고, 누르거나 / 를 누르면 화면 전체 대화창(폭 768, 위 4, 뒤 덮개 0.64)이 열린다.
+ *  Esc나 바깥을 누르면 닫히고 초점은 검색 단추로 돌아온다(audit_v3 G-05, G-07). */
 function GlobalSearch() {
   const navigate = useNavigate();
+  const btn = useRef(null);
   const input = useRef(null);
   const [value, setValue] = useState('');
   const [open, setOpen] = useState(false);
   const [hits, setHits] = useState([]);
-  const wrap = useDismiss(open, () => setOpen(false));
-  // GitLab, GitHub와 같게 / 를 누르면 검색창으로 간다.
   useEffect(() => {
     const onKey = (e) => {
-      if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
+      if ((e.key !== '/' && e.key !== 's') || e.metaKey || e.ctrlKey || e.altKey) return;
       const tag = document.activeElement?.tagName;
-      if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || document.activeElement?.isContentEditable) return;
+      if (document.querySelector('[role="dialog"]')) return;
       e.preventDefault();
-      input.current?.focus();
       setOpen(true);
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, []);
+  useEffect(() => {
+    if (!open) return undefined;
+    input.current?.focus();
+    const onKey = (e) => { if (e.key === 'Escape') { e.stopPropagation(); close(); } };
+    document.addEventListener('keydown', onKey, true);
+    return () => document.removeEventListener('keydown', onKey, true);
+  }, [open]);
   // 공공 깃랩 51b: 입력하면 '다음 위치에서 검색'과 프로젝트 제안(저장된 공개 목록, 점검 중에도 동작)
   useEffect(() => {
     const q = value.trim().toLowerCase();
@@ -65,69 +73,74 @@ function GlobalSearch() {
     });
     return () => { live = false; };
   }, [value]);
+  function close() { setOpen(false); requestAnimationFrame(() => btn.current?.focus()); }
   const go = (to) => { setOpen(false); navigate(to); };
   const q = value.trim();
   return (
-    <div className="rb-gsearch" ref={wrap}>
-      <form
-        className="rb-gbar-search"
-        data-figma="global-search"
-        role="search"
-        onSubmit={(e) => {
-          e.preventDefault();
-          go(`/search?q=${encodeURIComponent(q)}`);
-        }}
-      >
-        <label className="sr-only" htmlFor="global-search">{t.GlobalBar_searchLabel}</label>
+    <div className="rb-gsearch">
+      <button type="button" ref={btn} className="rb-gbar-search" data-figma="global-search" aria-haspopup="dialog" aria-expanded={open} onClick={() => setOpen(true)}>
         <Icon name="search" />
-        <input
-          id="global-search"
-          ref={input}
-          type="search"
-          value={value}
-          autoComplete="off"
-          aria-expanded={open && !!q}
-          aria-controls="rb-gsearch-panel"
-          onFocus={() => setOpen(true)}
-          onChange={(e) => { setValue(e.target.value); setOpen(true); }}
-          placeholder={t.GlobalBar_searchPlaceholder}
-        />
+        <span className="rb-gbar-search-text">{t.GlobalBar_searchPlaceholder}</span>
         <kbd className="rb-gbar-kbd" aria-hidden="true">/</kbd>
-      </form>
-      {open && q ? (
-        <div id="rb-gsearch-panel" className="rb-menu rb-gsearch-panel" role="listbox" aria-label={t.GlobalBar_searchLabel}>
-          <p className="rb-menu-title">{u.Q_in(q)}</p>
-          <ul className="drop-list">
-            <li><button type="button" className="item-link" onClick={() => go(`/search?q=${encodeURIComponent(q)}`)}><Icon name="search" /><span>{u.Q_all}</span></button></li>
-          </ul>
-          {hits.length ? (
-            <>
-              <p className="rb-menu-title">{u.Q_projects}</p>
-              <ul className="drop-list">
-                {hits.map((p) => (
-                  <li key={p.id}><button type="button" className="item-link" onClick={() => go(`/projects/${p.id}`)}><Avatar src={p.avatar_url} name={p.name} /><span>{p.namespace?.name ? `${p.namespace.name} / ` : ''}{p.name}</span></button></li>
-                ))}
-              </ul>
-            </>
-          ) : null}
+      </button>
+      {open ? (
+        <div className="rb-gsdlg-dim" onMouseDown={(e) => { if (e.target === e.currentTarget) close(); }}>
+          <div className="rb-gsdlg" role="dialog" aria-modal="true" aria-label={t.GlobalBar_searchLabel}>
+            <form
+              className="rb-gsdlg-form"
+              role="search"
+              onSubmit={(e) => { e.preventDefault(); if (q) go(`/search?q=${encodeURIComponent(q)}`); }}
+            >
+              <label className="sr-only" htmlFor="global-search">{t.GlobalBar_searchLabel}</label>
+              <Icon name="search" />
+              <input id="global-search" ref={input} type="search" value={value} autoComplete="off" onChange={(e) => setValue(e.target.value)} placeholder={u.Q_placeholder} />
+            </form>
+            <div className="rb-gsdlg-list">
+              {q ? (
+                <>
+                  <p className="rb-menu-title">{u.Q_in(q)}</p>
+                  <ul className="drop-list">
+                    <li><button type="button" className="item-link" onClick={() => go(`/search?q=${encodeURIComponent(q)}`)}><Icon name="search" /><span>{u.Q_all}</span></button></li>
+                  </ul>
+                  {hits.length ? (
+                    <>
+                      <p className="rb-menu-title">{u.Q_projects}</p>
+                      <ul className="drop-list">
+                        {hits.map((p) => (
+                          <li key={p.id}><button type="button" className="item-link" onClick={() => go(`/projects/${p.id}`)}><Avatar src={p.avatar_url} name={p.namespace?.name || p.name} seed={p.id} /><span>{p.namespace?.name ? `${p.namespace.name} / ` : ''}{p.name}</span></button></li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : null}
+                </>
+              ) : (
+                <>
+                  <p className="rb-menu-title">{u.Q_place}</p>
+                  <ul className="drop-list">
+                    <li><button type="button" className="item-link" onClick={() => go('/')}><Icon name="ext/project" /><span>{u.G_explore}</span></button></li>
+                  </ul>
+                </>
+              )}
+            </div>
+          </div>
         </div>
       ) : null}
     </div>
   );
 }
 
-export function GlobalBar({ onToggleNav, navOpen, hasNav = true, sideHidden = false, onShowSide, area }) {
+export function GlobalBar({ onToggleNav, navOpen, hasNav = true, drawer = false, sideHidden = false, onShowSide, area }) {
   const location = useLocation();
   const { signedIn } = useAuth();
   // UX-007 1장: 기본은 어두운 화면. 로그인 여부와 상관없이 항상 적용되어야 하므로 여기서 한 번 불러 쓴다(전에는 로그인 후에만 불리는 버그가 있었다)
   const [mode, setMode] = useScreenMode();
   const loginTo = `/login?returnTo=${encodeURIComponent(location.pathname + location.search)}`;
   return (
-    <header className="rb-gbar" data-figma="topbar" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
+    <header className={'rb-gbar' + (drawer ? ' is-drawer' : '')} data-figma="topbar" data-krds="header" data-auth={signedIn ? 'Signed-in' : 'Guest'}>
       <div className="rb-gbar-in">
         <div className="rb-gbar-left">
           {hasNav ? (
-            <IconButton icon="menu" label={t.GlobalBar_navToggle} size="medium" className="rb-gbar-navtoggle" aria-expanded={navOpen} aria-controls="rb-sidebar" onClick={onToggleNav} />
+            <button type="button" className="rb-gbar-icon rb-gbar-navtoggle" aria-label={t.GlobalBar_navToggle} title={t.GlobalBar_navToggle} aria-expanded={navOpen} aria-controls="rb-sidebar" onClick={onToggleNav}><Icon name="menu" /></button>
           ) : null}
           {/* D-21: 사이드바를 접으면 상단 바 맨 왼쪽에 펼침 단추(공공 깃랩 방식) */}
           {sideHidden ? (
@@ -149,11 +162,12 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true, sideHidden = fa
             </>
           ) : (
             <>
+              {/* 화면 설정은 KRDS 머리글 도구(화면 크기)라 남긴다. 1024 미만은 '메뉴' 하나로 접는다 */}
               <ScreenModeMenu mode={mode} setMode={setMode} />
-              {/* 공공 깃랩 순서: 등록, 로그인 */}
-              <Link className="krds-btn small tertiary rb-gbar-cta" to="/register">{u.Hdr_signup}</Link>
-              <Link className="krds-btn small primary rb-gbar-cta" to={loginTo}>{t.Header_login}</Link>
-              <IconButton to={loginTo} icon="my" label={t.Header_login} size="medium" className="rb-gbar-user" title={t.Header_login} />
+              {/* 공공 깃랩 순서와 역할: 등록(밝은 회색 채움), 로그인(어두운 회색 채움), 높이 32(audit_v3 G-03) */}
+              <Link className="rb-gbar-cta is-signup" to="/register">{u.Hdr_signup}</Link>
+              <Link className="rb-gbar-cta is-login" to={loginTo}>{t.Header_login}</Link>
+              <GuestMenu loginTo={loginTo} mode={mode} setMode={setMode} />
             </>
           )}
         </div>
@@ -162,10 +176,29 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true, sideHidden = fa
   );
 }
 
+/** 1024 미만: 공공 깃랩처럼 등록, 로그인을 '메뉴' 아이콘 하나로 접는다(audit_v3 05-4). 화면 설정도 이 안에 */
+function GuestMenu({ loginTo, mode, setMode }) {
+  return (
+    <Menu label={u.Hdr_menu} className="rb-gbar-drop rb-gbar-more" align="right" toggle={false} btnClass="rb-gbar-icon" btnProps={{ title: u.Hdr_menu }} button={<Icon name="ellipsis_vertical" />}>
+      {(close) => (
+        <>
+          <div className="rb-menu-group">
+            <ul>
+              <li><Link className="item-link" to="/register" onClick={close}><span>{u.Hdr_signup}</span></Link></li>
+              <li><Link className="item-link" to={loginTo} onClick={close}><span>{t.Header_login}</span></Link></li>
+            </ul>
+          </div>
+          <ScreenModeItems mode={mode} setMode={setMode} />
+        </>
+      )}
+    </Menu>
+  );
+}
+
 /** 게스트도 화면 설정을 바꿀 수 있다(로그인 전용 버그 고침). */
 function ScreenModeMenu({ mode, setMode }) {
   return (
-    <Menu label={t.Header_6} className="rb-gbar-drop" align="right" toggle={false} btnClass={iconBtnClass('medium')} btnProps={{ title: t.Header_6 }} button={<Icon name="setting" />}>
+    <Menu label={t.Header_6} className="rb-gbar-drop" align="right" toggle={false} btnClass="rb-gbar-icon" btnProps={{ title: t.Header_6 }} button={<Icon name="setting" />}>
       <ScreenModeItems mode={mode} setMode={setMode} />
     </Menu>
   );
@@ -174,7 +207,7 @@ function ScreenModeMenu({ mode, setMode }) {
 /** 로그인 뒤 내 계정 메뉴. 화면 설정도 이 안에 둔다(Figma R-01 Signed-in). */
 function AccountMenu({ mode, setMode }) {
   return (
-    <Menu label={t.GlobalBar_account} className="rb-gbar-drop" align="right" toggle={false} btnClass={iconBtnClass('medium')} btnProps={{ title: t.GlobalBar_account }} button={<Icon name="my" />}>
+    <Menu label={t.GlobalBar_account} className="rb-gbar-drop" align="right" toggle={false} btnClass="rb-gbar-icon" btnProps={{ title: t.GlobalBar_account }} button={<Icon name="my" />}>
       {(close) => (
         <>
           <div className="rb-menu-group">

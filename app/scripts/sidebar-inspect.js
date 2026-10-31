@@ -9,7 +9,8 @@
   const col = (name, got, want) => { n++; if (got !== want) bad.push(`${name}: ${got} (명세 ${want})`); };
   const vis = (e) => e && e.getBoundingClientRect().height > 0 && !e.closest('.rb-side-fold:not(.is-open)');
   col('바탕', getComputedStyle(side).backgroundColor, S.colors.bg);
-  if (innerWidth < 768) { const want = S.drawer[innerWidth]; if (want) eq('서랍 폭', sb.width, want); return { bad, n }; }
+  if (side.closest('.rb-shell.is-drawer') || innerWidth < 768) { const want = S.drawer[innerWidth]; if (want) eq('서랍 폭', sb.width, want); n++; if (innerWidth >= S.drawerBelow) bad.push(`서랍 모드인데 폭 ${innerWidth} (명세: ${S.drawerBelow} 미만만 서랍)`); return { bad, n }; }
+  if (innerWidth < S.drawerBelow) { n++; bad.push(`폭 ${innerWidth}인데 서랍이 아님(명세: ${S.drawerBelow} 미만은 서랍)`); }
   eq('폭', sb.width, rail ? S.railWidth : S.width);
   // 목록이 넘치면 스크롤 막대 폭만큼 항목이 줄어든다(공공 깃랩도 224 → 209). 그 폭을 빼고 비교
   const sc = side.querySelector('.rb-side-scroll'); const sbw = sc ? sc.offsetWidth - sc.clientWidth : 0;

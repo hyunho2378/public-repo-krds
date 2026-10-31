@@ -179,6 +179,8 @@ export function Sidebar({ project, open, onClose, onHide, onShow, hidden = false
   // 좁은 화면 서랍: Esc로 닫는다
   useEffect(() => {
     if (!open) return undefined;
+    // 서랍이 열리면 첫 링크로 초점(공공 깃랩, audit_v3 05 1절)
+    requestAnimationFrame(() => document.querySelector('#rb-sidebar .rb-side-link')?.focus());
     const onKey = (e) => e.key === 'Escape' && onClose();
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);

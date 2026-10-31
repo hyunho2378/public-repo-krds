@@ -97,3 +97,56 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 /* 10. 제목 세 단계(D-16 개정): 화면 h1은 --layout-title-page, 프로젝트 이름은 --layout-title-project. 문서 읽기 영역(README 등 .rb-md-h1)은 제외 */
 #root .rb-main h1:not(.rb-repo-name):not(.sr-only):not(.rb-md-h1) { font-size: var(--layout-title-page); line-height: var(--layout-title-page-lh); font-weight: var(--krds-font-weight-bold); }
 #root .rb-repo-name { font-size: var(--layout-title-project); line-height: var(--layout-title-project-lh); }
+
+/* 11. 상단 바(공공 깃랩 실측 1440): 검색 단추 폭 24vw(240~440) 높이 32 모서리 12, 등록 = 밝은 회색 채움(220 → gray-10), 로그인 = 어두운 회색 채움(rgba(137,136,141,.4) 위 합성 55 → gray-80) */
+#root .rb-gbar-search { flex: none; display: inline-flex; align-items: center; gap: var(--krds-gap-3); width: var(--layout-gsearch-w); max-width: none; height: var(--layout-topbar-btn-h); padding: 0 var(--krds-number-3) 0 var(--krds-number-5); border: var(--krds-border-width-static-regular) solid var(--krds-color-light-gray-70); border-radius: var(--krds-radius-xlarge1); background: var(--krds-color-light-gray-95); color: var(--layout-text-subtle); font: inherit; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); cursor: pointer; text-align: left; }
+#root .rb-gbar-search:hover { border-color: var(--krds-color-light-gray-50); }
+#root .rb-gbar-search .rb-gbar-search-text { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#root .rb-gbar-in > .rb-gsearch { flex: 0 1 auto; width: auto; max-width: none; margin-inline: auto; }
+#root .rb-gbar-cta { display: inline-flex; align-items: center; height: var(--layout-topbar-btn-h); padding: 0 var(--krds-number-7); border: 0; border-radius: var(--krds-radius-medium3); font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-regular); text-decoration: none; white-space: nowrap; }
+#root .rb-gbar-cta.is-signup { background: var(--krds-color-light-gray-10); color: var(--krds-color-light-gray-95); }
+#root .rb-gbar-cta.is-signup:hover { background: var(--krds-color-light-gray-20); }
+#root .rb-gbar-cta.is-login { background: var(--krds-color-light-gray-80); color: var(--krds-color-light-gray-5); }
+#root .rb-gbar-cta.is-login:hover { background: var(--krds-color-light-gray-70); }
+#root .rb-gbar-cta:focus-visible { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); outline-offset: var(--krds-number-1); }
+#root .rb-gbar-more { display: none; }
+#root .rb-gbar-icon, #root .rb-gbar .rb-gbar-navtoggle { display: inline-flex; align-items: center; justify-content: center; width: var(--layout-topbar-btn-h); height: var(--layout-topbar-btn-h); min-height: 0; padding: 0; border: 0; border-radius: var(--krds-radius-medium3); background: none; color: var(--krds-color-text-basic); cursor: pointer; }
+#root .rb-gbar-icon:hover, #root .rb-gbar .rb-gbar-navtoggle:hover { background: var(--layout-raised-bg); }
+#root .rb-gbar .rb-gbar-navtoggle { display: none; }
+#root .rb-gbar.is-drawer .rb-gbar-navtoggle { display: inline-flex; }
+@media (max-width: 1023px) {
+  #root .rb-gbar-cta, #root .rb-gbar-right > .rb-gbar-drop:not(.rb-gbar-more), #root .rb-gbar-area { display: none; }
+  #root .rb-gbar-more { display: inline-flex; }
+}
+@media (max-width: 767px) {
+  #root .rb-gbar-in > .rb-gsearch { display: block; margin-inline-start: auto; }
+  #root .rb-gbar-search { width: var(--layout-topbar-btn-h); padding: 0; justify-content: center; border: 0; background: none; }
+  #root .rb-gbar-search .rb-gbar-search-text, #root .rb-gbar-search .rb-gbar-kbd { display: none; }
+  #root .rb-gbar .rb-gbar-searchlink { display: none; }
+}
+
+/* 12. 검색 대화창(공공 깃랩 global-search-modal): 화면 전체 덮개 0.64, 위 4에 폭 768 판(gray-90, 모서리 16), 입력 높이 40 */
+.rb-gsdlg-dim { position: fixed; inset: 0; z-index: 200; display: flex; justify-content: center; align-items: flex-start; padding: var(--krds-number-3) var(--krds-number-8); background: var(--layout-dim); }
+.rb-gsdlg { width: 100%; max-width: var(--layout-gsdlg-w); max-height: calc(100dvh - var(--krds-number-5)); overflow: auto; border-radius: var(--layout-gsdlg-radius); background: var(--layout-raised-bg); color: var(--krds-color-text-basic); padding: var(--krds-number-3); box-sizing: border-box; }
+.rb-gsdlg-form { display: flex; align-items: center; gap: var(--krds-gap-3); height: var(--krds-number-14); padding: 0 var(--krds-number-7); border: var(--krds-border-width-static-regular) solid var(--krds-color-light-gray-60); border-radius: var(--krds-radius-xlarge1); background: var(--layout-panel-bg); }
+.rb-gsdlg-form input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: none; color: inherit; font: inherit; font-size: var(--rb-step-15); }
+.rb-gsdlg-form:focus-within { outline: var(--krds-border-width-variable-medium) solid var(--krds-color-border-primary); }
+.rb-gsdlg-list { padding: var(--krds-number-3) 0 0; }
+.rb-gsdlg-list .rb-menu-title { margin: 0; padding: var(--krds-number-5) var(--krds-number-7) var(--krds-number-3); font-size: var(--rb-step-13); line-height: var(--rb-lh-13); color: var(--layout-text-subtle); font-weight: var(--krds-font-weight-bold); }
+.rb-gsdlg-list .drop-list { list-style: none; margin: 0; padding: 0; }
+.rb-gsdlg-list .item-link { display: flex; align-items: center; gap: var(--krds-gap-3); width: 100%; min-height: var(--krds-number-12); padding: 0 var(--krds-number-7); border: 0; border-radius: var(--krds-radius-medium3); background: none; color: inherit; font: inherit; font-size: var(--rb-step-15); text-align: left; cursor: pointer; }
+.rb-gsdlg-list .item-link:hover, .rb-gsdlg-list .item-link:focus-visible { background: var(--krds-color-light-gray-80); }
+.rb-gsdlg-list .rb-avatar { width: var(--krds-number-10); height: var(--krds-number-10); font-size: var(--rb-step-13); }
+
+/* 13. 1200 미만 서랍(공공 깃랩): 셸은 사이드바 없이 판 전체 폭, 사이드바는 왼쪽에서 밀려 들어오는 서랍(폭 min(320, 화면 - 72)), 뒤 덮개 0.64, 덮개 누르면 닫힘 */
+#root .rb-shell.is-drawer { display: block; padding: 0 var(--rb-panel-gap) var(--rb-panel-gap); }
+#root .rb-shell.is-drawer > .rb-panel { margin-left: 0; }
+#root .rb-shell.is-drawer .rb-side-wrap { position: static; width: auto; transform: none; visibility: visible; }
+#root .rb-shell.is-drawer .rb-side { position: fixed; inset-block: 0; inset-inline-start: 0; z-index: 90; width: var(--layout-drawer-w); height: 100dvh; padding-top: var(--layout-sidebar-top); border-radius: 0 var(--layout-drawer-radius) var(--layout-drawer-radius) 0; transform: translateX(-100%); visibility: hidden; transition: transform var(--rb-motion-slow) var(--rb-motion-ease), visibility 0s linear var(--rb-motion-slow); }
+#root .rb-shell.is-drawer .rb-side.is-open { transform: translateX(0); visibility: visible; transition: transform var(--rb-motion-slow) var(--rb-motion-ease), visibility 0s; }
+#root .rb-shell.is-drawer .rb-side-dim { display: block; position: fixed; inset: 0; z-index: 80; background: var(--layout-dim); }
+@media (max-width: 767px) { #root .rb-shell.is-drawer { padding: 0; } }
+/* 공공 깃랩 순서: 로고, 메뉴 열기(서랍일 때), 검색. 360은 검색 아이콘을 오른쪽 묶음 바로 앞 */
+#root .rb-gbar-left { display: flex; align-items: center; gap: var(--krds-number-3); }
+#root .rb-gbar-left > .rb-gbar-brand { order: -1; }
+@media (max-width: 767px) { #root .rb-gbar-in > .rb-gsearch { margin-inline: auto 0; } }

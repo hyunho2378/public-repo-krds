@@ -147,6 +147,16 @@
   /* 좁은 화면 서랍: 폭 = min(320, 화면 - 72)(공공 깃랩 360 → 288, 768 → 320), 오른쪽 모서리 16 */
   --layout-drawer-w: min(calc(var(--krds-number-12) * 10), calc(100vw - var(--krds-number-19)));
   --layout-drawer-radius: var(--krds-number-8);
+  /* 서랍이 되는 폭(단위 없음, 자바스크립트가 읽는다): 공공 깃랩 1200 미만이면 사이드바가 서랍(audit_v3 05-1) */
+  --rb-bp-drawer: 1200;
+  /* 서랍과 검색 대화창 뒤 덮개(공공 깃랩 rgba(0, 0, 0, 0.64)) */
+  --layout-dim: rgb(0 0 0 / 0.64);
+  /* 상단 검색 단추 폭: 화면 폭 24%, 240~440(공공 깃랩 1440 344, 1920 440). 대화창 폭 768, 모서리 16, 입력 높이 40 */
+  --layout-gsearch-w: clamp(var(--rb-gbar-search-min), round(down, 24vw, var(--krds-number-3)), calc(var(--krds-number-21) * 4 + var(--krds-number-17)));
+  --layout-gsdlg-w: calc(var(--krds-number-21) * 8);
+  --layout-gsdlg-radius: var(--krds-number-8);
+  /* 상단 바 단추 높이 32(공공 깃랩), 모서리 8 */
+  --layout-topbar-btn-h: var(--krds-number-12);
   --layout-sidebar-item-gap: var(--krds-number-2);
   --layout-sidebar-project-gap: var(--krds-number-5);
   --layout-sidebar-sep-gap: var(--krds-number-7);

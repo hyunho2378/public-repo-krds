@@ -108,7 +108,8 @@ function Shell() {
   const bare = NO_SIDEBAR.includes(pathname);
   const closeNav = useCallback(() => setNavOpen(false), []);
   // D-21: 왼쪽 바는 기본 펼침. '사이드바 접음'을 누르면 완전히 숨기고 상단 바의 펼침 단추로 연다(선택 기억). 768 미만은 서랍
-  const mobile = !useMinWidth(breakpoint('--rb-bp-mobile'));
+  // 공공 깃랩: 1200 미만이면 사이드바가 서랍(덮개 0.64, 왼쪽에서 밀려 들어옴). 그 이상은 펼침 또는 44 아이콘 열
+  const mobile = !useMinWidth(breakpoint('--rb-bp-drawer'));
   const [hidden, setHidden] = useBoolPref('rb-sidebar-hidden', false);
   const sideDesk = !bare && !mobile;
   const [keys, setKeys] = useState(false);
@@ -125,6 +126,7 @@ function Shell() {
         navOpen={navOpen}
         onToggleNav={() => setNavOpen((v) => !v)}
         hasNav={!bare}
+        drawer={mobile && !bare}
         sideHidden={false}
         onShowSide={() => setHidden(false)}
         area={u.G_explore}
@@ -132,7 +134,7 @@ function Shell() {
       </div>
       <NoticeBanner message={import.meta.env.VITE_NOTICE} />
       {/* D-22: 사이드바는 접어도 그대로 두고(다시 그리지 않음) transform으로 밀어 넣는다. 본문 판은 margin-left가 같은 시간 곡선으로 따라온다 */}
-      <div className={'rb-shell' + (sideDesk ? ' has-side' : '') + (sideDesk && hidden ? ' is-side-hidden' : '') + (bare ? ' is-bare' : '')}>
+      <div className={'rb-shell' + (sideDesk ? ' has-side' : '') + (sideDesk && hidden ? ' is-side-hidden' : '') + (mobile && !bare ? ' is-drawer' : '') + (bare ? ' is-bare' : '')}>
         {bare ? null : (
           <Sidebar project={project} open={navOpen} onClose={closeNav} onHide={mobile ? closeNav : () => setHidden(true)} onShow={() => setHidden(false)} hidden={sideDesk && hidden} />
         )}

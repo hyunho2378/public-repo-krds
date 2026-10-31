@@ -1,5 +1,5 @@
 // D-21 7장 여백 검사(페이지 안에서 실행). check-left-edges.mjs가 읽어 쓴다.
-// 기준 = 본문 판 안 컨테이너(.rb-panel-in의 내용 상자). 검사:
+// 기준 = 본문 판 안 컨테이너(.rb-panel-in의 내용 상자). 여백은 판 내용 상자(테두리, 스크롤 막대 제외)에서 잰다. 검사:
 //  1) 컨테이너 좌우 여백 대칭(판 왼쪽-컨테이너 왼쪽 = 컨테이너 오른쪽-판 오른쪽, 2px 안)
 //  2) 왼쪽 끝: 경로, 첫 제목, 바닥글 구분선이 컨테이너 왼쪽과 같다
 //  3) 오른쪽 끝: 목록 행, 프로젝트 정보 열, 바닥글이 컨테이너 오른쪽과 같다(넘지도, 판 끝에 붙지도 않는다)
@@ -16,7 +16,9 @@
   const pr = panel.getBoundingClientRect();
   const r1 = (n) => Math.round(n * 10) / 10;
   const bad = [];
-  const ml = L - pr.left, mr = pr.right - R;
+  // 판 안쪽(테두리와 판 안 스크롤 막대를 뺀 내용 상자) 기준. 판 안 스크롤(공공 깃랩 동작)이라 오른쪽에 스크롤 막대가 있다
+  const inL = pr.left + panel.clientLeft, inR = inL + panel.clientWidth;
+  const ml = L - inL, mr = inR - R;
   if (Math.abs(ml - mr) > 2) bad.push(`좌우 여백 비대칭 ${r1(ml)} / ${r1(mr)}`);
   const left = [['경로', '.rb-panel-in .krds-breadcrumb-wrap'], ['제목', '#main h1'], ['바닥글', '#krds-footer']];
   // 파일 트리가 있는 파일 보기의 제목, 2열 가운데 구성인 로그인 화면의 제목은 왼쪽 선 비교에서 뺀다
