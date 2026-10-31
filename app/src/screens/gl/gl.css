@@ -225,3 +225,7 @@
 .gl-sidefield { border-color: var(--layout-divider); }
 .gl-crow .gl-fold { transform: none; }
 .gl-crow .gl-fold.is-open { transform: rotate(180deg); }
+.gl-filter-lead { display: inline-flex; align-items: center; height: 100%; padding: 0 var(--krds-number-3); border-inline-end: var(--krds-border-width-static-regular) solid var(--layout-panel-border); }
+.gl-filter-lead .rb-iconbtn { height: 100%; }
+.gl-ref-name.is-lg { font-size: var(--rb-step-17); line-height: var(--rb-lh-17); }
+.gl-filled[aria-pressed='true'] { background: var(--layout-head-bg); }

@@ -36,9 +36,10 @@ export function SourceMenu({ project, refName }) {
 }
 
 /** 검색칸 + 돋보기 단추가 붙은 공공 깃랩 필터 입력 */
-export function FilterField({ value, onChange, placeholder, label }) {
+export function FilterField({ value, onChange, placeholder, label, lead }) {
   return (
     <div className="gl-filter-field">
+      {lead ? <span className="gl-filter-lead">{lead}</span> : null}
       <input type="search" className="gl-filter-input" value={value} placeholder={placeholder} aria-label={label || placeholder} onChange={(e) => onChange(e.target.value)} />
       <span className="gl-filter-go"><Icon name="search" label={g.search} /></span>
     </div>

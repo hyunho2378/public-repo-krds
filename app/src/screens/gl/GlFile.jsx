@@ -123,7 +123,7 @@ export function GlFile({ path, base, text, rawUrl, size, blame, onBlame, blameSt
   };
   const views = [md ? ['code', g.code] : ['code', g.code], md ? ['preview', g.preview] : null, ['blame', g.blame]].filter(Boolean);
   // 공공 깃랩 순서: 코드, 미리보기, Blame
-  const ordered = md ? [['code', g.code], ['preview', g.preview], ['blame', g.blame]] : views;
+  const ordered = md ? [['code', g.code], ['preview', g.preview], ['blame', g.blame]] : [];
   return (
     <section className="gl-filebox" aria-label={path.split('/').pop()} ref={box}>
       <header className="gl-filebox-head">
@@ -138,7 +138,8 @@ export function GlFile({ path, base, text, rawUrl, size, blame, onBlame, blameSt
               )}
             </Menu>
           ) : null}
-          {!binary ? (
+          {!binary && !md ? <button type="button" className={'krds-btn small tertiary gl-filled'} aria-pressed={view === 'blame'} onClick={() => choose(view === 'blame' ? 'code' : 'blame')}>{g.blame}</button> : null}
+          {!binary && md ? (
             <div className="gl-seg gl-seg-text" role="tablist" aria-label={t.P16_viewLabel}>
               {ordered.map(([k, n]) => <button key={k} type="button" role="tab" aria-selected={view === k} className="gl-segbtn" onClick={() => choose(k)}>{n}</button>)}
             </div>

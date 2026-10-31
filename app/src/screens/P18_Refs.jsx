@@ -28,7 +28,7 @@ function RefRow({ id, project, name, commit, isBranch, flags }) {
     <li>
       <div className="gl-ref-row">
         <div className="gl-ref-main">
-          <p className="gl-ref-name">
+          <p className={'gl-ref-name' + (isBranch ? '' : ' is-lg')}>
             {isBranch ? null : <Icon name="ext/tag" />}
             <Link to={`/projects/${id}/code?ref=${encodeURIComponent(name)}`}>{name}</Link>
             <CopyButton text={name} label={g.copyName} />
