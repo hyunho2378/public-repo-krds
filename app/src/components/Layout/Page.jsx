@@ -12,6 +12,9 @@ export function Page({ id, title, state, children, noFigma = false }) {
     const tag = () => {
       const h = el.querySelector('h2:not(aside h2):not(nav h2)');
       if (h && !h.hasAttribute('data-figma')) h.setAttribute('data-figma', 'section-title');
+      // 화면 머리: 이름표가 없으면 첫 h1에 page-head(Figma 대조 이름표, 2026. 10. 31.)
+      const h1 = el.querySelector('h1');
+      if (h1 && !el.querySelector('[data-figma="page-head"]') && !h1.hasAttribute('data-figma')) h1.setAttribute('data-figma', 'page-head');
     };
     tag();
     const mo = new MutationObserver(tag);

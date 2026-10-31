@@ -1,0 +1,3064 @@
+{
+ "file": "rtbBmr5dTTclRWw8xSKzAJ",
+ "fileName": "[AX.S] Public GitLab Rebuild_DS",
+ "updated": "2026-10-31 (반응형 점검, R1 분할)",
+ "note": "세트 이름은 \"화면번호 영어이름\". 코드 data-figma 는 화면 안 상자 이름표이고, 화면 구분은 화면번호(R-01 등)와 경로(route)로 한다. figma_boxes 파일 이름은 화면번호_폭_auth.json / D-18: 저장소 화면은 repo_tabs + 제목 줄 + 가운데 본문(960, R-03/R-06은 1280), 정보는 dock_panel(R-01 panel=Open 변형). R-01 변형 이름에 panel 속성 추가, figma_boxes는 panel=Closed만 내보냄.",
+ "pages": [
+  {
+   "id": "11034:1896",
+   "old": "Components / Additional (KRDS 피그마 전용)",
+   "new": "Components / Additional (KRDS Figma only)"
+  },
+  {
+   "id": "11061:89544",
+   "old": "Components / Product (데이터 부품)",
+   "new": "Components / Product (data components)"
+  },
+  {
+   "id": "11034:1964",
+   "old": "Patterns / 기본 패턴",
+   "new": "Patterns / Basic patterns"
+  },
+  {
+   "id": "11034:1965",
+   "old": "Patterns / 서비스 패턴",
+   "new": "Patterns / Service patterns"
+  },
+  {
+   "id": "11070:311310",
+   "old": "Overview / 한눈 보기",
+   "new": "Overview / At a glance"
+  },
+  {
+   "id": "11061:89542",
+   "old": "Screens / G 전역",
+   "new": "Screens / G Global"
+  },
+  {
+   "id": "11061:89543",
+   "old": "Screens / A 덧붙임",
+   "new": "Screens / A Add-ons"
+  },
+  {
+   "id": "11034:2000",
+   "old": "Screens / P-09 새 프로젝트와 공개 준비 점검",
+   "new": "Screens / P-09 New project and publish check"
+  },
+  {
+   "id": "11061:599464",
+   "old": "Prototype / 과업 흐름",
+   "new": "Prototype / Task flows"
+  },
+  {
+   "id": "11061:89540",
+   "old": "Archive / v1 화면(구 배치)",
+   "new": "Archive / v1 screens (old layout)"
+  },
+  {
+   "id": "11034:2008",
+   "old": "Archive / KRDS 원본 머리글",
+   "new": "Archive / KRDS original header"
+  },
+  {
+   "id": "11126:555821",
+   "old": null,
+   "new": "Screens / R2 Repository (R-16~R-30)"
+  },
+  {
+   "id": "11061:89541",
+   "name": "Screens / R1 Repository (R-01~R-07)"
+  },
+  {
+   "id": "11183:175794",
+   "name": "Screens / R1b Repository (R-08~R-15)"
+  }
+ ],
+ "screens": [
+  {
+   "screen": "R-01",
+   "figmaSet": "R-01 Project home",
+   "oldName": "R-01 프로젝트 홈",
+   "nodeId": "11067:961734",
+   "route": "/projects/150",
+   "figmaBoxes": [
+    "R-01_1920_Guest.json",
+    "R-01_1920_Signed-in.json",
+    "R-01_360_Guest.json",
+    "R-01_360_Signed-in.json"
+   ],
+   "page": "11061:89541",
+   "pageName": "Screens / R1 Repository (R-01~R-07)",
+   "variants": 13,
+   "variantProps": [
+    "Breakpoint",
+    "Auth",
+    "Drawer",
+    "Sidebar",
+    "Info"
+   ],
+   "sidebarCurrent": [
+    "Project/개요"
+   ],
+   "code": {
+    "path": "/projects/150",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {
+     "Drawer": "1200 미만 서랍(.rb-gbar-navtoggle 클릭)",
+     "Sidebar": "접음 = 44 아이콘 열(.rb-side-hide 클릭)"
+    }
+   }
+  },
+  {
+   "screen": "R-02",
+   "figmaSet": "R-02 File list",
+   "oldName": "R-02 파일 목록",
+   "nodeId": "11067:970915",
+   "route": "/projects/150/code/src",
+   "figmaBoxes": [
+    "R-02_1920_Guest.json",
+    "R-02_1920_Signed-in.json",
+    "R-02_360_Guest.json",
+    "R-02_360_Signed-in.json"
+   ],
+   "page": "11061:89541",
+   "pageName": "Screens / R1 Repository (R-01~R-07)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/리포지토리"
+   ],
+   "code": {
+    "path": "/projects/150/code/src",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-03",
+   "figmaSet": "R-03 File view",
+   "oldName": "R-03 파일 보기",
+   "nodeId": "11067:994407",
+   "route": "/projects/150/code/src/shared/numbering.ts",
+   "figmaBoxes": [
+    "R-03_1920_Guest.json",
+    "R-03_1920_Signed-in.json",
+    "R-03_360_Guest.json",
+    "R-03_360_Signed-in.json"
+   ],
+   "page": "11061:89541",
+   "pageName": "Screens / R1 Repository (R-01~R-07)",
+   "variants": 14,
+   "variantProps": [
+    "Breakpoint",
+    "Auth",
+    "Role"
+   ],
+   "sidebarCurrent": [
+    "Project/리포지토리"
+   ],
+   "code": {
+    "path": "/projects/150/code/src/shared/numbering.ts",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [
+     "viewer",
+     "developer",
+     "owner"
+    ],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-04",
+   "figmaSet": "R-04 Change history",
+   "oldName": "R-04 변경 기록",
+   "nodeId": "11067:1049182",
+   "route": "/projects/150/changes",
+   "figmaBoxes": [
+    "R-04_1920_Guest.json",
+    "R-04_1920_Signed-in.json",
+    "R-04_360_Guest.json",
+    "R-04_360_Signed-in.json"
+   ],
+   "page": "11061:89541",
+   "pageName": "Screens / R1 Repository (R-01~R-07)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/커밋"
+   ],
+   "code": {
+    "path": "/projects/150/changes",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-05",
+   "figmaSet": "R-05 Commit detail",
+   "oldName": "R-05 커밋 상세",
+   "nodeId": "11067:1013693",
+   "route": "/projects/150/changes/03f9484e",
+   "figmaBoxes": [
+    "R-05_1920_Guest.json",
+    "R-05_1920_Signed-in.json",
+    "R-05_360_Guest.json",
+    "R-05_360_Signed-in.json"
+   ],
+   "page": "11061:89541",
+   "pageName": "Screens / R1 Repository (R-01~R-07)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/커밋"
+   ],
+   "code": {
+    "path": "/projects/150/changes/03f9484e",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-06",
+   "figmaSet": "R-06 Revision compare",
+   "oldName": "R-06 리비전 비교",
+   "nodeId": "11061:202347",
+   "route": "/projects/150/compare",
+   "figmaBoxes": [
+    "R-06_1920_Guest.json",
+    "R-06_1920_Signed-in.json",
+    "R-06_360_Guest.json",
+    "R-06_360_Signed-in.json"
+   ],
+   "page": "11061:89541",
+   "pageName": "Screens / R1 Repository (R-01~R-07)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/리비전 비교"
+   ],
+   "code": {
+    "path": "/projects/150/compare",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-07",
+   "figmaSet": "R-07 Branches",
+   "oldName": "R-07 브랜치",
+   "nodeId": "11061:570106",
+   "route": "/projects/150/branches",
+   "figmaBoxes": [
+    "R-07_1920_Guest.json",
+    "R-07_1920_Signed-in.json",
+    "R-07_360_Guest.json",
+    "R-07_360_Signed-in.json"
+   ],
+   "page": "11061:89541",
+   "pageName": "Screens / R1 Repository (R-01~R-07)",
+   "variants": 14,
+   "variantProps": [
+    "Breakpoint",
+    "Auth",
+    "Role"
+   ],
+   "sidebarCurrent": [
+    "Project/브랜치"
+   ],
+   "code": {
+    "path": "/projects/150/branches",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [
+     "viewer",
+     "developer",
+     "owner"
+    ],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-08",
+   "figmaSet": "R-08 Tags",
+   "oldName": "R-08 태그",
+   "nodeId": "11067:1058397",
+   "route": "/projects/150/branches",
+   "figmaBoxes": [
+    "R-08_1920_Guest.json",
+    "R-08_1920_Signed-in.json",
+    "R-08_360_Guest.json",
+    "R-08_360_Signed-in.json"
+   ],
+   "page": "11183:175794",
+   "pageName": "Screens / R1b Repository (R-08~R-15)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/태그"
+   ],
+   "code": {
+    "path": "/projects/150/tags",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-09",
+   "figmaSet": "R-09 Releases",
+   "oldName": "R-09 릴리스",
+   "nodeId": "11061:222873",
+   "route": "/projects/150/releases",
+   "figmaBoxes": [
+    "R-09_1920_Guest.json",
+    "R-09_1920_Signed-in.json",
+    "R-09_360_Guest.json",
+    "R-09_360_Signed-in.json"
+   ],
+   "page": "11183:175794",
+   "pageName": "Screens / R1b Repository (R-08~R-15)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/릴리스"
+   ],
+   "code": {
+    "path": "/projects/150/releases",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-10",
+   "figmaSet": "R-10 Contributors",
+   "oldName": "R-10 참여자",
+   "nodeId": "11067:1073546",
+   "route": "/projects/150/contributors",
+   "figmaBoxes": [
+    "R-10_1920_Guest.json",
+    "R-10_1920_Signed-in.json",
+    "R-10_360_Guest.json",
+    "R-10_360_Signed-in.json"
+   ],
+   "page": "11183:175794",
+   "pageName": "Screens / R1b Repository (R-08~R-15)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/기여자"
+   ],
+   "code": {
+    "path": "/projects/150/contributors",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-11",
+   "figmaSet": "R-11 Issue list",
+   "oldName": "R-11 이슈 목록",
+   "nodeId": "11067:1083161",
+   "route": "/projects/150/issues",
+   "figmaBoxes": [
+    "R-11_1920_Guest.json",
+    "R-11_1920_Signed-in.json",
+    "R-11_360_Guest.json",
+    "R-11_360_Signed-in.json"
+   ],
+   "page": "11183:175794",
+   "pageName": "Screens / R1b Repository (R-08~R-15)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/작업 항목"
+   ],
+   "code": {
+    "path": "/projects/150/issues",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-12",
+   "figmaSet": "R-12 Issue detail",
+   "oldName": "R-12 이슈 상세",
+   "nodeId": "11061:560508",
+   "route": "/projects/150/issues/55",
+   "figmaBoxes": [
+    "R-12_1920_Guest.json",
+    "R-12_1920_Signed-in.json",
+    "R-12_360_Guest.json",
+    "R-12_360_Signed-in.json"
+   ],
+   "page": "11183:175794",
+   "pageName": "Screens / R1b Repository (R-08~R-15)",
+   "variants": 14,
+   "variantProps": [
+    "Breakpoint",
+    "Auth",
+    "Role"
+   ],
+   "sidebarCurrent": [
+    "Project/작업 항목"
+   ],
+   "code": {
+    "path": "/projects/150/issues/55",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [
+     "viewer",
+     "developer",
+     "owner"
+    ],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-13",
+   "figmaSet": "R-13 Issue board",
+   "oldName": "R-13 이슈 보드",
+   "nodeId": "11061:256987",
+   "route": "/projects/150/boards",
+   "figmaBoxes": [
+    "R-13_1920_Guest.json",
+    "R-13_1920_Signed-in.json",
+    "R-13_360_Guest.json",
+    "R-13_360_Signed-in.json"
+   ],
+   "page": "11183:175794",
+   "pageName": "Screens / R1b Repository (R-08~R-15)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/이슈 보드"
+   ],
+   "code": {
+    "path": "/projects/150/boards",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-14",
+   "figmaSet": "R-14 Labels",
+   "oldName": "R-14 라벨",
+   "nodeId": "11061:263559",
+   "route": "/projects/150/labels",
+   "figmaBoxes": [
+    "R-14_1920_Guest.json",
+    "R-14_1920_Signed-in.json",
+    "R-14_360_Guest.json",
+    "R-14_360_Signed-in.json"
+   ],
+   "page": "11183:175794",
+   "pageName": "Screens / R1b Repository (R-08~R-15)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/라벨"
+   ],
+   "code": {
+    "path": "/projects/150/labels",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-15",
+   "figmaSet": "R-15 Milestones",
+   "oldName": "R-15 마일스톤",
+   "nodeId": "11061:269891",
+   "route": "/projects/150/milestones",
+   "figmaBoxes": [
+    "R-15_1920_Guest.json",
+    "R-15_1920_Signed-in.json",
+    "R-15_360_Guest.json",
+    "R-15_360_Signed-in.json"
+   ],
+   "page": "11183:175794",
+   "pageName": "Screens / R1b Repository (R-08~R-15)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/마일스톤"
+   ],
+   "code": {
+    "path": "/projects/150/milestones",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-16",
+   "figmaSet": "R-16 Merge request list",
+   "oldName": "R-16 변경 제안 목록",
+   "nodeId": "11061:276993",
+   "route": "/projects/150/merge-requests",
+   "figmaBoxes": [
+    "R-16_1920_Guest.json",
+    "R-16_1920_Signed-in.json",
+    "R-16_360_Guest.json",
+    "R-16_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/머지 리퀘스트"
+   ],
+   "code": {
+    "path": "/projects/150/merge-requests",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-17",
+   "figmaSet": "R-17 Merge request detail",
+   "oldName": "R-17 변경 제안 상세",
+   "nodeId": "11061:536901",
+   "route": "/projects/150/merge-requests/56",
+   "figmaBoxes": [
+    "R-17_1920_Guest.json",
+    "R-17_1920_Signed-in.json",
+    "R-17_360_Guest.json",
+    "R-17_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 14,
+   "variantProps": [
+    "Breakpoint",
+    "Auth",
+    "Role"
+   ],
+   "sidebarCurrent": [
+    "Project/머지 리퀘스트"
+   ],
+   "code": {
+    "path": "/projects/150/merge-requests/56",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [
+     "viewer",
+     "developer",
+     "owner"
+    ],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-18",
+   "figmaSet": "R-18 Pipelines",
+   "oldName": "R-18 파이프라인",
+   "nodeId": "11061:290727",
+   "route": "/projects/150/pipelines",
+   "figmaBoxes": [
+    "R-18_1920_Guest.json",
+    "R-18_1920_Signed-in.json",
+    "R-18_360_Guest.json",
+    "R-18_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/파이프라인"
+   ],
+   "code": {
+    "path": "/projects/150/pipelines",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-19",
+   "figmaSet": "R-19 Jobs and artifacts",
+   "oldName": "R-19 작업과 결과물",
+   "nodeId": "11061:297089",
+   "route": "/projects/150/jobs",
+   "figmaBoxes": [
+    "R-19_1920_Guest.json",
+    "R-19_1920_Signed-in.json",
+    "R-19_360_Guest.json",
+    "R-19_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/작업"
+   ],
+   "code": {
+    "path": "/projects/150/jobs",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-20",
+   "figmaSet": "R-20 Packages",
+   "oldName": "R-20 패키지",
+   "nodeId": "11061:303401",
+   "route": "/projects/150/packages",
+   "figmaBoxes": [
+    "R-20_1920_Guest.json",
+    "R-20_1920_Signed-in.json",
+    "R-20_360_Guest.json",
+    "R-20_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/패키지 레지스트리"
+   ],
+   "code": {
+    "path": "/projects/150/packages",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-21",
+   "figmaSet": "R-21 Wiki",
+   "oldName": "R-21 위키",
+   "nodeId": "11061:309909",
+   "route": "/projects/150/wiki",
+   "figmaBoxes": [
+    "R-21_1920_Guest.json",
+    "R-21_1920_Signed-in.json",
+    "R-21_360_Guest.json",
+    "R-21_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/위키"
+   ],
+   "code": {
+    "path": "/projects/150/wiki",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-22",
+   "figmaSet": "R-22 Snippets",
+   "oldName": "R-22 스니펫",
+   "nodeId": "11061:316241",
+   "route": "/projects/150/snippets",
+   "figmaBoxes": [
+    "R-22_1920_Guest.json",
+    "R-22_1920_Signed-in.json",
+    "R-22_360_Guest.json",
+    "R-22_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/스니펫"
+   ],
+   "code": {
+    "path": "/projects/150/snippets",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-23",
+   "figmaSet": "R-23 Members",
+   "oldName": "R-23 멤버",
+   "nodeId": "11061:579073",
+   "route": "/projects/150/members",
+   "figmaBoxes": [
+    "R-23_1920_Guest.json",
+    "R-23_1920_Signed-in.json",
+    "R-23_360_Guest.json",
+    "R-23_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 14,
+   "variantProps": [
+    "Breakpoint",
+    "Auth",
+    "Role"
+   ],
+   "sidebarCurrent": [
+    "Project/멤버"
+   ],
+   "code": {
+    "path": "/projects/150/members",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [
+     "viewer",
+     "developer",
+     "owner"
+    ],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-24",
+   "figmaSet": "R-24 Activity",
+   "oldName": "R-24 활동",
+   "nodeId": "11061:338040",
+   "route": "/projects/150/activity",
+   "figmaBoxes": [
+    "R-24_1920_Guest.json",
+    "R-24_1920_Signed-in.json",
+    "R-24_360_Guest.json",
+    "R-24_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/활동"
+   ],
+   "code": {
+    "path": "/projects/150/activity",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-25",
+   "figmaSet": "R-25 Repository analytics",
+   "oldName": "R-25 저장소 분석",
+   "nodeId": "11061:344455",
+   "route": "/projects/150/graph",
+   "figmaBoxes": [
+    "R-25_1920_Guest.json",
+    "R-25_1920_Signed-in.json",
+    "R-25_360_Guest.json",
+    "R-25_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/리포지토리 분석"
+   ],
+   "code": {
+    "path": "/projects/150/graph",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-26",
+   "figmaSet": "R-26 Settings",
+   "oldName": "R-26 설정",
+   "nodeId": "11061:589004",
+   "route": "/projects/150/settings",
+   "figmaBoxes": [
+    "R-26_1920_Guest.json",
+    "R-26_1920_Signed-in.json",
+    "R-26_360_Guest.json",
+    "R-26_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 14,
+   "variantProps": [
+    "Breakpoint",
+    "Auth",
+    "Role"
+   ],
+   "sidebarCurrent": [],
+   "code": {
+    "path": "/projects/150/settings",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [
+     "viewer",
+     "developer",
+     "owner"
+    ],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-27",
+   "figmaSet": "R-27 New file",
+   "oldName": "R-27 새 파일",
+   "nodeId": "11061:358161",
+   "route": "/projects/150/new",
+   "figmaBoxes": [
+    "R-27_1920_Guest.json",
+    "R-27_1920_Signed-in.json",
+    "R-27_360_Guest.json",
+    "R-27_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/리포지토리"
+   ],
+   "code": {
+    "path": "/projects/150/new",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-28",
+   "figmaSet": "R-28 Upload file",
+   "oldName": "R-28 파일 올리기",
+   "nodeId": "11061:364746",
+   "route": "/projects/150/upload",
+   "figmaBoxes": [
+    "R-28_1920_Guest.json",
+    "R-28_1920_Signed-in.json",
+    "R-28_360_Guest.json",
+    "R-28_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/리포지토리"
+   ],
+   "code": {
+    "path": "/projects/150/upload",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-29",
+   "figmaSet": "R-29 New branch",
+   "oldName": "R-29 새 브랜치",
+   "nodeId": "11061:371296",
+   "route": "/projects/150/branches/new",
+   "figmaBoxes": [
+    "R-29_1920_Guest.json",
+    "R-29_1920_Signed-in.json",
+    "R-29_360_Guest.json",
+    "R-29_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/브랜치"
+   ],
+   "code": {
+    "path": "/projects/150/branches/new",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "R-30",
+   "figmaSet": "R-30 How to use",
+   "oldName": "R-30 사용 방법",
+   "nodeId": "11061:384366",
+   "route": "/projects/150/use",
+   "figmaBoxes": [
+    "R-30_1920_Guest.json",
+    "R-30_1920_Signed-in.json",
+    "R-30_360_Guest.json",
+    "R-30_360_Signed-in.json"
+   ],
+   "page": "11126:555821",
+   "pageName": "Screens / R2 Repository (R-16~R-30)",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/리포지토리"
+   ],
+   "code": {
+    "path": "/projects/150/use",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-01",
+   "figmaSet": "G-01 Explore",
+   "oldName": "G-01 탐색",
+   "nodeId": "11061:390861",
+   "route": "/explore",
+   "figmaBoxes": [
+    "G-01_1920_Guest.json",
+    "G-01_1920_Signed-in.json",
+    "G-01_360_Guest.json",
+    "G-01_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 11,
+   "variantProps": [
+    "Breakpoint",
+    "Auth",
+    "Drawer"
+   ],
+   "sidebarCurrent": [
+    "Explore/프로젝트"
+   ],
+   "code": {
+    "path": "/",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {
+     "Drawer": "1200 미만 서랍(.rb-gbar-navtoggle 클릭)"
+    }
+   }
+  },
+  {
+   "screen": "G-02",
+   "figmaSet": "G-02 Search results",
+   "oldName": "G-02 검색 결과",
+   "nodeId": "11061:398041",
+   "route": "/search?q=kordoc",
+   "figmaBoxes": [
+    "G-02_1920_Guest.json",
+    "G-02_1920_Signed-in.json",
+    "G-02_360_Guest.json",
+    "G-02_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/프로젝트"
+   ],
+   "code": {
+    "path": "/search?q=kordoc",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-03",
+   "figmaSet": "G-03 Topics",
+   "oldName": "G-03 주제",
+   "nodeId": "11061:403196",
+   "route": "/fields",
+   "figmaBoxes": [
+    "G-03_1920_Guest.json",
+    "G-03_1920_Signed-in.json",
+    "G-03_360_Guest.json",
+    "G-03_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/주제"
+   ],
+   "code": {
+    "path": "/explore/topics",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-04",
+   "figmaSet": "G-04 Organizations",
+   "oldName": "G-04 기관",
+   "nodeId": "11061:409111",
+   "route": "/organizations",
+   "figmaBoxes": [
+    "G-04_1920_Guest.json",
+    "G-04_1920_Signed-in.json",
+    "G-04_360_Guest.json",
+    "G-04_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/그룹"
+   ],
+   "code": {
+    "path": "/organizations",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-05",
+   "figmaSet": "G-05 New project",
+   "oldName": "G-05 새 프로젝트",
+   "nodeId": "11061:414606",
+   "route": "/projects/new",
+   "figmaBoxes": [
+    "G-05_1920_Guest.json",
+    "G-05_1920_Signed-in.json",
+    "G-05_360_Guest.json",
+    "G-05_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/프로젝트"
+   ],
+   "code": {
+    "path": "/projects/new",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-06",
+   "figmaSet": "G-06 My work",
+   "oldName": "G-06 내 작업",
+   "nodeId": "11061:419731",
+   "route": "/my",
+   "figmaBoxes": [
+    "G-06_1920_Guest.json",
+    "G-06_1920_Signed-in.json",
+    "G-06_360_Guest.json",
+    "G-06_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/프로젝트"
+   ],
+   "code": {
+    "path": "/my",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-07",
+   "figmaSet": "G-07 Notifications",
+   "oldName": "G-07 알림",
+   "nodeId": "11061:424776",
+   "route": "/notifications",
+   "figmaBoxes": [
+    "G-07_1920_Guest.json",
+    "G-07_1920_Signed-in.json",
+    "G-07_360_Guest.json",
+    "G-07_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/프로젝트"
+   ],
+   "code": {
+    "path": "/notifications",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-08",
+   "figmaSet": "G-08 Sign in",
+   "oldName": "G-08 로그인",
+   "nodeId": "11061:471287",
+   "route": "/login",
+   "figmaBoxes": [
+    "G-08_1920_Guest.json",
+    "G-08_1920_Signed-in.json",
+    "G-08_360_Guest.json",
+    "G-08_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [],
+   "code": {
+    "path": "/login",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-08b",
+   "figmaSet": "G-08b Sign in failed",
+   "oldName": "G-08b 로그인 실패",
+   "nodeId": "11061:476170",
+   "route": "/login/failed",
+   "figmaBoxes": [
+    "G-08b_1920_Guest.json",
+    "G-08b_1920_Signed-in.json",
+    "G-08b_360_Guest.json",
+    "G-08b_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [],
+   "code": {
+    "path": "/login/failed",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-08c",
+   "figmaSet": "G-08c Two-factor authentication",
+   "oldName": "G-08c 2단계 인증",
+   "nodeId": "11061:480679",
+   "route": "/login/otp",
+   "figmaBoxes": [
+    "G-08c_1920_Guest.json",
+    "G-08c_1920_Signed-in.json",
+    "G-08c_360_Guest.json",
+    "G-08c_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [],
+   "code": {
+    "path": "/login/otp",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-08d",
+   "figmaSet": "G-08d Register account",
+   "oldName": "G-08d 계정 등록",
+   "nodeId": "11061:485962",
+   "route": "/register",
+   "figmaBoxes": [
+    "G-08d_1920_Guest.json",
+    "G-08d_1920_Signed-in.json",
+    "G-08d_360_Guest.json",
+    "G-08d_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [],
+   "code": {
+    "path": "/register",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-08e",
+   "figmaSet": "G-08e Reset password",
+   "oldName": "G-08e 비밀번호 찾기",
+   "nodeId": "11061:490455",
+   "route": "/password",
+   "figmaBoxes": [
+    "G-08e_1920_Guest.json",
+    "G-08e_1920_Signed-in.json",
+    "G-08e_360_Guest.json",
+    "G-08e_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [],
+   "code": {
+    "path": "/password",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-09",
+   "figmaSet": "G-09 Error",
+   "oldName": "G-09 오류",
+   "nodeId": "11061:453801",
+   "route": "/error",
+   "figmaBoxes": [
+    "G-09_1920_Guest.json",
+    "G-09_1920_Signed-in.json",
+    "G-09_360_Guest.json",
+    "G-09_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/프로젝트"
+   ],
+   "code": {
+    "path": "/error",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-10",
+   "figmaSet": "G-10 Help",
+   "oldName": "G-10 도움말",
+   "nodeId": "11061:439285",
+   "route": "/help",
+   "figmaBoxes": [
+    "G-10_1920_Guest.json",
+    "G-10_1920_Signed-in.json",
+    "G-10_360_Guest.json",
+    "G-10_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/도움말"
+   ],
+   "code": {
+    "path": "/help",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "G-11",
+   "figmaSet": "G-11 My settings",
+   "oldName": "G-11 내 설정",
+   "nodeId": "11061:444375",
+   "route": "/settings",
+   "figmaBoxes": [
+    "G-11_1920_Guest.json",
+    "G-11_1920_Signed-in.json",
+    "G-11_360_Guest.json",
+    "G-11_360_Signed-in.json"
+   ],
+   "page": "11061:89542",
+   "pageName": "Screens / G Global",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/프로젝트"
+   ],
+   "code": {
+    "path": "/settings",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "A-01",
+   "figmaSet": "A-01 Find by task",
+   "oldName": "A-01 업무로 찾기",
+   "nodeId": "11061:460019",
+   "route": "/",
+   "figmaBoxes": [
+    "A-01_1920_Guest.json",
+    "A-01_1920_Signed-in.json",
+    "A-01_360_Guest.json",
+    "A-01_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/업무로 찾기"
+   ],
+   "code": {
+    "path": "/search?q=%ED%9A%8C%EC%9D%98%EB%A1%9D",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {},
+    "note": "업무로 찾기는 검색 결과 화면의 업무 절(P02_Search). 첫 화면(/)은 G-01"
+   }
+  },
+  {
+   "screen": "A-02",
+   "figmaSet": "A-02 AI intro card",
+   "oldName": "A-02 AI 소개 카드",
+   "nodeId": "11061:466424",
+   "route": "/projects/150/about",
+   "figmaBoxes": [
+    "A-02_1920_Guest.json",
+    "A-02_1920_Signed-in.json",
+    "A-02_360_Guest.json",
+    "A-02_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/개요"
+   ],
+   "code": {
+    "path": "/projects/150/about",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "A-03",
+   "figmaSet": "A-03 Publish readiness check",
+   "oldName": "A-03 공개 준비 점검",
+   "nodeId": "11061:543596",
+   "route": "/projects/150/publish-check",
+   "figmaBoxes": [
+    "A-03_1920_Guest.json",
+    "A-03_1920_Signed-in.json",
+    "A-03_360_Guest.json",
+    "A-03_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/공개 준비 점검"
+   ],
+   "code": {
+    "path": "/projects/150/publish-check",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "A-04",
+   "figmaSet": "A-04 Feedback",
+   "oldName": "A-04 의견",
+   "nodeId": "11061:503700",
+   "route": "/projects/150/feedback",
+   "figmaBoxes": [
+    "A-04_1920_Guest.json",
+    "A-04_1920_Signed-in.json",
+    "A-04_360_Guest.json",
+    "A-04_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/개요"
+   ],
+   "code": {
+    "path": "/projects/150/feedback",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "A-05",
+   "figmaSet": "A-05 Request board",
+   "oldName": "A-05 요청 보드",
+   "nodeId": "11061:509025",
+   "route": "/requests",
+   "figmaBoxes": [
+    "A-05_1920_Guest.json",
+    "A-05_1920_Signed-in.json",
+    "A-05_360_Guest.json",
+    "A-05_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/요청 보드"
+   ],
+   "code": {
+    "path": "/requests",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "A-06",
+   "figmaSet": "A-06 Operations dashboard",
+   "oldName": "A-06 운영 현황판",
+   "nodeId": "11061:514410",
+   "route": "/insights",
+   "figmaBoxes": [
+    "A-06_1920_Guest.json",
+    "A-06_1920_Signed-in.json",
+    "A-06_360_Guest.json",
+    "A-06_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/운영 현황판"
+   ],
+   "code": {
+    "path": "/insights",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "A-07",
+   "figmaSet": "A-07 AI coding tool connection",
+   "oldName": "A-07 AI 코딩 도구 연결",
+   "nodeId": "11061:519365",
+   "route": "/mcp",
+   "figmaBoxes": [
+    "A-07_1920_Guest.json",
+    "A-07_1920_Signed-in.json",
+    "A-07_360_Guest.json",
+    "A-07_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/도움말"
+   ],
+   "code": {
+    "path": "/mcp",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "A-08",
+   "figmaSet": "A-08 Handover document",
+   "oldName": "A-08 인수인계 문서",
+   "nodeId": "11061:526030",
+   "route": "/projects/150/handover",
+   "figmaBoxes": [
+    "A-08_1920_Guest.json",
+    "A-08_1920_Signed-in.json",
+    "A-08_360_Guest.json",
+    "A-08_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/개요"
+   ],
+   "code": {
+    "path": "/projects/150/handover",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "A-09",
+   "figmaSet": "A-09 Collaboration and recruiting",
+   "oldName": "A-09 협업과 팀원 모집",
+   "nodeId": "11067:1021714",
+   "route": "/collaborate",
+   "figmaBoxes": [
+    "A-09_1920_Guest.json",
+    "A-09_1920_Signed-in.json",
+    "A-09_360_Guest.json",
+    "A-09_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/협업 모집"
+   ],
+   "code": {
+    "path": "/collaborate",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "A-10",
+   "figmaSet": "A-10 Law and standard change alerts",
+   "oldName": "A-10 법령과 기준 변경 알림",
+   "nodeId": "11067:1026649",
+   "route": "/projects/150/law-alerts",
+   "figmaBoxes": [
+    "A-10_1920_Guest.json",
+    "A-10_1920_Signed-in.json",
+    "A-10_360_Guest.json",
+    "A-10_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Project/법령 변경 알림"
+   ],
+   "code": {
+    "path": "/projects/150/law-alerts",
+    "query": {
+     "fixture": "kordoc"
+    },
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  },
+  {
+   "screen": "A-11",
+   "figmaSet": "A-11 Development checklist by stage",
+   "oldName": "A-11 단계별 개발 점검표",
+   "nodeId": "11067:1032064",
+   "route": "/checklist",
+   "figmaBoxes": [
+    "A-11_1920_Guest.json",
+    "A-11_1920_Signed-in.json",
+    "A-11_360_Guest.json",
+    "A-11_360_Signed-in.json"
+   ],
+   "page": "11061:89543",
+   "pageName": "Screens / A Add-ons",
+   "variants": 10,
+   "variantProps": [
+    "Breakpoint",
+    "Auth"
+   ],
+   "sidebarCurrent": [
+    "Explore/프로젝트"
+   ],
+   "code": {
+    "path": "/checklist",
+    "query": {},
+    "breakpoints": [
+     1920,
+     1440,
+     1024,
+     768,
+     360
+    ],
+    "auth": [
+     "Guest",
+     "Signed-in"
+    ],
+    "authSwitch": "?auth=Signed-in(개발 서버만, api/devState.js)",
+    "roles": [],
+    "variantsInCode": {}
+   }
+  }
+ ],
+ "boxes": {
+  "masthead": {
+   "figmaNodeMatch": "/^masthead/.test(n.name)",
+   "inCode": false
+  },
+  "header": {
+   "figmaNodeMatch": "n.name === 'app_header' || n.name === 'App header'",
+   "inCode": true
+  },
+  "global-search": {
+   "figmaNodeMatch": "n.name === 'Global search'",
+   "inCode": true
+  },
+  "sidebar": {
+   "figmaNodeMatch": "n.name === 'repo_sidebar' || n.name === 'Sidebar' || n.name === 'Global sidebar' || n.name === 'global_sidebar'",
+   "inCode": true
+  },
+  "sidebar-nav": {
+   "figmaNodeMatch": "n.name === 'Project navigation' || n.name === 'Global navigation'",
+   "inCode": true
+  },
+  "body": {
+   "figmaNodeMatch": "n.name === 'Body'",
+   "inCode": true
+  },
+  "main": {
+   "figmaNodeMatch": "n.name === 'Main content'",
+   "inCode": true
+  },
+  "breadcrumb": {
+   "figmaNodeMatch": "n.name === 'Breadcrumb'",
+   "inCode": true
+  },
+  "repo-title": {
+   "figmaNodeMatch": "n.name === 'Repo title'",
+   "inCode": true
+  },
+  "repo-actions": {
+   "figmaNodeMatch": "n.name === 'Repo actions'",
+   "inCode": true
+  },
+  "toolbar": {
+   "figmaNodeMatch": "n.name === 'Toolbar' || n.name === 'Repo toolbar'",
+   "inCode": true
+  },
+  "commit-bar": {
+   "figmaNodeMatch": "n.name === 'Commit bar' || n.name === 'commit_bar'",
+   "inCode": true
+  },
+  "file-table": {
+   "figmaNodeMatch": "n.name === 'File table'",
+   "inCode": true
+  },
+  "code-view": {
+   "figmaNodeMatch": "n.name === 'Code view'",
+   "inCode": false
+  },
+  "readme": {
+   "figmaNodeMatch": "n.name === 'README' || n.name === 'Readme'",
+   "inCode": true
+  },
+  "info-panel": {
+   "figmaNodeMatch": "n.name === 'Info panel' || n.name === 'project_info'",
+   "inCode": true
+  },
+  "about": {
+   "figmaNodeMatch": "n.name === 'About' || n.name === 'what it does'",
+   "inCode": true
+  },
+  "decision-panel": {
+   "figmaNodeMatch": "n.name === 'Decision panel' || n.name === 'before use'",
+   "inCode": true
+  },
+  "meta-panel": {
+   "figmaNodeMatch": "n.name === 'Meta panel'",
+   "inCode": false
+  },
+  "detail-area": {
+   "figmaNodeMatch": "n.name === 'Detail area'",
+   "inCode": false
+  },
+  "diff-area": {
+   "figmaNodeMatch": "n.name === 'Diff area'",
+   "inCode": false
+  },
+  "diff-tree": {
+   "figmaNodeMatch": "n.name === 'Diff tree'",
+   "inCode": false
+  },
+  "diff-file": {
+   "figmaNodeMatch": "n.name === 'Diff file'",
+   "inCode": false
+  },
+  "tabs": {
+   "figmaNodeMatch": "n.name === 'Tabs'",
+   "inCode": true
+  },
+  "section-title": {
+   "figmaNodeMatch": "n.name === 'Section title'",
+   "inCode": true
+  },
+  "filters": {
+   "figmaNodeMatch": "n.name === 'Filters'",
+   "inCode": false
+  },
+  "search": {
+   "figmaNodeMatch": "n.name === 'Search'",
+   "inCode": true
+  },
+  "results": {
+   "figmaNodeMatch": "n.name === 'Results'",
+   "inCode": false
+  },
+  "login-card": {
+   "figmaNodeMatch": "n.name === 'Login card'",
+   "inCode": true
+  },
+  "comment-editor": {
+   "figmaNodeMatch": "n.name === 'Comment editor'",
+   "inCode": false
+  },
+  "steps": {
+   "figmaNodeMatch": "n.name === 'Steps'",
+   "inCode": false
+  },
+  "checks": {
+   "figmaNodeMatch": "n.name === 'Checks'",
+   "inCode": true
+  },
+  "footer": {
+   "figmaNodeMatch": "/^footer/.test(n.name)",
+   "inCode": true
+  },
+  "tabbar": {
+   "figmaNodeMatch": "/^tab_?bar|^Tab bar|^tabbar/i.test(n.name)",
+   "inCode": true
+  },
+  "repo-tabs": {
+   "figmaNodeMatch": "n.name === 'repo_tabs'",
+   "inCode": false
+  },
+  "repo-path": {
+   "figmaNodeMatch": "n.name === 'Repo path'",
+   "inCode": false
+  },
+  "detail-path": {
+   "figmaNodeMatch": "n.name === 'Detail path'",
+   "inCode": false
+  },
+  "file-path": {
+   "figmaNodeMatch": "n.name === 'File path'",
+   "inCode": false
+  },
+  "file-bar": {
+   "figmaNodeMatch": "n.name === 'File bar'",
+   "inCode": false
+  },
+  "preview": {
+   "figmaNodeMatch": "n.name === 'Preview'",
+   "inCode": false
+  },
+  "dock-panel": {
+   "figmaNodeMatch": "n.name === 'dock_panel'",
+   "inCode": false
+  },
+  "collapse-sidebar": {
+   "figmaNodeMatch": "n.name === 'Collapse sidebar'",
+   "inCode": false
+  }
+ },
+ "codeTagsWithoutFigmaMatch": [],
+ "productComponents": [
+  {
+   "id": "11117:966524",
+   "name": "product/brand_logo",
+   "section": "Brand",
+   "properties": [
+    "Size"
+   ],
+   "variants": [
+    "Size=24",
+    "Size=20"
+   ],
+   "description": "공공 깃랩 로고 벡터(Size 24 머리글, 20 바닥글). 로고 고유색 예외"
+  },
+  {
+   "id": "11117:1128386",
+   "name": "product/brand_mois",
+   "section": "Brand",
+   "properties": [],
+   "variants": [],
+   "description": "행정안전부 MI(mois-logo-inline.svg 벡터). 판 없음. 글자는 color/text/basic 변수(어두운 화면에서 밝게), 태극 #023863/#e4042e는 로고 고유색(D-15 예외)"
+  },
+  {
+   "id": "11061:316526",
+   "name": "product/app_header",
+   "section": "Layout",
+   "properties": [
+    "Repo path#11117:0",
+    "Owner#11117:7",
+    "Repo name#11117:14",
+    "Auth",
+    "Breakpoint"
+   ],
+   "variants": [
+    "Auth=Guest, Breakpoint=1920",
+    "Auth=Guest, Breakpoint=360",
+    "Auth=Signed-in, Breakpoint=1920",
+    "Auth=Signed-in, Breakpoint=360",
+    "Auth=Guest, Breakpoint=1024",
+    "Auth=Signed-in, Breakpoint=1024"
+   ],
+   "description": "머리글 64. 왼쪽 로고+공공 깃랩, 탐색, 저장소 경로(Repo path 속성), 가운데 검색, 오른쪽 GitHub식 아이콘 버튼. Auth, Breakpoint"
+  },
+  {
+   "id": "11115:529891",
+   "name": "product/repo_tabs",
+   "section": "Layout",
+   "properties": [
+    "Current"
+   ],
+   "variants": [
+    "Current=code",
+    "Current=issues",
+    "Current=mr",
+    "Current=pipelines",
+    "Current=wiki",
+    "Current=insights",
+    "Current=settings",
+    "Current=more",
+    "Current=howto"
+   ],
+   "description": "저장소 탭 줄 48(KRDS tab__atomic line). Current=선택 탭. 오른쪽 끝 정보 버튼"
+  },
+  {
+   "id": "11117:1000160",
+   "name": "product/footer",
+   "section": "Layout",
+   "properties": [
+    "Size"
+   ],
+   "variants": [
+    "Size=pc",
+    "Size=mo"
+   ],
+   "description": "바닥글. 로고+이름, 링크(15, 간격 24), 구분선, 13 문장. 본문 컨테이너 왼쪽 선에 맞춤"
+  },
+  {
+   "id": "11115:608531",
+   "name": "product/dock_panel",
+   "section": "Layout",
+   "properties": [
+    "Panel"
+   ],
+   "variants": [
+    "Panel=Open",
+    "Panel=Closed",
+    "Panel=Sheet"
+   ],
+   "description": "정보 도킹 패널. Panel=Closed/Open(폭 360, 본문 밀어냄)/Sheet(768 이하 바텀시트). D-18 4장"
+  },
+  {
+   "id": "11115:452163",
+   "name": "product/global_sidebar",
+   "section": "Layout",
+   "properties": [
+    "Auth"
+   ],
+   "variants": [
+    "Auth=Guest",
+    "Auth=Signed-in"
+   ],
+   "description": "전역 목록 화면(내 작업, 알림) 왼쪽 메뉴 266, 접기 버튼. D-18"
+  },
+  {
+   "id": "11117:521649",
+   "name": "product/menu",
+   "section": "Navigation",
+   "properties": [
+    "Kind"
+   ],
+   "variants": [
+    "Kind=more",
+    "Kind=code",
+    "Kind=add-file",
+    "Kind=new",
+    "Kind=branch",
+    "Kind=sort",
+    "Kind=settings",
+    "Kind=avatar",
+    "Kind=project-more"
+   ],
+   "description": "메뉴(더보기, 코드, 파일 추가, 새로 만들기, 브랜치, 정렬, 화면 설정, 아바타, 프로젝트 더보기). 항목 32, 한 줄, 폭 160~320. UX/07 12장"
+  },
+  {
+   "id": "11061:89605",
+   "name": "product/file_row",
+   "section": "Data display",
+   "properties": [
+    "Type",
+    "State"
+   ],
+   "variants": [
+    "Type=folder, State=Ideal",
+    "Type=file, State=Ideal",
+    "Type=folder, State=Min",
+    "Type=file, State=Min",
+    "Type=file, State=Max"
+   ],
+   "description": "파일 표 한 행. 이름(아이콘+파일명), 마지막 커밋 메시지, 시간. 예: R-01, R-02 파일 표"
+  },
+  {
+   "id": "11061:89728",
+   "name": "product/result_row",
+   "section": "Data display",
+   "properties": [
+    "State"
+   ],
+   "variants": [
+    "State=Ideal",
+    "State=Min",
+    "State=Max"
+   ],
+   "description": "검색 결과 항목(제목 링크, 설명 한 줄, 주제, 메타). 예: G-02"
+  },
+  {
+   "id": "11061:89755",
+   "name": "product/issue_row",
+   "section": "Data display",
+   "properties": [
+    "State"
+   ],
+   "variants": [
+    "State=open",
+    "State=closed"
+   ],
+   "description": "작업 항목 목록 행(상태 아이콘, 제목, 메타). 예: R-11"
+  },
+  {
+   "id": "11061:89776",
+   "name": "product/mr_row",
+   "section": "Data display",
+   "properties": [
+    "State"
+   ],
+   "variants": [
+    "State=open",
+    "State=merged"
+   ],
+   "description": "머지 리퀘스트 목록 행. 예: R-16"
+  },
+  {
+   "id": "11061:89797",
+   "name": "product/notify_row",
+   "section": "Data display",
+   "properties": [
+    "State"
+   ],
+   "variants": [
+    "State=unread",
+    "State=read"
+   ],
+   "description": "알림 행(읽음/안읽음). 예: G-07"
+  },
+  {
+   "id": "11061:89695",
+   "name": "product/commit_bar",
+   "section": "Data display",
+   "properties": [
+    "State"
+   ],
+   "variants": [
+    "State=Ideal",
+    "State=Min"
+   ],
+   "description": "최근 커밋 막대(작성자, 메시지, 해시, 이력). 예: R-01 파일 표 위"
+  },
+  {
+   "id": "11061:89647",
+   "name": "product/status_block",
+   "section": "Feedback",
+   "properties": [
+    "State"
+   ],
+   "variants": [
+    "State=Empty",
+    "State=Loading",
+    "State=Error"
+   ],
+   "description": "빈 상태/불러오는 중/오류. 제목 한 줄, 설명, 동작 버튼 하나(D-15 3장). 예: G-06 로그인 전 내 작업"
+  }
+ ],
+ "variantProperties": "Breakpoint, Auth, Role, Panel (대문자, 2026. 10. 30. 개명). figma_boxes 파일 이름은 그대로 화면번호_폭_auth.json",
+ "screenPages": {
+  "R-01~R-15": "Screens / R1 Repository (R-01~R-15)",
+  "R-16~R-30": "Screens / R2 Repository (R-16~R-30)",
+  "G": "Screens / G Global",
+  "A": "Screens / A Add-ons"
+ },
+ "components": [
+  {
+   "id": "11117:966524",
+   "name": "product/brand_logo",
+   "variants": 2
+  },
+  {
+   "id": "11117:1128386",
+   "name": "product/brand_mois",
+   "variants": 1
+  },
+  {
+   "id": "11129:610119",
+   "name": "product/brand_mois_horizontal",
+   "variants": 1
+  },
+  {
+   "id": "11061:316526",
+   "name": "product/app_header",
+   "variants": 6
+  },
+  {
+   "id": "11115:529891",
+   "name": "product/repo_tabs",
+   "variants": 9
+  },
+  {
+   "id": "11117:1000160",
+   "name": "product/footer",
+   "variants": 2
+  },
+  {
+   "id": "11115:608531",
+   "name": "product/dock_panel",
+   "variants": 7
+  },
+  {
+   "id": "11115:452163",
+   "name": "product/global_sidebar",
+   "variants": 2
+  },
+  {
+   "id": "11129:707378",
+   "name": "product/system_band",
+   "variants": 1
+  },
+  {
+   "id": "11129:707539",
+   "name": "product/gitlab_topbar",
+   "variants": 4
+  },
+  {
+   "id": "11129:707797",
+   "name": "product/gitlab_sidebar",
+   "variants": 39
+  },
+  {
+   "id": "11117:521649",
+   "name": "product/menu",
+   "variants": 9
+  },
+  {
+   "id": "11141:691397",
+   "name": "product/sidebar_item",
+   "variants": 8
+  },
+  {
+   "id": "11061:89605",
+   "name": "product/file_row",
+   "variants": 28
+  },
+  {
+   "id": "11061:89755",
+   "name": "product/issue_row",
+   "variants": 2
+  },
+  {
+   "id": "11061:89776",
+   "name": "product/mr_row",
+   "variants": 2
+  },
+  {
+   "id": "11061:89797",
+   "name": "product/notify_row",
+   "variants": 2
+  },
+  {
+   "id": "11061:89695",
+   "name": "product/commit_bar",
+   "variants": 2
+  },
+  {
+   "id": "11126:323469",
+   "name": "product/result_row",
+   "variants": 8
+  },
+  {
+   "id": "11129:724081",
+   "name": "product/explore_row",
+   "variants": 16
+  },
+  {
+   "id": "11061:89647",
+   "name": "product/status_block",
+   "variants": 3
+  },
+  {
+   "id": "11129:732859",
+   "name": "icon-ext/branch",
+   "variants": 1
+  },
+  {
+   "id": "11129:732865",
+   "name": "icon-ext/commit",
+   "variants": 1
+  },
+  {
+   "id": "11129:732869",
+   "name": "icon-ext/file-text",
+   "variants": 1
+  },
+  {
+   "id": "11129:732873",
+   "name": "icon-ext/file",
+   "variants": 1
+  },
+  {
+   "id": "11129:732877",
+   "name": "icon-ext/folder",
+   "variants": 1
+  },
+  {
+   "id": "11129:732881",
+   "name": "icon-ext/fork",
+   "variants": 1
+  },
+  {
+   "id": "11129:732887",
+   "name": "icon-ext/issues",
+   "variants": 1
+  },
+  {
+   "id": "11129:732891",
+   "name": "icon-ext/merge-request",
+   "variants": 1
+  },
+  {
+   "id": "11129:732897",
+   "name": "icon-ext/pipeline",
+   "variants": 1
+  },
+  {
+   "id": "11129:732902",
+   "name": "icon-ext/rocket",
+   "variants": 1
+  },
+  {
+   "id": "11129:732907",
+   "name": "icon-ext/star",
+   "variants": 1
+  },
+  {
+   "id": "11129:732910",
+   "name": "icon-ext/tag",
+   "variants": 1
+  }
+ ],
+ "layoutVariables": {
+  "collection": "layout",
+  "names": [
+   "layout/topbar-pad-x 16",
+   "layout/sidebar-inset 8",
+   "layout/sidebar-item-pad-y 8",
+   "layout/sidebar-item-pad-x 12",
+   "layout/panel-gap 8",
+   "layout/panel-radius 8",
+   "layout/container-max 1200",
+   "layout/container-pad-x-lg 48 (>=1280)",
+   "layout/container-pad-x-md 32 (1024~1279)",
+   "layout/container-pad-x 24 (768~1023)",
+   "layout/container-pad-x-sm 16 (<768)",
+   "layout/container-pad-y 24",
+   "layout/crumb-title-gap 24",
+   "layout/filter-list-gap 16",
+   "layout/row-pad-y 12",
+   "layout/gutter 24",
+   "layout/section-gap 24",
+   "layout/info-col 296"
+  ],
+  "code": "app/src/krds/layout.tokens.css --layout-*"
+ },
+ "structure": "D-21 공공 깃랩 구조: system_band + gitlab_topbar + Body[gitlab_sidebar(Scope/State/Current) + Content panel[Breadcrumb, Main content(최대 1200 가운데), footer]]",
+ "codeNote": "screens[].code: 코드 대조 경로(개발 서버 http://127.0.0.1:5731 + path + query). 측정은 app/scripts/export-code-boxes.js, 대조는 app/scripts/compare-parity.mjs(UX/audit_v3/parity_ledger.md)"
+}

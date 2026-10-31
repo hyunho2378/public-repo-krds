@@ -45,35 +45,38 @@ export default function Login() {
   return (
     <Page id="G-08" title={t.P10_2} state="Ideal">
       <div className="rb-login3">
-        <section className="rb-login3-side" aria-labelledby="login-notice-head" data-figma="login-notice">
-          <MoisLogo label={u.Login_moisAlt} />
+        <section className="rb-login3-side" aria-labelledby="login-notice-head">
+          <div className="rb-login3-side-in" data-figma="login-notice">
+          <MoisLogo label={u.Login_moisAlt} figma="login-logo" />
           {u.Login_notice.length ? (
-            <div className="rb-login3-notice" role="status">
+            <div className="rb-login3-notice" role="status" data-figma="notice-block">
               <h2 id="login-notice-head" className="rb-login3-notice-head">{u.Login_noticeHead}</h2>
               <p className="rb-login3-notice-title">{u.Login_notice[0]}</p>
               <p className="rb-login3-notice-date">{u.Login_notice[1]}</p>
-              {u.Login_notice.slice(2).map((line) => <p key={line}>{line}</p>)}
+              {u.Login_notice.slice(2).map((line, i) => <p key={line} className={i === 1 ? 'is-subtle' : undefined}>{line}</p>)}
             </div>
           ) : null}
+          </div>
         </section>
+        <span className="rb-login3-divider" data-figma="login-divider" aria-hidden="true" />
         <div className="rb-login3-main" data-figma="login-card">
           <h1 className="rb-login3-title">{t.P10_2}</h1>
           {reason === 'auth' ? <p className="rb-login2-alert" role="alert">{u.Login_needAuth}</p> : null}
           <form className="rb-login-form" onSubmit={submit}>
-            <FormField id="login-id" label={t.P12_idLabel} required value={id} onChange={(e) => setId(e.target.value)} autoComplete="off" placeholder={t.P12_idLabel} />
-            <FormField id="login-pw" label={t.P12_pwLabel} required type="password" value={pw} onChange={(e) => setPw(e.target.value)} autoComplete="off" placeholder={t.P12_pwLabel} />
-            <div className="rb-login-row">
+            <FormField figma="login-field" id="login-id" label={t.P12_idLabel} required value={id} onChange={(e) => setId(e.target.value)} autoComplete="off" placeholder={t.P12_idLabel} />
+            <FormField figma="login-field" id="login-pw" label={t.P12_pwLabel} required type="password" value={pw} onChange={(e) => setPw(e.target.value)} autoComplete="off" placeholder={t.P12_pwLabel} />
+            <div className="rb-login-row" data-figma="login-options">
               <div className="krds-form-check">
                 <input id="login-keep" type="checkbox" checked={keep} onChange={(e) => setKeep(e.target.checked)} />
                 <label htmlFor="login-keep">{t.P12_keep}</label>
               </div>
               <a className="krds-link" href={`${GITLAB}/users/password/new`} {...newWindow(String(t.P12_5))}>{t.P12_5}</a>
             </div>
-            <p className="krds-text-body-xsmall rb-subtle">{phrase(t.P12_noStore)}</p>
-            <button type="submit" className="krds-btn medium primary rb-login-submit">{t.P12_loginButton}</button>
+            <p className="krds-text-body-xsmall rb-subtle" data-figma="login-fact">{phrase(t.P12_noStore)}</p>
+            <button type="submit" className="krds-btn large primary rb-login-submit">{t.P12_loginButton}</button>
           </form>
-          <a className="krds-btn medium tertiary rb-login-submit" href={`${GITLAB}/users/sign_in`} {...newWindow(String(t.P12_passkeyButton2))}>{t.P12_passkeyButton2}</a>
-          <p className="krds-text-body-small rb-login-signup">
+          <a className="krds-btn large tertiary rb-login-submit" href={`${GITLAB}/users/sign_in`} {...newWindow(String(t.P12_passkeyButton2))}>{t.P12_passkeyButton2}</a>
+          <p className="krds-text-body-small rb-login-signup" data-figma="login-join">
             {t.P12_signupAsk}{' '}
             <a className="krds-link" href={`${GITLAB}/users/sign_up`} {...newWindow(String(t.P12_signupNow))}>{t.P12_signupNow}</a>
           </p>

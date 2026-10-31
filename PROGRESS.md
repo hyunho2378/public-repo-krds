@@ -114,3 +114,8 @@
 
 - [C1] 실제 대조 v2(UX/gitlab_compare/v2/c1b_*, 27장), 인터랙션 점검, 코드 갈래 지적 4건 반영. 남은 것: 폴더 뒤로 가기 스크롤 복원 안 됨(전역), 폴더 표 ".." 행 문구(RepoParts), 커밋 상세 브랜치/태그 줄 데이터(스냅샷에 refs 없음)
 - [C2] 감사 v3 P1 전부 반영 push(47e9e24 배포 확인), v2 비교 이미지 53장, 대조표 3-E. 남음: 보드 검색 막대, 파이프라인 표 생성자/스테이지, 일러스트 대체, Jobs 열, P26/P15는 공공 깃랩 캡처가 없는 덧붙임 화면이라 유지
+
+## 규칙: Figma 대 코드 전수 대조(2026. 10. 31.)
+- 화면을 고치면 개발 서버에서 `npm run measure:full`(playwright) 또는 Aside 탭에서 app/scripts/export-code-boxes.js로 code_plan/measured_full.json을 다시 만들고 `npm run check:parity`를 돌린다. 결과는 UX/audit_v3/parity_ledger.md(화면별 분류별 건수, 세부)와 audits/parity_ledger.json
+- 해소 규칙과 허용 목록: 원장 0절, code_plan/parity_allow.json(근거 필수). 이름표 규칙: UX/audit_v3/parity_names.md
+- 측정 창 높이는 Figma 변형 프레임 높이(최대 1400), 판 안 스크롤바는 숨기고 잰다. Signed-in은 개발 서버 ?auth=Signed-in 스위치

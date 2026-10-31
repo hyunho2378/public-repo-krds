@@ -99,7 +99,7 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-repo-name { font-size: var(--layout-title-project); line-height: var(--layout-title-project-lh); }
 
 /* 11. 상단 바(공공 깃랩 실측 1440): 검색 단추 폭 24vw(240~440) 높이 32 모서리 12, 등록 = 밝은 회색 채움(220 → gray-10), 로그인 = 어두운 회색 채움(rgba(137,136,141,.4) 위 합성 55 → gray-80) */
-#root .rb-gbar-search { flex: none; display: inline-flex; align-items: center; gap: var(--krds-gap-3); width: var(--layout-gsearch-w); max-width: none; height: var(--layout-topbar-btn-h); padding: 0 var(--krds-number-3) 0 var(--krds-number-5); border: var(--krds-border-width-static-regular) solid var(--krds-color-light-gray-70); border-radius: var(--krds-radius-xlarge1); background: var(--krds-color-light-gray-95); color: var(--layout-text-subtle); font: inherit; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); cursor: pointer; text-align: left; }
+#root .rb-gbar-search { flex: none; display: inline-flex; align-items: center; gap: var(--krds-gap-3); width: var(--layout-gsearch-w); max-width: none; height: var(--layout-topbar-btn-h); padding: 0 var(--krds-number-3) 0 var(--krds-number-5); border: var(--krds-border-width-static-regular) solid var(--krds-color-light-gray-80); border-radius: var(--krds-radius-xlarge1); background: var(--krds-color-light-gray-95); color: var(--layout-text-subtle); font: inherit; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); cursor: pointer; text-align: left; }
 #root .rb-gbar-search:hover { border-color: var(--krds-color-light-gray-50); }
 #root .rb-gbar-search .rb-gbar-search-text { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 #root .rb-gbar-in > .rb-gsearch { flex: 0 1 auto; width: auto; max-width: none; margin-inline: auto; }
@@ -250,28 +250,46 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .gl-box-head { min-height: var(--krds-number-14); height: var(--krds-number-14); padding-block: 0; box-sizing: border-box; }
 #root .gl-box-title { display: flex; align-items: center; min-height: var(--krds-number-14); padding-block: 0; box-sizing: border-box; }
 
-/* 21. 로그인(Figma G-08, D-12): 두 열(왼쪽 공지 400 = 내용 360 + 세로선 앞 40, 오른쪽 카드 440 = 세로선 뒤 40 + 폼 400). 두 열은 같은 높이, 왼쪽 내용은 위아래 가운데.
-   세로선은 두 영역을 나누는 구분선(D-15 장식 테두리가 아니라 내용 구획선, Figma에 있음). 판은 화면 높이를 채우고 2열 묶음은 띠와 바닥글 사이 가운데 */
+/* 21. 로그인(Figma G-08 상자 그대로, 1920 비로그인): 왼쪽 열 416(내용 376 + 오른쪽 안쪽 40) | 세로선 1 | 오른쪽 카드 440(왼쪽 안쪽 40 + 폼 400). 띠 아래 24에서 시작.
+   왼쪽 내용(로고 160 + 간격 32 + 공지 블록)은 카드 높이 안에서 위아래 가운데. 공지 블록은 글자 폭만큼(가운데), 줄 사이 4. 카드는 줄 사이 16, 제목 24/32, 입력 묶음 74(레이블 22 + 4 + 입력 48), 단추 56(large) */
 #root .rb-shell.is-bare > .rb-panel { display: flex; flex-direction: column; }
 #root .rb-shell.is-bare > .rb-panel > .rb-panel-in { flex: 1; justify-content: center; }
-.rb-login3 { display: grid; grid-template-columns: var(--layout-login-col) calc(var(--layout-login-col) + var(--krds-number-10)); justify-content: center; align-items: stretch; padding-block: var(--krds-number-10); }
-.rb-login3-side { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--krds-number-10); padding-inline-end: var(--krds-number-14); border-inline-end: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
-.rb-login3-side > .rb-mois-logo { width: var(--rb-login-mark-w); height: auto; color: var(--krds-color-text-basic); }
-.rb-login3-notice { align-self: stretch; display: flex; flex-direction: column; gap: var(--krds-number-3); padding-inline-start: var(--krds-number-5); }
+.rb-login3 { display: grid; grid-template-columns: var(--layout-login-col) var(--krds-number-1) calc(var(--layout-login-col) + var(--krds-number-10)); justify-content: center; align-items: stretch; padding-top: var(--krds-number-8); }
+.rb-login3-side { display: flex; flex-direction: column; justify-content: center; }
+.rb-login3-side-in { display: flex; flex-direction: column; align-items: center; gap: var(--krds-number-12); padding-inline-end: var(--krds-number-14); }
+.rb-login3-side-in > .rb-mois-logo { width: var(--rb-login-mark-w); height: auto; color: var(--krds-color-text-basic); }
+.rb-login3-divider { display: block; width: var(--krds-number-1); background: var(--krds-color-divider-gray-light); }
+.rb-login3-notice { display: flex; flex-direction: column; gap: var(--krds-number-3); text-align: left; }
 .rb-login3-notice p, .rb-login3-notice h2 { margin: 0; }
 .rb-login3-notice-head { font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--krds-font-weight-bold); }
-.rb-login3-notice-title { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); font-weight: var(--krds-font-weight-bold); }
-.rb-login3-notice p:not(.rb-login3-notice-title) { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.rb-login3-notice p { font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.rb-login3-notice .rb-login3-notice-title { font-weight: var(--krds-font-weight-bold); }
 .rb-login3-notice .rb-login3-notice-date { font-size: var(--rb-step-13); line-height: var(--rb-lh-13); color: var(--krds-color-text-subtle); }
-.rb-login3-main { display: flex; flex-direction: column; gap: var(--krds-number-5); padding-inline-start: var(--krds-number-14); }
-#root .rb-login3-title { margin: 0; font-size: var(--layout-title-section); line-height: var(--layout-title-section-lh); font-weight: var(--krds-font-weight-bold); }
-.rb-login3 .rb-login-submit { width: 100%; justify-content: center; }
+.rb-login3-notice .is-subtle { color: var(--krds-color-text-subtle); }
+.rb-login3-main { display: flex; flex-direction: column; gap: var(--krds-number-8); padding-inline-start: var(--krds-number-14); }
+#root .rb-login3-title { margin: 0; font-size: var(--krds-pc-font-size-heading-medium); line-height: var(--rb-lh-24); font-weight: var(--krds-font-weight-bold); }
+.rb-login3 .rb-login-form { display: flex; flex-direction: column; gap: var(--krds-number-8); }
+.rb-login3 .form-group { display: flex; flex-direction: column; gap: var(--krds-number-3); margin: 0; }
+.rb-login3 .form-tit, .rb-login3 .form-tit label { margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); }
+.rb-login3 .krds-input { height: var(--krds-number-16); min-height: 0; }
+.rb-login3 .rb-login-row { min-height: 0; height: var(--rb-lh-15); }
+.rb-login3 .rb-login-row .krds-form-check, .rb-login3 .rb-login-row label, .rb-login3 .rb-login-row a { line-height: var(--rb-lh-15); font-size: var(--rb-step-15); }
+.rb-login3 .rb-login-submit { width: 100%; justify-content: center; height: var(--krds-number-17); font-size: var(--rb-step-19); }
+.rb-login3 .rb-login-signup { margin: 0; line-height: var(--rb-lh-15); }
+.rb-login3 .rb-login-signup, .rb-login3 .rb-login-signup a { font-size: var(--rb-step-15); }
 /* 필수 표시: KRDS 오류 글자색 토큰 */
 .rb-required.is-req { color: var(--krds-color-text-danger); }
 /* 판 아래 전체 폭 바닥글(Figma G-08): 면 gray-90 */
 #root .rb-shell.is-bare > .rb-panel > #krds-footer { background: var(--layout-raised-bg); border-top: 0; padding-inline: var(--rb-panel-pad-x); }
 @media (max-width: 1023px) {
   .rb-login3 { grid-template-columns: minmax(0, var(--rb-login-form-w)); row-gap: var(--krds-number-10); }
-  .rb-login3-side { padding-inline-end: 0; border-inline-end: 0; padding-bottom: var(--krds-number-10); border-bottom: var(--krds-border-width-static-regular) solid var(--krds-color-divider-gray-light); }
+  .rb-login3-side-in { padding-inline-end: 0; }
+  .rb-login3-divider { height: var(--krds-number-1); width: auto; }
   .rb-login3-main { padding-inline-start: 0; }
 }
+/* Figma 대조(G-08): 레이블 글자 본문색, 등록 안내 줄은 4 간격 한 줄 가운데, 시스템 띠 좌우 8(Figma) */
+.rb-login3 .form-tit label { color: var(--krds-color-text-basic); }
+.rb-login3 .rb-login-signup { display: flex; justify-content: center; gap: var(--krds-number-3); color: var(--krds-color-text-subtle); }
+#root .rb-sysband { padding-inline: var(--krds-number-5); }
+/* Figma 대조: 판 테두리는 안쪽 그림자 선(1)으로 그려 판 내용 폭이 Figma와 같게(테두리가 폭을 먹지 않음) */
+#root .rb-shell:not(.is-bare) > .rb-panel { border: 0; box-shadow: inset 0 0 0 var(--krds-border-width-static-regular) var(--layout-panel-border); }

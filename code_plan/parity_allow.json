@@ -1,0 +1,153 @@
+{
+ "_note": "의도한 차이 허용 목록. 규칙: screen('*' 또는 화면번호), bp('*' 또는 폭), name(요소 이름, '*' 가능), kind(box|text|font|color|icon|only-figma|only-code|order), field(box일 때 x|y|w|h), reason(근거). compare-parity.mjs가 이 목록에 걸리는 차이는 '허용'으로 따로 센다",
+ "rules": [
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "gitlab-sidebar",
+   "kind": "box",
+   "field": "h",
+   "reason": "코드는 판 안 스크롤이라 세로 바 높이 = 화면 높이(공공 깃랩 동작), Figma는 페이지 전체 높이"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "content-panel",
+   "kind": "box",
+   "field": "h",
+   "reason": "판 안 스크롤(공공 깃랩): 판 높이 = 화면 높이"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "body",
+   "kind": "box",
+   "field": "h",
+   "reason": "판 안 스크롤: 셸 높이 = 화면 높이"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "breadcrumb",
+   "kind": "box",
+   "field": "w",
+   "reason": "코드 경로 줄은 글자 폭, Figma는 컨테이너 폭(FILL)"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "main",
+   "kind": "box",
+   "field": "h",
+   "reason": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "*",
+   "kind": "box",
+   "field": "y",
+   "minY": 600,
+   "reason": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "footer",
+   "kind": "box",
+   "field": "y",
+   "reason": "바닥글 y는 본문 길이 결과"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "main",
+   "kind": "text",
+   "reason": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "content-panel",
+   "kind": "text",
+   "reason": "판 전체 글은 자료"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "body",
+   "kind": "text",
+   "reason": "셸 전체 글은 자료"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "content-panel",
+   "kind": "only-code",
+   "reason": "코드 셸 구조(판). Figma 로그인처럼 판이 없는 화면은 이름표가 Figma에 없음"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "main",
+   "kind": "only-code",
+   "reason": "코드 본문 감싸개(판 안)"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "section-title",
+   "kind": "only-code",
+   "reason": "Page 부품이 첫 h2에 자동으로 붙이는 이름표"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "footer",
+   "kind": "shape",
+   "reason": "Figma 바닥글 인스턴스는 안쪽 여백을 바깥 틀에, 코드는 안쪽 .inner에 둔다(상자 위치와 크기로 대조)"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "body",
+   "kind": "shape",
+   "reason": "Figma Body는 오토레이아웃 안쪽 여백·간격으로 판을 놓고, 코드는 셸 그리드와 판 여백으로 놓는다(위치와 크기는 box로 대조)"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "body",
+   "kind": "icon",
+   "reason": "셸 전체 아이콘 집합은 하위 요소에서 대조"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "topbar",
+   "kind": "shape",
+   "reason": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "content-panel",
+   "kind": "shape",
+   "reason": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "gitlab-sidebar",
+   "kind": "shape",
+   "reason": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+  },
+  {
+   "screen": "*",
+   "bp": "*",
+   "name": "main",
+   "kind": "shape",
+   "reason": "구조 차이: Figma는 이 틀에 안쪽 여백·간격을 두고, 코드는 안쪽 감싸개(.rb-gbar-in, .rb-panel-in, .rb-side-scroll, 화면 부품)에 둔다. 결과 위치는 하위 요소 box로 대조"
+  }
+ ]
+}

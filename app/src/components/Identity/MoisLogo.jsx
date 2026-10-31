@@ -1,8 +1,8 @@
 // 행정안전부 로고(공식 MI '국 상하' 조합, app/public/brand/mois-logo-inline.svg와 같은 그림). 글자만 currentColor라 어두운 화면에서는 CSS 글자색을 따른다.
 // 태극 색(정부청색, 정부적색)은 로고 고유색이라 KRDS 팔레트 규칙의 예외다. 사각 판이나 흰 상자 위에 올리지 않고 화면 바탕 그대로 둔다.
-export function MoisLogo({ label }) {
+export function MoisLogo({ label, figma }) {
   return (
-    <svg className="rb-mois-logo" viewBox="130 69 80 88" role="img" aria-label={label} focusable="false">
+    <svg className="rb-mois-logo" data-figma={figma} viewBox="130 69 80 88" role="img" aria-label={label} focusable="false">
 <defs>
 <clipPath id="clip_1">
 <path transform="matrix(1,0,0,-1,0,226.77)" d="M0 226.77H340.16V0H0Z"/>

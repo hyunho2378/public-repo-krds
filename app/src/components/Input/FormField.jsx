@@ -1,11 +1,11 @@
 // Figma: KRDS text_input / textarea 상태(기본, 오류). 공식 마크업(text_input_state.html): form-group > form-tit > form-conts(.is-error) > form-hint-invalid
 import { t } from '../../copy/ko';
 
-export function FormField({ id, label, required = false, hint, error, multiline = false, ...props }) {
+export function FormField({ id, label, required = false, hint, error, multiline = false, figma, ...props }) {
   const describedBy = [hint && `${id}-hint`, error && `${id}-error`].filter(Boolean).join(' ') || undefined;
   const Control = multiline ? 'textarea' : 'input';
   return (
-    <div className="form-group">
+    <div className="form-group" data-figma={figma}>
       <div className="form-tit">
         <label htmlFor={id}>
           {label} <span className={'rb-required' + (required ? ' is-req' : '')}>{required ? t.req : t.opt}</span>

@@ -8,6 +8,7 @@ export function Icon({ name, label }) {
   return (
     <span
       className="rb-icon"
+      data-icon={name}
       style={{ WebkitMaskImage: url, maskImage: url }}
       role={label ? 'img' : undefined}
       aria-label={label}
