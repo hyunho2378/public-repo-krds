@@ -1,21 +1,21 @@
 {
- "generated": "2026-10-31T15:49:28.887Z",
+ "generated": "2026-10-31T15:52:13.009Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 5,
+    "box": 13,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 1,
     "icon": 0,
-    "only-figma": 7,
+    "only-figma": 2,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 17,
+   "allowed": 21,
    "rows": [
     {
      "kind": "box",
@@ -121,21 +121,9 @@
      "name": "main",
      "field": "h",
      "figma": 1271,
-     "code": 338,
-     "diff": -933,
+     "code": 1120,
+     "diff": -151,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
-     "kind": "text",
-     "name": "main",
-     "figma": [
-      "입력시 필요한 정보를 입력해 주세요",
-      "그룹",
-      "Any",
-      "Any"
-     ],
-     "code": "프로젝트 작업 항목 머지 리퀘스트 마일스톤 사용자들 아카이빙됨 아카이빙된 항목 포함 적용 업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 -",
-     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
      "kind": "shape",
@@ -178,8 +166,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1433,
-     "code": 1182,
-     "diff": -251,
+     "code": 1265,
+     "diff": -168,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -237,7 +225,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기",
+     "code": "업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ",
      "allowed": null
     },
     {
@@ -263,7 +251,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "전 여비업무통합도우미 2 0 - -",
+     "code": "농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -279,9 +267,11 @@
      "kind": "text",
      "name": "project-row#2",
      "figma": [
+      "국",
+      "국외여비계산기",
       "9"
      ],
-     "code": "전 국외여비계산기 1 0 - -",
+     "code": "Stream Record - 영상 스트리밍 회의록 생성기 6 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -301,63 +291,133 @@
       "연가 사용촉진 안내판",
       "9"
      ],
-     "code": "완 소방 장비서무 인수인계 대시보드 3 0 - -",
+     "code": "JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#4",
-     "want": {
-      "x": 320,
-      "y": 421,
-      "w": 664,
-      "h": 95
-     },
+     "field": "y",
+     "figma": 421,
+     "code": 437,
+     "diff": 16,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "h",
+     "figma": 95,
+     "code": 99,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#4",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc",
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "24",
+      "업데이트됨 2026. 10. 30."
+     ],
+     "code": "서귀포시 YKH / JC-LIVE 도의회 회의록 AI 기록 플랫폼 제주도의회 의정방송 생방송 진행시 실시간 회의록 자동작성 서비스 제공 주제: ai korean public-service + 2개 더보기 2 0 - ",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#5",
-     "want": {
-      "x": 320,
-      "y": 516,
-      "w": 664,
-      "h": 69
-     },
+     "field": "y",
+     "figma": 516,
+     "code": 536,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 69,
+     "code": 141,
+     "diff": 72,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#5",
+     "figma": [
+      "인",
+      "인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO",
+      "업데이트됨 2026. 10. 28."
+     ],
+     "code": "서귀포시 YKH / Stream Record - 영상 스트리밍 회의록 생성기 유튜브 중계되는 실시간 의회 영상에 실시간 자막 기능 제공 및 회의록 자동작성과 요약기능 제공 주제: ai korean public-ser",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#6",
-     "want": {
-      "x": 320,
-      "y": 585,
-      "w": 664,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 585,
+     "code": 677,
+     "diff": 92,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#7",
-     "want": {
-      "x": 320,
-      "y": 708,
-      "w": 664,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 708,
+     "code": 820,
+     "diff": 112,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 123,
+     "code": 165,
+     "diff": 42,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#8",
-     "want": {
-      "x": 320,
-      "y": 831,
-      "w": 664,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 831,
+     "code": 985,
+     "diff": 154,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "h",
+     "figma": 123,
+     "code": 91,
+     "diff": -32,
      "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#8",
+     "figma": [
+      "대",
+      "대구광역시교육청 박순표 / 출장 최적의 동선을 알려줘",
+      "다수의 기관(학교)에 출장 또는 배달이 필요할 때, 장소를 검색하여 선택 등록하고, 출장 기간을 설정한 다음 \"동선생성\" 버튼을 누르기만 하면 최적화된 출장 동선을 생성해주는 프로",
+      "주제:"
+     ],
+     "code": "김 김포시의회 이지슬 / 회의록 본 프로젝트는 시민의 신속한 알 권리를 위하여 효율적인 회의록 작성을 돕기 위해 제작되었습니다. 1 0 - - 업데이트됨 2개월 전",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
      "kind": "only-code",
@@ -369,17 +429,17 @@
   "A-01_1024_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 5,
+    "box": 13,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 1,
     "icon": 0,
-    "only-figma": 7,
+    "only-figma": 2,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 17,
+   "allowed": 21,
    "rows": [
     {
      "kind": "box",
@@ -485,21 +545,9 @@
      "name": "main",
      "field": "h",
      "figma": 1271,
-     "code": 338,
-     "diff": -933,
+     "code": 1120,
+     "diff": -151,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
-     "kind": "text",
-     "name": "main",
-     "figma": [
-      "입력시 필요한 정보를 입력해 주세요",
-      "그룹",
-      "Any",
-      "Any"
-     ],
-     "code": "프로젝트 작업 항목 머지 리퀘스트 마일스톤 사용자들 아카이빙됨 아카이빙된 항목 포함 적용 업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 -",
-     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
      "kind": "shape",
@@ -542,8 +590,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1433,
-     "code": 1182,
-     "diff": -251,
+     "code": 1265,
+     "diff": -168,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -601,7 +649,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기",
+     "code": "업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ",
      "allowed": null
     },
     {
@@ -627,7 +675,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "전 여비업무통합도우미 2 0 - -",
+     "code": "농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -643,9 +691,11 @@
      "kind": "text",
      "name": "project-row#2",
      "figma": [
+      "국",
+      "국외여비계산기",
       "9"
      ],
-     "code": "전 국외여비계산기 1 0 - -",
+     "code": "Stream Record - 영상 스트리밍 회의록 생성기 6 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -665,63 +715,133 @@
       "연가 사용촉진 안내판",
       "9"
      ],
-     "code": "완 소방 장비서무 인수인계 대시보드 3 0 - -",
+     "code": "JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#4",
-     "want": {
-      "x": 320,
-      "y": 421,
-      "w": 664,
-      "h": 95
-     },
+     "field": "y",
+     "figma": 421,
+     "code": 437,
+     "diff": 16,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "h",
+     "figma": 95,
+     "code": 99,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#4",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc",
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "24",
+      "업데이트됨 2026. 10. 30."
+     ],
+     "code": "서귀포시 YKH / JC-LIVE 도의회 회의록 AI 기록 플랫폼 제주도의회 의정방송 생방송 진행시 실시간 회의록 자동작성 서비스 제공 주제: ai korean public-service + 2개 더보기 2 0 - ",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#5",
-     "want": {
-      "x": 320,
-      "y": 516,
-      "w": 664,
-      "h": 69
-     },
+     "field": "y",
+     "figma": 516,
+     "code": 536,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 69,
+     "code": 141,
+     "diff": 72,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#5",
+     "figma": [
+      "인",
+      "인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO",
+      "업데이트됨 2026. 10. 28."
+     ],
+     "code": "서귀포시 YKH / Stream Record - 영상 스트리밍 회의록 생성기 유튜브 중계되는 실시간 의회 영상에 실시간 자막 기능 제공 및 회의록 자동작성과 요약기능 제공 주제: ai korean public-ser",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#6",
-     "want": {
-      "x": 320,
-      "y": 585,
-      "w": 664,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 585,
+     "code": 677,
+     "diff": 92,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#7",
-     "want": {
-      "x": 320,
-      "y": 708,
-      "w": 664,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 708,
+     "code": 820,
+     "diff": 112,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 123,
+     "code": 165,
+     "diff": 42,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#8",
-     "want": {
-      "x": 320,
-      "y": 831,
-      "w": 664,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 831,
+     "code": 985,
+     "diff": 154,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "h",
+     "figma": 123,
+     "code": 91,
+     "diff": -32,
      "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#8",
+     "figma": [
+      "대",
+      "대구광역시교육청 박순표 / 출장 최적의 동선을 알려줘",
+      "다수의 기관(학교)에 출장 또는 배달이 필요할 때, 장소를 검색하여 선택 등록하고, 출장 기간을 설정한 다음 \"동선생성\" 버튼을 누르기만 하면 최적화된 출장 동선을 생성해주는 프로",
+      "주제:"
+     ],
+     "code": "김 김포시의회 이지슬 / 회의록 본 프로젝트는 시민의 신속한 알 권리를 위하여 효율적인 회의록 작성을 돕기 위해 제작되었습니다. 1 0 - - 업데이트됨 2개월 전",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
      "kind": "only-code",
@@ -733,17 +853,17 @@
   "A-01_1440_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 5,
+    "box": 13,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 1,
     "icon": 0,
-    "only-figma": 7,
+    "only-figma": 2,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 14,
+   "allowed": 19,
    "rows": [
     {
      "kind": "icon",
@@ -831,21 +951,9 @@
      "name": "main",
      "field": "h",
      "figma": 833,
-     "code": 338,
-     "diff": -495,
+     "code": 1014,
+     "diff": 181,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
-     "kind": "text",
-     "name": "main",
-     "figma": [
-      "입력시 필요한 정보를 입력해 주세요",
-      "그룹",
-      "Any",
-      "Any"
-     ],
-     "code": "프로젝트 작업 항목 머지 리퀘스트 마일스톤 사용자들 아카이빙됨 아카이빙된 항목 포함 적용 업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 -",
-     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
      "kind": "shape",
@@ -882,6 +990,15 @@
       "users"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
+    },
+    {
+     "kind": "box",
+     "name": "footer",
+     "field": "y",
+     "figma": 995,
+     "code": 1159,
+     "diff": 164,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -938,7 +1055,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기",
+     "code": "업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ",
      "allowed": null
     },
     {
@@ -964,7 +1081,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "전 여비업무통합도우미 2 0 - -",
+     "code": "농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -980,9 +1097,11 @@
      "kind": "text",
      "name": "project-row#2",
      "figma": [
+      "국",
+      "국외여비계산기",
       "9"
      ],
-     "code": "전 국외여비계산기 1 0 - -",
+     "code": "Stream Record - 영상 스트리밍 회의록 생성기 6 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -1002,63 +1121,133 @@
       "연가 사용촉진 안내판",
       "9"
      ],
-     "code": "완 소방 장비서무 인수인계 대시보드 3 0 - -",
+     "code": "JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#4",
-     "want": {
-      "x": 400,
-      "y": 421,
-      "w": 920,
-      "h": 95
-     },
+     "field": "y",
+     "figma": 421,
+     "code": 437,
+     "diff": 16,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "h",
+     "figma": 95,
+     "code": 99,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#4",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc",
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "24",
+      "업데이트됨 2026. 10. 30."
+     ],
+     "code": "서귀포시 YKH / JC-LIVE 도의회 회의록 AI 기록 플랫폼 제주도의회 의정방송 생방송 진행시 실시간 회의록 자동작성 서비스 제공 주제: ai korean public-service + 2개 더보기 2 0 - ",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#5",
-     "want": {
-      "x": 400,
-      "y": 516,
-      "w": 920,
-      "h": 69
-     },
+     "field": "y",
+     "figma": 516,
+     "code": 536,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 69,
+     "code": 99,
+     "diff": 30,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#5",
+     "figma": [
+      "인",
+      "인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO",
+      "업데이트됨 2026. 10. 28."
+     ],
+     "code": "서귀포시 YKH / Stream Record - 영상 스트리밍 회의록 생성기 유튜브 중계되는 실시간 의회 영상에 실시간 자막 기능 제공 및 회의록 자동작성과 요약기능 제공 주제: ai korean public-ser",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#6",
-     "want": {
-      "x": 400,
-      "y": 585,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 585,
+     "code": 635,
+     "diff": 50,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#7",
-     "want": {
-      "x": 400,
-      "y": 708,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 708,
+     "code": 778,
+     "diff": 70,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#8",
-     "want": {
-      "x": 400,
-      "y": 831,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 831,
+     "code": 921,
+     "diff": 90,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "h",
+     "figma": 123,
+     "code": 73,
+     "diff": -50,
      "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#8",
+     "figma": [
+      "대",
+      "대구광역시교육청 박순표 / 출장 최적의 동선을 알려줘",
+      "다수의 기관(학교)에 출장 또는 배달이 필요할 때, 장소를 검색하여 선택 등록하고, 출장 기간을 설정한 다음 \"동선생성\" 버튼을 누르기만 하면 최적화된 출장 동선을 생성해주는 프로",
+      "주제:"
+     ],
+     "code": "김 김포시의회 이지슬 / 회의록 본 프로젝트는 시민의 신속한 알 권리를 위하여 효율적인 회의록 작성을 돕기 위해 제작되었습니다. 1 0 - - 업데이트됨 2개월 전",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
      "kind": "only-code",
@@ -1070,17 +1259,17 @@
   "A-01_1440_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 5,
+    "box": 13,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 1,
     "icon": 0,
-    "only-figma": 7,
+    "only-figma": 2,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 14,
+   "allowed": 19,
    "rows": [
     {
      "kind": "icon",
@@ -1168,21 +1357,9 @@
      "name": "main",
      "field": "h",
      "figma": 833,
-     "code": 338,
-     "diff": -495,
+     "code": 1014,
+     "diff": 181,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
-     "kind": "text",
-     "name": "main",
-     "figma": [
-      "입력시 필요한 정보를 입력해 주세요",
-      "그룹",
-      "Any",
-      "Any"
-     ],
-     "code": "프로젝트 작업 항목 머지 리퀘스트 마일스톤 사용자들 아카이빙됨 아카이빙된 항목 포함 적용 업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 -",
-     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
      "kind": "shape",
@@ -1219,6 +1396,15 @@
       "users"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
+    },
+    {
+     "kind": "box",
+     "name": "footer",
+     "field": "y",
+     "figma": 995,
+     "code": 1159,
+     "diff": 164,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -1275,7 +1461,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기",
+     "code": "업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ",
      "allowed": null
     },
     {
@@ -1301,7 +1487,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "전 여비업무통합도우미 2 0 - -",
+     "code": "농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -1317,9 +1503,11 @@
      "kind": "text",
      "name": "project-row#2",
      "figma": [
+      "국",
+      "국외여비계산기",
       "9"
      ],
-     "code": "전 국외여비계산기 1 0 - -",
+     "code": "Stream Record - 영상 스트리밍 회의록 생성기 6 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -1339,63 +1527,133 @@
       "연가 사용촉진 안내판",
       "9"
      ],
-     "code": "완 소방 장비서무 인수인계 대시보드 3 0 - -",
+     "code": "JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#4",
-     "want": {
-      "x": 400,
-      "y": 421,
-      "w": 920,
-      "h": 95
-     },
+     "field": "y",
+     "figma": 421,
+     "code": 437,
+     "diff": 16,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "h",
+     "figma": 95,
+     "code": 99,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#4",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc",
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "24",
+      "업데이트됨 2026. 10. 30."
+     ],
+     "code": "서귀포시 YKH / JC-LIVE 도의회 회의록 AI 기록 플랫폼 제주도의회 의정방송 생방송 진행시 실시간 회의록 자동작성 서비스 제공 주제: ai korean public-service + 2개 더보기 2 0 - ",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#5",
-     "want": {
-      "x": 400,
-      "y": 516,
-      "w": 920,
-      "h": 69
-     },
+     "field": "y",
+     "figma": 516,
+     "code": 536,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 69,
+     "code": 99,
+     "diff": 30,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#5",
+     "figma": [
+      "인",
+      "인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO",
+      "업데이트됨 2026. 10. 28."
+     ],
+     "code": "서귀포시 YKH / Stream Record - 영상 스트리밍 회의록 생성기 유튜브 중계되는 실시간 의회 영상에 실시간 자막 기능 제공 및 회의록 자동작성과 요약기능 제공 주제: ai korean public-ser",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#6",
-     "want": {
-      "x": 400,
-      "y": 585,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 585,
+     "code": 635,
+     "diff": 50,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#7",
-     "want": {
-      "x": 400,
-      "y": 708,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 708,
+     "code": 778,
+     "diff": 70,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#8",
-     "want": {
-      "x": 400,
-      "y": 831,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 831,
+     "code": 921,
+     "diff": 90,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "h",
+     "figma": 123,
+     "code": 73,
+     "diff": -50,
      "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#8",
+     "figma": [
+      "대",
+      "대구광역시교육청 박순표 / 출장 최적의 동선을 알려줘",
+      "다수의 기관(학교)에 출장 또는 배달이 필요할 때, 장소를 검색하여 선택 등록하고, 출장 기간을 설정한 다음 \"동선생성\" 버튼을 누르기만 하면 최적화된 출장 동선을 생성해주는 프로",
+      "주제:"
+     ],
+     "code": "김 김포시의회 이지슬 / 회의록 본 프로젝트는 시민의 신속한 알 권리를 위하여 효율적인 회의록 작성을 돕기 위해 제작되었습니다. 1 0 - - 업데이트됨 2개월 전",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
      "kind": "only-code",
@@ -1407,17 +1665,17 @@
   "A-01_1920_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 5,
+    "box": 13,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 1,
     "icon": 0,
-    "only-figma": 7,
+    "only-figma": 2,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 14,
+   "allowed": 19,
    "rows": [
     {
      "kind": "icon",
@@ -1505,21 +1763,9 @@
      "name": "main",
      "field": "h",
      "figma": 833,
-     "code": 338,
-     "diff": -495,
+     "code": 1014,
+     "diff": 181,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
-     "kind": "text",
-     "name": "main",
-     "figma": [
-      "입력시 필요한 정보를 입력해 주세요",
-      "그룹",
-      "Any",
-      "Any"
-     ],
-     "code": "프로젝트 작업 항목 머지 리퀘스트 마일스톤 사용자들 아카이빙됨 아카이빙된 항목 포함 적용 업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 -",
-     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
      "kind": "shape",
@@ -1556,6 +1802,15 @@
       "users"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
+    },
+    {
+     "kind": "box",
+     "name": "footer",
+     "field": "y",
+     "figma": 995,
+     "code": 1159,
+     "diff": 164,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -1612,7 +1867,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기",
+     "code": "업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ",
      "allowed": null
     },
     {
@@ -1638,7 +1893,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "전 여비업무통합도우미 2 0 - -",
+     "code": "농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -1654,9 +1909,11 @@
      "kind": "text",
      "name": "project-row#2",
      "figma": [
+      "국",
+      "국외여비계산기",
       "9"
      ],
-     "code": "전 국외여비계산기 1 0 - -",
+     "code": "Stream Record - 영상 스트리밍 회의록 생성기 6 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -1676,63 +1933,133 @@
       "연가 사용촉진 안내판",
       "9"
      ],
-     "code": "완 소방 장비서무 인수인계 대시보드 3 0 - -",
+     "code": "JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#4",
-     "want": {
-      "x": 640,
-      "y": 421,
-      "w": 920,
-      "h": 95
-     },
+     "field": "y",
+     "figma": 421,
+     "code": 437,
+     "diff": 16,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "h",
+     "figma": 95,
+     "code": 99,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#4",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc",
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "24",
+      "업데이트됨 2026. 10. 30."
+     ],
+     "code": "서귀포시 YKH / JC-LIVE 도의회 회의록 AI 기록 플랫폼 제주도의회 의정방송 생방송 진행시 실시간 회의록 자동작성 서비스 제공 주제: ai korean public-service + 2개 더보기 2 0 - ",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#5",
-     "want": {
-      "x": 640,
-      "y": 516,
-      "w": 920,
-      "h": 69
-     },
+     "field": "y",
+     "figma": 516,
+     "code": 536,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 69,
+     "code": 99,
+     "diff": 30,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#5",
+     "figma": [
+      "인",
+      "인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO",
+      "업데이트됨 2026. 10. 28."
+     ],
+     "code": "서귀포시 YKH / Stream Record - 영상 스트리밍 회의록 생성기 유튜브 중계되는 실시간 의회 영상에 실시간 자막 기능 제공 및 회의록 자동작성과 요약기능 제공 주제: ai korean public-ser",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#6",
-     "want": {
-      "x": 640,
-      "y": 585,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 585,
+     "code": 635,
+     "diff": 50,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#7",
-     "want": {
-      "x": 640,
-      "y": 708,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 708,
+     "code": 778,
+     "diff": 70,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#8",
-     "want": {
-      "x": 640,
-      "y": 831,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 831,
+     "code": 921,
+     "diff": 90,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "h",
+     "figma": 123,
+     "code": 73,
+     "diff": -50,
      "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#8",
+     "figma": [
+      "대",
+      "대구광역시교육청 박순표 / 출장 최적의 동선을 알려줘",
+      "다수의 기관(학교)에 출장 또는 배달이 필요할 때, 장소를 검색하여 선택 등록하고, 출장 기간을 설정한 다음 \"동선생성\" 버튼을 누르기만 하면 최적화된 출장 동선을 생성해주는 프로",
+      "주제:"
+     ],
+     "code": "김 김포시의회 이지슬 / 회의록 본 프로젝트는 시민의 신속한 알 권리를 위하여 효율적인 회의록 작성을 돕기 위해 제작되었습니다. 1 0 - - 업데이트됨 2개월 전",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
      "kind": "only-code",
@@ -1744,17 +2071,17 @@
   "A-01_1920_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 5,
+    "box": 13,
     "text": 1,
     "font": 0,
     "color": 0,
     "shape": 1,
     "icon": 0,
-    "only-figma": 7,
+    "only-figma": 2,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 14,
+   "allowed": 19,
    "rows": [
     {
      "kind": "icon",
@@ -1842,21 +2169,9 @@
      "name": "main",
      "field": "h",
      "figma": 833,
-     "code": 338,
-     "diff": -495,
+     "code": 1014,
+     "diff": 181,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
-     "kind": "text",
-     "name": "main",
-     "figma": [
-      "입력시 필요한 정보를 입력해 주세요",
-      "그룹",
-      "Any",
-      "Any"
-     ],
-     "code": "프로젝트 작업 항목 머지 리퀘스트 마일스톤 사용자들 아카이빙됨 아카이빙된 항목 포함 적용 업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 -",
-     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
      "kind": "shape",
@@ -1893,6 +2208,15 @@
       "users"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
+    },
+    {
+     "kind": "box",
+     "name": "footer",
+     "field": "y",
+     "figma": 995,
+     "code": 1159,
+     "diff": 164,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -1949,7 +2273,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기",
+     "code": "업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ",
      "allowed": null
     },
     {
@@ -1975,7 +2299,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "전 여비업무통합도우미 2 0 - -",
+     "code": "농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -1991,9 +2315,11 @@
      "kind": "text",
      "name": "project-row#2",
      "figma": [
+      "국",
+      "국외여비계산기",
       "9"
      ],
-     "code": "전 국외여비계산기 1 0 - -",
+     "code": "Stream Record - 영상 스트리밍 회의록 생성기 6 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -2013,63 +2339,133 @@
       "연가 사용촉진 안내판",
       "9"
      ],
-     "code": "완 소방 장비서무 인수인계 대시보드 3 0 - -",
+     "code": "JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#4",
-     "want": {
-      "x": 640,
-      "y": 421,
-      "w": 920,
-      "h": 95
-     },
+     "field": "y",
+     "figma": 421,
+     "code": 437,
+     "diff": 16,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "h",
+     "figma": 95,
+     "code": 99,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#4",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc",
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "24",
+      "업데이트됨 2026. 10. 30."
+     ],
+     "code": "서귀포시 YKH / JC-LIVE 도의회 회의록 AI 기록 플랫폼 제주도의회 의정방송 생방송 진행시 실시간 회의록 자동작성 서비스 제공 주제: ai korean public-service + 2개 더보기 2 0 - ",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#5",
-     "want": {
-      "x": 640,
-      "y": 516,
-      "w": 920,
-      "h": 69
-     },
+     "field": "y",
+     "figma": 516,
+     "code": 536,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 69,
+     "code": 99,
+     "diff": 30,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#5",
+     "figma": [
+      "인",
+      "인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO",
+      "업데이트됨 2026. 10. 28."
+     ],
+     "code": "서귀포시 YKH / Stream Record - 영상 스트리밍 회의록 생성기 유튜브 중계되는 실시간 의회 영상에 실시간 자막 기능 제공 및 회의록 자동작성과 요약기능 제공 주제: ai korean public-ser",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#6",
-     "want": {
-      "x": 640,
-      "y": 585,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 585,
+     "code": 635,
+     "diff": 50,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#7",
-     "want": {
-      "x": 640,
-      "y": 708,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 708,
+     "code": 778,
+     "diff": 70,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#8",
-     "want": {
-      "x": 640,
-      "y": 831,
-      "w": 920,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 831,
+     "code": 921,
+     "diff": 90,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "h",
+     "figma": 123,
+     "code": 73,
+     "diff": -50,
      "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#8",
+     "figma": [
+      "대",
+      "대구광역시교육청 박순표 / 출장 최적의 동선을 알려줘",
+      "다수의 기관(학교)에 출장 또는 배달이 필요할 때, 장소를 검색하여 선택 등록하고, 출장 기간을 설정한 다음 \"동선생성\" 버튼을 누르기만 하면 최적화된 출장 동선을 생성해주는 프로",
+      "주제:"
+     ],
+     "code": "김 김포시의회 이지슬 / 회의록 본 프로젝트는 시민의 신속한 알 권리를 위하여 효율적인 회의록 작성을 돕기 위해 제작되었습니다. 1 0 - - 업데이트됨 2개월 전",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
      "kind": "only-code",
@@ -2081,17 +2477,17 @@
   "A-01_360_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 17,
+    "box": 33,
     "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
-    "icon": 4,
-    "only-figma": 6,
+    "icon": 9,
+    "only-figma": 1,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 19,
+   "allowed": 25,
    "rows": [
     {
      "kind": "box",
@@ -2246,21 +2642,9 @@
      "name": "main",
      "field": "h",
      "figma": 1019,
-     "code": 414,
-     "diff": -605,
+     "code": 1985,
+     "diff": 966,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
-     "kind": "text",
-     "name": "main",
-     "figma": [
-      "입력시 필요한 정보를 입력해 주세요",
-      "AI 정리",
-      "어돌잘돌-소방 출장 최적경로 안내",
-      "9"
-     ],
-     "code": "필터 업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기 '출장비를 계산하고 싶어요' 검색 결과 없음 출장비를 계산하",
-     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
      "kind": "shape",
@@ -2308,8 +2692,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1181,
-     "code": 1090,
-     "diff": -91,
+     "code": 2130,
+     "diff": 949,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -2391,7 +2775,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기",
+     "code": "업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ",
      "allowed": null
     },
     {
@@ -2448,7 +2832,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "전 여비업무통합도우미 2 0 - -",
+     "code": "농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -2466,7 +2850,6 @@
      "code": [
       "ellipsis-vertical",
       "fork",
-      "globe",
       "issues",
       "merge-request",
       "star"
@@ -2495,9 +2878,11 @@
      "kind": "text",
      "name": "project-row#2",
      "figma": [
+      "국",
+      "국외여비계산기",
       "9"
      ],
-     "code": "전 국외여비계산기 1 0 - -",
+     "code": "Stream Record - 영상 스트리밍 회의록 생성기 6 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -2515,7 +2900,6 @@
      "code": [
       "ellipsis-vertical",
       "fork",
-      "globe",
       "issues",
       "merge-request",
       "star"
@@ -2548,7 +2932,7 @@
       "연가 사용촉진 안내판",
       "9"
      ],
-     "code": "완 소방 장비서무 인수인계 대시보드 3 0 - -",
+     "code": "JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -2574,58 +2958,328 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#4",
-     "want": {
-      "x": 16,
-      "y": 509,
-      "w": 328,
-      "h": 119
-     },
+     "field": "x",
+     "figma": 16,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "y",
+     "figma": 509,
+     "code": 513,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "w",
+     "figma": 328,
+     "code": 312,
+     "diff": -16,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "h",
+     "figma": 119,
+     "code": 249,
+     "diff": 130,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#4",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc",
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "24",
+      "업데이트됨 2026. 10. 30."
+     ],
+     "code": "서귀포시 YKH / JC-LIVE 도의회 회의록 AI 기록 플랫폼 제주도의회 의정방송 생방송 진행시 실시간 회의록 자동작성 서비스 제공 주제: ai korean public-service + 2개 더보기 2 0 - ",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "icon",
+     "name": "project-row#4",
+     "figma": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "project",
+      "star"
+     ],
+     "code": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "star"
+     ],
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#5",
-     "want": {
-      "x": 16,
-      "y": 628,
-      "w": 328,
-      "h": 71
-     },
+     "field": "x",
+     "figma": 16,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "y",
+     "figma": 628,
+     "code": 762,
+     "diff": 134,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "w",
+     "figma": 328,
+     "code": 312,
+     "diff": -16,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 71,
+     "code": 295,
+     "diff": 224,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#5",
+     "figma": [
+      "인",
+      "인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO",
+      "업데이트됨 2026. 10. 28."
+     ],
+     "code": "서귀포시 YKH / Stream Record - 영상 스트리밍 회의록 생성기 유튜브 중계되는 실시간 의회 영상에 실시간 자막 기능 제공 및 회의록 자동작성과 요약기능 제공 더보기 주제: ai korean public",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "icon",
+     "name": "project-row#5",
+     "figma": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "project",
+      "star"
+     ],
+     "code": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "star"
+     ],
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#6",
-     "want": {
-      "x": 16,
-      "y": 699,
-      "w": 328,
-      "h": 147
-     },
+     "field": "x",
+     "figma": 16,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "y",
+     "figma": 699,
+     "code": 1056,
+     "diff": 357,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "w",
+     "figma": 328,
+     "code": 312,
+     "diff": -16,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "h",
+     "figma": 147,
+     "code": 301,
+     "diff": 154,
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "project-row#6",
+     "figma": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "project",
+      "star"
+     ],
+     "code": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "star"
+     ],
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#7",
-     "want": {
-      "x": 16,
-      "y": 846,
-      "w": 328,
-      "h": 147
-     },
+     "field": "x",
+     "figma": 16,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "y",
+     "figma": 846,
+     "code": 1357,
+     "diff": 511,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "w",
+     "figma": 328,
+     "code": 312,
+     "diff": -16,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 147,
+     "code": 239,
+     "diff": 92,
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "project-row#7",
+     "figma": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "project",
+      "star"
+     ],
+     "code": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "star"
+     ],
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#8",
-     "want": {
-      "x": 16,
-      "y": 993,
-      "w": 328,
-      "h": 147
-     },
+     "field": "x",
+     "figma": 16,
+     "code": 24,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "y",
+     "figma": 993,
+     "code": 1595,
+     "diff": 602,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "w",
+     "figma": 328,
+     "code": 312,
+     "diff": -16,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "h",
+     "figma": 147,
+     "code": 167,
+     "diff": 20,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#8",
+     "figma": [
+      "대",
+      "대구광역시교육청 박순표 / 출장 최적의 동선을 알려줘",
+      "다수의 기관(학교)에 출장 또는 배달이 필요할 때, 장소를 검색하여 선택 등록하고, 출장 기간을 설정한 다음 \"동선생성\" 버튼을 누르기만 하면 최적화된 출장 동선을 생성해주는 프로",
+      "주제:"
+     ],
+     "code": "김 김포시의회 이지슬 / 회의록 본 프로젝트는 시민의 신속한 알 권리를 위하여 효율적인 회의록 작성을 돕기 위해 제작되었습니다. 더보기 1 0 - - 업데이트됨 2개월 전",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "icon",
+     "name": "project-row#8",
+     "figma": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "project",
+      "star"
+     ],
+     "code": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "star"
+     ],
      "allowed": null
     },
     {
@@ -2638,17 +3292,17 @@
   "A-01_360_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 17,
+    "box": 33,
     "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
-    "icon": 4,
-    "only-figma": 6,
+    "icon": 9,
+    "only-figma": 1,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 19,
+   "allowed": 25,
    "rows": [
     {
      "kind": "box",
@@ -2803,21 +3457,9 @@
      "name": "main",
      "field": "h",
      "figma": 1019,
-     "code": 414,
-     "diff": -605,
+     "code": 1985,
+     "diff": 966,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
-     "kind": "text",
-     "name": "main",
-     "figma": [
-      "입력시 필요한 정보를 입력해 주세요",
-      "AI 정리",
-      "어돌잘돌-소방 출장 최적경로 안내",
-      "9"
-     ],
-     "code": "필터 업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기 '출장비를 계산하고 싶어요' 검색 결과 없음 출장비를 계산하",
-     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
      "kind": "shape",
@@ -2865,8 +3507,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1181,
-     "code": 1090,
-     "diff": -91,
+     "code": 2130,
+     "diff": 949,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -2948,7 +3590,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기",
+     "code": "업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ",
      "allowed": null
     },
     {
@@ -3005,7 +3647,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "전 여비업무통합도우미 2 0 - -",
+     "code": "농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -3023,7 +3665,6 @@
      "code": [
       "ellipsis-vertical",
       "fork",
-      "globe",
       "issues",
       "merge-request",
       "star"
@@ -3052,9 +3693,11 @@
      "kind": "text",
      "name": "project-row#2",
      "figma": [
+      "국",
+      "국외여비계산기",
       "9"
      ],
-     "code": "전 국외여비계산기 1 0 - -",
+     "code": "Stream Record - 영상 스트리밍 회의록 생성기 6 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -3072,7 +3715,6 @@
      "code": [
       "ellipsis-vertical",
       "fork",
-      "globe",
       "issues",
       "merge-request",
       "star"
@@ -3105,7 +3747,7 @@
       "연가 사용촉진 안내판",
       "9"
      ],
-     "code": "완 소방 장비서무 인수인계 대시보드 3 0 - -",
+     "code": "JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -3131,58 +3773,328 @@
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#4",
-     "want": {
-      "x": 16,
-      "y": 509,
-      "w": 328,
-      "h": 119
-     },
+     "field": "x",
+     "figma": 16,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "y",
+     "figma": 509,
+     "code": 513,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "w",
+     "figma": 328,
+     "code": 312,
+     "diff": -16,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "h",
+     "figma": 119,
+     "code": 249,
+     "diff": 130,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#4",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc",
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "24",
+      "업데이트됨 2026. 10. 30."
+     ],
+     "code": "서귀포시 YKH / JC-LIVE 도의회 회의록 AI 기록 플랫폼 제주도의회 의정방송 생방송 진행시 실시간 회의록 자동작성 서비스 제공 주제: ai korean public-service + 2개 더보기 2 0 - ",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "icon",
+     "name": "project-row#4",
+     "figma": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "project",
+      "star"
+     ],
+     "code": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "star"
+     ],
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#5",
-     "want": {
-      "x": 16,
-      "y": 628,
-      "w": 328,
-      "h": 71
-     },
+     "field": "x",
+     "figma": 16,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "y",
+     "figma": 628,
+     "code": 762,
+     "diff": 134,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "w",
+     "figma": 328,
+     "code": 312,
+     "diff": -16,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 71,
+     "code": 295,
+     "diff": 224,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#5",
+     "figma": [
+      "인",
+      "인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO",
+      "업데이트됨 2026. 10. 28."
+     ],
+     "code": "서귀포시 YKH / Stream Record - 영상 스트리밍 회의록 생성기 유튜브 중계되는 실시간 의회 영상에 실시간 자막 기능 제공 및 회의록 자동작성과 요약기능 제공 더보기 주제: ai korean public",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "icon",
+     "name": "project-row#5",
+     "figma": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "project",
+      "star"
+     ],
+     "code": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "star"
+     ],
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#6",
-     "want": {
-      "x": 16,
-      "y": 699,
-      "w": 328,
-      "h": 147
-     },
+     "field": "x",
+     "figma": 16,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "y",
+     "figma": 699,
+     "code": 1056,
+     "diff": 357,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "w",
+     "figma": 328,
+     "code": 312,
+     "diff": -16,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "h",
+     "figma": 147,
+     "code": 301,
+     "diff": 154,
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "project-row#6",
+     "figma": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "project",
+      "star"
+     ],
+     "code": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "star"
+     ],
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#7",
-     "want": {
-      "x": 16,
-      "y": 846,
-      "w": 328,
-      "h": 147
-     },
+     "field": "x",
+     "figma": 16,
+     "code": 24,
+     "diff": 8,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "y",
+     "figma": 846,
+     "code": 1357,
+     "diff": 511,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "w",
+     "figma": 328,
+     "code": 312,
+     "diff": -16,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 147,
+     "code": 239,
+     "diff": 92,
+     "allowed": null
+    },
+    {
+     "kind": "icon",
+     "name": "project-row#7",
+     "figma": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "project",
+      "star"
+     ],
+     "code": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "star"
+     ],
+     "allowed": null
+    },
+    {
+     "kind": "box",
      "name": "project-row#8",
-     "want": {
-      "x": 16,
-      "y": 993,
-      "w": 328,
-      "h": 147
-     },
+     "field": "x",
+     "figma": 16,
+     "code": 24,
+     "diff": 8,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "y",
+     "figma": 993,
+     "code": 1595,
+     "diff": 602,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "w",
+     "figma": 328,
+     "code": 312,
+     "diff": -16,
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "h",
+     "figma": 147,
+     "code": 167,
+     "diff": 20,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#8",
+     "figma": [
+      "대",
+      "대구광역시교육청 박순표 / 출장 최적의 동선을 알려줘",
+      "다수의 기관(학교)에 출장 또는 배달이 필요할 때, 장소를 검색하여 선택 등록하고, 출장 기간을 설정한 다음 \"동선생성\" 버튼을 누르기만 하면 최적화된 출장 동선을 생성해주는 프로",
+      "주제:"
+     ],
+     "code": "김 김포시의회 이지슬 / 회의록 본 프로젝트는 시민의 신속한 알 권리를 위하여 효율적인 회의록 작성을 돕기 위해 제작되었습니다. 더보기 1 0 - - 업데이트됨 2개월 전",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "icon",
+     "name": "project-row#8",
+     "figma": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "project",
+      "star"
+     ],
+     "code": [
+      "ellipsis-vertical",
+      "fork",
+      "globe",
+      "issues",
+      "merge-request",
+      "star"
+     ],
      "allowed": null
     },
     {
@@ -3195,17 +4107,17 @@
   "A-01_768_Guest": {
    "owner": "D21",
    "counts": {
-    "box": 6,
+    "box": 12,
     "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
     "icon": 0,
-    "only-figma": 6,
+    "only-figma": 1,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 15,
+   "allowed": 22,
    "rows": [
     {
      "kind": "icon",
@@ -3293,21 +4205,9 @@
      "name": "main",
      "field": "h",
      "figma": 921,
-     "code": 420,
-     "diff": -501,
+     "code": 1202,
+     "diff": 281,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
-     "kind": "text",
-     "name": "main",
-     "figma": [
-      "입력시 필요한 정보를 입력해 주세요",
-      "AI 정리",
-      "어돌잘돌-소방 출장 최적경로 안내",
-      "9"
-     ],
-     "code": "필터 업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기 '출장비를 계산하고 싶어요' 검색 결과 없음 출장비를 계산하",
-     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
      "kind": "shape",
@@ -3341,6 +4241,15 @@
       "star"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
+    },
+    {
+     "kind": "box",
+     "name": "footer",
+     "field": "y",
+     "figma": 1083,
+     "code": 1347,
+     "diff": 264,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -3385,7 +4294,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기",
+     "code": "업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ",
      "allowed": null
     },
     {
@@ -3411,7 +4320,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "전 여비업무통합도우미 2 0 - -",
+     "code": "농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -3436,9 +4345,11 @@
      "kind": "text",
      "name": "project-row#2",
      "figma": [
+      "국",
+      "국외여비계산기",
       "9"
      ],
-     "code": "전 국외여비계산기 1 0 - -",
+     "code": "Stream Record - 영상 스트리밍 회의록 생성기 6 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -3467,63 +4378,133 @@
       "연가 사용촉진 안내판",
       "9"
      ],
-     "code": "완 소방 장비서무 인수인계 대시보드 3 0 - -",
+     "code": "JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#4",
-     "want": {
-      "x": 32,
-      "y": 509,
-      "w": 704,
-      "h": 95
-     },
+     "field": "y",
+     "figma": 509,
+     "code": 519,
+     "diff": 10,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "h",
+     "figma": 95,
+     "code": 99,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#4",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc",
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "24",
+      "업데이트됨 2026. 10. 30."
+     ],
+     "code": "서귀포시 YKH / JC-LIVE 도의회 회의록 AI 기록 플랫폼 제주도의회 의정방송 생방송 진행시 실시간 회의록 자동작성 서비스 제공 주제: ai korean public-service + 2개 더보기 2 0 - ",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#5",
-     "want": {
-      "x": 32,
-      "y": 604,
-      "w": 704,
-      "h": 69
-     },
+     "field": "y",
+     "figma": 604,
+     "code": 618,
+     "diff": 14,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 69,
+     "code": 141,
+     "diff": 72,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "text",
+     "name": "project-row#5",
+     "figma": [
+      "인",
+      "인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO",
+      "업데이트됨 2026. 10. 28."
+     ],
+     "code": "서귀포시 YKH / Stream Record - 영상 스트리밍 회의록 생성기 유튜브 중계되는 실시간 의회 영상에 실시간 자막 기능 제공 및 회의록 자동작성과 요약기능 제공 주제: ai korean public-ser",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#6",
-     "want": {
-      "x": 32,
-      "y": 673,
-      "w": 704,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 673,
+     "code": 759,
+     "diff": 86,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#7",
-     "want": {
-      "x": 32,
-      "y": 796,
-      "w": 704,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 796,
+     "code": 902,
+     "diff": 106,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 123,
+     "code": 165,
+     "diff": 42,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#8",
-     "want": {
-      "x": 32,
-      "y": 919,
-      "w": 704,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 919,
+     "code": 1067,
+     "diff": 148,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "h",
+     "figma": 123,
+     "code": 91,
+     "diff": -32,
      "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#8",
+     "figma": [
+      "대",
+      "대구광역시교육청 박순표 / 출장 최적의 동선을 알려줘",
+      "다수의 기관(학교)에 출장 또는 배달이 필요할 때, 장소를 검색하여 선택 등록하고, 출장 기간을 설정한 다음 \"동선생성\" 버튼을 누르기만 하면 최적화된 출장 동선을 생성해주는 프로",
+      "주제:"
+     ],
+     "code": "김 김포시의회 이지슬 / 회의록 본 프로젝트는 시민의 신속한 알 권리를 위하여 효율적인 회의록 작성을 돕기 위해 제작되었습니다. 1 0 - - 업데이트됨 2개월 전",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
      "kind": "only-code",
@@ -3535,17 +4516,17 @@
   "A-01_768_Signed-in": {
    "owner": "D21",
    "counts": {
-    "box": 6,
+    "box": 12,
     "text": 1,
     "font": 0,
     "color": 1,
     "shape": 1,
     "icon": 0,
-    "only-figma": 6,
+    "only-figma": 1,
     "only-code": 0,
     "order": 0
    },
-   "allowed": 15,
+   "allowed": 22,
    "rows": [
     {
      "kind": "icon",
@@ -3633,21 +4614,9 @@
      "name": "main",
      "field": "h",
      "figma": 921,
-     "code": 420,
-     "diff": -501,
+     "code": 1202,
+     "diff": 281,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
-    },
-    {
-     "kind": "text",
-     "name": "main",
-     "figma": [
-      "입력시 필요한 정보를 입력해 주세요",
-      "AI 정리",
-      "어돌잘돌-소방 출장 최적경로 안내",
-      "9"
-     ],
-     "code": "필터 업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기 '출장비를 계산하고 싶어요' 검색 결과 없음 출장비를 계산하",
-     "allowed": "본문 전체 글은 자료(받아 온 응답)라 비교하지 않음"
     },
     {
      "kind": "shape",
@@ -3681,6 +4650,15 @@
       "star"
      ],
      "allowed": "큰 틀의 아이콘 집합(최대 20개, 숨은 레이어 포함)은 뜻이 없어 하위 요소(툴바, 행, 정보 열 등)에서 대조"
+    },
+    {
+     "kind": "box",
+     "name": "footer",
+     "field": "y",
+     "figma": 1083,
+     "code": 1347,
+     "diff": 264,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
      "kind": "shape",
@@ -3725,7 +4703,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "업무로 찾기 전 여비업무통합도우미 2 0 - - 전 국외여비계산기 1 0 - - 완 소방 장비서무 인수인계 대시보드 3 0 - - 업무로 찾기 더보기",
+     "code": "업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ",
      "allowed": null
     },
     {
@@ -3751,7 +4729,7 @@
       "어돌잘돌-소방 출장 최적경로 안내",
       "9"
      ],
-     "code": "전 여비업무통합도우미 2 0 - -",
+     "code": "농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -3776,9 +4754,11 @@
      "kind": "text",
      "name": "project-row#2",
      "figma": [
+      "국",
+      "국외여비계산기",
       "9"
      ],
-     "code": "전 국외여비계산기 1 0 - -",
+     "code": "Stream Record - 영상 스트리밍 회의록 생성기 6 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
@@ -3807,63 +4787,133 @@
       "연가 사용촉진 안내판",
       "9"
      ],
-     "code": "완 소방 장비서무 인수인계 대시보드 3 0 - -",
+     "code": "JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - -",
      "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#4",
-     "want": {
-      "x": 32,
-      "y": 509,
-      "w": 704,
-      "h": 95
-     },
+     "field": "y",
+     "figma": 509,
+     "code": 519,
+     "diff": 10,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
+     "name": "project-row#4",
+     "field": "h",
+     "figma": 95,
+     "code": 99,
+     "diff": 4,
+     "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#4",
+     "figma": [
+      "서울특별시 광진구 류승인 / kordoc",
+      "모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI and MCP server with form filling and diff",
+      "24",
+      "업데이트됨 2026. 10. 30."
+     ],
+     "code": "서귀포시 YKH / JC-LIVE 도의회 회의록 AI 기록 플랫폼 제주도의회 의정방송 생방송 진행시 실시간 회의록 자동작성 서비스 제공 주제: ai korean public-service + 2개 더보기 2 0 - ",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#5",
-     "want": {
-      "x": 32,
-      "y": 604,
-      "w": 704,
-      "h": 69
-     },
+     "field": "y",
+     "figma": 604,
+     "code": 618,
+     "diff": 14,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#5",
+     "field": "h",
+     "figma": 69,
+     "code": 141,
+     "diff": 72,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "text",
+     "name": "project-row#5",
+     "figma": [
+      "인",
+      "인사혁신처 기획조정관 데이터정보담당관실 이선준 / EasyCELLO",
+      "업데이트됨 2026. 10. 28."
+     ],
+     "code": "서귀포시 YKH / Stream Record - 영상 스트리밍 회의록 생성기 유튜브 중계되는 실시간 의회 영상에 실시간 자막 기능 제공 및 회의록 자동작성과 요약기능 제공 주제: ai korean public-ser",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
+    },
+    {
+     "kind": "box",
      "name": "project-row#6",
-     "want": {
-      "x": 32,
-      "y": 673,
-      "w": 704,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 673,
+     "code": 759,
+     "diff": 86,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#6",
+     "field": "h",
+     "figma": 123,
+     "code": 143,
+     "diff": 20,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#7",
-     "want": {
-      "x": 32,
-      "y": 796,
-      "w": 704,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 796,
+     "code": 902,
+     "diff": 106,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#7",
+     "field": "h",
+     "figma": 123,
+     "code": 165,
+     "diff": 42,
      "allowed": null
     },
     {
-     "kind": "only-figma",
+     "kind": "box",
      "name": "project-row#8",
-     "want": {
-      "x": 32,
-      "y": 919,
-      "w": 704,
-      "h": 123
-     },
+     "field": "y",
+     "figma": 919,
+     "code": 1067,
+     "diff": 148,
+     "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
+    },
+    {
+     "kind": "box",
+     "name": "project-row#8",
+     "field": "h",
+     "figma": 123,
+     "code": 91,
+     "diff": -32,
      "allowed": null
+    },
+    {
+     "kind": "text",
+     "name": "project-row#8",
+     "figma": [
+      "대",
+      "대구광역시교육청 박순표 / 출장 최적의 동선을 알려줘",
+      "다수의 기관(학교)에 출장 또는 배달이 필요할 때, 장소를 검색하여 선택 등록하고, 출장 기간을 설정한 다음 \"동선생성\" 버튼을 누르기만 하면 최적화된 출장 동선을 생성해주는 프로",
+      "주제:"
+     ],
+     "code": "김 김포시의회 이지슬 / 회의록 본 프로젝트는 시민의 신속한 알 권리를 위하여 효율적인 회의록 작성을 돕기 위해 제작되었습니다. 1 0 - - 업데이트됨 2개월 전",
+     "allowed": "목록 행 글(프로젝트 이름, 설명, 날짜)은 받아 온 자료라 Figma 예시 글과 다름"
     },
     {
      "kind": "only-code",

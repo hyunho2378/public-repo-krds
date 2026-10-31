@@ -2031,7 +2031,7 @@
     "Explore/업무로 찾기"
    ],
    "code": {
-    "path": "/search?q=%EC%B6%9C%EC%9E%A5%EB%B9%84%EB%A5%BC%20%EA%B3%84%EC%82%B0%ED%95%98%EA%B3%A0%20%EC%8B%B6%EC%96%B4%EC%9A%94",
+    "path": "/search?q=%ED%9A%8C%EC%9D%98%EB%A1%9D%20%EC%9E%90%EB%8F%99%20%EC%9E%91%EC%84%B1",
     "query": {},
     "breakpoints": [
      1920,
@@ -3064,8 +3064,8 @@
  "structure": "D-21 공공 깃랩 구조: system_band + gitlab_topbar + Body[gitlab_sidebar(Scope/State/Current) + Content panel[Breadcrumb, Main content(최대 1200 가운데), footer]]",
  "codeNote": "screens[].code: 코드 대조 경로(개발 서버 http://127.0.0.1:5731 + path + query). 측정은 app/scripts/export-code-boxes.js, 대조는 app/scripts/compare-parity.mjs(UX/audit_v3/parity_ledger.md)",
  "prototypeLinks": {
-  "count": 833,
-  "since": "2026-10-31 Figma 33차",
-  "note": "823 + A-01 본문 교체로 생긴 explore_row 마우스 올림 상태 10(화면 이동 연결 아님). 사용자 확인으로 기준 갱신"
+  "count": 968,
+  "since": "2026-11-01 Figma 36차",
+  "note": "833 + 흐름 K 브랜치 선택 135(직접 연결 4: branch button→K2, outside click→K1, 메뉴 항목→K1, Esc→K1 + 복제된 사이드바 항목·파일 행 상태 연결 131, 흐름 H와 같은 방식). 목적지 누락 0. 부모 승인으로 기준 갱신"
  }
 }
