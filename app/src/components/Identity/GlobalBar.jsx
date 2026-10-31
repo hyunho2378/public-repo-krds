@@ -132,7 +132,7 @@ function GlobalSearch() {
 
 export function GlobalBar({ onToggleNav, navOpen, hasNav = true, drawer = false, sideHidden = false, onShowSide, area }) {
   const location = useLocation();
-  const { signedIn } = useAuth();
+  const { signedIn, user } = useAuth();
   // UX-007 1장: 기본은 어두운 화면. 로그인 여부와 상관없이 항상 적용되어야 하므로 여기서 한 번 불러 쓴다(전에는 로그인 후에만 불리는 버그가 있었다)
   const [mode, setMode] = useScreenMode();
   const loginTo = `/login?returnTo=${encodeURIComponent(location.pathname + location.search)}`;
@@ -162,7 +162,8 @@ export function GlobalBar({ onToggleNav, navOpen, hasNav = true, drawer = false,
               <a className="rb-gbar-icon" href="https://gitlab.aigov.go.kr/dashboard/issues" {...newWindow(u.Hdr_myIssues)} title={u.Hdr_myIssues}><Icon name="ext/issues" /></a>
               <a className="rb-gbar-icon" href="https://gitlab.aigov.go.kr/dashboard/merge_requests" {...newWindow(u.Hdr_myMrs)} title={u.Hdr_myMrs}><Icon name="ext/merge-request" /></a>
               <Link className="rb-gbar-icon" to="/notifications" aria-label={t.TabBar_alerts} title={t.TabBar_alerts}><Icon name="bell" /></Link>
-              <AccountMenu mode={mode} setMode={setMode} />
+              <AccountMenu mode={mode} setMode={setMode} user={user} />
+              <SignedMenu mode={mode} setMode={setMode} />
             </>
           ) : (
             <>
@@ -198,6 +199,28 @@ function GuestMenu({ loginTo, mode, setMode }) {
   );
 }
 
+/** 1024 미만 로그인 상태: 만들기, 작업 항목, 머지 리퀘스트, 계정을 '메뉴' 하나로 접고 알림만 남긴다(Figma 360/768) */
+function SignedMenu({ mode, setMode }) {
+  return (
+    <Menu label={u.Hdr_menu} className="rb-gbar-drop rb-gbar-more" align="right" toggle={false} btnClass="rb-gbar-icon" btnProps={{ title: u.Hdr_menu }} button={<Icon name="ellipsis_vertical" />}>
+      {(close) => (
+        <>
+          <div className="rb-menu-group">
+            <ul>
+              <li><Link className="item-link" to="/projects/new" onClick={close}><span>{t.GlobalBar_create}</span></Link></li>
+              <li><a className="item-link" href="https://gitlab.aigov.go.kr/dashboard/issues" {...newWindow(u.Hdr_myIssues)}><span>{u.Hdr_myIssues}</span></a></li>
+              <li><a className="item-link" href="https://gitlab.aigov.go.kr/dashboard/merge_requests" {...newWindow(u.Hdr_myMrs)}><span>{u.Hdr_myMrs}</span></a></li>
+              <li><Link className="item-link" to="/my" onClick={close}><span>{t.Header_my}</span></Link></li>
+              <li><Link className="item-link" to="/settings" onClick={close}><span>{t.Settings_title}</span></Link></li>
+            </ul>
+          </div>
+          <ScreenModeItems mode={mode} setMode={setMode} />
+        </>
+      )}
+    </Menu>
+  );
+}
+
 /** 게스트도 화면 설정을 바꿀 수 있다(로그인 전용 버그 고침). */
 function ScreenModeMenu({ mode, setMode }) {
   return (
@@ -208,9 +231,11 @@ function ScreenModeMenu({ mode, setMode }) {
 }
 
 /** 로그인 뒤 내 계정 메뉴. 화면 설정도 이 안에 둔다(Figma R-01 Signed-in). */
-function AccountMenu({ mode, setMode }) {
+function AccountMenu({ mode, setMode, user }) {
+  // 공공 깃랩: 계정 단추는 사용자 머리글자 아바타(아이콘 아님)
+  const name = user?.name || user?.username || t.GlobalBar_account;
   return (
-    <Menu label={t.GlobalBar_account} className="rb-gbar-drop" align="right" toggle={false} btnClass="rb-gbar-icon" btnProps={{ title: t.GlobalBar_account }} button={<Icon name="my" />}>
+    <Menu label={t.GlobalBar_account} className="rb-gbar-drop rb-gbar-account" align="right" toggle={false} btnClass="rb-gbar-icon" btnProps={{ title: t.GlobalBar_account }} button={<Avatar src={user?.avatar_url} name={name} seed={user?.id} className="is-24" />}>
       {(close) => (
         <>
           <div className="rb-menu-group">

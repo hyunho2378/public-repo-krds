@@ -50,8 +50,9 @@ function cmp(screen, bp, auth, fv, cv) {
     const ce = cEls[k];
     if (!ce) { add('only-figma', k, { want: fe.box }); continue; }
     for (const f of ['x', 'y', 'w', 'h']) { const d = Math.round(ce[f] - fe.box[f]); if (Math.abs(d) > TOL) add('box', k, { field: f, figma: fe.box[f], code: ce[f], diff: d }, fe.box.y); }
-    const ftexts = (fe.type === 'TEXT' ? [fe] : fe.texts || []).map((t) => normCrumb(t.text)).filter(Boolean);
-    const ctext = normCrumb(ce.text);
+    const nt = k.startsWith('breadcrumb') ? normCrumb : norm;
+    const ftexts = (fe.type === 'TEXT' ? [fe] : fe.texts || []).map((t) => nt(t.text)).filter(Boolean);
+    const ctext = nt(ce.text);
     const missing = ftexts.filter((t) => !ctext.includes(t.replace(/…$/, '')));
     if (missing.length && ce.textLen <= 200) add('text', k, { figma: missing.slice(0, 4), code: ctext.slice(0, 120) });
     // 글자 속성과 글자색은 글자 하나짜리 요소(TEXT 또는 글자 1개를 가진 틀)에서만 비교(큰 틀의 '첫 글자'는 뜻이 없다)

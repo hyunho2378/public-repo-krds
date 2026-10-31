@@ -300,3 +300,8 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 #root .rb-x-filter .drop-btn, #root .rb-x-filter button, #root .rb-x-filter input, #root .rb-x-search { height: var(--layout-filter-control-h); min-height: 0; }
 .rb-login3-alert { margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); color: var(--krds-color-text-basic); }
 .rb-login3 .form-hint { margin: 0; font-size: var(--rb-step-15); line-height: var(--rb-lh-15); color: var(--krds-color-text-subtle); }
+/* 로그인 상단 바: 1024 미만은 만들기·작업 항목·MR·계정을 '메뉴'로 접고 알림만(Figma 360/768) */
+@media (max-width: 1023px) {
+  #root .rb-gbar[data-auth="Signed-in"] .rb-gbar-right > a.rb-gbar-icon:not([href$="/notifications"]), #root .rb-gbar[data-auth="Signed-in"] .rb-gbar-account { display: none; }
+}
+#root .rb-gbar-account .rb-avatar.is-24 { width: var(--krds-number-10); height: var(--krds-number-10); font-size: var(--rb-step-13); }
