@@ -1,6 +1,6 @@
 # Figma 대 코드 전수 대조 원장(parity ledger)
 
-- 생성: 2026-10-31T16:40:38.733Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
+- 생성: 2026-10-31T16:58:39.174Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
 - 다시 만들기: 개발 서버에서 측정(app/scripts/export-code-boxes.mjs 또는 Aside 탭에서 export-code-boxes.js) 뒤 `npm run check:parity`
 
 ## 0. 해소 규칙
@@ -20,14 +20,14 @@
 
 | 순위 | 원인(분류 · 요소 · 항목) | 건수 | 담당 화면 분포 | 해소 쪽 | 비고 | 예 |
 |---:|---|---:|---|---|---|---|
-| 1 | 위치/크기 · project-row · h | 86 | D21 86 | Figma | 검색 행 구조 확인 요청 | A-01_768_Guest |
-| 2 | 위치/크기 · project-row · y | 80 | D21 80 | Figma | 검색 행 구조 확인 요청 | A-01_1024_Guest |
-| 3 | Figma에만 · project-row | 75 | D21 75 | 미정 |  | A-01_1024_Guest |
-| 4 | 모서리·안쪽·간격 · page-head | 45 | D21 15, C1 20, C2 10 | 미정 |  | G-04_1024_Guest |
-| 5 | 위치/크기 · gl-filter · y | 44 | D21 20, C1 20, C2 4 | 미정 |  | G-01_1024_Guest |
-| 6 | 문구 · page-head | 44 | D21 30, C1 10, C2 4 | 미정 |  | G-06_1024_Guest |
-| 7 | Figma에만 · tabs | 40 | D21 40 | 미정 |  | A-09_1024_Guest |
-| 8 | 모서리·안쪽·간격 · commit-bar | 40 | D21 20, C1 20 | 미정 |  | R-01_1024_Guest |
+| 1 | 위치/크기 · project-row · y | 102 | D21 102 | Figma | 검색 행 구조 확인 요청 | A-01_1024_Guest |
+| 2 | 위치/크기 · project-row · h | 80 | D21 80 | Figma | 검색 행 구조 확인 요청 | A-01_1440_Guest |
+| 3 | 모서리·안쪽·간격 · page-head | 45 | D21 15, C1 20, C2 10 | 미정 |  | G-04_1024_Guest |
+| 4 | 위치/크기 · gl-filter · y | 44 | D21 20, C1 20, C2 4 | 미정 |  | G-01_1024_Guest |
+| 5 | 문구 · page-head | 44 | D21 30, C1 10, C2 4 | 미정 |  | G-06_1024_Guest |
+| 6 | Figma에만 · tabs | 40 | D21 40 | 미정 |  | A-09_1024_Guest |
+| 7 | 모서리·안쪽·간격 · commit-bar | 40 | D21 20, C1 20 | 미정 |  | R-01_1024_Guest |
+| 8 | 아이콘 · project-row | 38 | D21 38 | Figma | 검색 행 구조 확인 요청 | A-01_360_Guest |
 | 9 | 위치/크기 · login-field · y | 38 | D21 38 | 미정 |  | G-08b_360_Guest |
 | 10 | 위치/크기 · sidebar-nav · w | 36 | C1 12, C2 24 | 미정 |  | R-06_1440_Guest |
 | 11 | 위치/크기 · filter-search · x | 36 | C2 36 | 미정 |  | R-11_1024_Guest |
@@ -36,10 +36,10 @@
 | 14 | Figma에만 · login-fact | 30 | D21 30 | 미정 |  | G-08c_1024_Guest |
 | 15 | 문구 · commit-bar | 30 | D21 10, C1 20 | 미정 |  | R-01_1024_Guest |
 | 16 | 모서리·안쪽·간격 · readme | 30 | D21 30 | 미정 |  | R-01_1024_Guest |
-| 17 | 아이콘 · project-row | 28 | D21 28 | Figma | 검색 행 구조 확인 요청 | A-01_360_Guest |
-| 18 | 위치/크기 · gl-filter · h | 26 | D21 12, C1 10, C2 4 | 미정 |  | G-01_360_Guest |
-| 19 | 위치/크기 · login-card · h | 26 | D21 26 | 미정 |  | G-08b_360_Guest |
-| 20 | 위치/크기 · page-head · h | 25 | D21 15, C1 4, C2 6 | 미정 |  | G-04_1024_Guest |
+| 17 | 위치/크기 · gl-filter · h | 26 | D21 12, C1 10, C2 4 | 미정 |  | G-01_360_Guest |
+| 18 | 위치/크기 · login-card · h | 26 | D21 26 | 미정 |  | G-08b_360_Guest |
+| 19 | 위치/크기 · page-head · h | 25 | D21 15, C1 4, C2 6 | 미정 |  | G-04_1024_Guest |
+| 20 | 위치/크기 · section-title · w | 25 | D21 10, C1 10, C2 5 | 미정 |  | G-06_1024_Guest |
 
 ## 0-2. 로그인 상태(Signed-in) 대조
 
@@ -108,16 +108,16 @@
 
 | 화면_폭_auth | 담당 | 위치/크기 | 문구 | 글자 속성 | 색 | 모서리·안쪽·간격 | 아이콘 | Figma에만 | 코드에만 | 순서 | 합 | 허용 |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| A-01_1024_Guest | D21 | 5 | 1 | 0 | 0 | 1 | 0 | 7 | 0 | 0 | 14 | 16 |
-| A-01_1024_Signed-in | D21 | 5 | 1 | 0 | 0 | 1 | 0 | 7 | 0 | 0 | 14 | 16 |
-| A-01_1440_Guest | D21 | 5 | 1 | 0 | 0 | 1 | 0 | 7 | 0 | 0 | 14 | 13 |
-| A-01_1440_Signed-in | D21 | 5 | 1 | 0 | 0 | 1 | 0 | 7 | 0 | 0 | 14 | 13 |
-| A-01_1920_Guest | D21 | 5 | 1 | 0 | 0 | 1 | 0 | 7 | 0 | 0 | 14 | 13 |
-| A-01_1920_Signed-in | D21 | 5 | 1 | 0 | 0 | 1 | 0 | 7 | 0 | 0 | 14 | 13 |
-| A-01_360_Guest | D21 | 17 | 1 | 0 | 1 | 1 | 4 | 6 | 0 | 0 | 30 | 19 |
-| A-01_360_Signed-in | D21 | 17 | 1 | 0 | 1 | 1 | 4 | 6 | 0 | 0 | 30 | 19 |
-| A-01_768_Guest | D21 | 6 | 1 | 0 | 1 | 1 | 0 | 6 | 0 | 0 | 15 | 15 |
-| A-01_768_Signed-in | D21 | 6 | 1 | 0 | 1 | 1 | 0 | 6 | 0 | 0 | 15 | 15 |
+| A-01_1024_Guest | D21 | 7 | 1 | 0 | 0 | 1 | 0 | 2 | 0 | 0 | 11 | 21 |
+| A-01_1024_Signed-in | D21 | 7 | 1 | 0 | 0 | 1 | 0 | 2 | 0 | 0 | 11 | 21 |
+| A-01_1440_Guest | D21 | 9 | 1 | 0 | 0 | 1 | 0 | 2 | 0 | 0 | 13 | 18 |
+| A-01_1440_Signed-in | D21 | 9 | 1 | 0 | 0 | 1 | 0 | 2 | 0 | 0 | 13 | 18 |
+| A-01_1920_Guest | D21 | 9 | 1 | 0 | 0 | 1 | 0 | 2 | 0 | 0 | 13 | 18 |
+| A-01_1920_Signed-in | D21 | 9 | 1 | 0 | 0 | 1 | 0 | 2 | 0 | 0 | 13 | 18 |
+| A-01_360_Guest | D21 | 7 | 1 | 0 | 1 | 1 | 9 | 1 | 0 | 0 | 20 | 23 |
+| A-01_360_Signed-in | D21 | 7 | 1 | 0 | 1 | 1 | 9 | 1 | 0 | 0 | 20 | 23 |
+| A-01_768_Guest | D21 | 8 | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 12 | 21 |
+| A-01_768_Signed-in | D21 | 8 | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 12 | 21 |
 | A-02_1024_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 | 6 | 12 |
 | A-02_1024_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 | 6 | 12 |
 | A-02_1440_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 6 | 0 | 0 | 6 | 15 |
@@ -159,15 +159,15 @@
 | A-05_768_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 12 |
 | A-05_768_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 12 |
 | A-06_1024_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 7 |
-| A-06_1024_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 7 |
+| A-06_1024_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 |
 | A-06_1440_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10 |
-| A-06_1440_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10 |
+| A-06_1440_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 11 |
 | A-06_1920_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10 |
-| A-06_1920_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10 |
+| A-06_1920_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 11 |
 | A-06_360_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10 |
-| A-06_360_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10 |
+| A-06_360_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 11 |
 | A-06_768_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 |
-| A-06_768_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 |
+| A-06_768_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 9 |
 | A-07_1024_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10 |
 | A-07_1024_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10 |
 | A-07_1440_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 13 |
@@ -218,26 +218,26 @@
 | A-11_360_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 10 |
 | A-11_768_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 |
 | A-11_768_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 7 |
-| G-01_1024_Guest | D21 | 12 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 18 | 18 |
-| G-01_1024_Signed-in | D21 | 12 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 18 | 18 |
-| G-01_1440_Guest | D21 | 13 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 19 | 21 |
-| G-01_1440_Signed-in | D21 | 13 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 19 | 21 |
-| G-01_1920_Guest | D21 | 13 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 19 | 21 |
-| G-01_1920_Signed-in | D21 | 13 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 19 | 21 |
-| G-01_360_Guest | D21 | 10 | 1 | 0 | 0 | 0 | 8 | 2 | 3 | 0 | 24 | 25 |
-| G-01_360_Signed-in | D21 | 10 | 1 | 0 | 0 | 0 | 8 | 2 | 3 | 0 | 24 | 25 |
-| G-01_768_Guest | D21 | 11 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 17 | 19 |
-| G-01_768_Signed-in | D21 | 11 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 17 | 19 |
-| G-02_1024_Guest | D21 | 5 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 9 | 12 |
-| G-02_1024_Signed-in | D21 | 5 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 9 | 12 |
-| G-02_1440_Guest | D21 | 3 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 7 | 12 |
-| G-02_1440_Signed-in | D21 | 3 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 7 | 12 |
-| G-02_1920_Guest | D21 | 3 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 7 | 12 |
-| G-02_1920_Signed-in | D21 | 3 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 7 | 12 |
-| G-02_360_Guest | D21 | 19 | 0 | 0 | 1 | 0 | 3 | 3 | 0 | 0 | 26 | 16 |
-| G-02_360_Signed-in | D21 | 19 | 0 | 0 | 1 | 0 | 3 | 3 | 0 | 0 | 26 | 16 |
-| G-02_768_Guest | D21 | 0 | 0 | 0 | 1 | 0 | 0 | 3 | 0 | 0 | 4 | 13 |
-| G-02_768_Signed-in | D21 | 0 | 0 | 0 | 1 | 0 | 0 | 3 | 0 | 0 | 4 | 13 |
+| G-01_1024_Guest | D21 | 9 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 15 | 18 |
+| G-01_1024_Signed-in | D21 | 9 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 15 | 18 |
+| G-01_1440_Guest | D21 | 9 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 15 | 21 |
+| G-01_1440_Signed-in | D21 | 9 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 15 | 21 |
+| G-01_1920_Guest | D21 | 9 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 15 | 21 |
+| G-01_1920_Signed-in | D21 | 9 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 15 | 21 |
+| G-01_360_Guest | D21 | 12 | 1 | 0 | 0 | 0 | 8 | 2 | 3 | 0 | 26 | 26 |
+| G-01_360_Signed-in | D21 | 12 | 1 | 0 | 0 | 0 | 8 | 2 | 3 | 0 | 26 | 26 |
+| G-01_768_Guest | D21 | 9 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 15 | 19 |
+| G-01_768_Signed-in | D21 | 9 | 1 | 0 | 0 | 0 | 0 | 2 | 3 | 0 | 15 | 19 |
+| G-02_1024_Guest | D21 | 5 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 7 | 12 |
+| G-02_1024_Signed-in | D21 | 5 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 7 | 12 |
+| G-02_1440_Guest | D21 | 3 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 5 | 12 |
+| G-02_1440_Signed-in | D21 | 3 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 5 | 12 |
+| G-02_1920_Guest | D21 | 3 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 5 | 12 |
+| G-02_1920_Signed-in | D21 | 3 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 5 | 12 |
+| G-02_360_Guest | D21 | 11 | 0 | 0 | 1 | 0 | 3 | 1 | 0 | 0 | 16 | 16 |
+| G-02_360_Signed-in | D21 | 11 | 0 | 0 | 1 | 0 | 3 | 1 | 0 | 0 | 16 | 16 |
+| G-02_768_Guest | D21 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 2 | 12 |
+| G-02_768_Signed-in | D21 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 2 | 12 |
 | G-03_1024_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 |
 | G-03_1024_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 8 |
 | G-03_1440_Guest | D21 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 11 |
@@ -668,235 +668,199 @@
 | R-30_360_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 9 |
 | R-30_768_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 9 |
 | R-30_768_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 9 |
-| **합** |  | 1088 | 188 | 17 | 65 | 215 | 133 | 408 | 158 | 12 | 2284 |  |
+| **합** |  | 1054 | 188 | 17 | 65 | 215 | 143 | 338 | 158 | 12 | 2190 |  |
 
 - 기본값이 아닌 Figma 변형(코드 재현 대기, 8개): G-01_360_Auth-Guest_Drawer-Open, G-02_1440_Auth-Guest_Dialog-Open, G-09_1440_Auth-Guest_Kind-LoginRequired, R-01_1440_Auth-Guest_Drawer-Closed_Sidebar-Collapsed_Info-Short, R-01_1440_Auth-Guest_Drawer-Closed_Sidebar-Expanded_Info-Expanded, R-01_360_Auth-Guest_Drawer-Open_Sidebar-Expanded_Info-Short, R-11_1440_Auth-Guest_State-Empty, R-11_1440_Auth-Guest_State-NoResults
 
 ## 2. 화면별 세부(허용 아님)
 
-### A-01_1024_Guest (D21, 14건)
+### A-01_1024_Guest (D21, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 40,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 320,161 664x777) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 320,161 664x695) |
 | 위치/크기 | task-search | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | task-search | h Figma 248 / 코드 256 (+8) |
-| 문구 | task-search | Figma 글 'AI 정리', '어', '어돌잘돌-소방 출장 최적경로 안내', '9' 없음. 코드: '업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ' |
+| 문구 | task-search | Figma 글 'AI 정리' 없음. 코드: '업무로 찾기 한 한글 AI 도우미 ： 로컬LLM + 웹한글 기반의 보고서 도우미 7 0 - - 온AI Work 1 0 - - 온AI Work 1 0 - - 업무로 찾기 더보기' |
 | 모서리·안쪽·간격 | task-search | 안쪽 0 0 0 0→0 0 8 0 |
 | 위치/크기 | project-row | y Figma 191 / 코드 203 (+12) |
 | 위치/크기 | project-row#2 | y Figma 256 / 코드 268 (+12) |
 | 위치/크기 | project-row#3 | y Figma 321 / 코드 333 (+12) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 320,421 664x91) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 320,512 664x69) |
-| Figma에만 | project-row#6 | 코드에 이름표 없음(Figma 320,581 664x119) |
-| Figma에만 | project-row#7 | 코드에 이름표 없음(Figma 320,700 664x119) |
-| Figma에만 | project-row#8 | 코드에 이름표 없음(Figma 320,819 664x119) |
+| 위치/크기 | project-row#4 | y Figma 421 / 코드 437 (+16) |
+| 위치/크기 | project-row#5 | y Figma 512 / 코드 528 (+16) |
 
-### A-01_1024_Signed-in (D21, 14건)
+### A-01_1024_Signed-in (D21, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 40,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 320,161 664x777) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 320,161 664x695) |
 | 위치/크기 | task-search | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | task-search | h Figma 248 / 코드 256 (+8) |
-| 문구 | task-search | Figma 글 'AI 정리', '어', '어돌잘돌-소방 출장 최적경로 안내', '9' 없음. 코드: '업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ' |
+| 문구 | task-search | Figma 글 'AI 정리' 없음. 코드: '업무로 찾기 한 한글 AI 도우미 ： 로컬LLM + 웹한글 기반의 보고서 도우미 7 0 - - 온AI Work 1 0 - - 온AI Work 1 0 - - 업무로 찾기 더보기' |
 | 모서리·안쪽·간격 | task-search | 안쪽 0 0 0 0→0 0 8 0 |
 | 위치/크기 | project-row | y Figma 191 / 코드 203 (+12) |
 | 위치/크기 | project-row#2 | y Figma 256 / 코드 268 (+12) |
 | 위치/크기 | project-row#3 | y Figma 321 / 코드 333 (+12) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 320,421 664x91) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 320,512 664x69) |
-| Figma에만 | project-row#6 | 코드에 이름표 없음(Figma 320,581 664x119) |
-| Figma에만 | project-row#7 | 코드에 이름표 없음(Figma 320,700 664x119) |
-| Figma에만 | project-row#8 | 코드에 이름표 없음(Figma 320,819 664x119) |
+| 위치/크기 | project-row#4 | y Figma 421 / 코드 437 (+16) |
+| 위치/크기 | project-row#5 | y Figma 512 / 코드 528 (+16) |
 
-### A-01_1440_Guest (D21, 14건)
+### A-01_1440_Guest (D21, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 120,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 400,161 920x777) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 400,161 920x635) |
 | 위치/크기 | task-search | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | task-search | h Figma 248 / 코드 256 (+8) |
-| 문구 | task-search | Figma 글 'AI 정리', '어', '어돌잘돌-소방 출장 최적경로 안내', '9' 없음. 코드: '업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ' |
+| 문구 | task-search | Figma 글 'AI 정리' 없음. 코드: '업무로 찾기 한 한글 AI 도우미 ： 로컬LLM + 웹한글 기반의 보고서 도우미 7 0 - - 온AI Work 1 0 - - 온AI Work 1 0 - - 업무로 찾기 더보기' |
 | 모서리·안쪽·간격 | task-search | 안쪽 0 0 0 0→0 0 8 0 |
 | 위치/크기 | project-row | y Figma 191 / 코드 203 (+12) |
 | 위치/크기 | project-row#2 | y Figma 256 / 코드 268 (+12) |
 | 위치/크기 | project-row#3 | y Figma 321 / 코드 333 (+12) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 400,421 920x91) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 400,512 920x69) |
-| Figma에만 | project-row#6 | 코드에 이름표 없음(Figma 400,581 920x119) |
-| Figma에만 | project-row#7 | 코드에 이름표 없음(Figma 400,700 920x119) |
-| Figma에만 | project-row#8 | 코드에 이름표 없음(Figma 400,819 920x119) |
+| 위치/크기 | project-row#4 | y Figma 421 / 코드 437 (+16) |
+| 위치/크기 | project-row#4 | h Figma 91 / 코드 71 (-20) |
+| 위치/크기 | project-row#5 | y Figma 512 / 코드 508 (-4) |
+| 위치/크기 | project-row#6 | y Figma 583 / 코드 579 (-4) |
 
-### A-01_1440_Signed-in (D21, 14건)
+### A-01_1440_Signed-in (D21, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 120,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 400,161 920x777) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 400,161 920x635) |
 | 위치/크기 | task-search | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | task-search | h Figma 248 / 코드 256 (+8) |
-| 문구 | task-search | Figma 글 'AI 정리', '어', '어돌잘돌-소방 출장 최적경로 안내', '9' 없음. 코드: '업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ' |
+| 문구 | task-search | Figma 글 'AI 정리' 없음. 코드: '업무로 찾기 한 한글 AI 도우미 ： 로컬LLM + 웹한글 기반의 보고서 도우미 7 0 - - 온AI Work 1 0 - - 온AI Work 1 0 - - 업무로 찾기 더보기' |
 | 모서리·안쪽·간격 | task-search | 안쪽 0 0 0 0→0 0 8 0 |
 | 위치/크기 | project-row | y Figma 191 / 코드 203 (+12) |
 | 위치/크기 | project-row#2 | y Figma 256 / 코드 268 (+12) |
 | 위치/크기 | project-row#3 | y Figma 321 / 코드 333 (+12) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 400,421 920x91) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 400,512 920x69) |
-| Figma에만 | project-row#6 | 코드에 이름표 없음(Figma 400,581 920x119) |
-| Figma에만 | project-row#7 | 코드에 이름표 없음(Figma 400,700 920x119) |
-| Figma에만 | project-row#8 | 코드에 이름표 없음(Figma 400,819 920x119) |
+| 위치/크기 | project-row#4 | y Figma 421 / 코드 437 (+16) |
+| 위치/크기 | project-row#4 | h Figma 91 / 코드 71 (-20) |
+| 위치/크기 | project-row#5 | y Figma 512 / 코드 508 (-4) |
+| 위치/크기 | project-row#6 | y Figma 583 / 코드 579 (-4) |
 
-### A-01_1920_Guest (D21, 14건)
+### A-01_1920_Guest (D21, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 360,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 640,161 920x777) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 640,161 920x635) |
 | 위치/크기 | task-search | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | task-search | h Figma 248 / 코드 256 (+8) |
-| 문구 | task-search | Figma 글 'AI 정리', '어', '어돌잘돌-소방 출장 최적경로 안내', '9' 없음. 코드: '업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ' |
+| 문구 | task-search | Figma 글 'AI 정리' 없음. 코드: '업무로 찾기 한 한글 AI 도우미 ： 로컬LLM + 웹한글 기반의 보고서 도우미 7 0 - - 온AI Work 1 0 - - 온AI Work 1 0 - - 업무로 찾기 더보기' |
 | 모서리·안쪽·간격 | task-search | 안쪽 0 0 0 0→0 0 8 0 |
 | 위치/크기 | project-row | y Figma 191 / 코드 203 (+12) |
 | 위치/크기 | project-row#2 | y Figma 256 / 코드 268 (+12) |
 | 위치/크기 | project-row#3 | y Figma 321 / 코드 333 (+12) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 640,421 920x91) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 640,512 920x69) |
-| Figma에만 | project-row#6 | 코드에 이름표 없음(Figma 640,581 920x119) |
-| Figma에만 | project-row#7 | 코드에 이름표 없음(Figma 640,700 920x119) |
-| Figma에만 | project-row#8 | 코드에 이름표 없음(Figma 640,819 920x119) |
+| 위치/크기 | project-row#4 | y Figma 421 / 코드 437 (+16) |
+| 위치/크기 | project-row#4 | h Figma 91 / 코드 71 (-20) |
+| 위치/크기 | project-row#5 | y Figma 512 / 코드 508 (-4) |
+| 위치/크기 | project-row#6 | y Figma 583 / 코드 579 (-4) |
 
-### A-01_1920_Signed-in (D21, 14건)
+### A-01_1920_Signed-in (D21, 13건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 360,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 640,161 920x777) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 640,161 920x635) |
 | 위치/크기 | task-search | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | task-search | h Figma 248 / 코드 256 (+8) |
-| 문구 | task-search | Figma 글 'AI 정리', '어', '어돌잘돌-소방 출장 최적경로 안내', '9' 없음. 코드: '업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ' |
+| 문구 | task-search | Figma 글 'AI 정리' 없음. 코드: '업무로 찾기 한 한글 AI 도우미 ： 로컬LLM + 웹한글 기반의 보고서 도우미 7 0 - - 온AI Work 1 0 - - 온AI Work 1 0 - - 업무로 찾기 더보기' |
 | 모서리·안쪽·간격 | task-search | 안쪽 0 0 0 0→0 0 8 0 |
 | 위치/크기 | project-row | y Figma 191 / 코드 203 (+12) |
 | 위치/크기 | project-row#2 | y Figma 256 / 코드 268 (+12) |
 | 위치/크기 | project-row#3 | y Figma 321 / 코드 333 (+12) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 640,421 920x91) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 640,512 920x69) |
-| Figma에만 | project-row#6 | 코드에 이름표 없음(Figma 640,581 920x119) |
-| Figma에만 | project-row#7 | 코드에 이름표 없음(Figma 640,700 920x119) |
-| Figma에만 | project-row#8 | 코드에 이름표 없음(Figma 640,819 920x119) |
+| 위치/크기 | project-row#4 | y Figma 421 / 코드 437 (+16) |
+| 위치/크기 | project-row#4 | h Figma 91 / 코드 71 (-20) |
+| 위치/크기 | project-row#5 | y Figma 512 / 코드 508 (-4) |
+| 위치/크기 | project-row#6 | y Figma 583 / 코드 579 (-4) |
 
-### A-01_360_Guest (D21, 30건)
+### A-01_360_Guest (D21, 20건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
-| 위치/크기 | content-panel | w Figma 360 / 코드 344 (-16) |
-| 위치/크기 | breadcrumb | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | main | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | main | w Figma 328 / 코드 312 (-16) |
-| 위치/크기 | footer | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | footer | w Figma 328 / 코드 312 (-16) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 16,213 328x911) |
-| 위치/크기 | search-filter | x Figma 268 / 코드 260 (-8) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 16,213 328x871) |
 | 색 | search-filter | fill Figma #33363d color/layout/btn-fill-bg / 코드 없음  |
-| 위치/크기 | task-search | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | task-search | w Figma 328 / 코드 312 (-16) |
 | 위치/크기 | task-search | h Figma 284 / 코드 292 (+8) |
-| 문구 | task-search | Figma 글 'AI 정리', '어', '어돌잘돌-소방 출장 최적경로 안내', '9' 없음. 코드: '업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ' |
+| 문구 | task-search | Figma 글 'AI 정리' 없음. 코드: '업무로 찾기 한 한글 AI 도우미 ： 로컬LLM + 웹한글 기반의 보고서 도우미 7 0 - - 온AI Work 1 0 - - 온AI Work 1 0 - - 업무로 찾기 더보기' |
 | 모서리·안쪽·간격 | task-search | 안쪽 0 0 0 0→0 0 8 0 |
 | 아이콘 | task-search | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row | w Figma 328 / 코드 312 (-16) |
 | 아이콘 | project-row | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,issues,merge-request,star |
-| 위치/크기 | project-row#2 | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row#2 | w Figma 328 / 코드 312 (-16) |
-| 아이콘 | project-row#2 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,issues,merge-request,star |
-| 위치/크기 | project-row#3 | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row#3 | w Figma 328 / 코드 312 (-16) |
+| 아이콘 | project-row#2 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
 | 아이콘 | project-row#3 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 16,509 328x115) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 16,624 328x71) |
-| Figma에만 | project-row#6 | 코드에 이름표 없음(Figma 16,695 328x143) |
-| Figma에만 | project-row#7 | 코드에 이름표 없음(Figma 16,838 328x143) |
-| Figma에만 | project-row#8 | 코드에 이름표 없음(Figma 16,981 328x143) |
+| 위치/크기 | project-row#4 | y Figma 509 / 코드 513 (+4) |
+| 위치/크기 | project-row#4 | h Figma 115 / 코드 139 (+24) |
+| 아이콘 | project-row#4 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#5 | h Figma 115 / 코드 163 (+48) |
+| 아이콘 | project-row#5 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#6 | h Figma 115 / 코드 185 (+70) |
+| 아이콘 | project-row#6 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#7 | h Figma 115 / 코드 185 (+70) |
+| 아이콘 | project-row#7 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#8 | h Figma 115 / 코드 139 (+24) |
+| 아이콘 | project-row#8 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
 
-### A-01_360_Signed-in (D21, 30건)
+### A-01_360_Signed-in (D21, 20건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
-| 위치/크기 | content-panel | w Figma 360 / 코드 344 (-16) |
-| 위치/크기 | breadcrumb | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | main | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | main | w Figma 328 / 코드 312 (-16) |
-| 위치/크기 | footer | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | footer | w Figma 328 / 코드 312 (-16) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 16,213 328x911) |
-| 위치/크기 | search-filter | x Figma 268 / 코드 260 (-8) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 16,213 328x871) |
 | 색 | search-filter | fill Figma #33363d color/layout/btn-fill-bg / 코드 없음  |
-| 위치/크기 | task-search | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | task-search | w Figma 328 / 코드 312 (-16) |
 | 위치/크기 | task-search | h Figma 284 / 코드 292 (+8) |
-| 문구 | task-search | Figma 글 'AI 정리', '어', '어돌잘돌-소방 출장 최적경로 안내', '9' 없음. 코드: '업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ' |
+| 문구 | task-search | Figma 글 'AI 정리' 없음. 코드: '업무로 찾기 한 한글 AI 도우미 ： 로컬LLM + 웹한글 기반의 보고서 도우미 7 0 - - 온AI Work 1 0 - - 온AI Work 1 0 - - 업무로 찾기 더보기' |
 | 모서리·안쪽·간격 | task-search | 안쪽 0 0 0 0→0 0 8 0 |
 | 아이콘 | task-search | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row | w Figma 328 / 코드 312 (-16) |
 | 아이콘 | project-row | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,issues,merge-request,star |
-| 위치/크기 | project-row#2 | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row#2 | w Figma 328 / 코드 312 (-16) |
-| 아이콘 | project-row#2 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,issues,merge-request,star |
-| 위치/크기 | project-row#3 | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row#3 | w Figma 328 / 코드 312 (-16) |
+| 아이콘 | project-row#2 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
 | 아이콘 | project-row#3 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 16,509 328x115) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 16,624 328x71) |
-| Figma에만 | project-row#6 | 코드에 이름표 없음(Figma 16,695 328x143) |
-| Figma에만 | project-row#7 | 코드에 이름표 없음(Figma 16,838 328x143) |
-| Figma에만 | project-row#8 | 코드에 이름표 없음(Figma 16,981 328x143) |
+| 위치/크기 | project-row#4 | y Figma 509 / 코드 513 (+4) |
+| 위치/크기 | project-row#4 | h Figma 115 / 코드 139 (+24) |
+| 아이콘 | project-row#4 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#5 | h Figma 115 / 코드 163 (+48) |
+| 아이콘 | project-row#5 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#6 | h Figma 115 / 코드 185 (+70) |
+| 아이콘 | project-row#6 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#7 | h Figma 115 / 코드 185 (+70) |
+| 아이콘 | project-row#7 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#8 | h Figma 115 / 코드 139 (+24) |
+| 아이콘 | project-row#8 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
 
-### A-01_768_Guest (D21, 15건)
+### A-01_768_Guest (D21, 12건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| Figma에만 | results | 코드에 이름표 없음(Figma 32,213 704x813) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 32,213 704x711) |
 | 색 | search-filter | fill Figma #33363d color/layout/btn-fill-bg / 코드 없음  |
 | 위치/크기 | task-search | h Figma 284 / 코드 298 (+14) |
-| 문구 | task-search | Figma 글 'AI 정리', '어', '어돌잘돌-소방 출장 최적경로 안내', '9' 없음. 코드: '업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ' |
+| 문구 | task-search | Figma 글 'AI 정리' 없음. 코드: '업무로 찾기 한 한글 AI 도우미 ： 로컬LLM + 웹한글 기반의 보고서 도우미 7 0 - - 온AI Work 1 0 - - 온AI Work 1 0 - - 업무로 찾기 더보기' |
 | 모서리·안쪽·간격 | task-search | 안쪽 0 0 0 0→0 0 8 0 |
 | 위치/크기 | project-row | h Figma 69 / 코드 71 (+2) |
 | 위치/크기 | project-row#2 | y Figma 320 / 코드 322 (+2) |
 | 위치/크기 | project-row#2 | h Figma 69 / 코드 71 (+2) |
 | 위치/크기 | project-row#3 | y Figma 397 / 코드 401 (+4) |
 | 위치/크기 | project-row#3 | h Figma 69 / 코드 71 (+2) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 32,509 704x91) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 32,600 704x69) |
-| Figma에만 | project-row#6 | 코드에 이름표 없음(Figma 32,669 704x119) |
-| Figma에만 | project-row#7 | 코드에 이름표 없음(Figma 32,788 704x119) |
-| Figma에만 | project-row#8 | 코드에 이름표 없음(Figma 32,907 704x119) |
+| 위치/크기 | project-row#4 | y Figma 509 / 코드 519 (+10) |
+| 위치/크기 | project-row#4 | h Figma 91 / 코드 71 (-20) |
 
-### A-01_768_Signed-in (D21, 15건)
+### A-01_768_Signed-in (D21, 12건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| Figma에만 | results | 코드에 이름표 없음(Figma 32,213 704x813) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 32,213 704x711) |
 | 색 | search-filter | fill Figma #33363d color/layout/btn-fill-bg / 코드 없음  |
 | 위치/크기 | task-search | h Figma 284 / 코드 298 (+14) |
-| 문구 | task-search | Figma 글 'AI 정리', '어', '어돌잘돌-소방 출장 최적경로 안내', '9' 없음. 코드: '업무로 찾기 농 AI 기반 회의록 자동 생성 및 RAG 검색 서비스 1 0 - - Stream Record - 영상 스트리밍 회의록 생성기 6 0 - - JC-LIVE 도의회 회의록 AI 기록 플랫폼 2 0 - - ' |
+| 문구 | task-search | Figma 글 'AI 정리' 없음. 코드: '업무로 찾기 한 한글 AI 도우미 ： 로컬LLM + 웹한글 기반의 보고서 도우미 7 0 - - 온AI Work 1 0 - - 온AI Work 1 0 - - 업무로 찾기 더보기' |
 | 모서리·안쪽·간격 | task-search | 안쪽 0 0 0 0→0 0 8 0 |
 | 위치/크기 | project-row | h Figma 69 / 코드 71 (+2) |
 | 위치/크기 | project-row#2 | y Figma 320 / 코드 322 (+2) |
 | 위치/크기 | project-row#2 | h Figma 69 / 코드 71 (+2) |
 | 위치/크기 | project-row#3 | y Figma 397 / 코드 401 (+4) |
 | 위치/크기 | project-row#3 | h Figma 69 / 코드 71 (+2) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 32,509 704x91) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 32,600 704x69) |
-| Figma에만 | project-row#6 | 코드에 이름표 없음(Figma 32,669 704x119) |
-| Figma에만 | project-row#7 | 코드에 이름표 없음(Figma 32,788 704x119) |
-| Figma에만 | project-row#8 | 코드에 이름표 없음(Figma 32,907 704x119) |
+| 위치/크기 | project-row#4 | y Figma 509 / 코드 519 (+10) |
+| 위치/크기 | project-row#4 | h Figma 91 / 코드 71 (-20) |
 
 ### A-02_1024_Guest (D21, 6건)
 
@@ -1263,7 +1227,7 @@
 |---|---|---|
 | Figma에만 | tabs | 코드에 이름표 없음(Figma 32,199 704x40) |
 
-### G-01_1024_Guest (D21, 18건)
+### G-01_1024_Guest (D21, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
@@ -1271,22 +1235,19 @@
 | 위치/크기 | gl-filter | y Figma 217 / 코드 221 (+4) |
 | 문구 | gl-filter | Figma 글 '업무 분야: 전체' 없음. 코드: '전체 분야 업데이트 날짜 필터링 또는 검색 (최소 3자)' |
 | 위치/크기 | project-row | y Figma 290 / 코드 294 (+4) |
-| 위치/크기 | project-row | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#2 | y Figma 359 / 코드 367 (+8) |
-| 위치/크기 | project-row#2 | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#3 | y Figma 428 / 코드 439 (+11) |
+| 위치/크기 | project-row#2 | y Figma 359 / 코드 363 (+4) |
+| 위치/크기 | project-row#3 | y Figma 428 / 코드 432 (+4) |
 | 위치/크기 | project-row#3 | h Figma 119 / 코드 143 (+24) |
-| 위치/크기 | project-row#4 | y Figma 547 / 코드 582 (+35) |
+| 위치/크기 | project-row#4 | y Figma 547 / 코드 575 (+28) |
 | 위치/크기 | project-row#4 | h Figma 71 / 코드 99 (+28) |
-| 위치/크기 | project-row#5 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#6 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#8 | h Figma 119 / 코드 73 (-46) |
+| 위치/크기 | project-row#6 | h Figma 71 / 코드 69 (-2) |
+| 위치/크기 | project-row#8 | h Figma 119 / 코드 69 (-50) |
 | Figma에만 | filter-search | 코드에 이름표 없음(Figma 603,234 32x32) |
 | 코드에만 | page-head | Figma에 없음 |
 | 코드에만 | gl-tabs | Figma에 없음 |
 | 코드에만 | extra-field-filter | Figma에 없음 |
 
-### G-01_1024_Signed-in (D21, 18건)
+### G-01_1024_Signed-in (D21, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
@@ -1294,22 +1255,19 @@
 | 위치/크기 | gl-filter | y Figma 217 / 코드 221 (+4) |
 | 문구 | gl-filter | Figma 글 '업무 분야: 전체' 없음. 코드: '전체 분야 업데이트 날짜 필터링 또는 검색 (최소 3자)' |
 | 위치/크기 | project-row | y Figma 290 / 코드 294 (+4) |
-| 위치/크기 | project-row | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#2 | y Figma 359 / 코드 367 (+8) |
-| 위치/크기 | project-row#2 | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#3 | y Figma 428 / 코드 439 (+11) |
+| 위치/크기 | project-row#2 | y Figma 359 / 코드 363 (+4) |
+| 위치/크기 | project-row#3 | y Figma 428 / 코드 432 (+4) |
 | 위치/크기 | project-row#3 | h Figma 119 / 코드 143 (+24) |
-| 위치/크기 | project-row#4 | y Figma 547 / 코드 582 (+35) |
+| 위치/크기 | project-row#4 | y Figma 547 / 코드 575 (+28) |
 | 위치/크기 | project-row#4 | h Figma 71 / 코드 99 (+28) |
-| 위치/크기 | project-row#5 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#6 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#8 | h Figma 119 / 코드 73 (-46) |
+| 위치/크기 | project-row#6 | h Figma 71 / 코드 69 (-2) |
+| 위치/크기 | project-row#8 | h Figma 119 / 코드 69 (-50) |
 | Figma에만 | filter-search | 코드에 이름표 없음(Figma 603,234 32x32) |
 | 코드에만 | page-head | Figma에 없음 |
 | 코드에만 | gl-tabs | Figma에 없음 |
 | 코드에만 | extra-field-filter | Figma에 없음 |
 
-### G-01_1440_Guest (D21, 19건)
+### G-01_1440_Guest (D21, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
@@ -1317,23 +1275,19 @@
 | 위치/크기 | gl-filter | y Figma 217 / 코드 221 (+4) |
 | 문구 | gl-filter | Figma 글 '업무 분야: 전체' 없음. 코드: '전체 분야 업데이트 날짜 필터링 또는 검색 (최소 3자)' |
 | 위치/크기 | project-row | y Figma 290 / 코드 294 (+4) |
-| 위치/크기 | project-row | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#2 | y Figma 359 / 코드 367 (+8) |
-| 위치/크기 | project-row#2 | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#3 | y Figma 428 / 코드 439 (+11) |
+| 위치/크기 | project-row#2 | y Figma 359 / 코드 363 (+4) |
+| 위치/크기 | project-row#3 | y Figma 428 / 코드 432 (+4) |
 | 위치/크기 | project-row#3 | h Figma 119 / 코드 143 (+24) |
-| 위치/크기 | project-row#4 | y Figma 547 / 코드 582 (+35) |
+| 위치/크기 | project-row#4 | y Figma 547 / 코드 575 (+28) |
 | 위치/크기 | project-row#4 | h Figma 71 / 코드 99 (+28) |
-| 위치/크기 | project-row#5 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#6 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#7 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#8 | h Figma 119 / 코드 73 (-46) |
+| 위치/크기 | project-row#6 | h Figma 71 / 코드 69 (-2) |
+| 위치/크기 | project-row#8 | h Figma 119 / 코드 69 (-50) |
 | Figma에만 | filter-search | 코드에 이름표 없음(Figma 1003,234 32x32) |
 | 코드에만 | page-head | Figma에 없음 |
 | 코드에만 | gl-tabs | Figma에 없음 |
 | 코드에만 | extra-field-filter | Figma에 없음 |
 
-### G-01_1440_Signed-in (D21, 19건)
+### G-01_1440_Signed-in (D21, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
@@ -1341,23 +1295,19 @@
 | 위치/크기 | gl-filter | y Figma 217 / 코드 221 (+4) |
 | 문구 | gl-filter | Figma 글 '업무 분야: 전체' 없음. 코드: '전체 분야 업데이트 날짜 필터링 또는 검색 (최소 3자)' |
 | 위치/크기 | project-row | y Figma 290 / 코드 294 (+4) |
-| 위치/크기 | project-row | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#2 | y Figma 359 / 코드 367 (+8) |
-| 위치/크기 | project-row#2 | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#3 | y Figma 428 / 코드 439 (+11) |
+| 위치/크기 | project-row#2 | y Figma 359 / 코드 363 (+4) |
+| 위치/크기 | project-row#3 | y Figma 428 / 코드 432 (+4) |
 | 위치/크기 | project-row#3 | h Figma 119 / 코드 143 (+24) |
-| 위치/크기 | project-row#4 | y Figma 547 / 코드 582 (+35) |
+| 위치/크기 | project-row#4 | y Figma 547 / 코드 575 (+28) |
 | 위치/크기 | project-row#4 | h Figma 71 / 코드 99 (+28) |
-| 위치/크기 | project-row#5 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#6 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#7 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#8 | h Figma 119 / 코드 73 (-46) |
+| 위치/크기 | project-row#6 | h Figma 71 / 코드 69 (-2) |
+| 위치/크기 | project-row#8 | h Figma 119 / 코드 69 (-50) |
 | Figma에만 | filter-search | 코드에 이름표 없음(Figma 1003,234 32x32) |
 | 코드에만 | page-head | Figma에 없음 |
 | 코드에만 | gl-tabs | Figma에 없음 |
 | 코드에만 | extra-field-filter | Figma에 없음 |
 
-### G-01_1920_Guest (D21, 19건)
+### G-01_1920_Guest (D21, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
@@ -1365,23 +1315,19 @@
 | 위치/크기 | gl-filter | y Figma 217 / 코드 221 (+4) |
 | 문구 | gl-filter | Figma 글 '업무 분야: 전체' 없음. 코드: '전체 분야 업데이트 날짜 필터링 또는 검색 (최소 3자)' |
 | 위치/크기 | project-row | y Figma 290 / 코드 294 (+4) |
-| 위치/크기 | project-row | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#2 | y Figma 359 / 코드 367 (+8) |
-| 위치/크기 | project-row#2 | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#3 | y Figma 428 / 코드 439 (+11) |
+| 위치/크기 | project-row#2 | y Figma 359 / 코드 363 (+4) |
+| 위치/크기 | project-row#3 | y Figma 428 / 코드 432 (+4) |
 | 위치/크기 | project-row#3 | h Figma 119 / 코드 143 (+24) |
-| 위치/크기 | project-row#4 | y Figma 547 / 코드 582 (+35) |
+| 위치/크기 | project-row#4 | y Figma 547 / 코드 575 (+28) |
 | 위치/크기 | project-row#4 | h Figma 71 / 코드 99 (+28) |
-| 위치/크기 | project-row#5 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#6 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#7 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#8 | h Figma 99 / 코드 73 (-26) |
+| 위치/크기 | project-row#6 | h Figma 71 / 코드 69 (-2) |
+| 위치/크기 | project-row#8 | h Figma 99 / 코드 69 (-30) |
 | Figma에만 | filter-search | 코드에 이름표 없음(Figma 1299,234 32x32) |
 | 코드에만 | page-head | Figma에 없음 |
 | 코드에만 | gl-tabs | Figma에 없음 |
 | 코드에만 | extra-field-filter | Figma에 없음 |
 
-### G-01_1920_Signed-in (D21, 19건)
+### G-01_1920_Signed-in (D21, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
@@ -1389,23 +1335,19 @@
 | 위치/크기 | gl-filter | y Figma 217 / 코드 221 (+4) |
 | 문구 | gl-filter | Figma 글 '업무 분야: 전체' 없음. 코드: '전체 분야 업데이트 날짜 필터링 또는 검색 (최소 3자)' |
 | 위치/크기 | project-row | y Figma 290 / 코드 294 (+4) |
-| 위치/크기 | project-row | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#2 | y Figma 359 / 코드 367 (+8) |
-| 위치/크기 | project-row#2 | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#3 | y Figma 428 / 코드 439 (+11) |
+| 위치/크기 | project-row#2 | y Figma 359 / 코드 363 (+4) |
+| 위치/크기 | project-row#3 | y Figma 428 / 코드 432 (+4) |
 | 위치/크기 | project-row#3 | h Figma 119 / 코드 143 (+24) |
-| 위치/크기 | project-row#4 | y Figma 547 / 코드 582 (+35) |
+| 위치/크기 | project-row#4 | y Figma 547 / 코드 575 (+28) |
 | 위치/크기 | project-row#4 | h Figma 71 / 코드 99 (+28) |
-| 위치/크기 | project-row#5 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#6 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#7 | h Figma 71 / 코드 73 (+2) |
-| 위치/크기 | project-row#8 | h Figma 99 / 코드 73 (-26) |
+| 위치/크기 | project-row#6 | h Figma 71 / 코드 69 (-2) |
+| 위치/크기 | project-row#8 | h Figma 99 / 코드 69 (-30) |
 | Figma에만 | filter-search | 코드에 이름표 없음(Figma 1299,234 32x32) |
 | 코드에만 | page-head | Figma에 없음 |
 | 코드에만 | gl-tabs | Figma에 없음 |
 | 코드에만 | extra-field-filter | Figma에 없음 |
 
-### G-01_360_Guest (D21, 24건)
+### G-01_360_Guest (D21, 26건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
@@ -1414,27 +1356,29 @@
 | 위치/크기 | gl-filter | h Figma 159 / 코드 145 (-14) |
 | 문구 | gl-filter | Figma 글 '업무 분야: 전체' 없음. 코드: '전체 분야 업데이트 날짜 필터링 또는 검색 (최소 3자)' |
 | 위치/크기 | project-row | y Figma 408 / 코드 366 (-42) |
-| 위치/크기 | project-row | h Figma 123 / 코드 121 (-2) |
+| 위치/크기 | project-row | h Figma 123 / 코드 117 (-6) |
 | 아이콘 | project-row | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#2 | y Figma 531 / 코드 487 (-44) |
-| 위치/크기 | project-row#2 | h Figma 99 / 코드 143 (+44) |
+| 위치/크기 | project-row#2 | y Figma 531 / 코드 483 (-48) |
+| 위치/크기 | project-row#2 | h Figma 99 / 코드 139 (+40) |
 | 아이콘 | project-row#2 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#3 | h Figma 171 / 코드 245 (+74) |
+| 위치/크기 | project-row#3 | h Figma 171 / 코드 241 (+70) |
 | 아이콘 | project-row#3 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#4 | h Figma 143 / 코드 201 (+58) |
+| 위치/크기 | project-row#4 | h Figma 143 / 코드 197 (+54) |
 | 아이콘 | project-row#4 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#5 | h Figma 143 / 코드 139 (-4) |
 | 아이콘 | project-row#5 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#6 | h Figma 143 / 코드 139 (-4) |
 | 아이콘 | project-row#6 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#7 | h Figma 143 / 코드 189 (+46) |
+| 위치/크기 | project-row#7 | h Figma 143 / 코드 185 (+42) |
 | 아이콘 | project-row#7 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#8 | h Figma 171 / 코드 109 (-62) |
+| 위치/크기 | project-row#8 | h Figma 171 / 코드 105 (-66) |
 | 아이콘 | project-row#8 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
 | Figma에만 | filter-search | 코드에 이름표 없음(Figma 295,265 32x32) |
 | 코드에만 | page-head | Figma에 없음 |
 | 코드에만 | gl-tabs | Figma에 없음 |
 | 코드에만 | extra-field-filter | Figma에 없음 |
 
-### G-01_360_Signed-in (D21, 24건)
+### G-01_360_Signed-in (D21, 26건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
@@ -1443,27 +1387,29 @@
 | 위치/크기 | gl-filter | h Figma 159 / 코드 145 (-14) |
 | 문구 | gl-filter | Figma 글 '업무 분야: 전체' 없음. 코드: '전체 분야 업데이트 날짜 필터링 또는 검색 (최소 3자)' |
 | 위치/크기 | project-row | y Figma 408 / 코드 366 (-42) |
-| 위치/크기 | project-row | h Figma 123 / 코드 121 (-2) |
+| 위치/크기 | project-row | h Figma 123 / 코드 117 (-6) |
 | 아이콘 | project-row | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#2 | y Figma 531 / 코드 487 (-44) |
-| 위치/크기 | project-row#2 | h Figma 99 / 코드 143 (+44) |
+| 위치/크기 | project-row#2 | y Figma 531 / 코드 483 (-48) |
+| 위치/크기 | project-row#2 | h Figma 99 / 코드 139 (+40) |
 | 아이콘 | project-row#2 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#3 | h Figma 171 / 코드 245 (+74) |
+| 위치/크기 | project-row#3 | h Figma 171 / 코드 241 (+70) |
 | 아이콘 | project-row#3 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#4 | h Figma 143 / 코드 201 (+58) |
+| 위치/크기 | project-row#4 | h Figma 143 / 코드 197 (+54) |
 | 아이콘 | project-row#4 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#5 | h Figma 143 / 코드 139 (-4) |
 | 아이콘 | project-row#5 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
+| 위치/크기 | project-row#6 | h Figma 143 / 코드 139 (-4) |
 | 아이콘 | project-row#6 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#7 | h Figma 143 / 코드 189 (+46) |
+| 위치/크기 | project-row#7 | h Figma 143 / 코드 185 (+42) |
 | 아이콘 | project-row#7 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#8 | h Figma 171 / 코드 109 (-62) |
+| 위치/크기 | project-row#8 | h Figma 171 / 코드 105 (-66) |
 | 아이콘 | project-row#8 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
 | Figma에만 | filter-search | 코드에 이름표 없음(Figma 295,265 32x32) |
 | 코드에만 | page-head | Figma에 없음 |
 | 코드에만 | gl-tabs | Figma에 없음 |
 | 코드에만 | extra-field-filter | Figma에 없음 |
 
-### G-01_768_Guest (D21, 17건)
+### G-01_768_Guest (D21, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
@@ -1471,21 +1417,19 @@
 | 위치/크기 | gl-filter | y Figma 217 / 코드 221 (+4) |
 | 문구 | gl-filter | Figma 글 '업무 분야: 전체' 없음. 코드: '전체 분야 업데이트 날짜 필터링 또는 검색 (최소 3자)' |
 | 위치/크기 | project-row | y Figma 290 / 코드 294 (+4) |
-| 위치/크기 | project-row | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#2 | y Figma 359 / 코드 367 (+8) |
-| 위치/크기 | project-row#2 | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#3 | y Figma 428 / 코드 439 (+11) |
+| 위치/크기 | project-row#2 | y Figma 359 / 코드 363 (+4) |
+| 위치/크기 | project-row#3 | y Figma 428 / 코드 432 (+4) |
 | 위치/크기 | project-row#3 | h Figma 119 / 코드 143 (+24) |
-| 위치/크기 | project-row#4 | y Figma 547 / 코드 582 (+35) |
+| 위치/크기 | project-row#4 | y Figma 547 / 코드 575 (+28) |
 | 위치/크기 | project-row#4 | h Figma 91 / 코드 99 (+8) |
-| 위치/크기 | project-row#6 | h Figma 91 / 코드 73 (-18) |
-| 위치/크기 | project-row#8 | h Figma 119 / 코드 73 (-46) |
+| 위치/크기 | project-row#6 | h Figma 91 / 코드 69 (-22) |
+| 위치/크기 | project-row#8 | h Figma 119 / 코드 69 (-50) |
 | Figma에만 | filter-search | 코드에 이름표 없음(Figma 355,234 32x32) |
 | 코드에만 | page-head | Figma에 없음 |
 | 코드에만 | gl-tabs | Figma에 없음 |
 | 코드에만 | extra-field-filter | Figma에 없음 |
 
-### G-01_768_Signed-in (D21, 17건)
+### G-01_768_Signed-in (D21, 15건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
@@ -1493,175 +1437,137 @@
 | 위치/크기 | gl-filter | y Figma 217 / 코드 221 (+4) |
 | 문구 | gl-filter | Figma 글 '업무 분야: 전체' 없음. 코드: '전체 분야 업데이트 날짜 필터링 또는 검색 (최소 3자)' |
 | 위치/크기 | project-row | y Figma 290 / 코드 294 (+4) |
-| 위치/크기 | project-row | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#2 | y Figma 359 / 코드 367 (+8) |
-| 위치/크기 | project-row#2 | h Figma 69 / 코드 73 (+4) |
-| 위치/크기 | project-row#3 | y Figma 428 / 코드 439 (+11) |
+| 위치/크기 | project-row#2 | y Figma 359 / 코드 363 (+4) |
+| 위치/크기 | project-row#3 | y Figma 428 / 코드 432 (+4) |
 | 위치/크기 | project-row#3 | h Figma 119 / 코드 143 (+24) |
-| 위치/크기 | project-row#4 | y Figma 547 / 코드 582 (+35) |
+| 위치/크기 | project-row#4 | y Figma 547 / 코드 575 (+28) |
 | 위치/크기 | project-row#4 | h Figma 91 / 코드 99 (+8) |
-| 위치/크기 | project-row#6 | h Figma 91 / 코드 73 (-18) |
-| 위치/크기 | project-row#8 | h Figma 119 / 코드 73 (-46) |
+| 위치/크기 | project-row#6 | h Figma 91 / 코드 69 (-22) |
+| 위치/크기 | project-row#8 | h Figma 119 / 코드 69 (-50) |
 | Figma에만 | filter-search | 코드에 이름표 없음(Figma 355,234 32x32) |
 | 코드에만 | page-head | Figma에 없음 |
 | 코드에만 | gl-tabs | Figma에 없음 |
 | 코드에만 | extra-field-filter | Figma에 없음 |
 
-### G-02_1024_Guest (D21, 9건)
+### G-02_1024_Guest (D21, 7건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 40,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 320,161 664x511) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 320,161 664x273) |
 | 위치/크기 | project-row | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | project-row | h Figma 91 / 코드 115 (+24) |
 | 위치/크기 | project-row#2 | y Figma 252 / 코드 288 (+36) |
 | 위치/크기 | project-row#3 | y Figma 343 / 코드 379 (+36) |
 | 위치/크기 | project-row#3 | h Figma 91 / 코드 115 (+24) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 320,434 664x119) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 320,553 664x119) |
 
-### G-02_1024_Signed-in (D21, 9건)
+### G-02_1024_Signed-in (D21, 7건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 40,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 320,161 664x511) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 320,161 664x273) |
 | 위치/크기 | project-row | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | project-row | h Figma 91 / 코드 115 (+24) |
 | 위치/크기 | project-row#2 | y Figma 252 / 코드 288 (+36) |
 | 위치/크기 | project-row#3 | y Figma 343 / 코드 379 (+36) |
 | 위치/크기 | project-row#3 | h Figma 91 / 코드 115 (+24) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 320,434 664x119) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 320,553 664x119) |
 
-### G-02_1440_Guest (D21, 7건)
+### G-02_1440_Guest (D21, 5건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 120,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 400,161 920x511) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 400,161 920x273) |
 | 위치/크기 | project-row | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | project-row#2 | y Figma 252 / 코드 264 (+12) |
 | 위치/크기 | project-row#3 | y Figma 343 / 코드 355 (+12) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 400,434 920x119) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 400,553 920x119) |
 
-### G-02_1440_Signed-in (D21, 7건)
+### G-02_1440_Signed-in (D21, 5건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 120,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 400,161 920x511) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 400,161 920x273) |
 | 위치/크기 | project-row | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | project-row#2 | y Figma 252 / 코드 264 (+12) |
 | 위치/크기 | project-row#3 | y Figma 343 / 코드 355 (+12) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 400,434 920x119) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 400,553 920x119) |
 
-### G-02_1920_Guest (D21, 7건)
+### G-02_1920_Guest (D21, 5건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 360,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 640,161 920x511) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 640,161 920x273) |
 | 위치/크기 | project-row | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | project-row#2 | y Figma 252 / 코드 264 (+12) |
 | 위치/크기 | project-row#3 | y Figma 343 / 코드 355 (+12) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 640,434 920x119) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 640,553 920x119) |
 
-### G-02_1920_Signed-in (D21, 7건)
+### G-02_1920_Signed-in (D21, 5건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
 | Figma에만 | filters | 코드에 이름표 없음(Figma 360,161 264x358) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 640,161 920x511) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 640,161 920x273) |
 | 위치/크기 | project-row | y Figma 161 / 코드 173 (+12) |
 | 위치/크기 | project-row#2 | y Figma 252 / 코드 264 (+12) |
 | 위치/크기 | project-row#3 | y Figma 343 / 코드 355 (+12) |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 640,434 920x119) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 640,553 920x119) |
 
-### G-02_360_Guest (D21, 26건)
+### G-02_360_Guest (D21, 16건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
-| 위치/크기 | content-panel | w Figma 360 / 코드 344 (-16) |
-| 위치/크기 | breadcrumb | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | main | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | main | w Figma 328 / 코드 312 (-16) |
-| 위치/크기 | footer | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | footer | w Figma 328 / 코드 312 (-16) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 16,213 328x631) |
-| 위치/크기 | search-filter | x Figma 268 / 코드 260 (-8) |
+| 위치/크기 | body | y Figma 144 / 코드 72 (-72) |
+| 위치/크기 | content-panel | y Figma 144 / 코드 72 (-72) |
+| 위치/크기 | breadcrumb | y Figma 153 / 코드 81 (-72) |
+| 위치/크기 | main | y Figma 193 / 코드 121 (-72) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 16,285 328x345) |
+| 위치/크기 | search-filter | y Figma 237 / 코드 165 (-72) |
 | 색 | search-filter | fill Figma #33363d color/layout/btn-fill-bg / 코드 없음  |
-| 위치/크기 | project-row | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row | w Figma 328 / 코드 312 (-16) |
-| 위치/크기 | project-row | h Figma 115 / 코드 189 (+74) |
+| 위치/크기 | project-row | y Figma 285 / 코드 213 (-72) |
+| 위치/크기 | project-row | h Figma 115 / 코드 185 (+70) |
 | 아이콘 | project-row | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#2 | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row#2 | y Figma 328 / 코드 402 (+74) |
-| 위치/크기 | project-row#2 | w Figma 328 / 코드 312 (-16) |
-| 위치/크기 | project-row#2 | h Figma 115 / 코드 189 (+74) |
+| 위치/크기 | project-row#2 | y Figma 400 / 코드 398 (-2) |
+| 위치/크기 | project-row#2 | h Figma 115 / 코드 185 (+70) |
 | 아이콘 | project-row#2 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#3 | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row#3 | y Figma 443 / 코드 590 (+147) |
-| 위치/크기 | project-row#3 | w Figma 328 / 코드 312 (-16) |
-| 위치/크기 | project-row#3 | h Figma 115 / 코드 189 (+74) |
+| 위치/크기 | project-row#3 | y Figma 515 / 코드 583 (+68) |
+| 위치/크기 | project-row#3 | h Figma 115 / 코드 185 (+70) |
 | 아이콘 | project-row#3 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 16,558 328x143) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 16,701 328x143) |
 
-### G-02_360_Signed-in (D21, 26건)
+### G-02_360_Signed-in (D21, 16건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | content-panel | x Figma 0 / 코드 8 (+8) |
-| 위치/크기 | content-panel | w Figma 360 / 코드 344 (-16) |
-| 위치/크기 | breadcrumb | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | main | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | main | w Figma 328 / 코드 312 (-16) |
-| 위치/크기 | footer | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | footer | w Figma 328 / 코드 312 (-16) |
-| Figma에만 | results | 코드에 이름표 없음(Figma 16,213 328x631) |
-| 위치/크기 | search-filter | x Figma 268 / 코드 260 (-8) |
+| 위치/크기 | body | y Figma 144 / 코드 72 (-72) |
+| 위치/크기 | content-panel | y Figma 144 / 코드 72 (-72) |
+| 위치/크기 | breadcrumb | y Figma 153 / 코드 81 (-72) |
+| 위치/크기 | main | y Figma 193 / 코드 121 (-72) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 16,285 328x345) |
+| 위치/크기 | search-filter | y Figma 237 / 코드 165 (-72) |
 | 색 | search-filter | fill Figma #33363d color/layout/btn-fill-bg / 코드 없음  |
-| 위치/크기 | project-row | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row | w Figma 328 / 코드 312 (-16) |
-| 위치/크기 | project-row | h Figma 115 / 코드 189 (+74) |
+| 위치/크기 | project-row | y Figma 285 / 코드 213 (-72) |
+| 위치/크기 | project-row | h Figma 115 / 코드 185 (+70) |
 | 아이콘 | project-row | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#2 | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row#2 | y Figma 328 / 코드 402 (+74) |
-| 위치/크기 | project-row#2 | w Figma 328 / 코드 312 (-16) |
-| 위치/크기 | project-row#2 | h Figma 115 / 코드 189 (+74) |
+| 위치/크기 | project-row#2 | y Figma 400 / 코드 398 (-2) |
+| 위치/크기 | project-row#2 | h Figma 115 / 코드 185 (+70) |
 | 아이콘 | project-row#2 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| 위치/크기 | project-row#3 | x Figma 16 / 코드 24 (+8) |
-| 위치/크기 | project-row#3 | y Figma 443 / 코드 590 (+147) |
-| 위치/크기 | project-row#3 | w Figma 328 / 코드 312 (-16) |
-| 위치/크기 | project-row#3 | h Figma 115 / 코드 189 (+74) |
+| 위치/크기 | project-row#3 | y Figma 515 / 코드 583 (+68) |
+| 위치/크기 | project-row#3 | h Figma 115 / 코드 185 (+70) |
 | 아이콘 | project-row#3 | Figma ellipsis-vertical,fork,globe,issues,merge-request,project,star / 코드 ellipsis-vertical,fork,globe,issues,merge-request,star |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 16,558 328x143) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 16,701 328x143) |
 
-### G-02_768_Guest (D21, 4건)
+### G-02_768_Guest (D21, 2건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| Figma에만 | results | 코드에 이름표 없음(Figma 32,213 704x511) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 32,213 704x273) |
 | 색 | search-filter | fill Figma #33363d color/layout/btn-fill-bg / 코드 없음  |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 32,486 704x119) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 32,605 704x119) |
 
-### G-02_768_Signed-in (D21, 4건)
+### G-02_768_Signed-in (D21, 2건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| Figma에만 | results | 코드에 이름표 없음(Figma 32,213 704x511) |
+| Figma에만 | results | 코드에 이름표 없음(Figma 32,213 704x273) |
 | 색 | search-filter | fill Figma #33363d color/layout/btn-fill-bg / 코드 없음  |
-| Figma에만 | project-row#4 | 코드에 이름표 없음(Figma 32,486 704x119) |
-| Figma에만 | project-row#5 | 코드에 이름표 없음(Figma 32,605 704x119) |
 
 ### G-03_1440_Guest (D21, 2건)
 
