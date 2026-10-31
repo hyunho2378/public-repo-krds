@@ -260,3 +260,4 @@
   - 40 4 {'D21': 40} ('only-code', 'page-head') A-01_1024_Guest {}
   - 40 5 {'D21': 40} ('only-figma', 'tabs') A-09_1024_Guest {'want': {'x': 40, 'y': 199, 'w': 944, 'h': 40}}
   - 38 4 {'D21': 38} ('box', 'login-field', 'y') G-08b_360_Guest {'field': 'y', 'figma': 497, 'code': 474, 'diff': -23}
+- [C2] 원장 9차: R-17 제목 줄 전체를 page-head(h1+코드 단추, 코드 단추 자체에 code-button, 탭 간격 4), 필터 막대 끝 패딩 0과 위 선

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T14:46:28.300Z",
+ "generated": "2026-10-31T14:48:50.548Z",
  "rules": "UX/audit_v3/parity_ledger.md 0절",
  "screens": {
   "A-01_1024_Guest": {
@@ -59273,8 +59273,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 867,
-     "code": 847,
-     "diff": -20,
+     "code": 855,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -59282,8 +59282,8 @@
      "name": "filter-search",
      "field": "y",
      "figma": 195,
-     "code": 201,
-     "diff": 6,
+     "code": 202,
+     "diff": 7,
      "allowed": null
     }
    ]
@@ -59465,8 +59465,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 867,
-     "code": 847,
-     "diff": -20,
+     "code": 855,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -59474,8 +59474,8 @@
      "name": "filter-search",
      "field": "y",
      "figma": 195,
-     "code": 201,
-     "diff": 6,
+     "code": 202,
+     "diff": 7,
      "allowed": null
     }
    ]
@@ -59664,8 +59664,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1267,
-     "code": 1247,
-     "diff": -20,
+     "code": 1255,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -59673,8 +59673,8 @@
      "name": "filter-search",
      "field": "y",
      "figma": 195,
-     "code": 201,
-     "diff": 6,
+     "code": 202,
+     "diff": 7,
      "allowed": null
     }
    ]
@@ -59863,8 +59863,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1267,
-     "code": 1247,
-     "diff": -20,
+     "code": 1255,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -59872,8 +59872,8 @@
      "name": "filter-search",
      "field": "y",
      "figma": 195,
-     "code": 201,
-     "diff": 6,
+     "code": 202,
+     "diff": 7,
      "allowed": null
     }
    ]
@@ -60062,8 +60062,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1563,
-     "code": 1543,
-     "diff": -20,
+     "code": 1551,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -60071,8 +60071,8 @@
      "name": "filter-search",
      "field": "y",
      "figma": 195,
-     "code": 201,
-     "diff": 6,
+     "code": 202,
+     "diff": 7,
      "allowed": null
     }
    ]
@@ -60261,8 +60261,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 1563,
-     "code": 1543,
-     "diff": -20,
+     "code": 1551,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -60270,8 +60270,8 @@
      "name": "filter-search",
      "field": "y",
      "figma": 195,
-     "code": 201,
-     "diff": 6,
+     "code": 202,
+     "diff": 7,
      "allowed": null
     }
    ]
@@ -60855,8 +60855,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 619,
-     "code": 599,
-     "diff": -20,
+     "code": 607,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -60864,8 +60864,8 @@
      "name": "filter-search",
      "field": "y",
      "figma": 195,
-     "code": 201,
-     "diff": 6,
+     "code": 202,
+     "diff": 7,
      "allowed": null
     }
    ]
@@ -61053,8 +61053,8 @@
      "name": "filter-search",
      "field": "x",
      "figma": 619,
-     "code": 599,
-     "diff": -20,
+     "code": 607,
+     "diff": -12,
      "allowed": null
     },
     {
@@ -61062,8 +61062,8 @@
      "name": "filter-search",
      "field": "y",
      "figma": 195,
-     "code": 201,
-     "diff": 6,
+     "code": 202,
+     "diff": 7,
      "allowed": null
     }
    ]
@@ -67388,11 +67388,11 @@
    "owner": "C2",
    "counts": {
     "box": 6,
-    "text": 1,
+    "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 4,
-    "icon": 2,
+    "shape": 5,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -67473,8 +67473,8 @@
      "name": "main",
      "field": "h",
      "figma": 1021,
-     "code": 888,
-     "diff": -133,
+     "code": 911,
+     "diff": -110,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -67501,43 +67501,31 @@
     {
      "kind": "box",
      "name": "page-head",
-     "field": "w",
-     "figma": 944,
-     "code": 435,
-     "diff": -509,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
      "field": "h",
      "figma": 48,
-     "code": 40,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "코드"
-     ],
-     "code": "Add MCP Toplist rank badge",
+     "code": 64,
+     "diff": 16,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 0 0",
+     "detail": "안쪽 0 0 8 0→0 0 16 0",
      "allowed": null
     },
     {
-     "kind": "icon",
+     "kind": "shape",
      "name": "page-head",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "간격 8→16",
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "y",
+     "figma": 221,
+     "code": 246,
+     "diff": 25,
      "allowed": null
     },
     {
@@ -67551,8 +67539,8 @@
      "name": "code-button",
      "field": "x",
      "figma": 922,
-     "code": 925,
-     "diff": 3,
+     "code": 888,
+     "diff": -34,
      "allowed": null
     },
     {
@@ -67560,8 +67548,8 @@
      "name": "code-button",
      "field": "y",
      "figma": 125,
-     "code": 129,
-     "diff": 4,
+     "code": 120,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -67569,8 +67557,8 @@
      "name": "code-button",
      "field": "w",
      "figma": 62,
-     "code": 26,
-     "diff": -36,
+     "code": 96,
+     "diff": 34,
      "allowed": null
     },
     {
@@ -67578,29 +67566,20 @@
      "name": "code-button",
      "field": "h",
      "figma": 32,
-     "code": 22,
-     "diff": -10,
+     "code": 40,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "모서리 4→0",
+     "detail": "모서리 4→8",
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "안쪽 0 8 0 8→0 0 0 0",
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "code-button",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "안쪽 0 8 0 8→0 12 0 12",
      "allowed": null
     },
     {
@@ -67614,11 +67593,11 @@
    "owner": "C2",
    "counts": {
     "box": 6,
-    "text": 1,
+    "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 4,
-    "icon": 2,
+    "shape": 5,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -67699,8 +67678,8 @@
      "name": "main",
      "field": "h",
      "figma": 1127,
-     "code": 888,
-     "diff": -239,
+     "code": 911,
+     "diff": -216,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -67736,43 +67715,31 @@
     {
      "kind": "box",
      "name": "page-head",
-     "field": "w",
-     "figma": 944,
-     "code": 435,
-     "diff": -509,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
      "field": "h",
      "figma": 48,
-     "code": 40,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "코드"
-     ],
-     "code": "Add MCP Toplist rank badge",
+     "code": 64,
+     "diff": 16,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 0 0",
+     "detail": "안쪽 0 0 8 0→0 0 16 0",
      "allowed": null
     },
     {
-     "kind": "icon",
+     "kind": "shape",
      "name": "page-head",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "간격 8→16",
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "y",
+     "figma": 221,
+     "code": 246,
+     "diff": 25,
      "allowed": null
     },
     {
@@ -67786,8 +67753,8 @@
      "name": "code-button",
      "field": "x",
      "figma": 922,
-     "code": 925,
-     "diff": 3,
+     "code": 888,
+     "diff": -34,
      "allowed": null
     },
     {
@@ -67795,8 +67762,8 @@
      "name": "code-button",
      "field": "y",
      "figma": 125,
-     "code": 129,
-     "diff": 4,
+     "code": 120,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -67804,8 +67771,8 @@
      "name": "code-button",
      "field": "w",
      "figma": 62,
-     "code": 26,
-     "diff": -36,
+     "code": 96,
+     "diff": 34,
      "allowed": null
     },
     {
@@ -67813,29 +67780,20 @@
      "name": "code-button",
      "field": "h",
      "figma": 32,
-     "code": 22,
-     "diff": -10,
+     "code": 40,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "모서리 4→0",
+     "detail": "모서리 4→8",
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "안쪽 0 8 0 8→0 0 0 0",
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "code-button",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "안쪽 0 8 0 8→0 12 0 12",
      "allowed": null
     },
     {
@@ -67849,11 +67807,11 @@
    "owner": "C2",
    "counts": {
     "box": 6,
-    "text": 1,
+    "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 4,
-    "icon": 2,
+    "shape": 5,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -67919,8 +67877,8 @@
      "name": "main",
      "field": "h",
      "figma": 991,
-     "code": 844,
-     "diff": -147,
+     "code": 867,
+     "diff": -124,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -67947,43 +67905,31 @@
     {
      "kind": "box",
      "name": "page-head",
-     "field": "w",
-     "figma": 1088,
-     "code": 435,
-     "diff": -653,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
      "field": "h",
      "figma": 48,
-     "code": 40,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "코드"
-     ],
-     "code": "Add MCP Toplist rank badge",
+     "code": 64,
+     "diff": 16,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 0 0",
+     "detail": "안쪽 0 0 8 0→0 0 16 0",
      "allowed": null
     },
     {
-     "kind": "icon",
+     "kind": "shape",
      "name": "page-head",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "간격 8→16",
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "y",
+     "figma": 221,
+     "code": 246,
+     "diff": 25,
      "allowed": null
     },
     {
@@ -67997,8 +67943,8 @@
      "name": "code-button",
      "field": "x",
      "figma": 1322,
-     "code": 1325,
-     "diff": 3,
+     "code": 1288,
+     "diff": -34,
      "allowed": null
     },
     {
@@ -68006,8 +67952,8 @@
      "name": "code-button",
      "field": "y",
      "figma": 125,
-     "code": 129,
-     "diff": 4,
+     "code": 120,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -68015,8 +67961,8 @@
      "name": "code-button",
      "field": "w",
      "figma": 62,
-     "code": 26,
-     "diff": -36,
+     "code": 96,
+     "diff": 34,
      "allowed": null
     },
     {
@@ -68024,29 +67970,20 @@
      "name": "code-button",
      "field": "h",
      "figma": 32,
-     "code": 22,
-     "diff": -10,
+     "code": 40,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "모서리 4→0",
+     "detail": "모서리 4→8",
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "안쪽 0 8 0 8→0 0 0 0",
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "code-button",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "안쪽 0 8 0 8→0 12 0 12",
      "allowed": null
     },
     {
@@ -68060,11 +67997,11 @@
    "owner": "C2",
    "counts": {
     "box": 6,
-    "text": 1,
+    "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 4,
-    "icon": 2,
+    "shape": 5,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -68157,8 +68094,8 @@
      "name": "main",
      "field": "h",
      "figma": 1097,
-     "code": 844,
-     "diff": -253,
+     "code": 867,
+     "diff": -230,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -68194,43 +68131,31 @@
     {
      "kind": "box",
      "name": "page-head",
-     "field": "w",
-     "figma": 1088,
-     "code": 435,
-     "diff": -653,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
      "field": "h",
      "figma": 48,
-     "code": 40,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "코드"
-     ],
-     "code": "Add MCP Toplist rank badge",
+     "code": 64,
+     "diff": 16,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 0 0",
+     "detail": "안쪽 0 0 8 0→0 0 16 0",
      "allowed": null
     },
     {
-     "kind": "icon",
+     "kind": "shape",
      "name": "page-head",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "간격 8→16",
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "y",
+     "figma": 221,
+     "code": 246,
+     "diff": 25,
      "allowed": null
     },
     {
@@ -68244,8 +68169,8 @@
      "name": "code-button",
      "field": "x",
      "figma": 1322,
-     "code": 1325,
-     "diff": 3,
+     "code": 1288,
+     "diff": -34,
      "allowed": null
     },
     {
@@ -68253,8 +68178,8 @@
      "name": "code-button",
      "field": "y",
      "figma": 125,
-     "code": 129,
-     "diff": 4,
+     "code": 120,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -68262,8 +68187,8 @@
      "name": "code-button",
      "field": "w",
      "figma": 62,
-     "code": 26,
-     "diff": -36,
+     "code": 96,
+     "diff": 34,
      "allowed": null
     },
     {
@@ -68271,29 +68196,20 @@
      "name": "code-button",
      "field": "h",
      "figma": 32,
-     "code": 22,
-     "diff": -10,
+     "code": 40,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "모서리 4→0",
+     "detail": "모서리 4→8",
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "안쪽 0 8 0 8→0 0 0 0",
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "code-button",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "안쪽 0 8 0 8→0 12 0 12",
      "allowed": null
     },
     {
@@ -68307,11 +68223,11 @@
    "owner": "C2",
    "counts": {
     "box": 6,
-    "text": 1,
+    "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 4,
-    "icon": 2,
+    "shape": 5,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -68377,8 +68293,8 @@
      "name": "main",
      "field": "h",
      "figma": 991,
-     "code": 822,
-     "diff": -169,
+     "code": 845,
+     "diff": -146,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -68405,43 +68321,31 @@
     {
      "kind": "box",
      "name": "page-head",
-     "field": "w",
-     "figma": 1200,
-     "code": 435,
-     "diff": -765,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
      "field": "h",
      "figma": 48,
-     "code": 40,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "코드"
-     ],
-     "code": "Add MCP Toplist rank badge",
+     "code": 64,
+     "diff": 16,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 0 0",
+     "detail": "안쪽 0 0 8 0→0 0 16 0",
      "allowed": null
     },
     {
-     "kind": "icon",
+     "kind": "shape",
      "name": "page-head",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "간격 8→16",
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "y",
+     "figma": 221,
+     "code": 246,
+     "diff": 25,
      "allowed": null
     },
     {
@@ -68455,8 +68359,8 @@
      "name": "code-button",
      "field": "x",
      "figma": 1618,
-     "code": 1621,
-     "diff": 3,
+     "code": 1584,
+     "diff": -34,
      "allowed": null
     },
     {
@@ -68464,8 +68368,8 @@
      "name": "code-button",
      "field": "y",
      "figma": 125,
-     "code": 129,
-     "diff": 4,
+     "code": 120,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -68473,8 +68377,8 @@
      "name": "code-button",
      "field": "w",
      "figma": 62,
-     "code": 26,
-     "diff": -36,
+     "code": 96,
+     "diff": 34,
      "allowed": null
     },
     {
@@ -68482,29 +68386,20 @@
      "name": "code-button",
      "field": "h",
      "figma": 32,
-     "code": 22,
-     "diff": -10,
+     "code": 40,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "모서리 4→0",
+     "detail": "모서리 4→8",
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "안쪽 0 8 0 8→0 0 0 0",
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "code-button",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "안쪽 0 8 0 8→0 12 0 12",
      "allowed": null
     },
     {
@@ -68518,11 +68413,11 @@
    "owner": "C2",
    "counts": {
     "box": 6,
-    "text": 1,
+    "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 4,
-    "icon": 2,
+    "shape": 5,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -68615,8 +68510,8 @@
      "name": "main",
      "field": "h",
      "figma": 1097,
-     "code": 822,
-     "diff": -275,
+     "code": 845,
+     "diff": -252,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -68652,43 +68547,31 @@
     {
      "kind": "box",
      "name": "page-head",
-     "field": "w",
-     "figma": 1200,
-     "code": 435,
-     "diff": -765,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
      "field": "h",
      "figma": 48,
-     "code": 40,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "코드"
-     ],
-     "code": "Add MCP Toplist rank badge",
+     "code": 64,
+     "diff": 16,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 0 0",
+     "detail": "안쪽 0 0 8 0→0 0 16 0",
      "allowed": null
     },
     {
-     "kind": "icon",
+     "kind": "shape",
      "name": "page-head",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "간격 8→16",
+     "allowed": null
+    },
+    {
+     "kind": "box",
+     "name": "tabs",
+     "field": "y",
+     "figma": 221,
+     "code": 246,
+     "diff": 25,
      "allowed": null
     },
     {
@@ -68702,8 +68585,8 @@
      "name": "code-button",
      "field": "x",
      "figma": 1618,
-     "code": 1621,
-     "diff": 3,
+     "code": 1584,
+     "diff": -34,
      "allowed": null
     },
     {
@@ -68711,8 +68594,8 @@
      "name": "code-button",
      "field": "y",
      "figma": 125,
-     "code": 129,
-     "diff": 4,
+     "code": 120,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -68720,8 +68603,8 @@
      "name": "code-button",
      "field": "w",
      "figma": 62,
-     "code": 26,
-     "diff": -36,
+     "code": 96,
+     "diff": 34,
      "allowed": null
     },
     {
@@ -68729,29 +68612,20 @@
      "name": "code-button",
      "field": "h",
      "figma": 32,
-     "code": 22,
-     "diff": -10,
+     "code": 40,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "모서리 4→0",
+     "detail": "모서리 4→8",
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "안쪽 0 8 0 8→0 0 0 0",
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "code-button",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "안쪽 0 8 0 8→0 12 0 12",
      "allowed": null
     },
     {
@@ -68764,12 +68638,12 @@
   "R-17_360_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 8,
-    "text": 1,
+    "box": 7,
+    "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 4,
-    "icon": 2,
+    "shape": 5,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -68856,8 +68730,8 @@
      "name": "main",
      "field": "h",
      "figma": 1363,
-     "code": 1670,
-     "diff": 307,
+     "code": 1693,
+     "diff": 330,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -68880,8 +68754,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1525,
-     "code": 1814,
-     "diff": 289,
+     "code": 1837,
+     "diff": 312,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -68893,43 +68767,22 @@
     {
      "kind": "box",
      "name": "page-head",
-     "field": "w",
-     "figma": 328,
-     "code": 240,
-     "diff": -88,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
      "field": "h",
      "figma": 72,
-     "code": 32,
-     "diff": -40,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "코드"
-     ],
-     "code": "Add MCP Toplist rank badge",
+     "code": 64,
+     "diff": -8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 0 0",
+     "detail": "안쪽 0 0 8 0→0 0 16 0",
      "allowed": null
     },
     {
-     "kind": "icon",
+     "kind": "shape",
      "name": "page-head",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "간격 8→16",
      "allowed": null
     },
     {
@@ -68937,8 +68790,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 305,
-     "code": 296,
-     "diff": -9,
+     "code": 320,
+     "diff": 15,
      "allowed": null
     },
     {
@@ -68946,8 +68799,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 104,
-     "code": 48,
-     "diff": -56,
+     "code": 47,
+     "diff": -57,
      "allowed": null
     },
     {
@@ -68961,8 +68814,8 @@
      "name": "code-button",
      "field": "x",
      "figma": 282,
-     "code": 285,
-     "diff": 3,
+     "code": 248,
+     "diff": -34,
      "allowed": null
     },
     {
@@ -68970,8 +68823,8 @@
      "name": "code-button",
      "field": "y",
      "figma": 137,
-     "code": 129,
-     "diff": -8,
+     "code": 120,
+     "diff": -17,
      "allowed": null
     },
     {
@@ -68979,8 +68832,8 @@
      "name": "code-button",
      "field": "w",
      "figma": 62,
-     "code": 26,
-     "diff": -36,
+     "code": 96,
+     "diff": 34,
      "allowed": null
     },
     {
@@ -68988,29 +68841,20 @@
      "name": "code-button",
      "field": "h",
      "figma": 32,
-     "code": 22,
-     "diff": -10,
+     "code": 40,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "모서리 4→0",
+     "detail": "모서리 4→8",
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "안쪽 0 8 0 8→0 0 0 0",
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "code-button",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "안쪽 0 8 0 8→0 12 0 12",
      "allowed": null
     },
     {
@@ -69023,12 +68867,12 @@
   "R-17_360_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 8,
-    "text": 1,
+    "box": 7,
+    "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 4,
-    "icon": 2,
+    "shape": 5,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -69115,8 +68959,8 @@
      "name": "main",
      "field": "h",
      "figma": 1469,
-     "code": 1670,
-     "diff": 201,
+     "code": 1693,
+     "diff": 224,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -69139,8 +68983,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1631,
-     "code": 1814,
-     "diff": 183,
+     "code": 1837,
+     "diff": 206,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -69152,43 +68996,22 @@
     {
      "kind": "box",
      "name": "page-head",
-     "field": "w",
-     "figma": 328,
-     "code": 240,
-     "diff": -88,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
      "field": "h",
      "figma": 72,
-     "code": 32,
-     "diff": -40,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "코드"
-     ],
-     "code": "Add MCP Toplist rank badge",
+     "code": 64,
+     "diff": -8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 0 0",
+     "detail": "안쪽 0 0 8 0→0 0 16 0",
      "allowed": null
     },
     {
-     "kind": "icon",
+     "kind": "shape",
      "name": "page-head",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "간격 8→16",
      "allowed": null
     },
     {
@@ -69196,8 +69019,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 305,
-     "code": 296,
-     "diff": -9,
+     "code": 320,
+     "diff": 15,
      "allowed": null
     },
     {
@@ -69205,8 +69028,8 @@
      "name": "tabs",
      "field": "h",
      "figma": 104,
-     "code": 48,
-     "diff": -56,
+     "code": 47,
+     "diff": -57,
      "allowed": null
     },
     {
@@ -69220,8 +69043,8 @@
      "name": "code-button",
      "field": "x",
      "figma": 282,
-     "code": 285,
-     "diff": 3,
+     "code": 248,
+     "diff": -34,
      "allowed": null
     },
     {
@@ -69229,8 +69052,8 @@
      "name": "code-button",
      "field": "y",
      "figma": 137,
-     "code": 129,
-     "diff": -8,
+     "code": 120,
+     "diff": -17,
      "allowed": null
     },
     {
@@ -69238,8 +69061,8 @@
      "name": "code-button",
      "field": "w",
      "figma": 62,
-     "code": 26,
-     "diff": -36,
+     "code": 96,
+     "diff": 34,
      "allowed": null
     },
     {
@@ -69247,29 +69070,20 @@
      "name": "code-button",
      "field": "h",
      "figma": 32,
-     "code": 22,
-     "diff": -10,
+     "code": 40,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "모서리 4→0",
+     "detail": "모서리 4→8",
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "안쪽 0 8 0 8→0 0 0 0",
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "code-button",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "안쪽 0 8 0 8→0 12 0 12",
      "allowed": null
     },
     {
@@ -69282,12 +69096,12 @@
   "R-17_768_Guest": {
    "owner": "C2",
    "counts": {
-    "box": 7,
-    "text": 1,
+    "box": 6,
+    "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 4,
-    "icon": 2,
+    "shape": 5,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -69374,8 +69188,8 @@
      "name": "main",
      "field": "h",
      "figma": 1073,
-     "code": 1514,
-     "diff": 441,
+     "code": 1537,
+     "diff": 464,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -69398,8 +69212,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1235,
-     "code": 1658,
-     "diff": 423,
+     "code": 1681,
+     "diff": 446,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -69411,43 +69225,22 @@
     {
      "kind": "box",
      "name": "page-head",
-     "field": "w",
-     "figma": 704,
-     "code": 435,
-     "diff": -269,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
      "field": "h",
      "figma": 48,
-     "code": 40,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "코드"
-     ],
-     "code": "Add MCP Toplist rank badge",
+     "code": 64,
+     "diff": 16,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 0 0",
+     "detail": "안쪽 0 0 8 0→0 0 16 0",
      "allowed": null
     },
     {
-     "kind": "icon",
+     "kind": "shape",
      "name": "page-head",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "간격 8→16",
      "allowed": null
     },
     {
@@ -69455,8 +69248,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 243,
-     "code": 250,
-     "diff": 7,
+     "code": 274,
+     "diff": 31,
      "allowed": null
     },
     {
@@ -69470,8 +69263,8 @@
      "name": "code-button",
      "field": "x",
      "figma": 674,
-     "code": 677,
-     "diff": 3,
+     "code": 640,
+     "diff": -34,
      "allowed": null
     },
     {
@@ -69479,8 +69272,8 @@
      "name": "code-button",
      "field": "y",
      "figma": 125,
-     "code": 129,
-     "diff": 4,
+     "code": 120,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -69488,8 +69281,8 @@
      "name": "code-button",
      "field": "w",
      "figma": 62,
-     "code": 26,
-     "diff": -36,
+     "code": 96,
+     "diff": 34,
      "allowed": null
     },
     {
@@ -69497,29 +69290,20 @@
      "name": "code-button",
      "field": "h",
      "figma": 32,
-     "code": 22,
-     "diff": -10,
+     "code": 40,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "모서리 4→0",
+     "detail": "모서리 4→8",
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "안쪽 0 8 0 8→0 0 0 0",
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "code-button",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "안쪽 0 8 0 8→0 12 0 12",
      "allowed": null
     },
     {
@@ -69532,12 +69316,12 @@
   "R-17_768_Signed-in": {
    "owner": "C2",
    "counts": {
-    "box": 7,
-    "text": 1,
+    "box": 6,
+    "text": 0,
     "font": 0,
     "color": 0,
-    "shape": 4,
-    "icon": 2,
+    "shape": 5,
+    "icon": 0,
     "only-figma": 0,
     "only-code": 0,
     "order": 0
@@ -69624,8 +69408,8 @@
      "name": "main",
      "field": "h",
      "figma": 1179,
-     "code": 1514,
-     "diff": 335,
+     "code": 1537,
+     "diff": 358,
      "allowed": "본문 높이는 받아 온 자료 길이(README, 목록 개수)에 따라 다름"
     },
     {
@@ -69648,8 +69432,8 @@
      "name": "footer",
      "field": "y",
      "figma": 1341,
-     "code": 1658,
-     "diff": 317,
+     "code": 1681,
+     "diff": 340,
      "allowed": "본문 길이 차이로 그 아래 요소 y가 밀림(600 아래는 위 요소 높이 차이의 결과)"
     },
     {
@@ -69661,43 +69445,22 @@
     {
      "kind": "box",
      "name": "page-head",
-     "field": "w",
-     "figma": 704,
-     "code": 435,
-     "diff": -269,
-     "allowed": null
-    },
-    {
-     "kind": "box",
-     "name": "page-head",
      "field": "h",
      "figma": 48,
-     "code": 40,
-     "diff": -8,
-     "allowed": null
-    },
-    {
-     "kind": "text",
-     "name": "page-head",
-     "figma": [
-      "코드"
-     ],
-     "code": "Add MCP Toplist rank badge",
+     "code": 64,
+     "diff": 16,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "page-head",
-     "detail": "안쪽 0 0 8 0→0 0 0 0",
+     "detail": "안쪽 0 0 8 0→0 0 16 0",
      "allowed": null
     },
     {
-     "kind": "icon",
+     "kind": "shape",
      "name": "page-head",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "간격 8→16",
      "allowed": null
     },
     {
@@ -69705,8 +69468,8 @@
      "name": "tabs",
      "field": "y",
      "figma": 243,
-     "code": 250,
-     "diff": 7,
+     "code": 274,
+     "diff": 31,
      "allowed": null
     },
     {
@@ -69720,8 +69483,8 @@
      "name": "code-button",
      "field": "x",
      "figma": 674,
-     "code": 677,
-     "diff": 3,
+     "code": 640,
+     "diff": -34,
      "allowed": null
     },
     {
@@ -69729,8 +69492,8 @@
      "name": "code-button",
      "field": "y",
      "figma": 125,
-     "code": 129,
-     "diff": 4,
+     "code": 120,
+     "diff": -5,
      "allowed": null
     },
     {
@@ -69738,8 +69501,8 @@
      "name": "code-button",
      "field": "w",
      "figma": 62,
-     "code": 26,
-     "diff": -36,
+     "code": 96,
+     "diff": 34,
      "allowed": null
     },
     {
@@ -69747,29 +69510,20 @@
      "name": "code-button",
      "field": "h",
      "figma": 32,
-     "code": 22,
-     "diff": -10,
+     "code": 40,
+     "diff": 8,
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "모서리 4→0",
+     "detail": "모서리 4→8",
      "allowed": null
     },
     {
      "kind": "shape",
      "name": "code-button",
-     "detail": "안쪽 0 8 0 8→0 0 0 0",
-     "allowed": null
-    },
-    {
-     "kind": "icon",
-     "name": "code-button",
-     "figma": [
-      "arrow-down"
-     ],
-     "code": [],
+     "detail": "안쪽 0 8 0 8→0 12 0 12",
      "allowed": null
     },
     {

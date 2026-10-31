@@ -1,6 +1,6 @@
 # Figma 대 코드 전수 대조 원장(parity ledger)
 
-- 생성: 2026-10-31T14:46:28.300Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
+- 생성: 2026-10-31T14:48:50.548Z. 입력: code_plan/figma_full.json, code_plan/measured_full.json, code_plan/parity_allow.json
 - 다시 만들기: 개발 서버에서 측정(app/scripts/export-code-boxes.mjs 또는 Aside 탭에서 export-code-boxes.js) 뒤 `npm run check:parity`
 
 ## 0. 해소 규칙
@@ -26,8 +26,8 @@
 | 4 | 위치/크기 · filter-search · y | 66 | C2 66 | 미정 |  | R-11_1024_Guest |
 | 5 | 위치/크기 · filter-search · x | 62 | C2 62 | 미정 |  | R-11_1024_Guest |
 | 6 | 위치/크기 · project-row · y | 58 | D21 58 | Figma | 검색 행 구조 확인 요청 | A-01_1024_Guest |
-| 7 | 문구 · page-head | 54 | D21 30, C1 10, C2 14 | 미정 |  | G-06_1024_Guest |
-| 8 | 모서리·안쪽·간격 · page-head | 45 | D21 15, C1 20, C2 10 | 미정 |  | G-04_1024_Guest |
+| 7 | 모서리·안쪽·간격 · page-head | 55 | D21 15, C1 20, C2 20 | 미정 |  | G-04_1024_Guest |
+| 8 | 문구 · page-head | 44 | D21 30, C1 10, C2 4 | 미정 |  | G-06_1024_Guest |
 | 9 | 코드에만 · page-head | 40 | D21 40 | Figma | Figma 변형에 page-head 이름표 없음 | A-01_1024_Guest |
 | 10 | Figma에만 · tabs | 40 | D21 40 | 미정 |  | A-09_1024_Guest |
 | 11 | 모서리·안쪽·간격 · commit-bar | 40 | D21 20, C1 20 | 미정 |  | R-01_1024_Guest |
@@ -528,16 +528,16 @@
 | R-16_360_Signed-in | C2 | 5 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 5 | 14 |
 | R-16_768_Guest | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 14 |
 | R-16_768_Signed-in | C2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 14 |
-| R-17_1024_Guest | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 11 |
-| R-17_1024_Signed-in | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 12 |
-| R-17_1440_Guest | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 11 |
-| R-17_1440_Signed-in | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 15 |
-| R-17_1920_Guest | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 11 |
-| R-17_1920_Signed-in | C2 | 6 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 13 | 15 |
-| R-17_360_Guest | C2 | 8 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 15 | 13 |
-| R-17_360_Signed-in | C2 | 8 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 15 | 13 |
-| R-17_768_Guest | C2 | 7 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 14 | 13 |
-| R-17_768_Signed-in | C2 | 7 | 1 | 0 | 0 | 4 | 2 | 0 | 0 | 0 | 14 | 13 |
+| R-17_1024_Guest | C2 | 6 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 11 | 11 |
+| R-17_1024_Signed-in | C2 | 6 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 11 | 12 |
+| R-17_1440_Guest | C2 | 6 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 11 | 11 |
+| R-17_1440_Signed-in | C2 | 6 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 11 | 15 |
+| R-17_1920_Guest | C2 | 6 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 11 | 11 |
+| R-17_1920_Signed-in | C2 | 6 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 11 | 15 |
+| R-17_360_Guest | C2 | 7 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 12 | 13 |
+| R-17_360_Signed-in | C2 | 7 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 12 | 13 |
+| R-17_768_Guest | C2 | 6 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 11 | 13 |
+| R-17_768_Signed-in | C2 | 6 | 0 | 0 | 0 | 5 | 0 | 0 | 0 | 0 | 11 | 13 |
 | R-18_1024_Guest | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 6 |
 | R-18_1024_Signed-in | C2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 6 |
 | R-18_1440_Guest | C2 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 3 | 9 |
@@ -668,7 +668,7 @@
 | R-30_360_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 9 |
 | R-30_768_Guest | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 9 |
 | R-30_768_Signed-in | D21 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 | 9 |
-| **합** |  | 1332 | 208 | 17 | 47 | 215 | 173 | 416 | 178 | 12 | 2598 |  |
+| **합** |  | 1328 | 198 | 17 | 47 | 225 | 153 | 416 | 178 | 12 | 2574 |  |
 
 - 기본값이 아닌 Figma 변형(코드 재현 대기, 8개): G-01_360_Auth-Guest_Drawer-Open, G-02_1440_Auth-Guest_Dialog-Open, G-09_1440_Auth-Guest_Kind-LoginRequired, R-01_1440_Auth-Guest_Drawer-Closed_Sidebar-Collapsed_Info-Short, R-01_1440_Auth-Guest_Drawer-Closed_Sidebar-Expanded_Info-Expanded, R-01_360_Auth-Guest_Drawer-Open_Sidebar-Expanded_Info-Short, R-11_1440_Auth-Guest_State-Empty, R-11_1440_Auth-Guest_State-NoResults
 
@@ -3842,8 +3842,8 @@
 | 위치/크기 | gl-filter | y Figma 178 / 코드 185 (+7) |
 | 아이콘 | gl-filter | Figma arrow-down,history,search / 코드 arrow-down,close,history,search |
 | 문구 | gl-tabs | Figma 글 '+ 뷰 추가' 없음. 코드: '모든 항목 뷰 추가' |
-| 위치/크기 | filter-search | x Figma 867 / 코드 847 (-20) |
-| 위치/크기 | filter-search | y Figma 195 / 코드 201 (+6) |
+| 위치/크기 | filter-search | x Figma 867 / 코드 855 (-12) |
+| 위치/크기 | filter-search | y Figma 195 / 코드 202 (+7) |
 
 ### R-11_1024_Signed-in (C2, 5건)
 
@@ -3852,8 +3852,8 @@
 | 위치/크기 | gl-filter | y Figma 178 / 코드 185 (+7) |
 | 아이콘 | gl-filter | Figma arrow-down,history,search / 코드 arrow-down,close,history,search |
 | 문구 | gl-tabs | Figma 글 '+ 뷰 추가' 없음. 코드: '모든 항목 뷰 추가' |
-| 위치/크기 | filter-search | x Figma 867 / 코드 847 (-20) |
-| 위치/크기 | filter-search | y Figma 195 / 코드 201 (+6) |
+| 위치/크기 | filter-search | x Figma 867 / 코드 855 (-12) |
+| 위치/크기 | filter-search | y Figma 195 / 코드 202 (+7) |
 
 ### R-11_1440_Guest (C2, 5건)
 
@@ -3862,8 +3862,8 @@
 | 위치/크기 | gl-filter | y Figma 178 / 코드 185 (+7) |
 | 아이콘 | gl-filter | Figma arrow-down,history,search / 코드 arrow-down,close,history,search |
 | 문구 | gl-tabs | Figma 글 '+ 뷰 추가' 없음. 코드: '모든 항목 뷰 추가' |
-| 위치/크기 | filter-search | x Figma 1267 / 코드 1247 (-20) |
-| 위치/크기 | filter-search | y Figma 195 / 코드 201 (+6) |
+| 위치/크기 | filter-search | x Figma 1267 / 코드 1255 (-12) |
+| 위치/크기 | filter-search | y Figma 195 / 코드 202 (+7) |
 
 ### R-11_1440_Signed-in (C2, 5건)
 
@@ -3872,8 +3872,8 @@
 | 위치/크기 | gl-filter | y Figma 178 / 코드 185 (+7) |
 | 아이콘 | gl-filter | Figma arrow-down,history,search / 코드 arrow-down,close,history,search |
 | 문구 | gl-tabs | Figma 글 '+ 뷰 추가' 없음. 코드: '모든 항목 뷰 추가' |
-| 위치/크기 | filter-search | x Figma 1267 / 코드 1247 (-20) |
-| 위치/크기 | filter-search | y Figma 195 / 코드 201 (+6) |
+| 위치/크기 | filter-search | x Figma 1267 / 코드 1255 (-12) |
+| 위치/크기 | filter-search | y Figma 195 / 코드 202 (+7) |
 
 ### R-11_1920_Guest (C2, 5건)
 
@@ -3882,8 +3882,8 @@
 | 위치/크기 | gl-filter | y Figma 178 / 코드 185 (+7) |
 | 아이콘 | gl-filter | Figma arrow-down,history,search / 코드 arrow-down,close,history,search |
 | 문구 | gl-tabs | Figma 글 '+ 뷰 추가' 없음. 코드: '모든 항목 뷰 추가' |
-| 위치/크기 | filter-search | x Figma 1563 / 코드 1543 (-20) |
-| 위치/크기 | filter-search | y Figma 195 / 코드 201 (+6) |
+| 위치/크기 | filter-search | x Figma 1563 / 코드 1551 (-12) |
+| 위치/크기 | filter-search | y Figma 195 / 코드 202 (+7) |
 
 ### R-11_1920_Signed-in (C2, 5건)
 
@@ -3892,8 +3892,8 @@
 | 위치/크기 | gl-filter | y Figma 178 / 코드 185 (+7) |
 | 아이콘 | gl-filter | Figma arrow-down,history,search / 코드 arrow-down,close,history,search |
 | 문구 | gl-tabs | Figma 글 '+ 뷰 추가' 없음. 코드: '모든 항목 뷰 추가' |
-| 위치/크기 | filter-search | x Figma 1563 / 코드 1543 (-20) |
-| 위치/크기 | filter-search | y Figma 195 / 코드 201 (+6) |
+| 위치/크기 | filter-search | x Figma 1563 / 코드 1551 (-12) |
+| 위치/크기 | filter-search | y Figma 195 / 코드 202 (+7) |
 
 ### R-11_360_Guest (C2, 5건)
 
@@ -3922,8 +3922,8 @@
 | 위치/크기 | gl-filter | y Figma 178 / 코드 185 (+7) |
 | 아이콘 | gl-filter | Figma arrow-down,history,search / 코드 arrow-down,close,history,search |
 | 문구 | gl-tabs | Figma 글 '+ 뷰 추가' 없음. 코드: '모든 항목 뷰 추가' |
-| 위치/크기 | filter-search | x Figma 619 / 코드 599 (-20) |
-| 위치/크기 | filter-search | y Figma 195 / 코드 201 (+6) |
+| 위치/크기 | filter-search | x Figma 619 / 코드 607 (-12) |
+| 위치/크기 | filter-search | y Figma 195 / 코드 202 (+7) |
 
 ### R-11_768_Signed-in (C2, 5건)
 
@@ -3932,8 +3932,8 @@
 | 위치/크기 | gl-filter | y Figma 178 / 코드 185 (+7) |
 | 아이콘 | gl-filter | Figma arrow-down,history,search / 코드 arrow-down,close,history,search |
 | 문구 | gl-tabs | Figma 글 '+ 뷰 추가' 없음. 코드: '모든 항목 뷰 추가' |
-| 위치/크기 | filter-search | x Figma 619 / 코드 599 (-20) |
-| 위치/크기 | filter-search | y Figma 195 / 코드 201 (+6) |
+| 위치/크기 | filter-search | x Figma 619 / 코드 607 (-12) |
+| 위치/크기 | filter-search | y Figma 195 / 코드 202 (+7) |
 
 ### R-12_1024_Signed-in (C2, 1건)
 
@@ -4223,191 +4223,167 @@
 |---|---|---|
 | 위치/크기 | filter-search | y Figma 187 / 코드 185 (-2) |
 
-### R-17_1024_Guest (C2, 13건)
+### R-17_1024_Guest (C2, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | page-head | w Figma 944 / 코드 435 (-509) |
-| 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
-| 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
-| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
-| 아이콘 | page-head | Figma arrow-down / 코드 없음 |
+| 위치/크기 | page-head | h Figma 48 / 코드 64 (+16) |
+| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 16 0 |
+| 모서리·안쪽·간격 | page-head | 간격 8→16 |
+| 위치/크기 | tabs | y Figma 221 / 코드 246 (+25) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
-| 위치/크기 | code-button | x Figma 922 / 코드 925 (+3) |
-| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
-| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
-| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
-| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
-| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
-| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
+| 위치/크기 | code-button | x Figma 922 / 코드 888 (-34) |
+| 위치/크기 | code-button | y Figma 125 / 코드 120 (-5) |
+| 위치/크기 | code-button | w Figma 62 / 코드 96 (+34) |
+| 위치/크기 | code-button | h Figma 32 / 코드 40 (+8) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→8 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 12 0 12 |
 
-### R-17_1024_Signed-in (C2, 13건)
+### R-17_1024_Signed-in (C2, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | page-head | w Figma 944 / 코드 435 (-509) |
-| 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
-| 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
-| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
-| 아이콘 | page-head | Figma arrow-down / 코드 없음 |
+| 위치/크기 | page-head | h Figma 48 / 코드 64 (+16) |
+| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 16 0 |
+| 모서리·안쪽·간격 | page-head | 간격 8→16 |
+| 위치/크기 | tabs | y Figma 221 / 코드 246 (+25) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
-| 위치/크기 | code-button | x Figma 922 / 코드 925 (+3) |
-| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
-| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
-| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
-| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
-| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
-| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
+| 위치/크기 | code-button | x Figma 922 / 코드 888 (-34) |
+| 위치/크기 | code-button | y Figma 125 / 코드 120 (-5) |
+| 위치/크기 | code-button | w Figma 62 / 코드 96 (+34) |
+| 위치/크기 | code-button | h Figma 32 / 코드 40 (+8) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→8 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 12 0 12 |
 
-### R-17_1440_Guest (C2, 13건)
+### R-17_1440_Guest (C2, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | page-head | w Figma 1088 / 코드 435 (-653) |
-| 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
-| 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
-| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
-| 아이콘 | page-head | Figma arrow-down / 코드 없음 |
+| 위치/크기 | page-head | h Figma 48 / 코드 64 (+16) |
+| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 16 0 |
+| 모서리·안쪽·간격 | page-head | 간격 8→16 |
+| 위치/크기 | tabs | y Figma 221 / 코드 246 (+25) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
-| 위치/크기 | code-button | x Figma 1322 / 코드 1325 (+3) |
-| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
-| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
-| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
-| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
-| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
-| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
+| 위치/크기 | code-button | x Figma 1322 / 코드 1288 (-34) |
+| 위치/크기 | code-button | y Figma 125 / 코드 120 (-5) |
+| 위치/크기 | code-button | w Figma 62 / 코드 96 (+34) |
+| 위치/크기 | code-button | h Figma 32 / 코드 40 (+8) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→8 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 12 0 12 |
 
-### R-17_1440_Signed-in (C2, 13건)
+### R-17_1440_Signed-in (C2, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | page-head | w Figma 1088 / 코드 435 (-653) |
-| 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
-| 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
-| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
-| 아이콘 | page-head | Figma arrow-down / 코드 없음 |
+| 위치/크기 | page-head | h Figma 48 / 코드 64 (+16) |
+| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 16 0 |
+| 모서리·안쪽·간격 | page-head | 간격 8→16 |
+| 위치/크기 | tabs | y Figma 221 / 코드 246 (+25) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
-| 위치/크기 | code-button | x Figma 1322 / 코드 1325 (+3) |
-| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
-| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
-| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
-| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
-| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
-| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
+| 위치/크기 | code-button | x Figma 1322 / 코드 1288 (-34) |
+| 위치/크기 | code-button | y Figma 125 / 코드 120 (-5) |
+| 위치/크기 | code-button | w Figma 62 / 코드 96 (+34) |
+| 위치/크기 | code-button | h Figma 32 / 코드 40 (+8) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→8 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 12 0 12 |
 
-### R-17_1920_Guest (C2, 13건)
+### R-17_1920_Guest (C2, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | page-head | w Figma 1200 / 코드 435 (-765) |
-| 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
-| 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
-| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
-| 아이콘 | page-head | Figma arrow-down / 코드 없음 |
+| 위치/크기 | page-head | h Figma 48 / 코드 64 (+16) |
+| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 16 0 |
+| 모서리·안쪽·간격 | page-head | 간격 8→16 |
+| 위치/크기 | tabs | y Figma 221 / 코드 246 (+25) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
-| 위치/크기 | code-button | x Figma 1618 / 코드 1621 (+3) |
-| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
-| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
-| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
-| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
-| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
-| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
+| 위치/크기 | code-button | x Figma 1618 / 코드 1584 (-34) |
+| 위치/크기 | code-button | y Figma 125 / 코드 120 (-5) |
+| 위치/크기 | code-button | w Figma 62 / 코드 96 (+34) |
+| 위치/크기 | code-button | h Figma 32 / 코드 40 (+8) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→8 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 12 0 12 |
 
-### R-17_1920_Signed-in (C2, 13건)
+### R-17_1920_Signed-in (C2, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | page-head | w Figma 1200 / 코드 435 (-765) |
-| 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
-| 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
-| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
-| 아이콘 | page-head | Figma arrow-down / 코드 없음 |
+| 위치/크기 | page-head | h Figma 48 / 코드 64 (+16) |
+| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 16 0 |
+| 모서리·안쪽·간격 | page-head | 간격 8→16 |
+| 위치/크기 | tabs | y Figma 221 / 코드 246 (+25) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
-| 위치/크기 | code-button | x Figma 1618 / 코드 1621 (+3) |
-| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
-| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
-| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
-| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
-| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
-| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
+| 위치/크기 | code-button | x Figma 1618 / 코드 1584 (-34) |
+| 위치/크기 | code-button | y Figma 125 / 코드 120 (-5) |
+| 위치/크기 | code-button | w Figma 62 / 코드 96 (+34) |
+| 위치/크기 | code-button | h Figma 32 / 코드 40 (+8) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→8 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 12 0 12 |
 
-### R-17_360_Guest (C2, 15건)
+### R-17_360_Guest (C2, 12건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | page-head | w Figma 328 / 코드 240 (-88) |
-| 위치/크기 | page-head | h Figma 72 / 코드 32 (-40) |
-| 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
-| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
-| 아이콘 | page-head | Figma arrow-down / 코드 없음 |
-| 위치/크기 | tabs | y Figma 305 / 코드 296 (-9) |
-| 위치/크기 | tabs | h Figma 104 / 코드 48 (-56) |
+| 위치/크기 | page-head | h Figma 72 / 코드 64 (-8) |
+| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 16 0 |
+| 모서리·안쪽·간격 | page-head | 간격 8→16 |
+| 위치/크기 | tabs | y Figma 305 / 코드 320 (+15) |
+| 위치/크기 | tabs | h Figma 104 / 코드 47 (-57) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
-| 위치/크기 | code-button | x Figma 282 / 코드 285 (+3) |
-| 위치/크기 | code-button | y Figma 137 / 코드 129 (-8) |
-| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
-| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
-| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
-| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
-| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
+| 위치/크기 | code-button | x Figma 282 / 코드 248 (-34) |
+| 위치/크기 | code-button | y Figma 137 / 코드 120 (-17) |
+| 위치/크기 | code-button | w Figma 62 / 코드 96 (+34) |
+| 위치/크기 | code-button | h Figma 32 / 코드 40 (+8) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→8 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 12 0 12 |
 
-### R-17_360_Signed-in (C2, 15건)
+### R-17_360_Signed-in (C2, 12건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | page-head | w Figma 328 / 코드 240 (-88) |
-| 위치/크기 | page-head | h Figma 72 / 코드 32 (-40) |
-| 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
-| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
-| 아이콘 | page-head | Figma arrow-down / 코드 없음 |
-| 위치/크기 | tabs | y Figma 305 / 코드 296 (-9) |
-| 위치/크기 | tabs | h Figma 104 / 코드 48 (-56) |
+| 위치/크기 | page-head | h Figma 72 / 코드 64 (-8) |
+| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 16 0 |
+| 모서리·안쪽·간격 | page-head | 간격 8→16 |
+| 위치/크기 | tabs | y Figma 305 / 코드 320 (+15) |
+| 위치/크기 | tabs | h Figma 104 / 코드 47 (-57) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
-| 위치/크기 | code-button | x Figma 282 / 코드 285 (+3) |
-| 위치/크기 | code-button | y Figma 137 / 코드 129 (-8) |
-| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
-| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
-| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
-| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
-| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
+| 위치/크기 | code-button | x Figma 282 / 코드 248 (-34) |
+| 위치/크기 | code-button | y Figma 137 / 코드 120 (-17) |
+| 위치/크기 | code-button | w Figma 62 / 코드 96 (+34) |
+| 위치/크기 | code-button | h Figma 32 / 코드 40 (+8) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→8 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 12 0 12 |
 
-### R-17_768_Guest (C2, 14건)
+### R-17_768_Guest (C2, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | page-head | w Figma 704 / 코드 435 (-269) |
-| 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
-| 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
-| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
-| 아이콘 | page-head | Figma arrow-down / 코드 없음 |
-| 위치/크기 | tabs | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | page-head | h Figma 48 / 코드 64 (+16) |
+| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 16 0 |
+| 모서리·안쪽·간격 | page-head | 간격 8→16 |
+| 위치/크기 | tabs | y Figma 243 / 코드 274 (+31) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
-| 위치/크기 | code-button | x Figma 674 / 코드 677 (+3) |
-| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
-| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
-| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
-| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
-| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
-| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
+| 위치/크기 | code-button | x Figma 674 / 코드 640 (-34) |
+| 위치/크기 | code-button | y Figma 125 / 코드 120 (-5) |
+| 위치/크기 | code-button | w Figma 62 / 코드 96 (+34) |
+| 위치/크기 | code-button | h Figma 32 / 코드 40 (+8) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→8 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 12 0 12 |
 
-### R-17_768_Signed-in (C2, 14건)
+### R-17_768_Signed-in (C2, 11건)
 
 | 분류 | 요소 | 내용 |
 |---|---|---|
-| 위치/크기 | page-head | w Figma 704 / 코드 435 (-269) |
-| 위치/크기 | page-head | h Figma 48 / 코드 40 (-8) |
-| 문구 | page-head | Figma 글 '코드' 없음. 코드: 'Add MCP Toplist rank badge' |
-| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 0 0 |
-| 아이콘 | page-head | Figma arrow-down / 코드 없음 |
-| 위치/크기 | tabs | y Figma 243 / 코드 250 (+7) |
+| 위치/크기 | page-head | h Figma 48 / 코드 64 (+16) |
+| 모서리·안쪽·간격 | page-head | 안쪽 0 0 8 0→0 0 16 0 |
+| 모서리·안쪽·간격 | page-head | 간격 8→16 |
+| 위치/크기 | tabs | y Figma 243 / 코드 274 (+31) |
 | 모서리·안쪽·간격 | tabs | 간격 4→0 |
-| 위치/크기 | code-button | x Figma 674 / 코드 677 (+3) |
-| 위치/크기 | code-button | y Figma 125 / 코드 129 (+4) |
-| 위치/크기 | code-button | w Figma 62 / 코드 26 (-36) |
-| 위치/크기 | code-button | h Figma 32 / 코드 22 (-10) |
-| 모서리·안쪽·간격 | code-button | 모서리 4→0 |
-| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 0 0 0 |
-| 아이콘 | code-button | Figma arrow-down / 코드 없음 |
+| 위치/크기 | code-button | x Figma 674 / 코드 640 (-34) |
+| 위치/크기 | code-button | y Figma 125 / 코드 120 (-5) |
+| 위치/크기 | code-button | w Figma 62 / 코드 96 (+34) |
+| 위치/크기 | code-button | h Figma 32 / 코드 40 (+8) |
+| 모서리·안쪽·간격 | code-button | 모서리 4→8 |
+| 모서리·안쪽·간격 | code-button | 안쪽 0 8 0 8→0 12 0 12 |
 
 ### R-18_1024_Guest (C2, 2건)
 
