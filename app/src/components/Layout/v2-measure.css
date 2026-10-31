@@ -89,7 +89,7 @@ html body, html body #root, #root .rb-shell, #root .rb-gbar, #root .rb-side, #ro
 
 /* 9. 판 안 스크롤(공공 깃랩: body 높이는 화면 높이, 본문 판 안쪽만 스크롤. audit_v3 G-04). 판 아래 8은 셸 아래 여백 */
 #root .rb-shell:not(.is-bare) { flex: none; height: calc(100dvh - var(--rb-header-h) - var(--rb-masthead-h) - var(--rb-top-extra)); overflow: hidden; }
-#root .rb-shell:not(.is-bare) > .rb-panel { height: 100%; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scroll-behavior: auto; }
+#root .rb-shell:not(.is-bare) > .rb-panel { position: relative; height: 100%; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scroll-behavior: auto; }
 @media (min-width: 1024px) {
   #root .rb-repo-main.has-info > .rb-repo-info { top: var(--rb-panel-pad-y); }
 }
