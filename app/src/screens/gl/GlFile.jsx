@@ -11,6 +11,7 @@ import { Menu } from '../../components/Navigation/Menu';
 import { newWindow } from '../../components/Layout/newWindow';
 import { day } from './format';
 import { CopyButton } from './parts';
+import { FileFind } from '../../components/Code/RepoParts';
 
 const CHUNK = 1500;
 const PKG = { 'package.json': 'npm', 'package-lock.json': 'npm', 'yarn.lock': 'Yarn', 'Gemfile': 'Bundler', 'Gemfile.lock': 'Bundler', 'requirements.txt': 'pip', 'go.mod': 'Go modules', 'pom.xml': 'Maven', 'composer.json': 'Composer', 'Cargo.toml': 'Cargo' };
@@ -79,7 +80,7 @@ export function FileTitle({ path, project, refName, onFind, permalink }) {
     <div className="gl-filetitle">
       <h2 className="gl-title gl-filetitle-name"><FileIcon name={name} /><span>{name}</span></h2>
       <div className="gl-head-actions">
-        <button type="button" className="krds-btn small tertiary" onClick={onFind}>{g.findFile}</button>
+        <FileFind id={project.id} refName={refName} />
         <button type="button" className="krds-btn small tertiary" disabled title={g.editDisabled} aria-label={g.editMenu}><span>{g.edit}</span><Icon name="arrow-down" /></button>
         <Menu label={g.moreOpts} align="right" toggle={false} btnClass="krds-btn text rb-iconbtn is-small" button={<Icon name="ellipsis_vertical" />}>
           {(close) => (

@@ -166,7 +166,7 @@ export default function Code() {
   useEffect(() => {
     if (!path) return undefined;
     const onB = (e) => {
-      if (e.key !== 'b' || e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key !== 'F' || !e.shiftKey || e.metaKey || e.ctrlKey || e.altKey) return;
       const tag = document.activeElement?.tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
       e.preventDefault();
@@ -240,7 +240,7 @@ export default function Code() {
         <div className="rb-code-area">
           <div className="rb-toolbar" data-figma="toolbar">
             <div className="rb-toolbar-left">
-              {path && treeWide && !treeOpen ? <GlIconButton icon="panel_open" label={g.treeShow} size="medium" title={`${g.treeShow} (B)`} aria-keyshortcuts="B" onClick={() => setTreeOpen(true)} /> : null}
+              {path && treeWide && !treeOpen ? <GlIconButton icon="panel_open" label={g.treeShow} size="medium" title={`${g.treeShow} (Shift+F)`} aria-keyshortcuts="Shift+F" onClick={() => setTreeOpen(true)} /> : null}
               <BranchSelect id={frame.id} current={ref} branches={branches} path={path} />
               {isHome ? (
                 <span className="rb-toolbar-path krds-text-body-small-bold">{project.path}</span>
