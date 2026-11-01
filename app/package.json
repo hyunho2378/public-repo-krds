@@ -12,7 +12,7 @@
     "measure:full": "node scripts/export-code-boxes.mjs",
     "check:parity": "node scripts/compare-parity.mjs",
     "check:responsive": "node scripts/check-responsive.mjs",
-    "build:pages": "VITE_STATIC=1 VITE_BASE=/public-repo-krds/ vite build",
+    "build:pages": "VITE_STATIC=1 VITE_BASE=/ai-public-gitlab/ vite build",
     "compare:boxes": "node scripts/compare-boxes.mjs",
     "check:palette": "node scripts/check-palette.mjs"
   },

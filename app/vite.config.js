@@ -29,7 +29,7 @@ function versionFile() {
 
 const serverSrc = fileURLToPath(new URL('../server/src', import.meta.url));
 
-// 정적 배포(GitHub Pages): VITE_STATIC=1, VITE_BASE=/public-repo-krds/
+// 정적 배포(GitHub Pages): VITE_STATIC=1, VITE_BASE=/ai-public-gitlab/
 // 1) 검색 색인 원본 두 파일을 dist/data로 복사 2) 새로고침해도 화면이 열리도록 index.html을 404.html로 복사
 function staticPages() {
   return {
